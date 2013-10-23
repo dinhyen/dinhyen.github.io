@@ -12,9 +12,9 @@ meta:
   _edit_last: '1'
   _syntaxhighlighter_encoded: '1'
 ---
-<a target="_blank" href="http://jsfiddle.net/CHMaQ/23/">View the live example</a>
+[View the live example](http://jsfiddle.net/CHMaQ/23/)
 
-<a target="_blank" href="http://knockoutjs.com">KnockoutJS</a> is a dynamic UI framework that can really liberate you from the tedium of low-level DOM manipulations.  Even though I've only played with it for a little while, I've become a huge fan. One of my initial attempts is to create an animated text input similar to Twitter's.
+[KnockoutJS](http://knockoutjs.com) is a dynamic UI framework that can really liberate you from the tedium of low-level DOM manipulations.  Even though I've only played with it for a little while, I've become a huge fan. One of my initial attempts is to create an animated text input similar to Twitter's.
 
 The UI is quite simple. The textbox should display a "placeholder" prompt.  When the user clicks inside the textbox, expand it and display a save button, initially disabled.  If the user types something (other than white space), enable the button.  If the textbox loses focus, shrink it to its original size, unless it contains a valid comment.
 

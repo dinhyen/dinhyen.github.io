@@ -20,7 +20,7 @@ meta:
   _thumbnail_id: '1390'
   _wp_old_slug: pisac-peru
 ---
-<a href="https://maps.google.com/maps/ms?msid=214490968088440958659.0004c5275f92d3e0e1cb8&msa=0&ll=-13.41329,-71.844814&spn=0.020267,0.020471" target="_blank">Map</a> of our walking route of Písac.
+[Map](https://maps.google.com/maps/ms?msid=214490968088440958659.0004c5275f92d3e0e1cb8&msa=0&ll=-13.41329,-71.844814&spn=0.020267,0.020471) of our walking route of Písac.
 
 Most people know about Cusco and Machu Picchu, but there's so much more.  Stretched between the two is the valley formed by the Urubamba (or Vilcanota) river, the so-called Sacred Valley of the Incas.  Inca settlements, temples and monuments are found through the valley and towns such as Písac and Ollantaytambo are home to spectacular ruins.  Those who are up for an outdoor experience can even take the Inca trail, the ancient highway to Machu Picchu.  Písac is closest to Cusco, about 30km, and there are several ruins on the outskirts of Cusco on the way to Písac.  So we opted to come here and work our way back.
 
@@ -130,6 +130,6 @@ After Písac we headed back to Cusco as the locals do, by taking a minibus calle
 
 <h4>Sources</h4>
 
-1. <a href="http://www.expeterra.com/Expeterra%20Pisac.html" target="_blank">http://www.expeterra.com/Expeterra%20Pisac.html</a>
-2. <a href="http://www.pomalaza.com/ePeruEn.html" target="_blank">http://www.pomalaza.com/ePeruEn.html</a>
+1. [http://www.expeterra.com/Expeterra%20Pisac.html](http://www.expeterra.com/Expeterra%20Pisac.html)
+2. [http://www.pomalaza.com/ePeruEn.html](http://www.pomalaza.com/ePeruEn.html)
 

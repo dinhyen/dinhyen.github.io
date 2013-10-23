@@ -15,7 +15,7 @@ meta:
   _wp_old_slug: on-the-bruins-2011-white-house-appearnce
   _thumbnail_id: '928'
 ---
-<a href="http://www.whitehouse.gov/blog/2012/01/23/president-obama-welcomes-boston-bruins" target="_blank"><img title="Bruins 2011 White House photo" src="http://www.yentran.org/blog/wp-content/uploads/2012/01/20120123-potus-boston-bruins.jpg" width="560" height="373" /></a>
+<a href="http://www.whitehouse.gov/blog/2012/01/23/president-obama-welcomes-boston-bruins"><img title="Bruins 2011 White House photo" src="http://www.yentran.org/blog/wp-content/uploads/2012/01/20120123-potus-boston-bruins.jpg" width="560" height="373" /></a>
 
 Today the Bruins appeared at the White House where President Obama greeted them and honored their accomplishments as 2011 Stanley Cup champions. Included in the group photo were Americans, Canadians, Czechs, a Slovak, a Finn, and a German. Notable in his absence was Bruins goalie Tim Thomas, Stanley Cup playoffs MVP, winner of multiple awards and the only American player who made significant contribution to the team's Cup run. The details of Thomas' absence are covered elsewhere, but it has become clear that it is politically motivated.
 

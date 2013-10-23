@@ -17,7 +17,7 @@ meta:
   _syntaxhighlighter_encoded: '1'
   _wp_old_slug: automapper-behavior-for-clashing-properties
 ---
-We're using <a href="http://automapper.codeplex.com/" target="_blank">AutoMapper</a> in ASP.NET MVC automate the mapping of properties between entity and view model objects.  This is a highly useful tool which helps us avoid the tedium of having to assigning properties manually.  Here's a good <a href="http://lostechies.com/jimmybogard/2009/01/23/automapper-the-object-object-mapper/" target="_blank">introduction</a> to using AutoMapper.
+We're using [AutoMapper](http://automapper.codeplex.com/) in ASP.NET MVC automate the mapping of properties between entity and view model objects.  This is a highly useful tool which helps us avoid the tedium of having to assigning properties manually.  Here's a good [introduction](http://lostechies.com/jimmybogard/2009/01/23/automapper-the-object-object-mapper/) to using AutoMapper.
 
 In one case, I find that the AutoMapper doesn't work for all properties.  One property in particular doesn't get mapped.  If I manually assign a value to it as a test, I would get a ForeignKeyReferenceAlreadyHasValueException.
 

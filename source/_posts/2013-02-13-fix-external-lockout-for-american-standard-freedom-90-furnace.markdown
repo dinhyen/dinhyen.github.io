@@ -14,7 +14,7 @@ meta:
 ---
 Some of my blogs are of the "I'd better write this down so I don't forget it" variety.  This is one of them. This is intended primarily for future me, but it would be cool if anyone else finds it useful.
 
-The equipment in question is an American Standard (Trane) Freedom 90 gas furnace that's about 7 years old. Recently, in fact right in the middle of a <a href="http://www.weather.com/news/weather-winter/nemo-historical-ranks-20130212" target="_blank">record-setting snowstorm</a>, it started blowing only cold air.
+The equipment in question is an American Standard (Trane) Freedom 90 gas furnace that's about 7 years old. Recently, in fact right in the middle of a [record-setting snowstorm](http://www.weather.com/news/weather-winter/nemo-historical-ranks-20130212), it started blowing only cold air.
 
 I followed the instructions in the manual to reset it (off-on-off-on in less than 30 seconds), to no avail. The burners would get ignited, then seemed to flame out.  The control board then tried to restart the process.  This would go on 5 times or so.  After that the blower fan would be going, but only ice-cold air was coming out.  The red light on the control board flashed twice in roughly 3-second intervals.  According to the manual, this indicated an "External Lockout (retries or recycles exceeded)" error.
 

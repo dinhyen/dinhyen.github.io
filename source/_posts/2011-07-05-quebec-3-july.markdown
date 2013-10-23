@@ -20,12 +20,12 @@ meta:
   _thumbnail_id: '955'
   aktt_notify_twitter: 'no'
 ---
-We had our fill of the city yesterday, so it seemed like time to head out to the country. We also learned that William and Kate <a href="http://news.yahoo.com/prince-william-kate-undeterred-quebec-protests-174723189.html">would be in town</a> as part of their Canada tour, an event undoubtedly to be attended by legions of their admirers and non-admirers alike. That cemented the decision for us. First stop is the Montmorency Falls. At 84 meters, it's higher than Niagara Falls.
+We had our fill of the city yesterday, so it seemed like time to head out to the country. We also learned that William and Kate [would be in town](http://news.yahoo.com/prince-william-kate-undeterred-quebec-protests-174723189.html) as part of their Canada tour, an event undoubtedly to be attended by legions of their admirers and non-admirers alike. That cemented the decision for us. First stop is the Montmorency Falls. At 84 meters, it's higher than Niagara Falls.
 
 <img title="DSC_2557" src="http://www.yentran.org/blog/wp-content/uploads/2011/07/DSC_2557.jpg" />
 <figcaption>Montmorency Falls</figcaption>
 
-Here again was another site related to the <a href="http://en.wikipedia.org/wiki/Battle_of_Quebec_%281759%29">Battle of Québec</a>. General James Wolfe <a href="http://en.wikipedia.org/wiki/Battle_of_Beauport">made his first attack</a> here at Montmorency Falls. However, French forces, having the strategic advantage of height and fortified positions, inflicted disproportionately heavy casualties on the British. Wolfe withdrew to recover, while the French gained confidence and perhaps lowered their guards a bit. Later on Wolfe would alter his approach and was ultimately successful, though he did not live to see the victory.
+Here again was another site related to the [Battle of Québec](http://en.wikipedia.org/wiki/Battle_of_Quebec_%281759%29). General James Wolfe [made his first attack](http://en.wikipedia.org/wiki/Battle_of_Beauport) here at Montmorency Falls. However, French forces, having the strategic advantage of height and fortified positions, inflicted disproportionately heavy casualties on the British. Wolfe withdrew to recover, while the French gained confidence and perhaps lowered their guards a bit. Later on Wolfe would alter his approach and was ultimately successful, though he did not live to see the victory.
 
 Montmorency Falls didn't take whole day, so we decided to head to the Île d'Orléans. Sophie had told us that it was a beautiful area.  We took the short hop over the bridge and took a counter-clockwise loop around the island. There are 6 villages on the island. The landscape is mostly rural with farmlands, orchards and vineyards. And strawberries for sale everywhere. Apparently it was the island's main crop at the moment. We stopped by a farm stand and paid $7CAD for a big basket, probably 5 pounds or so. By the time we left the island, it was almost gone.
 

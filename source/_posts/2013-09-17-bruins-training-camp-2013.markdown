@@ -93,7 +93,7 @@ Hamilton should probably be between his check and the net instead of chasing him
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1747.jpg' />
 
-<a href="http://www.youtube.com/watch?v=h15m87WsCHQ" target="_blank">This gutsy display of sportsmanship and determination</a> after his leg was broken by an Evgeni Malkin slapshot made Gregory Campbell a Bruin forever. This isn't Lionel Messi crying after he got tripped.
+[This gutsy display of sportsmanship and determination](http://www.youtube.com/watch?v=h15m87WsCHQ) after his leg was broken by an Evgeni Malkin slapshot made Gregory Campbell a Bruin forever. This isn't Lionel Messi crying after he got tripped.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2170.jpg' />
 

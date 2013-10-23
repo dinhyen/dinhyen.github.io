@@ -17,7 +17,7 @@ meta:
 ---
 Up to IIS 7 (Windows Vista and Windows Server 2008), the default app pool identity is NetworkService 7. In IIS 7.5 (Windows 7 and Windows Server 2008 R2) the app pool identity is changed to something called ApplicationPoolIdentity.
 
-Let's say you set up a virtual directory or application that uses this app pool. You'll need to grant access permission on the physical path to ApplicationPoolIdentity. However, you'd find that there is no such user account. According to <a href="http://blogs.iis.net/webdevelopertips/archive/2009/10/02/tip-98-did-you-know-the-default-application-pool-identity-in-iis-7-5-windows-7-changed-from-networkservice-to-apppoolidentity.aspx" target="_blank">an IIS Team blog</a>, the user account associated with ApplicationPoolIdentity is actually `IIS AppPool\<App pool name>`. The intention is to further reinforce app pool isolation through the use of a separate user account for each app pool.
+Let's say you set up a virtual directory or application that uses this app pool. You'll need to grant access permission on the physical path to ApplicationPoolIdentity. However, you'd find that there is no such user account. According to [an IIS Team blog](http://blogs.iis.net/webdevelopertips/archive/2009/10/02/tip-98-did-you-know-the-default-application-pool-identity-in-iis-7-5-windows-7-changed-from-networkservice-to-apppoolidentity.aspx), the user account associated with ApplicationPoolIdentity is actually `IIS AppPool\<App pool name>`. The intention is to further reinforce app pool isolation through the use of a separate user account for each app pool.
 
 To grant permission to ApplicationPoolIdentity:
 

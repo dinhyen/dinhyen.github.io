@@ -15,7 +15,7 @@ meta:
   _thumbnail_id: '1301'
   _wp_old_slug: dorr-mountain
 ---
-<a href="https://maps.google.com/maps/ms?msid=214490968088440958659.0004c472e0af882101443&msa=0&ll=44.358347,-68.211794&spn=0.014897,0.018775" target="_blank">Map</a> of our round-trip hike to Dorr Mountain from Sieur de Monts.
+[Map](https://maps.google.com/maps/ms?msid=214490968088440958659.0004c472e0af882101443&msa=0&ll=44.358347,-68.211794&spn=0.014897,0.018775) of our round-trip hike to Dorr Mountain from Sieur de Monts.
 
 Dorr Mountain is the second highest peak on Mount Desert Island, behind only Cadillac Mountain. It's named after George Dorr, who's affectionately known as the father of Acadia National Park. There are multiple paths to the summit.  We chose to start from Sieur de Monts spring.
 

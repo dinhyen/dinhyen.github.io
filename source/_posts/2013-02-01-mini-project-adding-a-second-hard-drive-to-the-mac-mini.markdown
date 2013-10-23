@@ -18,9 +18,9 @@ I want to replace the DVR that I get from Verizon Fios. Besides the monthly cost
 
 The Mac Mini is like a work of art.  The model I have, however, has a drawback. While it is a level above the base model and comes with an Intel Core i7 processor, it has a rather sluggish 5400rpm hard drive. Since I plan on using it to watch live TV and record shows, I need more performance.
 
-The server edition of the Mac Mini comes in the same case, but has 2 internal hard drives. It turns out that all Mac Minis (2012) have 2 hard drive slots.  For my Mac Mini, the second slot sits empty.  I want to add a Solid State Drive (SSD). The SSD will host OS X and the applications, while the other hard drive will host media. Getting to it in the cramped, tightly packed innards of the Mini seems like a daunting task.  Fortunately <a href="http://www.macsales.com" target="_blank">OWC</a> comes to the rescue by providing a prepackaged solution.
+The server edition of the Mac Mini comes in the same case, but has 2 internal hard drives. It turns out that all Mac Minis (2012) have 2 hard drive slots.  For my Mac Mini, the second slot sits empty.  I want to add a Solid State Drive (SSD). The SSD will host OS X and the applications, while the other hard drive will host media. Getting to it in the cramped, tightly packed innards of the Mini seems like a daunting task.  Fortunately [OWC](http://www.macsales.com) comes to the rescue by providing a prepackaged solution.
 
-The <a href="http://eshop.macsales.com/item/OWC/DIYIMM11D2" target="_blank">OWC hard drive upgrade kit</a> for the Mini (2011-2012) comes with a flex cable to connect the hard drive, screws and tools. The cost for the kit is only a few dollars more than what you'd have to spend to buy the flex cable separately.
+The [OWC hard drive upgrade kit](http://eshop.macsales.com/item/OWC/DIYIMM11D2) for the Mini (2011-2012) comes with a flex cable to connect the hard drive, screws and tools. The cost for the kit is only a few dollars more than what you'd have to spend to buy the flex cable separately.
 
 I also got an SSD from OWC. OWC's in-house brand, Mercury Electra, is highly rated and assembled in the USA. I always look for something that's at least partially made in the USA whenever that's an option, even if it costs more.
 

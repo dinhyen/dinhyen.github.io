@@ -16,7 +16,7 @@ meta:
   _edit_last: '1'
   _syntaxhighlighter_encoded: '1'
 ---
-We use <a href="http://hudson-ci.org/" target="_blank">Hudson</a> as our continuous integration server (although we're thinking about moving to <a href="http://jenkins-ci.org/" target="_blank">Jenkins</a>, but that's a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.
+We use [Hudson](http://hudson-ci.org/) as our continuous integration server (although we're thinking about moving to [Jenkins](http://jenkins-ci.org/), but that's a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.
 
 # Pre-requisites
 We use the following software. The listed versions are the latest as of the time of writing, but other combinations should work.
@@ -26,7 +26,7 @@ We use the following software. The listed versions are the latest as of the time
 * Hudson 2.2.1
 
 # Apache Tomcat
-Download and install the <a href="http://tomcat.apache.org/download-70.cgi" target="_blank">Tomcat 7.0 Windows Service Installer</a>. In our case, the server already runs IIS on port 80, so we install Tomcat on a different port.  Remember this port as you will need it to access the Manager and Hudson.
+Download and install the [Tomcat 7.0 Windows Service Installer](http://tomcat.apache.org/download-70.cgi). In our case, the server already runs IIS on port 80, so we install Tomcat on a different port.  Remember this port as you will need it to access the Manager and Hudson.
 
 Since Hudson will need to perform tasks that require access to more than one servers, such as deploying to a network share, we create a domain account which would be granted the necessary permissions wherever applicable. Configure Tomcat to run under the domain account as follows:
 
@@ -52,7 +52,7 @@ You can access the Manager at http://server:port/manager/html.
 
 ## Install Hudson
 
-<a href="http://hudson-ci.org/" target="_blank">Download</a> the latest production .war.
+[Download](http://hudson-ci.org/) the latest production .war.
 
 To deploy Hudson:
 
@@ -150,6 +150,6 @@ The Chuck Norris plugin gives us a thumbs up for a successful build.  If the bui
 
 # References
 
-<a href="http://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html#Configuring_Manager_Application_Access" target="_blank">Configuring Tomcat manager</a>
+[Configuring Tomcat manager](http://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html#Configuring_Manager_Application_Access)
 
-<a href="http://wiki.hudson-ci.org/display/HUDSON/Tomcat" target="_blank">Install and upgrade guide for Hudson</a>
+[Install and upgrade guide for Hudson](http://wiki.hudson-ci.org/display/HUDSON/Tomcat)

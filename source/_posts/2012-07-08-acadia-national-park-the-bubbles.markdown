@@ -14,7 +14,7 @@ meta:
   _edit_last: '1'
   _thumbnail_id: '1247'
 ---
-<a href="https://maps.google.com/maps/ms?msid=214490968088440958659.0004c453c947c3eb5ce5b&msa=0&ll=44.340824,-68.253111&spn=0.007451,0.013089" target="_blank">Map </a>of our hike on the North and South Bubble Mountains
+[Map ](https://maps.google.com/maps/ms?msid=214490968088440958659.0004c453c947c3eb5ce5b&msa=0&ll=44.340824,-68.253111&spn=0.007451,0.013089)of our hike on the North and South Bubble Mountains
 
 When seen from a distance, it's immediately obvious why the Bubbles are so named, though I'm sure you can think of more colorful analogies.  Located just a short distance from the Park Loop Road and the popular Jordan Pond, they're some of the most accessible climbs in the park. Both offer splendid views of Jordan Pond and, in the distance, the islands off the southern coast of Mount Desert Island. 
 

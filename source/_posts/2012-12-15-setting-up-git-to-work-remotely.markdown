@@ -63,7 +63,7 @@ Inside a tracking branch, Git knows which server and branch to push to and pull 
 
 Now that the remote branch is setup, I can create a tracking branch on the laptop as above.
 
-Helpful references: <a href="http://git-scm.com/book/en/Git-Branching-Remote-Branches" target="_blank">http://git-scm.com/book/en/Git-Branching-Remote-Branches</a>
+Helpful references: [http://git-scm.com/book/en/Git-Branching-Remote-Branches](http://git-scm.com/book/en/Git-Branching-Remote-Branches)
 
 <hr>
 <sup>&dagger;</sup> The behavior of "git push" actually depends on the push.default setting in .gitconfig and whether the tracking branch has the same name as the remote branch. The git-config man page gives the following information on push.default:

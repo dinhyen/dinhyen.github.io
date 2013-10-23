@@ -15,9 +15,9 @@ meta:
   _edit_last: '1'
   _syntaxhighlighter_encoded: '1'
 ---
-I'm using an implementation of PagedList based on that <a href="http://wekeroad.com/2007/12/10/aspnet-mvc-pagedlistt/" target="_blank">given by Rob Conery</a>.
+I'm using an implementation of PagedList based on that [given by Rob Conery](http://wekeroad.com/2007/12/10/aspnet-mvc-pagedlistt/).
 
-I want to convert a paged list of business objects to a paged list of view model objects with <a href="http://automapper.org/" target="_blank">AutoMapper</a>. In order for AutoMapper to work in this case, it needs to know how to convert a paged list.  This can be done with a <a href="https://github.com/AutoMapper/AutoMapper/wiki/Custom-type-converters" target="_blank">custom type converter</a>:
+I want to convert a paged list of business objects to a paged list of view model objects with [AutoMapper](http://automapper.org/). In order for AutoMapper to work in this case, it needs to know how to convert a paged list.  This can be done with a [custom type converter](https://github.com/AutoMapper/AutoMapper/wiki/Custom-type-converters):
 
 ``` csharp
 public class PagedListConverter : ITypeConverter<PagedList<Person>, PagedList<PersonViewModel>>

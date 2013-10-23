@@ -19,9 +19,9 @@ meta:
   _thumbnail_id: '1452'
   _wp_old_slug: machu-picchu-peru
 ---
-<a href="https://maps.google.com/maps/ms?msid=214490968088440958659.0004c64105f39ce5af613&msa=0&ll=-13.164572,-72.534914&spn=0.040576,0.053816" target="_blank">Map</a> of our hike to Intipunku, the Inca Bridge and down to Aguas Calientes (the GPS track recorded by the logger is a little out of sync with Google Map, but you get the idea).
+[Map](https://maps.google.com/maps/ms?msid=214490968088440958659.0004c64105f39ce5af613&msa=0&ll=-13.164572,-72.534914&spn=0.040576,0.053816) of our hike to Intipunku, the Inca Bridge and down to Aguas Calientes (the GPS track recorded by the logger is a little out of sync with Google Map, but you get the idea).
 
-Had Machu Picchu been built in Cusco, it would have been just as spectacular.  But being perched on a remote mountaintop, invisible from below, covered by swirling mists, and (when "discovered" by Hiram Bingham) overrun by the jungle gives it an unmatched mystique.  It is the classic definition of a long-forgotten ruins.  Yet in its heydays, Machu Picchu must have been a lively place. Particularly during festivals and celebrations, it must have been occupied by many priests, warriors, members of the royalty, and common people, all bedecked in the colorful attire that their descendants still wear today. The story of the fall of the Incas is a tragic one, from the betrayal of the last sovereign emperor <a target="_blank" href="http://en.wikipedia.org/wiki/Atahualpa">Atahualpa</a> to the decimation of the native population by the foreign disease of smallpox to the last stand of the Incas in the jungles at <a target="_blank" href="http://en.wikipedia.org/wiki/Vilcabamba,_Peru">Vilcabamba</a>.  Of all of the legacy of their civilization, Machu Picchu is perhaps the crown jewel.  But on a happier note, while their architectural and engineering knowledge may have been forgotten, their language Quechua is very much alive and well, being spoken by many modern Peruvians.  Some of their cultural traditions also survive, such as the <a target="_blank" href="http://en.wikipedia.org/wiki/Inti_Raymi">Inti Raymi</a>, the Festival of the Sun, celebrated annually in Cusco and more importantly in indigenous areas throughout the old empire.
+Had Machu Picchu been built in Cusco, it would have been just as spectacular.  But being perched on a remote mountaintop, invisible from below, covered by swirling mists, and (when "discovered" by Hiram Bingham) overrun by the jungle gives it an unmatched mystique.  It is the classic definition of a long-forgotten ruins.  Yet in its heydays, Machu Picchu must have been a lively place. Particularly during festivals and celebrations, it must have been occupied by many priests, warriors, members of the royalty, and common people, all bedecked in the colorful attire that their descendants still wear today. The story of the fall of the Incas is a tragic one, from the betrayal of the last sovereign emperor [Atahualpa](http://en.wikipedia.org/wiki/Atahualpa) to the decimation of the native population by the foreign disease of smallpox to the last stand of the Incas in the jungles at [Vilcabamba](http://en.wikipedia.org/wiki/Vilcabamba,_Peru).  Of all of the legacy of their civilization, Machu Picchu is perhaps the crown jewel.  But on a happier note, while their architectural and engineering knowledge may have been forgotten, their language Quechua is very much alive and well, being spoken by many modern Peruvians.  Some of their cultural traditions also survive, such as the [Inti Raymi](http://en.wikipedia.org/wiki/Inti_Raymi), the Festival of the Sun, celebrated annually in Cusco and more importantly in indigenous areas throughout the old empire.
 
 At Machu Picchu, the Incas must have been just as much in awe of this wondrous landscape as are we.  Yet being worshippers of nature and seemingly possessing an innate connection to it,  they were able to create something that is not only in complete harmony with its natural setting but more than matches its beauty.  Whether it's a royal retreat, religious center or military outpost is immaterial.  If there's anything whose beauty redefines its purpose, this is it.  Whereas in modern America we may be tempted to build a parking lot and perhaps a viewing platform, the Incas have given humanity something that will remain unexceeded by our creativity and imagination.  
 
@@ -43,13 +43,13 @@ Along the way we were treated to views of snow-covered peaks.  The highland is s
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/peru-machu-picchu/dsc_2327.jpg' />
 
-The Inca trail also runs parallel to the river and occasionally comes into view.  The train stopped along the way to drop off a handful of passengers who were going on a day hike to Machu Picchu. Later that day as we checked into our hotel, they stumbled into the lobby, exhausted. The rain forest appeared and became thicker the closer we got to Aguas Calientes.  Then we caught sight of <a target="_blank" href="http://en.wikipedia.org/wiki/Wi%C3%B1ay_Wayna">Wiñay Wayna</a>.
+The Inca trail also runs parallel to the river and occasionally comes into view.  The train stopped along the way to drop off a handful of passengers who were going on a day hike to Machu Picchu. Later that day as we checked into our hotel, they stumbled into the lobby, exhausted. The rain forest appeared and became thicker the closer we got to Aguas Calientes.  Then we caught sight of [Wiñay Wayna](http://en.wikipedia.org/wiki/Wi%C3%B1ay_Wayna).
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/peru-machu-picchu/dsc_2376.jpg' />
 
 This photo from inside a moving train completely failed to do it justice. This amazing temple to water is constructed, appropriately, next to a waterfalls rushing down the mountainside.
 
-Aguas Calientes is a tiny town that tries to squeeze between the river and the mountain.  As expected, it's longer than it's wide.  Buildings climb on top of each other or crowd over narrow alleys. But it wouldn't be a Latin American city without a town square. Occupying the center of the square is <a target="_blank" href="http://en.wikipedia.org/wiki/Pachacuti">Pachacútec</a>, the "builder" Inca for whom Machu Picchu is believed to be constructed.  Appropriately, there's a much larger monument to this great Inca in Cusco.
+Aguas Calientes is a tiny town that tries to squeeze between the river and the mountain.  As expected, it's longer than it's wide.  Buildings climb on top of each other or crowd over narrow alleys. But it wouldn't be a Latin American city without a town square. Occupying the center of the square is [Pachacútec](http://en.wikipedia.org/wiki/Pachacuti), the "builder" Inca for whom Machu Picchu is believed to be constructed.  Appropriately, there's a much larger monument to this great Inca in Cusco.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/peru-machu-picchu/dsc_3051.jpg' />
 
@@ -145,7 +145,7 @@ The fountain flows into the stone basin below. As you can plainly see, it still 
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/peru-machu-picchu/dsc_2818.jpg' />
 
-Nowadays, one of the few native denizens here is this <a target="_blank" href="http://en.wikipedia.org/wiki/Viscacha">viscacha</a>, an Andean rodent related to chinchillas.  I wonder how it tastes...
+Nowadays, one of the few native denizens here is this [viscacha](http://en.wikipedia.org/wiki/Viscacha), an Andean rodent related to chinchillas.  I wonder how it tastes...
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/peru-machu-picchu/dsc_2978.jpg' />
 
@@ -153,9 +153,9 @@ As the sun went down, our last view from Machu Picchu on the first day was this.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/peru-machu-picchu/dsc_3048.jpg' />
 
-The next day, we wanted to catch the sunrise.  Luckily, <a target="_blank" href="http://www.elmapihotel.com">El Mapi Hotel</a> (MaPi is plainly a portmanteau for you-know-what) starts serving breakfast at 4:30, so obviously we're not the only ones to have this idea.  Despite the early rise, the sumptuous buffet full of fruit and fresh ingredients was perhaps my best hotel breakfast ever.  We made it to the bus stop a little before 5:30, which is when the bus starts running, but there was already a long line!
+The next day, we wanted to catch the sunrise.  Luckily, [El Mapi Hotel](http://www.elmapihotel.com) (MaPi is plainly a portmanteau for you-know-what) starts serving breakfast at 4:30, so obviously we're not the only ones to have this idea.  Despite the early rise, the sumptuous buffet full of fruit and fresh ingredients was perhaps my best hotel breakfast ever.  We made it to the bus stop a little before 5:30, which is when the bus starts running, but there was already a long line!
 
-Our route today was the Inca trail. Well, the part of it that goes down to Machu Picchu.  After its long and spectacular journey, the Inca trail arrives at <a target="_blank" href="http://en.wikipedia.org/wiki/Intipuncu">Intipunku</a> or "Sun Gate".  It is from this commanding position that visitors get the first glimpse of the city in all its glory.
+Our route today was the Inca trail. Well, the part of it that goes down to Machu Picchu.  After its long and spectacular journey, the Inca trail arrives at [Intipunku](http://en.wikipedia.org/wiki/Intipuncu) or "Sun Gate".  It is from this commanding position that visitors get the first glimpse of the city in all its glory.
 
 To reach the Inca trail, we took the first left after entering the main gate and immediately climbed uphill. Soon we reached the terraces that continue just below the Caretaker's Hut. Naturally we stopped for a photo of the city still in slumber.
 
@@ -229,7 +229,7 @@ The trail consists of evenly hewn stone steps all the way down, although it is m
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/peru-machu-picchu/dsc_3542.jpg' />
 
-An unexpected and much welcome encounter with a <a target="_blank" href="http://en.wikipedia.org/wiki/Blue-crowned_Motmot">blue-crowned motmot</a>.
+An unexpected and much welcome encounter with a [blue-crowned motmot](http://en.wikipedia.org/wiki/Blue-crowned_Motmot).
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/peru-machu-picchu/dsc_3587.jpg' />
 
@@ -249,7 +249,7 @@ That's our train.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/peru-machu-picchu/dsc_3664.jpg' />
 
-To get to the train station we had to pass through a market, similar to the one in <a href="http://www.yentran.org/blog/2012/07/pisac-peru/" target="_blank">Písac</a>. 
+To get to the train station we had to pass through a market, similar to the one in [Písac](http://www.yentran.org/blog/2012/07/pisac-peru/). 
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/peru-machu-picchu/dsc_3678.jpg' />
 

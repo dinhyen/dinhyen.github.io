@@ -12,7 +12,7 @@ meta:
   _edit_last: '1'
   _syntaxhighlighter_encoded: '1'
 ---
-<a href="http://plnkr.co/edit/rynrXkzGcSHeWZrSXENl" target="_blank">View in Plunkr</a>
+[View in Plunkr](http://plnkr.co/edit/rynrXkzGcSHeWZrSXENl)
 
 I have a page with tabular data which I want to be able to sort without having to go back to the server. Also a nice-to-have would be the ability to filter the displayed items. Since I'm trying to learn Angular, this seems like an excellent opportunity to try it out.
 

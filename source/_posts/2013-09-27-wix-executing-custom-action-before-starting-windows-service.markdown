@@ -83,7 +83,7 @@ Action ended 17:10:02: ShipBatchCmd. Return value 1.
 
 This is followed by entries for InstallServices and StartServices.  So the installer does try to run the custom action but fails.
 
-The <a href="http://stackoverflow.com/questions/778210/wix-trying-to-figure-out-install-sequences">answer</a> is provided by Rob Mensching, who created Wix.  According to him, `After="InstallFiles"` is correct. However, the execution needs to be "deferred" until the files are actually copied to the file system.  Below is the corrected XML.
+The [answer](http://stackoverflow.com/questions/778210/wix-trying-to-figure-out-install-sequences) is provided by Rob Mensching, who created Wix.  According to him, `After="InstallFiles"` is correct. However, the execution needs to be "deferred" until the files are actually copied to the file system.  Below is the corrected XML.
 
 ``` xml
 <CustomAction Id="DbBatchCmd" Directory='B_DBINSTALLDIR' Execute="deferred" ExeCommand="[SystemFolder]\cmd /c &quot;&quot;setup_database.cmd&quot; &quot;[b_WebServer]&quot; &quot;[b_DbServer]&quot;&quot;" />

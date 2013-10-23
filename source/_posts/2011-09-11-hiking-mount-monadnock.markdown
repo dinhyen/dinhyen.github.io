@@ -16,7 +16,7 @@ meta:
   _thumbnail_id: '960'
 ---
 
-As far as big mountain goes,<a href="http://en.wikipedia.org/wiki/Mount_Monadnock" targtet="_blank"> Mount Monadnock</a> in the southwestern corner of New Hampshire is relatively close to Boston.  Despite its proximity, we've never set foot on it. So we set out on a beautiful Saturday morning to redress this omission.
+As far as big mountain goes,[ Mount Monadnock](http://en.wikipedia.org/wiki/Mount_Monadnock" targtet="_blank) in the southwestern corner of New Hampshire is relatively close to Boston.  Despite its proximity, we've never set foot on it. So we set out on a beautiful Saturday morning to redress this omission.
 
 <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3497.jpg" alt="Mount Monadnock" />
 
@@ -31,5 +31,5 @@ The plan was to take the White Dot trail up and White Cross trail down.  Ascend
 
 The view at the top was spectacular.  We were lucky to get a beautiful and relatively clear day.  We could see the majestic ridges of the White Mountains to the north and the very faint, barely perceptible in the haze, outline of the twin towers of the Boston skyline in the southeast horizon.
 
-The trail systems here were partly created by the <a href="http://en.wikipedia.org/wiki/Civilian_Conservation_Corps">Civilian Conservation Corps</a> in 1931-1933 during the Great Depression.  We've seen their work in many of the places we've visited.  One can only hope that after this Great Recession we'll have left something as worthwhile to posterity.
+The trail systems here were partly created by the [Civilian Conservation Corps](http://en.wikipedia.org/wiki/Civilian_Conservation_Corps) in 1931-1933 during the Great Depression.  We've seen their work in many of the places we've visited.  One can only hope that after this Great Recession we'll have left something as worthwhile to posterity.
 

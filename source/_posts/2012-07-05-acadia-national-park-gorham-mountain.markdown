@@ -15,7 +15,7 @@ meta:
   _thumbnail_id: '1230'
   _wp_old_slug: acadia-national-park-gorham-mountain-trail
 ---
-<a href="https://maps.google.com/maps/ms?msid=214490968088440958659.0004c4539d268330218f1&msa=0&ll=44.319534,-68.191431&spn=0.014907,0.027637" target="_blank">Map</a> of our hike on Gorham Mountain Trail.
+[Map](https://maps.google.com/maps/ms?msid=214490968088440958659.0004c4539d268330218f1&msa=0&ll=44.319534,-68.191431&spn=0.014907,0.027637) of our hike on Gorham Mountain Trail.
 
 Because it's the only national park in the northeastern US, I've visited Acadia National Park several times over the years. But I'm a bit mystified that I've managed to hike it just once, and it was only last year.  I think it is because I've come here in a large group, for which it's not easy to plan a hike.  Further, there are so many things to do that we've always managed to find other alternatives.
 

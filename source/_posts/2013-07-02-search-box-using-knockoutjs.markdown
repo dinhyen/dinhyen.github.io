@@ -13,7 +13,7 @@ meta:
   _edit_last: '1'
   _syntaxhighlighter_encoded: '1'
 ---
-<a href="http://jsfiddle.net/dinhyen/GaDJD" target="_blank">View the live example</a>
+[View the live example](http://jsfiddle.net/dinhyen/GaDJD)
 
 We're gradually gravitating toward AngularJS because it's more powerful and flexible. However with AngularJS we have some issues with IE7, which unfortunately we're stuck supporting. So when I want to add some simple enhancements to the search box, I went back to KnockoutJS.  For a simple scenario such as this, KnockoutJS works great. If we had to do this using plain jQuery, we'd have to juggle keypress, focus and blur events which is just unnecessary drudgery!
 
@@ -34,7 +34,7 @@ To show the prompt, I'm using an overlay container.  It's not very elegant, but 
 
 The valueUpdate binding ensures that KnockoutJS updates the text box's value when the user types on the keyboard or pastes with the mouse.
 
-The stylesheet (in <a href="http://sass-lang.com" target="_blank">SASS</a> which is easier to read) is as follows:
+The stylesheet (in [SASS](http://sass-lang.com) which is easier to read) is as follows:
 
 ``` css
 #site-search {

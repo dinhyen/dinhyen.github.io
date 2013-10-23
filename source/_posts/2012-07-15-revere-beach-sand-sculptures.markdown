@@ -15,7 +15,7 @@ meta:
   _edit_last: '1'
   _thumbnail_id: '1381'
 ---
-The annual <a href="http://reverebeachpartnership.com/sandsculpting/" target="_blank">Revere Beach sculpting festival</a> concluded over the weekend.  But since it hadn't rained, we figured there's a good chance the sculptures were still around.  We got there around twilight, which was even better because the absence of mid-day shadows allowed the subtle details of the sculptures to come out.
+The annual [Revere Beach sculpting festival](http://reverebeachpartnership.com/sandsculpting/) concluded over the weekend.  But since it hadn't rained, we figured there's a good chance the sculptures were still around.  We got there around twilight, which was even better because the absence of mid-day shadows allowed the subtle details of the sculptures to come out.
 
 Commemorating the 100th anniversary of Fenway Park.
 
@@ -37,7 +37,7 @@ A prince of the aquatic kingdom.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6305.jpg' />
 
-What appears to be an <a href="http://en.wikipedia.org/wiki/Alien_(creature_in_Alien_franchise)#Facehugger" target="_blank">Alien face-hugger</a> attacking a hermit crab.
+What appears to be an [Alien face-hugger](http://en.wikipedia.org/wiki/Alien_(creature_in_Alien_franchise)#Facehugger) attacking a hermit crab.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6307.jpg' />
 
@@ -61,7 +61,7 @@ Cyclops is weeping.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6290.jpg' />
 
-*Mother Earth in pain* is perhaps inspired by <a href="http://www.imdb.com/title/tt0104070/" target="_blank">Death Becomes Her</a>.
+*Mother Earth in pain* is perhaps inspired by [Death Becomes Her](http://www.imdb.com/title/tt0104070/).
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6284a.jpg' />
 

@@ -12,9 +12,9 @@ meta:
   _edit_last: '1'
   _syntaxhighlighter_encoded: '1'
 ---
-<a href="http://jsfiddle.net/dinhyen/q4FKT/1/" target="_blank">View the live example</a>
+[View the live example](http://jsfiddle.net/dinhyen/q4FKT/1/)
 
-It seems like I'm always [working on search boxes](/blog/2013/07/02/search-box-using-knockoutjs/ "Search box using KnockoutJS"), but here goes another. My goal here is to display an icon inside the search box. Initially, the search box has a dark background. When clicked, the background changes to white. The icon should changes its color based on whether or not the search box has focus. If we were using a font-based icon such as <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Fontawesome</a>, which is awesome by the way, styling the icon would be a simple exercise.  However, we're using an image-based icon, so it's not possible to change its color.
+It seems like I'm always [working on search boxes](/blog/2013/07/02/search-box-using-knockoutjs/ "Search box using KnockoutJS"), but here goes another. My goal here is to display an icon inside the search box. Initially, the search box has a dark background. When clicked, the background changes to white. The icon should changes its color based on whether or not the search box has focus. If we were using a font-based icon such as [Fontawesome](http://fortawesome.github.io/Font-Awesome/), which is awesome by the way, styling the icon would be a simple exercise.  However, we're using an image-based icon, so it's not possible to change its color.
 
 One solution is to use 2 icons, dark and light. We swap them depending on whether the input has focus. If the input is inactive, we show the light icon and hide the dark icon.  If the input is focused, we do the opposite.
 

@@ -26,7 +26,7 @@ I'm using a WordPress theme that loads jQuery and other JavaScripts in the heade
 
 Using Chrome's Developer console (i.e., hit F12) to view the Resources for the page, I could see that jQuery is being loaded.
 <img title="jquery-cdn-1" src="http://www.yentran.org/blog/wp-content/uploads/2012/04/jquery-cdn-11.png" width="333" height="279" />
-I wanted to load jQuery from Google's Content Delivery Network (<a href="http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you" target="_blank">why</a>?). My initial attempt was to simply change  the jQuery reference to the CDN location (I also upgraded to version 1.7.1 while I was at it):
+I wanted to load jQuery from Google's Content Delivery Network ([why](http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you)?). My initial attempt was to simply change  the jQuery reference to the CDN location (I also upgraded to version 1.7.1 while I was at it):
 
 ``` html
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -49,7 +49,7 @@ add_action('wp_enqueue_scripts', 'load_cdn_jQuery');
 
 This worked and only a single copy of jQuery remained. However, the other scripts which depend on jQuery now break because they are being loaded before jQuery.
 
-Following the instructions provided in the <a href="http://codex.wordpress.org/Function_Reference/wp_enqueue_script" target="_blank">wp_enqueue_script reference</a>, I added the following lines to functions.php to ensure that their dependency on jQuery is enforced:
+Following the instructions provided in the [wp_enqueue_script reference](http://codex.wordpress.org/Function_Reference/wp_enqueue_script), I added the following lines to functions.php to ensure that their dependency on jQuery is enforced:
 
 ``` php
 function my_scripts_method() {
