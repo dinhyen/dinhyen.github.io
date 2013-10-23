@@ -1,0 +1,71 @@
+---
+layout: post
+title: Revere Beach sand sculptures
+categories:
+- outdoors
+- photography
+tags:
+- art
+- sculpture
+status: publish
+type: post
+published: true
+meta:
+  aktt_notify_twitter: 'no'
+  _edit_last: '1'
+  _thumbnail_id: '1381'
+---
+The annual <a href="http://reverebeachpartnership.com/sandsculpting/" target="_blank">Revere Beach sculpting festival</a> concluded over the weekend.  But since it hadn't rained, we figured there's a good chance the sculptures were still around.  We got there around twilight, which was even better because the absence of mid-day shadows allowed the subtle details of the sculptures to come out.
+
+Commemorating the 100th anniversary of Fenway Park.
+
+<img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6294.jpg' />
+
+Not sure what this represents, other than a study in perspectives.
+
+<img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6279.jpg' />
+
+The rather grotesque and provocatively Lovecraftian gorehound.
+
+<img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6277.jpg' />
+
+Trying to fit in.
+
+<img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6300.jpg' />
+
+A prince of the aquatic kingdom.
+
+<img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6305.jpg' />
+
+What appears to be an <a href="http://en.wikipedia.org/wiki/Alien_(creature_in_Alien_franchise)#Facehugger" target="_blank">Alien face-hugger</a> attacking a hermit crab.
+
+<img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6307.jpg' />
+
+This half-man, half-snake creature (Cobro?) could be the stuff of your worst nightmare.
+
+<img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6312.jpg' />
+
+This is oddly tame considering the wildly fantastic ...beings around it.
+
+<img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6308.jpg' />
+
+This is the back...
+
+<img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6285.jpg' />
+
+...and the front. The title: *Everyone has a dark side*.  This gal would get a lot of dates online, though.
+
+<img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6291.jpg' />
+
+Cyclops is weeping.
+
+<img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6290.jpg' />
+
+*Mother Earth in pain* is perhaps inspired by <a href="http://www.imdb.com/title/tt0104070/" target="_blank">Death Becomes Her</a>.
+
+<img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6284a.jpg' />
+
+This brings us to my favorite piece by Stephane Robert.
+
+<img src='https://dl.dropboxusercontent.com/u/52804626/revere-2012/dsc_6275.jpg' />
+

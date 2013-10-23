@@ -1,0 +1,27 @@
+---
+layout: post
+title: It's alive!
+categories:
+- Photoshop
+tags:
+- blog
+status: publish
+type: post
+published: true
+meta:
+  jabber_published: '1303792708'
+  _edit_last: '1'
+  aktt_notify_twitter: 'no'
+  _thumbnail_id: '8'
+---
+The task of selecting a name for this blog site was reduced to finding a number, since all the sensible permutations involving my first and last name have already been claimed.  The number 73 comes to mind.  As Sheldon pontificated in Big Bang Theory (season 4, episode 10), 73 is the "best number" because it's the 21st prime number, whose mirror is 37, which is the 12th prime number, whose mirror is 21, which is the product of 7 and 3.  Nice, but obscure. And people would probably assume, not without good reason, that it stands for something as prosaic as my birth year.  So 99 it is, a number meaningful to any hockey fan, and one that's on the back of all of the handful of jerseys I own.
+
+Since this is my first post, it should have something interesting or at least Star Wars-related.  I think we can all agree that nothing beats a lightsaber duel.  I had this photo of our re-enactment of the Darth Maul,  Qui-Gon Jinn and Obi-Wan clash.  Before you make any comment, only the idea of the Jedi fight was cool while the rest of Episode 1 was an abject failure.  In any case, the authenticity of this climactic scene was somewhat undermined by the fact that we were wielding twigs instead of lightsabers.
+<a href="http://www.yentran.org/blog/wp-content/uploads/2011/04/lightsaber_duel_before.jpg" rel="prettyPhoto"><img title="Lightsaber_duel_Before" src="http://www.yentran.org/blog/wp-content/uploads/2011/04/lightsaber_duel_before.jpg?w=300" alt="Stick duel" width="300" height="225" /></a>
+But that's a minor problem that a little tool known as Photoshop wouldn't be able to fix.  After all, didn't I try to learn Photoshop so I could do just this?
+
+After more than a few tweaks, here's the result.  Unfortunately there was no easy fix for the un-Jedi like outfit or the goofy facial expressions.  But the important thing was that no one risked getting an arm severed or having a hole drilled in his mid-section in this enterprise.  And we could pick our very own lightsaber color, like purple.
+
+For the record, Beracah was going down!
+<a href="http://www.yentran.org/blog/wp-content/uploads/2011/04/lightsaber_duel_after.jpg" rel="prettyPhoto"><img title="Lightsaber_duel_After" src="http://www.yentran.org/blog/wp-content/uploads/2011/04/lightsaber_duel_after.jpg?w=300" alt="Lightsaber duel" width="300" height="225" /></a>
+**Update**: Since being migrated to my own domain, yen99 is no more.   But its namesake lives on in hockey lore.

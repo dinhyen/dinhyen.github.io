@@ -1,0 +1,26 @@
+---
+layout: post
+title: Top 10 reasons why hockey is the best
+categories:
+- hockey
+tags:
+- hockey
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+Would you expect any less from a die-hard hockey fan?  So with a warning that this is going to be shamelessly biased, here goes.
+
+1. At the 2011 NHL All-Stars game, NY Islanders forward Michael Grabner  won the Fastest Skater competition with a time of 14.238 seconds. The track length is about 550 ft.  This translates to 38.6 ft or 12.9 yards/second.  For comparison, let's look at the fastest 40-yard dash for football players, who are speedsters in their own right.  To cover 40 yards, Grabner took 3.1 seconds. The current record for a 40-yard dash by a football player is 4.24 seconds, a full 36% more. Furthermore, Grabner didn't have the luxury of going in a straight line, but had to make tight turns as he raced around the rink.  And Grabner probably had enough gas to go another rink length or so with only a slight reduction in speed.
+1. All of that insane foot speed in an enclosed rink leads to, you guess it, insane collisions.  Just googling something along the lines of "top hockey hits" should return some good samples.  A heavy, clean hit is an awesome sight to behold.
+1. At the 2011 All-Star game, Bruins captain Zdeno Chara <a href="http://www.nhl.com/ice/news.htm?id=551036">broke his own record</a> for the hardest slapshot in history with a blistering shot that registered 105.9 mph.  Tennis players routinely serve faster than that.  However, no one ever got hospitalized after getting hit with a tennis ball.  A hockey puck is made of vulcanized rubber.  When it becomes frozen during the game, it's bone-crushing hard. And yet...
+1. Hockey players routinely throw their body in harm's way to block shots. They would gladly take a puck to the face if the Cup is on the line.  This is because...
+1. Hockey players are the toughest in all of sports.  And it's got nothing to do with the willingness to stand toe-to-toe with some lumberjack from Moose Factory, Ontario and take bare-knuckled haymakers to the face.  *Exhibit A*: Brendan Witt of the NY Islanders <a href="http://www.tsn.ca/nhl/story/?id=301565">got hit by SUV</a>, swore a few times, played game at night.  *Exhibit B*:  Steven Stamkos of the Tampa Bay Lightning <a href="http://thebiglead.com/index.php/2011/05/27/steven-stamkos-takes-a-puck-to-the-face/">kissed puck with noggin</a>, came off ice gushing blood, put on somethingeld, returned to game. *Exhibit C*:  Martin St. Louis, also of the Lightning, <a href="http://www.montrealgazette.com/health/Players+grin+bear/4829144/story.html">ate a stick in the mouth</a> which knocked out 2 teeth, took some painkillers, played on.  Toughness is an unwritten code.  You play, unless the injury hampers your effectiveness.  This is why it is anathema for a hockey player to be writhing around to get a call from the refs.
+1. Hockey players play with razor blades on their feet and a deadly weapon in their hands.  Despite being relatively well-protected, they are susceptible to unusually nasty injuries.  Some are too gruesome for me to even contemplate. If you're curious, google injuries to Bryan Berard, René Bourque or Richard Zednik.
+1. Hockey requires tremendous skill.  Before you can even play, you need to learn to skate. Not just forward and backward, but forward crossover (left and right), backward crossover  (left and right) and stopping (left and right, one- and two-footed).  You also need to learn puck-handling, passing (forehand and backhand) and shooting (wrist shot, snap shot, slapshot).  And then there's this business of taking and dishing out hits. These aren't exactly common skills that you pick up doing every day things.
+1. How many time-outs are allowed per game?  Not 6, not 3 per half, not whenever you want to. One.  That's it. Use it wisely.
+1. The final seconds of a close game are the most exciting moments of the game.  One team is forced to pull its goalie, leaving a gaping net, in a desperate attempt to get the tying goal.  Most of the time the offensive zone is a mad house of tumbling bodies, diving goalie, ricocheting puck and broken sticks. One lucky shot by the defending team and it would be all over. Are you listening, basketball?
+1. The <a href="http://en.wikipedia.org/wiki/Slap_Shot_(film)">funniest sports movie ever</a> is about hockey
+
