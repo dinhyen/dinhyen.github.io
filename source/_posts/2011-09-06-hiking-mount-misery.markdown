@@ -20,4 +20,4 @@ Despite its formidable and romantic name, Mount Misery is anything but. It's a r
 Here are some [excellent directions](http://www321.pair.com/oaries/localattitude/mountmisery.htm).
 
 <iframe src="http://maps.google.com/maps/ms?msa=0&amp;msid=214490968088440958659.0004ac21a9aeb994026fa&amp;ie=UTF8&amp;ll=42.418668,-71.335228&amp;spn=0.008358,0.025229&amp;vpsrc=6&amp;output=embed" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="550" height="350"></iframe>
-<small>View <a style="color: #0000ff; text-align: left;" href="http://maps.google.com/maps/ms?msa=0&amp;msid=214490968088440958659.0004ac21a9aeb994026fa&amp;ie=UTF8&amp;ll=42.418668,-71.335228&amp;spn=0.008358,0.025229&amp;vpsrc=6&amp;source=embed">Mt Misery</a> in a larger map</small>
+

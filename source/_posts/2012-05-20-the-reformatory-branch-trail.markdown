@@ -17,4 +17,4 @@ Once you reach the terminus of the Minuteman Bikeway at Bedford Railroad Depot, 
 
 The map data was recorded on my GPS tracker, which I exported to GPX format and uploaded to Google Map.
 
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?t=h&amp;msa=0&amp;msid=214490968088440958659.0004c07c60940a154b825&amp;source=embed&amp;ie=UTF8&amp;ll=42.480422,-71.269512&amp;spn=0.028612,0.054288&amp;output=embed"></iframe><br /><small>[View](http://maps.google.com/maps/ms?t=h&amp;msa=0&amp;msid=214490968088440958659.0004c07c60940a154b825&amp;source=embed&amp;ie=UTF8&amp;ll=42.480422,-71.269512&amp;spn=0.028612,0.054288" style="color:#0000FF;text-align:left) in a larger map</small>
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?t=h&amp;msa=0&amp;msid=214490968088440958659.0004c07c60940a154b825&amp;source=embed&amp;ie=UTF8&amp;ll=42.480422,-71.269512&amp;spn=0.028612,0.054288&amp;output=embed"></iframe>
