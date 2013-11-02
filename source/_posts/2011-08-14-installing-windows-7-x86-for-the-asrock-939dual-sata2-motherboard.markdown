@@ -7,12 +7,6 @@ tags:
 - driver
 - install
 - Windows 7
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '3'
 ---
 The [ASRock 939Dual-SATA2](http://www.asrock.com/mb/overview.asp?Model=939Dual-SATA2) motherboard is a little long in the tooth but still quite capable.  Mine has been running Windows XP Media Center Edition for some time and I decided to upgrade it to Windows 7.  The challenge is that the motherboard's JMicron SATA2 chipset isn't detected automatically at installation.  If you want to install Windows on a SATA hard drive, you will have to load the driver first.  The other problem is that, as of the time of writing, there is no Windows 7 driver for the ULi integrated Ethernet controller due to the age of the hardware.  You would have find another workaround for this issue.
 # Installing Windows

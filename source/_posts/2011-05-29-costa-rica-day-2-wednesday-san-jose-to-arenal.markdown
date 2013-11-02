@@ -13,13 +13,6 @@ tags:
 - San Jose
 - toucans
 - waterfalls
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
-  _thumbnail_id: '949'
 ---
 Breakfast brought us on another trip to Denny's.  You must think we love it.  In reality, the hotel was right next to the very busy Highway 1, the Pan-American Highway.  The only other place within reasonable walking distance would have been Subway's.  We had a free breakfast voucher, so Denny's it was.
 

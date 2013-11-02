@@ -12,13 +12,6 @@ tags:
 - Montmorency Falls
 - Restaurant Thang Long
 - vineyard
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _thumbnail_id: '955'
-  aktt_notify_twitter: 'no'
 ---
 We had our fill of the city yesterday, so it seemed like time to head out to the country. We also learned that William and Kate [would be in town](http://news.yahoo.com/prince-william-kate-undeterred-quebec-protests-174723189.html) as part of their Canada tour, an event undoubtedly to be attended by legions of their admirers and non-admirers alike. That cemented the decision for us. First stop is the Montmorency Falls. At 84 meters, it's higher than Niagara Falls.
 

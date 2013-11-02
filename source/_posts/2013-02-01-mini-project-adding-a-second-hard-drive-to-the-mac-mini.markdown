@@ -8,11 +8,6 @@ tags:
 - mini
 - ssd
 - upgrade
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
 ---
 I want to replace the DVR that I get from Verizon Fios. Besides the monthly cost, it's an older unit that's slow and has the capacity for no more than a handful 3-hour hockey games recorded in HD. That is plainly unacceptable, especially during the Stanley Cup Playoffs. For the HD tuner, I decided to go with the SiliconDust HD Homerun Prime. For the DVR, I'm going with a Mac Mini. I'm a recent Mac convert, having used exclusively PCs until now. Even though I enjoy assembling PCs, I'm at a point where I'd like stuff to just work. Even more so, I'm more and more a fan of the elegance and simplicity of OS X.
 

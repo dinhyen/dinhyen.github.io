@@ -5,12 +5,6 @@ categories:
 - technology
 tags:
 - wix
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
 ---
 I've been trying to get a Wix installer to work. This particular scenario is pretty simple. I want to configure the database via a custom action, then start a Windows service which then queries the database before starting.  This would seem like a commonplace scenario. However, Wix documentations are sparse and I've been wrangling with this for some time.  I finally found a solution.  While I loathe to reference a StackOverflow answer, as a favor to my future self I'm going to do so anyways.
 

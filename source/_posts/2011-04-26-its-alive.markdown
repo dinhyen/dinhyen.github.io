@@ -5,14 +5,6 @@ categories:
 - Photoshop
 tags:
 - blog
-status: publish
-type: post
-published: true
-meta:
-  jabber_published: '1303792708'
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
-  _thumbnail_id: '8'
 ---
 The task of selecting a name for this blog site was reduced to finding a number, since all the sensible permutations involving my first and last name have already been claimed.  The number 73 comes to mind.  As Sheldon pontificated in Big Bang Theory (season 4, episode 10), 73 is the "best number" because it's the 21st prime number, whose mirror is 37, which is the 12th prime number, whose mirror is 21, which is the product of 7 and 3.  Nice, but obscure. And people would probably assume, not without good reason, that it stands for something as prosaic as my birth year.  So 99 it is, a number meaningful to any hockey fan, and one that's on the back of all of the handful of jerseys I own.
 

@@ -6,13 +6,6 @@ categories:
 tags:
 - acadia national park
 - bubbles
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _thumbnail_id: '1247'
 ---
 [Map ](https://maps.google.com/maps/ms?msid=214490968088440958659.0004c453c947c3eb5ce5b&msa=0&ll=44.340824,-68.253111&spn=0.007451,0.013089)of our hike on the North and South Bubble Mountains
 

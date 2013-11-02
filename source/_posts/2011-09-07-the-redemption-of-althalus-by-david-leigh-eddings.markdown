@@ -10,13 +10,6 @@ tags:
 - novel
 - Redemption of Althalus
 - sci-fi
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _thumbnail_id: '640'
 ---
 <img title="althalus" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/althalus.jpg" width="186" height="272" />Having plowed through three multi-volume fantasy series in a row, I thought this single-volume tome, the first standalone fantasy adventure by the husband-and-wife team, might be a welcome respite. I haven't read any book by the Eddingses, but their reputation as prolific and popular authors is well-known. I was further intrigued by the "#1 international bestseller" plug emblazoned on the hardcover.
 

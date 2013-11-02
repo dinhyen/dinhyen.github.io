@@ -7,13 +7,6 @@ categories:
 tags:
 - Chihuly
 - Museum of Fine Arts
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _thumbnail_id: '946'
-  aktt_notify_twitter: 'no'
 ---
 Last Friday, we visited the Chihuly exhibit at the MFA. Like most people, I strained to find familiar words to describe something unfamiliar (during those moments when my mind wasn't occupied with playing over and over the disastrous scenario of inadvertently knocking something down).  Here are some of the ones I came up with.  But sometimes, you just have to admit that there isn't a word.
 

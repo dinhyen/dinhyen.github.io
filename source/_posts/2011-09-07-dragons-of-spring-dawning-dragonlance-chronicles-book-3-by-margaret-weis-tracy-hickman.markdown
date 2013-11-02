@@ -10,12 +10,6 @@ tags:
 - Margaret Weis
 - novel
 - Tracy Hickman
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 <img title="DragonsofSpringDawning" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/DragonsofSpringDawning.jpg" width="177" height="300" />After the setback at the end of book two, hope finally dawns on Krynn. For the rediscovered dragonlances and the return of the good metallic dragons are finally turning the tide of fortunes against the forces of darkness in the War of the Lance. In the north, under the leadership of a new general, none other than one of our familiar companions, victories follow victories, cities are retaken, enemy commanders are captured, and for a time, evil seems to be on the verge of defeat. Nevertheless, the Dark Lady has a devious ruse of her own that would deal a devastating blow to the forces of good from which they may not recover. Meanwhile, the other half of the sundered fellowship struggles to bring back the Silvanesti dragon orb and reunite with their friends. Their efforts are meaningless to Raistlin, who already have found a way to wield the power of the orb and whose mind may have turned to darkness. The end comes in a frantic rush as the companions fight to rescue their friends in the evil lair of Takhisis, prevent the Queen of Darkness from gaining corporeal existence in Krynn, and finally escape with their lives. All the while, the nightmare that they all shared in the twisted woods of Silvanesti would come back to haunt them in the waking world.
 

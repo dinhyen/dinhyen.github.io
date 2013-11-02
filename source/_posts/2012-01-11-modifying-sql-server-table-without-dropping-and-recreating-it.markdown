@@ -6,12 +6,6 @@ categories:
 tags:
 - sql server
 - tip
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 The SQL Server Designer is a nice visual tool for making modifications to a table. However, when you save the changes, SQL Server actually drops the entire table and then recreates it (if there are data in the table, they would be retained). This happens even if the changes made do not actually require that the table be re-created. This is presumably so that SQL Server can accommodate all possible types of modification.
 

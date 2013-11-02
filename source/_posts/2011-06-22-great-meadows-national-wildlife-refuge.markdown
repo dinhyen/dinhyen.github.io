@@ -8,13 +8,6 @@ tags:
 - Concord
 - herons
 - wildlife
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _thumbnail_id: '951'
-  aktt_notify_twitter: 'no'
 ---
 File this as another in the category of "places I've gone by hundreds of times while being clueless that it exists".  This is just steps away from historic Concord Center, which is popular with tourists and cyclists alike.  The Old North Bridge, site of the confrontation that led to "the shot heard around the world", is about 5 minutes away, while Thoreau's Walden Pond is just down the road.  On a nice day, you'd see a constant train of cyclists going around the rotary on their way to the north and west suburbs.   Or a long line of parked cars on the bridge, whose owners are floating somewhere on the Concord River in a canoe or kayak.
 

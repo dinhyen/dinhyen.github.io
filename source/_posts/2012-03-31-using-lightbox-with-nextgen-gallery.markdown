@@ -7,12 +7,6 @@ tags:
 - plugin
 - tip
 - wordpress
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 In my former Wordpress blog, I used the excellent [NextGen plugin](http://wordpress.org/extend/plugins/nextgen-gallery/) to manage images in galleries.  When embedded in a post, the gallery is rendered as thumbnails, whose full-size version  is shown as an overlay when clicked.  I also like to embed inline images so that I can include a caption.  Inline images, however, are still directly linked and not shown as an overlay.  When viewed, it requires an additional click or two to go back to the post.
 

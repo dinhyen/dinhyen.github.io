@@ -7,13 +7,6 @@ tags:
 - app pool identity
 - iis 7.5
 - permission
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
 ---
 Up to IIS 7 (Windows Vista and Windows Server 2008), the default app pool identity is NetworkService 7. In IIS 7.5 (Windows 7 and Windows Server 2008 R2) the app pool identity is changed to something called ApplicationPoolIdentity.
 

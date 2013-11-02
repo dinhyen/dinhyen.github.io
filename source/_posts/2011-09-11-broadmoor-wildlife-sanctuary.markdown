@@ -9,13 +9,6 @@ tags:
 - hike
 - nature
 - wildlife
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _thumbnail_id: '961'
 ---
 
 [Broadmoor](http://www.massaudubon.org/Nature_Connection/Sanctuaries/Broadmoor/index.php) is another outstanding Audubon sanctuary.  Though to be fair, none of the Audubon properties we've visited in Massachusetts has disappointed us yet.  Despite sounding like something out of [The Hounds of the Baskervilles](http://en.wikipedia.org/wiki/The_Hound_of_the_Baskervilles), Broadmoor is situated in a tranquil setting along the bank of the Indian Brook,which flows into the meandering Charles River.  In fact, part of the sanctuary borders the Charles.

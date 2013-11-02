@@ -4,12 +4,6 @@ title: Bruins Training Camp 2013
 categories:
 - hockey
 tags: []
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _thumbnail_id: '2101'
 ---
 Having moved to the 'burbs recently, I look forward to attending the Bruins' regular-season practice sessions at Ristuccia Arena in Wilmington, now that it's only a few miles away.  The 2013 Training Camp, though, was held at TD Garden the weekend of September 14-15. Of course I was going to be there.
 

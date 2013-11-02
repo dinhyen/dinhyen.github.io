@@ -8,13 +8,6 @@ tags:
 - jquery
 - tip
 - wordpress
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
 ---
 I'm using a WordPress theme that loads jQuery and other JavaScripts in the header.php script:
 

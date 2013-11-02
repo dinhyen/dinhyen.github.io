@@ -5,12 +5,6 @@ categories:
 - technology
 tags:
 - angularjs
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
 ---
 [View in Plunkr](http://plnkr.co/edit/rynrXkzGcSHeWZrSXENl)
 

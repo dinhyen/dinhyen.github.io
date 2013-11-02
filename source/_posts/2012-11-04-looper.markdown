@@ -6,12 +6,6 @@ categories:
 tags:
 - movie
 - spoilers
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
 ---
 Looper, starring Bruce Willis and that awkward kid in Third Rock from the Sun, is a terrific movie with extraordinary storytelling, tightly woven narrative and great acting. I really enjoy it very much, despite some misgivings about its remorseless violence and relentlessly depressing depiction of the future. However, since I've been asked if I can poke any hole in it, I've taken it upon myself as a task to find a chink or two in the movie's formidable armor, much in the same spirit as [this critique](http://www.juliansanchez.com/2012/06/11/whats-wrong-with-prometheus-a-partial-list). There are probably a few holes in my own armor, as I've only sat through the movie once and may miss details here and there. Needless to say, this is going to contain **massive spoilers**. I mean, it's pretty much going to give whole the movie away. So if you haven't seen the movie and would like to at some point, you will not want to read further. With that disclaimer out of the way, here goes.
 

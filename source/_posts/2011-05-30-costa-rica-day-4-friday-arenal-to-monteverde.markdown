@@ -12,13 +12,6 @@ tags:
 - Los Chiles
 - Suzuki
 - wildlife
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _thumbnail_id: '182'
-  aktt_notify_twitter: 'no'
 ---
 Breakfast included blackberry and papaya juice. I love this place! We bid farewell to our avian and reptilian friends. There was some commotion on the other side of the dining hall. Our waiter, like other Ticos always eager to point out cool things to us gringos, motioned us to come over. There was a caiman sunning himself just on the other side of the river. He also gave thumbs up to Monteverde's ranarium and butterfly garden; even though he had never been to Monteverde, he learned about them from the hotel's tour leader. Later on we would concur.
 

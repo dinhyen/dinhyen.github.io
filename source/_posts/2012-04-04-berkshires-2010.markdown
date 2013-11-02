@@ -7,13 +7,6 @@ categories:
 tags:
 - berkshires
 - foliage
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _thumbnail_id: '1071'
-  aktt_notify_twitter: 'no'
 ---
 Some highlights during my visit to the Berkshires in the autumn of 2010:
 

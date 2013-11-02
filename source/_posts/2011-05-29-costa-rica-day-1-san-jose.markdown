@@ -9,12 +9,6 @@ tags:
 - San Jose
 - Suzuki
 - William Least Heat-Moon
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
 ---
 I just came back from a second visit to Costa Rica, the first being 2 years ago.  This trip was quite spontaneous, after plans to catch a friend during her last semester in Venice fell through.
 

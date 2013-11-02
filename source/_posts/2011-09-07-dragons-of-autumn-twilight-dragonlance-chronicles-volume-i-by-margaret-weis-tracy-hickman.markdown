@@ -10,12 +10,6 @@ tags:
 - Margaret Weis
 - novel
 - Tracy Hickman
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 <img title="DragonsofAutumnTwilight" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/DragonsofAutumnTwilight.jpg" width="179" height="300" />The DragonLance saga is one of the most prolific in fantasy, with scores of prequels and sequels and offshoots and imitators. The DragonLance Chronicles is the series that started it all. To call it anything less than a classic would be sacrilegious. Deeply rooted in the mythos of Tolkien and heavily influenced by the rules and mechanics of the RPG world, the DragonLance Chronicles manages to create a vast high-fantasy universe with few equals then or since. Dragons of Autumn Twilight has many rough edges, typical for a first book in a series, but it fulfills its role admirably and paves the way for a crescendo in the second and third book.
 

@@ -12,11 +12,6 @@ tags:
 - Ray Bourque
 - Sergei Samsonov
 - Stanley Cup
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
 ---
 It's the eve before the biggest game in my history as a Bruins fan.  I'm so nervous I'm going to have problem going to sleep.  I had known about hockey quite early on since Las Vegas had a minor-league team, the now-defunct Las Vegas Thunder, and a friend was a big fan.  Despite knowing so little about the game, I was hooked immediately when I came to Boston in the mid-90s.  The  grace and speed intermixed with the power and physical intensity, in my mind, elevate hockey above all other team sports.  I remember cheering for the dynamic duo of Joe Thornton and Sergei Samsonov.  Samsonov was my favorite player because of his small stature and mesmerizing puck-handling skill.  I remember feeling sad when Ray Bourque was traded to the Colorado Avalanche in 2000, then being elated when he won the Stanley Cup the following season.  When Bourque brought the Cup back to a rally at City Hall, I was among the thousands who showed up to cheer for him.
 

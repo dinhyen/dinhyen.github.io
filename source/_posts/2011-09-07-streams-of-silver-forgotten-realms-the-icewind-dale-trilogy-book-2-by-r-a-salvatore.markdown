@@ -9,12 +9,6 @@ tags:
 - fantasy
 - novel
 - RA Salvatore
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 <img title="Streams_of_Silver" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/Streams_of_Silver-182x300.jpg" width="182" height="300" />Good things come in trilogies and, in most cases, the second of the series is the best...Streams of Silver is perhaps the zenith of the Icewind Dale trilogy. There are plenty of exciting adventures, desperate battles, horrifying monsters, devious sorcerers, dark dungeons, but most importantly, there is an element of the unknown. In the first novel, we all know the identity of the villain and what his nefarious plans are. Here, the companions, and the readers, have no idea what to expect, what horrible discovery they will make once they reach their destination. However, this book is more than just swashbuckling and dungeon exploring. We gain an insight into the mind of Drizzt, the mental conflicts and emotional sacrifices he must endure to uphold his principles. Even though there isn't a neatly wrapped conclusion by the end, this book is proof that sometimes the journey is better than the destination!
 

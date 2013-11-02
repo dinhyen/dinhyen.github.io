@@ -5,13 +5,6 @@ categories:
 - technology
 tags:
 - asp.net mvc
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
 ---
 This scenario is probably unusual but it did happen to me. I had a view named Foo.aspx and partial view named Foo.ascx. The view rendered the partial as follows:
 

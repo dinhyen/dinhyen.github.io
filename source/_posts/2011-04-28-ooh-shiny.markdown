@@ -7,14 +7,6 @@ tags:
 - Illustrator
 - logo
 - Photoshop
-status: publish
-type: post
-published: true
-meta:
-  jabber_published: '1304041141'
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
-  _thumbnail_id: '20'
 ---
 Some time ago I took a software engineering class.  For the term project we divided up into teams and worked on a project of our own choosing from beginning to end.  Ours was an e-commerce application, the source code for which still resides on Google Code.
 

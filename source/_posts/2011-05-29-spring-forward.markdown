@@ -5,13 +5,6 @@ categories:
 - photography
 tags:
 - flowers
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
-  _thumbnail_id: '939'
 ---
 Winter dragged its feel longer than usual this year. The first day of spring came and went, yet the dreariness continued well into April. There was even a minor snow storm on April Fool's Day, bringing to mind the [epic blizzard of 1997](http://en.wikipedia.org/wiki/April_Fool's_Day_Blizzard). I remember that one well, having worked through the night to finish a problem set, only to find that class had been canceled and normally busy Memorial Drive had turned into a white graveyard. But winter must go; celestial mechanics ensures of it.
 

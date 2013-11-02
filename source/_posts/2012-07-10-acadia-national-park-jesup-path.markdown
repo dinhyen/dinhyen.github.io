@@ -6,13 +6,6 @@ categories:
 tags:
 - acadia national park
 - trail
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _thumbnail_id: '1314'
 ---
 [Map](https://maps.google.com/maps/ms?msid=214490968088440958659.0004c4860317ce599cad3&msa=0&ll=44.366462,-68.211515&spn=0.014895,0.015643) of our hike on Jesup Path.
 

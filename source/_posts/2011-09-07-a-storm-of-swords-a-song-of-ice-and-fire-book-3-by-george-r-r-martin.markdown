@@ -9,12 +9,6 @@ tags:
 - George RR Martin
 - novel
 - Storm of Swords
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 <img title="AStormOfSwords" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/AStormOfSwords.jpg" width="200" height="290" />With this third hit in a row, I think it's appropriate to call the Song of Fire and Ice series a phenomenon. Just when you think things can't get any better, Martin turns out another gem. Judging from the previews for the next book, A Feast for Crows, things are bound to get even more exciting. I can only hope that this series doesn't turn into a certain other series that started out promising then bogged down completely so that by the time the tenth book rolls around, readers are forced to stomp their feet in angry frustration.
 

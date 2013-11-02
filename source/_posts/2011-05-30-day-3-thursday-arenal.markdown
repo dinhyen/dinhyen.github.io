@@ -8,13 +8,6 @@ tags:
 - German Bakery
 - Lake Arenal
 - San Carlos River
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _thumbnail_id: '144'
-  aktt_notify_twitter: 'no'
 ---
 I lay awake at night pondering how we were going to see more critters.  As it turned out, we didn't even have to leave the hotel.
 

@@ -6,12 +6,6 @@ categories:
 tags:
 - javascript
 - knockoutjs
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
 ---
 [View the live example](http://jsfiddle.net/dinhyen/GaDJD)
 

@@ -6,11 +6,6 @@ categories:
 tags:
 - diy
 - tip
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
 ---
 Some of my blogs are of the "I'd better write this down so I don't forget it" variety.  This is one of them. This is intended primarily for future me, but it would be cool if anyone else finds it useful.
 

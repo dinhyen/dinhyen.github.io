@@ -7,12 +7,6 @@ tags:
 - book review
 - Game of Thrones
 - George RR Martin
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 <img title="AGameOfThrones" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/AGameOfThrones-198x300.jpg" width="198" height="300" />George RR Martin's Song of Ice and Fire series receives almost universal acclaim from reviewers. I picked up A Game of Thrones after seeing it recommended by several reviewers. Since it is billed as the entry into an epic fantasy series, I half-expected to see a fantastic world populated by magic wielders and magical creations. Instead, I found that magic is virtually non-existent. Gritty, harsh realism is the predominant theme in Martin's medieval universe. In fact, this book reads more like historical documentary than fantasy fiction.
 

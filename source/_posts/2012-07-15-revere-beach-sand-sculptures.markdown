@@ -7,13 +7,6 @@ categories:
 tags:
 - art
 - sculpture
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _thumbnail_id: '1381'
 ---
 The annual [Revere Beach sculpting festival](http://reverebeachpartnership.com/sandsculpting/) concluded over the weekend.  But since it hadn't rained, we figured there's a good chance the sculptures were still around.  We got there around twilight, which was even better because the absence of mid-day shadows allowed the subtle details of the sculptures to come out.
 

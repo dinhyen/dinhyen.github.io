@@ -6,13 +6,6 @@ categories:
 tags:
 - Costa Rica
 - San Jose
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _thumbnail_id: '944'
-  aktt_notify_twitter: 'no'
 ---
 The flight was to be at 13:00 so we planned on departing no later than 10:30.  That left us about 1h after breakfast to explore downtown San Jose.  We were 4 blocks away from the Jade Museum, which owns the largest collection of Pre-Columbian jade artifacts anywhere. Unfortunately a museum was out of the question given the time constraint.
 

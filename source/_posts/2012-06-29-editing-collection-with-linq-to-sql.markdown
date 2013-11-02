@@ -6,13 +6,6 @@ categories:
 tags:
 - c#
 - linq to sql
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
 ---
 Let's say for a shopping cart we have an Order entity, a Product entity and an OrderDetails entity which serves as a bridge. The OrderDetails entity has OrderId and ProductId fields to associate products with orders. We also have an Order domain object which is passed from the business logic layer to the repository layer.
 

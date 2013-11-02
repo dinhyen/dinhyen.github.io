@@ -7,12 +7,6 @@ tags:
 - art
 - book review
 - Lord of the Rings
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 <img title="ArtOfLOTR" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/ArtOfLOTR.jpg" width="185" height="241" />Bringing Tolkien's Middle Earth to life is a monumental task. The locations, creatures and monsters have to be conceptualized, designed and created from the ground up. Capturing the spirit of Tolkien's work is an even more daunting challenge because of its tremendous scope, complexity and beauty. Furthermore, its legions of fans are staunch in their visions of Tolkien's universe, and satisfying all of them is impossible.
 

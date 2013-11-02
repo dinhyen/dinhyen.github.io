@@ -6,11 +6,6 @@ categories:
 tags:
 - Boston Bruins
 - Stanley Cup
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
 ---
 Zdeno Chara grabbed hold of the Cup, reverently brought it to his lips, then raised it above his head, repeating a ritual performed by all previous Cup-winning captains. The only difference was that it had not been done by someone wearing the spoked-B since Nixon was President.  The events of this night surely sent Bruins fans everywhere into a delirium.  For the entire time that the Bruins celebrated on the ice, I had a stupidly wide grin on my face.  I am quite sure I wasn't the only one.
 

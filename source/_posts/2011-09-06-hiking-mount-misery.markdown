@@ -6,12 +6,6 @@ categories:
 tags:
 - hiking
 - Lincoln
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 We went for a short hike over the long Labor Day weekend. To get there we drove through very picturesque Lincoln Center. Note to self: come back here for a bike ride in the fall. The trail head is located at the back of the very unremarkable parking lot for the local commuter train station.
 

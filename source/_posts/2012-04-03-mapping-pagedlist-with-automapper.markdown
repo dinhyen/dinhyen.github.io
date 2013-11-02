@@ -7,13 +7,6 @@ tags:
 - automapper
 - csharp
 - pagedlist
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
 ---
 I'm using an implementation of PagedList based on that [given by Rob Conery](http://wekeroad.com/2007/12/10/aspnet-mvc-pagedlistt/).
 

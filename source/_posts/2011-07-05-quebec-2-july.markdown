@@ -12,13 +12,6 @@ tags:
 - Montmorency Falls
 - Notre-Dame de Québec cathedral
 - Vieux-Québec
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _thumbnail_id: '954'
-  aktt_notify_twitter: 'no'
 ---
 At breakfast we ran into another Belgian couple, this time from Antwerp.  They were on a tour of Ontario and Québec.  They were quite excited about a free outdoor performance of the Cirque de Soleil.  Sophie, who made us breakfast, also told us about the Moulin de l'Images, which was some sort of projection. We'd have to check both of them out.
 

@@ -9,13 +9,6 @@ tags:
 - Elizabeth Haydon
 - fantasy
 - novel
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _thumbnail_id: '631'
 ---
 <img title="destiny_child_of_the_sky" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/destiny_child_of_the_sky-191x300.jpg" width="191" height="300" />2003 seems to be a good year for epic fantasy, with the impending release of Robert Jordan's 10th Wheel of Time book in January, George R. R. Martin's 4th Song of Fire and Ice book in April, and Terry Goodkind's 8th Sword of Truth book in June. That afterwards fans of these series will be left to languish for a couple of years is not a savory thought. In light of this reality, that Elizabeth Haydon fulfills the promise of bringing the Rhapsody series to a satisfying conclusion (though not THE conclusion) in a reasonable amount of time seems very satisfying indeed.
 

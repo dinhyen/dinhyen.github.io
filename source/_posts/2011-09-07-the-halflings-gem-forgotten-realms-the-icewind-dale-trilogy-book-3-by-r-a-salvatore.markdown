@@ -9,12 +9,6 @@ tags:
 - fantasy
 - novel
 - RA Salvatore
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
 ---
 <img title="the_halflings_gem" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/the_halflings_gem-178x300.jpg" width="178" height="300" />The end of the second volume leads right into the third. As the companions escaped from Mithral Hall, Regis fell into the clutches of Artemis Entreri, the deadly assassin hired by the leader of the thieves' guild in Calimport of whom Regis had run afoul. Furthermore, Entreri gained possession of the statuette that conjures the black panther Guenhwyvar, Drizzt's faithful extra-planar companion. Saddened by the loss of Bruenor and now Regis, Drizzt and Wulfgar resolve to track down the assassin to his lair and rescue their friend, while Catti-Brie is grimly determined to finish Bruenor's quest and retake Mithral Hall from the duergars.
 

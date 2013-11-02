@@ -7,12 +7,6 @@ tags:
 - backup
 - vdeck
 - wordpress
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 I don't think anyone would argue that regularly backing up data is a good idea.  At the same time, most people including myself don't do so nearly often enough.  Fortunately, the VDeck control panel provided by my web host helps make backing up and restoring data a cinch.
 

@@ -8,13 +8,6 @@ tags:
 - Julianne Moore
 - pencil
 - portrait
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _thumbnail_id: '530'
 ---
 <img title="BlendingStumpsEraser" src="http://www.yentran.org/blog/wp-content/uploads/2011/07/BlendingStumpsEraser-150x150.jpg" />
 

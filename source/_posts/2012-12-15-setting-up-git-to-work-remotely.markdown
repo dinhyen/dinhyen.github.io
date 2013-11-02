@@ -5,12 +5,6 @@ categories:
 - technology
 tags:
 - git
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
 ---
 At home I use a MacBook to connect via VPN to the office. I'd have access to the intranet but not shell access to my workstation. Since I usually work on the same project at home and at the office, I need to keep my work synchronized. One way to do that is with a Git remote branch.
 

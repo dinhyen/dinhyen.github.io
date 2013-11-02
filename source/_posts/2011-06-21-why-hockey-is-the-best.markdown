@@ -5,11 +5,6 @@ categories:
 - hockey
 tags:
 - hockey
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
 ---
 Would you expect any less from a die-hard hockey fan?  So with a warning that this is going to be shamelessly biased, here goes.
 

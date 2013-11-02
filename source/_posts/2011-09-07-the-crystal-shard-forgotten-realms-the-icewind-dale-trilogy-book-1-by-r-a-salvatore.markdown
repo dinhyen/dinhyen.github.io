@@ -9,12 +9,6 @@ tags:
 - fantasy
 - novel
 - RA Salvatore
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 <img title="The Crystal Shard" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/The-Crystal-Shard-181x300.jpg" width="181" height="300" />The main problem with works that are inspired by or that borrow from RPG is predictability. After all, what adventure would be complete without a warrior, a rogue, and a sorcerer. Not to mention the party must include a gruff dwarf and a light-hearted, pleasure-loving halfling. The Crystal Shard has got all that and more, but it also brings to life an original in the form of Drizzt Do'Urden, who's undoubtedly one of the most well-known and beloved characters in fantasy. That may be the most enduring legacy of this fun if otherwise unremarkable series.
 

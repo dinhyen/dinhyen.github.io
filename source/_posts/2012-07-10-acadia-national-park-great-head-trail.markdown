@@ -6,13 +6,6 @@ categories:
 tags:
 - acadia national park
 - trail
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
-  _thumbnail_id: '1311'
 ---
 [Map](https://maps.google.com/maps/ms?msid=214490968088440958659.0004c4865f20c9516f166&msa=0&ll=44.329828,-68.177528&spn=0.014904,0.015643) of our hike on the Great Head Trail.
 

@@ -12,13 +12,6 @@ tags:
 - Morpho's Cafe
 - Ross Ballard
 - Santa Elena
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
-  _thumbnail_id: '191'
 ---
 Monteverde and the adjoining town of Santa Elena are, surprisingly, well-paved.  This may come as a surprise to those who trudged up the bone-rattling gravel road to get here. Despite the lack of easy access, it's quite popular with tourists, 200000 of whom make it here each year according to the guidebook.  As a consequence, quite a few locals speak excellent English.  The climate is also very pleasant compared to the lowlands.
 

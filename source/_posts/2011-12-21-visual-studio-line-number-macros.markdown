@@ -8,12 +8,6 @@ tags:
 - line number
 - macro
 - visual studio
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 In Visual Studio, it's easy enough to turn on and off line numbers.  You'll have to select Tools > Options > Text Editor, expand the language of choice, select General, then toggle Line numbers under the Display section.  This can get tedious if you want to be able to show and hide line numbers at will.  To turn this process into a single click, you can record custom macros to show and hide line numbers.  However, you may not realize that the macros to do just that are already included with Visual Studio. Further, these macros will turn on and off line numbers for a number of editor types, including C#, VB, HTML and plain text.
 

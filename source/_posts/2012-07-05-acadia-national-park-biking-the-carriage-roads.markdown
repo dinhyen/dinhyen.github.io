@@ -7,12 +7,6 @@ tags:
 - acadia national park
 - carriage roads
 - cycling
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 Another unique feature of Acadia is the extensive system of carriage roads.  Built in the first half of the 20th century by the Rockefeller family for use by horses and carriages, these roads traverse Mount Desert Island and offer unparalleled access to the its interior.  These are possibly the most scenic bike paths anywhere. Due to its length of more than 45 miles, the carriage roads are best experienced on a bicycle. This is the activity that we've done most often and I'm happy to say we've biked most of the carriage roads here (some are outside the park proper and off-limits to bicycles).
 

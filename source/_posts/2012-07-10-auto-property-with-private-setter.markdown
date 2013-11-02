@@ -6,13 +6,6 @@ categories:
 tags:
 - c#
 - tip
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
 ---
 Sometimes I'd like to only allow a property to be set in the constructor. Something like this:
 ``` csharp

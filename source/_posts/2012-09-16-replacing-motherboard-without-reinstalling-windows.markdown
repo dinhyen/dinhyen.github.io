@@ -6,12 +6,6 @@ categories:
 tags:
 - installation
 - Windows 7
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
 ---
 I wanted to upgrade a couple of PCs by replacing the motherboard (by the way, when buying PC components, if there's a [Microcenter](http://microcenter.com/) store nearby, try it first; at the time of this writing their $50 bundle discount for a motherboard-CPU combo cannot be beat, even by much-loved online enthusiast stores).  Afterwards, I found that Windows 7 wouldn't boot.
 

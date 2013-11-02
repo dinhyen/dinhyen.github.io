@@ -9,12 +9,6 @@ tags:
 - gingerbread
 - mod
 - upgrade
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
 ---
 I have an HTC Aria which runs now-ancient Android 2.1. This phone is far from being the latest and greatest, to put it mildly, but I like its small form factor. After putting up with it for a year, I have had enough and decided to upgrade it to Gingerbread.  This is how I did it. As this is my first attempt, no doubt there are different and better ways to do things. Kudos should go to the developer and enthusiast community for making all of this possible.
 ### Root the phone

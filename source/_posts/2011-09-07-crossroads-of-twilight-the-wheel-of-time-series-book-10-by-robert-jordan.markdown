@@ -9,13 +9,6 @@ tags:
 - fantasy
 - novel
 - Robert Jordan
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _thumbnail_id: '644'
 ---
 <img title="Crossroads_of_Twilight" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/Crossroads_of_Twilight-207x300.jpg" width="207" height="300" />It's tempting to compare the latest installment of the Wheel of Time series to Seinfeld, the show that professes to be about "nothing". While doing so would be an exaggeration, it would be fair to say that COT could have done its job in many fewer pages and after much less wait. To be fair, RJ touched on virtually all major characters. To be honest, he didn't give them anything interesting to do. For instance, more than 130 pages and 5 chapters are devoted to Elayne trying on dresses, taking hot baths, and fretting over her pregnancy (and other momentous events in Caemlyn). By the time RJ segued into the next character, I was left to wonder if what I had just read had to do with anything. Similarly, two chapters were devoted to Perrin buying grain and supplies for his army. Come on RJ, buying grain? After the cliff-hanger ending of Winter's Heart, I eagerly looked forward to seeing what Rand would do next. Much to my chagrin, Rand was not mentioned until page 500-something. The few chapters concerning him were all too brief, and he did nothing that merited excitement . With such prodigal use of space, it's no wonder that the pace is even more "glacial" than in previous books. If you think that the last four books were slow, wait till you read COT. By the end of the book, Mat was barely out of Ebou Dar, Perrin was no closer to rescuing Faile (maybe that's a blessing in disguise because frankly I find her annoying), Egwene and the rebel Aes Sedai were still besieging Tar Valon, Rand was sitting on his hands again with Cadsuane shadowing him night and day, Elayne was doing whatever it was that she did in Caemlyn, and we were no closer to Tarmon Gai'don than we had ever been.
 

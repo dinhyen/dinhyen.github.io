@@ -9,13 +9,6 @@ tags:
 - novel
 - Sword of Truth
 - Terry Goodkind
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _thumbnail_id: '578'
 ---
 <img title="Wizard's_First_Rule" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/Wizards_First_Rule-202x300.jpg" width="202" height="300" />If you're looking for an enthralling fantasy epic, look no further than the Sword of Truth series. Though Wizard's First Rule isn't the best of the series, it's a must-read because it sets the background for the rest of the series.
 

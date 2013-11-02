@@ -8,12 +8,6 @@ tags:
 - guide
 - John Shaw
 - photography
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 <img title="JohnShawNaturePhotographyFieldGuide" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/JohnShawNaturePhotographyFieldGuide.jpg" width="166" height="220" />The burning question in my mind as I look at a stunning photo in a calendar, postcard, or coffee-table book is "How did they do it?" There are just certain details about a photo that stand out and scream "professional". Many photography guidebooks tend to fall into two camps: those are little more than glorified list of equipment you likely wouldn't ever buy or be able to afford, and those that are a showcase for the photographer to expound on his experience and philosophy. This book, by well-known landscape and wildlife photographer John Shaw, will tell you exactly how _he_ did it. In clear and concise prose, he explains in details his system for getting the exposure you want (as distinguished from simply determining the correct exposure). While this may not be earth-shattering or even entirely novel, its simplicity and ease of use will make you wonder why you didn't think of it before. It obviously works beautifully for Shaw. For me, this was the single most useful thing I got out of the book.
 

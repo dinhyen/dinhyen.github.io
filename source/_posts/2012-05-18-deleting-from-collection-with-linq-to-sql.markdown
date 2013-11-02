@@ -6,13 +6,6 @@ categories:
 tags:
 - csharp
 - linq to sql
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
 ---
 I ran into an subtle bug today.  Let's say we have a shopping cart page that displays order details and allows the user to remove items from the order.  We retrieve the items in the order with the following:
 

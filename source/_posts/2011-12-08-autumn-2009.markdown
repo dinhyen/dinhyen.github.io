@@ -7,13 +7,6 @@ tags:
 - autumn
 - foliage
 - mount auburn cemetery
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
-  _thumbnail_id: '962'
 ---
 [View location in Google Maps](http://maps.google.com/maps?q=42.371988364694396,-71.14621639251709)
 

@@ -7,11 +7,6 @@ tags:
 - favorites
 - garmin
 - GPS
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
 ---
 When we traveled by car in Spain and Portugal in 2007, it's hard to believe that we managed to get around several cities using only a Michelin road atlas and a bunch of printouts of online maps. This time we're fully embracing 21st-century technology and bringing along a GPS device. To help save time, I like to enter destinations or waypoints ahead of time. On my Garmin nüvi 255W, it's a time-consuming process to enter waypoints (which Garmin calls Favorites). Fortunately, there's a way to create and edit waypoints on a PC, then later download them to the Garmin.
 

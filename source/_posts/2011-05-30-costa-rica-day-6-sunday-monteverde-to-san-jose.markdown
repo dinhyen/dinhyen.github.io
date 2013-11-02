@@ -12,13 +12,6 @@ tags:
 - insects
 - Monteverde
 - San Jose
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
-  _thumbnail_id: '200'
 ---
 We went down to breakfast and ran into the Coopers.  They had survived the trip from Arenal after all.  However, this would be the last time that we saw them.
 

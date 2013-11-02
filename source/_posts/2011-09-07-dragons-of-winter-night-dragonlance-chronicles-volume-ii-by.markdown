@@ -10,12 +10,6 @@ tags:
 - Margaret Weis
 - novel
 - Tracy Hickman
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
 ---
 <img title="Dragons_of_Winter_Night" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/Dragons_of_Winter_Night-179x300.jpg" width="179" height="300" />The middle child of a trilogy has the most tenuous position. After all, the novelty may have worn off after the first installment and the big ending doesn't come until the next. Many are relegated to simply serve as a bridge between the first and third installment. Dragons of Winter Night defies stereotypes with its gripping storyline filled with many tense sequences and surprising revelations. True to the title, the mood is considerably darker than in the first book, ending with the heroic sacrifice of one of the main characters. Sadness is a powerful emotion, and the ending features one of the most emotionally moving scenes I can recall since Tolkien. Yet there is beauty in tragedy, and having known the ending, I wouldn't have it any other way.
 

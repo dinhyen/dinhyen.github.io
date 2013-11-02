@@ -8,12 +8,6 @@ tags:
 - canon powershot s30
 - digital
 - product review
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 Canon's S30 fills a nice niche between expensive, feature-laden cameras and point-and-shoots. Its compact size, snug enough to fit in the palm of your hand and perfect for slipping into a pocket, makes it an ideal companion for those excursions when a larger camera would be too bulky or conspicuous. The silver all-metal body is sleek and stylish, so much that it's almost a fashion accessory. It's loaded with features, an amazing feat for such a small package, while at the same time offers unparalleled ease of use. Lastly, it's a great deal considering its price-feature ratio.
 

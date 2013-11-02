@@ -9,13 +9,6 @@ tags:
 - novel
 - Pillars of Creation
 - Terry Goodkind
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _thumbnail_id: '610'
 ---
 <img title="The_Pillars_of_Creation" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/The_Pillars_of_Creation-197x300.jpg" width="197" height="300" />Pillars of Creation follows the adventures of a young woman, Jennsen, illegitimate daughter of Darken Rahl, as she travels the world in search of escape and vengeance. She is aided by a spy of the Imperial Order who may be more than he appears to be. At the same time, Jennsen's unique ability may mean the end of all life, if she and Richard don't discover the truth in time.
 

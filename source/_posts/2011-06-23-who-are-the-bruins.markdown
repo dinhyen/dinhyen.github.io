@@ -7,13 +7,6 @@ tags:
 - Boston Bruins
 - hockey
 - Stanley Cup
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _thumbnail_id: '952'
-  aktt_notify_twitter: 'no'
 ---
 <img src="http://i.cdn.turner.com/si/multimedia/photo_gallery/1105/nhl-bruins-road-to-stanley-cup/images/bruins-stanley-cup-op1x-17626.jpg" width="641" height="427" />
 

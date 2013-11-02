@@ -8,12 +8,6 @@ tags:
 - installation
 - printer
 - software
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
 ---
 With laser printer, scanner, Ethernet and Wifi interface rolled into one, the Brother HL-2280DW is quite a little champ. However, for me, getting the Wifi to work was a bit of a challenge. The installer would die silently after configuring Wifi but without having installed the software. After some trial and error, I was able to successfully install for Ethernet . With the software installed, I was able to configure Wifi afterward. Additionally, I was able to set up a static IP address for the printer which isn't available from the installer. Here are the steps for getting Wifi to work.
 

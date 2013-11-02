@@ -8,13 +8,6 @@ tags:
 - Habitat sanctuary
 - Ipswich River
 - Ipswich River sanctuary
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _thumbnail_id: '947'
-  aktt_notify_twitter: 'no'
 ---
 I've been discovering more and more of the amazing gems that are the Audubon sanctuaries.  Recently I visited the [Ipswich River sanctuary](http://www.massaudubon.org/Nature_Connection/Sanctuaries/Ipswich_River/index.php) and the [Broadmoor sanctuary](http://www.massaudubon.org/Nature_Connection/Sanctuaries/Broadmoor/index.php), both of which are amazing for the scenery and wildlife they contain.  Yet I'm surprised to learn that there are sanctuaries much closer to home, some right around the corner.  The [Habitat sanctuary](http://www.massaudubon.org/Nature_Connection/Sanctuaries/Habitat/index.php) is no more than 10 minutes from my place. I had biked or driven past this area before without knowing that it existed.  I would bet that it is also unknown to most of the thousands of commuters who ply busy Route 2 every day, just steps away from the sanctuary.
 

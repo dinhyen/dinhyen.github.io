@@ -11,13 +11,6 @@ tags:
 - Marblehead Neck Audubon sanctuary
 - Michael Richards
 - New England
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
-  _thumbnail_id: '940'
 ---
 We discovered Marblehead sort of by accident.  Maybe you've heard of it from an obscure television series in the late-80s called [Marblehead Manor](http://en.wikipedia.org/wiki/Marblehead_Manor), which happened to star the then-equally obscure Michael Richards.  One weekend we decided that it was too early to call it a night, so we took off on a drive out of Boston in a general northeasterly direction.  We found ourselves at Revere Beach, which was deserted, and continued on Route 1A north to Lynn.  At Nahant we weren't able to find any easy access to the ocean front, so we did the natural thing and kept on driving.
 

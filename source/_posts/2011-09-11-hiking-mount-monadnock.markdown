@@ -7,13 +7,6 @@ tags:
 - hiking
 - monadnock
 - trail
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
-  _thumbnail_id: '960'
 ---
 
 As far as big mountain goes,[ Mount Monadnock](http://en.wikipedia.org/wiki/Mount_Monadnock" targtet="_blank) in the southwestern corner of New Hampshire is relatively close to Boston.  Despite its proximity, we've never set foot on it. So we set out on a beautiful Saturday morning to redress this omission.

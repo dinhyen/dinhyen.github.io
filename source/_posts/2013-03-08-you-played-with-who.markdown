@@ -5,11 +5,6 @@ categories:
 - hockey
 tags:
 - name dropping
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
 ---
 Since 1999 I've helped run a pickup hockey group at the Skating Club of Boston.  We're really not crazy about the rink there.  The ice is intended for figure skaters so it's soft and thus slow and quick to become choppy.  There is no glass above the boards so if you shoot high enough you'd have to go fish for the puck under the stands. And since figure skaters generally stay in the middle of the ice, the edges are neglected and not well maintained; this is a problem if you try to "wrap the puck around the board". Nevertheless, the location is great and we got to know the rink manager there quite well.  He gives us extra ice time and at the end of the year we try to return the favor by collecting to give him a nice X-mas check.
 

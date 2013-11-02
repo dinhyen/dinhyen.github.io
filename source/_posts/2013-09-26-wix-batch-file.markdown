@@ -5,12 +5,6 @@ categories:
 - technology
 tags:
 - wix
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
 ---
 Batch files are the last resort due to its Neanderthal abilities and exasperating syntax.  But if I want to run a bunch of things on bare-boned Windows Server 2003, this seems like the quickest if not only option.
 

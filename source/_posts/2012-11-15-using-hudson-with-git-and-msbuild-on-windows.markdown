@@ -8,13 +8,6 @@ tags:
 - git
 - hudson
 - msbuild
-status: publish
-type: post
-published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
 ---
 We use [Hudson](http://hudson-ci.org/) as our continuous integration server (although we're thinking about moving to [Jenkins](http://jenkins-ci.org/), but that's a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.
 
