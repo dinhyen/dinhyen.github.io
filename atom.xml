@@ -1,16 +1,1785 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2013-10-22T13:22:43-04:00</updated>
+  <updated>2013-11-02T11:48:57-04:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Yen Tran]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Fixing Windows Media Center No Tuner Available Error With HDHomeRun Prime]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/11/02/fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/"/>
+    <updated>2013-11-02T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/11/02/fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime</id>
+    <content type="html"><![CDATA[<p>I have the HDHomeRun Prime network tuner.  Recently, after a Verizon FiOS tech rebooted the ONT to fix a network issue, I got the dreaded <code>Viewing or Listening Conflict. No tuner available to satisfy the current request</code> error when trying to view Live TV in Windows Media Center.  When I tried Settings > Windows Media Center setup, I got the error:</p>
+
+<blockquote><p>Tuner Not found. The TV signal cannot be configured because a TV tuner was not detected. If you have a tuner, ensure it is installed correctly.  To find out how to watch TV on your PC, visit <a href="http://www.windows.com/pctv.">http://www.windows.com/pctv.</a></p></blockquote>
+
+<p>Since I was able to view cable TV using the Quick TV application, the tuners seemed to be working properly. I tried upgrading the SiliconDust software, re-installing PlayReady for WMC, rebooting the router, turning off the Windows Firewall, none of which made any difference.  I opened the Services panel and verified that the Windows Medica Center Receiver Service and the HDHomeRun Service are started.</p>
+
+<p>All this resulted in lost time and furthered the belief that MS just can&rsquo;t seem to make simple tasks as effortless as Apple.  Finally I figured it out &mdash; I had to turn on Network Discovery.  I&rsquo;m not sure why it was turned off in the first place, but it had to be running for WMC to detect the tuners.</p>
+
+<p>Simply open Windows Explorer and select the Network tab in the sidebar.  You should see the HDHomerun Live DRIxxxx devices under the Media Devices section.  If you don&rsquo;t, Windows will ask if you want to turn on Network Discovery.  Do this.  If you&rsquo;re lucky, once you&rsquo;ll have done this WMC will immediately detect the tuner and you&rsquo;re done. Otherwise, you can turn on Network Discovery in the Network and Sharing Center > Advanced sharing settings.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Helper method to generate nested tags from block]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/10/31/helper-method-generate-nested-tags-from-block/"/>
+    <updated>2013-10-31T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/10/31/helper-method-generate-nested-tags-from-block</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m still pretty new to Ruby. Hopefully one day I&rsquo;ll know enough to be able to look back and slap myself on the forehead for struggling with these issues.</p>
+
+<p>Right now our views generate a menu from a simple set of links:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I&rsquo;d like to convert them to a drop-down menu that looks like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="x">&lt;div class=&quot;dropdown&quot;&gt;</span>
+</span><span class='line'><span class="x">  &lt;a class=&quot;dropdown-toggle&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;caret&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
+</span><span class='line'><span class="x">  &lt;ul class=&quot;dropdown-menu&quot;&gt;</span>
+</span><span class='line'><span class="x">    &lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x">&lt;/li&gt; </span>
+</span><span class='line'><span class="x">    &lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x">&lt;/li&gt;</span>
+</span><span class='line'><span class="x">  &lt;/ul&gt;</span>
+</span><span class='line'><span class="x">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I&rsquo;d like to minimize the changes to the markup as much as possible.  Initially I tried using a partial:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="x">&lt;!-- /shared/_dropdown.html.erb --&gt;</span>
+</span><span class='line'><span class="x">&lt;div class=&quot;dropdown&quot;&gt;</span>
+</span><span class='line'><span class="x">  &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;caret&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
+</span><span class='line'><span class="x">  &lt;ul class=&quot;dropdown-menu&quot;&gt;</span>
+</span><span class='line'><span class="x">    &lt;li&gt;</span>
+</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">    &lt;/li&gt;</span>
+</span><span class='line'><span class="x">  &lt;/ul&gt;</span>
+</span><span class='line'><span class="x">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The view would then include the partial:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="s2">&quot;shared/dropdown&quot;</span> <span class="k">do</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;bar, &quot;</span><span class="c1">#&quot; </span><span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However, this put both links inside a single <code>&lt;li&gt;</code> tag.  It looked fine with some CSS styles, but not generating the proper markup bothered me a bit.  So I tried using a helper method which should offer some more flexibility.  The helper method would be taking a block, decompose it into individual anchor tags and and wrap them in the proper markup.</p>
+
+<p>I started off with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">dropdown</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">content</span> <span class="o">=</span> <span class="n">capture</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <code>capture</code> helper method captures the block and stores it in a variable that I can process. More importantly, it also works for strings within the block.  This is an important distinction between <code>capture</code> and a similar helper method, <code>with_output_buffer</code> (<a href="http://blog.agile-pandas.com/2011/01/13/rails-capture-vs-with-output-buffer">source</a>).</p>
+
+<p>If the block is empty, there is nothing to do. Otherwise, I&rsquo;d turn them into links.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="n">content</span> <span class="o">=</span> <span class="n">capture</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">))</span> <span class="o">&amp;&amp;</span> <span class="n">anchors</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sr">/\n/</span><span class="p">)</span><span class="o">.</span><span class="n">reject</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="n">a</span><span class="o">.</span><span class="n">empty?</span> <span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="n">anchors</span><span class="o">.</span><span class="n">present?</span>
+</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To generate the top-level div is pretty straight-forward:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s1">&#39;dropdown&#39;</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In the view, I could just merrily include other content_tags in the block argument.  However, in a helper mehod, the content is stored inside an output buffer.  I would have to use <code>concat</code> to add it to the output buffer.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown&quot;</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">concat</span> <span class="n">link_to</span><span class="p">(</span><span class="n">content_tag</span><span class="p">(</span><span class="ss">:i</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;caret&quot;</span><span class="p">),</span> <span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown-toggle&quot;</span><span class="p">,</span> <span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:toggle</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown&quot;</span> <span class="p">})</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next I wanted to add a <code>ul</code> tag and pass its content inside a block. I would also have to use <code>concat</code> as before.  In my initial attempt, I tried to do the following:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:ul</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s1">&#39;dropdown-menu&#39;</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This resulted in a syntax error. The <code>content-tag</code> is correctly treated as the first argument to <code>concat</code>.  However because of Ruby&rsquo;s order of precedence, the block is intepreted as belonging to <code>concat</code>, not <code>content_tag</code> as intended.  To be able to use <code>concat</code> with the <code>do..end</code> syntax, I would have to wrap <code>concat</code>&rsquo;s arguments inside parentheses:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">concat</span><span class="p">(</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:ul</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s1">&#39;dropdown-menu&#39;</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'><span class="k">end</span> <span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This looked quirky and not very ruby-ish.  Fortunately, it turned out that the other block syntax using curly braces has higher precedence than <code>do..end</code> (<a href="http://stackoverflow.com/questions/2122380/using-do-block-vs-brackets?lq=1">source</a>).  This let me eliminate the redundant parantheses:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:ul</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown-menu&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finally the links were added inside <code>li</code> tags:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">anchors</span><span class="o">.</span><span class="n">collect</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:li</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">html_safe</span><span class="p">)</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s the full method which turned out to be quite short:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">dropdown</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">(</span><span class="n">content</span> <span class="o">=</span> <span class="n">capture</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">))</span> <span class="o">&amp;&amp;</span> <span class="n">anchors</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sr">/\n/</span><span class="p">)</span><span class="o">.</span><span class="n">reject</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="n">a</span><span class="o">.</span><span class="n">blank?</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">anchors</span><span class="o">.</span><span class="n">present?</span>
+</span><span class='line'>    <span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown&quot;</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'>      <span class="n">concat</span> <span class="n">link_to</span><span class="p">(</span><span class="n">content_tag</span><span class="p">(</span><span class="ss">:i</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;icon-caret&quot;</span><span class="p">),</span> <span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown-toggle </span><span class="si">#{</span><span class="n">toggleClass</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:toggle</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown&quot;</span> <span class="p">})</span>
+</span><span class='line'>      <span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:ul</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown-menu&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="n">anchors</span><span class="o">.</span><span class="n">collect</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:li</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">html_safe</span><span class="p">)</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bruins took down Sabres in costly victory]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/10/23/bruins-took-down-sabres-in-costly-victory/"/>
+    <updated>2013-10-23T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/10/23/bruins-took-down-sabres-in-costly-victory</id>
+    <content type="html"><![CDATA[<p>It was game 1 of the World Series.  Yawn. Since our pickup game was canceled in part due to the aforementioned sport&mdash;eh recreational&mdash;event, it was going to be either a work night or an early night.  Fortunately, the Bruins came to the rescue by taking on the Sabres.  It&rsquo;s a good thing it was on NBCSports/Versus instead of NESN, where viewers would have been bombarded with a constant barrage of WS updates, even though the network TV announcers are downright annoying. The Bruins welcome the undefeated Sharks tomorrow at home, but tonight would be a Bear-Buffalo grudge match.</p>
+
+<p>The game was billed as a Wednesday Rivalry Game.  The Bruins&#8217; record was 5-2 and the Sabres 1-8-1, so these were clearly two teams headed in different directions. In fact, it hasn&rsquo;t been much of a rivalry since they last faced each other in the 2nd round of the 2009-10 playoffs.  The Sabres have not made the playoffs in the last two years.  They have the second worst record in the league.  The only other team with a similarly dismal record, the Broadstreet Bumblers, got their coach fired just 3 games into the season.  Nevertheless, the Sabres were one of the few teams with a winning record against the Bruins last season and, like the Canadiens, always seem to find ways to beat the Bruins.</p>
+
+<p>But it wouldn&rsquo;t happen tonight. Just from this game, it was clear why they&rsquo;ve been struggling.  They were terrible in their zone. They got beat to the puck.  They got beat in one-on-one battles. They weren&rsquo;t strong enough on the puck carrier to get it back. On offense, they weren&rsquo;t playing as a team.  Skilled guys tried to make plays by themselves.  Cody Hodgson tried to  take on 4 Bruins defenders on the power play&mdash;that doesn&rsquo;t work even in peewee hockey. Guys were taking themselves off-sides. They were a terribly disorganized team who seemed unfocused and unconfident. And then there was John Scott, a 6&#8217;8, 260-lb monster who looks vaguely like Liev Schreiber.  By NHL standards, he can barely skate (even though he&rsquo;s better than every normal person and probably most minor leaguers).  He&rsquo;s there to intimidate and even terrorize.  Just ask Phil Kessel.</p>
+
+<p>The lone bright spot for the Sabres had to be Ryan Miller.  The Bruins had odd-man rushes all night.  Despite the lopsided score, it would have been much worse if it weren&rsquo;t for him. He made several outstanding saves that would have gotten by lesser goalies. The most sparkling save was on a tic-tac-toe play that started on one side of the net and ended on the other with with David Krejci catching the puck on his backhand and quickly flipping it with his forehand, only to be robbed by Miller&rsquo;s glove. Of the goals he gave up, three were perfect backdoor plays that he had no chance on. One he would have stopped if his stick hadn&rsquo;t been pushed out of position by a falling teammate.  Only the last one was somewhat saveable, but by then the game was out of reach.</p>
+
+<p>The Bruins&#8217; 5-2 victory was marred by an ugly incident. Long after he had released the puck, Loui Eriksson was blindsided by Scott with a hit to the head that spun him around and knocked him to the ground.  He struggled to get up but stumbled, clearly disoriented. This is a scary hit that was eerily reminiscent of the Matt Cooke hit on Marc Savard that ended Savard&rsquo;s promising career.  Eriksson was woozy and had to be helped off the ice. One can only hope that his long-term health isn&rsquo;t compromised.  He&rsquo;s undoubtedly lost for tomorrow night&rsquo;s game, if not longer.  This type of hits, where the &ldquo;head is the principal area of contact&rdquo;, is something the league has been trying to stamp out.  Already several multi-game suspensions have been handed out this season for similar plays.  It&rsquo;s quite expected that the league will come down hard on Scott.</p>
+
+<p>The Bruins responded with Adam McQuaid tackling Scott and wrestling him down.  Perhaps that was enough.  I&rsquo;m not one to demand that the Bruins respond to a dirty play with dirty plays of their own.  It&rsquo;s important to many hockey fans that the team stand up for their teammates.  After the Savard incident, the Bruins were criticized by some for their lack of response. Maybe Shawn Thornton will take on Scott the next time they meet (provided Scott is playing), but it wouldn&rsquo;t be good for Thornton given that Scott is in a totally different weight class.  Maybe someone will engage Steve Ott, another dirty Sabre (his sucker punch on Krejci went unnoticed by the refs).  I really think a more measured response is to make them pay on the scoreboard.  The Bruins did just that, by scoring a goal on the PP resulting from Scott&rsquo;s major penalty.  If Scott&rsquo;s action was a intended as &ldquo;message-sending&rdquo;, it already failed, because experience has shown that when faced with adversity, this team becomes stronger.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Simple table sorting with Angular]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/09/28/simple-table-sorting-with-angular/"/>
+    <updated>2013-09-28T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/09/28/simple-table-sorting-with-angular</id>
+    <content type="html"><![CDATA[<p><a href="http://plnkr.co/edit/rynrXkzGcSHeWZrSXENl">View in Plunkr</a></p>
+
+<p>I have a page with tabular data which I want to be able to sort without having to go back to the server. Also a nice-to-have would be the ability to filter the displayed items. Since I&rsquo;m trying to learn Angular, this seems like an excellent opportunity to try it out.</p>
+
+<p>In the controller, the variable items holds the data to be sorted/filtered, while filteredItems is initialized to an empty array. I also specify the initial sort field and direction.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">tableSortCtl</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$filter</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">$scope</span><span class="p">.</span><span class="nx">items</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">parseJSON</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#json&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">());</span>
+</span><span class='line'>  <span class="nx">$scope</span><span class="p">.</span><span class="nx">filteredItems</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>  <span class="nx">$scope</span><span class="p">.</span><span class="nx">sortField</span> <span class="o">=</span> <span class="s2">&quot;firstName&quot;</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">$scope</span><span class="p">.</span><span class="nx">descending</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The data are inserted as a JSON string into the page inside a <code>script</code> tag.  I could have made a separate request to retrieve the data.  But since the data are already available and used elsewhere on the page, I decided to save the extra request.  The JSON string is parsed into an array of objects with the help of jQuery.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;script </span><span class="na">id=</span><span class="s">&quot;json&quot;</span> <span class="na">type=</span><span class="s">&quot;application/json&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="p">[</span> <span class="p">{</span> <span class="s2">&quot;id&quot;</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;firstName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;lastName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Krige&quot;</span><span class="p">,</span> <span class="s2">&quot;birthdate&quot;</span> <span class="o">:</span> <span class="s2">&quot;1954-06-28&quot;</span><span class="p">,</span> <span class="s2">&quot;address&quot;</span> <span class="o">:</span> <span class="s2">&quot;123 Main Street&quot;</span><span class="p">,</span> <span class="s2">&quot;phone&quot;</span> <span class="o">:</span> <span class="s2">&quot;111-222-3333&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="s2">&quot;id&quot;</span> <span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;firstName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;lastName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Probert&quot;</span><span class="p">,</span> <span class="s2">&quot;birthdate&quot;</span> <span class="o">:</span> <span class="s2">&quot;1965-06-05&quot;</span><span class="p">,</span> <span class="s2">&quot;address&quot;</span> <span class="o">:</span> <span class="s2">&quot;23 Elm Street&quot;</span><span class="p">,</span> <span class="s2">&quot;phone&quot;</span> <span class="o">:</span> <span class="s2">&quot;359-324-1494&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="s2">&quot;id&quot;</span> <span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;firstName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="s2">&quot;lastName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Darwin&quot;</span><span class="p">,</span> <span class="s2">&quot;birthdate&quot;</span> <span class="o">:</span> <span class="s2">&quot;1809-02-12&quot;</span><span class="p">,</span> <span class="s2">&quot;address&quot;</span> <span class="o">:</span> <span class="s2">&quot;65 Finch Alley&quot;</span><span class="p">,</span> <span class="s2">&quot;phone&quot;</span> <span class="o">:</span> <span class="s2">&quot;782-624-6038&quot;</span> <span class="p">}</span> <span class="p">]</span>
+</span><span class='line'><span class="nt">&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s an excerpt of the markup:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'> <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">&quot;table table-striped&quot;</span> <span class="na">id=</span><span class="s">&quot;tag-list&quot;</span> <span class="na">ng-show=</span><span class="s">&quot;items.length &gt; 0&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;thead&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;tr&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">&quot;firstName&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;a</span> <span class="na">ng-click=</span><span class="s">&quot;sort(&#39;firstName&#39;)&quot;</span><span class="nt">&gt;</span>First name <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-sort&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/th&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/tr&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/thead&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;tbody&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;tr</span> <span class="na">ng-repeat=</span><span class="s">&quot;item in filteredItems | orderBy:sortField:descending&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;td&gt;</span><span class="nt">&lt;/td&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/tr&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/tbody&gt;</span>
+</span><span class='line'><span class="nt">&lt;/table&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The ng-repeat directive specifies that a new table row should be created for each item. With the parameterized orderBy filter, sorting is accomplished simply by assigning a value to the sort field and toggling the sort direction flag.  This is impressively straight-forward and elegant. The rest of the function is DOM-manipulation to display the proper sort arrow.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$scope</span><span class="p">.</span><span class="nx">sort</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">newSortField</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">sortField</span> <span class="o">==</span> <span class="nx">newSortField</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">$scope</span><span class="p">.</span><span class="nx">descending</span> <span class="o">=</span> <span class="o">!</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">descending</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">$scope</span><span class="p">.</span><span class="nx">sortField</span> <span class="o">=</span> <span class="nx">newSortField</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;th i&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">().</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;icon-sort&#39;</span><span class="p">);</span>  <span class="c1">// reset sort icon for columns with existing icons</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">descending</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">newSortField</span> <span class="o">+</span> <span class="s1">&#39; i&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">().</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;icon-caret-down&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">newSortField</span> <span class="o">+</span> <span class="s1">&#39; i&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">().</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;icon-caret-up&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s the markup for the text filter.  A change to the value of the textbox triggers the search.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;query&quot;</span> <span class="na">ng-change=</span><span class="s">&quot;search()&quot;</span> <span class="na">class=</span><span class="s">&quot;input-large&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Filter&quot;</span> <span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The search function simply iterates through all the fields of each item and attempts to find a simple (case-insensitive) match.  This works for numbers and strings but unfortunately not, for example, on the month name for a date field, for which we&rsquo;d have to do some additional processing.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$scope</span><span class="p">.</span><span class="nx">search</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">$scope</span><span class="p">.</span><span class="nx">filteredItems</span> <span class="o">=</span> <span class="nx">$filter</span><span class="p">(</span><span class="s1">&#39;filter&#39;</span><span class="p">)(</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">items</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">field</span> <span class="k">in</span> <span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">item</span><span class="p">[</span><span class="nx">field</span><span class="p">],</span> <span class="nx">$scope</span><span class="p">.</span><span class="nx">query</span><span class="p">))</span>
+</span><span class='line'>        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="nx">$scope</span><span class="p">.</span><span class="nx">match</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">fieldValue</span><span class="p">,</span> <span class="nx">searchTerm</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">fieldValue</span><span class="p">)</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">searchTerm</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">fieldValue</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">searchTerm</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">())</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wix: Executing custom action before starting Windows service]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/09/27/wix-executing-custom-action-before-starting-windows-service/"/>
+    <updated>2013-09-27T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/09/27/wix-executing-custom-action-before-starting-windows-service</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been trying to get a Wix installer to work. This particular scenario is pretty simple. I want to configure the database via a custom action, then start a Windows service which then queries the database before starting.  This would seem like a commonplace scenario. However, Wix documentations are sparse and I&rsquo;ve been wrangling with this for some time.  I finally found a solution.  While I loathe to reference a StackOverflow answer, as a favor to my future self I&rsquo;m going to do so anyways.</p>
+
+<p>The following defines the component that installs and starts the service and creates a feature that references it.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;ComponentGroup</span> <span class="na">Id=</span><span class="s">&#39;b_SyncSvcComps&#39;</span> <span class="na">Directory=</span><span class="s">&#39;b_SyncInstallDir&#39;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;Component</span> <span class="na">Id=</span><span class="s">&#39;b_SyncSvc&#39;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;File</span> <span class="na">Id=</span><span class="s">&#39;b_SyncExe&#39;</span> <span class="na">Name=</span><span class="s">&#39;MyService.exe&#39;</span> <span class="na">Source=</span><span class="s">&#39;$(var.syncSrcDir)\MyService.exe&#39;</span> <span class="na">DiskId=</span><span class="s">&#39;1&#39;</span> <span class="na">KeyPath=</span><span class="s">&#39;yes&#39;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ServiceInstall</span> <span class="na">Id=</span><span class="s">&#39;b_InstallSyncSvc&#39;</span> <span class="na">Type=</span><span class="s">&#39;ownProcess&#39;</span> <span class="na">Name=</span><span class="s">&#39;MyService&#39;</span> <span class="na">DisplayName=</span><span class="s">&#39;My Service&#39;</span> <span class="na">Description=</span><span class="s">&#39;My Service&#39;</span> <span class="na">Start=</span><span class="s">&#39;auto&#39;</span> <span class="na">Account=</span><span class="s">&#39;[SERVICEACCOUNT]&#39;</span> <span class="na">Password=</span><span class="s">&#39;[SERVICEPASSWORD]&#39;</span> <span class="na">ErrorControl=</span><span class="s">&#39;normal&#39;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ServiceControl</span> <span class="na">Id=</span><span class="s">&#39;b_StartSyncSvc&#39;</span> <span class="na">Start=</span><span class="s">&#39;install&#39;</span> <span class="na">Stop=</span><span class="s">&#39;both&#39;</span> <span class="na">Remove=</span><span class="s">&#39;uninstall&#39;</span> <span class="na">Name=</span><span class="s">&#39;MyService&#39;</span> <span class="na">Wait=</span><span class="s">&#39;yes&#39;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/Component&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ComponentGroup&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;Feature</span> <span class="na">Id=</span><span class="s">&#39;b_ConnectedModeFeature&#39;</span> <span class="na">Title=</span><span class="s">&#39;Connected Mode Features&#39;</span> <span class="na">Level=</span><span class="s">&#39;1&#39;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;ComponentGroupRef</span> <span class="na">Id=</span><span class="s">&#39;b_SyncSvcComps&#39;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/Feature&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The following snippet in Product.wxs actually installs the feature:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;Feature</span> <span class="na">Id=</span><span class="s">&#39;b_Features&#39;</span> <span class="na">Title=</span><span class="s">&#39;[ProductName]&#39;</span> <span class="na">Level=</span><span class="s">&#39;1&#39;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;FeatureRef</span> <span class="na">Id=</span><span class="s">&#39;b_ConnectedModeFeature&#39;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/Feature&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is the initial version of the custom action that I want to run.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;CustomAction</span> <span class="na">Id=</span><span class="s">&quot;DbBatchCmd&quot;</span> <span class="na">Directory=</span><span class="s">&#39;B_DBINSTALLDIR&#39;</span> <span class="na">Execute=</span><span class="s">&quot;immediate&quot;</span> <span class="na">Impersonate=</span><span class="s">&quot;yes&quot;</span> <span class="na">Return=</span><span class="s">&quot;check&quot;</span> <span class="na">ExeCommand=</span><span class="s">&quot;[SystemFolder]\cmd /c &amp;quot;&amp;quot;setup_database.cmd&amp;quot; &amp;quot;[b_WebServer]&amp;quot; &amp;quot;[b_DbServer]&amp;quot;&amp;quot;&quot;</span> <span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The following snippet in Product.wxs runs the custom action.  Here it is run after InstallFinalize, the last possible step in the installation&rsquo;s sequence of events.  The condition ensures that it is only run if the product isn&rsquo;t already installed.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;InstallExecuteSequence&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;Custom</span> <span class="na">Action=</span><span class="s">&quot;DbBatchCmd&quot;</span> <span class="na">After=</span><span class="s">&quot;InstallFinalize&quot;</span><span class="nt">&gt;</span>NOT Installed<span class="nt">&lt;/Custom&gt;</span>
+</span><span class='line'><span class="nt">&lt;/InstallExecuteSequence&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>According to the above, the installer tries to start the service before it runs the custom action to configure the database.  Of course, since the service requires the database to be set up, it balks.</p>
+
+<p>Among others, I tried running the custom action earlier using the <code>Before="StartServices"</code> and <code>After="InstallFiles"</code> attributes. The latter makes sense because the installer needs to copy files to the file system before it can execute the script.  When inspected with Orca, the MSI has the correct InstallExecuteSequence:</p>
+
+<pre>
+...
+InstallFiles              4000
+DbBatchCmd  NOT Installed 4001
+InstallServices VersionNT 5800
+StartServices VersionNT   5900
+...
+InstallFinalize           6600
+</pre>
+
+
+<p>However, the installer never executes the custom action.  It always tries to start the service and almost immediately fails. In fact, the custom action only runs when it&rsquo;s set to <code>After="InstallFinalize"</code> as above.</p>
+
+<p>One of the key things was provided by the helpful if somewhat verbose Windows installer log, which is created when you start the installer as follows:</p>
+
+<pre>
+msiexec /i myinstaller.msi /l*v myinstaller.log
+</pre>
+
+
+<p>Someday, Microsoft will have consistent command-line arguments.  The log has this to say about the service:</p>
+
+<pre>
+MSI (s) (3C:A8) [17:10:02:607]: Note: 1: 2262 2: Error 3: -2147287038 
+Info 1721.There is a problem with this Windows Installer package. A program required for this install to complete could not be run. Contact your support personnel or package vendor. Action: DbBatchCmd, location: C:\inetpub\wwwroot\MyApp\Database\, command: C:\Windows\SysWOW64\\cmd /c ""setup_database.cmd" "my_webserver" "my_dbserver"" 
+Action ended 17:10:02: ShipBatchCmd. Return value 1.
+</pre>
+
+
+<p>This is followed by entries for InstallServices and StartServices.  So the installer does try to run the custom action but fails.</p>
+
+<p>The <a href="http://stackoverflow.com/questions/778210/wix-trying-to-figure-out-install-sequences">answer</a> is provided by Rob Mensching, who created Wix.  According to him, <code>After="InstallFiles"</code> is correct. However, the execution needs to be &ldquo;deferred&rdquo; until the files are actually copied to the file system.  Below is the corrected XML.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;CustomAction</span> <span class="na">Id=</span><span class="s">&quot;DbBatchCmd&quot;</span> <span class="na">Directory=</span><span class="s">&#39;B_DBINSTALLDIR&#39;</span> <span class="na">Execute=</span><span class="s">&quot;deferred&quot;</span> <span class="na">ExeCommand=</span><span class="s">&quot;[SystemFolder]\cmd /c &amp;quot;&amp;quot;setup_database.cmd&amp;quot; &amp;quot;[b_WebServer]&amp;quot; &amp;quot;[b_DbServer]&amp;quot;&amp;quot;&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;InstallExecuteSequence&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;Custom</span> <span class="na">Action=</span><span class="s">&quot;DbBatchCmd&quot;</span> <span class="na">After=</span><span class="s">&quot;InstallFiles&quot;</span><span class="nt">&gt;</span>NOT Installed<span class="nt">&lt;/Custom&gt;</span>
+</span><span class='line'><span class="nt">&lt;/InstallExecuteSequence&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wix: Batch files.  Yes, really.]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/09/26/wix-batch-file/"/>
+    <updated>2013-09-26T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/09/26/wix-batch-file</id>
+    <content type="html"><![CDATA[<p>Batch files are the last resort due to its Neanderthal abilities and exasperating syntax.  But if I want to run a bunch of things on bare-boned Windows Server 2003, this seems like the quickest if not only option.</p>
+
+<p>I tried something like this, by creating a property for the system executable cmd.exe, which would execute the batch script via the /c switch. Then I created a custom action that relies on the property.  The batch script and its arguments must be enclosed in quotes. In addition, each argument should be enclosed in quotes in case it contains a space.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;Property</span> <span class="na">Id=</span><span class="s">&quot;CMD&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;DirectorySearch</span> <span class="na">Id=</span><span class="s">&quot;SysDir&quot;</span> <span class="na">Path=</span><span class="s">&quot;[SystemFolder]&quot;</span> <span class="na">Depth=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;FileSearch</span> <span class="na">Id=</span><span class="s">&quot;CmdExe&quot;</span> <span class="na">Name=</span><span class="s">&quot;cmd.exe&quot;</span>  <span class="nt">/&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/DirectorySearch&gt;</span>
+</span><span class='line'><span class="nt">&lt;/Property&gt;</span>
+</span><span class='line'><span class="nt">&lt;CustomAction</span> <span class="na">Id=</span><span class="s">&quot;BatchScript&quot;</span> <span class="na">Property=</span><span class="s">&quot;CMD&quot;</span> <span class="na">Execute=</span><span class="s">&quot;immediate&quot;</span> <span class="na">Impersonate=</span><span class="s">&quot;yes&quot;</span> <span class="na">Return=</span><span class="s">&quot;check&quot;</span> <span class="na">ExeCommand=</span><span class="s">&quot;/c &amp;quot;&amp;quot;[INSTALLDIR]\batch_script.cmd&amp;quot; &amp;quot;my arg1&amp;quot; &amp;quot;my arg2&amp;quot;&amp;quot;&quot;</span> <span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Since I want to use property values (derived from user inputs) as arguments, the &ldquo;beauty&rdquo; of this (and I say so with a straight face) is simply the replacements of raw argument values with property references.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;Property</span> <span class="na">Id=</span><span class="s">&quot;b_arg1&quot;</span><span class="nt">&gt;</span>my arg1<span class="nt">&lt;/Property&gt;</span>
+</span><span class='line'><span class="nt">&lt;Property</span> <span class="na">Id=</span><span class="s">&quot;b_arg2&quot;</span><span class="nt">&gt;</span>my arg2<span class="nt">&lt;/Property&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;CustomAction</span> <span class="na">Id=</span><span class="s">&quot;BatchScript&quot;</span> <span class="na">Property=</span><span class="s">&quot;CMD&quot;</span> <span class="na">Execute=</span><span class="s">&quot;immediate&quot;</span> <span class="na">Impersonate=</span><span class="s">&quot;yes&quot;</span> <span class="na">Return=</span><span class="s">&quot;check&quot;</span> <span class="na">ExeCommand=</span><span class="s">&quot;/c &amp;quot;&amp;quot;[B_DBINSTALLDIR]\batch_script.cmd&amp;quot; &amp;quot;[b_arg1]&amp;quot; &amp;quot;[b_arg2]&amp;quot;&amp;quot;&quot;</span> <span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then I hit a snag.  The batch script needs to call other batch scripts in the same directory.  With this approach, I can&rsquo;t set the working directory because <CustomAction> can have either a Directory attribute or a Property attribute but not both.  Here cmd.exe simply runs under the directory it defaults to, <code>c:\windows\system32</code>.</p>
+
+<p>With a slight modification by including the entire command in the ExeCommand attribute, the custom action can use a working directory.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;CustomAction</span> <span class="na">Id=</span><span class="s">&quot;BatchScript&quot;</span> <span class="na">Directory=</span><span class="s">&#39;INSTALLDIR&#39;</span> <span class="na">Execute=</span><span class="s">&quot;immediate&quot;</span> <span class="na">Impersonate=</span><span class="s">&quot;yes&quot;</span> <span class="na">Return=</span><span class="s">&quot;check&quot;</span> <span class="na">ExeCommand=</span><span class="s">&quot;[SystemFolder]\cmd /c &amp;quot;&amp;quot;batch_script.cmd&amp;quot; &amp;quot;[b_arg1]&amp;quot; &amp;quot;[b_arg2]&amp;quot;&amp;quot;&quot;</span> <span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s the initial version of the batch script.  The database is configured via sqlcmd with the arguments which are passed to the script.</p>
+
+<pre>
+set arg1=%1
+set arg2=%2
+sqlcmd -E -d database_name -i "sql_script.sql" -v arg1="%arg1%" arg2="%arg2%"
+</pre>
+
+
+<p>However, some of the script arguments are already enclosed in quotes, which must be there because they may contain space.  This means the sqlcmd arguments now have extra quotes. I suppose if I made sure all batch file arguments are enclosed in quotes, I wouldn&rsquo;t need the quotes in the sqlcmd parameters list. Nevertheless, I decide to strip the quotes before forwarding the arguments to sqlcmd.</p>
+
+<pre>
+set arg1=%arg1:"=%
+set arg2=%arg2:"=%
+</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bruins Training Camp 2013]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/09/17/bruins-training-camp-2013/"/>
+    <updated>2013-09-17T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/09/17/bruins-training-camp-2013</id>
+    <content type="html"><![CDATA[<p>Having moved to the &lsquo;burbs recently, I look forward to attending the Bruins&rsquo; regular-season practice sessions at Ristuccia Arena in Wilmington, now that it&rsquo;s only a few miles away.  The 2013 Training Camp, though, was held at TD Garden the weekend of September 14-15. Of course I was going to be there.</p>
+
+<p>The 2013 season was a bit of a roller coaster ride.  It was thrilling at times, but ultimately disappointing. It was a hard pill to swallow watching the Blackhawks celebrate with the Cup on our ice. Then came the off-season changes.  The departures of Tyler Seguin and Rich Perveley were certainly shocking, particularly Seguin who were expected to be the next Bruins superstar. Then came the arrival of Jarome Iginla, whom most Bruins fans including myself were gleefully cheering against especially during the Penguins series.  Seeing Iginla wearing the spoked B would be a little weird, to say the least.  Even the anticipated free-agency departures of popular Bruins Nathan Horton (to Columbus) and Andrew Ference (to Edmonton) were hard to take. I like Ference in particular, for his leadership qualities and environmental activism.  It didn&rsquo;t help matter that a very solid goalie and likeable player in Anton Khudobin also left, which was a surprise.</p>
+
+<p>Having endured the summer of baseball and the start of football season, I am beyond thrill at the return of hockey.  Judging from the turnout for the training camp, despite the early weekend hours, many Bruins fans were feeling the same way.  Part of the eagerness must come from anticipating the new faces on the roster.  But for the most part, I just wanted to spectate the most exciting team sports invented by man.</p>
+
+<p>The Training Camp consisted of 2 groups.  With 50-odd participants and only a few open roster spots, it was clear that most of the new guys were going to end up elsewhere, whether with the baby Bruins in Providence, their junior/college team or some place like Saskatoon.  Nevertheless, it was a chance for the coaches to evaluate players or for fans like me to familiarize ourselves with our prospects.</p>
+
+<p>I&rsquo;m guessing the opening-day roster will look something like this:</p>
+
+<pre>
+Milan Lucic (17) - David Krejci (46) - Jarome Iginla (12)
+Brad Marchand (63) - Patrice Bergeron (37) - Loui Eriksson (21)
+Carl Soderberg (34) - Chris Kelly (23) - ???
+Daniel Paille (20) - Gregory Campbell (11) - Shawn Thornton (22)
+
+Zdeno Chara (33) - Johnny Boychuk (55)
+Dennis Seidenberg (44) - Dougie Hamilton (27)
+??? - Adam McQuaid (54)
+
+Tuukka Rask (40)
+???
+</pre>
+
+
+<p>On defense, Matt Bartkowski (43) and Torey Krug (47), both left-shots, are likely candidates.  Both played last season, Krug having stood out in the Rangers series.  Local guy David Warsofsky is probably also in consideration.  The empty forward and goalie spots are wide-open. That&rsquo;s why we&rsquo;re here.</p>
+
+<p>Seth Griffith misses an open-net chance on Niklas Svedberg.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1460.jpg' /></p>
+
+<p>Dennis Seidenberg patrols the blue line on his unusual t-blade.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1479.jpg' /></p>
+
+<p>Crowd around Svedberg.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1533.jpg' /></p>
+
+<p>Chris Kelly cirling the net.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1535.jpg' /></p>
+
+<p>New signee Matthew Lindblad trying to get a bead on Tuukka Rask.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1564.jpg' /></p>
+
+<p>Brad Marchand buzzes the net as usual.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1740.jpg' /></p>
+
+<p>Patrice Bergeron looks to be in full form after the serious injuries sustained in the Blackhawks series.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1644.jpg' /></p>
+
+<p>Newcomer Loui Eriksson (21) drives to the net, guarded by Dougie Hamilton (27).</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1614.jpg' /></p>
+
+<p>Another look at Eriksson.  He seemed to be an open-ice player who isn&rsquo;t afraid of going to the crease. He&rsquo;s bigger than Seguin and has good speed. The demise of our team speed with the departures of Seguin and Peverley is greatly exaggerated.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1712.jpg' /></p>
+
+<p>Jordan Caron (38) and Reilly Smith. Caron has been up and down with the big club. Of all the young guys he probably has the most NHL experience. Maybe he can stick around this time.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1680.jpg' /></p>
+
+<p>Chris Casto in full flight.  Hockey players can look like they&rsquo;re sprinting.  Actually, it&rsquo;s not quite true. They&rsquo;re much faster than a sprinter.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1716.jpg' /></p>
+
+<p>Marchand trying to shake off Hamilton.  That&rsquo;s probably not a great gap for Hamilton, but you can&rsquo;t stay too close to Marchand or he&rsquo;ll make you look bad.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1755.jpg' /></p>
+
+<p>Mike Moore finds out the hard way where the goal post is.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1634.jpg' /></p>
+
+<p>Hamilton should probably be between his check and the net instead of chasing him but, meh, it&rsquo;s practice. He&rsquo;s huge, at 6&#8217;5 he&rsquo;s second only to Chara.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1747.jpg' /></p>
+
+<p><a href="http://www.youtube.com/watch?v=h15m87WsCHQ">This gutsy display of sportsmanship and determination</a> after his leg was broken by an Evgeni Malkin slapshot made Gregory Campbell a Bruin forever. This isn&rsquo;t Lionel Messi crying after he got tripped.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2170.jpg' /></p>
+
+<p>Matt Bartkowski sees something wince-worthy. On the right is Carl Soderberg.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1845.jpg' /></p>
+
+<p>Adam McQuaid with a rare smile.  In the background Shawn Thornton juggles the puck on the blade of his stick. The tough guy has mad skillz.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1911.jpg' /></p>
+
+<p>Milan Lucic having a laugh with (or at?) Bartkowski.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1920.jpg' /></p>
+
+<p>I&rsquo;m going with &ldquo;laugh with&rdquo;. Bart is such a jokester.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1931.jpg' /></p>
+
+<p>Chara having a chat with Nick Johnson (32) and Alexander Fallstrom (59).  Those are not midgets&mdash;both are listed at 6&#8217;2. Chara is just a monster, and I mean that in an admiring way.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2023.jpg' /></p>
+
+<p>He can move too.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2111.jpg' /></p>
+
+<p>New &ldquo;old&rdquo; face Jarome Iginla.  He potted 2 against the Habs two nights after this in a pre-season game in Montreal. Welcome to Boston, Iggy.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2040.jpg' /></p>
+
+<p>Lucic with a wicked snap shot.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2051.jpg' /></p>
+
+<p>The 3rd member of the projected top line and my favorite player.  The bruising line of Lucic-Iginla-Krejci is going to give defensemen nightmares. They have great hands, decent speed, hit like a train and are impossible to contain.  They bring back fond memories of the so-called 700 Pound Line of Joe Thornton, Mike Knuble and Glen Murray.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2123.jpg' /></p>
+
+<p>Torey Krug with Mark Messier&rsquo;s patented snap shot off the wrong leg. Which, by the way, everyone is using these days.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2062.jpg' /></p>
+
+<p>Fallstrom with a good flex of the stick.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2073.jpg' /></p>
+
+<p>A first look at Malcolm Subban.  You know, the brother of Boston&rsquo;s public enemy #1 PK Subban. He did say he never liked his brother anyways. The kid is all right.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2100.jpg' /></p>
+
+<p>Kevan Miller who hails from, get this, Los Angeles.  That&rsquo;s right, a California kid playing pro hockey.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2108.jpg' /></p>
+
+<p>Close-up of Daniel Paille.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2150.jpg' /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fun with CSS sibling selectors]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/08/09/fun-with-css-sibling-selectors/"/>
+    <updated>2013-08-09T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/08/09/fun-with-css-sibling-selectors</id>
+    <content type="html"><![CDATA[<p><a href="http://jsfiddle.net/dinhyen/q4FKT/1/">View the live example</a></p>
+
+<p>It seems like I&rsquo;m always <a href="http://dinhyen.github.io/blog/2013/07/02/search-box-using-knockoutjs/" title="Search box using KnockoutJS">working on search boxes</a>, but here goes another. My goal here is to display an icon inside the search box. Initially, the search box has a dark background. When clicked, the background changes to white. The icon should changes its color based on whether or not the search box has focus. If we were using a font-based icon such as <a href="http://fortawesome.github.io/Font-Awesome/">Fontawesome</a>, which is awesome by the way, styling the icon would be a simple exercise.  However, we&rsquo;re using an image-based icon, so it&rsquo;s not possible to change its color.</p>
+
+<p>One solution is to use 2 icons, dark and light. We swap them depending on whether the input has focus. If the input is inactive, we show the light icon and hide the dark icon.  If the input is focused, we do the opposite.</p>
+
+<p>To access the icon in the context of the input, we use the CSS sibling selector <code>~</code>. Unlike the other CSS sibling selector, <code>+</code>, the <code>~</code> selector doesn&rsquo;t require that the second element be immediately adjacent to the first.  This is important since we have 2 icons, the second of which wouldn&rsquo;t be adjacent to the input.  We also use the <code>not()</code> selector to select the element that lacks the specified class.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.navbar-search-wrapper</span> <span class="nt">input</span> <span class="o">~</span> <span class="nc">.icon-search.icon-white</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.navbar-search-wrapper</span> <span class="nt">input</span><span class="nd">:focus</span> <span class="o">~</span> <span class="nc">.icon-search.icon-white</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.navbar-search-wrapper</span> <span class="nt">input</span> <span class="o">~</span> <span class="nc">.icon-search</span><span class="nd">:not</span><span class="o">(</span><span class="nc">.icon-white</span><span class="o">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.navbar-search-wrapper</span> <span class="nt">input</span><span class="nd">:focus</span> <span class="o">~</span> <span class="nc">.icon-search</span><span class="nd">:not</span><span class="o">(</span><span class="nc">.icon-white</span><span class="o">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Search box using KnockoutJS]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/07/02/search-box-using-knockoutjs/"/>
+    <updated>2013-07-02T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/07/02/search-box-using-knockoutjs</id>
+    <content type="html"><![CDATA[<p><a href="http://jsfiddle.net/dinhyen/GaDJD">View the live example</a></p>
+
+<p>We&rsquo;re gradually gravitating toward AngularJS because it&rsquo;s more powerful and flexible. However with AngularJS we have some issues with IE7, which unfortunately we&rsquo;re stuck supporting. So when I want to add some simple enhancements to the search box, I went back to KnockoutJS.  For a simple scenario such as this, KnockoutJS works great. If we had to do this using plain jQuery, we&rsquo;d have to juggle keypress, focus and blur events which is just unnecessary drudgery!</p>
+
+<p>The enhanced search text box should display a prompt; since the HTML5 &ldquo;placeholder&rdquo; property isn&rsquo;t supported in IE9 and below, we&rsquo;ll need to use JavaScript. When focused it should expand and show a cursor. It should submit when the user hits Return, but only if the user enters (or copies and pastes) 2 or more characters into the text box. When the user starts typing, it should display an icon to clear the text box.</p>
+
+<p>The markup is as follows:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;form</span> <span class="na">id=</span><span class="s">&quot;site-search&quot;</span> <span class="na">action=</span><span class="s">&quot;/Search&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;css: { active: isActive() }, submit: submit&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;search-magnify&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;click: edit&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-search&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/label&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;search-overlay&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;click: edit, visible: !isActive()&quot;</span><span class="nt">&gt;</span>Search site...<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;search-input&quot;</span> <span class="na">name=</span><span class="s">&quot;searchText&quot;</span> <span class="na">autocomplete=</span><span class="s">&quot;off&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;hasfocus: editing, value: text, valueUpdate: [&#39;afterkeydown&#39;,&#39;propertychange&#39;,&#39;input&#39;]&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;search-reset&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;click: clear, visible: hasText()&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-remove-sign&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/label&gt;</span>
+</span><span class='line'><span class="nt">&lt;/form&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To show the prompt, I&rsquo;m using an overlay container.  It&rsquo;s not very elegant, but I want to avoid changing the content of the textbox. With an MVC framework like KnockoutJS, the behavioral directives are wired into the markup via the data binding syntax; you don&rsquo;t have to peruse a separate JavaScript file. Even if you don&rsquo;t know the syntax, it&rsquo;s almost as understandable as plain English.  So clicking the magnifying glass or the overlay puts the search box in &ldquo;edit&rdquo; mode; clicking on the text also activates &ldquo;edit&rdquo; mode by giving it focus via the hasfocus binding.  The Reset/Clear icon is visible only when there is some text. When the search box is &ldquo;active&rdquo;, the form has a special CSS class, &ldquo;active&rdquo;, and the overlay becomes invisible.</p>
+
+<p>The valueUpdate binding ensures that KnockoutJS updates the text box&rsquo;s value when the user types on the keyboard or pastes with the mouse.</p>
+
+<p>The stylesheet (in <a href="http://sass-lang.com">SASS</a> which is easier to read) is as follows:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nf">#site-search</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">background-color</span><span class="o">:</span> <span class="err">$</span><span class="n">bodyBackground</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">border-style</span><span class="o">:</span> <span class="k">solid</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">border-width</span><span class="o">:</span> <span class="m">1px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">border-color</span><span class="o">:</span> <span class="err">$</span><span class="n">filterBorderShadow</span> <span class="err">$</span><span class="n">filterBorder</span> <span class="err">$</span><span class="n">filterBorderHighlight</span> <span class="err">$</span><span class="n">filterBorder</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">color</span><span class="o">:</span> <span class="err">$</span><span class="n">grayTextColor</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">margin</span><span class="o">:</span> <span class="m">3px</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">label</span><span class="o">,</span>
+</span><span class='line'>  <span class="n">input</span><span class="o">,</span>
+</span><span class='line'>  <span class="n">div</span> <span class="err">{</span>
+</span><span class='line'>    <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">@</span><span class="n">include</span> <span class="n">ie7</span><span class="o">-</span><span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">();</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.search-input</span> <span class="p">{</span>
+</span><span class='line'>    <span class="o">@</span><span class="n">include</span> <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+</span><span class='line'>    <span class="o">@</span><span class="n">include</span> <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="p">(</span><span class="k">none</span><span class="p">);</span>
+</span><span class='line'>    <span class="o">@</span><span class="n">include</span> <span class="n">transition</span><span class="p">(</span><span class="k">width</span> <span class="m">0.8s</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">background-color</span><span class="o">:</span> <span class="k">transparent</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">border-style</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="err">$</span><span class="n">grayTextColor</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">line-height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">outline</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">padding</span><span class="o">:</span> <span class="m">5px</span> <span class="m">25px</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">width</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">z-index</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">:</span><span class="n">focus</span><span class="o">,</span>
+</span><span class='line'>    <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">:</span><span class="n">active</span> <span class="err">{</span>
+</span><span class='line'>      <span class="o">@</span><span class="n">include</span> <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="p">(</span><span class="k">none</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="err">}</span>
+</span><span class='line'>  <span class="nc">.search-overlay</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">left</span><span class="o">:</span> <span class="m">25px</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">top</span><span class="o">:</span> <span class="m">3px</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">z-index</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.search-magnify</span><span class="o">,</span>
+</span><span class='line'>  <span class="nc">.search-reset</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">cursor</span><span class="o">:</span> <span class="k">default</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">top</span><span class="o">:</span> <span class="m">3px</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.search-magnify</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">left</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.search-reset</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">right</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">:</span><span class="n">hover</span> <span class="err">{</span>
+</span><span class='line'>      <span class="k">color</span><span class="o">:</span> <span class="err">$</span><span class="n">linkColor</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="err">}</span>
+</span><span class='line'><span class="err">}</span>
+</span><span class='line'><span class="nf">#site-search</span><span class="nc">.active</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">background-color</span><span class="o">:</span> <span class="err">$</span><span class="nb">white</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">color</span><span class="o">:</span> <span class="err">$</span><span class="n">textColor</span><span class="p">;</span>
+</span><span class='line'>  <span class="o">.</span><span class="n">search</span><span class="o">-</span><span class="n">input</span> <span class="err">{</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="err">$</span><span class="n">textColor</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">width</span><span class="o">:</span> <span class="m">150px</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="nc">.search-reset</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">@</span><span class="n">include</span> <span class="n">ie7</span><span class="o">-</span><span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">();</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Of note is when the form has the &ldquo;active&rdquo; CSS class, we change the style and width of the text box and also set the CSS3 &ldquo;transition&rdquo; property which results a nice animation (which of course won&rsquo;t show up in IE9 or lower but that&rsquo;s ok).</p>
+
+<p>Finally the model which makes everything tick is as follows:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">SiteSearchViewModel</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">editing</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">edit</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">self</span><span class="p">.</span><span class="nx">editing</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">isActive</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">editing</span><span class="p">()</span> <span class="o">||</span> <span class="nx">self</span><span class="p">.</span><span class="nx">hasText</span><span class="p">());</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">text</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">clear</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">self</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">self</span><span class="p">.</span><span class="nx">editing</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">hasText</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">computed</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">text</span><span class="p">()).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">submit</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">text</span><span class="p">()).</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">ko</span><span class="p">.</span><span class="nx">applyBindings</span><span class="p">(</span><span class="k">new</span> <span class="nx">SiteSearchViewModel</span><span class="p">());</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The search box is defined to be &ldquo;active&rdquo; when the text box has focus or when it contains text. The latter condition accounts for the scenario in which the user types something then clicks away; the search box should stay expanded instead of collapsed.</p>
+
+<p>The <code>submit()</code> handler ensures that the user enters at least 2 non-white space characters.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Animate textbox using KnockoutJS]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/04/24/animate-textbox-using-knockoutjs/"/>
+    <updated>2013-04-24T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/04/24/animate-textbox-using-knockoutjs</id>
+    <content type="html"><![CDATA[<p><a href="http://jsfiddle.net/CHMaQ/23/">View the live example</a></p>
+
+<p><a href="http://knockoutjs.com">KnockoutJS</a> is a dynamic UI framework that can really liberate you from the tedium of low-level DOM manipulations.  Even though I&rsquo;ve only played with it for a little while, I&rsquo;ve become a huge fan. One of my initial attempts is to create an animated text input similar to Twitter&rsquo;s.</p>
+
+<p>The UI is quite simple. The textbox should display a &ldquo;placeholder&rdquo; prompt.  When the user clicks inside the textbox, expand it and display a save button, initially disabled.  If the user types something (other than white space), enable the button.  If the textbox loses focus, shrink it to its original size, unless it contains a valid comment.</p>
+
+<p>To show the placeholder prompt, I could use the HTML5 &ldquo;placeholder&rdquo; attribute. Unfortunately this isn&rsquo;t supported by all browsers (what else but IE 9 and below). So I&rsquo;m using a div to wrap the textbox and display the prompt as an overlay.</p>
+
+<p>The view model&rsquo;s isEditing boolean observable reflects whether the textbox has focus.  It&rsquo;s wired to the hasfocus binding on the textbox.  Additionally, clicking anywhere on the wrapper div should activate the observable, since the user should be able to focus by clicking on the overlaying prompt.</p>
+
+<p>The content of the textbox is tied to the newComment observable. Per the valueUpdate binding, it is updated after a key press.  Additionally, the propertychange and input parameters allow it to be updated when the user copies and pastes with the mouse or keyboard.</p>
+
+<p>To animate the textbox, I use a custom binding which is also wired to the isEditing observable. The animation should be performed only when the textbox is empty or contains only white space. When the textbox has focus, it&rsquo;s expanded.  When it loses focus, it&rsquo;s collapsed.</p>
+
+<p>The button is shown when the textbox has focus. Additionally it&rsquo;s only enabled when the user enters non-white space text. Clicking on the button simply adds adds the new comment to the comments observable array and clears the textbox. The beauty is that KnockoutJS automatically updates the UI to reflect the change.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-overlay&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;click: isEditing&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;caption&quot;</span><span class="nt">&gt;</span>Write something...<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">&quot;#newComment&quot;</span> <span class="na">name=</span><span class="s">&quot;newComment&quot;</span> <span class="na">cols=</span><span class="s">&quot;20&quot;</span> <span class="na">rows=</span><span class="s">&quot;2&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;value: newComment, valueUpdate: [&#39;afterkeydown&#39;,&#39;propertychange&#39;,&#39;input&#39;], hasfocus: isEditing, animateTextbox: isEditing&quot;</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+</span><span class='line'><span class="nt">&lt;/span&gt;</span>
+</span><span class='line'><span class="nt">&lt;button</span> <span class="na">data-bind=</span><span class="s">&quot;click: save, enable: hasNewComment, visible: shouldShowSave&quot;</span><span class="nt">&gt;</span>Comment<span class="nt">&lt;/button&gt;</span>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-info&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;visible: comments().length == 0&quot;</span><span class="nt">&gt;</span>No comments found<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;table</span> <span class="na">data-bind=</span><span class="s">&quot;visible: comments().length &gt; 0&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;thead&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;tr&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;th&gt;</span>Date<span class="nt">&lt;/th&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;th&gt;</span>User<span class="nt">&lt;/th&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;th&gt;</span>Comment<span class="nt">&lt;/th&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/tr&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/thead&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;tbody</span> <span class="na">data-bind=</span><span class="s">&quot;foreach: comments&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;tr&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;td</span> <span class="na">data-bind=</span><span class="s">&quot;text: date&quot;</span><span class="nt">&gt;&lt;/td&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;td</span> <span class="na">data-bind=</span><span class="s">&quot;text: user&quot;</span><span class="nt">&gt;&lt;/td&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;td</span> <span class="na">data-bind=</span><span class="s">&quot;text: text&quot;</span><span class="nt">&gt;&lt;/td&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/tr&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/tbody&gt;</span>
+</span><span class='line'><span class="nt">&lt;/table&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">Comment</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">date</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">date</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">user</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">text</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">text</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">CommentViewModel</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">comments</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observableArray</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">isEditing</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">newComment</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">();</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">hasNewComment</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">computed</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">newComment</span><span class="p">()).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">shouldShowSave</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">computed</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">self</span><span class="p">.</span><span class="nx">isEditing</span><span class="p">()</span> <span class="o">||</span> <span class="nx">self</span><span class="p">.</span><span class="nx">hasNewComment</span><span class="p">();</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">save</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">self</span><span class="p">.</span><span class="nx">comments</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="k">new</span> <span class="nx">Comment</span><span class="p">({</span>
+</span><span class='line'>           <span class="nx">date</span><span class="o">:</span> <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">()).</span><span class="nx">toLocaleString</span><span class="p">(),</span>
+</span><span class='line'>           <span class="nx">user</span><span class="o">:</span> <span class="s1">&#39;Me&#39;</span><span class="p">,</span>
+</span><span class='line'>           <span class="nx">text</span><span class="o">:</span> <span class="nx">self</span><span class="p">.</span><span class="nx">newComment</span><span class="p">()</span> <span class="p">})</span>
+</span><span class='line'>      <span class="p">);</span>
+</span><span class='line'>      <span class="nx">self</span><span class="p">.</span><span class="nx">newComment</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ko</span><span class="p">.</span><span class="nx">bindingHandlers</span><span class="p">.</span><span class="nx">animateTextbox</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">ko</span><span class="p">.</span><span class="nx">bindingHandlers</span><span class="p">.</span><span class="nx">animateTextbox</span><span class="p">.</span><span class="nx">animate</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">update</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">ko</span><span class="p">.</span><span class="nx">bindingHandlers</span><span class="p">.</span><span class="nx">animateTextbox</span><span class="p">.</span><span class="nx">animate</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">animate</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">hasFocus</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">unwrapObservable</span><span class="p">(</span><span class="nx">valueAccessor</span><span class="p">());</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">hasNewComment</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">elem</span><span class="p">).</span><span class="nx">val</span><span class="p">()).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">hasNewComment</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="nx">elem</span><span class="p">)</span>
+</span><span class='line'>          <span class="p">.</span><span class="nx">animate</span><span class="p">({</span> <span class="nx">height</span><span class="o">:</span> <span class="nx">hasFocus</span> <span class="o">?</span> <span class="s1">&#39;100px&#39;</span> <span class="o">:</span> <span class="s1">&#39;20px&#39;</span> <span class="p">},</span> <span class="mi">500</span><span class="p">)</span>
+</span><span class='line'>          <span class="p">.</span><span class="nx">closest</span><span class="p">(</span><span class="s1">&#39;.input-overlay&#39;</span><span class="p">).</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">,</span> <span class="nx">hasFocus</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">ko</span><span class="p">.</span><span class="nx">applyBindings</span><span class="p">(</span><span class="k">new</span> <span class="nx">CommentViewModel</span><span class="p">([]));</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Intermittent, temporary freezing on MacBook with OCZ Vertex 3]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/03/19/intermittent-temporary-freezing-on-macbook-with-ocz-vertex-3/"/>
+    <updated>2013-03-19T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/03/19/intermittent-temporary-freezing-on-macbook-with-ocz-vertex-3</id>
+    <content type="html"><![CDATA[<p>I recently upgraded the hard drive on my MacBook Pro running Snow Leopard to a 120GB OCZ Vertex 3 SSD.  As advertised, the boot up and application start times are dramatically reduced.  The SSD is everything I had hoped for. Well, almost.  There has been a persistent and quite annoying issue.  At random intervals, the computer would be come unresponsive.  I could move the mouse or type on the keyboard, but nothing woud happen.  When I hovered over the menu bar, I got the spinning &ldquo;beachball&rdquo;.  The lag would last anywhere from 5-10 seconds.  Then all of a sudden all the actions I had performed in the interim would be executed in rapid succession, as if the computer had been jerked awake.  This was most noticeable during a streaming video, which would pause when one of these episodes hit.  The problem made the computer borderline unusable.</p>
+
+<p>I&rsquo;m happy to report that a firmware update for the Vertex 3 appeared to solve this problem.  I had firmware version 2.15, while the most current version was 2.25.   To upgrade the firmware, I followed the instructions for using the OCZ Bootable Toolbox on the OCZ forum. I had to use the <a href="http://www.ocztechnologyforum.com/forum/showthread.php?105168-NEW!!-OCZ-Bootable-Toolbox-PC-Edition-%28REBUILD%29">PC instructions</a>, since the Mac instructions are not applicable to my pre-2009 MacBook.  For me, the steps were to install the custom ISO disk image on a USB drive, then boot the PC from the USB drive.  The Vertex 3 had to be connected to an internal SATA port, as the OCZ Toolbox was not able to detect it if mounted in a USB enclosure.  This required me to open up the PC, a minor inconvenience.  The PC should also have an Internet connection. Overall, the process was painless and took under 5 minutes.</p>
+
+<p>The MacBook has been humming along so far without a hiccup.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[You played with who?]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/03/08/you-played-with-who/"/>
+    <updated>2013-03-08T00:00:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/03/08/you-played-with-who</id>
+    <content type="html"><![CDATA[<p>Since 1999 I&rsquo;ve helped run a pickup hockey group at the Skating Club of Boston.  We&rsquo;re really not crazy about the rink there.  The ice is intended for figure skaters so it&rsquo;s soft and thus slow and quick to become choppy.  There is no glass above the boards so if you shoot high enough you&rsquo;d have to go fish for the puck under the stands. And since figure skaters generally stay in the middle of the ice, the edges are neglected and not well maintained; this is a problem if you try to &ldquo;wrap the puck around the board&rdquo;. Nevertheless, the location is great and we got to know the rink manager there quite well.  He gives us extra ice time and at the end of the year we try to return the favor by collecting to give him a nice X-mas check.</p>
+
+<p>Our group started off as a bunch of friends who played intramural hockey at MIT together.  Over the years, people have come and gone, but I&rsquo;m the only constant. Since I still put the roster together every week, year round, I&rsquo;ve gotten to know a bit about the people who have played with us. I guess I could say I&rsquo;m a sort of unofficial historian.  Because of our academic origin, we&rsquo;ve always had a strong contingent of people with advanced degrees.  We&rsquo;ve had several PhDs, MDs and lawyers.  A few are current professors at local universities.  But probably thanks to hockey&rsquo;s grassroots appeal, I&rsquo;m amazed at the diversity we&rsquo;ve had.  We&rsquo;ve had cops, EMTs, firefighters,  architects, engineers, scientists, pilots, artists, designers, writers, tech entrepreneurs, a maître d’hôtel, a restauranteur, a couple of finance guys, a bunch of software guys.  Indie singers and DJs have leaped over the boards.  Which is somewhat surprising because we obviously have no marketing department.  It&rsquo;s probably just word of mouth or pure serendipity that some of these guys end up playing with us.  Over the years, there are some note-worthy names who have laced up the skates with us. So far as I remember here are some.</p>
+
+<ul>
+<li>The 1999 World Junior Ice Dancing champion</li>
+<li>A Boston Police superintendent and head of the Bureau of Investigative Services</li>
+<li>The platform director at Twitter</li>
+<li>The founder of Colorkinetics (now Philips)</li>
+<li>The former CEO of Akamai</li>
+<li>The current general manager of the Red Sox. He&rsquo;s a quiet, good player who liked to be on defense. One of the complaints I remembered was that he didn&rsquo;t get off the ice very much.</li>
+<li>The bassist for the punk band NOFX.  He just showed up at the rink with a hockey bag. The other guys told him to wait to check with me whether he could play (we don&rsquo;t want too many skaters).  We had room so he stayed.  Turned out he was in town for a concert and, being a hockey enthusiast and player, he brought his gears along. Apparently he does this on road trips.  Not all of us have heard of NOFX, but those who did were quite excited when they found out.  He was only an average player, but does possess first-class enthusiasm.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fix External Lockout for American Standard Freedom 90 furnace]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/02/13/fix-external-lockout-for-american-standard-freedom-90-furnace/"/>
+    <updated>2013-02-13T00:00:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/02/13/fix-external-lockout-for-american-standard-freedom-90-furnace</id>
+    <content type="html"><![CDATA[<p>Some of my blogs are of the &ldquo;I&rsquo;d better write this down so I don&rsquo;t forget it&rdquo; variety.  This is one of them. This is intended primarily for future me, but it would be cool if anyone else finds it useful.</p>
+
+<p>The equipment in question is an American Standard (Trane) Freedom 90 gas furnace that&rsquo;s about 7 years old. Recently, in fact right in the middle of a <a href="http://www.weather.com/news/weather-winter/nemo-historical-ranks-20130212">record-setting snowstorm</a>, it started blowing only cold air.</p>
+
+<p>I followed the instructions in the manual to reset it (off-on-off-on in less than 30 seconds), to no avail. The burners would get ignited, then seemed to flame out.  The control board then tried to restart the process.  This would go on 5 times or so.  After that the blower fan would be going, but only ice-cold air was coming out.  The red light on the control board flashed twice in roughly 3-second intervals.  According to the manual, this indicated an &ldquo;External Lockout (retries or recycles exceeded)&rdquo; error.</p>
+
+<p>Some online forums (google &ldquo;external lockout&rdquo;) implicated the flame sensor. Apparently it needs to be cleaned about once a year.  I&rsquo;ve never seen it much less touched it, so it&rsquo;s highly suspect.  Before working inside the furnace, it goes without saying that you must first turn down the thermostat and shut off power to the furnace. To get to it, remove the two panels on the front of the furnace starting with the bottom panel.</p>
+
+<p>The burner unit is in an enclosed box at the top of the cabinet. There&rsquo;s a round viewport on the front bezel where you can observe the burners in action (provided they are running).</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_5005.jpg" alt="DSC_5005" width="334" height="500" class="aligncenter size-full wp-image-2039" /></p>
+
+<p>Remove the front door with an 8mm wrench. It hinges at the top and can be tricky to remove.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4999.jpg" alt="DSC_4999" width="500" height="500" class="aligncenter size-full wp-image-2043" /></p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4996.jpg" alt="DSC_4996" width="334" height="500" class="aligncenter size-full wp-image-2042" /></p>
+
+<p>Locate the flame sensor.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4995.jpg" alt="DSC_4995" width="500" height="334" class="aligncenter size-full wp-image-2041" /></p>
+
+<p>Remove it with a socket screwdriver.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4993.jpg" alt="DSC_4993" width="500" height="334" class="aligncenter size-full wp-image-2040" /></p>
+
+<p>Thoroughly clean the sensor&rsquo;s rod and contact with sandpaper. I&rsquo;d use 150-grit as well as a finer sandpaper.</p>
+
+<p>Replace the flame sensor. To test it out, you should replace just the burner door and the bottom panel of the cabinet; there&rsquo;s a door switch that prevents operation unless the panel is in place (or it is manually depressed). You can view the burners through the viewport.  Turn on the power and turn up the thermostat to call for heat.</p>
+
+<p>In my case, the first attempt wasn&rsquo;t successful.  Before calling for service, I decided clean the flame sensor again even more thoroughly.  There was some rust on the contact that I made sure to remove with a fine-grit sandpaper. This must have done the trick.</p>
+
+<p>Note to self: Clean the air filter while you&rsquo;re at it</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mini project: Adding a second hard drive to the Mac Mini]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/02/01/mini-project-adding-a-second-hard-drive-to-the-mac-mini/"/>
+    <updated>2013-02-01T00:00:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/02/01/mini-project-adding-a-second-hard-drive-to-the-mac-mini</id>
+    <content type="html"><![CDATA[<p>I want to replace the DVR that I get from Verizon Fios. Besides the monthly cost, it&rsquo;s an older unit that&rsquo;s slow and has the capacity for no more than a handful 3-hour hockey games recorded in HD. That is plainly unacceptable, especially during the Stanley Cup Playoffs. For the HD tuner, I decided to go with the SiliconDust HD Homerun Prime. For the DVR, I&rsquo;m going with a Mac Mini. I&rsquo;m a recent Mac convert, having used exclusively PCs until now. Even though I enjoy assembling PCs, I&rsquo;m at a point where I&rsquo;d like stuff to just work. Even more so, I&rsquo;m more and more a fan of the elegance and simplicity of OS X.</p>
+
+<p>The Mac Mini is like a work of art.  The model I have, however, has a drawback. While it is a level above the base model and comes with an Intel Core i7 processor, it has a rather sluggish 5400rpm hard drive. Since I plan on using it to watch live TV and record shows, I need more performance.</p>
+
+<p>The server edition of the Mac Mini comes in the same case, but has 2 internal hard drives. It turns out that all Mac Minis (2012) have 2 hard drive slots.  For my Mac Mini, the second slot sits empty.  I want to add a Solid State Drive (SSD). The SSD will host OS X and the applications, while the other hard drive will host media. Getting to it in the cramped, tightly packed innards of the Mini seems like a daunting task.  Fortunately <a href="http://www.macsales.com">OWC</a> comes to the rescue by providing a prepackaged solution.</p>
+
+<p>The <a href="http://eshop.macsales.com/item/OWC/DIYIMM11D2">OWC hard drive upgrade kit</a> for the Mini (2011-2012) comes with a flex cable to connect the hard drive, screws and tools. The cost for the kit is only a few dollars more than what you&rsquo;d have to spend to buy the flex cable separately.</p>
+
+<p>I also got an SSD from OWC. OWC&rsquo;s in-house brand, Mercury Electra, is highly rated and assembled in the USA. I always look for something that&rsquo;s at least partially made in the USA whenever that&rsquo;s an option, even if it costs more.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4942.jpg" alt="DSC_4942" width="500" height="500" class="aligncenter size-full wp-image-2024" />
+<img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4948.jpg" alt="DSC_4948" width="500" height="500" class="aligncenter size-full wp-image-2026" />
+<img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4951.jpg" alt="DSC_4951" width="500" height="500" class="aligncenter size-full wp-image-2016" /></p>
+
+<p>The online video instructions are quite excellent.  Even though the installation is rated as highly difficult, it&rsquo;s actually quite straight-forward if you&rsquo;ve ever assembled computers before.  All that&rsquo;s required are some nimble fingers to navigate the Mini&rsquo;s delicate insides.  Here&rsquo;s the Mini without its parts. It seems to have been carved out of a solid block of aluminum!</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4945.jpg" alt="DSC_4945" width="500" height="500" class="aligncenter size-full wp-image-2025" /></p>
+
+<p>The SSD fits snugly into a plastic cage. It would sit below the stock hard drive.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4954.jpg" alt="DSC_4954" width="500" height="448" class="aligncenter size-full wp-image-2017" /></p>
+
+<p>With the power supply bar slid into the right side of the case.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4955.jpg" alt="DSC_4955" width="500" height="394" class="aligncenter size-full wp-image-2018" /></p>
+
+<p>This is the logic board assembly.  Isn&rsquo;t it adorable?</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4956.jpg" alt="DSC_4956" width="500" height="359" class="aligncenter size-full wp-image-2019" /></p>
+
+<p>The logic board slides into place through an opening in the back.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4960.jpg" alt="DSC_4960" width="500" height="423" class="aligncenter size-full wp-image-2020" /></p>
+
+<p>Now the old hard drive goes on top.  The two tabs to its lower left are the SATA connection tabs. The old hard drive has two small plugs that inserts into two slots on the front of the case (top of picture). The AirPort antenna grate in turn screws into the drive. You can&rsquo;t see the slots when inserting the drive back into the case. I didn&rsquo;t seat the drive properly in my first attempt and couldn&rsquo;t attach the antenna because the drive was misaligned.  Turns out the slots are slightly elevated.  I had to raise the hard drive slightly when inserting it.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4962.jpg" alt="DSC_4962" width="500" height="416" class="aligncenter size-full wp-image-2021" /></p>
+
+<p>The AirPort antenna grate goes over the top.  The instructions plead with you not to overtighten the screws.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4964.jpg" alt="DSC_4964" width="500" height="444" class="aligncenter size-full wp-image-2022" /></p>
+
+<p>Finally the fan and the DIMMs.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4965.jpg" alt="DSC_4965" width="500" height="437" class="aligncenter size-full wp-image-2023" /></p>
+
+<p>After connecting the Mini to an Ethernet switch and booting into Recovery mode (by holding down Command-R when booting), I selected Internet Recovery and let it install OS X Mountain Lion over the wire.  Minutes later, I was done.  Did I mention I love Macs?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Quickly editing waypoints on a Garmin GPS device]]></title>
+    <link href="http://dinhyen.github.io/blog/2012/12/18/quickly-editing-waypoints-on-a-garmin-gps-device/"/>
+    <updated>2012-12-18T00:00:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2012/12/18/quickly-editing-waypoints-on-a-garmin-gps-device</id>
+    <content type="html"><![CDATA[<p>When we traveled by car in Spain and Portugal in 2007, it&rsquo;s hard to believe that we managed to get around several cities using only a Michelin road atlas and a bunch of printouts of online maps. This time we&rsquo;re fully embracing 21st-century technology and bringing along a GPS device. To help save time, I like to enter destinations or waypoints ahead of time. On my Garmin nüvi 255W, it&rsquo;s a time-consuming process to enter waypoints (which Garmin calls Favorites). Fortunately, there&rsquo;s a way to create and edit waypoints on a PC, then later download them to the Garmin.</p>
+
+<p>The Garmin stores waypoints in a GPX file (kudos to them for using standards-based format). This is a good thing, because there&rsquo;s an excellent application for editing a GPX file on a PC&mdash;<a href="http://sourceforge.net/projects/gpxeditor">GPX Editor</a>.</p>
+
+<p>The first step is to connect the Garmin to the PC. After that you&rsquo;ll be able to browse the Garmin&rsquo;s memory card. Locate the current.gpx file under Drive\Garmin\GPX.</p>
+
+<p><img alt="garmin_folder" src="http://www.yentran.org/blog/wp-content/uploads/2013/02/garmin_folder.png" width="465" height="474" /></p>
+
+<p>Copy current.gpx to the PC. You can also back up the file this way.</p>
+
+<p>Open the copy of current.gpx in GPX Editor. Select the Google map tab, then select the plus icon to add a waypoint.</p>
+
+<p><a href="http://www.yentran.org/blog/wp-content/uploads/2012/12/gps_editor.png" rel="prettyPhoto"><img src="http://www.yentran.org/blog/wp-content/uploads/2012/12/gps_editor-1024x734.png" alt="gps_editor" width="695" height="498" class="aligncenter size-large wp-image-2011" /></a></p>
+
+<p>Once the waypoint is added, it shows in the list on the left. You can edit it and give it a more meaningful name.</p>
+
+<p>Once you&rsquo;re done, just copy current.gpx back to the Garmin. Your new favorites should now show up.</p>
+
+<p>This process works for my Garmin nüvi. I would suspect it would apply to other types of Garmin devices as well.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up Git to work remotely]]></title>
+    <link href="http://dinhyen.github.io/blog/2012/12/15/setting-up-git-to-work-remotely/"/>
+    <updated>2012-12-15T00:00:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2012/12/15/setting-up-git-to-work-remotely</id>
+    <content type="html"><![CDATA[<p>At home I use a MacBook to connect via VPN to the office. I&rsquo;d have access to the intranet but not shell access to my workstation. Since I usually work on the same project at home and at the office, I need to keep my work synchronized. One way to do that is with a Git remote branch.</p>
+
+<p>At the office, I&rsquo;d create a local branch for the story I&rsquo;d like to work on:</p>
+
+<pre>
+git checkout master
+git branch story_1
+git checkout story_1
+</pre>
+
+
+<p>The last 2 steps can be replaced with the shortcut:</p>
+
+<pre>
+git checkout -b story_1
+</pre>
+
+
+<p>In the local branch, create a remote branch with the same name:</p>
+
+<pre>
+git push origin story_1
+</pre>
+
+
+<p>Alternatively, I could specify a different name for the remote branch:</p>
+
+<pre>
+git push origin story_1:cool_feature_1
+</pre>
+
+
+<p>To set up the local branch (i.e., the tracking branch) to track changes in the remote branch:</p>
+
+<pre>
+git checkout story_1
+git branch -u origin/story_1
+</pre>
+
+
+<p>Alternatively, I could use a more verbose syntax:</p>
+
+<pre>
+git branch --set-upstream story_1 origin/story_1
+</pre>
+
+
+<p>If there&rsquo;s an existing remote branch and I want to create a new tracking branch with the same name:</p>
+
+<pre>
+git checkout --track origin/story_1
+</pre>
+
+
+<p>Inside a tracking branch, Git knows which server and branch to push to and pull from, so I can simply do <code>git pull</code> instead of <code>git pull origin story_1</code>.<sup>&dagger;</sup></p>
+
+<p>Now that the remote branch is setup, I can create a tracking branch on the laptop as above.</p>
+
+<p>Helpful references: <a href="http://git-scm.com/book/en/Git-Branching-Remote-Branches">http://git-scm.com/book/en/Git-Branching-Remote-Branches</a></p>
+
+<hr>
+
+
+<p><sup>&dagger;</sup> The behavior of &ldquo;git push&rdquo; actually depends on the push.default setting in .gitconfig and whether the tracking branch has the same name as the remote branch. The git-config man page gives the following information on push.default:</p>
+
+<blockquote><p><b>push.default</b> Defines the action git push should take if no refspec is given on the command line, no refspec is configured in the remote, and no refspec is implied by any of the options given on the command line. Possible values are:</p>
+
+<p>nothing &ndash; do not push anything.</p>
+
+<p>matching &ndash; push all branches having the same name in both ends. This is for those who prepare all the branches into a publishable shape and then push them out with a single command. It is not appropriate for pushing into a repository shared by multiple users, since locally stalled branches will attempt a non-fast forward push if other users updated the branch. This is currently the default, but Git 2.0 will change the default to simple.</p>
+
+<p>upstream &ndash; push the current branch to its upstream branch. With this, git push will update the same remote ref as the one which is merged by git pull, making push and pull symmetrical. See &ldquo;branch.<name>.merge&rdquo; for how to configure the upstream branch.</p>
+
+<p>simple &ndash; like upstream, but refuses to push if the upstream branch&rsquo;s name is different from the local one. This is the safest option and is well-suited for beginners. It will become the default in Git 2.0.</p>
+
+<p>current &ndash; push the current branch to a branch of the same name.</p></blockquote>
+
+<p>If the tracking branch has the same name as the remote branch, <code>git push</code> will suffice.  If it has a different name and push.default is, for example, &ldquo;simple&rdquo;, I&rsquo;d have to specify the refspec: <code>git push origin HEAD:story_1</code>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Hudson with Git and MSBuild on Windows]]></title>
+    <link href="http://dinhyen.github.io/blog/2012/11/15/using-hudson-with-git-and-msbuild-on-windows/"/>
+    <updated>2012-11-15T00:00:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2012/11/15/using-hudson-with-git-and-msbuild-on-windows</id>
+    <content type="html"><![CDATA[<p>We use <a href="http://hudson-ci.org/">Hudson</a> as our continuous integration server (although we&rsquo;re thinking about moving to <a href="http://jenkins-ci.org/">Jenkins</a>, but that&rsquo;s a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.</p>
+
+<h1>Pre-requisites</h1>
+
+<p>We use the following software. The listed versions are the latest as of the time of writing, but other combinations should work.</p>
+
+<ul>
+<li>Java Runtime Environment (JRE) 7</li>
+<li>Apache Tomcat 7.0</li>
+<li>Hudson 2.2.1</li>
+</ul>
+
+
+<h1>Apache Tomcat</h1>
+
+<p>Download and install the <a href="http://tomcat.apache.org/download-70.cgi">Tomcat 7.0 Windows Service Installer</a>. In our case, the server already runs IIS on port 80, so we install Tomcat on a different port.  Remember this port as you will need it to access the Manager and Hudson.</p>
+
+<p>Since Hudson will need to perform tasks that require access to more than one servers, such as deploying to a network share, we create a domain account which would be granted the necessary permissions wherever applicable. Configure Tomcat to run under the domain account as follows:</p>
+
+<ul>
+<li>From the Start menu, run Configure Tomcat as Admin. Alternatively, you could open the Services console (shortcut: run Service.msc as Admin) and select Properties for the Apache Tomcat 7.0 service.</li>
+<li>Under the Log On tab, enter the credentials for the domain account
+<img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/tomcat7user.png" width="416" height="396" /></li>
+<li>Restart Tomcat</li>
+</ul>
+
+
+<p>You can restart Tomcat by running the command prompt as Admin then type <code>net start tomcat7</code> to start or <code>net stop tomcat7</code> to stop the service.</p>
+
+<p>Grant Read/Execute permission to the Tomcat account for the web application folders (e.g., webapps\manager, webapps\root) and Full Control for temp folder.</p>
+
+<p>Out of the box, the Manager is not accessible out of security consideration. You&rsquo;d have to specify the user who&rsquo;s allowed to access the page:</p>
+
+<ul>
+<li>Open c:\program files (x86)\Tomcat 7.0\conf\tomcat-users.xml</li>
+<li>Enter the credentials for the user and specify the role as &ldquo;manager-gui&rdquo; with the following:
+<code>&lt;user username="admin" password="password" roles="manager-gui"/&gt;</code></li>
+</ul>
+
+
+<p>You can access the Manager at <a href="http://server:port/manager/html.">http://server:port/manager/html.</a></p>
+
+<h1>Hudson</h1>
+
+<h2>Install Hudson</h2>
+
+<p><a href="http://hudson-ci.org/">Download</a> the latest production .war.</p>
+
+<p>To deploy Hudson:</p>
+
+<ul>
+<li>Copy .war to the Tomcat webapps folder. The name of the .war will be part of Hudson&rsquo;s URL, so rename hudson-2.1.2.war to hudson.war to shorten the URL. If Hudson is the only app, you can also rename the .war root.war to be able to access Hudson at the root URL.</li>
+<li>Grant the Tomcat account full control to the webapps folder. This is because Tomcat needs to unpack the .war into a folder. After it&rsquo;s deployed, you can reset the permissions for the Tomcat account back to Read &amp; Execute.</li>
+<li>Restart the Tomcat service if necessary.</li>
+</ul>
+
+
+<p>To upgrade Hudson:</p>
+
+<ul>
+<li>Stop the Tomcat service</li>
+<li>Remove the old Hudson .war and folder from the webapps folder</li>
+<li>Following the procedure to deploy Hudson</li>
+<li>Your jobs should be saved to the .hudson folder in the user&rsquo;s home directory by default (e.g., c:\Users\TomcatAccount.hudson on Windows). They should be there when you start Hudson.</li>
+</ul>
+
+
+<p>To restart Hudson:</p>
+
+<ul>
+<li>Browse to Tomcat Manager</li>
+<li>Select Reload for the /hudson application</li>
+</ul>
+
+
+<p>If you&rsquo;ve named the .war hudson.war, you can access Hudson at <a href="http://server:port/hudson.">http://server:port/hudson.</a></p>
+
+<h2>Set up Git</h2>
+
+<p>Hudson needs to locate the SSH RSA key files (in the .ssh folder) to use with Git. In order to do so, you need to specify the %HOME% environment variable, if it&rsquo;s not set.</p>
+
+<p>It&rsquo;s convenient to do so in Hudson:</p>
+
+<ul>
+<li>From the Hudson dashboard, select Manage Hudson</li>
+<li>Select Configure System</li>
+<li>Under the Global properties section, add the HOME environment variable and set it to the home directory of the Tomcat account where the .ssh folder is located.
+<img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/git-plugin.png" /></li>
+</ul>
+
+
+<h2>Set up MSBuild</h2>
+
+<p>MSBuild is the Visual Studio build system. To install the MSBuild plugin, which allows you to access MSBuild:</p>
+
+<ul>
+<li>From the Hudson dashboard, select Manage Hudson</li>
+<li>Select Manage Plugins</li>
+<li>In the Available tab, check MSBuild and select Install</li>
+</ul>
+
+
+<p>To configure the MSBuild plugin:</p>
+
+<ul>
+<li>From the Hudson dashboard, select Manage Hudson</li>
+<li>Select Configure System</li>
+<li>Under the MSBuild section, provide the path to the MSBuild executable similar to below.
+<img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/msbuild.png" /></li>
+</ul>
+
+
+<h2>E-mail notification</h2>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/email.png" /></p>
+
+<h2>Create a Hudson job</h2>
+
+<p>Creating a job in Hudson is pretty straight forward, with just a form to fill out and no XML to fiddle with.</p>
+
+<h3>Name</h3>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/create.png" /></p>
+
+<h3>Workspace</h3>
+
+<p>The custom workspace is the location where you source code will go after being pulled from version control.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/workspace.png" /></p>
+
+<h3>Source Code Management</h3>
+
+<p>The URL of a Git repository is of the form gitaccount@server:gitrepository.git.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/git.png" /></p>
+
+<h3>Build</h3>
+
+<p>This can be a multi-step process. You can have as many step as necessary. To add a build step, select an option from the Add build step dropdown.</p>
+
+<p>In our case, we want to allow the user to select a particular Git tag to build. The list of tags is specified as Choice parameter. The selected value will be stored in an environment variable of the same name, $TAG.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/git-tag-param.png" /></p>
+
+<p>To pull down the tag, we execute a series of step to ensure all tags are pulled down, then checkout the selected tag.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/git-tag-checkout.png" /></p>
+
+<p>The final step uses MSBuild to run our build script.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/build.png" /></p>
+
+<h3>Post-build</h3>
+
+<p>The Chuck Norris plugin gives us a thumbs up for a successful build.  If the build fails, well let&rsquo;s just say you don&rsquo;t want to make Chuck angry.</p>
+
+<p><img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/post-build.png" /></p>
+
+<h2>Troubleshooting</h2>
+
+<p><strong>FATAL: One of setGitDir or setWorkTree must be called</strong></p>
+
+<ul>
+<li>Try using a different workspace directory for each project</li>
+<li>Try deleting workspace directory</li>
+</ul>
+
+
+<p><strong>HTTP Status 500 &ndash; java.lang.IllegalStateException: No output folder</strong></p>
+
+<ul>
+<li>Grant permission to the Tomcat account for the app you&rsquo;re accessing (e.g., webapps\root)</li>
+</ul>
+
+
+<h1>References</h1>
+
+<p><a href="http://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html#Configuring_Manager_Application_Access">Configuring Tomcat manager</a></p>
+
+<p><a href="http://wiki.hudson-ci.org/display/HUDSON/Tomcat">Install and upgrade guide for Hudson</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Looper]]></title>
+    <link href="http://dinhyen.github.io/blog/2012/11/04/looper/"/>
+    <updated>2012-11-04T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2012/11/04/looper</id>
+    <content type="html"><![CDATA[<p>Looper, starring Bruce Willis and that awkward kid in Third Rock from the Sun, is a terrific movie with extraordinary storytelling, tightly woven narrative and great acting. I really enjoy it very much, despite some misgivings about its remorseless violence and relentlessly depressing depiction of the future. However, since I&rsquo;ve been asked if I can poke any hole in it, I&rsquo;ve taken it upon myself as a task to find a chink or two in the movie&rsquo;s formidable armor, much in the same spirit as <a href="http://www.juliansanchez.com/2012/06/11/whats-wrong-with-prometheus-a-partial-list">this critique</a>. There are probably a few holes in my own armor, as I&rsquo;ve only sat through the movie once and may miss details here and there. Needless to say, this is going to contain <strong>massive spoilers</strong>. I mean, it&rsquo;s pretty much going to give whole the movie away. So if you haven&rsquo;t seen the movie and would like to at some point, you will not want to read further. With that disclaimer out of the way, here goes.</p>
+
+<ul>
+<li>Joe (Joseph Gordon-Levitt) and others like him are Loopers, hired killers who execute prisoners sent from the future by an criminal syndicate via a time machine. The Looper waits at a certain location, typically in the middle of a field or in an abandoned courtyard. At the appointed time, the victim appears in front of them, tied and hooded. He pulls the trigger, removes the payment in the form of silver bars taped to the back of the victim, and disposes of the body in a furnace. Things are done this way, we&rsquo;re told, because in the future, it&rsquo;s very difficult to make people disappear without a trace. My question is, the criminals could operate a time machine but couldn&rsquo;t find a way to operate an incinerator?</li>
+<li>The criminals go through the trouble of sending a man to the past to recruit and manage the Loopers and deal with things that could go wrong (which does). They risk polluting the time line if the victims end up escaping (they do). This seems like a needlessly complex scheme fraught with risk. Couldn&rsquo;t they just send the victim back 10,000 years or so where he would have perished without so much as a ding on the timeline. Okay, so maybe the time machine has a limited range and only works for the last 30 years or so. Couldn&rsquo;t they have set one up in the middle of a lake or just off shore? Make sure the victim is weighed down and he would just disappear beneath the waves.</li>
+<li>The Looper is given the time on a piece of paper and the victim appears exactly at the appointed time. Nevermind the fact that they have to synchronize their watches over, oh, 30 years or so, how do they send a message from the future to set the time?</li>
+<li>While future-Joe (Bruce Willis) followed present-Joe back to his apartment, he walked across an open garage and shot a thug sitting inside a car. Given that present-Joe is only armed with a blunderbuss&mdash;which he keeps on him&mdash;when future-Joe steals his truck, where does future-Joe get a gun?</li>
+<li>For being professional killers, the thugs are horrendous shots. The one on top of the balcony at present-Joe&rsquo;s apartment keeps missing future-Joe who is only 30&mdash;40 feet away. Near the end, Kid Blue with his peashooter, again keeps missing present-Joe by a mile (though he was riding a hoverbike which makes aiming difficult).</li>
+<li>Future-Seth ends up escaping. Under interrogation, present-Joe gives away present-Seth, who is captured. While future-Seth is running away, his fingers and leg begin to disappear and a tattoo appears on his forearm with an address. Mutilated, he barely makes it to the address, whereupon he is promptly shot. Apparently the bad guys mutilate present-Seth to directly affect future-Seth. This is a terrific setup for what would happen later in the movie. Nevertheless, since the goal is to get rid of the Seths, couldn&rsquo;t they just have killed present-Seth?</li>
+<li>Loopers are dismissed with a final payment of gold bars. They know that in 30 years they would be captured and sent back to be executed, thus closing the loop. With the knowledge and the means, future-Joe does nothing to avoid this fate?</li>
+<li>The in the &ldquo;flash forward&rdquo;, Joe goes to China. As the year goes by, he gets older. All of a sudden, he turns from Joseph Gordon-Levitt who has shoulder-length black hair into Bruce Willis who is 30 years older and almost completely bald.</li>
+<li>The entire diner empties out without neither present- or future-Joe, who sit in the middle of it, noticing.</li>
+<li>At the diner shootout, present-Joe joins the thugs in shooting at future-Joe. The thugs completely ignore present-Joe without realizing that with him they have immediate and lethal leverage over the other.</li>
+<li>Kid Blue, on the tracks of future-Joe, goes to a guy who shows him a video feed of future-Joe approaching and peeking into the window of the prostitute&rsquo;s apartment. It seems like an extraordinary coincidence that he finds the right guy who has access to the right camera at the right location in a huge metropolis.</li>
+<li>Most of the cars have tubes or pipes running around the rear, presumably into the fuel door. What is the purpose of the pipes? If they carry some sort of fuel, as is the most likely explanation, why leave them exposed in the back vulnerable to a rear-end collision or mischief.</li>
+</ul>
+
+
+<p>In all fairness, this is a very well-written and -executed movie. These are minor nitpicks and by no means should detract from your enjoyment of it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Replacing motherboard without reinstalling Windows]]></title>
+    <link href="http://dinhyen.github.io/blog/2012/09/16/replacing-motherboard-without-reinstalling-windows/"/>
+    <updated>2012-09-16T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2012/09/16/replacing-motherboard-without-reinstalling-windows</id>
+    <content type="html"><![CDATA[<p>I wanted to upgrade a couple of PCs by replacing the motherboard (by the way, when buying PC components, if there&rsquo;s a <a href="http://microcenter.com/">Microcenter</a> store nearby, try it first; at the time of this writing their $50 bundle discount for a motherboard-CPU combo cannot be beat, even by much-loved online enthusiast stores).  Afterwards, I found that Windows 7 wouldn&rsquo;t boot.</p>
+
+<p>In my prior experience, Windows would automatically detect the new motherboard and reconfigure itself accordingly.  However, in those cases, I&rsquo;d always replaced an AMD motherboard with the same.  This time I finally succumbed to Intel&rsquo;s growing CPU superiority and swapped an AMD motherboard for an Intel one. Windows would load drivers, crash, then reboot.  Apparently Windows wasn&rsquo;t able to load the drivers to work with the new motherboard. I ran Startup Repair once without success.  After I ran it the second time, Windows complained that &ldquo;Startup Repair cannot repair this computer automatically&rdquo;.  I was resigned to reinstalling Windows from scratch.  This isn&rsquo;t actually a horrible thing, since all my data are on a separate partition, but it would mean I&rsquo;d have to reinstall and configure apps all over again.</p>
+
+<p>Luckily I found <a href="http://www.msigeek.com/2661/add-or-remove-a-driver-from-a-wim-image-using-dism">a post</a> describing how to use the DISM (Deployment Image Servicing and Management) command-line tool.  This tool, intended for sysadmin use, allows you to load drivers into an existing Windows image or installation.  Our goal is to pre-load the necessary drivers to hopefully allow Windows to run on the new motherboard.  Here are the steps that worked for me.</p>
+
+<ol>
+<li>Download drivers for the new motherboard.  I&rsquo;m using a USB flash drive as a boot/recovery drive so I copied them there, but you could use separate USB flash drive or even a DVD-R. You need the chipset and SATA drivers.  You can ignore the audio, LAN, video, etc. drivers as they are not necessary for Windows to load and can be left till later. Driver packaging depends on the manufacturer.  In my case, for my <a href="http://www.gigabyte.com/products/product-page.aspx?pid=3726#dl">Gigabyte motherboard</a> the chipset drivers are bundled in a single archive, while for the <a href="http://www.asrock.com/mb/Intel/Z77%20Extreme4/?cat=Download&amp;os=Win7">Asrock motherboard</a>, they&rsquo;re all in separate files. Extract the files (some executables can be extracted) and copy only the appropriate folder for your flavor of Windows. The folder should contain an .INF file and .DLL or .SYS files.</li>
+<li>Boot from your Windows install/recovery DVD or USB flash drive and select Repair</li>
+<li>Select Advanced Options</li>
+<li>Choose the Command Prompt option to get the command line</li>
+<li>Now determine the drive where Windows is installed. This may not be where you think it is if the drives are remapped, say when you boot from a USB flash drive. The quickest way is just to list the files on drives C:, D:, E:, etc. and figure out which is which.</li>
+<li>Let&rsquo;s say Windows is installed under C: and the drivers are under D:\mydrivers, use DISM follows:</li>
+</ol>
+
+
+<pre>
+dism /image:C: /add-driver /driver:D:\mydrivers /recurse
+</pre>
+
+
+<p>The <code>/recurse</code> option conveniently lets DISM  install all drivers found under the specified folder.
+1. Reboot. If Windows successfully boots, congratulations! The next step would be to configure the Ethernet adapter so you can install the rest of the drivers.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Paris 1999]]></title>
+    <link href="http://dinhyen.github.io/blog/2012/08/09/paris-flashback/"/>
+    <updated>2012-08-09T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2012/08/09/paris-flashback</id>
+    <content type="html"><![CDATA[<p>I took a trip outside of the US for the first time in 1999.  My sister and I got to spend a week in Paris, then took a train to the Netherlands where we toured the country for another week with a friend.  Traveling so far from home by ourselves was exciting enough, and being in the most beautiful and metropolitan city in the world turned it into an unforgettable experience.  We were like a sponge, soaking in and absorbing all the sights that we had only read or even dreamed about.  I had an old manual <a href="http://en.wikipedia.org/wiki/Canon_AT-1">Canon AT-1</a> that my dad had given me.  It&rsquo;s a far cry from contemporary DSLRs, but that didn&rsquo;t stop me from taking as many pictures as possible.  In many ways, this was the beginning of my interest in travel and photography.  I&rsquo;ve been able to return to Paris many times since then, but the curiosity, passion and wide-eyed wonder of that first trip are some things that remain and hopefully never cease.</p>
+
+<p>The unmistakable landmark.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/paristoureiffel99-06-09.jpg' /></p>
+
+<p>View from the top of the tower toward the Palais de Chaillot.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisvuedelatour99-06-09.jpg' /></p>
+
+<p>Miniature Statue of Liberty in the Jardin du Luxembourg.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisstatuedeliberte99-06-10.jpg' /></p>
+
+<p>We wandered over to Place Vendôme.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisplacevendomecolumn99-06-14.jpg' /></p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisritz99-06-15.jpg' /></p>
+
+<p>The Louvre is of course only the most well-known museum in the world.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parislouvrereclining99-06-12.jpg' />
+<img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parislouvrecourtyard99-06-12.jpg' /></p>
+
+<p>But for us it was a bit overwhelming and crowded.  We preferred the Musée d&#8217;Orsay.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parismuseedorsaylobby99-06-11.jpg' />
+<img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parismuseedorsayclock99-06-11.jpg' /></p>
+
+<p>Which is not without aces of its own.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parismuseedorsaywhistlersmother99-06-12.jpg' /></p>
+
+<p>The Musée Rodin was another on our list.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parismuseerodintroishommes99-06-12.jpg' /></p>
+
+<p>Notre Dame from the Seine.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisnotredamefrombateaumouche99-06-15.jpg' /></p>
+
+<p>View of the Pont des Invalides from the same Bateau Mouche.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisbridge99-06-14.jpg' /></p>
+
+<p>Paris has a fountain or monument at each square and street corner, it seems.  This is <a href="http://en.wikipedia.org/wiki/Fontaine_Moli%C3%A8re">Fontaine Molière</a>.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisfoutainemoliere99-06-15.jpg' /></p>
+
+<p>The Fontaine Saint-Michel with its ostentatious and somewhat incongruous pink marble columns.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisbatiment99-06-10.jpg' /></p>
+
+<p>The Tour Saint-Jacques is the most prominent feature at Place du Chatelet.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parischatelet99-06-13.jpg' /></p>
+
+<p>On the way to Palais Royal.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisfontainenearpalaisroyal.jpg' /></p>
+
+<p>Ste-Eustache is an island of solitude in bustling Les Halles.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/pariseglisesteustacheentrance99-06-10.jpg' /></p>
+
+<p>The renowned Sorbonne.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisnearsorbonne990-60-15.jpg' /></p>
+
+<p>From the other side.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parissorbonnecourtyard99-06-10.jpg' /></p>
+
+<p>One of the many churches, St-Étienne-du-Mont.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisbaroquechurchnearpantheonfacade99-06-12.jpg' /></p>
+
+<p>Maybe the most celebrated basilica of all.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisbasiliquesacrecoeur99-06.jpg' /></p>
+
+<p>One of the luminaries interred at Cimetière de Montparnasse.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/pariscimetieremontparnasse99-06-14.jpg' /></p>
+
+<p>Yet another famous monument in a city full of them.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parislarcdetriomphe99-06-13.jpg' /></p>
+
+<p>And the equally famous boulevard.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parischampselysees99-06-13.jpg' /></p>
+
+<p>The modern La Défense is Paris&#8217; answer to the skyline of Manhattan.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisladefensebigthumb99-06-13.jpg' /></p>
+
+<p>The storied Hôtel de Ville with its very French exterior that would have made <a href="http://en.wikipedia.org/wiki/Haussmann%27s_renovation_of_Paris">Baron Haussmann</a> proud.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisplacedauphine99-06-10.jpg' /></p>
+
+<p>I had to take this photo, somewhere in the Quartier Latin, to show my French teacher, Gilberte.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisgaleriefurstenberg99-06-15.jpg' /></p>
+
+<p>To get away from the city for a bit, we headed to the Château de Bagatelle in the Bois de Boulogne park.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisparcdebagatellemansion99-06-09.jpg' /></p>
+
+<p>And met some of its more colorful residents.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisparcdebagatellepeacock99-06-09.jpg' /></p>
+
+<p>The ornate throne room at Château de Versailles.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/versaillesthroneroom99-06-11.jpg' /></p>
+
+<p>And finally we&rsquo;re off to the Gare du Nord for the trip to Holland on a TGV.</p>
+
+<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisgaredunord99-06-16.jpg' /></p>
+]]></content>
+  </entry>
   
 </feed>

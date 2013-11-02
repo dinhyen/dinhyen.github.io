@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Yen's Blog</title>
+  <meta name="author" content="Yen Tran">
+
+  
+  <meta name="description" content="Up to IIS 7 (Windows Vista and Windows Server 2008), the default app pool identity is NetworkService 7. In IIS 7.5 (Windows 7 and Windows Server 2008 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dinhyen.github.io/blog/page/9">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Yen's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Yen's Blog</a></h1>
+  
+    <h2>Lens, Wheels, Skates, Keyboard</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dinhyen.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/travel">Travel</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/06/granting-permissions-to-the-application-pool-identity-in-iis-7-5/">How to Grant Permissions to the Application Pool Identity for IIS 7.5</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-06T00:00:00-04:00" pubdate data-updated="true">Sep 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Up to IIS 7 (Windows Vista and Windows Server 2008), the default app pool identity is NetworkService 7. In IIS 7.5 (Windows 7 and Windows Server 2008 R2) the app pool identity is changed to something called ApplicationPoolIdentity.</p>
+
+<p>Let&rsquo;s say you set up a virtual directory or application that uses this app pool. You&rsquo;ll need to grant access permission on the physical path to ApplicationPoolIdentity. However, you&rsquo;d find that there is no such user account. According to <a href="http://blogs.iis.net/webdevelopertips/archive/2009/10/02/tip-98-did-you-know-the-default-application-pool-identity-in-iis-7-5-windows-7-changed-from-networkservice-to-apppoolidentity.aspx">an IIS Team blog</a>, the user account associated with ApplicationPoolIdentity is actually <code>IIS AppPool\&lt;App pool name&gt;</code>. The intention is to further reinforce app pool isolation through the use of a separate user account for each app pool.</p>
+
+<p>To grant permission to ApplicationPoolIdentity:</p>
+
+<ul>
+<li>Open the IIS Manager</li>
+<li>Right-click on the desired virtual directory or application and select Edit Permission. Alternatively, you could have used Windows Explorer to browse to the physical path and open its Properties panel.</li>
+<li>On the Security tab, select Edit, then Add</li>
+<li>If the location is set to the domain, select Locations and change it to the local machine</li>
+<li>In the textbox, enter <code>IIS AppPool\[Site Name]</code> for example, <code>IIS AppPool\Default Web Site</code></li>
+</ul>
+
+
+<p><img title="select-1" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/select-1-300x159.png" width="300" height="159" /></p>
+
+<ul>
+<li>Select Check Names and a valid user account name should appear</li>
+</ul>
+
+
+<p><img title="select-2" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/select-2-300x159.png" width="300" height="159" /></p>
+
+<ul>
+<li>Select the desired permissions; for example, Read &amp; Execute</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/06/book-review-wizards-first-rule-sword-of-truth-series-book-1-by-terry-goodkind/">Wizard&#8217;s First Rule (Sword of Truth Series, Book 1) by Terry Goodkind</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-06T00:00:00-04:00" pubdate data-updated="true">Sep 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img title="Wizard's_First_Rule" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/Wizards_First_Rule-202x300.jpg" width="202" height="300" />If you&rsquo;re looking for an enthralling fantasy epic, look no further than the Sword of Truth series. Though Wizard&rsquo;s First Rule isn&rsquo;t the best of the series, it&rsquo;s a must-read because it sets the background for the rest of the series.</p>
+
+<p>Richard Cypher, a simple woods guide from the land of Hartland, has a chance encounter with a mysterious woman and soon finds himself at the center of quest to prevent a magic box of vast power from falling into the hands of Darken Rahl, a &ldquo;dark&rdquo; wizard of with unimaginable power and unsurpassed cruelty. Richard is guided by beautiful Kahlan, who possesses a mysterious but deadly ability, and Zedd, a kindly, eccentric old wizard who is more powerful than he seems. He is also bestowed with a magic sword powered by unbridled fury. Along the way, which crosses his rustic Westland into the magical Midlands and dark D&#8217;Hara, he encounters sorceresses, otherworldly beasts, dangerous magical creatures, a savage cannibalistic people, and deadly spells. Richard has to learn how to use the magic of his sword and his inborn magic, as well as the eponymous wizard&rsquo;s rule, if he is to succeed. Will he survive the encounter with a Mord-Sith, a leather-clad torturer who inflicts terrible pain or death as easily as the flick of a wrist, in order to even have a chance to stop Rahl, who commands the powers of the underworld?</p>
+
+<p>In this debut, Goodkind did a good job of painting his magical universe and introducing the protagonists. The first half proceeds slowly, filled with trivial adventures and rather poorly realized characters. At times his dialogues are so bland and sappy that they may induce squirms. If you find yourself feeling that way, stick with it; the series, and the writing, vastly improves with subsequent books. In the second half of the book, the pace picks up significantly. Goodkind is an expert at crafting plots. The fast-paced, furious actions and the heart-pounding thrills of the climax may leave you emotionally spent, yet satisfied, at the end. Believe it or not, the climax will resolve most major plot threads, something I wish other authors (read: Robert Jordan) would do more often, while leaving enough open for the next installment.</p>
+
+<p>Goodkind&rsquo;s world is less complex than others. The New World, composed of Westland, Midlands, and D&#8217;Hara, is where magic still has a hold, while the much more vast, mostly unknown, Old World is devoid of magic. Most of Richard&rsquo;s adventures take place in Midlands, though its geography and people aren&rsquo;t all known at first; new kingdoms and realms are introduced along the way. Like many other fantasy realms, Goodkind-land of the present has but a shell of the richness and splendor of the past, in this case 3000 years ago before the time of the Great War. The number of magic wielders diminishes with each passing generation, and the magic that remains is no longer as powerful as it once was. Goodkind&rsquo;s &ldquo;magic&rdquo; is a complex and mysterious entity, not as well characterized as, say, Robert Jordan&rsquo;s One Power. Wizards and sorceresses call on their &ldquo;Han&rdquo; to cast &ldquo;webs&rdquo; of magic, or they can conjure spells and embed them in or invoke them from magical objects. Some aspects of the &ldquo;gift&rdquo; are unexpected, such as the ability to see or interpret prophecy. It&rsquo;s not always clear what magic can or cannot accomplish. Adding to that are the humans and creatures, created with or warped by magic and themselves possess unique magical abilities. The resulting mix can be confusing, but leads to exciting, unexpected possibilities.</p>
+
+<p>Unlike many other fantasy epics, Goodkind&rsquo;s heroes are threatened by a variety of evil characters. The Sauron/Dark One archetype is represented here by the Keeper of the Underworld; besides that there are the evil wizard, Darken Rahl, evil spirits, evil underworld forces, evil beasts, evil humans. In the latter part of the series, the principal antagonist is an evil emperor with a deadly power. Added to the mix are secondary entities who are no less dangerous and disruptive, such as the Blood of the Fold and the Sisters of the Dark. Good-doers are never completely safe in this world.</p>
+
+<p>One appealing aspect of the series is the human relationship between the characters. Complex, profound, and very human emotions are always there, bubbling beneath the surface, ready to burst open. Readers can&rsquo;t help but find themselves taking a personal interest in the well-being of many characters. On the flip side, Goodkind also fashion many twisted villains who can exasperate and infuriate &mdash; a tribute to his craftsmanship.</p>
+
+<p>Goodkind brings a mix of many adult themes to the story. This is not a series for young readers, though I don&rsquo;t think Goodkind&rsquo;s writings is as graphically perverse as some reviewers have claimed. He crosses the line occasionally, but for the most part doesn&rsquo;t do more than is necessary for advancing the plot. The inclusion of themes can make his world &ldquo;darker&rdquo; than kinder, gentler places such as Jordan&rsquo;s. Aside from the usual mix of love, lust, sexuality, loyalty, treachery, there are touches on infidelity, homosexuality, human sacrifice, prostitution, slavery, pedophelic practice, misogyny. Goodkind&rsquo;s world is also violent, one in which blood is spilled copiously and without remorse. Nevertheless, these attributes make Goodkind&rsquo;s world more realistic and potentially appealing to the mature reader.</p>
+
+<p><em>Originally posted Dec 13, 2002 on Amazon.com</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/08/23/removing-malware/">Removing Malware</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-23T00:00:00-04:00" pubdate data-updated="true">Aug 23<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>My computer got a dose of malware today.   The trojan got a hold of my USB drive.  It made all of my files and folders hidden, then injected executables with the same names.  It also hid the .exe extension so that the executables appeared in place of the legitimate objects they were masquerading.  It gave the fake folders the right icon so that they looked just like folders.  The objective is to fool the user into double-clicking the folders to open them but instead executing the trojan.</p>
+
+<p><img title="malware" src="http://www.yentran.org/blog/wp-content/uploads/2011/08/malware.png" width="477" height="206" /></p>
+
+<p><figcaption>Malware executable masquerading as folder. With the normal Windows settings, the original folder &ldquo;backup&rdquo; is not shown because it is set to &ldquo;hidden&rdquo;. The malware executable &ldquo;backup.exe&rdquo; looks like a real folder because it has a folder icon and its &ldquo;exe&rdquo; extension is not shown.</figcaption></p>
+
+<p>Sure enough, being careless, I fell for the trick.  The trojan installed a &ldquo;scareware&rdquo; Malware and Spyware scanner; whoever the authors are, they are not without a perverse sense of humor.  The fake scanner &ldquo;detected&rdquo; random programs on the hard drive as malware.  If you fall for the legitimate-sounding messages, you undoubted would be sending them your credit card information at some point.  Now only an idiot would do that (apologies to those who actually did).  This trojan is not a one-trick pony.  It has a fairly standard bag of tricks:</p>
+
+<ul>
+<li>It  modifies Windows&#8217; Registry so that it would be loaded automatically when the computer boots</li>
+<li>It modifies the Windows Hosts file to redirect google.com, yahoo.com and bing.com to ad sites</li>
+<li>It changes your IE homepage to point to its own site</li>
+<li>If you start Task Manager or any other program, it immediately kills it so that you have no control whatsoever of the computer with the only recourse to click on the link that the fake scanner provides</li>
+</ul>
+
+
+<p>At this point, it looked like I was stuck.  I finally managed to kill the fake scanner&rsquo;s process (defender.exe) from Task Manager with some quick fingers.  It helps to be familiar with keyboard shortcuts.  Once I regained control of the computer, I used <a href="http://free.antivirus.com/hijackthis">HijackThis</a> to remove the infection from the Hosts file, IE and Registry. I manually deleted the executables referenced in the registry.  Then I put the computer through a rigorous scan with <a href="http://www.malwarebytes.org/">MalwareBytes</a>.</p>
+
+<p>To cleanse the USB drive, simply select Tools  > Folder Options > View in Windows Explorer. Select <code>Show hidden files and folders</code> and uncheck <code>Hide extensions for known file types</code>.  This allows you to see the hidden original folders.  You can simply delete the fake files and folders.  To be able to see the files and folders normally,  you&rsquo;ll have to turn off the hidden and system attributes.  You can do so with the command <code>attrib -h -s "file name"</code>.</p>
+
+<p>Now I&rsquo;ll have to go change all of my passwords.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/08/14/installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/">Installing Windows 7 for the ASRock 939Dual-SATA2 Motherboard</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-14T00:00:00-04:00" pubdate data-updated="true">Aug 14<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <a href="http://www.asrock.com/mb/overview.asp?Model=939Dual-SATA2">ASRock 939Dual-SATA2</a> motherboard is a little long in the tooth but still quite capable.  Mine has been running Windows XP Media Center Edition for some time and I decided to upgrade it to Windows 7.  The challenge is that the motherboard&rsquo;s JMicron SATA2 chipset isn&rsquo;t detected automatically at installation.  If you want to install Windows on a SATA hard drive, you will have to load the driver first.  The other problem is that, as of the time of writing, there is no Windows 7 driver for the ULi integrated Ethernet controller due to the age of the hardware.  You would have find another workaround for this issue.</p>
+
+<h1>Installing Windows</h1>
+
+<p>Download the drivers for the JMicron SATA2 controller from the <a href="http://www.ASRock.com/mb/download.asp?Model=939Dual-SATA2&amp;amp;o=XP">ASRock download site</a>.  The drivers are for Windows XP but they will work for Windows 7.  Expand the archive and put them on a USB drive.</p>
+
+<p>Pop in the installation DVD.  When the computer starts up, hit F2 to enter set-up.  Make sure that  SATA2 controller is enabled and running in SATA mode instead of IDE mode.  Verify that the SATA hard drive is detected.  Under the Boot menu, select the DVD drive as the primary boot device.  Alternatively, I could have also used a bootable USB drive or copied the files to the IDE hard drive and run the installation from there.  For me, booting from DVD was just simpler.</p>
+
+<p>When the prompt comes up, hit any key to boot from the DVD.</p>
+
+<p>At the screen where the available hard drives and partitions are listed, you will probably not see your SATA hard drive.  Select Load Driver and browse to the Floppy32 (yes, floppy) folder on the USB drive.  A JMicron SATA2 driver should be listed.  Select it and the installer will load the drivers.  After this step you should see the SATA hard drive listed.  I formatted the drive as well, as in my case installation didn&rsquo;t succeed otherwise.</p>
+
+<p>After a couple of reboots, Windows 7 should be good to go.</p>
+
+<h1>Installing the LAN drivers</h1>
+
+<p>Windows 7 won&rsquo;t be able to find drivers for the ULi integrated Ethernet controller.  If you have a USB Ethernet adapter or a second Ethernet adapter with which you can use to go online, you could simply tell Windows to update the driver for the ULi controller and it would do so successfully.  I didn&rsquo;t have either option so I had to use another machine to transfer the drivers.</p>
+
+<p>As pointed out on <a href="http://social.technet.microsoft.com/Forums/en/w7itproinstall/thread/865bdb49-3b6a-461c-8aa2-166%20586c457c3">this forum thread</a>, you can use the ULi LAN 352 drivers.  These are intended for Windows Vista, but they work fine for Windows 7.  From the other machine, <a href="ftp://download.asrock.com/drivers/ULi/LAN/Lan(352">download</a>.zip) the driver package from the ASRock download site.  The package contains an EXE.  Since you probably won&rsquo;t want to install the drivers on the wrong machine, you can open the EXE file (yes, EXE) with Winrar or another archiver and extract its content to a USB drive.</p>
+
+<p>Back in Windows 7, open the Device Manager and locate the Ethernet device (which shows a yellow exclamation mark).  Select Update Driver, then Browse for Driver.  Browse to the USB drive.  There are 32- and 64-bit flavors of the Vista drivers. Select the appropriate one for your Windows installation.  The device will show up as the ULi M526X Ethernet controller.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/19/drawing-hair/">Drawing Hair With Pencil</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-19T00:00:00-04:00" pubdate data-updated="true">Jul 19<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img title="BlendingStumpsEraser" src="http://www.yentran.org/blog/wp-content/uploads/2011/07/BlendingStumpsEraser-150x150.jpg" /></p>
+
+<p><figcaption>Blending stumps</figcaption></p>
+
+<p>When drawing portrait with a pencil, I find it challenging to get realistic-looking hair.  You may not want to draw individual strands of hair.  If you&rsquo;re not careful, the person may end up looking like Gollum.
+I follow an approach of first putting down a base layer by using a soft pencil to fill out the shape of the hair and blending stumps to create a uniform appearance.  The blending stumps are used to effect a smooth, gradual transition between light and dark which is more realistic.  I&rsquo;d then draw the shadows and shades in the hair and blend some more.  The highlights can be brought out with a kneaded eraser. The process is quite time-consuming, but the results can be more convincing.</p>
+
+<p><img title="JulianneMoore" src="http://www.yentran.org/blog/wp-content/uploads/2011/07/JulianneMoore.jpg" /></p>
+
+<p><figcaption>Pencil portrait of Julianne Moore</figcaption></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/14/the-doors-of-boston/">The Doors of Boston</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-14T00:00:00-04:00" pubdate data-updated="true">Jul 14<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Some time ago I saw a poster of doors.  No, not <a href="http://en.wikipedia.org/wiki/The_Doors">these doors</a>.  I decided that I wanted one for myself. I picked <a href="http://en.wikipedia.org/wiki/Beacon_Hill,_Boston">Beacon Hill</a>, a historic neighborhood known for its elegant houses and stately mansions.  I biked around at dusk purposely so that the lights would be on, stopped frequently and snapped away.  Some people, predictably, were wary of a stranger taking pictures of their homes.  However, once I explained what I was doing, they were quite understanding.  One lady even offered to turn on the porch lights so I could see better.  It took a couple of days to collect enough photos to assemble into a montage.  Here it is.</p>
+
+<p><img title="BeaconHillDoorPoster" src="http://www.yentran.org/blog/wp-content/uploads/2011/07/BeaconHillDoorPoster.jpg" /></p>
+
+<p><figcaption>The doors of Beacon Hill</figcaption></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/10/hub-on-wheels-2010/">Hub on Wheels 2010</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-10T00:00:00-04:00" pubdate data-updated="true">Jul 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Every September since 2005, the city of Boston has held a charity bike ride to benefit of one of its educational programs.  The event is called <a href="http://hubonwheels.kintera.org/faf/home/default.asp?ievent=436653">Hub on Wheels</a>, a clever pun based on Boston&rsquo;s modest nickname for itself, the <a href="http://www.boston.com/travel/boston/boston_nicknames/">Hub of the Universe</a>.  For the majority of riders, it would be the only time of the year that they get an intimate view of some of Boston&rsquo;s lesser-known neighborhoods.  There are 3 available courses, 10-, 30- and 50-mile.  I&rsquo;ve been riding the 50-mile course  since 2008.  In my experience, turnout has varied depending on Boston&rsquo;s notoriously fickle weather, which is even more unpredictable in the fall.  In 2008 the weather was great and the crowds were spectacular.  In 2009 cold, heavy rain poured and it seemed only the hardiest of riders showed up at the starting line by 8h00.</p>
+
+<p>Since 2009, the event also has also included the so-called Mayor&rsquo;s Cup races undertaken by professional riders after the general ride.  The course encircles City Hall on cordoned-off streets.  Tour de France this isn&rsquo;t, more like <a href="http://en.wikipedia.org/wiki/NASCAR">NASCAR</a>.  However, if you&rsquo;ve ever ridden a bike on Boston&rsquo;s bumpy, weather-beaten streets, you&rsquo;d know that this is no mean feat.  There are separate races for men and women, with the men riding at top speed for about 1h30.  Here are some photos from the 2010 men&rsquo;s race.  I had participated in the morning ride, gone home, eaten lunch, successfully fought the urge to take a nap, then returned downtown to catch the second half of the race.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/06/quebec-4-july/">Québec, 4-July</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-06T00:00:00-04:00" pubdate data-updated="true">Jul 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Last morning in Québec. We took a 5-minute walk to check out the cool murals we saw earlier. These are quite amazing. A Gothic church exterior. An ornate stained-glass interior with a mysterious figure hooded in black. A ancient Aztec-meet-Egyptian structure surrounded by jungle. The best one yet was a castle with a red dragon, unfortunately obscured by the scaffolding for the Cirque de Soleil.  I think you&rsquo;d agree that these undoubtedly are the coolest highway underpasses anywhere.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/05/quebec-day-1-friday/">Québec, 1-July</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-05T00:00:00-04:00" pubdate data-updated="true">Jul 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We decided to take off around 16:00 on Friday.  In addition to the rush hour, we anticipated no fewer than 100000 Bostonians to be on the move for the long weekend. So we avoided the main highways altogether.  Our plans worked, and when we re-connected with Interstate-93 North it was in Manchester, NH, some 60 miles away. The drive through the magnificent White Mountains was quite pleasant, as usual. Nevertheless, it was to be a very long drive.  My car&rsquo;s GPS has no coverage for the Québec region, so from about Drummondville onward it was driving the old-fashion way.  We made it to the B&amp;B in the St. Roch district around 23:30, not bad despite my reputation as an alleged slowpoke.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/05/quebec-3-july/">Québec, 3-July</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-05T00:00:00-04:00" pubdate data-updated="true">Jul 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We had our fill of the city yesterday, so it seemed like time to head out to the country. We also learned that William and Kate <a href="http://news.yahoo.com/prince-william-kate-undeterred-quebec-protests-174723189.html">would be in town</a> as part of their Canada tour, an event undoubtedly to be attended by legions of their admirers and non-admirers alike. That cemented the decision for us. First stop is the Montmorency Falls. At 84 meters, it&rsquo;s higher than Niagara Falls.</p>
+
+<p><img title="DSC_2557" src="http://www.yentran.org/blog/wp-content/uploads/2011/07/DSC_2557.jpg" />
+<figcaption>Montmorency Falls</figcaption></p>
+
+<p>Here again was another site related to the <a href="http://en.wikipedia.org/wiki/Battle_of_Quebec_%281759%29">Battle of Québec</a>. General James Wolfe <a href="http://en.wikipedia.org/wiki/Battle_of_Beauport">made his first attack</a> here at Montmorency Falls. However, French forces, having the strategic advantage of height and fortified positions, inflicted disproportionately heavy casualties on the British. Wolfe withdrew to recover, while the French gained confidence and perhaps lowered their guards a bit. Later on Wolfe would alter his approach and was ultimately successful, though he did not live to see the victory.</p>
+
+<p>Montmorency Falls didn&rsquo;t take whole day, so we decided to head to the Île d&#8217;Orléans. Sophie had told us that it was a beautiful area.  We took the short hop over the bridge and took a counter-clockwise loop around the island. There are 6 villages on the island. The landscape is mostly rural with farmlands, orchards and vineyards. And strawberries for sale everywhere. Apparently it was the island&rsquo;s main crop at the moment. We stopped by a farm stand and paid $7CAD for a big basket, probably 5 pounds or so. By the time we left the island, it was almost gone.</p>
+
+<p><img title="DSC_2603" src="http://www.yentran.org/blog/wp-content/uploads/2011/07/DSC_2603-300x199.jpg" width="300" height="199" />
+<figcaption>Vignoble Ste-Pétronille</figcaption></p>
+
+<p>We stopped by Café Resto in Ste-Pétronille for some pricey prepared lunch. Next door is a famous chocolaterie, though in an oversight we neglected to try it. In our defense, strawberries > chocolate. I was thoroughly beat after the day&rsquo;s activities. We stopped at small park in St-François at the tip of the island. The observation tower was roped off, but the gentle breeze was what we were after. It was the most satisfying nap yet.</p>
+
+<p>Having completely circled the island, we overlapped our own tracks to get back to a vineyard, Vignoble Ste-Pétronille, which was recommended by the guidebook. Their dessert wine was purported to be excellent.</p>
+
+<p><img title="DSC_2640b" src="http://www.yentran.org/blog/wp-content/uploads/2011/07/DSC_2640b-210x300.jpg" width="210" height="300" />
+<figcaption>Basilique Ste-Anne de Beaupré</figcaption></p>
+
+<p>Not wanting to go home yet, we stopped by the famous basilica of Ste-Anne de Beaupré. It&rsquo;s big and ornate. Also intriguing was the somewhat tacky-sounding Cyclorama de Jerusalem next door. I think I&rsquo;d rather visit the real Jerusalem, however.</p>
+
+<p>For dinner we stopped at Restaurant Thang Long. We knew that this place was BYOW. However, everybody took this seriously and every table was supplied with a bottle of wine, and every guest that arrived had one under their arms. We sat down but felt pretty left out. So we asked the waitress for the location of the nearest establishment. Conveniently it was about 50m away. This place is Vietnamese in name, though I didn&rsquo;t recognize very many dishes. The food was good, partly because we were quite hungry. I could have sworn I used to make #2 back in graduate school, albeit with lesser ingredients.</p>
+
+<p>Back in St-Roch we found a big crowd in front of the church. Turned out there was an out-door concert given by the Québec symphony orchestra and featuring some well-known (but not to us) crooners. For a small city, Québec certainly has a lot of things going for it. Unfortunately it also started raining, and we decided to come back to chill inside. Through the open window I could hear a loud cheer from the crowds. Dancing Queen was coming on&hellip;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/10/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/8/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/11/02/fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/">Fixing Windows Media Center No Tuner Available Error With HDHomeRun Prime</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/31/helper-method-generate-nested-tags-from-block/">Helper Method to Generate Nested Tags From Block</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/23/bruins-took-down-sabres-in-costly-victory/">Bruins Took Down Sabres in Costly Victory</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/28/simple-table-sorting-with-angular/">Simple Table Sorting With Angular</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/27/wix-executing-custom-action-before-starting-windows-service/">Wix: Executing Custom Action Before Starting Windows Service</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Yen Tran -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

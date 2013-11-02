@@ -1,0 +1,749 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Yen's Blog</title>
+  <meta name="author" content="Yen Tran">
+
+  
+  <meta name="description" content="I have an HTC Aria which runs now-ancient Android 2.1. This phone is far from being the latest and greatest, to put it mildly, but I like its small &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dinhyen.github.io/blog/page/6">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Yen's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Yen's Blog</a></h1>
+  
+    <h2>Lens, Wheels, Skates, Keyboard</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dinhyen.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/travel">Travel</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/12/31/installing-cyanogenmod-on-the-htc-aria/">Upgrading the HTC Aria With Android Gingerbread and CyanogenMod</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-31T00:00:00-05:00" pubdate data-updated="true">Dec 31<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have an HTC Aria which runs now-ancient Android 2.1. This phone is far from being the latest and greatest, to put it mildly, but I like its small form factor. After putting up with it for a year, I have had enough and decided to upgrade it to Gingerbread.  This is how I did it. As this is my first attempt, no doubt there are different and better ways to do things. Kudos should go to the developer and enthusiast community for making all of this possible.</p>
+
+<h3>Root the phone</h3>
+
+<p>Avoid the hassle of dealing with Windows USB drivers. Download and run the custom Linux image with pre-configured utilities as described in <a href="http://forum.xda-developers.com/showpost.php?p=7449486&amp;amp;postcount=1">this post</a>.  Follow the instructions in the post to root the phone and install the ClockworkMod recovery image.</p>
+
+<h3>Backup application data</h3>
+
+<p>Backup is always a good idea, especially before making such a radical change to the phone.  Now that I have root access, there are a few options. The Mybackup Root app from the Android Market lets you backup data including contacts, SMS, call log, calendar, dictionary, music playlists, etc.  You can also use it to backup applications (APKs) and application data. The backups are saved to the phone&rsquo;s SD card.  In my case, I mount the phone as USB storage and copy the backup to a computer just to be on the safe side. The backups are found on the SD card under /rerware.</p>
+
+<h3>Download CyanogenMod</h3>
+
+<p>I decide to go with CyanogenMod, a very popular mod with support for a wide range of Android devices, including the Aria.  The current version of CyanogenMod as of this writing, version 7, is based on Android Gingerbread.</p>
+
+<p><a href="http://download.CyanogenMod.com">Download</a> CyanogenMod. Select the latest stable build or, if you&rsquo;re feeling adventurous, a nightly build. For the Aria, select the Liberty on the device list. Copy the CyanogenMod zip file to the phone&rsquo;s root directory.</p>
+
+<h3>Reboot into recovery mode</h3>
+
+<p>First turn off phone (taking out the battery is the quickest way). Boot into recovery mode by holding down Volume Down and Power buttons.  Once phone boots, the screen should show HBOOT. Use the Volume buttons to scroll and the Power button to select &ldquo;recovery&rdquo; to put the phone in recovery mode.</p>
+
+<h3>Backup (again)</h3>
+
+<p>In case some thing goes wrong, I&rsquo;d like to be able to go back to the way things were.  ClockworkMod recovery provides a powerful backup utility called nandroid, which lets you backup the entire content of the phone&rsquo;s SD card (NAND flash &mdash; NANDroid, get it? :&ndash;))  To use nandroid, select &ldquo;nandroid&rdquo; in recovery mode and follow the on-screen instructions. I also copy the backups from the SD card to a computer for good measure (after rebooting and mounting the phone as USB mass storage).</p>
+
+<h3>Install CyanogenMod</h3>
+
+<p>This step is based on instructions provided in <a href="http://forum.xda-developers.com/showthread.php?t=956223">this post</a>.  In recovery mode, wipe the phone in preparation for the new OS by selecting the following:</p>
+
+<ul>
+<li>Wipe cache partition</li>
+<li>Wipe data/factory reset</li>
+<li>Clear Dalvik cache (under Advanced)</li>
+</ul>
+
+
+<p>To install the mod, again in recovery mode:</p>
+
+<ul>
+<li>Select &ldquo;install zip from SD card&rdquo;</li>
+<li>Select &ldquo;choose zip from SD card&rdquo; and locate the zip file you copied earlier on the SD card</li>
+<li>Wait for the install to complete</li>
+<li>Go back a couple of levels and select &ldquo;reboot system now&rdquo;</li>
+</ul>
+
+
+<p>You should see the CyanogenMod skateboarding Android logo while the phone reboots. Once your phone comes up, it will be sporting the sleek interface of Android Gingerbread! Here&rsquo;s a screenshot as proof:
+<img title="htc-aria-after" src="http://www.yentran.org/blog/wp-content/uploads/2011/12/htc-aria-after.png" width="320" height="480" /></p>
+
+<h3>Install the Google Apps package</h3>
+
+<p>It&rsquo;s highly recommended that you also install the <a href="http://goo-inside.me/gapps">Google Apps package</a> . This package contains useful apps which for certain reasons the CyanogenMod team is not able to bundle with the mod. These include the Android Market, Gmail, Facebook, Google Maps, YouTube, etc.</p>
+
+<p>There are a few ways to install the package, the simplest of which is to follow the same steps to install CyanogenMod using ClockworkMod recovery. In my case, I was only able to successfully install the latest app package; the older packages just did not work.</p>
+
+<p>The installation actually takes place once the phone is rebooted. Android Market is automatically installed first, then it&rsquo;s used to install the other apps. <a href="http://www.youtube.com/watch?v=DHgZNnHdrSA">This video</a> shows the process step by step. In my case, I have to install just the Android Market, then install other apps from there; otherwise the apps would crash when launched.</p>
+
+<h3>Restore backups</h3>
+
+<p>If you&rsquo;ve made backups using Mybackup Root, you can reinstall the app then use it to restore your data.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/12/21/visual-studio-line-number-macros/">Visual Studio Line Number Macros</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-21T00:00:00-05:00" pubdate data-updated="true">Dec 21<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In Visual Studio, it&rsquo;s easy enough to turn on and off line numbers.  You&rsquo;ll have to select Tools > Options > Text Editor, expand the language of choice, select General, then toggle Line numbers under the Display section.  This can get tedious if you want to be able to show and hide line numbers at will.  To turn this process into a single click, you can record custom macros to show and hide line numbers.  However, you may not realize that the macros to do just that are already included with Visual Studio. Further, these macros will turn on and off line numbers for a number of editor types, including C#, VB, HTML and plain text.</p>
+
+<p>For easy access, you can put frequently used macros into a custom toolbar. This can be done as follows:</p>
+
+<ul>
+<li>Create a new toolbar by right-clicking on menu bar and selecting Customize</li>
+</ul>
+
+
+<p><img title="macro-4" src="http://www.yentran.org/blog/wp-content/uploads/2011/12/macro-41.png" width="535" height="490" /></p>
+
+<ul>
+<li>Select New and enter a name</li>
+</ul>
+
+
+<p><img title="macro-2" src="http://www.yentran.org/blog/wp-content/uploads/2011/12/macro-2.png" width="326" height="133" /></p>
+
+<ul>
+<li>On the newly created toolbar, which is empty at the moment, open the drop-down menu and select Add or Remove Buttons > Customize</li>
+<li>On the Customize dialog, select Add Command</li>
+<li>On the Add Command dialog, select Macros in the Categories pane.  In the Commands pane, select Macros.Samples.Utilities.TurnOnLineNumbers</li>
+</ul>
+
+
+<p><img title="macro-3" src="http://www.yentran.org/blog/wp-content/uploads/2011/12/macro-3.png" width="585" height="370" /></p>
+
+<ul>
+<li>Do the same to add the TurnOffLineNumbers macro, or any other useful macro</li>
+<li>Back on the Add Command dialog, select Modify Selection to change the macro&rsquo;s display name to something more readable</li>
+</ul>
+
+
+<p><img title="macro-4" src="http://www.yentran.org/blog/wp-content/uploads/2011/12/macro-41.png" width="535" height="490" /></p>
+
+<ul>
+<li>The macros are now added to the new toolbar</li>
+</ul>
+
+
+<p><img title="macro-5" src="http://www.yentran.org/blog/wp-content/uploads/2011/12/macro-5.png" width="572" height="67" /></p>
+
+<p>If you&rsquo;re interested in viewing or modifying the sample macros that come with Visual Studio, open the Macros editor by selecting Tools > Macros > Macros IDE.  If you&rsquo;ve written VBA macros for Excel or Word, this should look familiar. The Samples project contains modules for a number of useful macros.  The line number macros above are defined in the Utilities module.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/12/13/msbuild-project-directory/">MSBuild Project Directory</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-13T00:00:00-05:00" pubdate data-updated="true">Dec 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We&rsquo;re using MSBuild in <a href="http://hudson-ci.org/">Hudson</a> as part of our continuous integration process.  We put the MSBuild scripts in the same directory as the Visual Studio solution file. Everything has been working well until until we decided, as an experiment, to put the MSBuild scripts in a separate directory from the solution.  Then the build process started to fail with error MSB3202, &ldquo;the project file was not found&rdquo;.</p>
+
+<p>By using MSBuild&rsquo;s  &#8221;/verbosity:diagnostic&#8221; flag, we were able to look at the list of properties that MSBuild was using.  In particular, there was a property named MSBuildProjectDirectory which was set to the same directory as the scripts.  Our scripts use relative path to locate the projects; i.e.,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;ItemGroup&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;Projects</span> <span class="na">Include=</span><span class="s">&quot;**\*.csproj&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ItemGroup&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It&rsquo;s no surprise then that because the MSBuildProjectDirectory was now pointing to the wrong directory, the projects could not be found.</p>
+
+<p>Because MSBuildProjectDirectory is a reserved property, it can&rsquo;t be modified. We need another way to locate the projects by explicitly specifying the project directories.  Hudson provides a few options for retrieving the project directory.  For example, we can use the work space environment variable:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;ItemGroup&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;Projects</span> <span class="na">Include=</span><span class="s">&quot;$(WORKSPACE)\**\*.csproj&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ItemGroup&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/12/08/autumn-2009/">Autumn 2009</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-08T00:00:00-05:00" pubdate data-updated="true">Dec 8<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://maps.google.com/maps?q=42.371988364694396,-71.14621639251709">View location in Google Maps</a></p>
+
+<p>Few places in Boston are as beautiful as <a href="http://en.wikipedia.org/wiki/Mount_Auburn_Cemetery">Mount Auburn Cemetery</a>. While it is famous as the final resting place of many luminaries with connection to New England, its more enduring legacy is as a green urban jewel.  It would not be a stretch to invite comparison to Central Park.  While not as popular, Mount Auburn is certainly more than an equal in aesthetic appeal.</p>
+
+<p>With its winding trails, rolling hills, hidden glades, spectacular overlooks, stunning sculptures, and brilliantly designed landscape, Mount Auburn is a worthwhile destination at any time of year.  It is most attractive in the autumn, during which it is my favorite destination to view the foliage in Boston.  I usually  make several pilgrimages here every year from around mid-October to early November. These are some photos taken in 2009 at Mount Auburn and nearby Arlington.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/12/08/automapper-mismatched-types/">AutoMapper Doesn&#8217;t Work for Mismatched Types</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-08T00:00:00-05:00" pubdate data-updated="true">Dec 8<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We&rsquo;re using <a href="http://automapper.codeplex.com/">AutoMapper</a> in ASP.NET MVC automate the mapping of properties between entity and view model objects.  This is a highly useful tool which helps us avoid the tedium of having to assigning properties manually.  Here&rsquo;s a good <a href="http://lostechies.com/jimmybogard/2009/01/23/automapper-the-object-object-mapper/">introduction</a> to using AutoMapper.</p>
+
+<p>In one case, I find that the AutoMapper doesn&rsquo;t work for all properties.  One property in particular doesn&rsquo;t get mapped.  If I manually assign a value to it as a test, I would get a ForeignKeyReferenceAlreadyHasValueException.</p>
+
+<p>The entity looks something like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="k">class</span> <span class="nc">Order</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">public</span> <span class="kt">int</span> <span class="n">CustomerId</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">public</span> <span class="n">Person</span> <span class="n">Customer</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The view model is similar, but I pull out just the customer&rsquo;s name into a string since it is all I need. For simplicity I decide to re-use the property name. This seems intuitive and is a common practice for us before we started using the AutoMapper.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="k">class</span> <span class="nc">OrderViewModel</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">public</span> <span class="kt">int</span> <span class="n">CustomerId</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">public</span> <span class="kt">string</span> <span class="n">Customer</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mapping the view model to the entity is accomplished with a simple statement:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="n">AutoMapper</span><span class="p">.</span><span class="n">Mapper</span><span class="p">.</span><span class="n">Map</span><span class="p">&lt;</span><span class="n">OrderViewModel</span><span class="p">,</span> <span class="n">Order</span><span class="p">&gt;(</span><span class="n">orderViewModel</span><span class="p">,</span> <span class="n">order</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To map things the other way requires a similar statement:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="n">AutoMapper</span><span class="p">.</span><span class="n">Mapper</span><span class="p">.</span><span class="n">Map</span><span class="p">&lt;</span><span class="n">Order</span><span class="p">,</span> <span class="n">OrderViewModel</span><span class="p">&gt;(</span><span class="n">order</span><span class="p">,</span> <span class="n">orderViewModel</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I find that the CustomerId property would not get mapped in either scenario.</p>
+
+<p>It turns out that the problem is caused by using a &ldquo;recycled&rdquo; property name. In the entity, Customer is a Person object which is created from the foreign key CustomerId via LINQ to SQL, so Customer and CustomerId are intimately connected. In the view model, CustomerId matches that in the entity, but Customer is of a different type. The conflict causes the AutoMapper to abort mapping either of these properties.</p>
+
+<p>There are a couple of workarounds.  The simplest solution is to rename the Customer property in the view model to something else which doesn&rsquo;t clash, such as CustomerName.  The nice thing about AutoMapper is that by convention you can map properties of an object simply by appending it to the object&rsquo;s property name. So the Person.Name property would get mapped to CustomerName, Person.Phone would get mapped to CustomerPhone and so on.</p>
+
+<p>Alternatively, since I only care about CustomerId, I can simply tell AutoMapper to ignore the Customer property altogether:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="c1">// From view model to entity</span>
+</span><span class='line'><span class="n">AutoMapper</span><span class="p">.</span><span class="n">Mapper</span><span class="p">.</span><span class="n">CreateMap</span><span class="p">&lt;</span><span class="n">OrderViewModel</span><span class="p">,</span> <span class="n">Order</span><span class="p">&gt;()</span>
+</span><span class='line'>                <span class="p">.</span><span class="n">ForMember</span><span class="p">(</span><span class="n">ovm</span> <span class="p">=&gt;</span> <span class="n">ovm</span><span class="p">.</span><span class="n">Customer</span><span class="p">,</span> <span class="n">opt</span> <span class="p">=&gt;</span> <span class="n">opt</span><span class="p">.</span><span class="n">Ignore</span><span class="p">());</span>
+</span><span class='line'><span class="c1">// From entity to view model</span>
+</span><span class='line'><span class="n">AutoMapper</span><span class="p">.</span><span class="n">Mapper</span><span class="p">.</span><span class="n">CreateMap</span><span class="p">&lt;</span><span class="n">Order</span><span class="p">,</span> <span class="n">OrderViewModel</span><span class="p">&gt;()</span>
+</span><span class='line'>                <span class="p">.</span><span class="n">ForMember</span><span class="p">(</span><span class="n">o</span> <span class="p">=&gt;</span> <span class="n">o</span><span class="p">.</span><span class="n">Customer</span><span class="p">,</span> <span class="n">opt</span> <span class="p">=&gt;</span> <span class="n">opt</span><span class="p">.</span><span class="n">Ignore</span><span class="p">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>These mapping conventions should be declared once, before the mapping operation is performed.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/11/hiking-mount-monadnock/">Hiking Mount Monadnock</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-11T00:00:00-04:00" pubdate data-updated="true">Sep 11<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As far as big mountain goes,<a href="http://en.wikipedia.org/wiki/Mount_Monadnock%22%20targtet=%22_blank"> Mount Monadnock</a> in the southwestern corner of New Hampshire is relatively close to Boston.  Despite its proximity, we&rsquo;ve never set foot on it. So we set out on a beautiful Saturday morning to redress this omission.</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3497.jpg" alt="Mount Monadnock" /></p>
+
+<p>Monadnock&rsquo;s claim to fame is its status as most hiked mountain in the US.  Not so surprisingly, as soon as we arrived, the park ranger informed us that the parking lot was filled so that we&rsquo;d have to park in the camping area.  Later on, we&rsquo;d encounter people of all ages, shapes and sizes on the trail.</p>
+
+<p>One of Kate&rsquo;s friend, who had hiked here before, wryly observed that the people who designed this trail had no idea what a switchback was.  True enough, the White Dot trail which begins at the nearby Visitor&rsquo;s Center is a straight shot to the summit. But luckily there are also other trails which offer more gradual albeit circuitous ascent.</p>
+
+<p>The plan was to take the White Dot trail up and White Cross trail down.  Ascending involves clambering on all fours several times.  Near the start of the trail, a guy passed us going up, walking at an extremely fast pace.  About half-way up, he passed us on the way <em>down</em>.  Granted, we did stop frequently to enjoy the scenery, but we were no newbie hikers either.  Two-thirds of the way up, he passed us again going up, albeit more slowly this time.  I chatted briefly with him.  Turns out he routinely climbs this &ldquo;short&rdquo; mountain twice per visit, having practiced enough that it takes only 30 minutes per leg.  But even more impressive is his friend, who can do the same thing at the age of 54 and who has a resting heart rate of something like 40.  Anything lower than that and one wouldn&rsquo;t be breathing.  Needless to say, having heard all this, we re-doubled our efforts!  As we neared the peak, as expected we ran into our friend again practically running downhill.</p>
+
+<iframe src="http://maps.google.com/maps/ms?msa=0&amp;msid=214490968088440958659.0004acb6af81f69e7ec25&amp;ie=UTF8&amp;ll=42.853178,-72.098114&amp;spn=0.016689,0.020165&amp;t=m&amp;vpsrc=6&amp;output=embed" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="600" height="450"></iframe>
+
+
+<p>The view at the top was spectacular.  We were lucky to get a beautiful and relatively clear day.  We could see the majestic ridges of the White Mountains to the north and the very faint, barely perceptible in the haze, outline of the twin towers of the Boston skyline in the southeast horizon.</p>
+
+<p>The trail systems here were partly created by the <a href="http://en.wikipedia.org/wiki/Civilian_Conservation_Corps">Civilian Conservation Corps</a> in 1931-1933 during the Great Depression.  We&rsquo;ve seen their work in many of the places we&rsquo;ve visited.  One can only hope that after this Great Recession we&rsquo;ll have left something as worthwhile to posterity.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/11/broadmoor-wildlife-sanctuary/">Broadmoor Wildlife Sanctuary</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-11T00:00:00-04:00" pubdate data-updated="true">Sep 11<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.massaudubon.org/Nature_Connection/Sanctuaries/Broadmoor/index.php">Broadmoor</a> is another outstanding Audubon sanctuary.  Though to be fair, none of the Audubon properties we&rsquo;ve visited in Massachusetts has disappointed us yet.  Despite sounding like something out of <a href="http://en.wikipedia.org/wiki/The_Hound_of_the_Baskervilles">The Hounds of the Baskervilles</a>, Broadmoor is situated in a tranquil setting along the bank of the Indian Brook,which flows into the meandering Charles River.  In fact, part of the sanctuary borders the Charles.</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/52804626/broadmoor/thumbs/thumbs_dsc_3665.jpg" alt="Broadmoor" width="100" height="75" /></p>
+
+<p>Broadmoor comprises of ponds, vernal pools, meadows, tall forests, hillocks, stone bridges, small cascades, and lots of boardwalks.  If you like boardwalks&mdash;who doesn&rsquo;t&mdash;this is for you.  While <a href="http://www.massaudubon.org/Nature_Connection/Sanctuaries/Moose_Hill/index.php">Moose Hill</a> has picturesque boardwalks and <a href="http://www.massaudubon.org/Nature_Connection/Sanctuaries/Ipswich_River/index.php">Ipswich</a> has fun boardwalks (including some boardwalk/bridge combo which we&rsquo;d propose be christened &ldquo;boardbridge&rdquo;), Broadmoor&rsquo;s boardwalks expand into wide platforms which give you more room to lounge on while enjoying the spectacular views.</p>
+
+<p>Unfortunately we didn&rsquo;t see many of our avian friends the last time we were there.  But I had a bit of fun with the miniature waterfalls at Mill Pond. The rust-colored water laced with reflections of the blue sky gives it an interesting variegated appearance.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/07/the-redemption-of-althalus-by-david-leigh-eddings/">The Redemption of Althalus by David & Leigh Eddings</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-07T00:00:00-04:00" pubdate data-updated="true">Sep 7<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img title="althalus" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/althalus.jpg" width="186" height="272" />Having plowed through three multi-volume fantasy series in a row, I thought this single-volume tome, the first standalone fantasy adventure by the husband-and-wife team, might be a welcome respite. I haven&rsquo;t read any book by the Eddingses, but their reputation as prolific and popular authors is well-known. I was further intrigued by the &ldquo;#1 international bestseller&rdquo; plug emblazoned on the hardcover.</p>
+
+<p>The title character is a thief and occasional highwayman and murderer whose skills are legendary. He&rsquo;s also a braggart and a liar of epic proportions. Plagued by a streak of uncharacteristic bad luck, he accepts a job from a shady character to steal a Book in the House at the End of the World. He finds the Book but is detained by a talking cat, who is in reality the goddess Dweia in disguise. Dweia persuades him to be her agent, and they recruit others to join their team, including a warrior, a priest, a queen, a mind-reader, and a young thief. Together they engage in epic struggles with agents of the Evil God, who seeks to undo all creation and return the universe to nothingness.</p>
+
+<p>That the names of the authors are in larger fonts than the title of the book should have been a warning bell, I suppose. To be fair, the story is somewhat interesting. The concept of a House that compresses space and time, and that allows one to travel vast distances or time by simply going down the hallway, is a novel idea. Throw in a few modern concepts, such as the time-space duality and even the procedure for rudimentary brain surgery, and the story has a distinct sci-fi feel. Nevertheless, the plot is more or less predictable, straightforward action-adventure with a smattering of romance: Althalus and friends recruit an army, goes here, repel an invasion, fall in love, goes there, fight another war, go some place else, defeat the bad guys, etc. The pace is, for lack of a better word, unchanged. It&rsquo;s the same whether the characters are cuddling or fighting for their lives. The authors seem to be on cruise control throughout; they seem to be recounting a story fact by fact, instead of portraying it, making it come alive. The feeling is comparable to watching a documentary film versus an action movie or drama. The cookie-cutter characters are rather flat and two-dimensional. So they are all different in their attributes and abilities, but nothing else distinguishes one from the other. They all make the same cliche wisecracks, punts, or sarcastic remarks. Some merit a chuckle or two, but after a while one is left to wonder whether or not there is anything else to them. In fact, I can&rsquo;t even envision what each character looks like; I&rsquo;d like to see more than just tall/short, big/tiny, dark-haired/blond, beautiful/ugly, etc. Contrast this with the works of some other authors, such as George Martin, who lavishes attention on the description of the wardrobe alone. Of course, characterization goes beyond superficial appearance. There are other means, such as describing how events unfold from the character&rsquo;s point of view, that can bring the point across. Unfortunately such richness and attention to details are absent here. Similarly, the writing is competent, but lacks a certain sophistication and seriousness demonstrated by some other authors. The book is entertaining if you&rsquo;re in the mood for casual reading, and I feel that it would be most appropriate for a younger audience rather than a serious fantasy fan.</p>
+
+<p><em>Originally posted January 5, 2003 on Amazon.com</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/07/the-halflings-gem-forgotten-realms-the-icewind-dale-trilogy-book-3-by-r-a-salvatore/">The Halfling&#8217;s Gem (Forgotten Realms: The Icewind Dale Trilogy, Book 3) by R. a. Salvatore</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-07T00:00:00-04:00" pubdate data-updated="true">Sep 7<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img title="the_halflings_gem" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/the_halflings_gem-178x300.jpg" width="178" height="300" />The end of the second volume leads right into the third. As the companions escaped from Mithral Hall, Regis fell into the clutches of Artemis Entreri, the deadly assassin hired by the leader of the thieves&#8217; guild in Calimport of whom Regis had run afoul. Furthermore, Entreri gained possession of the statuette that conjures the black panther Guenhwyvar, Drizzt&rsquo;s faithful extra-planar companion. Saddened by the loss of Bruenor and now Regis, Drizzt and Wulfgar resolve to track down the assassin to his lair and rescue their friend, while Catti-Brie is grimly determined to finish Bruenor&rsquo;s quest and retake Mithral Hall from the duergars.</p>
+
+<p>After the excitement of volume two, there is a bit of a let-down. After all, the action doesn&rsquo;t really pick up until Drizzt and Wulfgar near the end of their destination. After that, all hell breaks loose, literally. What follows is non-stop action. The party must survive an ambush in the city sewers, find an exit through the trap-filled thieves&#8217; guild, and escape from an an astral plane filled with bloodthirsty demons. All the while, Drizzt is drawn inexorably toward a confrontation with Entreri, who&rsquo;s his equal in every physical aspect and martial skill, yet is his polar opposite in spirit and morality. As expected, Drizzt&rsquo;s duel with Entreri is the highlight of the story, though unfortunately it ends without a resolution. Drizzt&rsquo;s emotional saga continues, as he struggles to be comfortable with his physical appearance, and succeeds in gaining a small measure of acceptance by the nobility of his actions. Yes, the dour ranger may be capable of even love, as the little confession from Catti-Brie seems to indicate. Die-hard Drizzt fans may not want to miss the moment he plants a wet kiss on Catti-Brie&rsquo;s lips, though whether she is aware of it is unclear.</p>
+
+<p>As serious as the story seems, RA Salvatore&rsquo;s naming scheme may need a little more work. Many of the names are original, but some, like Wulfgar, Alustriel, Morkai, etc. come off as a little generic. Drizzt&rsquo;s name for his scimitar, &ldquo;Twinkle&rdquo;, hardly befits a deadly weapon. I hope his nickname for Guenhwyvar isn&rsquo;t &ldquo;Pussycat&rdquo;. My last complaint has to do with the &ldquo;battle&rdquo; for Mithral Hall. That&rsquo;s just it, there is no battle. I had looked forward to seeing the combined forces of barbarians, dwarves, and wizards rout the despised duergars. Instead, the author seems to have run out of his page quota and only devotes a few brief passages to the party&rsquo;s triumphant return to Mithral Hall. Somewhat disappointing, but I suppose by this time the book will already have fulfilled its purpose.</p>
+
+<p>While this book doesn&rsquo;t quite measure up to Streams of Silver, congratulations for putting this series under your belt. Now you can join Drizzt Do&#8217;Urden in his next exciting adventure, be it in Menzoberranzan or Faerun. If you don&rsquo;t feel intrigued with Drizzt after having read this series, I&rsquo;m a bearded gnome.</p>
+
+<p><em>Originally posted March 13, 2003 on Amazon.com</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/07/the-crystal-shard-forgotten-realms-the-icewind-dale-trilogy-book-1-by-r-a-salvatore/">The Crystal Shard (Forgotten Realms: The Icewind Dale Trilogy, Book 1) by R. a. Salvatore</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-07T00:00:00-04:00" pubdate data-updated="true">Sep 7<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img title="The Crystal Shard" src="http://www.yentran.org/blog/wp-content/uploads/2011/09/The-Crystal-Shard-181x300.jpg" width="181" height="300" />The main problem with works that are inspired by or that borrow from RPG is predictability. After all, what adventure would be complete without a warrior, a rogue, and a sorcerer. Not to mention the party must include a gruff dwarf and a light-hearted, pleasure-loving halfling. The Crystal Shard has got all that and more, but it also brings to life an original in the form of Drizzt Do&#8217;Urden, who&rsquo;s undoubtedly one of the most well-known and beloved characters in fantasy. That may be the most enduring legacy of this fun if otherwise unremarkable series.</p>
+
+<p>The story is set in the Icewind Dale, a barren, wind-swept region nestled in the armpit of the Spine of the World. Thanks to its remote location, Icewind Dale is largely ignored, until our present story that is, in the lores of the Forgotten Realms, that fabled realm of the vast Dungeons &amp; Dragons universe. Icewind Dale is home to Bruenor, a old, curmudgeonly dwarf (who&rsquo;s ever heard of a happy go lucky dwarf?), who fled here after the destruction of his ancestral home, and the halfing Regis, an epicurean who&rsquo;s on the run from some trouble in the south. Befriended to both is Drizzt, a drow-elf ranger on an self-imposed exile from the underground realms of his people. Highly principled and strongly disturbed by the evil and self-serving ways of the drow, he willingly makes his home on the surface world despite the fear and revulsion of almost everyone he comes across. Drizzt&rsquo;s background and emotional complexity makes him a deeper characters than one would expect from a series like this. Rounding out the group are Catti-Brie, a human girl adopted by Bruenor, and Wulfgar, a fierce barbarian warrior taken under Bruenor&rsquo;s tutelage. Trouble brews when Akar Kessell, a bumbling wizard&rsquo;s apprentice, stumbled into possession of Crenshinibon, an almost sentient crystal imbued with vast powers. Aided by the crystal, Kessell assembles a vast army of goblins, orcs and giants to invade Ten Towns and establish himself as the tyrant of Icewind Dale. Drizzt and company must rally the squabbling inhabitants of Ten Towns and gain the help of the hitherto hostile barbarian tribes if everyone is to have a chance.</p>
+
+<p>As transparent as the plot may seem, there are memorable moments such as Drizzt&rsquo;s confrontation with the demon Erttu and Wulfgar&rsquo;s journey to the lair of the ice dragon. This was RA Salvatore&rsquo;s first major work and there are some rough edges here and there. The battle of Bryn Shander somehow lacks the fury and scale of a climactic clash (face it, few are going to be able to outdo the battles of Helm&rsquo;s Deep and the Pelennor Fields). Nevertheless, the author does an excellent job to bring excitement to one-on-one swashbuckling; one can almost envision the blur of Drizzt&rsquo;s dual scimitars or Wulfgar hammering everything into smithereens with mighty Aegis-Fang.</p>
+
+<p>The Crystal Shard has something about each character. While I would have wished for less stereotypical portrayals and a little more depth, it&rsquo;s a satisfactory introduction and launches us immediately into the companions&#8217; even more exciting second adventure.</p>
+
+<p><em>Originally posted March 14, 2003 on Amazon.com</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/7/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/5/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/11/02/fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/">Fixing Windows Media Center No Tuner Available Error With HDHomeRun Prime</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/31/helper-method-generate-nested-tags-from-block/">Helper Method to Generate Nested Tags From Block</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/23/bruins-took-down-sabres-in-costly-victory/">Bruins Took Down Sabres in Costly Victory</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/28/simple-table-sorting-with-angular/">Simple Table Sorting With Angular</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/27/wix-executing-custom-action-before-starting-windows-service/">Wix: Executing Custom Action Before Starting Windows Service</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Yen Tran -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

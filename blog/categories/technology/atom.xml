@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: technology | Yen's Blog]]></title>
+  <link href="http://dinhyen.github.io/blog/categories/technology/atom.xml" rel="self"/>
+  <link href="http://dinhyen.github.io/"/>
+  <updated>2013-11-02T11:48:57-04:00</updated>
+  <id>http://dinhyen.github.io/</id>
+  <author>
+    <name><![CDATA[Yen Tran]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Helper method to generate nested tags from block]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/10/31/helper-method-generate-nested-tags-from-block/"/>
+    <updated>2013-10-31T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/10/31/helper-method-generate-nested-tags-from-block</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m still pretty new to Ruby. Hopefully one day I&rsquo;ll know enough to be able to look back and slap myself on the forehead for struggling with these issues.</p>
+
+<p>Right now our views generate a menu from a simple set of links:
+<code>erb
+&lt;%= link_to "foo", "#" %&gt;
+&lt;%= link_to "bar", "#" %&gt;
+</code></p>
+
+<p>I&rsquo;d like to convert them to a drop-down menu that looks like this:
+``` erb</p>
+
+<div class="dropdown">
+    <a class="dropdown-toggle" href="#"><i class="caret"></i></a>
+    <ul class="dropdown-menu">
+    <li><%= link_to "foo", "#" %></li> 
+    <li><%= link_to "bar", "#" %></li>
+  </ul>
+</div>
+
+
+<p>```</p>
+
+<p>I&rsquo;d like to minimize the changes to the markup as much as possible.  Initially I tried using a partial:
+``` erb</p>
+
+<!-- /shared/_dropdown.html.erb -->
+
+
+<div class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="caret"></i></a>
+  <ul class="dropdown-menu">
+    <li>
+      <%= yield %>
+    </li>
+  </ul>
+</div>
+
+
+<p>```</p>
+
+<p>The view would then include the partial:
+<code>erb
+&lt;%= render :layout =&gt; "shared/dropdown" do %&gt;
+  &lt;%= link_to "foo", "#" %&gt;
+  &lt;%= link_to "bar, "#" %&gt;
+&lt;% end %&gt;
+</code></p>
+
+<p>However, this put both links inside a single <code>&lt;li&gt;</code> tag.  It looked fine with some CSS styles, but not generating the proper markup bothered me a bit.  So I tried using a helper method which should offer some more flexibility.  The helper method would be taking a block, decompose it into individual anchor tags and and wrap them in the proper markup.</p>
+
+<p>I started off with:
+<code>ruby
+def dropdown(&amp;block)
+  content = capture(&amp;block)
+end
+</code></p>
+
+<p>The <code>capture</code> helper method captures the block and stores it in a variable that I can process. More importantly, it also works for strings within the block.  This is an important distinction between <code>capture</code> and a similar helper method, <code>with_output_buffer</code> (<a href="http://blog.agile-pandas.com/2011/01/13/rails-capture-vs-with-output-buffer">source</a>).</p>
+
+<p>If the block is empty, there is nothing to do. Otherwise, I&rsquo;d turn them into links.</p>
+
+<p><code>ruby
+(content = capture(&amp;block)) &amp;&amp; anchors = content.split(/\n/).reject { |a| a.empty? }
+if anchors.present?
+  ...
+end
+</code></p>
+
+<p>To generate the top-level div is pretty straight-forward:
+<code>ruby
+content_tag(:div, :class =&gt; 'dropdown') do
+end
+</code></p>
+
+<p>In the view, I could just merrily include other content_tags in the block argument.  However, in a helper mehod, the content is stored inside an output buffer.  I would have to use <code>concat</code> to add it to the output buffer.
+<code>ruby
+content_tag(:div, :class =&gt; "dropdown") do
+  concat link_to(content_tag(:i, "", :class =&gt; "caret"), "#", :class =&gt; "dropdown-toggle", :data =&gt; { :toggle =&gt; "dropdown" })
+end
+</code></p>
+
+<p>Next I wanted to add a <code>ul</code> tag and pass its content inside a block. I would also have to use <code>concat</code> as before.  In my initial attempt, I tried to do the following:
+<code>ruby
+concat content_tag(:ul, :class =&gt; 'dropdown-menu') do
+...
+end
+</code>
+This resulted in a syntax error. The <code>content-tag</code> is correctly treated as the first argument to <code>concat</code>.  However because of Ruby&rsquo;s order of precedence, the block is intepreted as belonging to <code>concat</code>, not <code>content_tag</code> as intended.  To be able to use <code>concat</code> with the <code>do..end</code> syntax, I would have to wrap <code>concat</code>&rsquo;s arguments inside parentheses:
+<code>ruby
+concat( content_tag(:ul, :class =&gt; 'dropdown-menu') do
+end )
+</code>
+This looked quirky and not very ruby-ish.  Fortunately, it turned out that the other block syntax using curly braces has higher precedence than <code>do..end</code> (<a href="http://stackoverflow.com/questions/2122380/using-do-block-vs-brackets?lq=1">source</a>).  This let me eliminate the redundant parantheses:
+<code>ruby
+concat content_tag(:ul, :class =&gt; "dropdown-menu") { ... }
+</code></p>
+
+<p>Finally the links were added inside <code>li</code> tags:
+<code>ruby
+anchors.collect { |a| concat content_tag(:li, a.html_safe) }
+</code></p>
+
+<p>Here&rsquo;s the full method which turned out to be quite short:
+``` ruby
+def dropdown(&amp;block)
+  (content = capture(&amp;block)) &amp;&amp; anchors = content.split(/\n/).reject { |a| a.blank? }
+  if anchors.present?</p>
+
+<pre><code>content_tag(:div, :class =&gt; "dropdown") do
+  concat link_to(content_tag(:i, "", :class =&gt; "icon-caret"), "#", :class =&gt; "dropdown-toggle #{toggleClass}", :data =&gt; { :toggle =&gt; "dropdown" })
+  concat content_tag(:ul, :class =&gt; "dropdown-menu") { anchors.collect { |a| concat content_tag(:li, a.html_safe) } }
+end
+</code></pre>
+
+<p>  end
+end
+```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Simple table sorting with Angular]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/09/28/simple-table-sorting-with-angular/"/>
+    <updated>2013-09-28T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/09/28/simple-table-sorting-with-angular</id>
+    <content type="html"><![CDATA[<p><a href="http://plnkr.co/edit/rynrXkzGcSHeWZrSXENl">View in Plunkr</a></p>
+
+<p>I have a page with tabular data which I want to be able to sort without having to go back to the server. Also a nice-to-have would be the ability to filter the displayed items. Since I&rsquo;m trying to learn Angular, this seems like an excellent opportunity to try it out.</p>
+
+<p>In the controller, the variable items holds the data to be sorted/filtered, while filteredItems is initialized to an empty array. I also specify the initial sort field and direction.</p>
+
+<p><code>javascript
+function tableSortCtl($scope, $filter) {
+  $scope.items = $.parseJSON($('#json').html());
+  $scope.filteredItems = [];
+  $scope.sortField = "firstName";
+  $scope.descending = false;
+}
+</code></p>
+
+<p>The data are inserted as a JSON string into the page inside a <code>script</code> tag.  I could have made a separate request to retrieve the data.  But since the data are already available and used elsewhere on the page, I decided to save the extra request.  The JSON string is parsed into an array of objects with the help of jQuery.</p>
+
+<p>``` html</p>
+
+<script id="json" type="application/json">
+[ { "id" : 1, "firstName" : "Alice", "lastName" : "Krige", "birthdate" : "1954-06-28", "address" : "123 Main Street", "phone" : "111-222-3333" }, { "id" : 2, "firstName" : "Bob", "lastName" : "Probert", "birthdate" : "1965-06-05", "address" : "23 Elm Street", "phone" : "359-324-1494" }, { "id" : 3, "firstName" : "Charlie", "lastName" : "Darwin", "birthdate" : "1809-02-12", "address" : "65 Finch Alley", "phone" : "782-624-6038" } ]
+</script>
+
+
+<p>```</p>
+
+<p>Here&rsquo;s an excerpt of the markup:</p>
+
+<p>``` html
+ <table class="table table-striped" id="tag-list" ng-show="items.length > 0">
+  <thead></p>
+
+<pre><code>&lt;tr&gt;
+  &lt;th id="firstName"&gt;
+    &lt;a ng-click="sort('firstName')"&gt;First name &lt;i class="icon-sort"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/th&gt;
+&lt;/tr&gt;
+</code></pre>
+
+<p>  </thead>
+  <tbody></p>
+
+<pre><code>&lt;tr ng-repeat="item in filteredItems | orderBy:sortField:descending"&gt;
+  &lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+
+<p>  </tbody>
+</table>
+```</p>
+
+<p>The ng-repeat directive specifies that a new table row should be created for each item. With the parameterized orderBy filter, sorting is accomplished simply by assigning a value to the sort field and toggling the sort direction flag.  This is impressively straight-forward and elegant. The rest of the function is DOM-manipulation to display the proper sort arrow.</p>
+
+<p>``` javascript
+$scope.sort = function (newSortField) {
+  if ($scope.sortField == newSortField)</p>
+
+<pre><code>$scope.descending = !$scope.descending;
+</code></pre>
+
+<p>  $scope.sortField = newSortField;</p>
+
+<p>  $(&lsquo;th i&rsquo;).each(function () {</p>
+
+<pre><code>$(this).removeClass().addClass('icon-sort');  // reset sort icon for columns with existing icons
+</code></pre>
+
+<p>  });
+  if ($scope.descending)</p>
+
+<pre><code>$('#' + newSortField + ' i').removeClass().addClass('icon-caret-down');
+</code></pre>
+
+<p>  else</p>
+
+<pre><code>$('#' + newSortField + ' i').removeClass().addClass('icon-caret-up');    
+</code></pre>
+
+<p>};
+```</p>
+
+<p>Here&rsquo;s the markup for the text filter.  A change to the value of the textbox triggers the search.</p>
+
+<p><code>html
+&lt;input type="text" ng-model="query" ng-change="search()" class="input-large" placeholder="Filter" /&gt;
+</code></p>
+
+<p>The search function simply iterates through all the fields of each item and attempts to find a simple (case-insensitive) match.  This works for numbers and strings but unfortunately not, for example, on the month name for a date field, for which we&rsquo;d have to do some additional processing.</p>
+
+<p>``` javascript
+$scope.search = function () {
+  $scope.filteredItems = $filter(&lsquo;filter&rsquo;)($scope.items, function (item) {</p>
+
+<pre><code>for (var field in item) {
+  if ($scope.match(item[field], $scope.query))
+    return true;
+}
+return false;
+</code></pre>
+
+<p>  });
+};
+$scope.match = function(fieldValue, searchTerm) {
+  if (!fieldValue) return false;
+  if (!searchTerm) return true;
+  return fieldValue.toString().toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0;
+};
+```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wix: Executing custom action before starting Windows service]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/09/27/wix-executing-custom-action-before-starting-windows-service/"/>
+    <updated>2013-09-27T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/09/27/wix-executing-custom-action-before-starting-windows-service</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been trying to get a Wix installer to work. This particular scenario is pretty simple. I want to configure the database via a custom action, then start a Windows service which then queries the database before starting.  This would seem like a commonplace scenario. However, Wix documentations are sparse and I&rsquo;ve been wrangling with this for some time.  I finally found a solution.  While I loathe to reference a StackOverflow answer, as a favor to my future self I&rsquo;m going to do so anyways.</p>
+
+<p>The following defines the component that installs and starts the service and creates a feature that references it.</p>
+
+<p>``` xml
+<ComponentGroup Id='b_SyncSvcComps' Directory='b_SyncInstallDir'>
+  <Component Id='b_SyncSvc'></p>
+
+<pre><code>&lt;File Id='b_SyncExe' Name='MyService.exe' Source='$(var.syncSrcDir)\MyService.exe' DiskId='1' KeyPath='yes' /&gt;
+&lt;ServiceInstall Id='b_InstallSyncSvc' Type='ownProcess' Name='MyService' DisplayName='My Service' Description='My Service' Start='auto' Account='[SERVICEACCOUNT]' Password='[SERVICEPASSWORD]' ErrorControl='normal' /&gt;
+&lt;ServiceControl Id='b_StartSyncSvc' Start='install' Stop='both' Remove='uninstall' Name='MyService' Wait='yes' /&gt;
+</code></pre>
+
+<p>  </Component>
+</ComponentGroup></p>
+
+<p><Feature Id='b_ConnectedModeFeature' Title='Connected Mode Features' Level='1'>
+  <ComponentGroupRef Id='b_SyncSvcComps' />
+</Feature>
+```</p>
+
+<p>The following snippet in Product.wxs actually installs the feature:</p>
+
+<p><code>xml
+&lt;Feature Id='b_Features' Title='[ProductName]' Level='1'&gt;
+  &lt;FeatureRef Id='b_ConnectedModeFeature' /&gt;
+&lt;/Feature&gt;
+</code></p>
+
+<p>This is the initial version of the custom action that I want to run.</p>
+
+<p><code>xml
+&lt;CustomAction Id="DbBatchCmd" Directory='B_DBINSTALLDIR' Execute="immediate" Impersonate="yes" Return="check" ExeCommand="[SystemFolder]\cmd /c &amp;quot;&amp;quot;setup_database.cmd&amp;quot; &amp;quot;[b_WebServer]&amp;quot; &amp;quot;[b_DbServer]&amp;quot;&amp;quot;" /&gt;
+</code></p>
+
+<p>The following snippet in Product.wxs runs the custom action.  Here it is run after InstallFinalize, the last possible step in the installation&rsquo;s sequence of events.  The condition ensures that it is only run if the product isn&rsquo;t already installed.</p>
+
+<p><code>xml
+&lt;InstallExecuteSequence&gt;
+  &lt;Custom Action="DbBatchCmd" After="InstallFinalize"&gt;NOT Installed&lt;/Custom&gt;
+&lt;/InstallExecuteSequence&gt;
+</code></p>
+
+<p>According to the above, the installer tries to start the service before it runs the custom action to configure the database.  Of course, since the service requires the database to be set up, it balks.</p>
+
+<p>Among others, I tried running the custom action earlier using the <code>Before="StartServices"</code> and <code>After="InstallFiles"</code> attributes. The latter makes sense because the installer needs to copy files to the file system before it can execute the script.  When inspected with Orca, the MSI has the correct InstallExecuteSequence:</p>
+
+<pre>
+...
+InstallFiles              4000
+DbBatchCmd  NOT Installed 4001
+InstallServices VersionNT 5800
+StartServices VersionNT   5900
+...
+InstallFinalize           6600
+</pre>
+
+
+<p>However, the installer never executes the custom action.  It always tries to start the service and almost immediately fails. In fact, the custom action only runs when it&rsquo;s set to <code>After="InstallFinalize"</code> as above.</p>
+
+<p>One of the key things was provided by the helpful if somewhat verbose Windows installer log, which is created when you start the installer as follows:</p>
+
+<pre>
+msiexec /i myinstaller.msi /l*v myinstaller.log
+</pre>
+
+
+<p>Someday, Microsoft will have consistent command-line arguments.  The log has this to say about the service:</p>
+
+<pre>
+MSI (s) (3C:A8) [17:10:02:607]: Note: 1: 2262 2: Error 3: -2147287038 
+Info 1721.There is a problem with this Windows Installer package. A program required for this install to complete could not be run. Contact your support personnel or package vendor. Action: DbBatchCmd, location: C:\inetpub\wwwroot\MyApp\Database\, command: C:\Windows\SysWOW64\\cmd /c ""setup_database.cmd" "my_webserver" "my_dbserver"" 
+Action ended 17:10:02: ShipBatchCmd. Return value 1.
+</pre>
+
+
+<p>This is followed by entries for InstallServices and StartServices.  So the installer does try to run the custom action but fails.</p>
+
+<p>The <a href="http://stackoverflow.com/questions/778210/wix-trying-to-figure-out-install-sequences">answer</a> is provided by Rob Mensching, who created Wix.  According to him, <code>After="InstallFiles"</code> is correct. However, the execution needs to be &ldquo;deferred&rdquo; until the files are actually copied to the file system.  Below is the corrected XML.</p>
+
+<p>``` xml
+<CustomAction Id="DbBatchCmd" Directory='B_DBINSTALLDIR' Execute="deferred" ExeCommand="[SystemFolder]\cmd /c &quot;&quot;setup_database.cmd&quot; &quot;[b_WebServer]&quot; &quot;[b_DbServer]&quot;&quot;" /></p>
+
+<p><InstallExecuteSequence>
+  <Custom Action="DbBatchCmd" After="InstallFiles">NOT Installed</Custom>
+</InstallExecuteSequence>
+```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wix: Batch files.  Yes, really.]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/09/26/wix-batch-file/"/>
+    <updated>2013-09-26T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/09/26/wix-batch-file</id>
+    <content type="html"><![CDATA[<p>Batch files are the last resort due to its Neanderthal abilities and exasperating syntax.  But if I want to run a bunch of things on bare-boned Windows Server 2003, this seems like the quickest if not only option.</p>
+
+<p>I tried something like this, by creating a property for the system executable cmd.exe, which would execute the batch script via the /c switch. Then I created a custom action that relies on the property.  The batch script and its arguments must be enclosed in quotes. In addition, each argument should be enclosed in quotes in case it contains a space.</p>
+
+<p>``` xml
+<Property Id="CMD">
+  <DirectorySearch Id="SysDir" Path="[SystemFolder]" Depth="1"></p>
+
+<pre><code>&lt;FileSearch Id="CmdExe" Name="cmd.exe"  /&gt;
+</code></pre>
+
+<p>  </DirectorySearch>
+</Property>
+<CustomAction Id="BatchScript" Property="CMD" Execute="immediate" Impersonate="yes" Return="check" ExeCommand="/c &quot;&quot;[INSTALLDIR]\batch_script.cmd&quot; &quot;my arg1&quot; &quot;my arg2&quot;&quot;" />
+```</p>
+
+<p>Since I want to use property values (derived from user inputs) as arguments, the &ldquo;beauty&rdquo; of this (and I say so with a straight face) is simply the replacements of raw argument values with property references.</p>
+
+<p>``` xml
+<Property Id="b_arg1">my arg1</Property>
+<Property Id="b_arg2">my arg2</Property></p>
+
+<p><CustomAction Id="BatchScript" Property="CMD" Execute="immediate" Impersonate="yes" Return="check" ExeCommand="/c &quot;&quot;[B_DBINSTALLDIR]\batch_script.cmd&quot; &quot;[b_arg1]&quot; &quot;[b_arg2]&quot;&quot;" />
+```</p>
+
+<p>Then I hit a snag.  The batch script needs to call other batch scripts in the same directory.  With this approach, I can&rsquo;t set the working directory because <CustomAction> can have either a Directory attribute or a Property attribute but not both.  Here cmd.exe simply runs under the directory it defaults to, <code>c:\windows\system32</code>.</p>
+
+<p>With a slight modification by including the entire command in the ExeCommand attribute, the custom action can use a working directory.</p>
+
+<p><code>xml
+&lt;CustomAction Id="BatchScript" Directory='INSTALLDIR' Execute="immediate" Impersonate="yes" Return="check" ExeCommand="[SystemFolder]\cmd /c &amp;quot;&amp;quot;batch_script.cmd&amp;quot; &amp;quot;[b_arg1]&amp;quot; &amp;quot;[b_arg2]&amp;quot;&amp;quot;" /&gt;
+</code></p>
+
+<p>Here&rsquo;s the initial version of the batch script.  The database is configured via sqlcmd with the arguments which are passed to the script.</p>
+
+<pre>
+set arg1=%1
+set arg2=%2
+sqlcmd -E -d database_name -i "sql_script.sql" -v arg1="%arg1%" arg2="%arg2%"
+</pre>
+
+
+<p>However, some of the script arguments are already enclosed in quotes, which must be there because they may contain space.  This means the sqlcmd arguments now have extra quotes. I suppose if I made sure all batch file arguments are enclosed in quotes, I wouldn&rsquo;t need the quotes in the sqlcmd parameters list. Nevertheless, I decide to strip the quotes before forwarding the arguments to sqlcmd.</p>
+
+<pre>
+set arg1=%arg1:"=%
+set arg2=%arg2:"=%
+</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fun with CSS sibling selectors]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/08/09/fun-with-css-sibling-selectors/"/>
+    <updated>2013-08-09T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/08/09/fun-with-css-sibling-selectors</id>
+    <content type="html"><![CDATA[<p><a href="http://jsfiddle.net/dinhyen/q4FKT/1/">View the live example</a></p>
+
+<p>It seems like I&rsquo;m always <a href="/blog/2013/07/02/search-box-using-knockoutjs/" title="Search box using KnockoutJS">working on search boxes</a>, but here goes another. My goal here is to display an icon inside the search box. Initially, the search box has a dark background. When clicked, the background changes to white. The icon should changes its color based on whether or not the search box has focus. If we were using a font-based icon such as <a href="http://fortawesome.github.io/Font-Awesome/">Fontawesome</a>, which is awesome by the way, styling the icon would be a simple exercise.  However, we&rsquo;re using an image-based icon, so it&rsquo;s not possible to change its color.</p>
+
+<p>One solution is to use 2 icons, dark and light. We swap them depending on whether the input has focus. If the input is inactive, we show the light icon and hide the dark icon.  If the input is focused, we do the opposite.</p>
+
+<p>To access the icon in the context of the input, we use the CSS sibling selector <code>~</code>. Unlike the other CSS sibling selector, <code>+</code>, the <code>~</code> selector doesn&rsquo;t require that the second element be immediately adjacent to the first.  This is important since we have 2 icons, the second of which wouldn&rsquo;t be adjacent to the input.  We also use the <code>not()</code> selector to select the element that lacks the specified class.</p>
+
+<p><code>css
+.navbar-search-wrapper input ~ .icon-search.icon-white {
+  display: block;
+}
+.navbar-search-wrapper input:focus ~ .icon-search.icon-white {
+  display: none;
+}
+.navbar-search-wrapper input ~ .icon-search:not(.icon-white) {
+  display: none;
+}
+.navbar-search-wrapper input:focus ~ .icon-search:not(.icon-white) {
+  display: block;
+}
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>
