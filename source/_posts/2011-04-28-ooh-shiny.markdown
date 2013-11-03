@@ -12,8 +12,8 @@ Some time ago I took a software engineering class.  For the term project we div
 
 We were the Fantastic Five because, you'd never guess it, there were 5 of us. I created the logo for the project.  For the "super-hero" effect, it has 2 stylized F's, made to look like wings flanking a shield.  I drew the shape in Illustrator and applied a chrome effect to it in Photoshop.  This is the original.
 
-<a href="http://www.yentran.org/blog/wp-content/uploads/2011/04/f5flogo.png" rel="prettyPhoto"><img src="http://www.yentran.org/blog/wp-content/uploads/2011/04/f5flogo.png?w=300" alt="Fantastic Five Logo" width="300" height="170" /></a>
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/f5flogo.png?w=300" alt="Fantastic Five Logo" />
 
 Here's another version in ice blue.
 
-<a href="http://www.yentran.org/blog/wp-content/uploads/2011/04/f5flogoblue.png" rel="prettyPhoto"><img src="http://www.yentran.org/blog/wp-content/uploads/2011/04/f5flogoblue.png?w=300" alt="Fantastic Five Logo Blue" width="300" height="137" /></a>
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/f5flogoblue.png?w=300" alt="Fantastic Five Logo Blue" />

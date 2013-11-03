@@ -17,21 +17,21 @@ Some online forums (google "external lockout") implicated the flame sensor. Appa
 
 The burner unit is in an enclosed box at the top of the cabinet. There's a round viewport on the front bezel where you can observe the burners in action (provided they are running).
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_5005.jpg" alt="DSC_5005" width="334" height="500" class="aligncenter size-full wp-image-2039" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/furnace-repair/DSC_5005.jpg" alt="DSC_5005" width="334" height="500" />
 
 Remove the front door with an 8mm wrench. It hinges at the top and can be tricky to remove.
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4999.jpg" alt="DSC_4999" width="500" height="500" class="aligncenter size-full wp-image-2043" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/furnace-repair/DSC_4999.jpg" alt="DSC_4999" width="500" height="500" />
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4996.jpg" alt="DSC_4996" width="334" height="500" class="aligncenter size-full wp-image-2042" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/furnace-repair/DSC_4996.jpg" alt="DSC_4996" width="334" height="500" />
 
 Locate the flame sensor.
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4995.jpg" alt="DSC_4995" width="500" height="334" class="aligncenter size-full wp-image-2041" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/furnace-repair/DSC_4995.jpg" alt="DSC_4995" width="500" height="334" />
 
 Remove it with a socket screwdriver.
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2013/02/DSC_4993.jpg" alt="DSC_4993" width="500" height="334" class="aligncenter size-full wp-image-2040" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/furnace-repair/DSC_4993.jpg" alt="DSC_4993" width="500" height="334" />
 
 Thoroughly clean the sensor's rod and contact with sandpaper. I'd use 150-grit as well as a finer sandpaper.
 

@@ -14,7 +14,7 @@ tags:
 ---
 We discovered Marblehead sort of by accident.  Maybe you've heard of it from an obscure television series in the late-80s called [Marblehead Manor](http://en.wikipedia.org/wiki/Marblehead_Manor), which happened to star the then-equally obscure Michael Richards.  One weekend we decided that it was too early to call it a night, so we took off on a drive out of Boston in a general northeasterly direction.  We found ourselves at Revere Beach, which was deserted, and continued on Route 1A north to Lynn.  At Nahant we weren't able to find any easy access to the ocean front, so we did the natural thing and kept on driving.
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2011/05/CordobaGreatMosque-300x223.jpg" alt="Great Mosque of Cordoba" width="180" height="134" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/CordobaGreatMosque-300x223.jpg" alt="Great Mosque of Cordoba" />
 <figcaption>Great Mosque of Cordoba</figcaption>
 
 At the end of Route 129 we ended up in Marblehead.  It's in a sort of cul-de-sac from which there is nowhere to go but to turn back the way we came (or continue on to the Atlantic Ocean).  Even at night, the town was very attractive.  We drove by [Abbot Hall](http://en.wikipedia.org/wiki/Abbot_Hall_(Marblehead,_Massachusetts)), whose exterior ornamentation reminded me of the interior of the [Great Mosque of Córdoba](http://en.wikipedia.org/wiki/Cathedral%E2%80%93Mosque_of_C%C3%B3rdoba). That night we resolved to return.

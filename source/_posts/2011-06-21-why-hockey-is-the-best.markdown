@@ -17,5 +17,5 @@ Would you expect any less from a die-hard hockey fan?  So with a warning that t
 1. Hockey requires tremendous skill.  Before you can even play, you need to learn to skate. Not just forward and backward, but forward crossover (left and right), backward crossover  (left and right) and stopping (left and right, one- and two-footed).  You also need to learn puck-handling, passing (forehand and backhand) and shooting (wrist shot, snap shot, slapshot).  And then there's this business of taking and dishing out hits. These aren't exactly common skills that you pick up doing every day things.
 1. How many time-outs are allowed per game?  Not 6, not 3 per half, not whenever you want to. One.  That's it. Use it wisely.
 1. The final seconds of a close game are the most exciting moments of the game.  One team is forced to pull its goalie, leaving a gaping net, in a desperate attempt to get the tying goal.  Most of the time the offensive zone is a mad house of tumbling bodies, diving goalie, ricocheting puck and broken sticks. One lucky shot by the defending team and it would be all over. Are you listening, basketball?
-1. The [funniest sports movie ever](http://en.wikipedia.org/wiki/Slap_Shot_(film)) is about hockey
+1. The [funniest sports movie ever](http://en.wikipedia.org/wiki/Slap_Shot_%28film%29) is about hockey
 

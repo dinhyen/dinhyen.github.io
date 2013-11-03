@@ -25,7 +25,7 @@ Since Hudson will need to perform tasks that require access to more than one ser
 
 * From the Start menu, run Configure Tomcat as Admin. Alternatively, you could open the Services console (shortcut: run Service.msc as Admin) and select Properties for the Apache Tomcat 7.0 service.
 * Under the Log On tab, enter the credentials for the domain account
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/tomcat7user.png" width="416" height="396" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/tomcat7user.png" width="416" height="396" />
 * Restart Tomcat
 
 You can restart Tomcat by running the command prompt as Admin then type `net start tomcat7` to start or `net stop tomcat7` to stop the service.
@@ -76,7 +76,7 @@ It's convenient to do so in Hudson:
 * From the Hudson dashboard, select Manage Hudson
 * Select Configure System
 * Under the Global properties section, add the HOME environment variable and set it to the home directory of the Tomcat account where the .ssh folder is located.
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/git-plugin.png" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/git-plugin.png" />
 
 ## Set up MSBuild
 MSBuild is the Visual Studio build system. To install the MSBuild plugin, which allows you to access MSBuild:
@@ -90,46 +90,46 @@ To configure the MSBuild plugin:
 * From the Hudson dashboard, select Manage Hudson
 * Select Configure System
 * Under the MSBuild section, provide the path to the MSBuild executable similar to below.
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/msbuild.png" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/msbuild.png" />
 
 ## E-mail notification
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/email.png" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/email.png" />
 
 ## Create a Hudson job
 
 Creating a job in Hudson is pretty straight forward, with just a form to fill out and no XML to fiddle with.
 ### Name
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/create.png" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/create.png" />
 ### Workspace
 The custom workspace is the location where you source code will go after being pulled from version control.
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/workspace.png" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/workspace.png" />
 ### Source Code Management
 The URL of a Git repository is of the form gitaccount@server:gitrepository.git.
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/git.png" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/git.png" />
 
 ### Build
 This can be a multi-step process. You can have as many step as necessary. To add a build step, select an option from the Add build step dropdown.
 
 In our case, we want to allow the user to select a particular Git tag to build. The list of tags is specified as Choice parameter. The selected value will be stored in an environment variable of the same name, $TAG.
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/git-tag-param.png" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/git-tag-param.png" />
 
 To pull down the tag, we execute a series of step to ensure all tags are pulled down, then checkout the selected tag.
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/git-tag-checkout.png" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/git-tag-checkout.png" />
 
 The final step uses MSBuild to run our build script.
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/build.png" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/build.png" />
 
 ### Post-build
 
 The Chuck Norris plugin gives us a thumbs up for a successful build.  If the build fails, well let's just say you don't want to make Chuck angry.
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/11/post-build.png" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/post-build.png" />
 
 ## Troubleshooting
 **FATAL: One of setGitDir or setWorkTree must be called**

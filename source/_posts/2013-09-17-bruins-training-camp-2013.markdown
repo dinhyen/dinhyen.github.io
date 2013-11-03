@@ -15,19 +15,17 @@ The Training Camp consisted of 2 groups.  With 50-odd participants and only a fe
 
 I'm guessing the opening-day roster will look something like this:
  
-<pre>
-Milan Lucic (17) - David Krejci (46) - Jarome Iginla (12)
-Brad Marchand (63) - Patrice Bergeron (37) - Loui Eriksson (21)
-Carl Soderberg (34) - Chris Kelly (23) - ???
-Daniel Paille (20) - Gregory Campbell (11) - Shawn Thornton (22)
+Milan Lucic (17) - David Krejci (46) - Jarome Iginla (12)  
+Brad Marchand (63) - Patrice Bergeron (37) - Loui Eriksson (21)  
+Carl Soderberg (34) - Chris Kelly (23) - ???  
+Daniel Paille (20) - Gregory Campbell (11) - Shawn Thornton (22)  
 
-Zdeno Chara (33) - Johnny Boychuk (55)
-Dennis Seidenberg (44) - Dougie Hamilton (27)
-??? - Adam McQuaid (54)
+Zdeno Chara (33) - Johnny Boychuk (55)  
+Dennis Seidenberg (44) - Dougie Hamilton (27)  
+??? - Adam McQuaid (54)  
 
-Tuukka Rask (40)
-???
-</pre>
+Tuukka Rask (40)  
+???  
 
 On defense, Matt Bartkowski (43) and Torey Krug (47), both left-shots, are likely candidates.  Both played last season, Krug having stood out in the Rangers series.  Local guy David Warsofsky is probably also in consideration.  The empty forward and goalie spots are wide-open. That's why we're here.
 
