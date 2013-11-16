@@ -45,7 +45,6 @@ The view would then include the partial:
 <% end %>
 ```
 
-
 However, this put both links inside a single `<li>` tag.  It looked fine with some CSS styles, but not generating the proper markup bothered me a bit.  So I tried using a helper method which should offer some more flexibility.  The helper method would be taking a block, decompose it into individual anchor tags and and wrap them in the proper markup.
 
 I started off with:
@@ -55,7 +54,7 @@ def dropdown(&block)
 end
 ```
 
-The `capture` helper method captures the block and stores it in a variable that I can process. More importantly, it also works for strings within the block.  This is an important distinction between `capture` and a similar helper method, `with_output_buffer` ([source](http://blog.agile-pandas.com/2011/01/13/rails-capture-vs-with-output-buffer)). 
+The `capture` helper method captures the block and stores it in a variable that I can process. More importantly, it also works for strings within the block.  This is [an important distinction](http://blog.agile-pandas.com/2011/01/13/rails-capture-vs-with-output-buffer) between `capture` and a similar helper method, `with_output_buffer`.
 
 If the block is empty, there is nothing to do. Otherwise, I'd turn them into links.
 
@@ -72,7 +71,7 @@ content_tag(:div, :class => 'dropdown') do
 end
 ```
 
-In the view, I could just merrily include other content_tags in the block argument.  However, in a helper mehod, the content is stored inside an output buffer.  I would have to use `concat` to add it to the output buffer.
+If this were in a view, I could just merrily include other content_tags in the block argument.  However, in a helper mehod, the content is stored inside an output buffer.  I would have to use `concat` to add it to the output buffer.
 ``` ruby
 content_tag(:div, :class => "dropdown") do
   concat link_to(content_tag(:i, "", :class => "caret"), "#", :class => "dropdown-toggle", :data => { :toggle => "dropdown" })
@@ -85,12 +84,12 @@ concat content_tag(:ul, :class => 'dropdown-menu') do
 ...
 end 
 ```
-This resulted in a syntax error. The `content-tag` is correctly treated as the first argument to `concat`.  However because of Ruby's order of precedence, the block is intepreted as belonging to `concat`, not `content_tag` as intended.  To be able to use `concat` with the `do..end` syntax, I would have to wrap `concat`'s arguments inside parentheses:
+This resulted in a syntax error. The `content_tag` is correctly treated as the first argument to `concat`.  However because of Ruby's order of precedence, the block is intepreted as belonging to `concat`, not `content_tag` as intended.  To be able to use `concat` with the `do..end` syntax, I would have to wrap `concat`'s arguments inside parentheses:
 ``` ruby
 concat( content_tag(:ul, :class => 'dropdown-menu') do 
 end )
 ```
-This looked quirky and not very ruby-ish.  Fortunately, it turned out that the other block syntax using curly braces has higher precedence than `do..end` ([source](http://stackoverflow.com/questions/2122380/using-do-block-vs-brackets?lq=1)).  This let me eliminate the redundant parantheses:
+This looked quirky and not very ruby-ish.  Fortunately, it turned out that the other block syntax using curly braces has higher precedence than `do..end` ([source](http://stackoverflow.com/questions/2122380/using-do-block-vs-brackets?lq=1)).  This let me eliminate the redundant parentheses:
 ``` ruby
 concat content_tag(:ul, :class => "dropdown-menu") { ... }
 ```
