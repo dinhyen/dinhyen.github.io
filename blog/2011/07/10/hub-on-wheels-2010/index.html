@@ -32,6 +32,18 @@
 <link href="/stylesheets/darkbox.css" rel="stylesheet" type="text/css">
 <script src="/javascripts/darkbox.js" type="text/javascript"></script>
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24469490-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
@@ -216,7 +228,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dinhyen.github.io/blog/2011/07/10/hub-on-wheels-2010/" data-via="" data-counturl="http://dinhyen.github.io/blog/2011/07/10/hub-on-wheels-2010/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dinhyen.github.io/blog/2011/07/10/hub-on-wheels-2010/" data-via="dinhyen" data-counturl="http://dinhyen.github.io/blog/2011/07/10/hub-on-wheels-2010/" >Tweet</a>
   
   
   
@@ -264,10 +276,80 @@
     
   </ul>
 </section>
-
-
-
-
+<section>
+  <h1>Categories</h1>
+  <ul id="categories">
+    
+     
+      <li data-category="Photoshop">
+        <a href="/blog/categories/photoshop">Photoshop</a> <em>2</em>
+      </li>
+    
+     
+      <li data-category="travel">
+        <a href="/blog/categories/travel">travel</a> <em>20</em>
+      </li>
+    
+     
+      <li data-category="outdoors">
+        <a href="/blog/categories/outdoors">outdoors</a> <em>6</em>
+      </li>
+    
+     
+      <li data-category="photography">
+        <a href="/blog/categories/photography">photography</a> <em>20</em>
+      </li>
+    
+     
+      <li data-category="hockey">
+        <a href="/blog/categories/hockey">hockey</a> <em>10</em>
+      </li>
+    
+     
+      <li data-category="city">
+        <a href="/blog/categories/city">city</a> <em>5</em>
+      </li>
+    
+     
+      <li data-category="cycling">
+        <a href="/blog/categories/cycling">cycling</a> <em>3</em>
+      </li>
+    
+     
+      <li data-category="drawing">
+        <a href="/blog/categories/drawing">drawing</a> <em>1</em>
+      </li>
+    
+     
+      <li data-category="technology">
+        <a href="/blog/categories/technology">technology</a> <em>34</em>
+      </li>
+    
+     
+      <li data-category="review">
+        <a href="/blog/categories/review">review</a> <em>25</em>
+      </li>
+    
+     
+      <li data-category="hiking">
+        <a href="/blog/categories/hiking">hiking</a> <em>9</em>
+      </li>
+    
+  </ul>
+</section>
+<script type="text/javascript">
+  $(function() {
+    var categories = [];
+    $('[data-category]').each(function() {
+      categories.push(this);
+    });
+    categories.sort(function (a, b) {
+      return a.attributes['data-category'].value.toLowerCase() <= b.attributes['data-category'].value.toLowerCase()
+            ? -1 : 1;
+    });
+    $('#categories').html(categories);
+  });
+</script>
 
   
 </aside>
