@@ -19,3 +19,35 @@ File this as another in the category of "places I've gone by hundreds of times w
 
 After the chaos and excitement that was the [Bruins Stanley Cup parade](http://www.yentran.org/blog/?p=310), we decided to stop here for some relaxation and hopefully catch a heron or two.  "We're going to see 7," Kate said, wishfully.  It turned out that we only saw 4 herons.  But the ubiquitous red-winged blackbirds abounded in these marshes (according to Tanya, they should technically be called red-*shouldered* blackbirds).  Not advertised were the billions of mosquitoes who swarmed and attacked us at every available opportunity.  I lost count of how many mosquitoes I swatted, it couldn't have been fewer than about 1500.  Unfortunately herons don't prey on mosquitoes.  My tree swallow and bat friends, where were you?  Next time, I will have to bring a head net.
 
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/great-meadows/dsc_0399.jpg" data-darkbox="great-meadows">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/great-meadows/thumbs/dsc_0399.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/great-meadows/dsc_0403.jpg" data-darkbox="great-meadows">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/great-meadows/thumbs/dsc_0403.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/great-meadows/dsc_0405.jpg" data-darkbox="great-meadows">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/great-meadows/thumbs/dsc_0405.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/great-meadows/dsc_0408.jpg" data-darkbox="great-meadows">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/great-meadows/thumbs/dsc_0408.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/great-meadows/dsc_0409.jpg" data-darkbox="great-meadows">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/great-meadows/thumbs/dsc_0409.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/great-meadows/dsc_0417.jpg" data-darkbox="great-meadows">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/great-meadows/thumbs/dsc_0417.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/great-meadows/dsc_0421.jpg" data-darkbox="great-meadows">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/great-meadows/thumbs/dsc_0421.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/great-meadows/dsc_0425.jpg" data-darkbox="great-meadows">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/great-meadows/thumbs/dsc_0425.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/great-meadows/dsc_0428.jpg" data-darkbox="great-meadows">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/great-meadows/thumbs/dsc_0428.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

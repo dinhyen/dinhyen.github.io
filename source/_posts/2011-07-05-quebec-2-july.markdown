@@ -65,4 +65,233 @@ After an excellent veal dinner at where else but Le Veau d'Or, we headed down to
   <a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2002.jpg" data-darkbox="">
     <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2002.jpg" />
   </a>
+</div><!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_1969.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_1969.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_1981.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_1981.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_1987.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_1987.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_1997.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_1997.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2002.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2002.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2004.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2004.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2006.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2006.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2011.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2011.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2015.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2015.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2023.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2023.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2035.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2035.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2038.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2038.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2049.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2049.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2053.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2053.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2055.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2055.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2061.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2061.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2067.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2067.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2077.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2077.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2080.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2080.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2087.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2087.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2088.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2088.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2095.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2095.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2097.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2097.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2099.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2099.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2102.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2102.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2104.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2104.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2106.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2106.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2107.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2107.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2114.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2114.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2119.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2119.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2124.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2124.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2126.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2126.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2127.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2127.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2128.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2128.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2139.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2139.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2145.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2145.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2147.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2147.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2148.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2148.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2149.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2149.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2153.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2153.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2161.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2161.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2163.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2163.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2179.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2179.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2180.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2180.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2184.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2184.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2186.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2186.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2191.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2191.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2192.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2192.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2200.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2200.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2204.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2204.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2209.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2209.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2222.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2222.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2224.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2224.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2225.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2225.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2227.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2227.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2233.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2233.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2234.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2234.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2235.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2235.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2237.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2237.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2240.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2240.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2242.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2242.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2246.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2246.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2248.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2248.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2249.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2249.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2250.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2250.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2256.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2256.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2261.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2261.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2264.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2264.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2272.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2272.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2273.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2273.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2274.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2274.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2288.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2288.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2294.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2294.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2369.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2369.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-1/dsc_2373.jpg" data-darkbox="quebec-1">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-1/thumbs/dsc_2373.jpg" />
+</a>
+
 </div>
+<!-- End darkbox -->

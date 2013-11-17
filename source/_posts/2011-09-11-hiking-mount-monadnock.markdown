@@ -26,3 +26,74 @@ The view at the top was spectacular.  We were lucky to get a beautiful and rela
 
 The trail systems here were partly created by the [Civilian Conservation Corps](http://en.wikipedia.org/wiki/Civilian_Conservation_Corps) in 1931-1933 during the Great Depression.  We've seen their work in many of the places we've visited.  One can only hope that after this Great Recession we'll have left something as worthwhile to posterity.
 
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3363.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3363.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3377.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3377.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3382.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3382.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3392.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3392.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3404.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3404.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3424.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3424.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3433.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3433.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3438.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3438.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3450.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3450.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3459.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3459.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3468.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3468.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3477.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3477.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3480.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3480.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3481.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3481.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3497.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3497.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3521.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3521.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3534.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3534.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3538.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3538.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3539.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3539.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3541.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3541.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3544.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3544.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3545.jpg" data-darkbox="monadnock">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3545.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

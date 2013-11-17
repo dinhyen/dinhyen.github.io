@@ -73,3 +73,101 @@ Cusco was turning on the lights, beckoning as we walked back to the city.  Once 
 
 Postscript: We had mentally prepared for jokes about Sacsayhuamán, which sounds suspiciously like "Sexy Woman".  Sadly, they never materialized.
 
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2092.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2092.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2093.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2093.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2096.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2096.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2097.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2097.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2102.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2102.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2126.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2126.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2131.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2131.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2132.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2132.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2133.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2133.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2138.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2138.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2140.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2140.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2146.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2146.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2148.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2148.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2151.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2151.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2154.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2154.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2155.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2155.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2158.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2158.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2160.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2160.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2163.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2163.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2186.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2186.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2196.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2196.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2199.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2199.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2202.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2202.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2204.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2204.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2205.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2205.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2207.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2207.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2210.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2210.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2211.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2211.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2216.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2216.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2218.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2218.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/dsc_2229.jpg" data-darkbox="peru-sacsayhuaman">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-sacsayhuaman/thumbs/dsc_2229.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

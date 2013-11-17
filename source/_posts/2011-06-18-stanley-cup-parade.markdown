@@ -15,3 +15,74 @@ Boston's first Stanley Cup parade in 39 years was going to take place on Saturda
 </div>
 The crowd was fraught with anticipation. Someone yelled out, "They just left the Gahden". Oohs and aahs went up several times, but they were false alarms. Finally we heard a distant cheer. It got louder as it came rolling down Tremont Street and became deafening as the first Duck Boat floated into view. One by one the boats passed in front of us. Chara and Thomas were near the front, raising their arms and giving the thumbs up. The adoring crowd returned the favor. Then inevitably someone--or perhaps many simultaneously--started the "Let's go Bruins" chant. The chant was immediately picked up by everyone else who was not already screaming at the top of their voice. The chant reached a crescendo, reverberating off the venerable facades that line Tremont Street. It was as exhilarating as it ever was in the Garden. Life is good as a Bruins fan today.
 
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0027.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0027.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0193.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0193.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0208.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0208.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0217.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0217.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0218.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0218.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0223.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0223.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0245.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0245.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0247.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0247.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0264.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0264.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0271.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0271.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0301.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0301.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0307.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0307.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0317.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0317.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0318.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0318.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0333.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0333.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0352.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0352.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0364.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0364.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0369.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0369.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0373.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0373.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0379.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0379.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0382.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0382.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/dsc_0394.jpg" data-darkbox="stanley-cup-2011">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/stanley-cup-2011/thumbs/dsc_0394.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

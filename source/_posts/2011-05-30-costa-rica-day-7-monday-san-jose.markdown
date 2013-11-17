@@ -21,3 +21,56 @@ San Jose has its interesting sides, but we'd much prefer to be in the forest and
 <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/costa-rica-7-map.jpg" />
 <figcaption>A walk in downtown San Jose</figcaption>
 
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0935.jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0935.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0943.jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0943.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0949.jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0949.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0964(2).jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0964(2).jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0965(2).jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0965(2).jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0969(2).jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0969(2).jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0971(2).jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0971(2).jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0973(2).jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0973(2).jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0978(2).jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0978(2).jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0986(2).jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0986(2).jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0987(2).jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0987(2).jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0989(2).jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0989(2).jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0991(2).jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0991(2).jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0994(2).jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0994(2).jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0995(2).jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0995(2).jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/dsc_0996(2).jpg" data-darkbox="costa-rica-7">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-7/thumbs/dsc_0996(2).jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

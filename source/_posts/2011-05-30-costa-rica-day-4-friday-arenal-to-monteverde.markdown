@@ -44,3 +44,83 @@ The sun was going down around 5pm, and the specter of driving to Monteverde on r
 
 Everything in this resort was huge. The ceiling on the ground floor must be 30 feet high. We had dinner in a cavernous restaurant and wondered whether the Coopers made it over the mountains.
 
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0790.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0790.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0818.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0818.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0840.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0840.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0851.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0851.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0855.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0855.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0869.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0869.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0881.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0881.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0893.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0893.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0907.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0907.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0913.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0913.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0922.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0922.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0927.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0927.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0934.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0934.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0952.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0952.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0959.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0959.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0978.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0978.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_0989.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_0989.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_1030.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_1030.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_1044.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_1044.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_1062.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_1062.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_1066.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_1066.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_1068.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_1068.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_1077.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_1077.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_1079.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_1079.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/dsc_1084.jpg" data-darkbox="costa-rica-4">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-4/thumbs/dsc_1084.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

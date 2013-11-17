@@ -187,3 +187,275 @@ This was the best thing at the airport, a reproduction of an enormous sun disc.
 
 In the relatively short span of their civilization, the Incas have left many treasures that are no less magnificent and awe-inspiring.
 
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3788a.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3788a.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3789.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3789.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3797.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3797.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3799.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3799.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3805.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3805.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3819a.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3819a.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3824.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3824.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3826a.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3826a.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3834.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3834.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3836.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3836.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3842.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3842.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3849a.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3849a.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3856.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3856.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3858.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3858.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3861.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3861.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3866.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3866.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3870.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3870.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3871.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3871.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3874.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3874.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3877.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3877.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3886.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3886.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3891.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3891.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3897.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3897.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3900.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3900.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3915.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3915.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3916.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3916.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3921.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3921.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3922.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3922.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3925.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3925.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3930.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3930.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3931.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3931.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3935.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3935.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3938.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3938.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3941.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3941.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3943.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3943.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3946.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3946.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3949.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3949.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3951.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3951.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3952.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3952.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3957.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3957.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3964.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3964.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3968.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3968.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3973.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3973.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3981.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3981.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3985.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3985.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3988.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3988.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3989.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3989.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3992.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3992.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3995.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3995.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_3997.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_3997.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4004.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4004.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4012.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4012.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4015a.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4015a.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4017a.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4017a.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4018a.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4018a.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4020a.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4020a.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4025.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4025.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4026.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4026.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4029a.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4029a.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4033a.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4033a.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4040.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4040.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4042.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4042.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4048.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4048.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4049.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4049.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4051.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4051.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4053.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4053.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4068.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4068.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4072.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4072.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4073.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4073.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4079.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4079.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4082.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4082.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4083.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4083.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4084.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4084.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4090a.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4090a.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4095a.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4095a.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4098.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4098.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4102.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4102.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4109.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4109.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4113.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4113.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4123.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4123.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4132.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4132.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4133.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4133.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4135.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4135.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4146.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4146.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4150.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4150.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4151.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4151.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4164.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4164.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4175.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4175.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/dsc_4189.jpg" data-darkbox="peru-ollantaytambo">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-ollantaytambo/thumbs/dsc_4189.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

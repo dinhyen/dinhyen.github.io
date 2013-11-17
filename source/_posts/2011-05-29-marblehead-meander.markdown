@@ -23,3 +23,56 @@ Marblehead is another of the picturesque seaside towns that dot the New England 
 
 We walked on the winding, narrow streets, visited the old cemetery and toured the now abandoned Fort Sewall.  Across a narrow isthmus on a small island (i.e., a "neck") is the somewhat small Marblehead Neck Audubon sanctuary. All in all, it was a pleasant Sunday out.  On the way back, we decided to go on another whim and found out about marvellous Lynn Woods, but that's a story for another time.
 
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_0001.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_0001.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_0003.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_0003.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_0004.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_0004.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_0014.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_0014.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_0017.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_0017.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_0023.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_0023.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_6115.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_6115.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_6118.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_6118.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_6119.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_6119.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_6126.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_6126.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_6134.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_6134.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_6137.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_6137.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_6142.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_6142.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_6145.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_6145.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_6147.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_6147.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/marblehead/dsc_6149.jpg" data-darkbox="marblehead">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/marblehead/thumbs/dsc_6149.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

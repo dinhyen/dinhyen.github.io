@@ -51,3 +51,86 @@ Since it was getting dark and we still had to get to the Arenal area, we relucta
 </div>
 The estimable GPS put us at a warehouse.  Clearly not the delightful and luxurious resort we were promised.  We tried, in succession: using the payphone, stopping by another hotel to ask direction and chatting up the gas station attendant in broken Spanish.  Only the last one worked, and he pointed us in the direction of Tilajari Resort.  It was on an entirely different road, Garmin.  The rest is history. Salvation came in the form of dinner and a shower.  This was the second time in two nights we arrived close to 22:00.  Fortunately, Denny's hadn't yet expanded to this area.  Dinner was beyond delicious. Did I mention the beef in Costa Rica are all free-range?
 
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0087.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0087.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0090.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0090.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0094.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0094.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0112.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0112.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0116.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0116.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0133.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0133.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0140.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0140.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0153.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0153.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0172.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0172.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0178.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0178.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0234.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0234.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0261.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0261.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0278.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0278.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0283.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0283.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0290.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0290.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0315.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0315.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0322.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0322.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0330.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0330.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0331.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0331.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0333.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0333.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0356.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0356.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0362.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0362.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0367.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0367.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0385.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0385.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0414.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0414.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/dsc_0423.jpg" data-darkbox="costa-rica-2">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/costa-rica-2/thumbs/dsc_0423.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

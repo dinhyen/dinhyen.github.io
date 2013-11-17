@@ -52,3 +52,41 @@ The mountain sides are carpeted with trees.  We will have to return in the autum
 A last look at the Bubble Rock from the Park Loop Road.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5502a.jpg' />
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5266.jpg" data-darkbox="acadia-bubbles">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5266.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5267.jpg" data-darkbox="acadia-bubbles">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5267.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5275.jpg" data-darkbox="acadia-bubbles">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5275.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5281.jpg" data-darkbox="acadia-bubbles">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5281.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5284.jpg" data-darkbox="acadia-bubbles">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5284.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5293.jpg" data-darkbox="acadia-bubbles">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5293.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5315.jpg" data-darkbox="acadia-bubbles">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5315.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5339.jpg" data-darkbox="acadia-bubbles">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5339.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5344.jpg" data-darkbox="acadia-bubbles">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5344.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5347.jpg" data-darkbox="acadia-bubbles">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5347.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5502a.jpg" data-darkbox="acadia-bubbles">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5502a.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

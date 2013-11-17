@@ -83,3 +83,59 @@ For various reasons, I want the printer to use a static instead of dynamic IP ad
 * Back in Windows, the printer should show up as Ready. If not, try turning the printer off and on.
 
 <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-ready.png" alt="printer-ready" />
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/control-printers-off.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/control-printers-off.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/install-start.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/install-start.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/port-setings.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/port-setings.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-offline.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/printer-offline.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-ports.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/printer-ports.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-properties.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/printer-properties.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-ready.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/printer-ready.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/usb-connected.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/usb-connected.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-connect.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-connect.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-disconnect.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-disconnect.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-finish.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-finish.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-install.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-install.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-notice.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-notice.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-search.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-search.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-ssid.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-ssid.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-submit.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-submit.png" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-wps.png" data-darkbox="brother-printer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-wps.png" />
+</a>
+
+</div>
+<!-- End darkbox -->
