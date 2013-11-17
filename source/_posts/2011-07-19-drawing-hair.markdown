@@ -2,7 +2,7 @@
 layout: post
 title: Drawing hair with pencil
 categories:
-- Drawing
+- drawing
 tags:
 - drawing
 - Julianne Moore

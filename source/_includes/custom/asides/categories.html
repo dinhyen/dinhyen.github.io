@@ -1,0 +1,24 @@
+<section>
+  <h1>Categories</h1>
+  <ul id="categories">
+    {% for category in site.categories %}
+     {% capture category_url %}{{ site.category_dir }}/{{ category | first | slugize | downcase | replace:' ','-' }}{% endcapture %}
+      <li data-category="{{ category | first }}">
+        <a href="{{ root_url | append:'/' | append:category_url }}">{{ category | first }}</a> <em>{{ category | last | size }}</em>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+<script type="text/javascript">
+  $(function() {
+    var categories = [];
+    $('[data-category]').each(function() {
+      categories.push(this);
+    });
+    categories.sort(function (a, b) {
+      return a.attributes['data-category'].value.toLowerCase() <= b.attributes['data-category'].value.toLowerCase()
+            ? -1 : 1;
+    });
+    $('#categories').html(categories);
+  });
+</script>
