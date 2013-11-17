@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technology | Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2013-11-02T20:37:28-04:00</updated>
+  <updated>2013-11-17T09:13:10-05:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -75,7 +75,7 @@ def dropdown(&amp;block)
 end
 </code></p>
 
-<p>The <code>capture</code> helper method captures the block and stores it in a variable that I can process. More importantly, it also works for strings within the block.  This is an important distinction between <code>capture</code> and a similar helper method, <code>with_output_buffer</code> (<a href="http://blog.agile-pandas.com/2011/01/13/rails-capture-vs-with-output-buffer">source</a>).</p>
+<p>The <code>capture</code> helper method captures the block and stores it in a variable that I can process. More importantly, it also works for strings within the block.  This is <a href="http://blog.agile-pandas.com/2011/01/13/rails-capture-vs-with-output-buffer">an important distinction</a> between <code>capture</code> and a similar helper method, <code>with_output_buffer</code>.</p>
 
 <p>If the block is empty, there is nothing to do. Otherwise, I&rsquo;d turn them into links.</p>
 
@@ -92,7 +92,7 @@ content_tag(:div, :class =&gt; 'dropdown') do
 end
 </code></p>
 
-<p>In the view, I could just merrily include other content_tags in the block argument.  However, in a helper mehod, the content is stored inside an output buffer.  I would have to use <code>concat</code> to add it to the output buffer.
+<p>If this were in a view, I could just merrily include other content_tags in the block argument.  However, in a helper mehod, the content is stored inside an output buffer.  I would have to use <code>concat</code> to add it to the output buffer.
 <code>ruby
 content_tag(:div, :class =&gt; "dropdown") do
   concat link_to(content_tag(:i, "", :class =&gt; "caret"), "#", :class =&gt; "dropdown-toggle", :data =&gt; { :toggle =&gt; "dropdown" })
@@ -105,12 +105,12 @@ concat content_tag(:ul, :class =&gt; 'dropdown-menu') do
 ...
 end
 </code>
-This resulted in a syntax error. The <code>content-tag</code> is correctly treated as the first argument to <code>concat</code>.  However because of Ruby&rsquo;s order of precedence, the block is intepreted as belonging to <code>concat</code>, not <code>content_tag</code> as intended.  To be able to use <code>concat</code> with the <code>do..end</code> syntax, I would have to wrap <code>concat</code>&rsquo;s arguments inside parentheses:
+This resulted in a syntax error. The <code>content_tag</code> is correctly treated as the first argument to <code>concat</code>.  However because of Ruby&rsquo;s order of precedence, the block is intepreted as belonging to <code>concat</code>, not <code>content_tag</code> as intended.  To be able to use <code>concat</code> with the <code>do..end</code> syntax, I would have to wrap <code>concat</code>&rsquo;s arguments inside parentheses:
 <code>ruby
 concat( content_tag(:ul, :class =&gt; 'dropdown-menu') do
 end )
 </code>
-This looked quirky and not very ruby-ish.  Fortunately, it turned out that the other block syntax using curly braces has higher precedence than <code>do..end</code> (<a href="http://stackoverflow.com/questions/2122380/using-do-block-vs-brackets?lq=1">source</a>).  This let me eliminate the redundant parantheses:
+This looked quirky and not very ruby-ish.  Fortunately, it turned out that the other block syntax using curly braces has higher precedence than <code>do..end</code> (<a href="http://stackoverflow.com/questions/2122380/using-do-block-vs-brackets?lq=1">source</a>).  This let me eliminate the redundant parentheses:
 <code>ruby
 concat content_tag(:ul, :class =&gt; "dropdown-menu") { ... }
 </code></p>
