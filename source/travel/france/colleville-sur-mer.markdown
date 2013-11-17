@@ -1,20 +1,11 @@
 ---
 layout: page
 title: Colleville-sur-Mer
-categories: []
-tags: []
-status: publish
-type: page
 published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _wp_page_template: default
 ---
-<h1>Colleville-sur-Mer</h1>
-<h3><em>Remembering D-Day</em></h3>
+<h3>Remembering D-Day</h3>
 
-<img src='http://www.yentran.org/blog/wp-content/gallery/colleville-sur-mer/collevillesurmeryellowflower.jpg' class='ngg-singlepic ngg-none' />
+<img src='https://dl.dropboxusercontent.com/u/52804626/colleville-sur-mer/collevillesurmeryellowflower.jpg'/>
 
 World War II is often remembered as the "last good war" in the American psyche. It was a time when the delineation between good and evil was unmistakably clear, and supreme sacrifices were undertaken to ensure the eventual triumph of good over evil. In few other places do these sacrifices stand out more than here on the cliffs overlooking Omaha Beach. 
 
