@@ -4,7 +4,7 @@
   <title><![CDATA[Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2013-11-18T17:40:40-05:00</updated>
+  <updated>2013-11-18T17:50:25-05:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -18,7 +18,7 @@
     <link href="http://dinhyen.github.io/blog/2013/11/18/so-long-wordpress-hello-octopress/"/>
     <updated>2013-11-18T06:32:00-05:00</updated>
     <id>http://dinhyen.github.io/blog/2013/11/18/so-long-wordpress-hello-octopress</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve been using WordPress since 2011.  It works well enough, but for me there are few drawbacks.</p>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been using WordPress since 2011.  It works well enough, but for me there are a few drawbacks.</p>
 
 <ul>
 <li><p>It&rsquo;s slow. It takes time to do anything from creating a post to previewing to deploying it.  I prefer to edit text in a proper text editor, with the full array of keyboard shortcuts, so I usually end up copying and pasting anyways.  But using the UI to do everything is cumbersome.  Of course I could install a local instance of WordPress so I can preview locally.  However, I would have to deploy everything, posts and images, every time. This seems inefficient for just adding a new post.</p></li>
@@ -37,13 +37,13 @@
 
 <h3>Setting up DNS</h3>
 
-<p>This is probably a no-brainer for many people, unfortunately I&rsquo;m not among them.  Since my blog is now hosted by GitHub Pages, I had to configure my DNS to point my domain to the new IP address.  The process is quite clearly laid out in the <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">documentation</a>.  In my case, I had to create an <em>A record</em> for my top-level domain, yentran.org, to point to <code>204.232.175.78</code>.  I also created a CNAME record for the subdomain www.yentran.org as an alias which points to the same address.  I was concerned that my email address <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x78;&#120;&#x78;&#x40;&#x79;&#x65;&#110;&#x74;&#x72;&#x61;&#110;&#46;&#x6f;&#114;&#103;">&#x78;&#120;&#x78;&#x40;&#121;&#x65;&#x6e;&#x74;&#114;&#97;&#x6e;&#46;&#x6f;&#x72;&#103;</a> would be broken.  It turns not to be the case.  Email forwarding relies on a MX record, which continues to point to my ISP&rsquo;s IP address.  There&rsquo;s also a wildcard record, which catches any unknown subdomain for which there is no matching A or CNAME record.</p>
+<p>This is probably a no-brainer for many people, unfortunately I&rsquo;m not among them.  Since my blog is now hosted by GitHub Pages, I had to configure my DNS to point my domain to the new IP address.  The process is quite clearly laid out in the <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">documentation</a>.  In my case, I had to create an <em>A record</em> for my top-level domain, <code>yentran.org</code>, to point to <code>204.232.175.78</code>.  I also created a CNAME record for the subdomain <code>www.yentran.org</code> as an alias which points to the same address.  I was concerned that my email address <code>xxx@yentran.org</code> would be broken.  It turns not to be the case.  Email forwarding relies on a MX record, which continues to point to my ISP&rsquo;s IP address.  There&rsquo;s also a wildcard record, which catches any unknown subdomain for which there is no matching A or CNAME record.</p>
 
 <h3>Images</h3>
 
 <p>Previously I used NextGen gallery to manage images.  NextGen stores images in separate folders, so it&rsquo;s simple to copy them (rather than searching for them on my hard drive).</p>
 
-<p>I now use Dropbox&rsquo;s Public folder to host images.  This allows me to easily manage images.  In Lightroom (or any other image organizing software), I can export the images directly to Dropbox&rsquo;s local sync folder and the images immediately becomes available for linking.  If I want to modify images&mdash;such as resizing them&mdash;I can work directly with the Dropbox sync folder without having to make changes to the web pages.</p>
+<p>I now use Dropbox&rsquo;s Public folder to host images.  This allows me to easily manage images.  In Lightroom (or any other image organizing software), I can export the images directly to Dropbox&rsquo;s local sync folder and the images immediately becomes available for linking.  If I want to modify images&mdash;such as resizing them&mdash;I can work directly with the Dropbox sync folder without having to make changes to the site.</p>
 
 <h3>Image gallery</h3>
 
@@ -83,21 +83,35 @@
 </span><span class='line'>&lt;/section&gt;</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Each category in the <code>site.categories</code> collection is an array, the first element being the category name and the last containing the pages in the category.  Unfortunately Jekyll&rsquo;s Liquid markup language doesn&rsquo;t have a way to sort a collection of arrays.  I opted to use JavaScript.</p>
+<p>Each category in the <code>site.categories</code> collection is an array, the first element being the category name and the last containing the pages in the category.  Unfortunately Jekyll&rsquo;s Liquid markup language doesn&rsquo;t have a way to sort a collection of arrays.  I opted to use JavaScript. This isn&rsquo;t ideal, but some of Octopress&rsquo;s own asides use the same approach.</p>
 
-<script type="text/javascript">
-  $(function() {
-    var categories = [];
-    $('[data-category]').each(function() {
-      categories.push(this);
-    });
-    categories.sort(function (a, b) {
-      return a.attributes['data-category'].value.toLowerCase() <= b.attributes['data-category'].value.toLowerCase()
-            ? -1 : 1;
-    });
-    $('#categories').html(categories);
-  });
-</script>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">categories</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[data-category]&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">categories</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>    <span class="nx">categories</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">attributes</span><span class="p">[</span><span class="s1">&#39;data-category&#39;</span><span class="p">].</span><span class="nx">value</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="nx">b</span><span class="p">.</span><span class="nx">attributes</span><span class="p">[</span><span class="s1">&#39;data-category&#39;</span><span class="p">].</span><span class="nx">value</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span>
+</span><span class='line'>            <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#categories&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">categories</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>Breadcrumbs</h3>
@@ -209,11 +223,11 @@
 <p>I created a partial consisting of the JavaScript and the necessary CSS, then included it in the <code>pages.html</code> layout.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="o">&amp;</span><span class="nf">#123</span><span class="o">;%</span> <span class="nt">render_partial</span> <span class="nt">_includes</span><span class="o">/</span><span class="nt">custom</span><span class="o">/</span><span class="nt">breadcrumbs</span><span class="nc">.html</span> <span class="o">%&amp;</span><span class="nf">#125</span><span class="o">;</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="p">{</span><span class="o">%</span> <span class="n">render_partial</span> <span class="n">_includes</span><span class="o">/</span><span class="n">custom</span><span class="o">/</span><span class="n">breadcrumbs</span><span class="o">.</span><span class="n">html</span> <span class="o">%</span><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
+<p>Octopress/Jekyll makes it easy to tweak and hack and do so efficiently. I only wish I&rsquo;d made the switch earlier!</p>
 ]]></content>
   </entry>
   
