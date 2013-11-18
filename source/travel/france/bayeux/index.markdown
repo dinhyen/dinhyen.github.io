@@ -16,3 +16,20 @@ This intricate and exotic-looking tower could have been of Elvish construct.
 
 Last visit: June 2004
 In a nutshell: A pleasant base for your exploration of Basse-Normandie
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/bayeux/bayeuxcathedralsideentrance.jpg" data-darkbox="bayeux">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/bayeux/thumbs/bayeuxcathedralsideentrance.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/bayeux/bayeuxcathedraltower.jpg" data-darkbox="bayeux">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/bayeux/thumbs/bayeuxcathedraltower.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/bayeux/bayeuxtwotowers.jpg" data-darkbox="bayeux">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/bayeux/thumbs/bayeuxtwotowers.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/bayeux/bayeuxtwotowersvert.jpg" data-darkbox="bayeux">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/bayeux/thumbs/bayeuxtwotowersvert.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

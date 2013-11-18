@@ -69,3 +69,74 @@ Last visit: June 2004
 Pros: History
 Cons: Crowds and slow vintage military trucks on the freeway
 In a nutshell: ... but being here during the D-Day anniversary is unforgettable
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8840.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8840.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8843.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8843.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8848.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8848.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8850.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8850.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8862.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8862.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8872.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8872.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8874.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8874.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8877.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8877.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8885.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8885.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8887.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8887.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8892.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8892.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8893.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8893.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8931.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8931.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8932.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8932.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8937.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8937.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8937_0.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8937_0.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8938.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8938.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8938_0.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8938_0.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8941.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8941.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8942.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8942.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8943.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8943.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8945.jpg" data-darkbox="arromanches-les-bains">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/thumbs/img_8945.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

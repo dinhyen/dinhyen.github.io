@@ -24,4 +24,44 @@ The massive Palais des Papes is a testament to the wealth of the church and to t
 Last visit: May 2004
 Pros: Palais des Papes
 Cons: Small streets impossible to drive in
-In a nutshell: Yet another facet of infinitely diverse Provence
+In a nutshell: Yet another facet of infinitely diverse Provence<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/avignonhoteldeville.jpg" data-darkbox="avignon">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/avignonhoteldeville.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/avignonpalaisdespapes.jpg" data-darkbox="avignon">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/avignonpalaisdespapes.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/avignonpontdavignon.jpg" data-darkbox="avignon">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/avignonpontdavignon.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/avignonroofs.jpg" data-darkbox="avignon">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/avignonroofs.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7254.jpg" data-darkbox="avignon">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7254.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7255.jpg" data-darkbox="avignon">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7255.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7256.jpg" data-darkbox="avignon">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7256.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7269.jpg" data-darkbox="avignon">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7269.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7273.jpg" data-darkbox="avignon">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7273.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7275.jpg" data-darkbox="avignon">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7275.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7306.jpg" data-darkbox="avignon">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7306.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7323.jpg" data-darkbox="avignon">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7323.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

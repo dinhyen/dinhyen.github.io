@@ -136,4 +136,119 @@ Not so fond memory, hmm. Maybe I'm eccentric (grrr...) but unlike the British I 
 Last visited: 2001
 Pros: Superbly photogenic
 Cons: Streaky weather
-In a nutshell: Love at first sight
+In a nutshell: Love at first sight<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonalberthall01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonalberthall01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonalbertmonument01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonalbertmonument01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonalbertmonumentstatue01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonalbertmonumentstatue01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonbalondoneyefromthames01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonbalondoneyefromthames01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonbigbentop01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonbigbentop01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonbritishmuseumrotunda01-06pc.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonbritishmuseumrotunda01-06pc.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonbritishmuseumview01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonbritishmuseumview01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonbuckinghampalaceview01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonbuckinghampalaceview01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londoneyestaringup01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londoneyestaringup01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londoneyesuspendedbubble01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londoneyesuspendedbubble01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londoneyesuspendedbubble01-06bw.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londoneyesuspendedbubble01-06bw.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonhamptonpalacefountain01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonhamptonpalacefountain01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonharrods01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonharrods01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonmuseumnaturalhistorycolonnade01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonmuseumnaturalhistorycolonnade01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonmuseumnaturalhistoryentrance01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonmuseumnaturalhistoryentrance01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonmuseumnaturalhistorynorthwall01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonmuseumnaturalhistorynorthwall01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonmuseumnaturalhistorynorthwalldetails01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonmuseumnaturalhistorynorthwalldetails01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonmuseumnaturalhistorysouthwall01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonmuseumnaturalhistorysouthwall01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonnelsonscolumn01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonnelsonscolumn01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonphoneboothnearstpaul01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonphoneboothnearstpaul01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonqueenvictoriamemorial01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonqueenvictoriamemorial01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonqueenvictoriamemorialsw01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonqueenvictoriamemorialsw01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonqueenvictoriamemorialwest01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonqueenvictoriamemorialwest01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonsightseeingtourbus01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonsightseeingtourbus01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonstjamesparklake01-06cropped.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonstjamesparklake01-06cropped.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonstmartin01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonstmartin01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonstpaulbelltower01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonstpaulbelltower01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonstpaulfacade01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonstpaulfacade01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonstpaulview01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonstpaulview01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londontowerbridge01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londontowerbridge01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londontrafalgarsquare01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londontrafalgarsquare01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londontrafalgarsquarefountainstmartin01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londontrafalgarsquarefountainstmartin01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londontrafalgarsquarepanorama01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londontrafalgarsquarepanorama01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonviewfromstpaul01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonviewfromstpaul01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonwestminsterabbeyfacade01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonwestminsterabbeyfacade01-06.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonwestminsterpalace01-06pc.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonwestminsterpalace01-06pc.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonzoogiraffe01-06.jpg" data-darkbox="london-2001">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/london-2001/thumbs/londonzoogiraffe01-06.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

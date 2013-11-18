@@ -20,4 +20,35 @@ As can be expected from its location so close to Monaco, Eze is extremely popula
 Last visit: May 2004
 Pros: Picturesque perched village, cute houses
 Cons: Potential crowd
-In a nutshell: The most accessible perched village for those short on time
+In a nutshell: The most accessible perched village for those short on time<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/eze/ezecloseup.jpg" data-darkbox="eze">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/eze/thumbs/ezecloseup.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/eze/ezecutehouse.jpg" data-darkbox="eze">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/eze/thumbs/ezecutehouse.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/eze/ezefifthavenue.jpg" data-darkbox="eze">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/eze/thumbs/ezefifthavenue.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/eze/ezeflowervasewall.jpg" data-darkbox="eze">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/eze/thumbs/ezeflowervasewall.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/eze/ezelane.jpg" data-darkbox="eze">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/eze/thumbs/ezelane.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/eze/ezespiralstairs.jpg" data-darkbox="eze">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/eze/thumbs/ezespiralstairs.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/eze/ezestairsurn.jpg" data-darkbox="eze">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/eze/thumbs/ezestairsurn.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/eze/ezestatuebw.jpg" data-darkbox="eze">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/eze/thumbs/ezestatuebw.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/eze/ezeurnbush.jpg" data-darkbox="eze">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/eze/thumbs/ezeurnbush.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

@@ -17,4 +17,23 @@ As an American, I couldn't help but feel a well of emotions standing in front of
 
 Visiting the D-Day beaches has been one of my dreams. I was fortunate to be here during the week leading to the 60th Anniversary. It was an experience I won't soon forget.
 
-Last visit: June 2004
+Last visit: June 2004<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/colleville-sur-mer/collevillesurmerbackofcrosses.jpg" data-darkbox="colleville-sur-mer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colleville-sur-mer/thumbs/collevillesurmerbackofcrosses.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colleville-sur-mer/collevillesurmerbottomofcross.jpg" data-darkbox="colleville-sur-mer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colleville-sur-mer/thumbs/collevillesurmerbottomofcross.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colleville-sur-mer/collevillesurmercrosscloseup.jpg" data-darkbox="colleville-sur-mer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colleville-sur-mer/thumbs/collevillesurmercrosscloseup.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colleville-sur-mer/collevillesurmerpinkflowers.jpg" data-darkbox="colleville-sur-mer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colleville-sur-mer/thumbs/collevillesurmerpinkflowers.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colleville-sur-mer/collevillesurmeryellowflower.jpg" data-darkbox="colleville-sur-mer">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colleville-sur-mer/thumbs/collevillesurmeryellowflower.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

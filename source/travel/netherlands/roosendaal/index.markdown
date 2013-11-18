@@ -9,6 +9,6 @@ Roosendaal was to be our first stop in Holland. We had ridden the train in from 
 
 I think we must have driven some distance from Roosendaal, but not far. I've forgotten quite a lot after 6 years [Editor's note: as of time of writing, 2005]. But I still have vivid memories of wandering on top of one of the world-famous dikes and inspecting a windmill up close. Now that those 2 must-do activities were out of the way, we settled into a restaurant for dinner, which was... pancakes. I had been accustomed to eating pancakes with syrup, but apparently the Dutch also ate them in quite different manners, with hams, eggs, meat, etc., and it was great. We wandered around town a bit, which must have been a bit strange as we were the only Asians in a decidedly non-tourist destination. After a hectic week in Paris, it was nice to be off-the-beaten-path for once.
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/08/ChurchnearRoosendaal99-06-16.jpg" title="ChurchnearRoosendaal99-06-16" width="640" height="429" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/roosendaal/ChurchnearRoosendaal99-06-16.jpg" title="ChurchnearRoosendaal99-06-16" width="640" height="429" />
 
 Last visit: June 1999

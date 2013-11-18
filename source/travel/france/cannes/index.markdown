@@ -14,3 +14,23 @@ How do you say resort in French? Why, Cannes of course. We got there the last da
 <img src='https://dl.dropboxusercontent.com/u/52804626/cannes/cannesroses.jpg'/>
 
 Last visit: May 2004
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/cannes/cannesclocktower.jpg" data-darkbox="cannes">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/cannes/thumbs/cannesclocktower.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/cannes/cannescoastline.jpg" data-darkbox="cannes">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/cannes/thumbs/cannescoastline.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/cannes/cannespastelfacades.jpg" data-darkbox="cannes">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/cannes/thumbs/cannespastelfacades.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/cannes/cannesrooftops.jpg" data-darkbox="cannes">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/cannes/thumbs/cannesrooftops.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/cannes/cannesroses.jpg" data-darkbox="cannes">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/cannes/thumbs/cannesroses.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

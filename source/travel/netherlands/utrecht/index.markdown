@@ -11,7 +11,7 @@ While walking around town, I had another unexpected encounter. One of the street
 
 Our hosts took us to this castle in the vicinity of Utrecht. There was noone else besides our group. The caretaker/tourguide spoke English, for our sake, interspersed with some Dutch. I thought the toilet in one of the bedchambers on the upper floors was interesting. It was just a seat with a hole, which opened directly onto the moat below :) Our tourguide was a mischievous fellow. He obviously delighted in talking about a hole-like oubliette into which poor prisoners would be thrown and left to starve to death, much to the horror of the females in our group :)
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/08/DutchCastle99-06-16.jpg" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/utrecht/DutchCastle99-06-16.jpg" />
 
 After Utrecht, we headed north again, this time to The Hague to visit my friend's other sister. In retrospect, Holland wasn't a spectacular tourist destination, but I enjoyed my visit immensely thanks to our gracious hosts. Unfortunately due to circumstances beyond my control, I probably will not have a chance to see them again. But I'll always remember and thank RvB, JvB, MK, and the rest of the family for the wonderful memories.
 

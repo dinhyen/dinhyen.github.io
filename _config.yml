@@ -122,10 +122,10 @@ travel:
       url:  2011/05/30/costa-rica-day-5-saturday-monteverde
     - name: Monteverde 2
       url:  2011/05/30/costa-rica-day-6-sunday-monteverde-to-san-jose
-    - name: "Volcan Po&acute;s"
-      url:  2011/05/29-costa-rica-day-2-wednesday-san-jose-to-arenal
+    - name: "Volcan Po&aacute;s"
+      url:  2011/05/29/costa-rica-day-2-wednesday-san-jose-to-arenal
     - name: San Jose
-      url:  2011/05/30-costa-rica-day-7-monday-san-jose
+      url:  2011/05/30/costa-rica-day-7-monday-san-jose
   france:
     - name: Aix-en-Provence
       url: aix-en-provence

@@ -117,3 +117,113 @@ Last visit: June 2003
 Pros: Extremely picturesque, small-town charms you'd only read about
 Cons: Not many attractions
 In a nutshell: Lovely
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/colmarfontainebruat.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/colmarfontainebruat.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/colmarhotelsaintmartin.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/colmarhotelsaintmartin.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/colmarpetitevenisecanal.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/colmarpetitevenisecanal.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/colmarpetiteveniserail.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/colmarpetiteveniserail.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/colmarpetitevenisetall.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/colmarpetitevenisetall.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/colmarquaidestanneurs.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/colmarquaidestanneurs.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/colmarquaidestanneursflowers.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/colmarquaidestanneursflowers.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/colmarstatue.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/colmarstatue.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/colmarstreetnearcustomhouse.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/colmarstreetnearcustomhouse.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/colmarwatertower.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/colmarwatertower.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4049.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4049.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4051.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4051.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4052.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4052.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4055.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4055.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4059.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4059.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4060.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4060.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4062.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4062.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4064.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4064.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4065.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4065.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4071.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4071.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4077.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4077.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4081.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4081.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4082s.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4082s.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4085.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4085.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4087.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4087.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4093.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4093.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4099.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4099.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4101.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4101.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4117.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4117.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4120.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4120.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4126.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4126.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4130.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4130.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4132.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4132.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4137.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4137.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/colmar/img_4144.jpg" data-darkbox="colmar">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/colmar/thumbs/img_4144.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

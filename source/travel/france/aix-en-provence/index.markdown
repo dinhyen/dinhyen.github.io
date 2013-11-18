@@ -59,3 +59,47 @@ Last visit: May 2004
 Pros: Some historical connections, trace the footsteps of Cézanne, vibrant small-town
 Cons: No major attractions
 In a nutshell: One of many principal rest stops in Provence
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceateliercezannefacade.jpg" data-darkbox="aix-en-provence">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovenceateliercezannefacade.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceateliercezannevert.jpg" data-darkbox="aix-en-provence">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovenceateliercezannevert.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencecafelesdeuxgarcons.jpg" data-darkbox="aix-en-provence">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencecafelesdeuxgarcons.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencecoursmirabeau.jpg" data-darkbox="aix-en-provence">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencecoursmirabeau.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencefontaine.jpg" data-darkbox="aix-en-provence">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencefontaine.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencefontainequatredauphins.jpg" data-darkbox="aix-en-provence">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencefontainequatredauphins.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencefontainesquare.jpg" data-darkbox="aix-en-provence">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencefontainesquare.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceleroi.jpg" data-darkbox="aix-en-provence">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovenceleroi.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencemonument.jpg" data-darkbox="aix-en-provence">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencemonument.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceplacecharlesdegaulle.jpg" data-darkbox="aix-en-provence">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovenceplacecharlesdegaulle.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencestatuefence.jpg" data-darkbox="aix-en-provence">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencestatuefence.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencestreetscene.jpg" data-darkbox="aix-en-provence">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencestreetscene.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencewindows.jpg" data-darkbox="aix-en-provence">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencewindows.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->
