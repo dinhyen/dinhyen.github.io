@@ -21,5 +21,3 @@ Last visit: May 2004
 Pros: Picturesque perched village, cute houses
 Cons: Potential crowd
 In a nutshell: The most accessible perched village for those short on time
-
-[nggallery id=49]

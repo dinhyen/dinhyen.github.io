@@ -1,18 +1,10 @@
 ---
 layout: page
 title: Connelles
-categories: []
-tags: []
 status: publish
-type: page
 published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _wp_page_template: default
 ---
-<h1>Connelles</h1>
-<h3><em>Romantic Connelles</em></h3>
+<h3>Romantic Connelles</h3>
 
 Connelles was our "homebase" in Normandie. Even though it was a tiny morsel of a town, it was no less romantic, thanks in no small part to the fact that it was home to the dramatically named Côte des Deux Amants, the "Coast of Two Lovers". The town snuggles against a gentle bend of the Sein, and is covered in the lushness of gardens and farms.
 

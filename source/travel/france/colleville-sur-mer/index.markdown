@@ -18,5 +18,3 @@ As an American, I couldn't help but feel a well of emotions standing in front of
 Visiting the D-Day beaches has been one of my dreams. I was fortunate to be here during the week leading to the 60th Anniversary. It was an experience I won't soon forget.
 
 Last visit: June 2004
-
-[nggallery id=45]

@@ -1,17 +1,9 @@
 ---
 layout: page
 title: Nijmegen
-categories: []
-tags: []
-status: publish
-type: page
 published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
-<h1>Nijmegen</h1>
-<h3><em>The bridge at Nijmegen</em></h3>
+<h3>The bridge at Nijmegen</h3>
 
 I was really excited to have the chance to visit Nijmegen, as the town was a focal point of Operation Market Garden in WWII. Operation Market Garden, the largest airborne assault of the war, was an ambitious and daring move aimed at bypassing formidable German defense on the Rhine and thrusting directly into Germany from occupied Holland. The objectives were the bridges at Arnhem, Nijmegen, and Eindhoven, which were to be secured behind enemy lines by British, American and Polish airborne divisions. British forces would advance from the south over the intact bridges, thus achieving a breakthrough. Furthermore, if successful, the Allies advance would be supplied by the nearby port at Antwerp, instead of the ports in northern France much further away. The Nijmegen sector was the responsibility of the 82nd Airborne Division, which had played such an important role during the D-Day invasion. The 82nd achieved its objective and captured and held the bridge in the face of fierce Germany resistance. In the end, though, their efforts and sacrifices were in vain. The German high command, realizing the danger posed by the airborne landings, committed all their available resources to crushing them. In the end, the paratroopers had to be withdrawn. The operation was a costly and gallant failure, its only legacy being the memories of the fast-dwindling number of veterans who fought here and the locals who lived through these times.
 

@@ -25,5 +25,3 @@ Last visit: May 2004
 Pros: Palais des Papes
 Cons: Small streets impossible to drive in
 In a nutshell: Yet another facet of infinitely diverse Provence
-
-[nggallery id=51]

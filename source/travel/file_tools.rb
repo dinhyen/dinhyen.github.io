@@ -24,6 +24,22 @@ class FileTools < Thor
       system "mv #{f} #{new_f}" if File.file? f
     end
   end
+
+  desc 'markdown_to_index', 'Replace xxx.markdown with xxx/index.markdown'
+  def markdown_to_index
+    files = Dir.glob('**/*.markdown')
+    files.each do |f|
+      dir = File.dirname f
+      file = File.basename f, '.*'
+      ext = File.extname f
+      if file != 'index'
+        full_dir = File.join(dir, file)
+        Dir.mkdir "#{full_dir}"
+        system "mv #{f} #{full_dir}/index.markdown"
+      end
+    end
+  end
+
 end
 
 FileTools.start

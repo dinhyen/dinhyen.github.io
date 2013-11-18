@@ -24,5 +24,3 @@ It may be surprising that Massachusetts is the home of many waterfalls, some spe
 
 </tr>
 </table>
-
-[nggallery id=24]

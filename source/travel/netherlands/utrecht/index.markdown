@@ -1,18 +1,8 @@
 ---
 layout: page
 title: Utrecht
-categories: []
-tags: []
-status: publish
-type: page
 published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
-  _wp_page_template: default
 ---
-<h1>Utrecht</h1>
-
 I had a great time staying with the family of my friend's older sister. By this time I was thoroughly impressed with Dutch hospitality. The couple, whose last name I happen to remember because it's the same as that of a US president, showed us around their town of Utrecht, took us to a see a Dutch castle and accompanied us to Amsterdam.
 
 Utrecht is a small but lively town. It appeared to have a large student population. We toured the "downtown" area, which not so surprisingly was concentrated around a canal. It was a lively shopping district packed with people; there was even an outdoor classical concert. Here I discovered another delicious Dutch treat, appelbol, which was a whole apple covered with syrup, if I remember correctly. I seemed to have discovered my sweet tooth in Holland. We also had our first encounter with the "coffee shop", which as it turned out sold more than just coffee. We had dinner at quite an exotic place. The dark, dungeon-like restaurant likely had been converted from either an underground storage cellar or a sewer. The menu had a decidedly Indo-Malaysian flair; I had the satay beef, I think. 
@@ -21,7 +11,7 @@ While walking around town, I had another unexpected encounter. One of the street
 
 Our hosts took us to this castle in the vicinity of Utrecht. There was noone else besides our group. The caretaker/tourguide spoke English, for our sake, interspersed with some Dutch. I thought the toilet in one of the bedchambers on the upper floors was interesting. It was just a seat with a hole, which opened directly onto the moat below :) Our tourguide was a mischievous fellow. He obviously delighted in talking about a hole-like oubliette into which poor prisoners would be thrown and left to starve to death, much to the horror of the females in our group :)
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/08/DutchCastle99-06-16.jpg" alt="" title="DutchCastle99-06-16" width="640" height="441" class="alignnone size-full wp-image-1820" />
+<img src="http://www.yentran.org/blog/wp-content/uploads/2012/08/DutchCastle99-06-16.jpg" />
 
 After Utrecht, we headed north again, this time to The Hague to visit my friend's other sister. In retrospect, Holland wasn't a spectacular tourist destination, but I enjoyed my visit immensely thanks to our gracious hosts. Unfortunately due to circumstances beyond my control, I probably will not have a chance to see them again. But I'll always remember and thank RvB, JvB, MK, and the rest of the family for the wonderful memories.
 

@@ -15,11 +15,8 @@ I had seen the impossibly beautiful canyons in the southwestern USA, so I was pr
 
 The road winds along seemingly sheer rock faces. Many pull-outs along the route allow visitors to enjoy the scenery. The north and south rims are connected by an amazing bridge. I am sure there are many hiking trails here as well.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/gorges-du-verdon/canyonduverdonstrand.jpg'/>
+<img src='https://dl.dropboxusercontent.com/u/52804626/gorges-du-verdon/canyonduverdonstrand.jpg'/>Last visit: May 2004
 
-[nggallery id=44]
-
-Last visit: May 2004
 Pros: The scenery
 Cons: Takes a while to get here
 In a nutshell: Must-see, even if you're not the "nature type"

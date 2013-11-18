@@ -105,3 +105,85 @@ google_analytics_tracking_id: UA-24469490-1
 
 # Facebook Like
 facebook_like: false
+
+# ----------------------- #
+#   Page Settings         #
+# ----------------------- #
+travel:
+  canada:
+    - name: "Qu&eacute;bec"
+      url:  2011/07/05/quebec-1-july
+  costa-rica:
+    - name: Volcan Arenal
+      url:  2011/05/30/costa-rica-day-3-thursday-arenal
+    - name: Caño Negro National Wildlife Refuge
+      url:  2011/05/30/costa-rica-day-4-friday-arenal-to-monteverde
+    - name: Monteverde 1
+      url:  2011/05/30/costa-rica-day-5-saturday-monteverde
+    - name: Monteverde 2
+      url:  2011/05/30/costa-rica-day-6-sunday-monteverde-to-san-jose
+    - name: "Volcan Po&acute;s"
+      url:  2011/05/29-costa-rica-day-2-wednesday-san-jose-to-arenal
+    - name: San Jose
+      url:  2011/05/30-costa-rica-day-7-monday-san-jose
+  france:
+    - name: Aix-en-Provence
+      url: aix-en-provence
+    - name: Arromanches-les-Bains
+      url:  arromanches-les-bains
+    - name: Avignon
+      url:  avignon
+    - name: Bayeux
+      url:  bayeux
+    - name: Bonnieux
+      url:  bonnieux
+    - name: Cannes
+      url:  cannes
+    - name: Colleville-sur-Mer
+      url:  colleville-sur-mer
+    - name: Colmar
+      url:  colmar
+    - name: Connelles
+      url:  connelles
+    - name: "&Eacute;tretat"
+      url:  etretat
+    - name: "&Egrave;ze"
+      url:  eze
+    - name: Gorges du Verdon
+      url:  gorges-du-verdon
+  netherlands:
+    - name: Amsterdam
+      url:  amsterdam
+    - name: Arnhem
+      url:  arnhem
+    - name: Boxmeer
+      url:  boxmeer
+    - name: Delft
+      url:  delft
+    - name: Nijmegen
+      url:  nijmegen
+    - name: Roosendaal
+      url:  roosendaal
+    - name: The Hague
+      url:  the-hague
+    - name: Urk
+      url:  urk
+    - name: Utrecht
+      url:  utrecht
+  peru:
+    - name: Cusco
+      url:  2012/07/17/cusco
+    - name: Lima
+      url:  2012/07/16/lima
+    - name: Machu Picchu
+      url:  2012/07/31/machu-picchu
+    - name: Ollantaytambo
+      url:  2012/08/07/ollantaytambo
+    - name: Pisac
+      url:  2012/07/19/pisac
+    - name: Sacsayhuaman
+      url:  2012/07/24/sacsayhuaman
+
+
+
+
