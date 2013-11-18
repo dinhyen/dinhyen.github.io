@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>So long WordPress, hello Octopress - Yen's Blog</title>
+  <meta name="author" content="Yen Tran">
+
+  
+  <meta name="description" content="I&rsquo;ve been using WordPress since 2011. It works well enough, but for me there are few drawbacks. It&rsquo;s slow. It takes time to do anything &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dinhyen.github.io/blog/2013/11/18/so-long-wordpress-hello-octopress">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Yen's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="/stylesheets/darkbox.css" rel="stylesheet" type="text/css">
+<script src="/javascripts/darkbox.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24469490-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Yen's Blog</a></h1>
+  
+    <h2>Lens, Wheels, Skates, Keyboard</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dinhyen.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/travel">Travel</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">So Long WordPress, Hello Octopress</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-18T06:32:00-05:00" pubdate data-updated="true">Nov 18<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I&rsquo;ve been using WordPress since 2011.  It works well enough, but for me there are few drawbacks.</p>
+
+<ul>
+<li><p>It&rsquo;s slow. It takes time to do anything from creating a post to previewing to deploying it.  I prefer to edit text in a proper text editor, with the full array of keyboard shortcuts, so I usually end up copying and pasting anyways.  But using the UI to do everything is cumbersome.  Of course I could install a local instance of WordPress so I can preview locally.  However, I would have to deploy everything, posts and images, every time. This seems inefficient for just adding a new post.</p></li>
+<li><p>It&rsquo;s hard to backup.  I could export the WordPress content as an XML file, but this is only useful to WordPress.  For a full manual backup, I would use Control Panel to export the database, then FTP into the site and download the entire WordPress content folder as an archive.  This is time-consuming and a far cry from proper version control.</p></li>
+<li><p>It&rsquo;s hard to customize.  There are probably a dozen plugins for anything I will ever want to do.  While I could view and edit the plugin source, without an easy way to test it&rsquo;s effectively a blackbox.  Further, I wouldn&rsquo;t want to have deal with PHP just to customize a plugin.</p></li>
+</ul>
+
+
+<p>So it&rsquo;s an easy to decision to put WordPress out to pasture.  I looked at Jekyll and deploying on Heroku. Jekyll seems like a good choice because it&rsquo;s used by GitHub, so it&rsquo;s more likely to be developed and less likely to go away.  I also checked out <a href="http://ruhoh.org">Ruhoh</a>, which is created by a Jekyll developer to address some of its shortcomings.  I really liked Ruhoh for the customizability, <a href="http://mustache.github.io">Mustache</a> markup syntax and incremental page generation.  I may go back to Ruhoh at some point.  I finally settled on Octopress.  It adds a theming engine and a host of productivity enhancements to Jekyll as well as beautiful syntax highlighting.  It makes it trivially simple to deploy to GitHub Pages.</p>
+
+<p>There are many good articles written about using Octopress.  The <a href="http://octopress.org/docs">documentation</a>, for one, is a very good place to start.  Here are just some of the issues I ran into along the way.</p>
+
+<h3>Importing from WordPress</h3>
+
+<p>I used Jekyll&rsquo;s <a href="http://jekyllrb.com/docs/migrations">migration tools</a>, specifically <code>hpricot</code> to process a WordPress export XML file to generate posts and pages.  The process worked quite well, although as expected some manual cleanups were necessary.</p>
+
+<h3>Setting up DNS</h3>
+
+<p>This is probably a no-brainer for many people, unfortunately I&rsquo;m not among them.  Since my blog is now hosted by GitHub Pages, I had to configure my DNS to point my domain to the new IP address.  The process is quite clearly laid out in the <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">documentation</a>.  In my case, I had to create an <em>A record</em> for my top-level domain, yentran.org, to point to <code>204.232.175.78</code>.  I also created a CNAME record for the subdomain www.yentran.org as an alias which points to the same address.  I was concerned that my email address <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x78;&#120;&#x78;&#x40;&#x79;&#x65;&#110;&#x74;&#x72;&#x61;&#110;&#46;&#x6f;&#114;&#103;">&#x78;&#120;&#x78;&#x40;&#121;&#x65;&#x6e;&#x74;&#114;&#97;&#x6e;&#46;&#x6f;&#x72;&#103;</a> would be broken.  It turns not to be the case.  Email forwarding relies on a MX record, which continues to point to my ISP&rsquo;s IP address.  There&rsquo;s also a wildcard record, which catches any unknown subdomain for which there is no matching A or CNAME record.</p>
+
+<h3>Images</h3>
+
+<p>Previously I used NextGen gallery to manage images.  NextGen stores images in separate folders, so it&rsquo;s simple to copy them (rather than searching for them on my hard drive).</p>
+
+<p>I now use Dropbox&rsquo;s Public folder to host images.  This allows me to easily manage images.  In Lightroom (or any other image organizing software), I can export the images directly to Dropbox&rsquo;s local sync folder and the images immediately becomes available for linking.  If I want to modify images&mdash;such as resizing them&mdash;I can work directly with the Dropbox sync folder without having to make changes to the web pages.</p>
+
+<h3>Image gallery</h3>
+
+<p>I used Lightbox 2 jQuery plugin to display an image gallery.  However, it doesn&rsquo;t work with hotlinked images.  I decided to <a href="https://github.com/dinhyen/darkbox">roll my own</a>.</p>
+
+<p>I wrote a small Ruby + <a href="http://whatisthor.com">Thor</a> to generate the necessary markup for images based on the Dropbox folder  and append it to posts.  Thor is awesome.</p>
+
+<h3>Blogging with Octopress</h3>
+
+<p>Everytime you add or modify a post or page, Jekyll regenerates the entire site.  This is so that it can properly update the site metadata.  However, this can take a long time, particularly if you have many posts and pages.  Octopress provides a useful optimization tool.  Type <code>rake isolate["blog name"]</code> moves all other posts except the specified post into a _stash folder, so that regeneration is significantly faster.  Once you&rsquo;re done, type <code>rake integrate</code> to move the other posts back; just don&rsquo;t forget to do this before deploying.</p>
+
+<h3>Categories</h3>
+
+<p>Octopress doesn&rsquo;t provide an out-of-the-box way to display categories, but this can be easily done. I want display them as an aside (Octopress-speak for a sidebar plugin or partial).  I based mine on Octostrap3&rsquo;s <a href="http://kaworu.github.io/octopress/blog/2013/10/03/category-list-aside">Category List aside</a>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;section&gt;
+</span><span class='line'>  &lt;h1&gt;Categories&lt;/h1&gt;
+</span><span class='line'>  &lt;ul id="categories"&gt;
+</span><span class='line'>    &#123;% for category in site.categories %&#125;
+</span><span class='line'>     &#123;% capture category_url %&#125;&#123;&#123; site.category_dir &#125;&#125;/&#123;&#123; category | first | slugize | downcase | replace:' ','-' &#125;&#125;&#123;% endcapture %&#125;
+</span><span class='line'>      &lt;li data-category="&#123;&#123; category | first &#125;&#125;"&gt;
+</span><span class='line'>        &lt;a href="&#123;&#123; root_url | append:'/' | append:category_url &#125;&#125;"&gt;&#123;&#123; category | first &#125;&#125;&lt;/a&gt; &lt;em&gt;&#123;&#123; category | last | size &#125;&#125;&lt;/em&gt;
+</span><span class='line'>      &lt;/li&gt;
+</span><span class='line'>    &#123;% endfor %&#125;
+</span><span class='line'>  &lt;/ul&gt;
+</span><span class='line'>&lt;/section&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Each category in the <code>site.categories</code> collection is an array, the first element being the category name and the last containing the pages in the category.  Unfortunately Jekyll&rsquo;s Liquid markup language doesn&rsquo;t have a way to sort a collection of arrays.  I opted to use JavaScript.</p>
+
+<script type="text/javascript">
+  $(function() {
+    var categories = [];
+    $('[data-category]').each(function() {
+      categories.push(this);
+    });
+    categories.sort(function (a, b) {
+      return a.attributes['data-category'].value.toLowerCase() <= b.attributes['data-category'].value.toLowerCase()
+            ? -1 : 1;
+    });
+    $('#categories').html(categories);
+  });
+</script>
+
+
+<h3>Breadcrumbs</h3>
+
+<p>This would be another nice-to-have for Octopress.  There are a few solutions to display breadcrumbs using Liquid.  However, the more I work with Liquid, the less I like it.  I would much prefer Mustache.  So I again went with a JavaScript solution, which would still work if later on I happen to go with different blogging framework.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">breadcrumbs</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">url_parts</span><span class="p">,</span> <span class="nx">$html</span><span class="p">,</span> <span class="nx">$li</span><span class="p">,</span> <span class="nx">$content</span><span class="p">,</span> <span class="nx">href</span><span class="p">,</span> <span class="nx">text</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="nx">i</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">url</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">url_parts</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">grep</span><span class="p">(</span><span class="nx">url</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/index\.html/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="sr">/\//</span><span class="p">),</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">x</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">url_parts</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if at the top level</span>
+</span><span class='line'>    <span class="k">return</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">$html</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;ol class=&quot;breadcrumbs&quot;&gt;&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">url_parts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">text</span> <span class="o">=</span> <span class="nx">url_parts</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span><span class='line'>    <span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="nx">url_parts</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">$content</span> <span class="o">=</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">url_parts</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;a&gt;&#39;</span><span class="p">).</span><span class="nx">prop</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">,</span> <span class="nx">href</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="o">:</span> <span class="nx">text</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$content</span><span class="p">).</span><span class="nx">appendTo</span><span class="p">(</span><span class="nx">$html</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="nx">$html</span><span class="p">.</span><span class="nx">insertAfter</span><span class="p">(</span><span class="s1">&#39;#breadcrumbs-js&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">breadcrumbs</span><span class="p">();</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s the CSS:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.breadcrumbs</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">font-family</span><span class="o">:</span> <span class="n">PT</span> <span class="n">Sans</span><span class="o">,</span> <span class="n">helvetica</span><span class="o">,</span> <span class="k">sans-serif</span><span class="o">,</span> <span class="n">arial</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">padding</span><span class="o">:</span> <span class="m">30px</span> <span class="m">15px</span> <span class="m">0</span> <span class="m">55px</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.breadcrumbs</span> <span class="nt">li</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">list-style</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">padding-left</span><span class="o">:</span> <span class="m">15px</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.breadcrumbs</span> <span class="nt">li</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:last-child</span><span class="o">)</span><span class="nd">:after</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">padding-left</span><span class="o">:</span> <span class="m">15px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;/&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.breadcrumbs</span> <span class="nt">li</span><span class="nd">:first-child</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">padding-left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c">/* Octopress classic theme */</span>
+</span><span class='line'><span class="nf">#content</span> <span class="nc">.breadcrumbs</span> <span class="o">+</span> <span class="nt">div</span> <span class="o">&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">margin-top</span><span class="o">:</span> <span class="m">15px</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#content</span> <span class="nc">.breadcrumbs</span> <span class="o">+</span> <span class="nt">div</span> <span class="o">&gt;</span> <span class="nt">article</span> <span class="o">&gt;</span> <span class="nt">header</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">padding-top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I created a partial consisting of the JavaScript and the necessary CSS, then included it in the <code>pages.html</code> layout.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="o">&amp;</span><span class="nf">#123</span><span class="o">;%</span> <span class="nt">render_partial</span> <span class="nt">_includes</span><span class="o">/</span><span class="nt">custom</span><span class="o">/</span><span class="nt">breadcrumbs</span><span class="nc">.html</span> <span class="o">%&amp;</span><span class="nf">#125</span><span class="o">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Yen Tran</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-18T06:32:00-05:00" pubdate data-updated="true">Nov 18<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dinhyen.github.io/blog/2013/11/18/so-long-wordpress-hello-octopress/" data-via="dinhyen" data-counturl="http://dinhyen.github.io/blog/2013/11/18/so-long-wordpress-hello-octopress/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/11/13/sigma-50mm-lens/" title="Previous Post: Sigma 50mm f/1.4 lens for Nikon AF">&laquo; Sigma 50mm f/1.4 lens for Nikon AF</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Categories</h1>
+  <ul id="categories">
+    
+     
+      <li data-category="Photoshop">
+        <a href="/blog/categories/photoshop">Photoshop</a> <em>2</em>
+      </li>
+    
+     
+      <li data-category="travel">
+        <a href="/blog/categories/travel">travel</a> <em>20</em>
+      </li>
+    
+     
+      <li data-category="outdoors">
+        <a href="/blog/categories/outdoors">outdoors</a> <em>6</em>
+      </li>
+    
+     
+      <li data-category="photography">
+        <a href="/blog/categories/photography">photography</a> <em>20</em>
+      </li>
+    
+     
+      <li data-category="hockey">
+        <a href="/blog/categories/hockey">hockey</a> <em>10</em>
+      </li>
+    
+     
+      <li data-category="city">
+        <a href="/blog/categories/city">city</a> <em>5</em>
+      </li>
+    
+     
+      <li data-category="cycling">
+        <a href="/blog/categories/cycling">cycling</a> <em>3</em>
+      </li>
+    
+     
+      <li data-category="drawing">
+        <a href="/blog/categories/drawing">drawing</a> <em>1</em>
+      </li>
+    
+     
+      <li data-category="technology">
+        <a href="/blog/categories/technology">technology</a> <em>34</em>
+      </li>
+    
+     
+      <li data-category="review">
+        <a href="/blog/categories/review">review</a> <em>25</em>
+      </li>
+    
+     
+      <li data-category="hiking">
+        <a href="/blog/categories/hiking">hiking</a> <em>9</em>
+      </li>
+    
+  </ul>
+</section>
+<script type="text/javascript">
+  $(function() {
+    var categories = [];
+    $('[data-category]').each(function() {
+      categories.push(this);
+    });
+    categories.sort(function (a, b) {
+      return a.attributes['data-category'].value.toLowerCase() <= b.attributes['data-category'].value.toLowerCase()
+            ? -1 : 1;
+    });
+    $('#categories').html(categories);
+  });
+</script>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/so-long-wordpress-hello-octopress/">So Long WordPress, Hello Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/13/sigma-50mm-lens/">Sigma 50mm f/1.4 Lens for Nikon AF</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/02/fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/">Fixing Windows Media Center No Tuner Available Error With HDHomeRun Prime</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/31/helper-method-generate-nested-tags-from-block/">Helper Method to Generate Nested Tags From Block</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/23/bruins-took-down-sabres-in-costly-victory/">Bruins Took Down Sabres in Costly Victory</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Yen Tran -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
