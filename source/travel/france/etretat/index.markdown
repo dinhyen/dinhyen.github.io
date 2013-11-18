@@ -9,15 +9,15 @@ Our coastal tour of Normandy en route from Fécamp to Le Havre took us to Étret
 
 La Falaise d'Aval.
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/08/IMG_8812.jpg" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/etretat/img_8812.jpg" />
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/08/EtretatRock1.jpg" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/etretat/EtretatRock1.jpg" />
 
 La Falaise d'Amont.
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/08/IMG_8816.jpg" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/etretat/img_8816.jpg" />
 
-<img src="http://www.yentran.org/blog/wp-content/uploads/2012/08/EtretatCliffEast.jpg" />
+<img src="https://dl.dropboxusercontent.com/u/52804626/etretat/EtretatCliffEast.jpg" />
 
 Last visit: June 2004
 Pros: Nice walk
