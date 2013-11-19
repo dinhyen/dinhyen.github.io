@@ -1,10 +1,12 @@
+/*global window */
 function breadcrumbs() {
-  var url_parts, $html, $li, $content, href, text, url, i;
+  // TODO: Move setting to site collection?
+  var SHOW_FOR_ROOTS = ['travel'], url_parts, $html, $li, $content, href, text, url, i;
 
   url = window.location.pathname;
   url_parts = $.grep(url.replace(/index\.html/, '').split(/\//), function (x) { return x.length > 0; });
 
-  if (url_parts.length === 1) { // if at the top level
+  if (SHOW_FOR_ROOTS.indexOf(url_parts[0]) < 0 || url_parts.length === 1) { // if not in show list or at the top level
     return;
   }
 
