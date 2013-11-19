@@ -2,7 +2,8 @@
 layout: post
 title: Hub on Wheels 2010
 categories:
-- cycling
+- outdoors
+- city
 - photography
 tags:
 - Boston

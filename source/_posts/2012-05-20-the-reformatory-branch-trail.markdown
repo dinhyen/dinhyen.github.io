@@ -2,7 +2,7 @@
 layout: post
 title: The Reformatory Branch Trail
 categories:
-- cycling
+- outdoors
 tags:
 - cycling
 - trail

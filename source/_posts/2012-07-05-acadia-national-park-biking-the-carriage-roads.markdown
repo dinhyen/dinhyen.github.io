@@ -2,7 +2,7 @@
 layout: post
 title: ! 'Acadia National Park: Biking the carriage roads'
 categories:
-- cycling
+- outdoors
 tags:
 - acadia national park
 - carriage roads
