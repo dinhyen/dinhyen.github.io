@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Top 10 archive"
-date: 2013-11-19 08:06
 comments: true
 categories: other
 ---

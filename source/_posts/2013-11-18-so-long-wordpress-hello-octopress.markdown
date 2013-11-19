@@ -1,7 +1,6 @@
 ---
 layout: post
 title: So long WordPress, hello Octopress
-date: 2013-11-18 06:32
 comments: true
 categories: 
 - technology

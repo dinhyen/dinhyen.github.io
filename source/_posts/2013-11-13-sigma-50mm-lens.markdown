@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Sigma 50mm f/1.4 lens for Nikon AF"
-date: 2013-11-13 04:25
 comments: true
 categories:
 - review
