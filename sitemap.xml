@@ -116,7 +116,7 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2011/07/10/hub-on-wheels-2010/</loc>
-        <lastmod>2013-11-17T11:22:16-05:00</lastmod>
+        <lastmod>2013-11-19T09:20:01-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2011/07/14/the-doors-of-boston/</loc>
@@ -380,7 +380,7 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2012/05/20/the-reformatory-branch-trail/</loc>
-        <lastmod>2013-11-17T11:22:16-05:00</lastmod>
+        <lastmod>2013-11-19T09:19:15-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2012/06/29/editing-collection-with-linq-to-sql/</loc>
@@ -390,7 +390,7 @@
         <loc>
             http://dinhyen.github.io/blog/2012/07/05/acadia-national-park-biking-the-carriage-roads/
         </loc>
-        <lastmod>2013-11-17T11:22:16-05:00</lastmod>
+        <lastmod>2013-11-19T09:18:41-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2012/07/05/acadia-national-park-gorham-mountain/</loc>
@@ -556,7 +556,11 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2013/11/18/so-long-wordpress-hello-octopress/</loc>
-        <lastmod>2013-11-18T17:48:13-05:00</lastmod>
+        <lastmod>2013-11-19T09:29:05-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/blog/2013/11/19/top-10-archive/</loc>
+        <lastmod>2013-11-19T09:24:05-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/about/</loc>
@@ -564,11 +568,11 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/archives/</loc>
-        <lastmod>2013-11-18T17:48:13-05:00</lastmod>
+        <lastmod>2013-11-19T09:29:05-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/</loc>
-        <lastmod>2013-11-18T17:48:13-05:00</lastmod>
+        <lastmod>2013-11-19T09:29:05-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/robots.txt</loc>
@@ -580,7 +584,7 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/costa-rica/</loc>
-        <lastmod>2013-11-18T17:49:11-05:00</lastmod>
+        <lastmod>2013-11-19T09:29:42-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/czech-republic/cesky-krumlov/</loc>
@@ -640,7 +644,7 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/</loc>
-        <lastmod>2013-11-18T17:49:48-05:00</lastmod>
+        <lastmod>2013-11-19T09:29:42-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/netherlands/amsterdam/</loc>
