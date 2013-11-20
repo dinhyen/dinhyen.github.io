@@ -1,8 +1,11 @@
 ---
 layout: page
 title: "strasbourg"
-date: 2013-11-18 18:04
 comments: true
 sharing: true
 footer: true
 ---
+<h1>Strasbourg</h1>
+<h3><em>The grandest sight on earth</em></h3>
+
+It's been a year and I no longer have the recollection to do a proper write-up for Strasbourg. so I'll just stick all the photos here. Enjoy the tour in silence :)

@@ -6,10 +6,6 @@ tags: []
 status: publish
 type: page
 published: true
-meta:
-  _edit_last: '1'
-  aktt_notify_twitter: 'no'
-  _wp_page_template: default
 ---
 <h1>London</h1>
 

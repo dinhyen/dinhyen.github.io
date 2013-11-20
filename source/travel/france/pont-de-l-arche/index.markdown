@@ -1,8 +1,11 @@
 ---
 layout: page
 title: "pont-de-l-arche"
-date: 2013-11-18 18:01
 comments: true
 sharing: true
 footer: true
 ---
+<h1>Pont-de-l'Arche</h1>
+While we stayed in tiny Connelles, Pont-de-l'Arche was the closest town that was of a reasonable size. So this was where we did most of the groceries shopping. And I also drove through it lots of time on the way back from our trips elsewhere :)
+
+Last visit: 2004

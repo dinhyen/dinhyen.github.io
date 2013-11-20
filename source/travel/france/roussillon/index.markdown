@@ -1,8 +1,11 @@
 ---
 layout: page
 title: "roussillon"
-date: 2013-11-18 18:02
 comments: true
 sharing: true
 footer: true
 ---
+<h1>Roussillon</h1>
+<h3><em>Red Roussillon</em></h3>
+
+Roussillon is reputed to be one of the most beautiful of the villages in the Vaucluse. It's best known for the striking red-orange cliffs that overlook the verdant valley far below. The fiery sandstone, also known as ocre, is mined to produce dyes used by painters. Roussillon exemplifies the amazingly vibrant colors for which this country is known around the world.

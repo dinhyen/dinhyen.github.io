@@ -1,8 +1,10 @@
 ---
 layout: page
-title: "mondsee"
-date: 2013-11-18 18:00
+title: Mondsee
 comments: true
 sharing: true
 footer: true
 ---
+We made the short detour to Mondsee en route from Salzburg to Vienna, for the express purpose of seing the church where Maria married Captain von Trapp. If you have no idea what I'm talking about, me too :) I only became aware of this fact through my Sound of Music-obsessed travel companion.
+
+Last visit: 2003

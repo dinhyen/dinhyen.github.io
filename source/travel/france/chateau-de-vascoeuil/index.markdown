@@ -1,8 +1,12 @@
 ---
 layout: page
 title: "vascoeuil"
-date: 2013-11-18 18:04
 comments: true
 sharing: true
 footer: true
 ---
+<h1>Vascooeuil</h1>
+
+We came here to see the Chateau de Vascoeuil, which interestingly has a replica of the Statue of Liberty. As our luck would have it, we got lost (those were the paper map days) and got here too late to be able to get in.  Next time we'll bring a GPS.
+
+Last visit: 2004

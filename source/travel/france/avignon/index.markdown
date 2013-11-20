@@ -11,7 +11,7 @@ Avignon's place in history was cemented in 1309 when Pope Clement V made Avignon
 
 Avignon was the first stop on our tour of Provence. Not wanting to drive from Paris to Nice in one day (later on we actually drove from Nice to Rouen in one day), we stayed overnight in Avignon. We entered the city through its southern gate, opposite the train station. We had known that it's a walled city, but we didn't realize how tiny it was! The main thoroughfare, the Rue de la Republique, would be hard-pressed to qualify as a small avenue in other cities. Houses are narrow and closely packed together, yet they all managed to fit within the high, ancient walls. On the other hand, as one can imagine, it's a great city for walking. You can stroll from one end of the city to the other in about 15 minutes.
 
-The Pont d'Avignon, otherwise known as the Pont St-Bénezet, is made famous by the children's song in which "l'on y danse, l'on y danse". I had never heard of the song, but apparently it's quite well-known. Most of the bridge collapsed long ago, and as one can imagine it no longer carries vehicular traffic (which are currently born by a modern bridge just downstream). Yet the bridge remains as Avignon's most well-known attraction.
+The Pont d'Avignon, otherwise known as the Pont St-B&eacute;nezet, is made famous by the children's song in which "l'on y danse, l'on y danse". I had never heard of the song, but apparently it's quite well-known. Most of the bridge collapsed long ago, and as one can imagine it no longer carries vehicular traffic (which are currently born by a modern bridge just downstream). Yet the bridge remains as Avignon's most well-known attraction.
 
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/avignon/avignonpontdavignon.jpg'/>

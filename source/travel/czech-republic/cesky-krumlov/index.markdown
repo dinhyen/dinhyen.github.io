@@ -6,9 +6,6 @@ tags: []
 status: publish
 type: page
 published: true
-meta:
-  aktt_notify_twitter: 'no'
-  _edit_last: '1'
 ---
 <h2><em>Postcard-perfect</em></h2>
 

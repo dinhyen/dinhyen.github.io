@@ -51,13 +51,13 @@ First impression of La Petite Venise: flowers everywhere.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/colmar/colmarpetiteveniserail.jpg'/>
 
-La Maison des Têtes (the House of Heads) is everybody's favorite Colmar attraction. The fascinating looking building was built in 1609 by an affluent merchant, who later became the town's mayor. The gable is topped with a statue of an Alsatian cooper by Bartholdi.  You'll find it, where else, on Rue des Têtes.
+La Maison des T&ecirc;tes (the House of Heads) is everybody's favorite Colmar attraction. The fascinating looking building was built in 1609 by an affluent merchant, who later became the town's mayor. The gable is topped with a statue of an Alsatian cooper by Bartholdi.  You'll find it, where else, on Rue des T&ecirc;tes.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/colmar/img_4077.jpg'/>
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/colmar/img_4082s.jpg'/>
 
-Frédéric Auguste Barholdi is Colmar's most well-known son. His Statue of Liberty was dedicated on October 28, 1886, as a gift of friendship from France to the US. In Colmar you can visit the Barholdi Museum as well as the the house where he was born. There also many public works by Barholdi, notably the statue of General Rapp and Bruat Fountain in Place Rapp.
+Fr&eacute;d&eacute;ric Auguste Barholdi is Colmar's most well-known son. His Statue of Liberty was dedicated on October 28, 1886, as a gift of friendship from France to the US. In Colmar you can visit the Barholdi Museum as well as the the house where he was born. There also many public works by Barholdi, notably the statue of General Rapp and Bruat Fountain in Place Rapp.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/colmar/img_4126.jpg'/>
 

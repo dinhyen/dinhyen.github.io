@@ -37,11 +37,11 @@ A British military band.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8893.jpg'/>
 
-American paratrooper in the Musée du Débarquement. These brave airborne troops were dropped behind enemy lines the night before D-Day to disrupt the enemies and secure vital positions.
+American paratrooper in the Mus&eacute;e du D&eacute;barquement. These brave airborne troops were dropped behind enemy lines the night before D-Day to disrupt the enemies and secure vital positions.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8885.jpg'/>
 
-The museum also displays various decorations awarded by different nations. Here are the French decorations.  At the top left is the highest French honor, the <em>Légion d'honneur</em>.
+The museum also displays various decorations awarded by different nations. Here are the French decorations.  At the top left is the highest French honor, the <em>L&eacute;gion d'honneur</em>.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/arromanches-les-bains/img_8877.jpg'/>
 

@@ -3,9 +3,9 @@ layout: page
 title: Aix-en-Provence
 published: true
 ---
-<h3>Cézanne Country</h3>
+<h3>C&eacute;zanne Country</h3>
 
-It would be a great omission not to visit Aix during your sojourn in Provence, for it's the hometown of Cézanne, the artist who embodied so much of the Provençal spirit. Much of his work were inspired by his experience growing up in Aix and indeed he spent the final years of his life here. 
+It would be a great omission not to visit Aix during your sojourn in Provence, for it's the hometown of C&eacute;zanne, the artist who embodied so much of the Provençal spirit. Much of his work were inspired by his experience growing up in Aix and indeed he spent the final years of his life here. 
 
 Aix isn't far from bustling Marseille, the second largest city in France. Yet it manages to retain a small-town feel. Its location at the threshold of Provence's rugged interior means that it's an excellent base for exploring Provence's renowned beauty.
 
@@ -17,11 +17,11 @@ Numerous fountains adorn the streets and squares in Aix's old quarters. Like man
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencefontainesquare.jpg'/>
 
-Cézanne's workshop where the artist lived and worked during the last years of his life.
+C&eacute;zanne's workshop where the artist lived and worked during the last years of his life.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceateliercezannefacade.jpg'/>
 
-Cézanne's place of residence and workshop is in a quiet, somewhat isolated neighborhood not far from the old quarters. It's a rather unassuming 2-story house surrounded by a luxuriant garden that seems to have been left to grow untended. The workshop on the 2nd floor is basically a large room devoid of furnishings. Displayed here are many of Cézanne's still-life models, paintings, tools, and personal artifacts.
+C&eacute;zanne's place of residence and workshop is in a quiet, somewhat isolated neighborhood not far from the old quarters. It's a rather unassuming 2-story house surrounded by a luxuriant garden that seems to have been left to grow untended. The workshop on the 2nd floor is basically a large room devoid of furnishings. Displayed here are many of C&eacute;zanne's still-life models, paintings, tools, and personal artifacts.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceateliercezannevert.jpg'/>
 
@@ -35,7 +35,7 @@ The tourist magnet in Aix is the Cours Mirabeau, a rather short (440m) stretch o
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencecoursmirabeau.jpg'/>
 
-Statue of Le Roi (King) Réné at the Cours Mirabeau
+Statue of Le Roi (King) R&eacute;n&eacute; at the Cours Mirabeau
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceleroi.jpg'/>
 
@@ -43,7 +43,7 @@ The fountain at La Place d'Albertas
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencefontaine.jpg'/>
 
-The Café les Deux Garçons, frequented by Cézanne
+The Caf&eacute; les Deux Garçons, frequented by C&eacute;zanne
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencecafelesdeuxgarcons.jpg'/>
 
@@ -56,7 +56,7 @@ Street scene in the Vieille Ville
 <img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencestreetscene.jpg'/>
 
 Last visit: May 2004
-Pros: Some historical connections, trace the footsteps of Cézanne, vibrant small-town
+Pros: Some historical connections, trace the footsteps of C&eacute;zanne, vibrant small-town
 Cons: No major attractions
 In a nutshell: One of many principal rest stops in Provence
 <!-- Darkbox -->
