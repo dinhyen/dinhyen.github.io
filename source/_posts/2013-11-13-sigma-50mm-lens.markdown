@@ -50,6 +50,10 @@ This is at the maximum aperture.  Again sharpness is excellent at a range of abo
 <img src="https://dl.dropboxusercontent.com/u/52804626/sigma-50mm/dsc_5377.jpg" />
 <figcaption>Exposure 1/400 @ f/1.4, 2800 ISO</figcaption>
 </figure>
+<figure>
+<img src="https://dl.dropboxusercontent.com/u/52804626/sigma-50mm/dsc_5312.jpg" />
+<figcaption>Exposure 400 @ f/2.2, 3200 ISO</figcaption>
+</figure>
 
 The last shoot is at a friend's house. I had to use continuous focusing again because the subject was rather, ahem, mobile.  Some shots turned out quite blurry even with high shutter speed.  I'll have to look into this more.  This shows the nice subject isolation possible with the ridiculously large aperture.
 <figure>
@@ -58,8 +62,8 @@ The last shoot is at a friend's house. I had to use continuous focusing again be
 </figure>
 
 <figure>
-<img src="https://dl.dropboxusercontent.com/u/52804626/sigma-50mm/dsc_5823.jpg" />
-<figcaption>Exposure 1/50 @ f/2.2, 450 ISO</figcaption>
+<img src="https://dl.dropboxusercontent.com/u/52804626/sigma-50mm/dsc_5938.jpg" />
+<figcaption>Exposure 1/160 @ f/2.2, 3200 ISO</figcaption>
 </figure>
 
 <figure>
