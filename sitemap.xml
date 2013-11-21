@@ -116,7 +116,7 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2011/07/10/hub-on-wheels-2010/</loc>
-        <lastmod>2013-11-19T09:20:01-05:00</lastmod>
+        <lastmod>2013-11-19T17:24:18-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2011/07/14/the-doors-of-boston/</loc>
@@ -380,7 +380,7 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2012/05/20/the-reformatory-branch-trail/</loc>
-        <lastmod>2013-11-19T09:19:15-05:00</lastmod>
+        <lastmod>2013-11-19T17:24:18-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2012/06/29/editing-collection-with-linq-to-sql/</loc>
@@ -390,7 +390,7 @@
         <loc>
             http://dinhyen.github.io/blog/2012/07/05/acadia-national-park-biking-the-carriage-roads/
         </loc>
-        <lastmod>2013-11-19T09:18:41-05:00</lastmod>
+        <lastmod>2013-11-19T17:24:18-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2012/07/05/acadia-national-park-gorham-mountain/</loc>
@@ -552,15 +552,15 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2013/11/13/sigma-50mm-lens/</loc>
-        <lastmod>2013-11-17T11:22:16-05:00</lastmod>
+        <lastmod>2013-11-19T17:25:30-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2013/11/18/so-long-wordpress-hello-octopress/</loc>
-        <lastmod>2013-11-19T09:29:05-05:00</lastmod>
+        <lastmod>2013-11-21T15:38:39-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2013/11/19/top-10-archive/</loc>
-        <lastmod>2013-11-19T09:24:05-05:00</lastmod>
+        <lastmod>2013-11-19T17:25:19-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/about/</loc>
@@ -568,134 +568,378 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/archives/</loc>
-        <lastmod>2013-11-19T09:29:05-05:00</lastmod>
+        <lastmod>2013-11-21T15:38:39-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/</loc>
-        <lastmod>2013-11-19T09:29:05-05:00</lastmod>
+        <lastmod>2013-11-21T15:38:39-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/robots.txt</loc>
         <lastmod>2013-11-17T10:24:37-05:00</lastmod>
     </url>
     <url>
+        <loc>http://dinhyen.github.io/travel/austria/hallstatt/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/austria/</loc>
+        <lastmod>2013-11-21T12:01:02-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/austria/innsbruck/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/austria/melk/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/austria/mondsee/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/austria/salzburg/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/austria/vienna/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/canada/calgary/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/canada/canmore/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/canada/halifax/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
         <loc>http://dinhyen.github.io/travel/canada/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/canada/kelowna/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/canada/keremeos/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/costa-rica/</loc>
-        <lastmod>2013-11-19T09:29:42-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/czech-republic/cesky-krumlov/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T17:51:51-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/czech-republic/</loc>
+        <lastmod>2013-11-21T12:01:56-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/czech-republic/prague/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/france/aix-en-provence/</loc>
-        <lastmod>2013-11-18T15:12:16-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/france/arromanches-les-bains/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/france/avignon/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/france/bayeux/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/france/bonnieux/</loc>
-        <lastmod>2013-11-18T17:20:47-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/france/cannes/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/chateau-de-vascoeuil/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/france/colleville-sur-mer/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/france/colmar/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/france/connelles/</loc>
-        <lastmod>2013-11-18T17:23:32-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/france/etretat/</loc>
-        <lastmod>2013-11-18T17:25:36-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/france/eze/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T17:31:06-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/fecamp/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/fontaine-de-vaucluse/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/fontainebleau/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/giverny/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/gordes/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/france/gorges-du-verdon/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/honfleur/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/france/</loc>
-        <lastmod>2013-11-18T15:06:43-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/les-andelys/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/lisieux/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/lyons-la-foret/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/marseille/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/menton/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/mont-st-michel/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/nice/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/nimes/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/paris/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/peille/</loc>
+        <lastmod>2013-11-21T12:19:08-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/pont-audemer/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/pont-de-l-arche/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/reims/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/rouen/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/roussillon/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/saorge/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/st-samson-de-la-roque/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/strasbourg/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/trigance/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/trouville/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/france/vernon/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/germany/</loc>
+        <lastmod>2013-11-21T12:02:33-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/germany/munich/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/germany/rothenburg-ob-der-tauber/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/germany/schloss-neuschwanstein/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/</loc>
-        <lastmod>2013-11-19T09:29:42-05:00</lastmod>
+        <lastmod>2013-11-21T11:59:35-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/monaco/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/netherlands/amsterdam/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/netherlands/arnhem/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/netherlands/boxmeer/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/netherlands/delft/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/netherlands/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/netherlands/nijmegen/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/netherlands/roosendaal/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/netherlands/the-hague/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/netherlands/urk/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/netherlands/utrecht/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/peru/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/uk/london/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/uk/uk</loc>
+        <lastmod>2013-11-21T12:03:39-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/usa/az/grand-canyon-national-park/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/usa/fl/cape-canaveral/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/usa/hi/hawaii/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/usa/</loc>
+        <lastmod>2013-11-21T12:05:04-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/usa/ma/boston/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/usa/ma/waterfalls/</loc>
-        <lastmod>2013-11-18T11:59:25-05:00</lastmod>
+        <lastmod>2013-11-21T11:59:12-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/usa/me/acadia-national-park/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/usa/mt/glacier-national-park/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/usa/nv/death-valley-national-park/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/usa/or/astoria/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/usa/or/cannon-beach/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/usa/or/crater-lake-national-park/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/usa/ut/bryce-canyon-national-park/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/travel/usa/va/great-falls/</loc>
+        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
     </url>
 </urlset>

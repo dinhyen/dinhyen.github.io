@@ -99,7 +99,7 @@
   
 
 
-<time datetime="2013-11-18T06:32:00-05:00" pubdate data-updated="true">Nov 18<span>th</span>, 2013</time>
+<time datetime="2013-11-18T00:00:00-05:00" pubdate data-updated="true">Nov 18<span>th</span>, 2013</time>
         
       </p>
     
@@ -137,17 +137,17 @@
 
 <p>I used Lightbox 2 jQuery plugin to display an image gallery.  However, it doesn&rsquo;t work with hotlinked images.  I decided to <a href="https://github.com/dinhyen/darkbox">roll my own</a>.</p>
 
-<p>I wrote a small Ruby + <a href="http://whatisthor.com">Thor</a> to generate the necessary markup for images based on the Dropbox folder  and append it to posts.  Thor is awesome.</p>
+<p>I wrote a small Ruby + <a href="http://whatisthor.com">Thor</a> utility to generate the necessary markup for images based on the Dropbox folder  and append it to posts.  Thor is awesome.</p>
 
 <h3>Blogging with Octopress</h3>
 
-<p>Everytime you add or modify a post or page, Jekyll regenerates the entire site.  This is so that it can properly update the site metadata.  However, this can take a long time, particularly if you have many posts and pages.  Octopress provides a useful optimization tool.  Type <code>rake isolate["blog name"]</code> moves all other posts except the specified post into a _stash folder, so that regeneration is significantly faster.  Once you&rsquo;re done, type <code>rake integrate</code> to move the other posts back; just don&rsquo;t forget to do this before deploying.</p>
+<p>Everytime you add or modify a post or page, Jekyll regenerates the entire site.  This is so that it can properly update the site metadata.  However, this can take a long time, particularly if you have many posts and pages.  Octopress provides a useful optimization tool.  Type <code>rake isolate["post name"]</code> moves all other posts except the specified post into a _stash folder, so that regeneration is significantly faster.  Once you&rsquo;re done, type <code>rake integrate</code> to move the other posts back; just don&rsquo;t forget to do this before deploying.</p>
 
 <h3>Categories</h3>
 
 <p>Octopress doesn&rsquo;t provide an out-of-the-box way to display categories, but this can be easily done. I want display them as an aside (Octopress-speak for a sidebar plugin or partial).  I based mine on Octostrap3&rsquo;s <a href="http://kaworu.github.io/octopress/blog/2013/10/03/category-list-aside">Category List aside</a>.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -158,17 +158,18 @@
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;section&gt;
-</span><span class='line'>  &lt;h1&gt;Categories&lt;/h1&gt;
-</span><span class='line'>  &lt;ul id="categories"&gt;
-</span><span class='line'>    &#123;% for category in site.categories %&#125;
-</span><span class='line'>     &#123;% capture category_url %&#125;&#123;&#123; site.category_dir &#125;&#125;/&#123;&#123; category | first | slugize | downcase | replace:' ','-' &#125;&#125;&#123;% endcapture %&#125;
-</span><span class='line'>      &lt;li data-category="&#123;&#123; category | first &#125;&#125;"&gt;
-</span><span class='line'>        &lt;a href="&#123;&#123; root_url | append:'/' | append:category_url &#125;&#125;"&gt;&#123;&#123; category | first &#125;&#125;&lt;/a&gt; &lt;em&gt;&#123;&#123; category | last | size &#125;&#125;&lt;/em&gt;
-</span><span class='line'>      &lt;/li&gt;
-</span><span class='line'>    &#123;% endfor %&#125;
-</span><span class='line'>  &lt;/ul&gt;
-</span><span class='line'>&lt;/section&gt;</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;section&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;h1&gt;</span>Categories<span class="nt">&lt;/h1&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;categories&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    {% for category in site.categories %}
+</span><span class='line'>     {% capture category_url %}{{ site.category_dir }}/{{ category | first | slugize | downcase | replace:&#39; &#39;,&#39;-&#39; }}{% endcapture %}
+</span><span class='line'>      <span class="nt">&lt;li</span> <span class="na">data-category=</span><span class="s">&quot;{{ category | first }}&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ root_url | append:&#39;/&#39; | append:category_url }}&quot;</span><span class="nt">&gt;</span>{{ category | first }}<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;em&gt;</span>{{ category | last | size }}<span class="nt">&lt;/em&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>    {% endfor %}
+</span><span class='line'>  <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'><span class="nt">&lt;/section&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Each category in the <code>site.categories</code> collection is an array, the first element being the category name and the last containing the pages in the category.  Unfortunately Jekyll&rsquo;s Liquid markup language doesn&rsquo;t have a way to sort a collection of arrays.  I opted to use JavaScript. This isn&rsquo;t ideal, but some of Octopress&rsquo;s own asides use the same approach.</p>
@@ -184,27 +185,23 @@
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
-</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="kd">var</span> <span class="nx">categories</span> <span class="o">=</span> <span class="p">[];</span>
-</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[data-category]&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">categories</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">});</span>
-</span><span class='line'>    <span class="nx">categories</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">attributes</span><span class="p">[</span><span class="s1">&#39;data-category&#39;</span><span class="p">].</span><span class="nx">value</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="nx">b</span><span class="p">.</span><span class="nx">attributes</span><span class="p">[</span><span class="s1">&#39;data-category&#39;</span><span class="p">].</span><span class="nx">value</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span>
-</span><span class='line'>            <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">});</span>
-</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#categories&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">categories</span><span class="p">);</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">categories</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[data-category]&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">categories</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 </span><span class='line'>  <span class="p">});</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span><span class='line'>  <span class="nx">categories</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">attributes</span><span class="p">[</span><span class="s1">&#39;data-category&#39;</span><span class="p">].</span><span class="nx">value</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="nx">b</span><span class="p">.</span><span class="nx">attributes</span><span class="p">[</span><span class="s1">&#39;data-category&#39;</span><span class="p">].</span><span class="nx">value</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span>
+</span><span class='line'>          <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#categories&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">categories</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <h3>Breadcrumbs</h3>
 
-<p>This would be another nice-to-have for Octopress.  There are a few solutions to display breadcrumbs using Liquid.  However, the more I work with Liquid, the less I like it.  I would much prefer Mustache.  So I again went with a JavaScript solution, which would still work if later on I happen to go with different blogging framework.</p>
+<p>This would be another nice-to-have for Octopress.  There are a few solutions to display breadcrumbs using Liquid.  However, the more I work with Liquid, the less I like it.  I would much prefer Mustache.  So I again went with a JavaScript solution, which would still work if later on I decide to go with another blogging framework.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -315,7 +312,138 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Octopress/Jekyll makes it easy to tweak and hack and do so efficiently. I only wish I&rsquo;d made the switch earlier!</p>
+<h3>Navigation</h3>
+
+<p>On my <a href="/travel">travel pages</a>, I want to have a hierarchy of links to different destinations:</p>
+
+<pre><code>USA
+  Arizona
+    Grand Canyon National Park
+  Florida
+    Cape Canaveral
+</code></pre>
+
+<p>It should be set up so that if I add a new destination, I wouldn&rsquo;t have to hunt down all the pages containing the links in order add a new one.  Luckily, with Jekyll all of the site&rsquo;s metadata is stored in a single YAML file and accessible through the <code>site</code> variable.  In order to capture the navigation hierarchy, I added the following to <code>_config.yml</code>:</p>
+
+<pre><code>travel:
+  usa:
+    - name: "Arizona"
+      url:  az
+      places:
+        - name: "Grand Canyon National Park"
+          url:  grand-canyon-national-park
+    - name: "Florida"
+      url:  fl
+      places:
+        - name: "Cape Canaveral"
+          url:  cape-canaveral
+</code></pre>
+
+<p><a href="http://www.yaml.org">YAML</a> is a really compact, highly readable format.  In the block above, indentation denotes nesting, <code>:</code> denotes a key-value pair and <code>-</code> denotes a collection.  The parser turns the above YAML into the following hash:</p>
+
+<pre><code>{"travel"=&gt;{"usa"=&gt;[{"name"=&gt;"Arizona", "url"=&gt;"az", "places"=&gt;[{"name"=&gt;"Grand Canyon National Park", "url"=&gt;"grand-canyon-national-park"}]}, {"name"=&gt;"Florida", "url"=&gt;"fl", "places"=&gt;[{"name"=&gt;"Cape Canaveral", "url"=&gt;"cape-canaveral"}]}]}}
+</code></pre>
+
+<p>After making modifications to <code>_config.yml</code>, I could quickly examine them by firing up the interactive Ruby shell, <code>irb</code>, then type the following:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">require</span> <span class="s1">&#39;yaml&#39;</span>
+</span><span class='line'><span class="nt">site</span> <span class="o">=</span> <span class="nt">YAML</span><span class="nc">.load_file</span><span class="o">(</span><span class="s1">&#39;_config.yml&#39;</span><span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I can now access the navigation metadata as follows:</p>
+
+<ul>
+<li><code>site["travel"]</code> returns a hash containing country objects</li>
+<li><code>site["travel"]["usa"]</code> returns an array of state objects</li>
+<li><code>site["travel"]["usa"][0]</code> returns the first element of the array, which is Arizona</li>
+<li><code>site["travel"]["usa"][0]["name"]</code> returns the text &ldquo;Arizona&rdquo; and <code>site["travel"]["usa"][0]["url"]</code> the corresponding URL</li>
+<li><code>site["travel"]["usa"][0]["places"]</code> returns an array of locations in Arizona</li>
+<li><code>site["travel"]["usa"][0]["places"][0]</code> returns the object for Grand Canyon National Park, and so on</li>
+</ul>
+
+
+<p>Jekyll makes it even nicer to work with the hash by turning keys into instance methods.  So instead of writing <code>site["travel"]["usa"][0]["places"][0]</code>, I could also write <code>site.travel.usa[0].places[0]</code>.</p>
+
+<p>In order to generate the following HTML for the navigation:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/travel/usa&quot;</span><span class="nt">&gt;</span>USA<span class="nt">&lt;/a&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/travel/usa/az&quot;</span><span class="nt">&gt;</span>Arizona<span class="nt">&lt;/a&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/travel/usa/az/grand-canyon-national-park&quot;</span><span class="nt">&gt;</span>Grand Canyon National Park<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/travel/usa/fl&quot;</span><span class="nt">&gt;</span>Florida<span class="nt">&lt;/a&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/travel/usa/fl/cape-canaveral&quot;</span><span class="nt">&gt;</span>Cape Canaveral<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ul&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I used the following Liquid code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ root_url }}/travel/usa&quot;</span><span class="nt">&gt;</span>USA<span class="nt">&lt;/a&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>      {% for state in site.travel.usa %}
+</span><span class='line'>        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ root_url }}/travel/usa/{{ state.url }}&quot;</span><span class="nt">&gt;</span>{{ state.name }}<span class="nt">&lt;/a&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>            {% for place in state.places %}
+</span><span class='line'>              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ root_url }}/travel/usa/{{ state.url }}/{{ place.url }}&quot;</span><span class="nt">&gt;</span>{{ place.name }}<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>            {% endfor %}
+</span><span class='line'>          <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>      {% endfor %}
+</span><span class='line'>    <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ul&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now if I want to add another destination, I&rsquo;d only have to modify the YAML.</p>
+
+<h3>Conclusion</h3>
+
+<p>Octopress/Jekyll makes it easy and fun to tweak, hack and do so efficiently. I only wish I&rsquo;d made the switch earlier!</p>
 </div>
 
 
@@ -338,7 +466,7 @@
   
 
 
-<time datetime="2013-11-18T06:32:00-05:00" pubdate data-updated="true">Nov 18<span>th</span>, 2013</time>
+<time datetime="2013-11-18T00:00:00-05:00" pubdate data-updated="true">Nov 18<span>th</span>, 2013</time>
       
 
 <span class="categories">
