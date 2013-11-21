@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Èze
+title: "&Egrave;ze"
 published: true
 ---
 <h3>The eagle's nest</h3>

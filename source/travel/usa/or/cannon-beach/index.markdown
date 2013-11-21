@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "cannon beach"
+title: "Cannon Beach"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Cannon Beach</h1>
 <h3><em>Rocks, Sand and Surf</em></h3>
 Cannon Beach is one of Oregon's most picturesque, and most popular, stretches of coast. Its most unique feature is the fantastic Haystack Rock. Needless to say, in early August when we were there the area overflowed with beachgoers. 
 

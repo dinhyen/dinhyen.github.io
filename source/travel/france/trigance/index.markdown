@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "trigance"
+title: "Trigance"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Trigance</h1>
 <h3><em>The middle of canyon land</em></h3>
 
 Many picturesque and sometimes impossibly precarious "perched villages" dot the landscape of the Alp provinces. On the map, they may appear deceptively close. Yet geting to one may take much longer than the distance may indicate, thanks to the narrow, steep, and winding mountain roads one has to traverse. On the road from Peille to Saorge, we drove through about a dozen switchbacks to get to the top of a ridge, only to find that it was only one in a series! 

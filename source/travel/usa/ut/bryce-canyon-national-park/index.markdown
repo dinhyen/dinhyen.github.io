@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "bryce canyon national park"
+title: "Bryce Canyon National Park"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Bryce Canyon National Park</h1>
 <h3><em>Garden of the gods</em></h3>
 
 It would be hard to imagine that such a mind-boggling, alien, exotic, singularly beautiful place can exist on earth. Delicate spires, towering ramparts, majestic temples, mythical castles are some of the sights that will come to your mind when you visit Bryce. Even more amazing is the knowledge that these fantastic sculptures were shaped by none other than the most primitive force of nature and the relentless march of time. This remarkable landscape, just a few hours' drive away from the big city, will transport your imagination to a place far beyond this world.

@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "vernon"
+title: "Vernon"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Vernon</h1>
 <h3><em>Cherry capital</em></h3>
 
 Vernon is one of the larger towns of D&eacute;partement de l'Eure. We stayed in virtually unknown Connelles not far from here. Of the fruit in France, we like cherries the best. They're smaller but far sweeter and juicier than those in the USA. Even though the best we had was in the Provence, at Pont du Gard of all places, there happened to a "Cherry Festival" (fete des cerises) in Vernon, so here we were. 

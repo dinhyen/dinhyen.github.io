@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "boston"
+title: "Boston"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Boston</h1>
 <h3><em>Home of the Bruins</em></h3>
 
 Boston is one of the historical, financial, cultural, political -- you name it -- hubs of the US. It has everything that a big city has to offer, such as a youthful and dynamic population, a diverse ethnic makeup, all major league sports teams, a rich perfoming arts heritage and a vibrant night life. Yet small-city charms live on and prosper in many of its diverse towns and neighborhoods. 

@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "peille"
+title: "Peille"
 comments: true
 sharing: true
 footer: true
 ---
-<h1></h1>
 <h3><em>Phabulous Peille</em></h3>
 
 Peille was the first perched village we visited in the Alpes-Maritimes. While it was disliked by certain other VT reviewers, and I have to agree that it is touristy, I still liked it very much. I especially enjoyed exploring the town's maze-like network of narrow alleys, walking up a broad stone staircase, or squeezing through a tunnel to find myself in another alley. Sometimes I felt like I were in the "impossible staircases" drawing of MC Escher. And there was something about the cracked stone steps and lichen-encrusted walls that evoked memories of another time and place. I guess this place brought back childhood's fascination with exploration that I hope I'll never grow out of.

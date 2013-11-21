@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Český Krumlov
+title: "Český Krumlov"
 categories: []
 tags: []
 status: publish

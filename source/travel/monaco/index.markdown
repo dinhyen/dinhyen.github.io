@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "monaco"
+title: "Monaco"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Monaco</h1>
 <h3><em>Monaco, Monaco</em></h3>
 
 This city/country/principality was what I expected. It's impeccably clean, densely packed, expensive and not particularly interesting from a tourist's perspective. But how often can one say one visited a country in a day?

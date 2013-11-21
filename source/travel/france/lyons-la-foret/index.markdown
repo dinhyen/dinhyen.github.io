@@ -1,12 +1,10 @@
 ---
 layout: page
-title: "lyons-la-foret"
+title: "Lyons-la-For&ecirc;t"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Lyons-la-For&ecirc;t</h1>
-
 Normandie is dotted with litle towns and villages. To visit them all would take a very long time. Lyons-la-For&ecirc;t is a typical Norman village we we chose to visit during our short stay in the area. According to the tourbook, it's reputed to be one of the most scenic villages here. Such may be true if one were to stay for a while and absorb in the rustic surroundings. However, our quick tour through the town didn't give us much time to enjoy the village or be impressed by it. Such is a potential evil of rapid-fire travel.
 
 The drive to the village from Vascoeuil is very pleasant. The landscape is mostly rolling farmlands, with a particularly nice stretch where the road runs through the middle of a dense forest among towering trees.

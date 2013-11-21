@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "pont-audemer"
+title: "Pont-Audemer"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Pont-Audemer</h1>
 <h3><em>Petite Venise de Normandie</em></h3>
 
 I'm often accused by my travelling companions of planning to do too much in too little time. So to avoid further rebuke I decided to stop here using the pretext that, "It's on the way home". We had the added bonus of driving home on a national route, which was free, instead of the A13 motorway, which would have cost a bunch more. Driving in the Normandy countryside is also pleasant, until it became too dark to see. I was drawn to the town after seeing a photo of houses lining a canal where the water practically lapped at their doorstep!

@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "giverny"
+title: "Giverny"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Giverny</h1>
 <h3><em>Impressionist delight</em></h3>
 
 Most people have probably seen copies of the Impressionist master's water lilies-filled paintings. Some are fortunate enough to have seen the originals. Standing in front of the water lily pond, one can see where he got his inspirations. The shore is blanketed with myriad plants, bushes, and trees. The round shapes of water lilies dot the surface of the pond, while lush branches of weeping willows gently undulate in the wind. In places the vegetation is so thick it forms an impenetrable green curtain. There's an overwhelming yet soothing feeling of tranquility and harmony. I didn't see anyone breaking out paintbrushes, but practically everyone took out cameras.

@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Canmore
+title: "Canmore"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Canmore</h1>
 <h3><em>Gateway to Banff</em></h3>
 
 Canmore is best known as a resort town situated at the border of Banff National Park, on the southern tip of the Canadian Rockies. All the tourists, adventure-types, campers, backpackers, bikers, motorhoming grandparents probably pass through here on their way to the Canadian Rockies. Highway 1A runs through town and Highway 1, aka the Trans-Canada Highway, is just a stone's throw away. 

@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "fecamp"
+title: "F&eacute;camp"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>F&eacute;camp</h1>
 <h3><em>Fishing F&eacute;camp</em></h2>
 Or so it seems. As we took a tour along the harbor, it seems that fishing is both the main occupation and diversion of the town. Nevertheless, we were very happy to find out about the remarkable Benedictine abbey. Normandy continually surprised us, accustomed as we are to the bland seaside towns in the USA. It seems that every town we've been to has some example of outstanding architecture. I guess that's one of the things we love about Europe.
 

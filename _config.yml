@@ -110,7 +110,30 @@ facebook_like: false
 #   Page Settings         #
 # ----------------------- #
 travel:
+  austria:
+    - name: "Hallstatt"
+      url:  hallstatt
+    - name: Innsbruck
+      url:  innsbruck
+    - name: "Melk"
+      url:  melk
+    - name: Mondsee
+      url:  mondsee
+    - name: Salzburg
+      url:  salzburg
+    - name: Vienna
+      url:  vienna
   canada:
+    - name: Calgary
+      url:  calgary
+    - name: "Canmore"
+      url:  canmore
+    - name: "Halifax"
+      url:  halifax
+    - name: "Kelowna"
+      url:  kelowna
+    - name: "Keremeos"
+      url:  keremeos
     - name: "Qu&eacute;bec"
       url:  2011/07/05/quebec-1-july
   costa-rica:
@@ -126,9 +149,14 @@ travel:
       url:  2011/05/29/costa-rica-day-2-wednesday-san-jose-to-arenal
     - name: San Jose
       url:  2011/05/30/costa-rica-day-7-monday-san-jose
+  czech-republic:
+    - name: "Český Krumlov"
+      url:  cesky-krumlov
+    - name: "Prague"
+      url:  prague      
   france:
     - name: Aix-en-Provence
-      url: aix-en-provence
+      url:  aix-en-provence
     - name: Arromanches-les-Bains
       url:  arromanches-les-bains
     - name: Avignon
@@ -139,6 +167,8 @@ travel:
       url:  bonnieux
     - name: Cannes
       url:  cannes
+    - name: "Chateau de Vasc&oelig;uil"
+      url:  chateau-de-vascoeuil
     - name: Colleville-sur-Mer
       url:  colleville-sur-mer
     - name: Colmar
@@ -149,8 +179,72 @@ travel:
       url:  etretat
     - name: "&Egrave;ze"
       url:  eze
+    - name: "F&eacute;camp"
+      url:  fecamp
+    - name: "Fontaine-de-Vaucluse"
+      url:  fontaine-de-vaucluse
+    - name: "Fontainebleau"
+      url:  fontainebleau
+    - name: "Giverny"
+      url:  giverny
+    - name: "Gordes"
+      url:  gordes
     - name: Gorges du Verdon
       url:  gorges-du-verdon
+    - name: "Honfleur"
+      url:  honfleur
+    - name: "Les Andelys"
+      url:  les-andelys
+    - name: "Lisieux"
+      url:  lisieux
+    - name: "Lyons-la-For&ecirc;t"
+      url:  lyons-la-foret
+    - name: "Marseille"
+      url:  marseille
+    - name: "Menton"
+      url:  menton
+    - name: "Mont St-Michel"
+      url:  mont-st-michel
+    - name: "Nice"
+      url:  nice
+    - name: "N&icirc;mes"
+      url:  nimes
+    - name: "Paris"
+      url:  paris
+    - name: "Peille"
+      url:  peille
+    - name: "Pont-Audemer"
+      url:  pont-audemer
+    - name: "Pont-de-l'Arche"
+      url:  pont-de-l-arche
+    - name: "Reims"
+      url:  reims
+    - name: "Rouen"
+      url:  rouen
+    - name: "Roussillon"
+      url:  roussillon
+    - name: "Saorge"
+      url:  saorge
+    - name: "St-Samson-de-la-Roque"
+      url:  st-samson-de-la-roque
+    - name: "Strasbourg"
+      url:  strasbourg
+    - name: "Trigance"
+      url:  trigance
+    - name: "Trouville-sur-Mer"
+      url:  trouville
+    - name: "Vernon"
+      url:  vernon
+  germany:
+    - name: "Munich"
+      url:  munich
+    - name: "Rothenburg ob der Tauber"
+      url:  rothenburg-ob-der-tauber
+    - name: "Schloss Neuschwanstein"
+      url:  schloss-neuschwanstein
+  monaco:
+    - name: "Monaco"
+      url: monaco
   netherlands:
     - name: Amsterdam
       url:  amsterdam
@@ -183,7 +277,63 @@ travel:
       url:  2012/07/19/pisac
     - name: Sacsayhuaman
       url:  2012/07/24/sacsayhuaman
-
-
-
-
+  uk:
+    - name: "London"
+      url:  london
+  usa:
+    - name: "Arizona"
+      url:  az
+      places:
+        - name: "Grand Canyon National Park"
+          url:  grand-canyon-national-park
+    - name: "Florida"
+      url:  fl
+      places:
+        - name: "Cape Canaveral"
+          url:  cape-canaveral
+    - name: "Hawaii"
+      url:  hi
+      places:
+        - name: "Hawaii Island"
+          url:  hawaii
+    - name: "Massachusetts"
+      url:  ma
+      places:
+        - name: "Boston"
+          url:  boston
+        - name: Waterfalls of Massachusetts
+          url:  waterfalls
+    - name: "Maine"
+      url:  me
+      places:
+        - name: "Acadia National Park"
+          url:  acadia-national-park
+    - name: "Montana"
+      url:  mt
+      places:
+        - name: "Glacier National Park"
+          url:  glacier-national-park
+    - name: "Nevada"
+      url:  nv
+      places:
+        - name: "Death Valley National Park"
+          url:  death-valley-national-park
+    - name: "Oregon"
+      url:  or
+      places:
+        - name: "Astoria"
+          url:  astoria
+        - name: "Cannon Beach"
+          url:  cannon-beach
+        - name: "Crater Lake National Park"
+          url:  crater-lake-national-park
+    - name: "Utah"
+      url:  ut
+      places:
+        - name: "Bryce Canyon National Park"
+          url:  bryce-canyon-national-park
+    - name: "Virginia"
+      url:  va
+      places:
+        - name: "Great Falls"
+          url:  great-falls

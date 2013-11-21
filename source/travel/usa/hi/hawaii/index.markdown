@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "hawaii"
+title: "Hawaii Island"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Hawaii Island</h1>
 <h3><em></em></h3>
 For most people, Hawaii is at or near the top of their list of dream destinations. Hawaii invokes images of lush rain forest, white sandy beaches, clear turquoise waters, silky waterfalls, palm tree silhouettes against the sunset, and of course girls in grass skirt and coconut shells swaying to the mesmerizing sound of the steel guitar :) 
 

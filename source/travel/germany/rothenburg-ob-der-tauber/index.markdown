@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "rothenburg-ob-der-tauber"
+title: "Rothenburg ob der Tauber"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Rothenburg ob der Tauber</h1>
 <h3><em>Signs</em></h3>
 
 One of the major stops on Germany's Romantische Stra&szlig;e or <a target="_blank" href="http://en.wikipedia.org/wiki/Romantic_Road">Romantic Road</a>, Rothenburg is extremely popular. And deservedly so. The town is virtually intact from medieval times, complete with an encircling wall and a fort with turrets and ramparts. Its small-town charms are complemented by spectacular vistas. According to my research, its best features are the brilliant red roofs and the lovely cast-iron signs. Needless to say I was not disappointed, even though the threshold had been raised tremendously after my visits to Prague and Cesky Krumlov. Rothenburg is also highly recommended as a shopping mecca. Prices were surprisingly reasonable for Germany, and we happily did all of our shopping here.

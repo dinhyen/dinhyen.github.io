@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "st-samson-de-la-roque"
+title: "St-Samson-de-la-Roque"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>St-Samson-de-la-Roque</h1>
 <h3><em>Tiny Samson</em></h3>
 
 Having just crossed the Pont de Normandie, we decided to come to this tiny promontory to get a good look at it. Well, we saw something all right in the fog.

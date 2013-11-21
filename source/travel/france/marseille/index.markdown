@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "marseille"
+title: "Marseille"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Marseille</h1>
 <h3><em>Marseille in panorama</em></h3>
 
 Time was a precious commodity for us on this trip, so not so surprisingly we didn't allot enough time for Marseille, only the second-largest city in France. Our plan to visit Aix-en-Provence and return to Nice along the coast via Marseille with detour in Cassis and la Ciotat was overly ambitious at best and impossible at worst. Nevertheless we managed to see a lot of Marseille (if seeing from a distance counts, that is :) by heading straight for the Notre Dame de la Garde, the highest structure in the city.

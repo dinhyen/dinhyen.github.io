@@ -1,12 +1,10 @@
 ---
 layout: page
-title: "glacier national park"
+title: "Glacier National Park"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Glacier National Park</h1>
-
 Until ten thousand years ago, much of the northern hemisphere was covered by vast glaciers, in places, several thousand feet thick in places. Thankfully they have largely disappear, but some remnants remain for us to explore. Glacier NP is such a place.
 
 Hundred of miles of hiking trails take you to the edge of glaciers, or to mountain peaks, the roof of the world. In the spring, alpine meadows explode with the colors of blooming flowers. Wildlife abounds here, and you're as likely to see a sure-footed big-horn sheep clinging to the mountain side as to see a bald eagle soaring overhead. Further below are cold, fresh mountain streams, nourished by the immaculate water of melting glaciers, and ancient forests of giant cedar and hemlock.

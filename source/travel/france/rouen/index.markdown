@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "rouen"
+title: "Rouen"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Rouen</h1>
 <h3><em>The city of Jeanne d'Arc</em></h3>
 
 Rouen is one of the principal cities in northern France. We stayed one week about 20 minutes south of the city. In retrospect because of the proximity we could have spent more time here, but as it turned out we commited the mistake of overlooking what's right under one's nose and didn't give ourselves enough time to better explore this charming city.

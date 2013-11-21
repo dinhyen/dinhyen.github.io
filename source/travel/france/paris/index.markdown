@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "paris"
+title: "Paris"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Paris</h1>
 <h2><em>The city of lights</em></h2>
 
 It'd be hard to come up with an adjective that hasn't been used to describe Paris. The first time I came here in 1999, I shot 14 rolls of film in one week. However I had only a manual Canon AT-1 with a fixed 50mm lens that turned out to be defective (it leaked light, ruining most of the photos). The second time around I was determined to do a better job. But it turned out my stay in Paris, all of 3 days, bookended our trip to central Europe, so I wasn't able to do much either. I guess a better effort has to wait until next time.

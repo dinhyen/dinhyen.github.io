@@ -1,14 +1,12 @@
 ---
 layout: page
-title: London
+title: "London"
 categories: []
 tags: []
 status: publish
 type: page
 published: true
 ---
-<h1>London</h1>
-
 London is one of Europe's and the world's premier metropolises with a wealth of history and culture. A comparison with Paris immediately comes to mind. Both exude old-world mystique and charms. Yet whereas Paris feels cool, distant and, dare I say, aristocratic, London feels warmer, friendlier, more down-to-earth, more comforting. Perhaps that's because its culture is more contemporary and familiar to my own. Perhaps I've only visited the city during nice weather :) No matter, London is still my all-time favorite city (Editor's note: amended to second favorite after I visited Prague).
 
 The obligatory picture of Big Ben. Did you know that Big Ben is not the clock, but actually the bell inside the clock? Well, that was news to me :) The clock itself is large enough for a bus to drive through!

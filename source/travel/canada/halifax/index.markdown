@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Halifax
+title: "Halifax"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Halifax</h1>
 <h3><em></em></h3>
 Imagine miles upon miles of rolling farmland punctuated by quaint coastal towns with the white church steeple and there you have it, Nova Scotia. We visited the island after taking an overnight ferry from Portland, ME. Maybe we took the wrong road, but surely it couldn't have been because it was one of the major arteries on the island. Nevertheless, it seemed like we were caught in an episode of the Twilight Zone. The landscape looked the same for miles, and there wasn't any car to be seen either ahead or behind. This was in the mid-summer! This went on for what seemed like an eternity. We stopped by Thomas Raddall Park along the coast. The only soul other than ourselves was the park ranger, a good-natured middle-aged woman (and the lone sign of civilization was her brown Chevrolet!) In the rangers booth there was no TV or radio, and the only things to read were the park brochures. Yet she was in there, looking very alert and ready to answer our questions. How anyone can manage to stay awake with nothing to do, in the middle of nowhere, is beyond me. The park was nevertheless scenic; most impressive was the gaggle of giant wave-washed boulders strewn all the way down to the water, carried and abandoned there during the last Ice Age.
 

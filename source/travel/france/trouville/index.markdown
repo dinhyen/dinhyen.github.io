@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "trouville"
+title: "Trouville-sur-Mer"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Trouville-sur-Mer</h1>
 <h3><em>Twin cities</em></h3>
 
 We traversed the Normandy coast from Dieppe to Le Havre while keeping an eye out for a suitable establishment in which to sample the famous fruits-de-mer, but weren't successful. It took another trip before we found something to our liking in Honfleur, but before that we had a nice detour to Trouville and Deauville, its twin sister just across the Touques river. 

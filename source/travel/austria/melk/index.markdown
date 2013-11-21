@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Melk
+title: "Melk"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Melk</h1>
 <h3><em>Marvelous Melk</em></h3>
 
 I put Melk on my itinerary after seeing a photo of this spiral staircase taken by another photographer. The abbey dwarfed my highest expectations. As you can imagine, this splendiferous Baroque gem left an unforgettable impression.

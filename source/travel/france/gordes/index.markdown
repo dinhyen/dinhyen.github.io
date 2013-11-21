@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "gordes"
+title: "Gordes"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Gordes</h1>
 <h3><em>Glorious Gordes</em></h3>
 
 Ah, how to describe Gordes. Just when you thought you've seen everything, along came the perched villages. And among the perched villages of Provence, Gordes has to be among the prettiest. The sight of impeccably constructed houses, complete with gardens, built into, and blending perfectly with, the cliffsides is a spectacle I won't soon forget.

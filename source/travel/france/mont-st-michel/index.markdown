@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "mont-st-michel"
+title: "Mont St-Michel"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Mont St-Michel</h1>
 <h3><em>The Marvel of le Mont St-Michel</em></h3>
 
 My first view of le Mont St-Michel is perhaps also my most memorable, that of the cone-shaped mount rising like an apparition above the verdant, tabletop landscape of the surrounding countryside. It's already amazing that anything at all is built on a piece of rock which is cut off on all sides at high tide. What's even more remarkable is the structure that crowns its peak.

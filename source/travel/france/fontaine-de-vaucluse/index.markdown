@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "fontaine-de-vaucluse"
+title: "Fontaine-de-Vaucluse"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Fontaine-de-Vaucluse</h1>
 <h3><em>The great  fountain</em></h3>
 
 For something to be the fountain of the whole region, it must be a remarkable one. Indeed, this natural spring lays claim to being the largest in France and 5th largest in the world. No wonder it's one of the most popular destinations in Provence, even though the tiny town/shop complex hardly seemed to be able to sustain a massive influx of tourists. Nevertheless, we kind of got clued in to the popularity of this place after seeing 2 massive parking lots, a row of souvenir shops, and a gaggle of school kids behind us.

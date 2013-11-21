@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "reims"
+title: "Reims"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Reims</h1>
 <h3><em>Cathedral City</em></h3>
 
 Reims is the principal city of France's Champagne region, renowned of course for its sparkling wine. Its reputation as a wine-producing region dates back to Roman times. Reims has been sacred to the Kings of France since the year 496, when the Merovingian King Clovis was baptized here. Accordingly, latter kings also wished to be crowned here, up until Charles X in 1825. 

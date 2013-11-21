@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "schloss neuschwanstein"
+title: "Schloss Neuschwanstein"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Schloss Neuschwanstein</h1>
 <h3><em>Happily ever after</em></h3>
 
 Last visit: 2003

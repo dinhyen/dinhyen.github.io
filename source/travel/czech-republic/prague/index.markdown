@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "prague"
+title: "Prague"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Prague</h1>
 <h3><em>Unforgettable Prague</em></h3>
 
 Looking across the sea of domes, spires and red roofs towards the graceful towers of the St. Vitus cathedral, I think I've just fallen hopelessly in love with Prague. In the short time since the Velvet Revolution and the fall of Communism, Prague has become one of the premiere destinations in Europe. What stands out most here is the architecture, so diverse, so beautiful, and so concentrated in one place that you can easily be overwhelmed. But unlike other top cities in Europe, Prague doesn't strike you as shrewd, calculating, or out to get your money. There is still a certain innocence, something that does much to relieve the occasional annoyance. Of course Prague is overrun with tourists, who like you are eager to explore its charms. But there are ways to beat the crowds or avoid them altogether, and there are still many places off the beaten paths awaiting discovery. 

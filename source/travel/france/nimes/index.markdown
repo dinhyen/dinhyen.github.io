@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "nimes"
+title: "N&icirc;mes"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>N&icirc;mes</h1>
 <h2><em>Exotic N&icirc;mes</em></h2>
 
 Our tour of Nimes was rather a whirlwind one because immediately afterwards we had to drive practically the length of La Provence to get to Nice before dark. The influence of France's southern neighbor is obvious in the architecture and the choice of entertainment: bullfighting!

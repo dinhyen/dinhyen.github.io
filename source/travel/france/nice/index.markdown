@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "nice"
+title: "Nice"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Nice</h1>
 <h3><em>Nice Nice</em></h3>
 
 How do you like the super-clever title? I'll bet NOONE has ever thought of that one!

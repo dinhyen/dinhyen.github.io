@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "munich"
+title: "Munich"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Munich</h1>
 <h3><em>Festive Munich</em></h3>
 
 We stayed a night in Munich on the way from Strasbourg to Salzburg. Having just arrived from France, the change is immediately obvious. From the perspective of an American tourist, the city is big, modern, bearing more resemblance to American city. The people are casual in attire and manners, down-to-earth, and more familiar to Americans. In fact, a lot of them were probably Americans, as I heard and saw more Yankees here than in any other city on the trip.

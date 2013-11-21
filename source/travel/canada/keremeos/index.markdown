@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "keremeos"
+title: "Keremeos"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Keremeos</h1>
 <h3><em>O Keremeos, Keremeos, wherefore art thou</em></h3>
 
 We came to Keremeos as part of a driving tour through the Thompson Okanagan region. We stopped by Osoyoos, drove to Keremeos and return to Kelowna through Penticton. The region is known for vineyards and orchards, but otherwise the sceneries are unremarkable. So unless you're really fascinated by ripe peaches and apricots, there aren't much to discovered. The major attraction is Grist Mill which is an actual working mill, though we didn't stop there. 

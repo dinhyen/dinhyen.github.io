@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "kelowna"
+title: "Kelowna"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Kelowna</h1>
 <h3><em>My, my, my Kelowna</em></h3>
 Kelowna is a picturesque town in the heart of BC's Okanagan Valley. In days of old, the main industry of the region was fruit-growing. Today, orchards and vineyards still dot the landscape, but the region's focus has shifted towards tourism. Lake Okanagan, which forms the western border of Kelowna, is a popular recreational area. The heart of the city, formerly the warehouse district, has also been revitalized and is now home to many cultural attractions and even a casino.
 

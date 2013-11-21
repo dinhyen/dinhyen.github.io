@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "honfleur"
+title: "Honfleur"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Honfleur</h1>
 <h3><em>Eating Honfleur</em></h3>
 
 Memories of Honfleur

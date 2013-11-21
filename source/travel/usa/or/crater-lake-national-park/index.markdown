@@ -1,12 +1,10 @@
 ---
 layout: page
-title: "crater lake national park"
+title: "Crater Lake National Park"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Crater Lake National Park</h1>
-
 Standing the lip of the caldera and looking upon the deep blue lake almost constitute a religious experience. Crater Lake was formed approx. 7700 years ago when the top of Mount Mazama collapsed during a volcanic eruption. The deep blue color results when other colors of the spectrum are absorbed by the upper layers of the lake while blue light is scattered by the deepest layer.
 
 

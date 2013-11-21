@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "les-andelys"
+title: "Les Andelys"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Les Andelys</h1>
 <h3><em>Modern town meets ancient redoubt</em></h3>
 
 The landscape of the Seine valley is dotted with chateaux, both large and small, both unremarkable and breathtaking. But perhaps few have a more distinguished pedigree than Chateau Gaillard. The ancient stronghold was built in 1197 and completed in 1198 by none other than Richard the Lion-hearted, King of England and Duke of Normandy, after his return from the Third Crusade. His intention was to secure access routes to the important regional center of Rouen, 40 km to the north, from the ambitions of the French monarch Philip Auguste. 

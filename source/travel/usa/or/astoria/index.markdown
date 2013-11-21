@@ -1,12 +1,10 @@
 ---
 layout: page
-title: "astoria"
+title: "Astoria"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Astoria</h1>
-
 Situated near the mouth of the Columbia river on Oregon's lush Northwest coast, Astoria secured its place in history as the U.S.'s first settlement west of the Rockies (of course, this does not take into account native American settlement). After Lewis and Clark encamped here in the early 1800s during their famed expedition, a trading post was established and became the basis for a new town.
 
 Astoria is surrounded by water and by unspoiled wilderness. The air here is fresh and clear. Thanks to the abundant precipitation, verdure is ubiquitous here. Astoria is also the gateway to Oregon's rugged and picturesque coast. Visiting Astoria, one cannot help but sense a lingering feel of discovery and adventure.

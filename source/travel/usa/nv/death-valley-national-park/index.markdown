@@ -1,12 +1,10 @@
 ---
 layout: page
-title: "death valley national park"
+title: "Death Valley National Park"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Death Valley National Park</h1>
-
 The syrupy ridges and canyons of Zabriskie Point.
 
 Here in this forbidding place with the ominous name, home to the hottest place on the planet, beauty can be found. You'll only have to find it.

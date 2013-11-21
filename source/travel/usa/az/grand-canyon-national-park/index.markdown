@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "grand canyon national park"
+title: "Grand Canyon National Park"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Grand Canyon National Park</h1>
 <h3><em>Grandest sight on earth</em></h3>
 Breath-taking, awe-inspiring, add your favorite superlative here. Not much else can be said about the Grand Canyon that hasn't already been said. So go there and see it for yourself.
 

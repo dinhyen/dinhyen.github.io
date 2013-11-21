@@ -1,12 +1,10 @@
 ---
 layout: page
-title: "menton"
+title: "Menton"
 comments: true
 sharing: true
 footer: true
 ---
-<h1>Menton</h1>
-
 This sleepy seaside resort of Menton is supposedly popular with the retirement community, or, as the locals more colorfully put it, it's "where people go to die". That wasn't why we came here, but we found the sea air refreshing and the tightly packed facades of pink and yellow and orange and violet quite an eye candy.
 
 Last visit: 2004
