@@ -143,5 +143,85 @@ I created a partial consisting of the JavaScript and the necessary CSS, then inc
 {% render_partial _includes/custom/breadcrumbs.html %}
 ```
 
+### Navigation
+
+On my [travel pages](/travel), I want to set up a hierarchy of links to different destinations:
+
+    USA
+      Arizona
+        Grand Canyon National Park
+      Florida
+        Cape Canaveral
+
+It should be written so that if I add a new destination, I wouldn't have to go hunt down all the pages containing the links in order add a new one.  Luckily, with Jekyll all of the site's metadata is stored in a single YAML file and accessible through the `site` collection.  In order to capture the navigation hierarchy, I added the following to `_config.yml`:
+
+    travel:
+      usa:
+        - name: "Arizona"
+          url:  az
+          places:
+            - name: "Grand Canyon National Park"
+              url:  grand-canyon-national-park
+        - name: "Florida"
+          url:  fl
+          places:
+            - name: "Cape Canaveral"
+              url:  cape-canaveral
+
+[YAML](http://www.yaml.org) is a really neat, highly readable format.  Above, indentation denotes nesting, `:` denotes a key-value pair and `- ` denotes a collection.  The YAML parser turns the above YAML into the following hash:
+    {"travel"=>{"usa"=>[{"name"=>"Arizona", "url"=>"az", "places"=>[{"name"=>"Grand Canyon National Park", "url"=>"grand-canyon-national-park"}]}, {"name"=>"Florida", "url"=>"fl", "places"=>[{"name"=>"Cape Canaveral", "url"=>"cape-canaveral"}]}]}}
+
+So I can access the navigation metadata as follows:
+
+* `site["travel"]` returns a hash containing country objects
+* `site["travel"]["usa"]` returns an array of state objects
+* `site["travel"]["usa"][0]` returns the first element of the array, which is Arizona
+* `site["travel"]["usa"][0]["name"]` returns the long name "Arizona" and `site["travel"]["usa"][0]["url"]` the corresponding URL
+* `site["travel"]["usa"][0]["places"]` returns an array of locations in Arizona
+* `site["travel"]["usa"][0]["places"][0]` returns the object for the first destination in Arizona, and so on
+
+Jekyll makes it even nicer to work with the hash by turning keys into instance methods.  So instead of writing `site["travel"]["usa"][0]["places"][0]`, I could also write ``site.travel.usa[0].places[0]`.  
+
+In order to generate the following HTML for the navigation:
+```html
+<ul>
+  <li><a href="/travel/usa">USA</a>
+    <ul>
+      <li><a href="/travel/usa/az">Arizona</a>
+        <ul>
+          <li><a href="/travel/usa/az/grand-canyon-national-park">Grand Canyon National Park</a></li>
+        </ul>
+      </li>
+      <li><a href="/travel/usa/fl">Florida</a>
+        <ul>
+          <li><a href="/travel/usa/fl/cape-canaveral">Cape Canaveral</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+```
+
+I used the following Liquid code:
+    <ul>
+      <li><a href="{{ root_url }}/travel/usa">USA</a>
+        <ul>
+          {% for state in site.travel.usa %}
+            <li><a href="{{ root_url }}/travel/usa/{{ state.url }}">{{ state.name }}</a>
+              <ul>
+                {% for place in state.places %}
+                  <li><a href="{{ root_url }}/travel/usa/{{ state.url }}/{{ place.url }}">{{ place.name }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+
+Now if I want to add another destination, I'd only have to modify the YAML.
+
+### Conclusion
+
 Octopress/Jekyll makes it easy to tweak and hack and do so efficiently. I only wish I'd made the switch earlier!
 
