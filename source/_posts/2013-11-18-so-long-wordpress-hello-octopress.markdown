@@ -35,54 +35,53 @@ I now use Dropbox's Public folder to host images.  This allows me to easily mana
 
 I used Lightbox 2 jQuery plugin to display an image gallery.  However, it doesn't work with hotlinked images.  I decided to [roll my own](https://github.com/dinhyen/darkbox).
 
-I wrote a small Ruby + [Thor](http://whatisthor.com) to generate the necessary markup for images based on the Dropbox folder  and append it to posts.  Thor is awesome.
+I wrote a small Ruby + [Thor](http://whatisthor.com) utility to generate the necessary markup for images based on the Dropbox folder  and append it to posts.  Thor is awesome.
 
 
 ### Blogging with Octopress
 
-Everytime you add or modify a post or page, Jekyll regenerates the entire site.  This is so that it can properly update the site metadata.  However, this can take a long time, particularly if you have many posts and pages.  Octopress provides a useful optimization tool.  Type `rake isolate["blog name"]` moves all other posts except the specified post into a _stash folder, so that regeneration is significantly faster.  Once you're done, type `rake integrate` to move the other posts back; just don't forget to do this before deploying.
+Everytime you add or modify a post or page, Jekyll regenerates the entire site.  This is so that it can properly update the site metadata.  However, this can take a long time, particularly if you have many posts and pages.  Octopress provides a useful optimization tool.  Type `rake isolate["post name"]` moves all other posts except the specified post into a _stash folder, so that regeneration is significantly faster.  Once you're done, type `rake integrate` to move the other posts back; just don't forget to do this before deploying.
 
 ### Categories
 
 Octopress doesn't provide an out-of-the-box way to display categories, but this can be easily done. I want display them as an aside (Octopress-speak for a sidebar plugin or partial).  I based mine on Octostrap3's [Category List aside](http://kaworu.github.io/octopress/blog/2013/10/03/category-list-aside).
-
-```
+{% raw %}
+``` html
 <section>
   <h1>Categories</h1>
   <ul id="categories">
-    &#123;% for category in site.categories %&#125;
-     &#123;% capture category_url %&#125;&#123;&#123; site.category_dir &#125;&#125;/&#123;&#123; category | first | slugize | downcase | replace:' ','-' &#125;&#125;&#123;% endcapture %&#125;
-      <li data-category="&#123;&#123; category | first &#125;&#125;">
-        <a href="&#123;&#123; root_url | append:'/' | append:category_url &#125;&#125;">&#123;&#123; category | first &#125;&#125;</a> <em>&#123;&#123; category | last | size &#125;&#125;</em>
+    {% for category in site.categories %}
+     {% capture category_url %}{{ site.category_dir }}/{{ category | first | slugize | downcase | replace:' ','-' }}{% endcapture %}
+      <li data-category="{{ category | first }}">
+        <a href="{{ root_url | append:'/' | append:category_url }}">{{ category | first }}</a> <em>{{ category | last | size }}</em>
       </li>
-    &#123;% endfor %&#125;
+    {% endfor %}
   </ul>
 </section>
 ```
+{% endraw %}
 
 Each category in the `site.categories` collection is an array, the first element being the category name and the last containing the pages in the category.  Unfortunately Jekyll's Liquid markup language doesn't have a way to sort a collection of arrays.  I opted to use JavaScript. This isn't ideal, but some of Octopress's own asides use the same approach.
 
-```javascript
-<script type="text/javascript">
-  $(function() {
-    var categories = [];
-    $('[data-category]').each(function() {
-      categories.push(this);
-    });
-    categories.sort(function (a, b) {
-      return a.attributes['data-category'].value.toLowerCase() <= b.attributes['data-category'].value.toLowerCase()
-            ? -1 : 1;
-    });
-    $('#categories').html(categories);
+``` javascript
+$(function() {
+  var categories = [];
+  $('[data-category]').each(function() {
+    categories.push(this);
   });
-</script>
+  categories.sort(function (a, b) {
+    return a.attributes['data-category'].value.toLowerCase() <= b.attributes['data-category'].value.toLowerCase()
+          ? -1 : 1;
+  });
+  $('#categories').html(categories);
+});
 ```
 
 ### Breadcrumbs
 
-This would be another nice-to-have for Octopress.  There are a few solutions to display breadcrumbs using Liquid.  However, the more I work with Liquid, the less I like it.  I would much prefer Mustache.  So I again went with a JavaScript solution, which would still work if later on I happen to go with different blogging framework.
+This would be another nice-to-have for Octopress.  There are a few solutions to display breadcrumbs using Liquid.  However, the more I work with Liquid, the less I like it.  I would much prefer Mustache.  So I again went with a JavaScript solution, which would still work if later on I decide to go with another blogging framework.
 
-```javascript
+``` javascript
 function breadcrumbs() {
   var url_parts, $html, $li, $content, href, text, url, i;
 
@@ -110,7 +109,7 @@ $(function () {
 
 Here's the CSS:
 
-```css
+``` css
 .breadcrumbs {
   font-family: PT Sans, helvetica, sans-serif, arial;
   margin: 0;
@@ -139,13 +138,15 @@ Here's the CSS:
 
 I created a partial consisting of the JavaScript and the necessary CSS, then included it in the `pages.html` layout.
 
+{% raw %}
 ```
 {% render_partial _includes/custom/breadcrumbs.html %}
 ```
+{% endraw %}
 
 ### Navigation
 
-On my [travel pages](/travel), I want to set up a hierarchy of links to different destinations:
+On my [travel pages](/travel), I want to have a hierarchy of links to different destinations:
 
     USA
       Arizona
@@ -153,7 +154,7 @@ On my [travel pages](/travel), I want to set up a hierarchy of links to differen
       Florida
         Cape Canaveral
 
-It should be written so that if I add a new destination, I wouldn't have to go hunt down all the pages containing the links in order add a new one.  Luckily, with Jekyll all of the site's metadata is stored in a single YAML file and accessible through the `site` collection.  In order to capture the navigation hierarchy, I added the following to `_config.yml`:
+It should be set up so that if I add a new destination, I wouldn't have to hunt down all the pages containing the links in order add a new one.  Luckily, with Jekyll all of the site's metadata is stored in a single YAML file and accessible through the `site` variable.  In order to capture the navigation hierarchy, I added the following to `_config.yml`:
 
     travel:
       usa:
@@ -168,22 +169,31 @@ It should be written so that if I add a new destination, I wouldn't have to go h
             - name: "Cape Canaveral"
               url:  cape-canaveral
 
-[YAML](http://www.yaml.org) is a really neat, highly readable format.  Above, indentation denotes nesting, `:` denotes a key-value pair and `- ` denotes a collection.  The YAML parser turns the above YAML into the following hash:
+[YAML](http://www.yaml.org) is a really compact, highly readable format.  In the block above, indentation denotes nesting, `:` denotes a key-value pair and `- ` denotes a collection.  The parser turns the above YAML into the following hash:
+
     {"travel"=>{"usa"=>[{"name"=>"Arizona", "url"=>"az", "places"=>[{"name"=>"Grand Canyon National Park", "url"=>"grand-canyon-national-park"}]}, {"name"=>"Florida", "url"=>"fl", "places"=>[{"name"=>"Cape Canaveral", "url"=>"cape-canaveral"}]}]}}
 
-So I can access the navigation metadata as follows:
+After making modifications to `_config.yml`, I could quickly examine them by firing up the interactive Ruby shell, `irb`, then type the following:
+
+```
+require 'yaml'
+site = YAML.load_file('_config.yml')
+```
+
+I can now access the navigation metadata as follows:
 
 * `site["travel"]` returns a hash containing country objects
 * `site["travel"]["usa"]` returns an array of state objects
 * `site["travel"]["usa"][0]` returns the first element of the array, which is Arizona
-* `site["travel"]["usa"][0]["name"]` returns the long name "Arizona" and `site["travel"]["usa"][0]["url"]` the corresponding URL
+* `site["travel"]["usa"][0]["name"]` returns the text "Arizona" and `site["travel"]["usa"][0]["url"]` the corresponding URL
 * `site["travel"]["usa"][0]["places"]` returns an array of locations in Arizona
-* `site["travel"]["usa"][0]["places"][0]` returns the object for the first destination in Arizona, and so on
+* `site["travel"]["usa"][0]["places"][0]` returns the object for Grand Canyon National Park, and so on
 
-Jekyll makes it even nicer to work with the hash by turning keys into instance methods.  So instead of writing `site["travel"]["usa"][0]["places"][0]`, I could also write ``site.travel.usa[0].places[0]`.  
+Jekyll makes it even nicer to work with the hash by turning keys into instance methods.  So instead of writing `site["travel"]["usa"][0]["places"][0]`, I could also write `site.travel.usa[0].places[0]`.  
 
 In order to generate the following HTML for the navigation:
-```html
+
+``` html
 <ul>
   <li><a href="/travel/usa">USA</a>
     <ul>
@@ -203,25 +213,28 @@ In order to generate the following HTML for the navigation:
 ```
 
 I used the following Liquid code:
+{% raw %}
+``` html
+<ul>
+  <li><a href="{{ root_url }}/travel/usa">USA</a>
     <ul>
-      <li><a href="{{ root_url }}/travel/usa">USA</a>
-        <ul>
-          {% for state in site.travel.usa %}
-            <li><a href="{{ root_url }}/travel/usa/{{ state.url }}">{{ state.name }}</a>
-              <ul>
-                {% for place in state.places %}
-                  <li><a href="{{ root_url }}/travel/usa/{{ state.url }}/{{ place.url }}">{{ place.name }}</a></li>
-                {% endfor %}
-              </ul>
-            </li>
-          {% endfor %}
-        </ul>
-      </li>
+      {% for state in site.travel.usa %}
+        <li><a href="{{ root_url }}/travel/usa/{{ state.url }}">{{ state.name }}</a>
+          <ul>
+            {% for place in state.places %}
+              <li><a href="{{ root_url }}/travel/usa/{{ state.url }}/{{ place.url }}">{{ place.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
     </ul>
+  </li>
+</ul>
+```
+{% endraw %}
 
 Now if I want to add another destination, I'd only have to modify the YAML.
 
 ### Conclusion
 
-Octopress/Jekyll makes it easy to tweak and hack and do so efficiently. I only wish I'd made the switch earlier!
-
+Octopress/Jekyll makes it easy and fun to tweak, hack and do so efficiently. I only wish I'd made the switch earlier!
