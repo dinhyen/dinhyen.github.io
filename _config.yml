@@ -282,44 +282,44 @@ travel:
       url:  london
   usa:
     - name: "Arizona"
-      url:  az
+      url:  arizona
       places:
         - name: "Grand Canyon National Park"
           url:  grand-canyon-national-park
     - name: "Florida"
-      url:  fl
+      url:  florida
       places:
         - name: "Cape Canaveral"
           url:  cape-canaveral
     - name: "Hawaii"
-      url:  hi
+      url:  hawaii
       places:
         - name: "Hawaii Island"
           url:  hawaii
     - name: "Massachusetts"
-      url:  ma
+      url:  massachusetts
       places:
         - name: "Boston"
           url:  boston
         - name: Waterfalls of Massachusetts
           url:  waterfalls
     - name: "Maine"
-      url:  me
+      url:  maine
       places:
         - name: "Acadia National Park"
           url:  acadia-national-park
     - name: "Montana"
-      url:  mt
+      url:  montana
       places:
         - name: "Glacier National Park"
           url:  glacier-national-park
     - name: "Nevada"
-      url:  nv
+      url:  nevada
       places:
         - name: "Death Valley National Park"
           url:  death-valley-national-park
     - name: "Oregon"
-      url:  or
+      url:  oregon
       places:
         - name: "Astoria"
           url:  astoria
@@ -328,12 +328,12 @@ travel:
         - name: "Crater Lake National Park"
           url:  crater-lake-national-park
     - name: "Utah"
-      url:  ut
+      url:  utah
       places:
         - name: "Bryce Canyon National Park"
           url:  bryce-canyon-national-park
     - name: "Virginia"
-      url:  va
+      url:  virginia
       places:
         - name: "Great Falls"
           url:  great-falls

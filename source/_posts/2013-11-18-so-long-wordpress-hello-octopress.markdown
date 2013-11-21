@@ -173,14 +173,14 @@ It should be set up so that if I add a new destination, I wouldn't have to hunt 
 
     {"travel"=>{"usa"=>[{"name"=>"Arizona", "url"=>"az", "places"=>[{"name"=>"Grand Canyon National Park", "url"=>"grand-canyon-national-park"}]}, {"name"=>"Florida", "url"=>"fl", "places"=>[{"name"=>"Cape Canaveral", "url"=>"cape-canaveral"}]}]}}
 
-After making modifications to `_config.yml`, I could quickly examine them by firing up the interactive Ruby shell, `irb`, then type the following:
+After making modifications to `_config.yml`, I could quickly examine them by firing up the interactive Ruby shell, `irb`, then typing the following:
 
 ```
 require 'yaml'
 site = YAML.load_file('_config.yml')
 ```
 
-I can now access the navigation metadata as follows:
+I can access the navigation metadata as follows:
 
 * `site["travel"]` returns a hash containing country objects
 * `site["travel"]["usa"]` returns an array of state objects
