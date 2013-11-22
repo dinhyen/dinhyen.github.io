@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="UK London Tweet Categories Photoshop 2 travel 20 outdoors 9 photography 20 hockey 10 city 6 drawing 1 technology 35 review 25 hiking 9 other 1 $( &hellip;">
+  <meta name="description" content="UK Tweet Categories Photoshop 2 travel 20 outdoors 9 photography 20 hockey 10 city 6 drawing 1 technology 35 review 25 hiking 9 other 1 $(function &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,8 +90,6 @@
   </header>
   
   <ul>
-  
-    <li><a href="/travel/uk/london">London</a></li>
   
 </ul>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2013-11-21T18:39:28-05:00</updated>
+  <updated>2013-11-21T21:52:48-05:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -745,7 +745,7 @@ sat FEB 12, 2005</p>
 <pre><code>{"travel"=&gt;{"usa"=&gt;[{"name"=&gt;"Arizona", "url"=&gt;"az", "places"=&gt;[{"name"=&gt;"Grand Canyon National Park", "url"=&gt;"grand-canyon-national-park"}]}, {"name"=&gt;"Florida", "url"=&gt;"fl", "places"=&gt;[{"name"=&gt;"Cape Canaveral", "url"=&gt;"cape-canaveral"}]}]}}
 </code></pre>
 
-<p>After making modifications to <code>_config.yml</code>, I could quickly examine them by firing up the interactive Ruby shell, <code>irb</code>, then type the following:</p>
+<p>After making modifications to <code>_config.yml</code>, I could quickly examine them by firing up the interactive Ruby shell, <code>irb</code>, then typing the following:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -754,7 +754,7 @@ sat FEB 12, 2005</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>I can now access the navigation metadata as follows:</p>
+<p>I can access the navigation metadata as follows:</p>
 
 <ul>
 <li><code>site["travel"]</code> returns a hash containing country objects</li>
