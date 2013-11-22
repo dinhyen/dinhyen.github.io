@@ -45,7 +45,7 @@ Buckingham palace itself isn't very remarkable. However we enjoyed the impressiv
 
 <img class="ngg-singlepic ngg-none" src="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonqueenvictoriamemorialsw01-06.jpg" />
 
-Regina Imperatrix. Queen Victoria stares down on the tourist mobs.
+Regina Imperatrix. Queen Victoria stares down on the tourist kerfuffle.
 
 <img class="ngg-singlepic ngg-none" src="https://dl.dropboxusercontent.com/u/52804626/london-2001/londonqueenvictoriamemorial01-06.jpg" />
 
