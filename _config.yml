@@ -134,20 +134,18 @@ travel:
       url:  kelowna
     - name: "Keremeos"
       url:  keremeos
-    - name: "Qu&eacute;bec"
-      url:  2011/07/05/quebec-1-july
   costa-rica:
-    - name: Volcan Arenal
+    - name: "Volc&aacute;n Arenal"
       url:  2011/05/30/costa-rica-day-3-thursday-arenal
-    - name: Caño Negro National Wildlife Refuge
+    - name: "Caño Negro National Wildlife Refuge"
       url:  2011/05/30/costa-rica-day-4-friday-arenal-to-monteverde
-    - name: Monteverde 1
+    - name: "Monteverde 1"
       url:  2011/05/30/costa-rica-day-5-saturday-monteverde
-    - name: Monteverde 2
+    - name: "Monteverde 2"
       url:  2011/05/30/costa-rica-day-6-sunday-monteverde-to-san-jose
-    - name: "Volcan Po&aacute;s"
+    - name: "Volc&aacute;n Po&aacute;s"
       url:  2011/05/29/costa-rica-day-2-wednesday-san-jose-to-arenal
-    - name: San Jose
+    - name: "San Jos&eacute;"
       url:  2011/05/30/costa-rica-day-7-monday-san-jose
   czech-republic:
     - name: "Český Krumlov"

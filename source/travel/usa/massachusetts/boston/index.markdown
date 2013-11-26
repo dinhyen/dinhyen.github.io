@@ -145,7 +145,7 @@ One of the most visually stunning buildings in Boston is The Mother Church locat
 
 The Mother Church's impressive appearance is a combination of the Romanesque original edifice and a Renaissance- and Byzantine-influenced extension. A large reflecting pool extends the length the church. The wide-open, airy plaza is a stark contrast to the crowded skyline nearby. The church complex is almost a piece of Europe in the heart of Boston.
 
-You can go inside and stroll on a glass walkway that takes you inside a stained-glass globe. Entrance is gratuitous.
+You can go inside and stroll on a glass walkway that takes you inside a stained-glass globe. Entrance is gratis.
 
 At the Christian Science Plaza and adjacent to The Mother Church, the Christian Science Center building was designed by I.M. Pei. Incidentally, the famed architect leaves many marks in Boston, including the John Hancock Tower and the JFK Library. In neighboring Cambridge there are 4 I.M. Pei-designed buildings on MIT's campus.
 
@@ -202,7 +202,7 @@ The Mass Bay Transportation Authority, known affectionately or otherwise as the 
 
 Boston public transportation ceases at 1am. This is a source of a lot of complaints because bars and nightclubs open till 2am, and you wouldn't want people to drive while intoxicated. Also, it's practically impossible to hail a cab afterhours. So in 2001 the Night Owl service was started. Night Owl buses run parallel to subway lines after regular service stops until 2:30am. A main transfer station is Government Center (the only place where I've been able to catch Red-line buses, for some reason). Definitely an improvement over the ole hail-a-cab-or-leg-it routine.
 
-"She drive s like crazy, like noone else"
+"She drives like crazy, like no one else"
 
 Boston is based on a system of squares or plazas, such as Kenmore Square or Harvard Square (pronounced squay-ah). Streets connect square to square, public transportation stops at squares, directions are given in relation to the squares, you name it. The streets here follow no logical layout. There are many one-way streets. Many streets are not clearly marked. Even when they're marked, some of them change names at town borders, or at seemingly random places, just to keep you on your toes. For instance, one of the streets near where I live changes name 3 times in a mere 3 block stretch. The streets are narrow and not very good because they keep getting dug up. There are very few parking places; garage parking costs a small fortune and it's practically impossible to find meter parking in a busy area. Traffic snarls are usually horrendous around any area worth visiting. Massachusetts is the rotary capital of America.  I happen to love rotaries, but those who haven't encountered it before may not. Now that was just the infrastructure. Don't get me started on the humans. Boston drivers have a pretty nasty reputation, which I would have to say is fully deserved. I can say this from the perspective of an impartial pedestrian, cyclist, and driver. So what does this mean in a nutshell? Avoid driving at all costs. The public transportation system will get you to most places you want to go. Chances are, many places that you want to see are within walking distances, as Boston is a relatively small city. Don't take any chance and leave your car at home. Thanks for doing your part to keep our lives sane.
 

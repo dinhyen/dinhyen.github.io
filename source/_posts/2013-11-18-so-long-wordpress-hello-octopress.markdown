@@ -170,9 +170,24 @@ It should be set up so that if I add a new destination, I wouldn't have to hunt 
               url:  cape-canaveral
 
 [YAML](http://www.yaml.org) is a really compact, highly readable format.  In the block above, indentation denotes nesting, `:` denotes a key-value pair and `- ` denotes a collection.  The parser turns the above YAML into the following hash:
-
-    {"travel"=>{"usa"=>[{"name"=>"Arizona", "url"=>"az", "places"=>[{"name"=>"Grand Canyon National Park", "url"=>"grand-canyon-national-park"}]}, {"name"=>"Florida", "url"=>"fl", "places"=>[{"name"=>"Cape Canaveral", "url"=>"cape-canaveral"}]}]}}
-
+```
+{
+  "travel" => {
+    "usa" => [
+      {
+        "name" => "Arizona", "url" => "az", "places" => [
+          {"name" => "Grand Canyon National Park", "url" => "grand-canyon-national-park"}
+        ]
+      }, 
+      {
+        "name" => "Florida", "url" => "fl", "places" => [
+          {"name" => "Cape Canaveral", "url" => "cape-canaveral"}
+        ]
+      }
+    ]
+  }
+}
+```
 After making modifications to `_config.yml`, I could quickly examine them by firing up the interactive Ruby shell, `irb`, then typing the following:
 
 ```
