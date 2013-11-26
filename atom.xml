@@ -4,7 +4,7 @@
   <title><![CDATA[Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2013-11-22T12:23:53-05:00</updated>
+  <updated>2013-11-26T07:42:03-05:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -742,8 +742,40 @@ sat FEB 12, 2005</p>
 
 <p><a href="http://www.yaml.org">YAML</a> is a really compact, highly readable format.  In the block above, indentation denotes nesting, <code>:</code> denotes a key-value pair and <code>-</code> denotes a collection.  The parser turns the above YAML into the following hash:</p>
 
-<pre><code>{"travel"=&gt;{"usa"=&gt;[{"name"=&gt;"Arizona", "url"=&gt;"az", "places"=&gt;[{"name"=&gt;"Grand Canyon National Park", "url"=&gt;"grand-canyon-national-park"}]}, {"name"=&gt;"Florida", "url"=&gt;"fl", "places"=&gt;[{"name"=&gt;"Cape Canaveral", "url"=&gt;"cape-canaveral"}]}]}}
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="s2">&quot;travel&quot;</span> <span class="o">=&gt;</span> <span class="err">{</span>
+</span><span class='line'>    <span class="s2">&quot;usa&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+</span><span class='line'>      <span class="err">{</span>
+</span><span class='line'>        <span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Arizona&quot;</span><span class="o">,</span> <span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;az&quot;</span><span class="o">,</span> <span class="s2">&quot;places&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+</span><span class='line'>          <span class="err">{</span><span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Grand Canyon National Park&quot;</span><span class="o">,</span> <span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;grand-canyon-national-park&quot;</span><span class="p">}</span>
+</span><span class='line'>        <span class="o">]</span>
+</span><span class='line'>      <span class="err">}</span><span class="o">,</span>
+</span><span class='line'>      <span class="p">{</span>
+</span><span class='line'>        <span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Florida&quot;</span><span class="o">,</span> <span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;fl&quot;</span><span class="o">,</span> <span class="s2">&quot;places&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+</span><span class='line'>          <span class="err">{</span><span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Cape Canaveral&quot;</span><span class="o">,</span> <span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;cape-canaveral&quot;</span><span class="p">}</span>
+</span><span class='line'>        <span class="o">]</span>
+</span><span class='line'>      <span class="err">}</span>
+</span><span class='line'>    <span class="o">]</span>
+</span><span class='line'>  <span class="err">}</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>After making modifications to <code>_config.yml</code>, I could quickly examine them by firing up the interactive Ruby shell, <code>irb</code>, then typing the following:</p>
 
@@ -853,7 +885,7 @@ sat FEB 12, 2005</p>
     <link href="http://dinhyen.github.io/blog/2013/11/13/sigma-50mm-lens/"/>
     <updated>2013-11-13T00:00:00-05:00</updated>
     <id>http://dinhyen.github.io/blog/2013/11/13/sigma-50mm-lens</id>
-    <content type="html"><![CDATA[<p>I&rsquo;m fond of landscape photography.  However when there&rsquo;s a human subject, applying the same kind of composition can come out looking too formal or posed.  I&rsquo;d like to achieve more of the natural, spontaneous, spur-of-the-moment feel.  For that I want to have a lens that&rsquo;s fast, focuses quickly and has good bokeh.  A prime lens would have those qualities at a much lower price point than a telephoto lens.  With that settled, I had to decide between 35, 50 and 85mm.  From what I&rsquo;ve read, the general opinion is that the wide-angle 35mm prime lens is good for landscape or street scenes, while 85mm is good for an intimate, close-up portrait.  That leaves the 50mm, which can do either almost as well and happens to be the (only) lens on my first camera, a <a href="http://en.wikipedia.org/wiki/Canon_AE-1">Canon AE-1</a>.  That it&rsquo;s famously associated with Henri Cartier-Bresson can&rsquo;t be a bad thing either.</p>
+    <content type="html"><![CDATA[<p>I&rsquo;m fond of landscape photography.  However when there&rsquo;s a human subject, applying the same kind of composition can come out looking too formal or posed.  I&rsquo;d like to achieve more of the natural, spontaneous, spur-of-the-moment feel.  For that I want to have a lens that&rsquo;s fast, focuses quickly and has good bokeh.  A prime lens would have those qualities at a much lower price point than a telephoto lens.  With that settled, I had to decide between 35, 50 and 85mm.  From what I&rsquo;ve read, the general opinion is that the wide-angle 35mm prime lens is good for landscape or street scenes, while 85mm is good for an intimate, close-up portrait.  That leaves the 50mm, which can do either almost as well and happens to be the (only) lens on my first camera, a <a href="http://en.wikipedia.org/wiki/Canon_AT-1">Canon AT-1</a>.  That it&rsquo;s famously associated with Henri Cartier-Bresson can&rsquo;t be a bad thing either.</p>
 
 <p>Nikon offers two 50mm lenses at f/1.4 and f/1.8.  I chose the Sigma 50mm f/1.4 over the Nikon counterparts. For one, the reviews for the Sigma are universally outstanding.  Even though bokeh quality is somewhat subjective, the general consensus is that the Sigma is better. For almost the same price as the Nikon 50mm f/1.4, it looks and feels much more solid than the plasticky-looking Nikon equivalent. Furthermore, it has the professional-standard 77mm filter size instead of the 58mm and 52mm filter sizes for the Nikon lenses.</p>
 

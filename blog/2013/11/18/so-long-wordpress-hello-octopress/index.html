@@ -341,8 +341,40 @@
 
 <p><a href="http://www.yaml.org">YAML</a> is a really compact, highly readable format.  In the block above, indentation denotes nesting, <code>:</code> denotes a key-value pair and <code>-</code> denotes a collection.  The parser turns the above YAML into the following hash:</p>
 
-<pre><code>{"travel"=&gt;{"usa"=&gt;[{"name"=&gt;"Arizona", "url"=&gt;"az", "places"=&gt;[{"name"=&gt;"Grand Canyon National Park", "url"=&gt;"grand-canyon-national-park"}]}, {"name"=&gt;"Florida", "url"=&gt;"fl", "places"=&gt;[{"name"=&gt;"Cape Canaveral", "url"=&gt;"cape-canaveral"}]}]}}
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="s2">&quot;travel&quot;</span> <span class="o">=&gt;</span> <span class="err">{</span>
+</span><span class='line'>    <span class="s2">&quot;usa&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+</span><span class='line'>      <span class="err">{</span>
+</span><span class='line'>        <span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Arizona&quot;</span><span class="o">,</span> <span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;az&quot;</span><span class="o">,</span> <span class="s2">&quot;places&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+</span><span class='line'>          <span class="err">{</span><span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Grand Canyon National Park&quot;</span><span class="o">,</span> <span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;grand-canyon-national-park&quot;</span><span class="p">}</span>
+</span><span class='line'>        <span class="o">]</span>
+</span><span class='line'>      <span class="err">}</span><span class="o">,</span>
+</span><span class='line'>      <span class="p">{</span>
+</span><span class='line'>        <span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Florida&quot;</span><span class="o">,</span> <span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;fl&quot;</span><span class="o">,</span> <span class="s2">&quot;places&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+</span><span class='line'>          <span class="err">{</span><span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Cape Canaveral&quot;</span><span class="o">,</span> <span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;cape-canaveral&quot;</span><span class="p">}</span>
+</span><span class='line'>        <span class="o">]</span>
+</span><span class='line'>      <span class="err">}</span>
+</span><span class='line'>    <span class="o">]</span>
+</span><span class='line'>  <span class="err">}</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>After making modifications to <code>_config.yml</code>, I could quickly examine them by firing up the interactive Ruby shell, <code>irb</code>, then typing the following:</p>
 
