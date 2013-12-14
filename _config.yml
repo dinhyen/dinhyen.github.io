@@ -240,6 +240,17 @@ travel:
       url:  rothenburg-ob-der-tauber
     - name: "Schloss Neuschwanstein"
       url:  schloss-neuschwanstein
+  iceland:
+    - name: "Reykjavík‎"
+      url:  reykjavik
+    - name: "Snæfellsnes peninsula"
+      url:  snaefellsnes-peninsula
+    - name: "Vatnajökull National Park"
+      url:  vatnajokull-national-park
+    - name: "Skógafoss and other waterfalls"
+      url:  skogafoss
+    - name: The Golden Circle
+      url:  golden-circle
   monaco:
     - name: "Monaco"
       url: monaco

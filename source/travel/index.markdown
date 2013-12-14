@@ -49,6 +49,13 @@ footer: true
       {% endfor %}
     </ul>
   </li>
+  <li><a href="{{ root_url }}/travel/iceland">Iceland</a>
+    <ul>
+      {% for place in site.travel.iceland %}
+        <li><a href="{{ root_url }}/travel/iceland/{{ place.url }}">{{ place.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </li>  
   <li><a href="{{ root_url }}/travel/monaco">Monaco</a>
   </li>
   <li><a href="{{ root_url }}/travel/netherlands">The Netherlands</a>

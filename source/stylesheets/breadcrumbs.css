@@ -19,6 +19,3 @@
 #content .breadcrumbs + div > {
   margin-top: 15px;
 }
-#content .breadcrumbs + div > article > header {
-  padding-top: 0;
-}
