@@ -6,7 +6,7 @@ comments: true
 sharing: true
 footer: true
 ---
-We had intended to visit Skógafoss on the way back from [Vatnajökull National Park](vatnajokull-national-park).  But by the time we got there we couldn't see 50m away. So they would be our destinations today.  We woke up to heavy rain and hurricane-force winds. Just another day of Iceland's notoriously unpredictable weather.
+We had intended to visit Skógafoss on the way back from [Vatnajökull National Park](../vatnajokull-national-park).  But by the time we got there we couldn't see 50m away. So they would be our destinations today.  We woke up to heavy rain and hurricane-force winds. Just another day of Iceland's notoriously unpredictable weather.
 
 We started East through fog as heavy as soup.  Following a tip from my personal favorite Iceland reference, [World of Waterfalls](http://www.world-of-waterfalls.com/iceland.html), we turned off highway 1 one km before Hella.  AEgissufoss is just a few kms from the exit.  The parking area is on the left, down a dirt and gravel road which was soft and squishy from all the rain. It was difficult to keep the camera from shaking with the buffeting wind.
 

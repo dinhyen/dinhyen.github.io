@@ -95,6 +95,6 @@ We made it back to the car at the church in the drizzle and enjoyed this view of
 
 On the way back to the hotel, we stopped by the Bónus supermarket which seems to be stocked with lots of processed junk food like ours. We picked up local bread, ham, cheese and yogurt for our Thanksgiving dinner, as well as some pungent dried fish and Spanish clementines, which cost no more than they do at home. Like most Euro markets, patrons would have to pay for plastic bag.  We are are a huge fan of this policy, which is green and saves money. We never need plastic bags at home anyways, and it's distressing to see people coming out of store with shopping carts filled with plastic.
 
-We had an early night before in the morning it would be a long drive to [Snaefellsnes peninsula](snaefellsnes-peninsula).
+We had an early night before in the morning it would be a long drive to [Snaefellsnes peninsula](../snaefellsnes-peninsula).
 
 Last visit: November 28, 2013
