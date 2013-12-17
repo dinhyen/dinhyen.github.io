@@ -7,7 +7,7 @@ sharing: true
 footer: true
 ---
 
-In contrast to [Snæfellsnes peninsula](snaefellsnes-peninsula), only 80km to the north, where we drove in two inches of snow and a steady flurry, it was relatively balmy albeit with a persistent shower. We set out at around 7h30 when the guesthouse was still dark, though the innkeeper caught up to us to find out if we wanted breakfast! We politely declined of course, but were pleasantly surprised.  We had about a quarter tank of gas. Since I couldn't get my debit card to work at any gas station, I decided to try an N1 station nearby which carried a prepaid card.  A Shell station happened to be on the way, and luckily they let me pay by cash. I put in 3000kr--it wasn't even half full. An ATM withdrawal and 5000kr later it was almost full. It would cost 10000kr or $85 for a full tank of gas. 
+In contrast to [Snæfellsnes peninsula](snaefellsnes-peninsula), only 80km to the north, where we drove in two inches of snow and under a steady flurry, it was relatively balmy albeit with a persistent shower. We set out at around 7h30 when the guesthouse was still dark, though the innkeeper caught up to us to find out if we wanted breakfast! We politely declined of course, but were pleasantly surprised.  We had about a quarter tank of gas. Since I couldn't get my debit card to work at any gas station, I decided to try an N1 station nearby which carried a prepaid card.  A Shell station happened to be on the way, and luckily they let me pay by cash. I put in 3000kr--it wasn't even half full. An ATM withdrawal and 5000kr later it was almost full. It would cost 10000kr or $85 for a full tank of gas. 
 
 We drove along the South ring road. We saw a brightly glowing rectangular building, which we also saw yesterday but was puzzled about it. As we pulled closer, the mystery was solved, it was a greenhouse, in fact five of them in a row. With little sun in the winter and abundant renewable energy, this isn't a bad idea to grow vegetable. It was 9 but felt like 4.  The southern horizon doesn't start to glow until about 10.
 
@@ -65,7 +65,7 @@ Vartifoss is majestic, and the descending basalt columns give it unmatched uniqu
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_7087.jpg)
 
-Once we got back down, there were still a couple hours of daylight left, so we decided to hike to Skaftafell glacier, just 1.5 km away.  The winter landscape didn't have to be bleak, in fact the moss cover was quite colorful.
+Once we got back down, there were still a couple hours of daylight left, so we decided to hike to Skaftafell glacier, just 1.5 km away.  The winter landscape didn't have to be bleak, in fact the moss carpet was quite colorful.
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_7155_6_7.jpg)
 

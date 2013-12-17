@@ -6,7 +6,7 @@ comments: true
 sharing: true
 footer: true
 ---
-Our destination on our last day in Iceland is the Golden Circle, or at least the Gullfoss part of it. When we were about to leave, we found that the car was covered in 2 inches of ice and snow.  Now we've seen everything!  We had a late start so we could finally see what the landscape on the South Ring Road heading out from Reykjavík‎.  Covered in white powder, the volcanic rocks ands soil looked more than a little like cookies & cream.  The landscape looked hauntingly beautiful.  The wind was fierce when it came, rocking the car as if it were a toy.  We saw several steam vents among the hills. Lots of power lines crisscross this area, many of which probably connecting nearby [Nesjavellir geothermal power station](http://en.wikipedia.org/wiki/Nesjavellir_Geothermal_Power_Station).  We stopped at the top of the pass before descending down to the coast.
+Our destination on our last day in Iceland was the Golden Circle, or at least the Gullfoss part of it. When we were about to embark on the road, we found that the car was covered in 2 inches of ice and snow.  Now we've seen everything!  We had a late start so we could finally see what the landscape on the South Ring Road heading out from Reykjavík‎.  Covered in white powder, the volcanic rocks ands soil looked more than a little like cookies & cream.  The landscape looked hauntingly beautiful.  The wind was fierce when it came, rocking the car as if it were a toy.  We saw several steam vents among the hills. Lots of power lines crisscross this area, many of which probably connecting nearby [Nesjavellir geothermal power station](http://en.wikipedia.org/wiki/Nesjavellir_Geothermal_Power_Station).  We stopped at the top of the pass before descending down to the coast.
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_7447.jpg)
 
@@ -29,11 +29,11 @@ A Lutheran church now stands on the site, amid some archaelogical excavations.  
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_7477.jpg)
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_7495.jpg)
 
-To keep up the equine tradition, check out some horse faces
+To keep up the equine tradition, here are some horse faces.
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_7501.jpg)
 
-A Skálholt, we could see the wells in the southern horizon.  Soon the sky darkened and the squalls began to pelt us with icy pellets. We drove away as fast as we could with the front chasing us.  It almost felt like outracing the sandstorm in The Mummy. We took a chance and stopped at the Faxa waterfalls.
+A Skálholt, we could see the wells in the southern horizon.  Soon the sky darkened and the squalls began to pelt us with icy pellets. We drove away as fast as we could with the front chasing us.  It almost felt like outracing the sandstorm in The Mummy. We took a chance and stopped at the [Faxi waterfalls](http://en.wikipedia.org/wiki/Faxi).
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_7512.jpg)
 

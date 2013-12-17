@@ -6,7 +6,7 @@ comments: true
 sharing: true
 footer: true
 ---
-Iceland has been on our radar for a while.  We've just never made it there because it was so close. We've sort of made Thanksgiving an occasion to go abroad.  Last year it was Switzerland and Italy.  This year we tossed around a few ideas, primarily the Caribbean, but ultimately decided not to be deterred by the truncated daylight hours and the temperature.  At Logan Airport, it seems a lot of people have the same ideas and the cramped international terminal was packed to the gills.
+Iceland has been on our radar for a while.  We've just never made it there because it was so close and we've had our eyes set on more distant, "exotic" locales.  We've sort of made Thanksgiving an occasion to go abroad.  Last year it was Switzerland and Italy.  This year we tossed around a few ideas, primarily the Caribbean, but ultimately decided not to be deterred by the truncated daylight hours and the temperature.  At Logan Airport, it seemed a lot of people had the same ideas and the cramped international terminal was packed to the gills.
 
 Iceland Air stewardesses have very smart uniforms, especially the twinkie-shaped headwear which I suspect could double as a flotation device.  It was our first introduction to the Icelandic language's sing-song lilt.  Occasionally it sounded almost like a strange dialect of English.  Some of the words too are vaguely familiar, like opið (open), taktu kort (take the card), etc.
 
@@ -19,7 +19,7 @@ Our first stop was the space-shuttle shaped Hallgrímskirkja.
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6542.jpg)
 
-The exterior was inspired by the basalt columns of [Svartifoss](vatnajokull), which we later visited.  The larger-than-life statue in front of the church depicts Leif Eirikson, who discovered and tried to settle in North America, named Vinland in the Norse sagas, 500 years before Columnbus (this being from the European perspective of course). The interior of this Lutheran church is bare and free of all the usual trappings of "normal" church.  We like its lofty, luminous and airy feel.
+The exterior was inspired by the basalt columns of [Svartifoss](../vatnajokull-national-park), which we later visited.  The larger-than-life statue in front of the church depicts Leif Eirikson, who discovered and tried to settle in North America, named [Vinland](http://en.wikipedia.org/wiki/Vinland) in the Norse sagas, 500 years before Columbus (from the European perspective of course). The interior of this Lutheran church is spartan and free of all the usual trappings of "normal" church.  We like its lofty, luminous and airy feel.
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6499.jpg)
 
@@ -35,11 +35,11 @@ We were rather wet and hungry so we opted for the first eatery we saw across fro
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6540.jpg)
 
-Kate had the smoked trout, mashed fish and sheep "jelly" as a first introduction to Icelandic cuisine.  I had the special, which was lamb curry. 
+Kate had the smoked trout, mashed fish and sheep "jelly" as a first introduction to Icelandic cuisine.  I had the special, which was lamb curry. I also had the only vegetables we had on the trip, lettuce and greenhouse-grown tomoatoes, here.  If we lived in Iceland, we'd really miss greens.
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6559.jpg)
 
-We made our way down the street in front of the church, Skólavörðustígur, and don't ask me to pronounce it.  
+We made our way down the street in front of the church, Skólavörðustígur, and don't ask me to pronounce it.
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6578.jpg)
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6581.jpg)
@@ -63,11 +63,13 @@ I love Europe street signs, colorful, clean, functional. We proceeded to get cas
 
 At Austurvöllur, the plaque at the base of this statue of Jón Sigurðsson Forseti has 3 paragraphs in Icelandic and this English phrase, "Leader of Iceland's independence movement".  I'm guessing it's not a literal translation.
 
-![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6634.jpg)
-
-The City Hall is a great example of Icelandic design.  It sits over a lake, has large, lofty halls with floor-to-ceiling windows facing the water.  This is also where you'd find bathrooms.
+The City Hall is a great example of Icelandic design.  It sits over a lake and has large, lofty halls with floor-to-ceiling windows facing the water.  Most importantly, this is also where you'd find bathrooms.
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6657.jpg)
+
+The parking garage(?) is below a pool with a tree growing in the middle; people entering would seemingly walk down and disappear under water.  It wouldn't surprise me if the basement rooms have underwater viewports.
+
+![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6634.jpg)
 
 Monument to the anonymous office worker.  This can be symbolic in many ways, I suppose.
 
@@ -77,7 +79,7 @@ At the feeding station.
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6675.jpg)
 
-Our next stop was the Harpa concert hall. This unique glass building is one of my favorites anywhere.  I'm glad they decide to apply their own superior aesthetics instead of plopping down another hideous Frank Gehry eyesore.
+Our next stop was the Harpa concert hall. This unique glass building is one of my favorites anywhere.  I'm glad they decide to turn to their own superior aesthetics instead of plopping down another hideous Frank Gehry eyesore.
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6715.jpg)
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6617.jpg)
@@ -89,8 +91,10 @@ We walked along the shoreline to the [Sun Voyager](http://en.wikipedia.org/wiki/
 
 We made it back to the car at the church in the drizzle and enjoyed this view of the church glowing in the twilight, which was around 4h30.
 
+![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6760.jpg)
+
 On the way back to the hotel, we stopped by the Bónus supermarket which seems to be stocked with lots of processed junk food like ours. We picked up local bread, ham, cheese and yogurt for our Thanksgiving dinner, as well as some pungent dried fish and Spanish clementines, which cost no more than they do at home. Like most Euro markets, patrons would have to pay for plastic bag.  We are are a huge fan of this policy, which is green and saves money. We never need plastic bags at home anyways, and it's distressing to see people coming out of store with shopping carts filled with plastic.
 
-We had an early night before in the morning it would be a long drive to Snaefelsnes peninsula.
+We had an early night before in the morning it would be a long drive to [Snaefellsnes peninsula](snaefellsnes-peninsula).
 
 Last visit: November 28, 2013

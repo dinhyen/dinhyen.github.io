@@ -10,7 +10,7 @@ We woke up still very dark, even though our clocks, both external and internal, 
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6792.jpg)
 
-View of lake Elliðavatn. The guesthouse comes with a hot tub, though we didn't try it out on account of the weather (it was too close to freezing for our comfort).
+View of lake Elliðavatn. The guesthouse comes with an outdoor hot tub, though we didn't try it out on account that it was near-freezing.
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6797.jpg)
 
@@ -37,7 +37,7 @@ After half an hour of difficult driving, the snow yielded to rain and the road w
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6873.jpg)
 
-We saw this tube house on the way back. It wouldn't be out of place in the Shire if not the lack of greenery.
+We saw this tube house on the way back. It wouldn't be out of place in the Shire if not for the lack of greenery.
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6879.jpg)
 
