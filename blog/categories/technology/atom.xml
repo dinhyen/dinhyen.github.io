@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technology | Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2013-12-17T18:23:39-05:00</updated>
+  <updated>2014-02-06T16:51:29-05:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Updating SQL Server Primary Key]]></title>
+    <link href="http://dinhyen.github.io/blog/2014/11/23/updating-sql-server-primary-key/"/>
+    <updated>2014-11-23T16:34:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2014/11/23/updating-sql-server-primary-key</id>
+    <content type="html"><![CDATA[<p>A requirement recently came up to update the primary key in a SQL Server table while retaining existing data (it&rsquo;s a long story).  I suppose one way to do so would be to drop any existing foreign-key constraint and update all related tables.  Unfortunately, the table in question is the User table, which is related to practically every other table in the schema. Updating a bunch tables manually, without the safety net of relational integrity, would be a bit dodgy (for lack of a better word in American English). Fortunately, there&rsquo;s a less painful approach using the <a href="http://technet.microsoft.com/en-us/library/ms186973.aspx">ON UPDATE CASCADE</a> clause.</p>
+
+<p>In a simple example, I have a LineItem table, whose <code>userId</code> field references User&rsquo;s <code>Id</code> field. Since the existing FK relationship doesn&rsquo;t have ON DELETE CASCADE, I&rsquo;d have to &ldquo;alter&rdquo; the constraint to add it.  But because is no &ldquo;alter contraint&rdquo; in T-SQL, I&rsquo;d have to drop and re-add the constraint.</p>
+
+<p>``` sql
+/<em> drop existing constraint </em>/
+ALTER TABLE [dbo].[LineItem] DROP CONSTRAINT [FK_LineItem_User]
+GO</p>
+
+<p>/<em> add constraint </em>/
+ALTER TABLE [dbo].[LineItem]  WITH CHECK ADD  CONSTRAINT [FK_LineItem_User] FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([Id])
+ON UPDATE CASCADE
+GO</p>
+
+<p>ALTER TABLE [dbo].[LineItem] CHECK CONSTRAINT [FK_LineItem_User]
+GO
+```</p>
+
+<p>Then when I update an Id in the User table, the change would be cascaded to LineItem and all other related tables.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[So long WordPress, hello Octopress]]></title>
@@ -635,63 +663,6 @@ Action ended 17:10:02: ShipBatchCmd. Return value 1.
   <Custom Action="DbBatchCmd" After="InstallFiles">NOT Installed</Custom>
 </InstallExecuteSequence>
 ```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Wix: Batch files.  Yes, really.]]></title>
-    <link href="http://dinhyen.github.io/blog/2013/09/26/wix-batch-file/"/>
-    <updated>2013-09-26T00:00:00-04:00</updated>
-    <id>http://dinhyen.github.io/blog/2013/09/26/wix-batch-file</id>
-    <content type="html"><![CDATA[<p>Batch files are the last resort due to its Neanderthal abilities and exasperating syntax.  But if I want to run a bunch of things on bare-boned Windows Server 2003, this seems like the quickest if not only option.</p>
-
-<p>I tried something like this, by creating a property for the system executable cmd.exe, which would execute the batch script via the /c switch. Then I created a custom action that relies on the property.  The batch script and its arguments must be enclosed in quotes. In addition, each argument should be enclosed in quotes in case it contains a space.</p>
-
-<p>``` xml
-<Property Id="CMD">
-  <DirectorySearch Id="SysDir" Path="[SystemFolder]" Depth="1"></p>
-
-<pre><code>&lt;FileSearch Id="CmdExe" Name="cmd.exe"  /&gt;
-</code></pre>
-
-<p>  </DirectorySearch>
-</Property>
-<CustomAction Id="BatchScript" Property="CMD" Execute="immediate" Impersonate="yes" Return="check" ExeCommand="/c &quot;&quot;[INSTALLDIR]\batch_script.cmd&quot; &quot;my arg1&quot; &quot;my arg2&quot;&quot;" />
-```</p>
-
-<p>Since I want to use property values (derived from user inputs) as arguments, the &ldquo;beauty&rdquo; of this (and I say so with a straight face) is simply the replacements of raw argument values with property references.</p>
-
-<p>``` xml
-<Property Id="b_arg1">my arg1</Property>
-<Property Id="b_arg2">my arg2</Property></p>
-
-<p><CustomAction Id="BatchScript" Property="CMD" Execute="immediate" Impersonate="yes" Return="check" ExeCommand="/c &quot;&quot;[B_DBINSTALLDIR]\batch_script.cmd&quot; &quot;[b_arg1]&quot; &quot;[b_arg2]&quot;&quot;" />
-```</p>
-
-<p>Then I hit a snag.  The batch script needs to call other batch scripts in the same directory.  With this approach, I can&rsquo;t set the working directory because <CustomAction> can have either a Directory attribute or a Property attribute but not both.  Here cmd.exe simply runs under the directory it defaults to, <code>c:\windows\system32</code>.</p>
-
-<p>With a slight modification by including the entire command in the ExeCommand attribute, the custom action can use a working directory.</p>
-
-<p><code>xml
-&lt;CustomAction Id="BatchScript" Directory='INSTALLDIR' Execute="immediate" Impersonate="yes" Return="check" ExeCommand="[SystemFolder]\cmd /c &amp;quot;&amp;quot;batch_script.cmd&amp;quot; &amp;quot;[b_arg1]&amp;quot; &amp;quot;[b_arg2]&amp;quot;&amp;quot;" /&gt;
-</code></p>
-
-<p>Here&rsquo;s the initial version of the batch script.  The database is configured via sqlcmd with the arguments which are passed to the script.</p>
-
-<pre>
-set arg1=%1
-set arg2=%2
-sqlcmd -E -d database_name -i "sql_script.sql" -v arg1="%arg1%" arg2="%arg2%"
-</pre>
-
-
-<p>However, some of the script arguments are already enclosed in quotes, which must be there because they may contain space.  This means the sqlcmd arguments now have extra quotes. I suppose if I made sure all batch file arguments are enclosed in quotes, I wouldn&rsquo;t need the quotes in the sqlcmd parameters list. Nevertheless, I decide to strip the quotes before forwarding the arguments to sqlcmd.</p>
-
-<pre>
-set arg1=%arg1:"=%
-set arg2=%arg2:"=%
-</pre>
-
 ]]></content>
   </entry>
   
