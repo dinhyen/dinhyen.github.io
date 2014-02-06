@@ -14,7 +14,7 @@ View of lake Elliðavatn. The guesthouse comes with an outdoor hot tub, though w
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6797.jpg)
 
-It was now 10, but it was no lighter than 6.  During the drive couldn't help but look in the rear view mirror to see the glowing sky behind.
+It was now 10, but no lighter than 6.  During the drive we couldn't help but look in the rear view mirror to see the glowing sky behind.
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6806.jpg)
 
@@ -25,13 +25,15 @@ We caught sight of these [Icelandic horses](http://en.wikipedia.org/wiki/Iceland
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6807.jpg)
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6813.jpg)
 
-We soon entered as tunnel underneath [Whale Fjord](http://en.wikipedia.org/wiki/Hvalfj%C3%B6r%C3%B0ur), named Hvalfjarðargöngin (pronounce it, I dare you). It's 5.75km and built at a mere 4.5 million, chump change a far as Boston's Big Dig goes. It was built without tax payer money, so guess who pays? It cost a cool 1000kr or about $9, each way.  Soon after that we crossed the Firth of Borg into the town of Borganes. There are some prominent wind advisories signs though it was calm on the way in.
+We soon entered a tunnel underneath [Whale Fjord](http://en.wikipedia.org/wiki/Hvalfj%C3%B6r%C3%B0ur), named [Hvalfjarðargöngin](http://en.wikipedia.org/wiki/Hvalfj%C3%B6r%C3%B0ur_Tunnel) (pronounce it, I dare you). It's 5.75km and built at a mere $70 million, chump change a far as Boston's Big Dig goes. It was built without tax payer money, so guess who pays? It cost a cool 1000kr or about $9, each way.  Soon after that we crossed the Firth of Borg into the town of Borganes. There are some prominent wind advisories signs though it was calm on the way in.
 
 We pulled off the road at the first sign of ice chunks lying scattered in a small bay. It turned out to be even better, there was a small but pretty waterfalls flowing into the bay.
 
 ![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6835.jpg)
 
-The weather was a surprisingly mild with temperatures around -1 to 4c the whole day. However, as we drove further, it started raining then flurries came down.  Next stop was the Gerðuberg basalt columns, about 1.5km down a snow-covered gravel road. This interesting geological formation resembles Devil's Tower in Wyoming and Giant's Causeway in Ireland.  In the first couple of shots it was impossible to see the columns thanks to the flurries. But I got decent result by putting the camera on top of the camera and using a 20s exposure.
+The landscape had a desolate, yet starkly beautiful, quality. The weather was a surprisingly mild with temperatures around -1 to 4c the whole day. However, as we drove further, it started raining then flurries came down.  Next stop was the Gerðuberg basalt columns, about 1.5km down a snow-covered gravel road. This interesting geological formation had the same geometric columns as Devil's Tower in Wyoming and Giant's Causeway in Ireland.  In the first couple of shots it was impossible to see the columns thanks to the flurries. But I got passable result by putting the camera on top of the camera and using a 20-second exposure.
+
+![](https://dl.dropboxusercontent.com/u/52804626/iceland/dsc_6868.jpg)
 
 After half an hour of difficult driving, the snow yielded to rain and the road was completely clear, so we made good progress.  Another half an hour later the rain was gone and we found ourselves in about 2 inches of snow.  From this point on, the road turns sharply uphill and there was a sign for tire chains.  Since our car wasn't thus equipped, we had to satisfy ourselves with a snowy look at Bjarnafoss and turn around.
 
