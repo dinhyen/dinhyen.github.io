@@ -563,8 +563,18 @@
         <lastmod>2013-11-19T17:25:19-05:00</lastmod>
     </url>
     <url>
-        <loc>http://dinhyen.github.io/blog/2014/11/23/updating-sql-server-primary-key/</loc>
-        <lastmod>2014-02-06T16:50:40-05:00</lastmod>
+        <loc>http://dinhyen.github.io/blog/2013/11/23/updating-sql-server-primary-key/</loc>
+        <lastmod>2014-02-07T10:43:19-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://dinhyen.github.io/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/
+        </loc>
+        <lastmod>2014-02-07T15:57:44-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/blog/2014/02/07/sports-i-would-watch/</loc>
+        <lastmod>2014-02-07T12:05:33-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/about/</loc>
@@ -572,11 +582,11 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/archives/</loc>
-        <lastmod>2014-02-06T16:50:40-05:00</lastmod>
+        <lastmod>2014-02-07T15:57:44-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/</loc>
-        <lastmod>2014-02-06T16:50:40-05:00</lastmod>
+        <lastmod>2014-02-07T15:57:44-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/robots.txt</loc>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technology | Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2014-02-06T16:51:29-05:00</updated>
+  <updated>2014-02-07T16:00:31-05:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -14,11 +14,126 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Using Angular root scope for communication between controllers]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/"/>
+    <updated>2013-12-07T13:28:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers</id>
+    <content type="html"><![CDATA[<p>Angular makes it simple to create standard index and details views.  Using the ubiquitous task list as an example, I can set up routes using the <code>$route</code> service as follows:</p>
+
+<p><code>javascript
+$routeProvider
+  .when('/tasks', { templateUrl: '_tasks.html', controller: 'TasksIndexCtrl' })
+  .when('/task/:id', { templateUrl: '_task.html', controller: 'TaskDetailsCtrl' })
+  .otherwise({ redirectTo: '/tasks' });
+}
+</code></p>
+
+<p>The routes definitions specify the Angular controller and HTML template to use when the user navigates to a particular path.  Here we have 2 controllers, one for the index page and one for the details page.</p>
+
+<p>The index controller retrieves the task list as a JSON array via the <code>$http</code> service:
+``` javascript
+function ($scope, $http) {
+  $http.get(&lsquo;tasks.json&rsquo;).success(</p>
+
+<pre><code>function (data) {
+  $scope.tasks = data;
+}
+</code></pre>
+
+<p>  );
+}
+```</p>
+
+<p>The index view renders each task with a link which embeds the task&rsquo;s id.  When clicked, the link redirects to the task&rsquo;s details view.
+
+<code>html
+&lt;a href='#/task/{{task.id}}'&gt;{{task.name}}&lt;/a&gt;
+</code>
+</p>
+
+<p>The details controller also retrieves task data as JSON via <code>$http</code>, after extracting the id value from <code>$routeParams</code>.
+``` javascript
+function ($scope, $http, $routeParams) {
+  $http.get(&lsquo;task-&rsquo; + $routeParams.id + &lsquo;.json&rsquo;).success(</p>
+
+<pre><code>function (data) {
+  $scope.task = data;
+}
+</code></pre>
+
+<p>  );
+}
+```</p>
+
+<p><a href="http://embed.plnkr.co/CzbeallomRCE4HuVWtzO/preview" target="_blank">View the first version in Plunker</a></p>
+
+<p>So far it&rsquo;s pretty run-of-the-mill.  But let&rsquo;s say the task list also contains sufficient data to show each task&rsquo;s details (the index page simply displays fewer information due to space constraint).  There&rsquo;d be no need for a separate request to pull data for the details page.  The details controller can just search in-memory, within the task list which is already retrieved.  However, since each controller has its own scope and can&rsquo;t access another&rsquo;s scope, there has to be another way to share data between controllers.</p>
+
+<p>Enters the <a href="http://docs.angularjs.org/guide/scope">root scope</a>, which acts as the parent scope for all other scopes.  If a property can&rsquo;t be found in a scope, Angular searchs its parent scope and so on until it reaches the root scope (as a consequence of prototypical inheritance).  Putting the task list in the root scope would allow Angular to find it in the index controller and, because all scopes share the same root scope, also allow the details controller to access it.</p>
+
+<p>Modifying the index controller to save the task list to the root scope:
+``` javascript
+function ($rootScope, $http) {
+  $rootScope.tasks = [];
+  $http.get(&lsquo;tasks.json&rsquo;).success(</p>
+
+<pre><code>function (data) {
+  $rootScope.tasks = data;
+}
+</code></pre>
+
+<p>  );
+}
+```</p>
+
+<p>Instead of making an HTTP request, the details controller can search for a task by id within the root scope.  When it finds the tasks, it saves it to its own scope.  It&rsquo;s probably a good idea to not pollute the root scope any more than necessary.
+``` javascript
+function ($rootScope, $scope, $routeParams) {
+  var getTask = function (id) {</p>
+
+<pre><code>id = parseInt(id, 10);
+for (var i = 0; task = $rootScope.tasks[i]; ++i) {
+  if (task.id === id) {
+    return task;
+  }
+}
+return task;
+</code></pre>
+
+<p>  };</p>
+
+<p>  $scope.task = getTask($routeParams.id);
+}
+```</p>
+
+<p>Each time the user returns to the index page, a fresh request is made to retrieve the task list.  I could optimize it further by retrieving the task list only if it has changed.  To do so, I&rsquo;d need to keep track of the modification time.  Here, I&rsquo;m only making the simple check to see whether the task list has already been populated.</p>
+
+<p>``` javascript
+function ($rootScope, $http) {
+  if (typeof $rootScope.tasks === &lsquo;undefined&rsquo;) {</p>
+
+<pre><code>$rootScope.tasks = [];
+$http.get('tasks.json').success(
+  function (data) {
+    $rootScope.tasks = data;
+  }
+);
+</code></pre>
+
+<p>  }
+}
+```</p>
+
+<p><a href="http://embed.plnkr.co/BwEtA3Ftp9SJ0OJCPHyv/preview" target="_blank">View the second version in Plunker</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Updating SQL Server Primary Key]]></title>
-    <link href="http://dinhyen.github.io/blog/2014/11/23/updating-sql-server-primary-key/"/>
-    <updated>2014-11-23T16:34:00-05:00</updated>
-    <id>http://dinhyen.github.io/blog/2014/11/23/updating-sql-server-primary-key</id>
-    <content type="html"><![CDATA[<p>A requirement recently came up to update the primary key in a SQL Server table while retaining existing data (it&rsquo;s a long story).  I suppose one way to do so would be to drop any existing foreign-key constraint and update all related tables.  Unfortunately, the table in question is the User table, which is related to practically every other table in the schema. Updating a bunch tables manually, without the safety net of relational integrity, would be a bit dodgy (for lack of a better word in American English). Fortunately, there&rsquo;s a less painful approach using the <a href="http://technet.microsoft.com/en-us/library/ms186973.aspx">ON UPDATE CASCADE</a> clause.</p>
+    <link href="http://dinhyen.github.io/blog/2013/11/23/updating-sql-server-primary-key/"/>
+    <updated>2013-11-23T16:34:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/11/23/updating-sql-server-primary-key</id>
+    <content type="html"><![CDATA[<p>A requirement recently came up to update the primary key of a SQL Server table.  We get user data from a third-party single sign-on service and store them locally.  When the SSO software was upgraded, user IDs were changed, so we need to update our local users but retain existing data.  I suppose one way to do so would be to drop any existing foreign-key constraint and update all related tables.  Unfortunately, the User table is related to practically every other table in the schema. Updating a bunch tables manually, without the safety net of relational integrity, would be a bit dodgy. Fortunately, there&rsquo;s a less painful approach using the <a href="http://technet.microsoft.com/en-us/library/ms186973.aspx">ON UPDATE CASCADE</a> clause.</p>
 
 <p>In a simple example, I have a LineItem table, whose <code>userId</code> field references User&rsquo;s <code>Id</code> field. Since the existing FK relationship doesn&rsquo;t have ON DELETE CASCADE, I&rsquo;d have to &ldquo;alter&rdquo; the constraint to add it.  But because is no &ldquo;alter contraint&rdquo; in T-SQL, I&rsquo;d have to drop and re-add the constraint.</p>
 
@@ -37,7 +152,7 @@ GO</p>
 GO
 ```</p>
 
-<p>Then when I update an Id in the User table, the change would be cascaded to LineItem and all other related tables.</p>
+<p>Thereafter when I update an Id in the User table, the change would be cascaded to LineItem and all other related tables.</p>
 ]]></content>
   </entry>
   
@@ -567,101 +682,6 @@ $scope.match = function(fieldValue, searchTerm) {
   if (!searchTerm) return true;
   return fieldValue.toString().toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0;
 };
-```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Wix: Executing custom action before starting Windows service]]></title>
-    <link href="http://dinhyen.github.io/blog/2013/09/27/wix-executing-custom-action-before-starting-windows-service/"/>
-    <updated>2013-09-27T00:00:00-04:00</updated>
-    <id>http://dinhyen.github.io/blog/2013/09/27/wix-executing-custom-action-before-starting-windows-service</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve been trying to get a Wix installer to work. This particular scenario is pretty simple. I want to configure the database via a custom action, then start a Windows service which then queries the database before starting.  This would seem like a commonplace scenario. However, Wix documentations are sparse and I&rsquo;ve been wrangling with this for some time.  I finally found a solution.  While I loathe to reference a StackOverflow answer, as a favor to my future self I&rsquo;m going to do so anyways.</p>
-
-<p>The following defines the component that installs and starts the service and creates a feature that references it.</p>
-
-<p>``` xml
-<ComponentGroup Id='b_SyncSvcComps' Directory='b_SyncInstallDir'>
-  <Component Id='b_SyncSvc'></p>
-
-<pre><code>&lt;File Id='b_SyncExe' Name='MyService.exe' Source='$(var.syncSrcDir)\MyService.exe' DiskId='1' KeyPath='yes' /&gt;
-&lt;ServiceInstall Id='b_InstallSyncSvc' Type='ownProcess' Name='MyService' DisplayName='My Service' Description='My Service' Start='auto' Account='[SERVICEACCOUNT]' Password='[SERVICEPASSWORD]' ErrorControl='normal' /&gt;
-&lt;ServiceControl Id='b_StartSyncSvc' Start='install' Stop='both' Remove='uninstall' Name='MyService' Wait='yes' /&gt;
-</code></pre>
-
-<p>  </Component>
-</ComponentGroup></p>
-
-<p><Feature Id='b_ConnectedModeFeature' Title='Connected Mode Features' Level='1'>
-  <ComponentGroupRef Id='b_SyncSvcComps' />
-</Feature>
-```</p>
-
-<p>The following snippet in Product.wxs actually installs the feature:</p>
-
-<p><code>xml
-&lt;Feature Id='b_Features' Title='[ProductName]' Level='1'&gt;
-  &lt;FeatureRef Id='b_ConnectedModeFeature' /&gt;
-&lt;/Feature&gt;
-</code></p>
-
-<p>This is the initial version of the custom action that I want to run.</p>
-
-<p><code>xml
-&lt;CustomAction Id="DbBatchCmd" Directory='B_DBINSTALLDIR' Execute="immediate" Impersonate="yes" Return="check" ExeCommand="[SystemFolder]\cmd /c &amp;quot;&amp;quot;setup_database.cmd&amp;quot; &amp;quot;[b_WebServer]&amp;quot; &amp;quot;[b_DbServer]&amp;quot;&amp;quot;" /&gt;
-</code></p>
-
-<p>The following snippet in Product.wxs runs the custom action.  Here it is run after InstallFinalize, the last possible step in the installation&rsquo;s sequence of events.  The condition ensures that it is only run if the product isn&rsquo;t already installed.</p>
-
-<p><code>xml
-&lt;InstallExecuteSequence&gt;
-  &lt;Custom Action="DbBatchCmd" After="InstallFinalize"&gt;NOT Installed&lt;/Custom&gt;
-&lt;/InstallExecuteSequence&gt;
-</code></p>
-
-<p>According to the above, the installer tries to start the service before it runs the custom action to configure the database.  Of course, since the service requires the database to be set up, it balks.</p>
-
-<p>Among others, I tried running the custom action earlier using the <code>Before="StartServices"</code> and <code>After="InstallFiles"</code> attributes. The latter makes sense because the installer needs to copy files to the file system before it can execute the script.  When inspected with Orca, the MSI has the correct InstallExecuteSequence:</p>
-
-<pre>
-...
-InstallFiles              4000
-DbBatchCmd  NOT Installed 4001
-InstallServices VersionNT 5800
-StartServices VersionNT   5900
-...
-InstallFinalize           6600
-</pre>
-
-
-<p>However, the installer never executes the custom action.  It always tries to start the service and almost immediately fails. In fact, the custom action only runs when it&rsquo;s set to <code>After="InstallFinalize"</code> as above.</p>
-
-<p>One of the key things was provided by the helpful if somewhat verbose Windows installer log, which is created when you start the installer as follows:</p>
-
-<pre>
-msiexec /i myinstaller.msi /l*v myinstaller.log
-</pre>
-
-
-<p>Someday, Microsoft will have consistent command-line arguments.  The log has this to say about the service:</p>
-
-<pre>
-MSI (s) (3C:A8) [17:10:02:607]: Note: 1: 2262 2: Error 3: -2147287038 
-Info 1721.There is a problem with this Windows Installer package. A program required for this install to complete could not be run. Contact your support personnel or package vendor. Action: DbBatchCmd, location: C:\inetpub\wwwroot\MyApp\Database\, command: C:\Windows\SysWOW64\\cmd /c ""setup_database.cmd" "my_webserver" "my_dbserver"" 
-Action ended 17:10:02: ShipBatchCmd. Return value 1.
-</pre>
-
-
-<p>This is followed by entries for InstallServices and StartServices.  So the installer does try to run the custom action but fails.</p>
-
-<p>The <a href="http://stackoverflow.com/questions/778210/wix-trying-to-figure-out-install-sequences">answer</a> is provided by Rob Mensching, who created Wix.  According to him, <code>After="InstallFiles"</code> is correct. However, the execution needs to be &ldquo;deferred&rdquo; until the files are actually copied to the file system.  Below is the corrected XML.</p>
-
-<p>``` xml
-<CustomAction Id="DbBatchCmd" Directory='B_DBINSTALLDIR' Execute="deferred" ExeCommand="[SystemFolder]\cmd /c &quot;&quot;setup_database.cmd&quot; &quot;[b_WebServer]&quot; &quot;[b_DbServer]&quot;&quot;" /></p>
-
-<p><InstallExecuteSequence>
-  <Custom Action="DbBatchCmd" After="InstallFiles">NOT Installed</Custom>
-</InstallExecuteSequence>
 ```</p>
 ]]></content>
   </entry>

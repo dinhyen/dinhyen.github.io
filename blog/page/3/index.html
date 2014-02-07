@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="We use Hudson as our continuous integration server (although we&rsquo;re thinking about moving to Jenkins, but that&rsquo;s a different story). This &hellip;">
+  <meta name="description" content="When we traveled by car in Spain and Portugal in 2007, it&rsquo;s hard to believe that we managed to get around several cities using only a Michelin &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,173 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/18/quickly-editing-waypoints-on-a-garmin-gps-device/">Quickly Editing Waypoints on a Garmin GPS Device</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-18T00:00:00-05:00" pubdate data-updated="true">Dec 18<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When we traveled by car in Spain and Portugal in 2007, it&rsquo;s hard to believe that we managed to get around several cities using only a Michelin road atlas and a bunch of printouts of online maps. This time we&rsquo;re fully embracing 21st-century technology and bringing along a GPS device. To help save time, I like to enter destinations or waypoints ahead of time. On my Garmin nüvi 255W, it&rsquo;s a time-consuming process to enter waypoints (which Garmin calls Favorites). Fortunately, there&rsquo;s a way to create and edit waypoints on a PC, then later download them to the Garmin.</p>
+
+<p>The Garmin stores waypoints in a GPX file (kudos to them for using standards-based format). This is a good thing, because there&rsquo;s an excellent application for editing a GPX file on a PC&mdash;<a href="http://sourceforge.net/projects/gpxeditor">GPX Editor</a>.</p>
+
+<p>The first step is to connect the Garmin to the PC. After that you&rsquo;ll be able to browse the Garmin&rsquo;s memory card. Locate the current.gpx file under Drive\Garmin\GPX.</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/52804626/images/garmin_folder.jpg" /></p>
+
+<p>Copy current.gpx to the PC. You can also back up the file this way.</p>
+
+<p>Open the copy of current.gpx in GPX Editor. Select the Google map tab, then select the plus icon to add a waypoint.</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/52804626/images/gps_editor.jpg" /></p>
+
+<p>Once the waypoint is added, it shows in the list on the left. You can edit it and give it a more meaningful name.</p>
+
+<p>Once you&rsquo;re done, just copy current.gpx back to the Garmin. Your new favorites should now show up.</p>
+
+<p>This process works for my Garmin nüvi. I would suspect it would apply to other types of Garmin devices as well.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/15/setting-up-git-to-work-remotely/">Setting Up Git to Work Remotely</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-15T00:00:00-05:00" pubdate data-updated="true">Dec 15<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>At home I use a MacBook to connect via VPN to the office. I&rsquo;d have access to the intranet but not shell access to my workstation. Since I usually work on the same project at home and at the office, I need to keep my work synchronized. One way to do that is with a Git remote branch.</p>
+
+<p>At the office, I&rsquo;d create a local branch for the story I&rsquo;d like to work on:</p>
+
+<pre>
+git checkout master
+git branch story_1
+git checkout story_1
+</pre>
+
+
+<p>The last 2 steps can be replaced with the shortcut:</p>
+
+<pre>
+git checkout -b story_1
+</pre>
+
+
+<p>In the local branch, create a remote branch with the same name:</p>
+
+<pre>
+git push origin story_1
+</pre>
+
+
+<p>Alternatively, I could specify a different name for the remote branch:</p>
+
+<pre>
+git push origin story_1:cool_feature_1
+</pre>
+
+
+<p>To set up the local branch (i.e., the tracking branch) to track changes in the remote branch:</p>
+
+<pre>
+git checkout story_1
+git branch -u origin/story_1
+</pre>
+
+
+<p>Alternatively, I could use a more verbose syntax:</p>
+
+<pre>
+git branch --set-upstream story_1 origin/story_1
+</pre>
+
+
+<p>If there&rsquo;s an existing remote branch and I want to create a new tracking branch with the same name:</p>
+
+<pre>
+git checkout --track origin/story_1
+</pre>
+
+
+<p>Inside a tracking branch, Git knows which server and branch to push to and pull from, so I can simply do <code>git pull</code> instead of <code>git pull origin story_1</code>.<sup>&dagger;</sup></p>
+
+<p>Now that the remote branch is setup, I can create a tracking branch on the laptop as above.</p>
+
+<p>Helpful references: <a href="http://git-scm.com/book/en/Git-Branching-Remote-Branches">http://git-scm.com/book/en/Git-Branching-Remote-Branches</a></p>
+
+<hr>
+
+
+<p><sup>&dagger;</sup> The behavior of &ldquo;git push&rdquo; actually depends on the push.default setting in .gitconfig and whether the tracking branch has the same name as the remote branch. The git-config man page gives the following information on push.default:</p>
+
+<blockquote><p><b>push.default</b> Defines the action git push should take if no refspec is given on the command line, no refspec is configured in the remote, and no refspec is implied by any of the options given on the command line. Possible values are:</p>
+
+<p>nothing &ndash; do not push anything.</p>
+
+<p>matching &ndash; push all branches having the same name in both ends. This is for those who prepare all the branches into a publishable shape and then push them out with a single command. It is not appropriate for pushing into a repository shared by multiple users, since locally stalled branches will attempt a non-fast forward push if other users updated the branch. This is currently the default, but Git 2.0 will change the default to simple.</p>
+
+<p>upstream &ndash; push the current branch to its upstream branch. With this, git push will update the same remote ref as the one which is merged by git pull, making push and pull symmetrical. See &ldquo;branch.<name>.merge&rdquo; for how to configure the upstream branch.</p>
+
+<p>simple &ndash; like upstream, but refuses to push if the upstream branch&rsquo;s name is different from the local one. This is the safest option and is well-suited for beginners. It will become the default in Git 2.0.</p>
+
+<p>current &ndash; push the current branch to a branch of the same name.</p></blockquote>
+
+<p>If the tracking branch has the same name as the remote branch, <code>git push</code> will suffice.  If it has a different name and push.default is, for example, &ldquo;simple&rdquo;, I&rsquo;d have to specify the refspec: <code>git push origin HEAD:story_1</code>.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -2443,734 +2610,6 @@ dism /image:C: /add-driver /driver:D:\mydrivers /recurse
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/17/cusco/">Cusco, Peru (Day 3, 4, 6)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-17T00:00:00-04:00" pubdate data-updated="true">Jul 17<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>We arrived at airport with just 1 hour to spare.  I am quite impressed with LAN Chile Airline.  Plenty of professional bilingual staff are available to assist passengers at automated check-in kiosks.  Oh and they&rsquo;re all attractive young women. In other parts of the world some old traditions still persist.  Our flight to Cusco was short, about 1h.  Our Peruvian fellow passenger was nice enough to stick the my GPS receiver behind the window shade so that we get a GPS trace of the flight path.  As expected, it was a straight line! Those who were fortunate to sit on the left side of the plane were treated to a bird&rsquo;s eye view of Machu Picchu and majestic snow-covered peaks.</p>
-
-<p>As soon as walked down the stairs to the tarmac, first thing we immediately noticed was the shortness of breath.  I had to consciously take a deeper breath. The second was how intense the sunlight was.  The sun seemed a lot closer and, with few trees or tall buildings to provide shade, it was blinding, relentless, pounding.  Sun-block lotion is a must, preferably one with a high SPF (ours was SPF 85).</p>
-
-<p>We took a taxi to the hotel where the very pleasant receptionist named Luce let us check in and gave us some <em>coca de mate</em> (coca-leaf tea) to help ameliorate any potential altitude sickness.  I felt perfectly fine aside from mild light-headedness, but the tea seemed to dissipate even that.  We called the travel agency to get our Machu Picchu tickets.  Within about 15 minutes a rep arrived with our train and bus tickets and instructions.  No complaints about the service from Lima Tours.</p>
-
-<p>With that out of the way, we explored Cusco&rsquo;s famous main square (in Peru and elsewhere in Latin America the main square is usually called Plaza de Armas or Plaza Mayor).</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1249.jpg' /></p>
-
-<p>The plaza teemed with gringos, locals and an army of street vendors offering paintings, hats, scarves, finger puppets and all kinds of knick-knacks.  Not surprisingly, Cusco was the only place where we encountered a large number of streets vendors.  I must point out that like most Peruvians, they are predominantly very polite and good-natured.   If you&rsquo;re not interested a firm <em>no, gracias</em> is all that was necessary.  Some even offered a genuine <em>gracias señora</em> or <em>buenos dias</em> back.  I&rsquo;ve seen much more persistence and boldness in other countries.  They are also very patient.  While at dinner on a  balcony overlooking the street, we saw a kid, who mustn&rsquo;t have been older than about 16, waiting and approaching dozens of people.  He stopped only briefly to eat a bowl of soup on the doorstep.  This was late in the evening and the saddest part was he didn&rsquo;t make a single sale.   It pained me to see people have to work so hard for a living.  I would dearly love to help them out.  Unfortunately, I packed light and had I bought even a few things there would have been no room. I had to be content with the knowledge that by coming here, we are indirectly helping them.  In the same spirit, we tried to buy essential things, in this case water, from street vendors rather than from a market.</p>
-
-<p>The plaza was much larger in Inca times.  It is now dominated by the cathedral and the Jesuit church.  On Sundays there are some sort of celebration with staged performance and loud firecrackers going off at intervals.  As in Lima, the grounds in the tourist-friendly areas are spotless, thanks to the legions of uniformed street sweepers who scoop up trash as soon as it falls to the ground.  Once you&rsquo;re outside the popular neighborhoods, the cleanliness tends to fall off.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1245.jpg' /></p>
-
-<p>There are many restaurants occupying the colonial buildings lining the plaza.  We had lunch at one of these restaurants.  I forgot the name, but it was on the second floor at the southwest corner of the square.  It was the site of my first encounter with alpaca steak, and it was love at first bite!  It appears that Kate was also pleased with her <em>lomo saltado</em>.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1263.jpg' /></p>
-
-<p>The colonial buildings with their carved wooden balcony were lovely, but we were here to see the work of the Incas.  We didn&rsquo;t have to go very far.  Right off the plaza is a narrow alley, Calle Loreto, lined with huge stone blocks.  I had heard reports about how they were fitted with such precision that you cannot slip a blade between the seams. This is completely true!  The stones fit together like Lego blocks, if Lego blocks weighed 5 tons.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1270.jpg' /></p>
-
-<p>We had a close encounter with a vicuña. Of the three camelid species, it is much rarer than llamas and alpacas. It&rsquo;s also the national animal of Peru.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1303.jpg' /></p>
-
-<p>We followed the Calle Loreto to our first stop, Qoricancha.  This was the site of the glorious Temple of the Sun, the most spectacular temple built by the Incas.  It held a treasure trove  &mdash; wall panels, life-size statues, altars and a huge sun disc &mdash; all made of gold.  The invaders usurped the gold, much of which probably ended up on the bottom of the ocean, and built the convent of Santo Domingo over the old foundation.  The juxtaposition of the stone work is striking. To these eyes, there is no doubt that the Inca stone work is vastly superior in quality and aesthetics.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1296.jpg' /></p>
-
-<p>You can see how the polished surfaces align perfectly.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1405.jpg' /></p>
-
-<p>The knob-like protrusions are believed to be used for lifting the blocks into place. While they were supposed to have been sanded smooth, some remain.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1404.jpg' /></p>
-
-<p>This massive wall is as straight as any constructed by man.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1417.jpg' /></p>
-
-<p>As impressively high as it is wide.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1418.jpg' /></p>
-
-<p>An inner chamber viewed from the top.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1428.jpg' /></p>
-
-<p>The classic trapezoidal shape of Inca doorway and windows. Earlier builders had created rectangular windows. But the trapezoidal frame better withstand earthquakes.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1317.jpg' /></p>
-
-<p>We see the system of seqes lines.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1412.jpg' /></p>
-
-<p>It is best explained by the accompanying plaque:</p>
-
-<blockquote><p>The Inca capital city and its immediate surroundings contain numerous shrines, temples and other sacred places: rocks, caves, springs etc., venerated by the population of Cusco.  All these places were called wakas. The wakas were connected with each other by imaginary lines that radiated from Qorikancha and were known as seqes.  in Quechua seqes means &ldquo;line&rdquo;. Qoricancha was the center from which the seqes spread.</p></blockquote>
-
-<p>The rest of the monastery is pretty, if not extraordinary.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1463a.jpg' /></p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1488.jpg' /></p>
-
-<p>Leaving Qoricancha we walked down Calle Palacio, another cobblestoned street lined with impressive stone work.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1547.jpg' /></p>
-
-<p>Off this street is Hatunrumiyoc, a narrow alley which borders the former palace of the Inca.  The palace wall is made of huge stone blocks which fit together with the same astounding precision that we saw everywhere.  It&rsquo;s unfathomable that they were able to build something like this using no more than simple hand tools.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1532.jpg' /></p>
-
-<p>The Spaniards, of course, proceeded to put a thoroughly unremarkable Archbishop&rsquo;s Palace on top.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1560.jpg' /></p>
-
-<p>On the other side of the palace can be found the famous 12-angled stone, which also happens to be the symbol of <a href="http://www.cusquenabeer.com">Cusqueña beer</a>. According to an unofficial  tour guide who camped out in front of it, it represents Cusco&rsquo;s 12 neighborhoods. It also acts as a foundation stone and is 2 meters deep!  If this wasn&rsquo;t impressive enough, in Machu Picchu we saw a stone that has 32 corners.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1551.jpg' /></p>
-
-<p>We wandered back toward the plaza.  It was now dusk and the light was much more pleasing.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1599.jpg' /></p>
-
-<p>The cathedral with the Peru and Inca rainbow flag.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1618.jpg' /></p>
-
-<p>The Jesuit church.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1639.jpg' /></p>
-
-<h3>Lodging</h3>
-
-<p><a href="http://delpradoinn.com/">Del Prado Inn</a> is very good and just steps away from the plaza.  This is where we had breakfast every morning.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_3779.jpg' /></p>
-
-<p>Unfortunately it had a drawback. Two doors down was a club, which played pounding house music from around midnight till 5 in the morning, non-stop, every day, including Sunday.  The hotel nicely provides earplugs, but they don&rsquo;t help if the bed is vibrating.  We didn&rsquo;t get much sleep for a couple of nights.  On the third night, coming back from Machu Picchu, we were given a nice suite on the top floor and were able to sleep much better. Not to mention the view was much more scenic.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_3764.jpg' /></p>
-
-<h3>Dining</h3>
-
-<p>The highlands cuisine is starkly different from that of the coast.  Instead of seafood heavier fares such as meat and potatoes dominate.  While on the whole I prefer seafood, I enjoyed a lot of the dishes such as alpaca steak, while Kate found a favorite in <em>sopa criolla</em>, a hearty beef noodle soup.  On the first night, we had dinner at an upscale Peruvian-sushi restaurant, Limo, about a block from the hotel.  Second night, we went to another  restaurant, Kusukuy, just a few doors from the hotel. The name means &ldquo;Crazy Guinea Pig&rdquo;, which also appears to be their signature ingredient.  On our last night, we went to A Mi Manera, which was the furthest away from the hotel, a whole 5-minute walk.  As this was also our last night in Peru, I ordered the Inca special.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_3755.jpg' /></p>
-
-<!-- Darkbox -->
-
-
-<div class="darkbox">
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1245.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1245.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1246.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1246.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1249.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1249.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1257.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1257.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1263.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1263.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1270.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1270.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1274.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1274.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1290.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1290.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1295.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1295.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1296.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1296.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1299.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1299.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1303.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1303.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1317.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1317.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1320.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1320.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1324.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1324.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1393.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1393.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1404.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1404.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1405.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1405.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1412.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1412.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1417.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1417.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1418.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1418.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1428.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1428.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1439.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1439.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1445a.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1445a.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1452.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1452.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1456.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1456.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1463a.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1463a.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1485.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1485.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1488.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1488.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1498.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1498.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1508.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1508.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1512.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1512.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1520.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1520.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1523.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1523.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1524.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1524.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1528.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1528.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1532.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1532.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1536.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1536.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1539.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1539.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1547.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1547.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1550.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1550.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1551.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1551.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1558.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1558.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1560.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1560.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1562.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1562.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1563.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1563.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1573.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1573.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1575.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1575.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1578.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1578.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1585.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1585.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1599.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1599.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1600.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1600.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1618.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1618.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1629.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1629.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1639.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1639.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1647.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1647.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1663.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1663.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_1664.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_1664.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_3755.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_3755.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_3764.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_3764.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/dsc_3779.jpg" data-darkbox="peru-cusco">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-cusco/thumbs/dsc_3779.jpg" />
-</a>
-
-</div>
-
-
-<!-- End darkbox -->
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/16/lima/">Lima, Peru (Day 1 & 2)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-16T00:00:00-04:00" pubdate data-updated="true">Jul 16<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Our Peru adventure didn&rsquo;t start out well.  Our flight from Boston was delayed for 90 min and managed to land in Newark 5 minutes after the connection had already left.  We were rerouted to Miami and put on a flight to Lima that arrived at 4:30 in the morning.  The streets were mostly devoid of traffic though surprisingly some street sweepers were out working.  Leaving the airport we scurried through a warren of narrow streets not unlike San Jose, Costa Rica, but soon things opened up when we got on the highway that runs along the ocean.  Our taxi driver had to use cheat sheet to find the hotel in Miraflores.  We gave him 10 <em>soles</em> extra for his trouble and woke up a very sleepy receptionist.  We went to bed around 5h30.</p>
-
-<p>We woke up to the infamous foggy Lima morning.  Breakfast was in the penthouse with a view of the Pacific.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0827.jpg' /></p>
-
-<p>It included a strange fruit with lots of small, hard seeds. The sour taste is reminiscent of the fruit we ate at <a href="http://www.yentran.org/blog/2011/05/day-3-thursday-arenal/%22%20title=%22Costa%20Rica%20Day%203%20(Thursday">Tilajari resort</a> – Arenal) in Costa Rica .  We strolled 3 blocks to the cliff overlooking the ocean.  First stop was the Parque del Amor or Lovers&#8217; Park with its Gaudí-like tile works and a large statue of a couple embracing in a rather awkward pose.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0838.jpg' /></p>
-
-<p>Lots of surfers were bobbing in the ocean far down below.  Nearby was a paragliding field. All along the cliff is a large expanse of green space which was being expanded.  Miraflores is a relatively prosperous district dominated by modern high-rises.  Not surprisingly, it&rsquo;s home to many hotels and tourism-related businesses.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0865.jpg' /></p>
-
-<p>We took a taxi to Plaza de Armas in the heart of downtown.  Traffic wass pretty heavy with some crazy 5-6 lane merge.  The drivers seemed to play a game of chicken resulting in some close calls.  However, we were not surprised not to see any accident.  Everything may seem maddening to foreign eyes but there is a certain order in chaos.  The locals must follow a set of unwritten rules that allow them to navigate the jams with relative ease.  They just seem to go along with it rather than throwing a fit of road rage.</p>
-
-<p>The plaza is a popular place for locals and tourists alike.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0887.jpg' /></p>
-
-<p>We made the Lima cathedral our first stop, since the taxi pulled up right in front of it.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0881.jpg' /></p>
-
-<p>The original cathedral&rsquo;s construction was begun by Francisco Pizarro, the conquistor known for the conquest of the Inca empire and the colonization of Peru.  He was murdered by a rival conquistador and his remains were eventually interred here.  It&rsquo;s strange to see accorded such a place of honor the person primarily responsible for the deaths of millions and the destruction of one of humanity&rsquo;s most remarkable civilizations.  Justice would have ensured that it was at least a painful demise.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0958.jpg' /></p>
-
-<p>The cathedral is lined with ornate carved altars.  For us, they are no more than works of art.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0911.jpg' /></p>
-
-<p>The plaza is lined with colonial-era buildings with their unique carved balconies.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1191.jpg' /></p>
-
-<p>Across from the cathedral is the Government Palace, residence of Peru&rsquo;s president.  Military police stood guard outside, carrying Kalashnikovs.  Despite their deadly accoutrements, the guards seemed pretty relaxed, some even eating lunch or chatting away on their mobile phones.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0997.jpg' /></p>
-
-<p>For lunch we stopped at Los Escribanos, which was on a side street right off the plaza.  In this picture, it&rsquo;s at 10 o&#8217;clock behind the white-clad man.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1005.jpg' /></p>
-
-<p>We ordered <em>ceviche</em>, of course.  I had resolved to enjoy this heavenly dish as much as possible, and luckily Kate went along!  She also found that <em>tiradito</em>, which is another raw fish dish, is irresistible.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1007.jpg' /></p>
-
-<p>Lima is known as the city of museums. Since we had only a day here, we decided to spend it on a walking tour of the main atractions scattered around the historic city center.  First up was the Santo Domingo church with its soothing pinkish-beige exterior and two-story bell tower.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1014.jpg' /></p>
-
-<p>The Santa Rosa de Lima Sanctuary, by contrast, is a striking salmon-red.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1042.jpg' /></p>
-
-<p>We passed by this beautiful building which seemed to be undergoing renovation.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1045.jpg' /></p>
-
-<p>The San Agustín church is the most interesting with its amazingly ornate façade.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1046.jpg' /></p>
-
-<p>As in San Jose, one of the streets, Jirón de la Unión, is a pedestrian-only thoroughfare. This building is almost Gaudí-like.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1065.jpg' /></p>
-
-<p>At one corner is the La Merced church.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1090.jpg' /></p>
-
-<p>To get away from the crowds, we headed toward the open space of Plaza San Martín.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1103.jpg' /></p>
-
-<p>It&rsquo;s surrounded by regal white buildings.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1112.jpg' /></p>
-
-<p>More colonial buildings await.  This is the Torre Tagle Palace.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1119.jpg' /></p>
-
-<p>And, presenting Goyeneche House.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1126.jpg' /></p>
-
-<p>Another church&hellip; San Francisco.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1164.jpg' /></p>
-
-<p>Returning to the main plaza, we had a good view of the Government Palace color guards.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1181.jpg' /></p>
-
-<p>What&rsquo;s that commotion? Turned out there was a parade, I think for a Quechua language school. For the record I am 100% for the preservation of native language and culture.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1203.jpg' /></p>
-
-<p>This was a nice ending to a productive day. Taking a taxi back, I had intended for the driver to stop at Parque del Amor, but thanks to my limited command of Spanish, he dropped us off at the massive ocean-front Larcomar shopping center.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1241.jpg' /></p>
-
-<p>Fortunately, this turned out to be even closer to our hotel.  To search for dinner we walked along the busy Avenida José Larco, which was lined with hotels, shops and even a casino.  We decided to stop by Mezze, a Middle Eastern-themed restaurant.  The food was the best we had during the whole trip. The ceviche was the most outstanding I&rsquo;ve ever tasted, and Kate felt similarly about her <em>pisco sour</em>.  Afterwards it was about a 10-minute stroll along a quiet residential street back to the hotel.</p>
-
-<p>It&rsquo;s interesting to note that lots of businesses in Peru take Discover Card.</p>
-
-<p>Next up will be our long-awaited trip to Cusco, the heart of the once-glorious Inca Empire.<!-- Darkbox --></p>
-
-<div class="darkbox">
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0827.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0827.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0832.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0832.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0838.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0838.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0855.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0855.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0865.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0865.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0877.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0877.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0881.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0881.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0887.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0887.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0890.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0890.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0891.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0891.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0893a.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0893a.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0911.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0911.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0923.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0923.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0943.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0943.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0949.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0949.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0951.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0951.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0958.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0958.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0961.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0961.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0962.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0962.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0966.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0966.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0969.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0969.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0971.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0971.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0976.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0976.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0980.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0980.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0995.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0995.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0996.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0996.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0997.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0997.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_0998.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_0998.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1005.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1005.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1007.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1007.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1014.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1014.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1015.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1015.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1018.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1018.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1029.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1029.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1042.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1042.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1045.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1045.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1046.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1046.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1048.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1048.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1050.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1050.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1051.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1051.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1062.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1062.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1065.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1065.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1072.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1072.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1079.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1079.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1082.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1082.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1087.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1087.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1090.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1090.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1093.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1093.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1096.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1096.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1098.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1098.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1099.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1099.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1103.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1103.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1111.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1111.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1112.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1112.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1119.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1119.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1120a.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1120a.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1126.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1126.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1134.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1134.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1139.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1139.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1146.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1146.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1161.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1161.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1164.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1164.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1168.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1168.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1173.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1173.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1177.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1177.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1181.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1181.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1182.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1182.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1191.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1191.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1193.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1193.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1197.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1197.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1203.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1203.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1204.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1204.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1207.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1207.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1218.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1218.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1224.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1224.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1229.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1229.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1232.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1232.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/peru-lima/dsc_1241.jpg" data-darkbox="peru-lima">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/peru-lima/thumbs/dsc_1241.jpg" />
-</a>
-
-</div>
-
-
-<!-- End darkbox -->
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -3209,7 +2648,7 @@ dism /image:C: /add-driver /driver:D:\mydrivers /recurse
     
      
       <li data-category="hockey">
-        <a href="/blog/categories/hockey">hockey</a> <em>10</em>
+        <a href="/blog/categories/hockey">hockey</a> <em>11</em>
       </li>
     
      
@@ -3224,7 +2663,7 @@ dism /image:C: /add-driver /driver:D:\mydrivers /recurse
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>36</em>
+        <a href="/blog/categories/technology">technology</a> <em>37</em>
       </li>
     
      
@@ -3262,7 +2701,15 @@ dism /image:C: /add-driver /driver:D:\mydrivers /recurse
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/11/23/updating-sql-server-primary-key/">Updating SQL Server Primary Key</a>
+        <a href="/blog/2014/02/07/sports-i-would-watch/">Sports I Would Watch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/">Using Angular Root Scope for Communication Between Controllers</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/23/updating-sql-server-primary-key/">Updating SQL Server Primary Key</a>
       </li>
     
       <li class="post">
@@ -3271,14 +2718,6 @@ dism /image:C: /add-driver /driver:D:\mydrivers /recurse
     
       <li class="post">
         <a href="/blog/2013/11/18/so-long-wordpress-hello-octopress/">So Long WordPress, Hello Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/13/sigma-50mm-lens/">Sigma 50mm f/1.4 Lens for Nikon AF</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/02/fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/">Fixing Windows Media Center No Tuner Available Error With HDHomeRun Prime</a>
       </li>
     
   </ul>

@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="A requirement recently came up to update the primary key in a SQL Server table while retaining existing data (it&rsquo;s a long story). I suppose one &hellip;">
+  <meta name="description" content="A requirement recently came up to update the primary key of a SQL Server table. We get user data from a third-party single sign-on service and store &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://dinhyen.github.io/blog/2014/11/23/updating-sql-server-primary-key">
+  <link rel="canonical" href="http://dinhyen.github.io/blog/2013/11/23/updating-sql-server-primary-key">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Yen's Blog" type="application/atom+xml">
@@ -99,14 +99,14 @@
   
 
 
-<time datetime="2014-11-23T16:34:00-05:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2014</time>
+<time datetime="2013-11-23T16:34:00-05:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>A requirement recently came up to update the primary key in a SQL Server table while retaining existing data (it&rsquo;s a long story).  I suppose one way to do so would be to drop any existing foreign-key constraint and update all related tables.  Unfortunately, the table in question is the User table, which is related to practically every other table in the schema. Updating a bunch tables manually, without the safety net of relational integrity, would be a bit dodgy (for lack of a better word in American English). Fortunately, there&rsquo;s a less painful approach using the <a href="http://technet.microsoft.com/en-us/library/ms186973.aspx">ON UPDATE CASCADE</a> clause.</p>
+<div class="entry-content"><p>A requirement recently came up to update the primary key of a SQL Server table.  We get user data from a third-party single sign-on service and store them locally.  When the SSO software was upgraded, user IDs were changed, so we need to update our local users but retain existing data.  I suppose one way to do so would be to drop any existing foreign-key constraint and update all related tables.  Unfortunately, the User table is related to practically every other table in the schema. Updating a bunch tables manually, without the safety net of relational integrity, would be a bit dodgy. Fortunately, there&rsquo;s a less painful approach using the <a href="http://technet.microsoft.com/en-us/library/ms186973.aspx">ON UPDATE CASCADE</a> clause.</p>
 
 <p>In a simple example, I have a LineItem table, whose <code>userId</code> field references User&rsquo;s <code>Id</code> field. Since the existing FK relationship doesn&rsquo;t have ON DELETE CASCADE, I&rsquo;d have to &ldquo;alter&rdquo; the constraint to add it.  But because is no &ldquo;alter contraint&rdquo; in T-SQL, I&rsquo;d have to drop and re-add the constraint.</p>
 
@@ -139,7 +139,7 @@
 
 <p></p>
 
-<p>Then when I update an Id in the User table, the change would be cascaded to LineItem and all other related tables.</p>
+<p>Thereafter when I update an Id in the User table, the change would be cascaded to LineItem and all other related tables.</p>
 </div>
 
 
@@ -162,7 +162,7 @@
   
 
 
-<time datetime="2014-11-23T16:34:00-05:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2014</time>
+<time datetime="2013-11-23T16:34:00-05:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2013</time>
       
 
 <span class="categories">
@@ -176,7 +176,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dinhyen.github.io/blog/2014/11/23/updating-sql-server-primary-key/" data-via="dinhyen" data-counturl="http://dinhyen.github.io/blog/2014/11/23/updating-sql-server-primary-key/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dinhyen.github.io/blog/2013/11/23/updating-sql-server-primary-key/" data-via="dinhyen" data-counturl="http://dinhyen.github.io/blog/2013/11/23/updating-sql-server-primary-key/" >Tweet</a>
   
   
   
@@ -187,6 +187,8 @@
       
         <a class="basic-alignment left" href="/blog/2013/11/19/top-10-archive/" title="Previous Post: Top 10 archive">&laquo; Top 10 archive</a>
       
+      
+        <a class="basic-alignment right" href="/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/" title="Next Post: Using Angular root scope for communication between controllers">Using Angular root scope for communication between controllers &raquo;</a>
       
     </p>
   </footer>
@@ -222,7 +224,7 @@
     
      
       <li data-category="hockey">
-        <a href="/blog/categories/hockey">hockey</a> <em>10</em>
+        <a href="/blog/categories/hockey">hockey</a> <em>11</em>
       </li>
     
      
@@ -237,7 +239,7 @@
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>36</em>
+        <a href="/blog/categories/technology">technology</a> <em>37</em>
       </li>
     
      
@@ -275,7 +277,15 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/11/23/updating-sql-server-primary-key/">Updating SQL Server Primary Key</a>
+        <a href="/blog/2014/02/07/sports-i-would-watch/">Sports I Would Watch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/">Using Angular Root Scope for Communication Between Controllers</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/23/updating-sql-server-primary-key/">Updating SQL Server Primary Key</a>
       </li>
     
       <li class="post">
@@ -284,14 +294,6 @@
     
       <li class="post">
         <a href="/blog/2013/11/18/so-long-wordpress-hello-octopress/">So Long WordPress, Hello Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/13/sigma-50mm-lens/">Sigma 50mm f/1.4 Lens for Nikon AF</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/02/fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/">Fixing Windows Media Center No Tuner Available Error With HDHomeRun Prime</a>
       </li>
     
   </ul>

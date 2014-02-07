@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="Once you reach the terminus of the Minuteman Bikeway at Bedford Railroad Depot, most people turn around and head back. It&rsquo;s understandable, &hellip;">
+  <meta name="description" content="Another unique feature of Acadia is the extensive system of carriage roads. Built in the first half of the 20th century by the Rockefeller family for &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,152 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/05/acadia-national-park-biking-the-carriage-roads/">Acadia National Park: Biking the Carriage Roads</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-05T00:00:00-04:00" pubdate data-updated="true">Jul 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Another unique feature of Acadia is the extensive system of carriage roads.  Built in the first half of the 20th century by the Rockefeller family for use by horses and carriages, these roads traverse Mount Desert Island and offer unparalleled access to the its interior.  These are possibly the most scenic bike paths anywhere. Due to its length of more than 45 miles, the carriage roads are best experienced on a bicycle. This is the activity that we&rsquo;ve done most often and I&rsquo;m happy to say we&rsquo;ve biked most of the carriage roads here (some are outside the park proper and off-limits to bicycles).</p>
+
+<p>We sometimes bring our own bike, but our preference is to rent a tandem bike from <a href="www.barharborbike.com">Bar Harbor Bike shop</a>.  Not only is it more fun, the tandem makes going up hill much easier.  From the shop, some people take their bikes to the park on an Island Shuttle. The shuttle, which can accommodate regular (not tandem) bikes on a rack mounted on the front, is a free and convenient way to get around the park.  We prefer to bike directly to the park via Duck Brook access road.  We typically make a half-time pit stop at Jordan Pond to have lunch and recharge before making the journey back.  This time we also take a detour to Day Mountain, which is the only mountain whose summit is reached by a carriage road.</p>
+
+<p>Here&rsquo;s a <a href="https://maps.google.com/maps/ms?msid=214490968088440958659.0004c4200155b511f3874&amp;msa=0&amp;ll=44.340425,-68.243294&amp;spn=0.119212,0.127201">map</a> of the route we took.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/29/editing-collection-with-linq-to-sql/">Edit Collection With LINQ to SQL</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-29T00:00:00-04:00" pubdate data-updated="true">Jun 29<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Let&rsquo;s say for a shopping cart we have an Order entity, a Product entity and an OrderDetails entity which serves as a bridge. The OrderDetails entity has OrderId and ProductId fields to associate products with orders. We also have an Order domain object which is passed from the business logic layer to the repository layer.</p>
+
+<p>Since products can be added or removed from an order, we need to manage the order details for each Order.  We can either update OrderDetails directly in the database or via the Order.OrderDetails collection.</p>
+
+<h3>Deleting</h3>
+
+<p>When handling deletions, we can determine products removed from the order (i.e., products which are present in the database object but not in the domain object) as follows:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">toDelete</span> <span class="p">=</span>
+</span><span class='line'>  <span class="k">from</span> <span class="n">od</span> <span class="k">in</span> <span class="n">order</span><span class="p">.</span><span class="n">OrderDetails</span>
+</span><span class='line'>  <span class="k">where</span> <span class="p">!</span><span class="n">domainOrder</span><span class="p">.</span><span class="n">OrderDetails</span><span class="p">.</span><span class="n">Any</span><span class="p">(</span><span class="n">o</span> <span class="p">=&gt;</span> <span class="n">o</span><span class="p">.</span><span class="n">ProductId</span> <span class="p">==</span> <span class="n">od</span><span class="p">.</span><span class="n">ProductId</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">select</span> <span class="n">od</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Deleting the order details directly from the database works:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="n">DataContext</span><span class="p">.</span><span class="n">OrderDetails</span><span class="p">.</span><span class="n">DeleteAllOnSubmit</span><span class="p">(</span><span class="n">toDelete</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However, trying to delete the order details using the Order.OrderDetails collection removes only the relationship between Order and OrderDetails.  This would fail because of the foreign key constraint.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">item</span> <span class="k">in</span> <span class="n">toDelete</span><span class="p">)</span>
+</span><span class='line'>     <span class="n">order</span><span class="p">.</span><span class="n">OrderDetails</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Adding</h3>
+
+<p>When handling additions, we can determine products added to the order (i.e., products which are present in the domain order object but not in the database order object) as follows:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">toAdd</span> <span class="p">=</span>
+</span><span class='line'>  <span class="k">from</span> <span class="n">od</span> <span class="k">in</span> <span class="n">domainOrder</span><span class="p">.</span><span class="n">OrderDetails</span>
+</span><span class='line'>  <span class="k">where</span> <span class="p">!</span><span class="n">order</span><span class="p">.</span><span class="n">OrderDetails</span><span class="p">.</span><span class="n">Any</span><span class="p">(</span><span class="n">o</span> <span class="p">=&gt;</span> <span class="n">o</span><span class="p">.</span><span class="n">ProductId</span> <span class="p">==</span> <span class="n">od</span><span class="p">.</span><span class="n">ProductId</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">select</span> <span class="k">new</span> <span class="n">OrderDetails</span>
+</span><span class='line'>             <span class="p">{</span>
+</span><span class='line'>          <span class="n">OrderId</span> <span class="p">=</span> <span class="n">order</span><span class="p">.</span><span class="n">Id</span><span class="p">,</span>
+</span><span class='line'>          <span class="n">ProductId</span> <span class="p">=</span> <span class="n">od</span><span class="p">.</span><span class="n">ProductId</span>
+</span><span class='line'>             <span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here a different scenario applies.  Adding directly to the database succeeds, but the Order.OrderDetails collection isn&rsquo;t updated to show the added Products.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="n">DataContext</span><span class="p">.</span><span class="n">OrderDetails</span><span class="p">.</span><span class="n">InsertAllOnSubmit</span><span class="p">(</span><span class="n">toAdd</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To ensure the Order.OrderDetails collection is also up-to-date, we&rsquo;d have to add the order details via the collection.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="n">order</span><span class="p">.</span><span class="n">OrderDetails</span><span class="p">.</span><span class="n">AddRange</span><span class="p">(</span><span class="n">toAdd</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -651,161 +797,6 @@ only if it exists on an x64 machine. Otherwise it uses the initial value of <cod
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/03/loading-jquery-from-google-cdn-and-dependent-scripts-in-wordpress-2/">Loading jQuery From Google CDN and Dependent Scripts in WordPress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-03T00:00:00-04:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I&rsquo;m using a WordPress theme that loads jQuery and other JavaScripts in the header.php script:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;&lt;?php bloginfo(&#39;template_directory&#39;); ?&gt;/js/jquery-1.4.2.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;&lt;?php bloginfo(&#39;template_directory&#39;); ?&gt;/js/jquery.prettyPhoto.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;&lt;?php bloginfo(&#39;template_directory&#39;); ?&gt;/js/custom.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Using Chrome&rsquo;s Developer console (i.e., hit F12) to view the Resources for the page, I could see that jQuery is being loaded.
-<img title="jquery-cdn-1" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-11.png" width="333" height="279" />
-I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you">why</a>?). My initial attempt was to simply change  the jQuery reference to the CDN location (I also upgraded to version 1.7.1 while I was at it):</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This worked, and Chrome&rsquo;s Developer console showed that jQuery was being loaded from the CDN. However, there was another problem. WordPress apparently also loads jQuery by default, so the page ended up with an extra copy.</p>
-
-<p><img title="jquery-cdn-2" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-21.png" width="400" height="415" /></p>
-
-<p>To remove the redundant copy, I removed the jQuery references from the header.php script, then added the following lines to the functions.php script in the theme folder which use WordPress&rsquo;s built-in function <strong>wp_enqueue_script</strong> to ensure that only one copy of jQuery is included.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">function</span> <span class="nf">load_cdn_jQuery</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'> <span class="nx">wp_deregister_script</span><span class="p">(</span> <span class="s1">&#39;jquery&#39;</span> <span class="p">);</span>
-</span><span class='line'> <span class="nx">wp_register_script</span><span class="p">(</span><span class="s1">&#39;jquery&#39;</span><span class="p">,</span> <span class="s1">&#39;http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&#39;</span><span class="p">);</span>
-</span><span class='line'> <span class="nx">wp_enqueue_script</span><span class="p">(</span><span class="s1">&#39;jquery&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="nx">add_action</span><span class="p">(</span><span class="s1">&#39;wp_enqueue_scripts&#39;</span><span class="p">,</span> <span class="s1">&#39;load_cdn_jQuery&#39;</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This worked and only a single copy of jQuery remained. However, the other scripts which depend on jQuery now break because they are being loaded before jQuery.</p>
-
-<p>Following the instructions provided in the <a href="http://codex.wordpress.org/Function_Reference/wp_enqueue_script">wp_enqueue_script reference</a>, I added the following lines to functions.php to ensure that their dependency on jQuery is enforced:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">function</span> <span class="nf">my_scripts_method</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'> <span class="nx">wp_enqueue_script</span><span class="p">(</span>
-</span><span class='line'> <span class="s1">&#39;pretty.photo&#39;</span><span class="p">,</span>
-</span><span class='line'> <span class="nx">get_template_directory_uri</span><span class="p">()</span> <span class="o">.</span> <span class="s1">&#39;/js/jquery.prettyPhoto.js&#39;</span><span class="p">,</span>
-</span><span class='line'> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;jquery&#39;</span><span class="p">)</span>
-</span><span class='line'> <span class="p">);</span>
-</span><span class='line'> <span class="nx">wp_enqueue_script</span><span class="p">(</span>
-</span><span class='line'> <span class="s1">&#39;custom&#39;</span><span class="p">,</span>
-</span><span class='line'> <span class="nx">get_template_directory_uri</span><span class="p">()</span> <span class="o">.</span> <span class="s1">&#39;/js/custom.js&#39;</span><span class="p">,</span>
-</span><span class='line'> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;jquery&#39;</span><span class="p">)</span>
-</span><span class='line'> <span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="nx">add_action</span><span class="p">(</span><span class="s1">&#39;wp_enqueue_scripts&#39;</span><span class="p">,</span> <span class="s1">&#39;my_scripts_method&#39;</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The corresponding references, of course, should be removed from header.php.</p>
-
-<p>Finally, verifying with the Developer console shows that everything is loaded correctly.</p>
-
-<p><img title="jquery-cdn-3" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-31.png" width="399" height="414" /></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/31/using-lightbox-with-nextgen-gallery/">Using Lightbox With NextGen Gallery</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-31T00:00:00-04:00" pubdate data-updated="true">Mar 31<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In my former Wordpress blog, I used the excellent <a href="http://wordpress.org/extend/plugins/nextgen-gallery/">NextGen plugin</a> to manage images in galleries.  When embedded in a post, the gallery is rendered as thumbnails, whose full-size version  is shown as an overlay when clicked.  I also like to embed inline images so that I can include a caption.  Inline images, however, are still directly linked and not shown as an overlay.  When viewed, it requires an additional click or two to go back to the post.</p>
-
-<p>To make sure that inline images are opened on the same page, I use the <a href="http://wordpress.org/extend/plugins/slimbox/">Slimbox plugin</a>.  This works well, except that now when gallery thumbnails are clicked, two full-sized versions are shown, one by NextGen&rsquo;s built-in effect and one by Slimbox.</p>
-
-<p>To solve this problem, I opened NextGen&rsquo;s options page and locate the Effects tab.  By default, the JavaScript Thumbnail effect is set to Shutter.  I changed it to None (or Lightbox) to ensure that only Slimbox handles the effect (Slimbox is a clone of Lightbox).  The only drawback of not using the Shutter effect is that you can&rsquo;t use Ajax pagination with the gallery if pagination is turned on (as of NextGen 1.9.3).
-<img title="nextgen-slimbox" src="https://dl.dropboxusercontent.com/u/52804626/images/nextgen-slimbox.png" width="800" height="578" /></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -844,7 +835,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     
      
       <li data-category="hockey">
-        <a href="/blog/categories/hockey">hockey</a> <em>10</em>
+        <a href="/blog/categories/hockey">hockey</a> <em>11</em>
       </li>
     
      
@@ -859,7 +850,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>36</em>
+        <a href="/blog/categories/technology">technology</a> <em>37</em>
       </li>
     
      
@@ -897,7 +888,15 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/11/23/updating-sql-server-primary-key/">Updating SQL Server Primary Key</a>
+        <a href="/blog/2014/02/07/sports-i-would-watch/">Sports I Would Watch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/">Using Angular Root Scope for Communication Between Controllers</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/23/updating-sql-server-primary-key/">Updating SQL Server Primary Key</a>
       </li>
     
       <li class="post">
@@ -906,14 +905,6 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     
       <li class="post">
         <a href="/blog/2013/11/18/so-long-wordpress-hello-octopress/">So Long WordPress, Hello Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/13/sigma-50mm-lens/">Sigma 50mm f/1.4 Lens for Nikon AF</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/02/fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/">Fixing Windows Media Center No Tuner Available Error With HDHomeRun Prime</a>
       </li>
     
   </ul>

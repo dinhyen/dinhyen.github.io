@@ -4,7 +4,7 @@
   <title><![CDATA[Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2014-02-06T16:51:29-05:00</updated>
+  <updated>2014-02-07T16:00:31-05:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -14,11 +14,208 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Sports I would watch]]></title>
+    <link href="http://dinhyen.github.io/blog/2014/02/07/sports-i-would-watch/"/>
+    <updated>2014-02-07T10:07:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2014/02/07/sports-i-would-watch</id>
+    <content type="html"><![CDATA[<p>&hellip;if I had an unlimited amount of free time, bathroom breaks and no desire to have a life.</p>
+
+<ol>
+<li>Olympic men&rsquo;s hockey</li>
+<li>Bruins hockey</li>
+<li>NHL hockey</li>
+<li>IIHF tournament hockey such as the World Juniors</li>
+<li>Top-flight European professional hockey (KHL, Swedish Elite League, Finnish Elite League)</li>
+<li>Olympic women&rsquo;s hockey. It&rsquo;s enjoyable but less exciting than the men&rsquo;s game due to the lack of strong competition; basically it&rsquo;s a 2-horse race between Canada and USA. Also there&rsquo;s no checking and it&rsquo;s slower.</li>
+<li>College hockey</li>
+<li>AHL hockey</li>
+<li>High school hockey</li>
+<li>Tour de France</li>
+<li>Other Summer and Winter Olympic sports</li>
+<li>Bandy. I&rsquo;ve never seen this Swedish specialty, but this hockey-soccer hybrid is tantalizing. Putting the players on skates is one way to make soccer more exciting.</li>
+<li>Pick-up hockey in a rink or on a pond</li>
+<li>Roller hockey</li>
+<li>Canadian shinny</li>
+<li>European indoor roller hockey.  They play on rollerskates.  Seriously.  I&rsquo;ve only seen it a few times.  It&rsquo;s exciting and weird.</li>
+<li>Figure skating</li>
+<li>Midget/Bantam/Squirt/Mite hockey.  Midget is an official youth hockey designation, it doesn&rsquo;t mean the game is played by midgets, Borderlands-style.</li>
+<li>Midget hockey, Borderlands-style</li>
+<li>Street hockey</li>
+<li>A couple of guys practicing with sticks and puck</li>
+<li>Soccer</li>
+<li>Volleyball (not beach)</li>
+<li>Tennis</li>
+</ol>
+
+
+<p>&hellip; and many sports later</p>
+
+<p>Football<br/>
+Basketball<br/>
+Baseball</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Angular root scope for communication between controllers]]></title>
+    <link href="http://dinhyen.github.io/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/"/>
+    <updated>2013-12-07T13:28:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers</id>
+    <content type="html"><![CDATA[<p>Angular makes it simple to create standard index and details views.  Using the ubiquitous task list as an example, I can set up routes using the <code>$route</code> service as follows:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$routeProvider</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">when</span><span class="p">(</span><span class="s1">&#39;/tasks&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">templateUrl</span><span class="o">:</span> <span class="s1">&#39;_tasks.html&#39;</span><span class="p">,</span> <span class="nx">controller</span><span class="o">:</span> <span class="s1">&#39;TasksIndexCtrl&#39;</span> <span class="p">})</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">when</span><span class="p">(</span><span class="s1">&#39;/task/:id&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">templateUrl</span><span class="o">:</span> <span class="s1">&#39;_task.html&#39;</span><span class="p">,</span> <span class="nx">controller</span><span class="o">:</span> <span class="s1">&#39;TaskDetailsCtrl&#39;</span> <span class="p">})</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">otherwise</span><span class="p">({</span> <span class="nx">redirectTo</span><span class="o">:</span> <span class="s1">&#39;/tasks&#39;</span> <span class="p">});</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The routes definitions specify the Angular controller and HTML template to use when the user navigates to a particular path.  Here we have 2 controllers, one for the index page and one for the details page.</p>
+
+<p>The index controller retrieves the task list as a JSON array via the <code>$http</code> service:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$http</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">$http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;tasks.json&#39;</span><span class="p">).</span><span class="nx">success</span><span class="p">(</span>
+</span><span class='line'>    <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">$scope</span><span class="p">.</span><span class="nx">tasks</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The index view renders each task with a link which embeds the task&rsquo;s id.  When clicked, the link redirects to the task&rsquo;s details view.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&#39;#/task/{{task.id}}&#39;</span><span class="nt">&gt;</span>{{task.name}}<span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The details controller also retrieves task data as JSON via <code>$http</code>, after extracting the id value from <code>$routeParams</code>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$http</span><span class="p">,</span> <span class="nx">$routeParams</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">$http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;task-&#39;</span> <span class="o">+</span> <span class="nx">$routeParams</span><span class="p">.</span><span class="nx">id</span> <span class="o">+</span> <span class="s1">&#39;.json&#39;</span><span class="p">).</span><span class="nx">success</span><span class="p">(</span>
+</span><span class='line'>    <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">$scope</span><span class="p">.</span><span class="nx">task</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://embed.plnkr.co/CzbeallomRCE4HuVWtzO/preview" target="_blank">View the first version in Plunker</a></p>
+
+<p>So far it&rsquo;s pretty run-of-the-mill.  But let&rsquo;s say the task list also contains sufficient data to show each task&rsquo;s details (the index page simply displays fewer information due to space constraint).  There&rsquo;d be no need for a separate request to pull data for the details page.  The details controller can just search in-memory, within the task list which is already retrieved.  However, since each controller has its own scope and can&rsquo;t access another&rsquo;s scope, there has to be another way to share data between controllers.</p>
+
+<p>Enters the <a href="http://docs.angularjs.org/guide/scope">root scope</a>, which acts as the parent scope for all other scopes.  If a property can&rsquo;t be found in a scope, Angular searchs its parent scope and so on until it reaches the root scope (as a consequence of prototypical inheritance).  Putting the task list in the root scope would allow Angular to find it in the index controller and, because all scopes share the same root scope, also allow the details controller to access it.</p>
+
+<p>Modifying the index controller to save the task list to the root scope:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="p">(</span><span class="nx">$rootScope</span><span class="p">,</span> <span class="nx">$http</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">$rootScope</span><span class="p">.</span><span class="nx">tasks</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>  <span class="nx">$http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;tasks.json&#39;</span><span class="p">).</span><span class="nx">success</span><span class="p">(</span>
+</span><span class='line'>    <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">$rootScope</span><span class="p">.</span><span class="nx">tasks</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Instead of making an HTTP request, the details controller can search for a task by id within the root scope.  When it finds the tasks, it saves it to its own scope.  It&rsquo;s probably a good idea to not pollute the root scope any more than necessary.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="p">(</span><span class="nx">$rootScope</span><span class="p">,</span> <span class="nx">$scope</span><span class="p">,</span> <span class="nx">$routeParams</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">getTask</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">id</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">task</span> <span class="o">=</span> <span class="nx">$rootScope</span><span class="p">.</span><span class="nx">tasks</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">task</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">task</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">task</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">$scope</span><span class="p">.</span><span class="nx">task</span> <span class="o">=</span> <span class="nx">getTask</span><span class="p">(</span><span class="nx">$routeParams</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Each time the user returns to the index page, a fresh request is made to retrieve the task list.  I could optimize it further by retrieving the task list only if it has changed.  To do so, I&rsquo;d need to keep track of the modification time.  Here, I&rsquo;m only making the simple check to see whether the task list has already been populated.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="p">(</span><span class="nx">$rootScope</span><span class="p">,</span> <span class="nx">$http</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">$rootScope</span><span class="p">.</span><span class="nx">tasks</span> <span class="o">===</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">$rootScope</span><span class="p">.</span><span class="nx">tasks</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>    <span class="nx">$http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;tasks.json&#39;</span><span class="p">).</span><span class="nx">success</span><span class="p">(</span>
+</span><span class='line'>      <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">$rootScope</span><span class="p">.</span><span class="nx">tasks</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://embed.plnkr.co/BwEtA3Ftp9SJ0OJCPHyv/preview" target="_blank">View the second version in Plunker</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Updating SQL Server Primary Key]]></title>
-    <link href="http://dinhyen.github.io/blog/2014/11/23/updating-sql-server-primary-key/"/>
-    <updated>2014-11-23T16:34:00-05:00</updated>
-    <id>http://dinhyen.github.io/blog/2014/11/23/updating-sql-server-primary-key</id>
-    <content type="html"><![CDATA[<p>A requirement recently came up to update the primary key in a SQL Server table while retaining existing data (it&rsquo;s a long story).  I suppose one way to do so would be to drop any existing foreign-key constraint and update all related tables.  Unfortunately, the table in question is the User table, which is related to practically every other table in the schema. Updating a bunch tables manually, without the safety net of relational integrity, would be a bit dodgy (for lack of a better word in American English). Fortunately, there&rsquo;s a less painful approach using the <a href="http://technet.microsoft.com/en-us/library/ms186973.aspx">ON UPDATE CASCADE</a> clause.</p>
+    <link href="http://dinhyen.github.io/blog/2013/11/23/updating-sql-server-primary-key/"/>
+    <updated>2013-11-23T16:34:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2013/11/23/updating-sql-server-primary-key</id>
+    <content type="html"><![CDATA[<p>A requirement recently came up to update the primary key of a SQL Server table.  We get user data from a third-party single sign-on service and store them locally.  When the SSO software was upgraded, user IDs were changed, so we need to update our local users but retain existing data.  I suppose one way to do so would be to drop any existing foreign-key constraint and update all related tables.  Unfortunately, the User table is related to practically every other table in the schema. Updating a bunch tables manually, without the safety net of relational integrity, would be a bit dodgy. Fortunately, there&rsquo;s a less painful approach using the <a href="http://technet.microsoft.com/en-us/library/ms186973.aspx">ON UPDATE CASCADE</a> clause.</p>
 
 <p>In a simple example, I have a LineItem table, whose <code>userId</code> field references User&rsquo;s <code>Id</code> field. Since the existing FK relationship doesn&rsquo;t have ON DELETE CASCADE, I&rsquo;d have to &ldquo;alter&rdquo; the constraint to add it.  But because is no &ldquo;alter contraint&rdquo; in T-SQL, I&rsquo;d have to drop and re-add the constraint.</p>
 
@@ -51,7 +248,7 @@
 
 <p></p>
 
-<p>Then when I update an Id in the User table, the change would be cascaded to LineItem and all other related tables.</p>
+<p>Thereafter when I update an Id in the User table, the change would be cascaded to LineItem and all other related tables.</p>
 ]]></content>
   </entry>
   
@@ -2294,119 +2491,6 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
 <p><img src="https://dl.dropboxusercontent.com/u/52804626/mac-mini-ssd/DSC_4965.jpg" alt="DSC_4965" width="500" height="437" /></p>
 
 <p>After connecting the Mini to an Ethernet switch and booting into Recovery mode (by holding down Command-R when booting), I selected Internet Recovery and let it install OS X Mountain Lion over the wire.  Minutes later, I was done.  Did I mention I love Macs?</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Quickly editing waypoints on a Garmin GPS device]]></title>
-    <link href="http://dinhyen.github.io/blog/2012/12/18/quickly-editing-waypoints-on-a-garmin-gps-device/"/>
-    <updated>2012-12-18T00:00:00-05:00</updated>
-    <id>http://dinhyen.github.io/blog/2012/12/18/quickly-editing-waypoints-on-a-garmin-gps-device</id>
-    <content type="html"><![CDATA[<p>When we traveled by car in Spain and Portugal in 2007, it&rsquo;s hard to believe that we managed to get around several cities using only a Michelin road atlas and a bunch of printouts of online maps. This time we&rsquo;re fully embracing 21st-century technology and bringing along a GPS device. To help save time, I like to enter destinations or waypoints ahead of time. On my Garmin nüvi 255W, it&rsquo;s a time-consuming process to enter waypoints (which Garmin calls Favorites). Fortunately, there&rsquo;s a way to create and edit waypoints on a PC, then later download them to the Garmin.</p>
-
-<p>The Garmin stores waypoints in a GPX file (kudos to them for using standards-based format). This is a good thing, because there&rsquo;s an excellent application for editing a GPX file on a PC&mdash;<a href="http://sourceforge.net/projects/gpxeditor">GPX Editor</a>.</p>
-
-<p>The first step is to connect the Garmin to the PC. After that you&rsquo;ll be able to browse the Garmin&rsquo;s memory card. Locate the current.gpx file under Drive\Garmin\GPX.</p>
-
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/images/garmin_folder.jpg" /></p>
-
-<p>Copy current.gpx to the PC. You can also back up the file this way.</p>
-
-<p>Open the copy of current.gpx in GPX Editor. Select the Google map tab, then select the plus icon to add a waypoint.</p>
-
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/images/gps_editor.jpg" /></p>
-
-<p>Once the waypoint is added, it shows in the list on the left. You can edit it and give it a more meaningful name.</p>
-
-<p>Once you&rsquo;re done, just copy current.gpx back to the Garmin. Your new favorites should now show up.</p>
-
-<p>This process works for my Garmin nüvi. I would suspect it would apply to other types of Garmin devices as well.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Setting up Git to work remotely]]></title>
-    <link href="http://dinhyen.github.io/blog/2012/12/15/setting-up-git-to-work-remotely/"/>
-    <updated>2012-12-15T00:00:00-05:00</updated>
-    <id>http://dinhyen.github.io/blog/2012/12/15/setting-up-git-to-work-remotely</id>
-    <content type="html"><![CDATA[<p>At home I use a MacBook to connect via VPN to the office. I&rsquo;d have access to the intranet but not shell access to my workstation. Since I usually work on the same project at home and at the office, I need to keep my work synchronized. One way to do that is with a Git remote branch.</p>
-
-<p>At the office, I&rsquo;d create a local branch for the story I&rsquo;d like to work on:</p>
-
-<pre>
-git checkout master
-git branch story_1
-git checkout story_1
-</pre>
-
-
-<p>The last 2 steps can be replaced with the shortcut:</p>
-
-<pre>
-git checkout -b story_1
-</pre>
-
-
-<p>In the local branch, create a remote branch with the same name:</p>
-
-<pre>
-git push origin story_1
-</pre>
-
-
-<p>Alternatively, I could specify a different name for the remote branch:</p>
-
-<pre>
-git push origin story_1:cool_feature_1
-</pre>
-
-
-<p>To set up the local branch (i.e., the tracking branch) to track changes in the remote branch:</p>
-
-<pre>
-git checkout story_1
-git branch -u origin/story_1
-</pre>
-
-
-<p>Alternatively, I could use a more verbose syntax:</p>
-
-<pre>
-git branch --set-upstream story_1 origin/story_1
-</pre>
-
-
-<p>If there&rsquo;s an existing remote branch and I want to create a new tracking branch with the same name:</p>
-
-<pre>
-git checkout --track origin/story_1
-</pre>
-
-
-<p>Inside a tracking branch, Git knows which server and branch to push to and pull from, so I can simply do <code>git pull</code> instead of <code>git pull origin story_1</code>.<sup>&dagger;</sup></p>
-
-<p>Now that the remote branch is setup, I can create a tracking branch on the laptop as above.</p>
-
-<p>Helpful references: <a href="http://git-scm.com/book/en/Git-Branching-Remote-Branches">http://git-scm.com/book/en/Git-Branching-Remote-Branches</a></p>
-
-<hr>
-
-
-<p><sup>&dagger;</sup> The behavior of &ldquo;git push&rdquo; actually depends on the push.default setting in .gitconfig and whether the tracking branch has the same name as the remote branch. The git-config man page gives the following information on push.default:</p>
-
-<blockquote><p><b>push.default</b> Defines the action git push should take if no refspec is given on the command line, no refspec is configured in the remote, and no refspec is implied by any of the options given on the command line. Possible values are:</p>
-
-<p>nothing &ndash; do not push anything.</p>
-
-<p>matching &ndash; push all branches having the same name in both ends. This is for those who prepare all the branches into a publishable shape and then push them out with a single command. It is not appropriate for pushing into a repository shared by multiple users, since locally stalled branches will attempt a non-fast forward push if other users updated the branch. This is currently the default, but Git 2.0 will change the default to simple.</p>
-
-<p>upstream &ndash; push the current branch to its upstream branch. With this, git push will update the same remote ref as the one which is merged by git pull, making push and pull symmetrical. See &ldquo;branch.<name>.merge&rdquo; for how to configure the upstream branch.</p>
-
-<p>simple &ndash; like upstream, but refuses to push if the upstream branch&rsquo;s name is different from the local one. This is the safest option and is well-suited for beginners. It will become the default in Git 2.0.</p>
-
-<p>current &ndash; push the current branch to a branch of the same name.</p></blockquote>
-
-<p>If the tracking branch has the same name as the remote branch, <code>git push</code> will suffice.  If it has a different name and push.default is, for example, &ldquo;simple&rdquo;, I&rsquo;d have to specify the refspec: <code>git push origin HEAD:story_1</code>.</p>
 ]]></content>
   </entry>
   

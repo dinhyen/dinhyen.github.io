@@ -9,7 +9,10 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="With laser printer, scanner, Ethernet and Wifi interface rolled into one, the Brother HL-2280DW is quite a little champ. However, for me, getting the &hellip;">
+  <meta name="description" content="I&rsquo;m using a WordPress theme that loads jQuery and other JavaScripts in the header.php script: 1
+2
+3
+&lt;script type=&quot;text/javascript&quot &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +83,161 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/03/loading-jquery-from-google-cdn-and-dependent-scripts-in-wordpress-2/">Loading jQuery From Google CDN and Dependent Scripts in WordPress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-03T00:00:00-04:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;m using a WordPress theme that loads jQuery and other JavaScripts in the header.php script:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;&lt;?php bloginfo(&#39;template_directory&#39;); ?&gt;/js/jquery-1.4.2.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;&lt;?php bloginfo(&#39;template_directory&#39;); ?&gt;/js/jquery.prettyPhoto.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;&lt;?php bloginfo(&#39;template_directory&#39;); ?&gt;/js/custom.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Using Chrome&rsquo;s Developer console (i.e., hit F12) to view the Resources for the page, I could see that jQuery is being loaded.
+<img title="jquery-cdn-1" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-11.png" width="333" height="279" />
+I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you">why</a>?). My initial attempt was to simply change  the jQuery reference to the CDN location (I also upgraded to version 1.7.1 while I was at it):</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This worked, and Chrome&rsquo;s Developer console showed that jQuery was being loaded from the CDN. However, there was another problem. WordPress apparently also loads jQuery by default, so the page ended up with an extra copy.</p>
+
+<p><img title="jquery-cdn-2" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-21.png" width="400" height="415" /></p>
+
+<p>To remove the redundant copy, I removed the jQuery references from the header.php script, then added the following lines to the functions.php script in the theme folder which use WordPress&rsquo;s built-in function <strong>wp_enqueue_script</strong> to ensure that only one copy of jQuery is included.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">function</span> <span class="nf">load_cdn_jQuery</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'> <span class="nx">wp_deregister_script</span><span class="p">(</span> <span class="s1">&#39;jquery&#39;</span> <span class="p">);</span>
+</span><span class='line'> <span class="nx">wp_register_script</span><span class="p">(</span><span class="s1">&#39;jquery&#39;</span><span class="p">,</span> <span class="s1">&#39;http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&#39;</span><span class="p">);</span>
+</span><span class='line'> <span class="nx">wp_enqueue_script</span><span class="p">(</span><span class="s1">&#39;jquery&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">add_action</span><span class="p">(</span><span class="s1">&#39;wp_enqueue_scripts&#39;</span><span class="p">,</span> <span class="s1">&#39;load_cdn_jQuery&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This worked and only a single copy of jQuery remained. However, the other scripts which depend on jQuery now break because they are being loaded before jQuery.</p>
+
+<p>Following the instructions provided in the <a href="http://codex.wordpress.org/Function_Reference/wp_enqueue_script">wp_enqueue_script reference</a>, I added the following lines to functions.php to ensure that their dependency on jQuery is enforced:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">function</span> <span class="nf">my_scripts_method</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'> <span class="nx">wp_enqueue_script</span><span class="p">(</span>
+</span><span class='line'> <span class="s1">&#39;pretty.photo&#39;</span><span class="p">,</span>
+</span><span class='line'> <span class="nx">get_template_directory_uri</span><span class="p">()</span> <span class="o">.</span> <span class="s1">&#39;/js/jquery.prettyPhoto.js&#39;</span><span class="p">,</span>
+</span><span class='line'> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;jquery&#39;</span><span class="p">)</span>
+</span><span class='line'> <span class="p">);</span>
+</span><span class='line'> <span class="nx">wp_enqueue_script</span><span class="p">(</span>
+</span><span class='line'> <span class="s1">&#39;custom&#39;</span><span class="p">,</span>
+</span><span class='line'> <span class="nx">get_template_directory_uri</span><span class="p">()</span> <span class="o">.</span> <span class="s1">&#39;/js/custom.js&#39;</span><span class="p">,</span>
+</span><span class='line'> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;jquery&#39;</span><span class="p">)</span>
+</span><span class='line'> <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">add_action</span><span class="p">(</span><span class="s1">&#39;wp_enqueue_scripts&#39;</span><span class="p">,</span> <span class="s1">&#39;my_scripts_method&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The corresponding references, of course, should be removed from header.php.</p>
+
+<p>Finally, verifying with the Developer console shows that everything is loaded correctly.</p>
+
+<p><img title="jquery-cdn-3" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-31.png" width="399" height="414" /></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/31/using-lightbox-with-nextgen-gallery/">Using Lightbox With NextGen Gallery</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-31T00:00:00-04:00" pubdate data-updated="true">Mar 31<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In my former Wordpress blog, I used the excellent <a href="http://wordpress.org/extend/plugins/nextgen-gallery/">NextGen plugin</a> to manage images in galleries.  When embedded in a post, the gallery is rendered as thumbnails, whose full-size version  is shown as an overlay when clicked.  I also like to embed inline images so that I can include a caption.  Inline images, however, are still directly linked and not shown as an overlay.  When viewed, it requires an additional click or two to go back to the post.</p>
+
+<p>To make sure that inline images are opened on the same page, I use the <a href="http://wordpress.org/extend/plugins/slimbox/">Slimbox plugin</a>.  This works well, except that now when gallery thumbnails are clicked, two full-sized versions are shown, one by NextGen&rsquo;s built-in effect and one by Slimbox.</p>
+
+<p>To solve this problem, I opened NextGen&rsquo;s options page and locate the Effects tab.  By default, the JavaScript Thumbnail effect is set to Shutter.  I changed it to None (or Lightbox) to ensure that only Slimbox handles the effect (Slimbox is a clone of Lightbox).  The only drawback of not using the Shutter effect is that you can&rsquo;t use Ajax pagination with the gallery if pagination is turned on (as of NextGen 1.9.3).
+<img title="nextgen-slimbox" src="https://dl.dropboxusercontent.com/u/52804626/images/nextgen-slimbox.png" width="800" height="578" /></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -785,241 +943,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/12/08/automapper-mismatched-types/">AutoMapper Doesn&#8217;t Work for Mismatched Types</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-08T00:00:00-05:00" pubdate data-updated="true">Dec 8<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>We&rsquo;re using <a href="http://automapper.codeplex.com/">AutoMapper</a> in ASP.NET MVC automate the mapping of properties between entity and view model objects.  This is a highly useful tool which helps us avoid the tedium of having to assigning properties manually.  Here&rsquo;s a good <a href="http://lostechies.com/jimmybogard/2009/01/23/automapper-the-object-object-mapper/">introduction</a> to using AutoMapper.</p>
-
-<p>In one case, I find that the AutoMapper doesn&rsquo;t work for all properties.  One property in particular doesn&rsquo;t get mapped.  If I manually assign a value to it as a test, I would get a ForeignKeyReferenceAlreadyHasValueException.</p>
-
-<p>The entity looks something like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="k">class</span> <span class="nc">Order</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="k">public</span> <span class="kt">int</span> <span class="n">CustomerId</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</span><span class='line'>  <span class="k">public</span> <span class="n">Person</span> <span class="n">Customer</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The view model is similar, but I pull out just the customer&rsquo;s name into a string since it is all I need. For simplicity I decide to re-use the property name. This seems intuitive and is a common practice for us before we started using the AutoMapper.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="k">class</span> <span class="nc">OrderViewModel</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="k">public</span> <span class="kt">int</span> <span class="n">CustomerId</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</span><span class='line'>  <span class="k">public</span> <span class="kt">string</span> <span class="n">Customer</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Mapping the view model to the entity is accomplished with a simple statement:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="n">AutoMapper</span><span class="p">.</span><span class="n">Mapper</span><span class="p">.</span><span class="n">Map</span><span class="p">&lt;</span><span class="n">OrderViewModel</span><span class="p">,</span> <span class="n">Order</span><span class="p">&gt;(</span><span class="n">orderViewModel</span><span class="p">,</span> <span class="n">order</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To map things the other way requires a similar statement:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="n">AutoMapper</span><span class="p">.</span><span class="n">Mapper</span><span class="p">.</span><span class="n">Map</span><span class="p">&lt;</span><span class="n">Order</span><span class="p">,</span> <span class="n">OrderViewModel</span><span class="p">&gt;(</span><span class="n">order</span><span class="p">,</span> <span class="n">orderViewModel</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I find that the CustomerId property would not get mapped in either scenario.</p>
-
-<p>It turns out that the problem is caused by using a &ldquo;recycled&rdquo; property name. In the entity, Customer is a Person object which is created from the foreign key CustomerId via LINQ to SQL, so Customer and CustomerId are intimately connected. In the view model, CustomerId matches that in the entity, but Customer is of a different type. The conflict causes the AutoMapper to abort mapping either of these properties.</p>
-
-<p>There are a couple of workarounds.  The simplest solution is to rename the Customer property in the view model to something else which doesn&rsquo;t clash, such as CustomerName.  The nice thing about AutoMapper is that by convention you can map properties of an object simply by appending it to the object&rsquo;s property name. So the Person.Name property would get mapped to CustomerName, Person.Phone would get mapped to CustomerPhone and so on.</p>
-
-<p>Alternatively, since I only care about CustomerId, I can simply tell AutoMapper to ignore the Customer property altogether:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="c1">// From view model to entity</span>
-</span><span class='line'><span class="n">AutoMapper</span><span class="p">.</span><span class="n">Mapper</span><span class="p">.</span><span class="n">CreateMap</span><span class="p">&lt;</span><span class="n">OrderViewModel</span><span class="p">,</span> <span class="n">Order</span><span class="p">&gt;()</span>
-</span><span class='line'>                <span class="p">.</span><span class="n">ForMember</span><span class="p">(</span><span class="n">ovm</span> <span class="p">=&gt;</span> <span class="n">ovm</span><span class="p">.</span><span class="n">Customer</span><span class="p">,</span> <span class="n">opt</span> <span class="p">=&gt;</span> <span class="n">opt</span><span class="p">.</span><span class="n">Ignore</span><span class="p">());</span>
-</span><span class='line'><span class="c1">// From entity to view model</span>
-</span><span class='line'><span class="n">AutoMapper</span><span class="p">.</span><span class="n">Mapper</span><span class="p">.</span><span class="n">CreateMap</span><span class="p">&lt;</span><span class="n">Order</span><span class="p">,</span> <span class="n">OrderViewModel</span><span class="p">&gt;()</span>
-</span><span class='line'>                <span class="p">.</span><span class="n">ForMember</span><span class="p">(</span><span class="n">o</span> <span class="p">=&gt;</span> <span class="n">o</span><span class="p">.</span><span class="n">Customer</span><span class="p">,</span> <span class="n">opt</span> <span class="p">=&gt;</span> <span class="n">opt</span><span class="p">.</span><span class="n">Ignore</span><span class="p">());</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>These mapping conventions should be declared once, before the mapping operation is performed.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/11/hiking-mount-monadnock/">Hiking Mount Monadnock</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-11T00:00:00-04:00" pubdate data-updated="true">Sep 11<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>As far as big mountain goes,<a href="http://en.wikipedia.org/wiki/Mount_Monadnock%22%20targtet=%22_blank"> Mount Monadnock</a> in the southwestern corner of New Hampshire is relatively close to Boston.  Despite its proximity, we&rsquo;ve never set foot on it. So we set out on a beautiful Saturday morning to redress this omission.</p>
-
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3497.jpg" alt="Mount Monadnock" /></p>
-
-<p>Monadnock&rsquo;s claim to fame is its status as most hiked mountain in the US.  Not so surprisingly, as soon as we arrived, the park ranger informed us that the parking lot was filled so that we&rsquo;d have to park in the camping area.  Later on, we&rsquo;d encounter people of all ages, shapes and sizes on the trail.</p>
-
-<p>One of Kate&rsquo;s friend, who had hiked here before, wryly observed that the people who designed this trail had no idea what a switchback was.  True enough, the White Dot trail which begins at the nearby Visitor&rsquo;s Center is a straight shot to the summit. But luckily there are also other trails which offer more gradual albeit circuitous ascent.</p>
-
-<p>The plan was to take the White Dot trail up and White Cross trail down.  Ascending involves clambering on all fours several times.  Near the start of the trail, a guy passed us going up, walking at an extremely fast pace.  About half-way up, he passed us on the way <em>down</em>.  Granted, we did stop frequently to enjoy the scenery, but we were no newbie hikers either.  Two-thirds of the way up, he passed us again going up, albeit more slowly this time.  I chatted briefly with him.  Turns out he routinely climbs this &ldquo;short&rdquo; mountain twice per visit, having practiced enough that it takes only 30 minutes per leg.  But even more impressive is his friend, who can do the same thing at the age of 54 and who has a resting heart rate of something like 40.  Anything lower than that and one wouldn&rsquo;t be breathing.  Needless to say, having heard all this, we re-doubled our efforts!  As we neared the peak, as expected we ran into our friend again practically running downhill.</p>
-
-<iframe src="http://maps.google.com/maps/ms?msa=0&amp;msid=214490968088440958659.0004acb6af81f69e7ec25&amp;ie=UTF8&amp;ll=42.853178,-72.098114&amp;spn=0.016689,0.020165&amp;t=m&amp;vpsrc=6&amp;output=embed" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="600" height="450"></iframe>
-
-
-<p>The view at the top was spectacular.  We were lucky to get a beautiful and relatively clear day.  We could see the majestic ridges of the White Mountains to the north and the very faint, barely perceptible in the haze, outline of the twin towers of the Boston skyline in the southeast horizon.</p>
-
-<p>The trail systems here were partly created by the <a href="http://en.wikipedia.org/wiki/Civilian_Conservation_Corps">Civilian Conservation Corps</a> in 1931-1933 during the Great Depression.  We&rsquo;ve seen their work in many of the places we&rsquo;ve visited.  One can only hope that after this Great Recession we&rsquo;ll have left something as worthwhile to posterity.</p>
-
-<!-- Darkbox -->
-
-
-<div class="darkbox">
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3363.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3363.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3377.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3377.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3382.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3382.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3392.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3392.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3404.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3404.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3424.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3424.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3433.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3433.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3438.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3438.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3450.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3450.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3459.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3459.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3468.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3468.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3477.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3477.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3480.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3480.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3481.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3481.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3497.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3497.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3521.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3521.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3534.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3534.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3538.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3538.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3539.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3539.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3541.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3541.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3544.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3544.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3545.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3545.jpg" />
-</a>
-
-</div>
-
-
-<!-- End darkbox -->
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -1058,7 +981,7 @@
     
      
       <li data-category="hockey">
-        <a href="/blog/categories/hockey">hockey</a> <em>10</em>
+        <a href="/blog/categories/hockey">hockey</a> <em>11</em>
       </li>
     
      
@@ -1073,7 +996,7 @@
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>36</em>
+        <a href="/blog/categories/technology">technology</a> <em>37</em>
       </li>
     
      
@@ -1111,7 +1034,15 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/11/23/updating-sql-server-primary-key/">Updating SQL Server Primary Key</a>
+        <a href="/blog/2014/02/07/sports-i-would-watch/">Sports I Would Watch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/">Using Angular Root Scope for Communication Between Controllers</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/23/updating-sql-server-primary-key/">Updating SQL Server Primary Key</a>
       </li>
     
       <li class="post">
@@ -1120,14 +1051,6 @@
     
       <li class="post">
         <a href="/blog/2013/11/18/so-long-wordpress-hello-octopress/">So Long WordPress, Hello Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/13/sigma-50mm-lens/">Sigma 50mm f/1.4 Lens for Nikon AF</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/02/fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/">Fixing Windows Media Center No Tuner Available Error With HDHomeRun Prime</a>
       </li>
     
   </ul>
