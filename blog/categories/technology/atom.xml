@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technology | Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2014-02-07T16:00:31-05:00</updated>
+  <updated>2014-02-09T16:42:11-05:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -12,6 +12,617 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[My Git cheat sheet]]></title>
+    <link href="http://dinhyen.github.io/blog/2014/02/07/my-git-cheat-sheet/"/>
+    <updated>2014-02-07T16:02:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2014/02/07/my-git-cheat-sheet</id>
+    <content type="html"><![CDATA[<p>There are lots of great Git guides out there.  This is intended simply to be a reference for me during those dark times when I can&rsquo;t remember the syntax for creating a tracking branch.</p>
+
+<h3>Config</h3>
+
+<p>```</p>
+
+<h1>These will show up in git log</h1>
+
+<p>git config &mdash;global user.name &ldquo;Yen Tran&rdquo;
+git config &mdash;global user.email <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x79;&#101;&#x6e;&#x40;&#121;&#x65;&#110;&#x74;&#114;&#x61;&#110;&#46;&#x6f;&#x72;&#x67;">&#x79;&#x65;&#110;&#64;&#x79;&#x65;&#110;&#116;&#x72;&#x61;&#x6e;&#x2e;&#111;&#114;&#x67;</a>
+git config &mdash;list
+```</p>
+
+<h3>Info</h3>
+
+<p>```
+gitk
+git status
+git log
+git log origin/master</p>
+
+<h1>Show endpoints such as origin</h1>
+
+<p>git remote show</p>
+
+<h1>Show origin params</h1>
+
+<p>git remote show origin
+```</p>
+
+<h3>Branch (Local)</h3>
+
+<p>```
+git branch <branch> &lt;sha1_of_commit></p>
+
+<h1>Ex: git branch foo 7e2785d</h1>
+
+<p>```</p>
+
+<p>```</p>
+
+<h1>Delete branch</h1>
+
+<p>git branch -d <branch></p>
+
+<h1>Create branch:</h1>
+
+<p>git branch <branch>
+git checkout <branch></p>
+
+<h1>Check out and automatically creates branch</h1>
+
+<p>git checkout -b <branch></p>
+
+<h1>List local branches</h1>
+
+<p>git br</p>
+
+<h1>List remote branches</h1>
+
+<p>git branch -r</p>
+
+<h1>List all branches</h1>
+
+<p>git branch -a</p>
+
+<h1>Verbose list of local branches and HEAD commit</h1>
+
+<p>git branch -v
+```</p>
+
+<h3>Check out a previous check-in</h3>
+
+<p>```
+git log</p>
+
+<h1>Locate desired checkin and copy SHA; e.g., f2bc540fc6817b0409571f6e5a562dffa6396017</h1>
+
+<p>git checkout <SHA></p>
+
+<h1>Do stuff, publish, etc.</h1>
+
+<p>git checkout master
+```</p>
+
+<h3>Cherry-pick</h3>
+
+<p>```</p>
+
+<h1>Source branch</h1>
+
+<p>git co 2012-01-01-A</p>
+
+<h1>Get top log entry</h1>
+
+<p>git log -1</p>
+
+<h1>Copy first few characters of SHA hash</h1>
+
+<h1>Destination branch</h1>
+
+<p>git co master
+git cherry-pick 96f39d92de93</p>
+
+<h1>Review changes</h1>
+
+<p>git diff HEAD~1
+```</p>
+
+<h3>Clone</h3>
+
+<p>```</p>
+
+<h1>SSH keys under ~/.ssh</h1>
+
+<p>git clone git@donny:repo.git</p>
+
+<h1>Directory is optional; automatically created if not specified</h1>
+
+<p>git clone gitolite@donny:repo.git [directory]
+```</p>
+
+<h3>Commit</h3>
+
+<p>```</p>
+
+<h1>Also automatically stage and commit</h1>
+
+<p>git commit -a -m &ldquo;commit message here&rdquo;</p>
+
+<h1>Add to previous commit or Rename a commit message</h1>
+
+<p>git commit &mdash;amend</p>
+
+<h1>Select reword for the desired commit in the interactive editor</h1>
+
+<h1>Edit the message</h1>
+
+<h1>Save</h1>
+
+<p>git rebase -i master
+```</p>
+
+<h3>Create new repo</h3>
+
+<p>```
+git init</p>
+
+<h1>So that subsequent add can ignore files</h1>
+
+<p>git add .gitignore
+git remote add origin git@donny:repo.git
+git remote add origin git@github.com:user/repo.git</p>
+
+<h1>add and commit files (-u option updates local)</h1>
+
+<p>git push -u origin master
+```</p>
+
+<h3>Diff</h3>
+
+<p>```</p>
+
+<h1>Graphical version</h1>
+
+<p>git difftool
+git diff <directory>
+git difftool HEAD~1</p>
+
+<h1>Diff files that have been staged</h1>
+
+<p>git diff &mdash;cached</p>
+
+<h1>Diff local changes against repository</h1>
+
+<p>git diff origin/master
+```</p>
+
+<h3>Help</h3>
+
+<p>```
+man git-log
+man git-show</p>
+
+<h1>etc.</h1>
+
+<p>```</p>
+
+<h3>Log</h3>
+
+<p>```</p>
+
+<h1>Get top 1 log entry</h1>
+
+<p>git log -1</p>
+
+<h1>Show history beyond renames</h1>
+
+<p>git log &mdash;follow file</p>
+
+<h1>Include diffs</h1>
+
+<p>git log -p file
+```</p>
+
+<h3>Stage</h3>
+
+<p>```
+git add <file>&hellip;
+git add .</p>
+
+<h1>Opposite of add; use when files are renamed, etc.</h1>
+
+<p>git rm <file>&hellip;
+```</p>
+
+<h3>Stash</h3>
+
+<p>```
+git stash
+git stash list</p>
+
+<h1>Show changes in stash, where 0 is the number of the stashed item as shown by git stash list</h1>
+
+<p>git show @{0}</p>
+
+<h1>Drop specified stash where xx is number shown in stash list</h1>
+
+<p>git stash drop stash@{xx}
+```</p>
+
+<h3>Drop local changes</h3>
+
+<p>```</p>
+
+<h1>Change state of working copy to match repository, if file has not been added to index/staging</h1>
+
+<p>git checkout &mdash; <filename></p>
+
+<h1>Ditto, but if file has been added to index</h1>
+
+<p>git reset <filename>
+git stash save &mdash;keep-index
+```</p>
+
+<h3>Pull</h3>
+
+<p><code>
+git pull origin master
+git checkout master
+</code></p>
+
+<h3>Rebase: resolve conflict</h3>
+
+<p>```
+git checkout <branch>
+git rebase master
+git status
+git add <file></p>
+
+<h1>Fix conflicts</h1>
+
+<p>git rebase &mdash;continue
+```</p>
+
+<h3>Rebase: interactive</h3>
+
+<p>```
+git rebase -i origin/master
+git rebase -i</p>
+
+<h1>In the text editor, select s or squash on the bottom-most commits to squash them</h1>
+
+<p>```</p>
+
+<h3>Refs</h3>
+
+<p>You may get this error when running &ldquo;git branch -d foo&rdquo;:
+warning: deleting branch &lsquo;foo&rsquo; that has been merged to</p>
+
+<pre><code>   'refs/remotes/origin/foo', but not yet merged to HEAD.
+</code></pre>
+
+<p>Deleted branch foo (was 334730a).
+From <a href="http://stackoverflow.com/questions/18506456/git-how-to-delete-a-local-ref-branch:">http://stackoverflow.com/questions/18506456/git-how-to-delete-a-local-ref-branch:</a>
+```</p>
+
+<h1>Remove local ref</h1>
+
+<p>git update-ref -d refs/remotes/origins/foo
+```</p>
+
+<h3>Ref log</h3>
+
+<p><code>
+git reflog
+</code></p>
+
+<h3>Remote</h3>
+
+<p>```</p>
+
+<h1>Remove origin</h1>
+
+<p>git remote rm origin
+git remote add origin git@donny:etagout.git
+git remote show origin
+```</p>
+
+<h3>Remote Branch</h3>
+
+<p>```</p>
+
+<h1>Create branch. Reference: <a href="http://git-scm.com/book/en/Git-Branching-Remote-Branches">http://git-scm.com/book/en/Git-Branching-Remote-Branches</a></h1>
+
+<p>git branch <branch></p>
+
+<h1>Show local branches configured for push/pull, i.e. tracking branches</h1>
+
+<p>git remote show origin
+git push <remote> <branch></p>
+
+<h1>Ex: git push origin foo</h1>
+
+<h1>or</h1>
+
+<p>git push <remote> &lt;local_branch>:<branch></p>
+
+<h1>Ex: git push origin foo:bar</h1>
+
+<p>```</p>
+
+<h3>Tracking branch</h3>
+
+<h4>Creating a new tracking branch</h4>
+
+<p>```
+git checkout -b &lt;local_branch> <remote>/<branch></p>
+
+<h1>Ex:</h1>
+
+<h1>git checkout -b foo origin/foo</h1>
+
+<h1>git checkout -b bar origin/foo # local branch has a different name</h1>
+
+<h1>Alternative:</h1>
+
+<p>git checkout &mdash;track origin/foo</p>
+
+<h1>Local branch has a different name</h1>
+
+<p>git checkout -b bar &mdash;track origin/foo</p>
+
+<h1>Within a tracking branch, push and pull automatically knows which server and branch to push to/pull from</h1>
+
+<p>git pull
+git push
+```</p>
+
+<h4>Setting up tracking information for an existing branch</h4>
+
+<p>```
+git branch &mdash;set-upstream <remote>/<branch> &lt;local_branch></p>
+
+<h1>or</h1>
+
+<p>git branch -u <remote>/<branch> &lt;local_branch></p>
+
+<h1>Ex:</h1>
+
+<h1>git branch -u origin/foo # when within branch foo</h1>
+
+<h1>git branch -u origin/foo foo # when not within branch foo</h1>
+
+<h1>Pull branch</h1>
+
+<p>git pull <remote> <branch></p>
+
+<h1>Delete branch</h1>
+
+<p>git push <remote> :<branch>
+```</p>
+
+<h4>Pruning stale remote branches</h4>
+
+<p>```
+git remote show origin</p>
+
+<pre><code>master    tracked
+refs/remotes/origin/fix        stale (use 'git remote prune' to remove)
+refs/remotes/origin/story_5008 stale (use 'git remote prune' to remove)
+</code></pre>
+
+<h1>Simulate deleting stale branches</h1>
+
+<p>git remote prune origin &mdash;dry-run</p>
+
+<h1>Actually delete stale branches</h1>
+
+<p>git remote prune origin
+```</p>
+
+<h3>Commit</h3>
+
+<p>```</p>
+
+<h1>Switch to my branch</h1>
+
+<p>git checkout <branch>
+git status</p>
+
+<h1>View diff per file</h1>
+
+<p>git difftool</p>
+
+<h1>Add all files in to staging area</h1>
+
+<p>git add .
+git status</p>
+
+<h1>Commit to local repository</h1>
+
+<p>git commit</p>
+
+<h1>Switch to master</h1>
+
+<p>git checkout master</p>
+
+<h1>Pull down master updates</h1>
+
+<p>git pull origin master
+git checkout <branch></p>
+
+<h1>Rewind my branch, pull down master updates, then add my update on top</h1>
+
+<p>git rebase master
+git checkout master</p>
+
+<h1>Merge my update back to local master</h1>
+
+<p>git merge <branch></p>
+
+<h1>Pull down updates that occurred on canonical repository in the meantime</h1>
+
+<p>git pull origin master</p>
+
+<h1>Push local updates to canonical repository</h1>
+
+<p>git push origin master
+git log
+```</p>
+
+<h3>Reset</h3>
+
+<p>```</p>
+
+<h1>Changes after specified revision show up as uncommitted</h1>
+
+<p>git reset SHA</p>
+
+<h1>Changes after specified revision do not show up</h1>
+
+<p>git reset SHA</p>
+
+<h1>Unstage</h1>
+
+<p>git reset HEAD <file></p>
+
+<h1>Jump to 1 commit below HEAD, rolling back previous commit</h1>
+
+<p>git reset HEAD~1</p>
+
+<h1>Reset everything to HEAD, overwriting local changes&hellip;caution!</h1>
+
+<p>git reset &mdash;hard HEAD
+```</p>
+
+<h3>Show</h3>
+
+<p>```</p>
+
+<h1>View diff</h1>
+
+<p>git show SHA</p>
+
+<h1>View content of file</h1>
+
+<p>git show SHA:file
+```</p>
+
+<h3>Filing away local changes</h3>
+
+<p>Create a new branch and commit the desired changes to it:</p>
+
+<p><code>
+git branch &lt;branch&gt;
+git checkout &lt;branch&gt;
+git add &lt;files&gt;...
+git commit
+</code></p>
+
+<p>Merging origin changes with local changes:</p>
+
+<p>```
+git checkout <branch>
+git add <file>
+git commit
+git checkout master
+git pull origin master
+git checkout <branch>
+git rebase master</p>
+
+<h1>Resolve conflicts</h1>
+
+<p>git rebase &mdash;continue</p>
+
+<h1>Roll back your commit</h1>
+
+<p>git reset HEAD~1
+```</p>
+
+<p>Better:</p>
+
+<p><code>
+git checkout &lt;branch&gt;
+git stash
+git checkout master
+git pull origin master
+git checkout &lt;branch&gt;
+git rebase master
+git stash pop
+</code></p>
+
+<h3>Merging multiple branches</h3>
+
+<pre>
+Branch 2
+|
+Branch 1 (committed)
+|
+master
+</pre>
+
+
+<p>```
+git commit
+git checkout branch1
+git merge branch2</p>
+
+<h1>Pick one commit and stash the other, then edit aggregate comment for both commits from the previous branch1 and branch2 comments</h1>
+
+<p>git rebase -i master
+git co master</p>
+
+<h1>Merge aggregate commits into master</h1>
+
+<p>git merge branch1</p>
+
+<h1>Should see aggregate comment</h1>
+
+<p>git log
+```</p>
+
+<h3>Tag</h3>
+
+<p>```</p>
+
+<h1>Check out a tag</h1>
+
+<p>git checkout 2011-09-16</p>
+
+<h1>Make sure your local master contains EXACTLY what you want tagged &mdash; &ldquo;git log&rdquo; to double check</h1>
+
+<p>git checkout master</p>
+
+<h1>Create a tag</h1>
+
+<p>git tag -a &ldquo;tag name&rdquo;</p>
+
+<h1>This removes the tag from your local master</h1>
+
+<p>git tag -d &ldquo;tag name&rdquo;</p>
+
+<h1>DANGER &ndash; the colon tells git to DELETE something &mdash; without a confirm prompt ! &mdash; here, we&rsquo;re deleting the remote master&rsquo;s tag</h1>
+
+<p>git push origin :&ldquo;tag name&rdquo;</p>
+
+<h1>This creates the tag on your local master</h1>
+
+<p>git tag &ldquo;tag name&rdquo;</p>
+
+<h1>This pushes the new tag back onto remote master</h1>
+
+<p>git push &mdash;tags</p>
+
+<h1>List tags</h1>
+
+<p>git tag</p>
+
+<h1>Fetch all tags</h1>
+
+<p>git fetch &mdash;tags
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using Angular root scope for communication between controllers]]></title>
@@ -566,122 +1177,6 @@ end
 
 <p>  end
 end
-```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Simple table sorting with Angular]]></title>
-    <link href="http://dinhyen.github.io/blog/2013/09/28/simple-table-sorting-with-angular/"/>
-    <updated>2013-09-28T00:00:00-04:00</updated>
-    <id>http://dinhyen.github.io/blog/2013/09/28/simple-table-sorting-with-angular</id>
-    <content type="html"><![CDATA[<p><a href="http://plnkr.co/edit/rynrXkzGcSHeWZrSXENl">View in Plunkr</a></p>
-
-<p>I have a page with tabular data which I want to be able to sort without having to go back to the server. Also a nice-to-have would be the ability to filter the displayed items. Since I&rsquo;m trying to learn Angular, this seems like an excellent opportunity to try it out.</p>
-
-<p>In the controller, the variable items holds the data to be sorted/filtered, while filteredItems is initialized to an empty array. I also specify the initial sort field and direction.</p>
-
-<p><code>javascript
-function tableSortCtl($scope, $filter) {
-  $scope.items = $.parseJSON($('#json').html());
-  $scope.filteredItems = [];
-  $scope.sortField = "firstName";
-  $scope.descending = false;
-}
-</code></p>
-
-<p>The data are inserted as a JSON string into the page inside a <code>script</code> tag.  I could have made a separate request to retrieve the data.  But since the data are already available and used elsewhere on the page, I decided to save the extra request.  The JSON string is parsed into an array of objects with the help of jQuery.</p>
-
-<p>``` html</p>
-
-<script id="json" type="application/json">
-[ { "id" : 1, "firstName" : "Alice", "lastName" : "Krige", "birthdate" : "1954-06-28", "address" : "123 Main Street", "phone" : "111-222-3333" }, { "id" : 2, "firstName" : "Bob", "lastName" : "Probert", "birthdate" : "1965-06-05", "address" : "23 Elm Street", "phone" : "359-324-1494" }, { "id" : 3, "firstName" : "Charlie", "lastName" : "Darwin", "birthdate" : "1809-02-12", "address" : "65 Finch Alley", "phone" : "782-624-6038" } ]
-</script>
-
-
-<p>```</p>
-
-<p>Here&rsquo;s an excerpt of the markup:</p>
-
-<p>``` html
- <table class="table table-striped" id="tag-list" ng-show="items.length > 0">
-  <thead></p>
-
-<pre><code>&lt;tr&gt;
-  &lt;th id="firstName"&gt;
-    &lt;a ng-click="sort('firstName')"&gt;First name &lt;i class="icon-sort"&gt;&lt;/i&gt;&lt;/a&gt;
-  &lt;/th&gt;
-&lt;/tr&gt;
-</code></pre>
-
-<p>  </thead>
-  <tbody></p>
-
-<pre><code>&lt;tr ng-repeat="item in filteredItems | orderBy:sortField:descending"&gt;
-  &lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-</code></pre>
-
-<p>  </tbody>
-</table>
-```</p>
-
-<p>The ng-repeat directive specifies that a new table row should be created for each item. With the parameterized orderBy filter, sorting is accomplished simply by assigning a value to the sort field and toggling the sort direction flag.  This is impressively straight-forward and elegant. The rest of the function is DOM-manipulation to display the proper sort arrow.</p>
-
-<p>``` javascript
-$scope.sort = function (newSortField) {
-  if ($scope.sortField == newSortField)</p>
-
-<pre><code>$scope.descending = !$scope.descending;
-</code></pre>
-
-<p>  $scope.sortField = newSortField;</p>
-
-<p>  $(&lsquo;th i&rsquo;).each(function () {</p>
-
-<pre><code>$(this).removeClass().addClass('icon-sort');  // reset sort icon for columns with existing icons
-</code></pre>
-
-<p>  });
-  if ($scope.descending)</p>
-
-<pre><code>$('#' + newSortField + ' i').removeClass().addClass('icon-caret-down');
-</code></pre>
-
-<p>  else</p>
-
-<pre><code>$('#' + newSortField + ' i').removeClass().addClass('icon-caret-up');    
-</code></pre>
-
-<p>};
-```</p>
-
-<p>Here&rsquo;s the markup for the text filter.  A change to the value of the textbox triggers the search.</p>
-
-<p><code>html
-&lt;input type="text" ng-model="query" ng-change="search()" class="input-large" placeholder="Filter" /&gt;
-</code></p>
-
-<p>The search function simply iterates through all the fields of each item and attempts to find a simple (case-insensitive) match.  This works for numbers and strings but unfortunately not, for example, on the month name for a date field, for which we&rsquo;d have to do some additional processing.</p>
-
-<p>``` javascript
-$scope.search = function () {
-  $scope.filteredItems = $filter(&lsquo;filter&rsquo;)($scope.items, function (item) {</p>
-
-<pre><code>for (var field in item) {
-  if ($scope.match(item[field], $scope.query))
-    return true;
-}
-return false;
-</code></pre>
-
-<p>  });
-};
-$scope.match = function(fieldValue, searchTerm) {
-  if (!fieldValue) return false;
-  if (!searchTerm) return true;
-  return fieldValue.toString().toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0;
-};
 ```</p>
 ]]></content>
   </entry>

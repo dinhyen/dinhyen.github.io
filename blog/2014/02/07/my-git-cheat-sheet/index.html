@@ -1,0 +1,940 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>My Git cheat sheet - Yen's Blog</title>
+  <meta name="author" content="Yen Tran">
+
+  
+  <meta name="description" content="There are lots of great Git guides out there. This is intended simply to be a reference for me during those dark times when I can&rsquo;t remember &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dinhyen.github.io/blog/2014/02/07/my-git-cheat-sheet">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Yen's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="/stylesheets/darkbox.css" rel="stylesheet" type="text/css">
+<script src="/javascripts/darkbox.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24469490-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Yen's Blog</a></h1>
+  
+    <h2>Lens, Wheels, Skates, Keyboard</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dinhyen.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/travel">Travel</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">My Git Cheat Sheet</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-07T16:02:00-05:00" pubdate data-updated="true">Feb 7<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>There are lots of great Git guides out there.  This is intended simply to be a reference for me during those dark times when I can&rsquo;t remember the syntax for creating a tracking branch.</p>
+
+<h3>Config</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># These will show up in git log
+</span><span class='line'>git config --global user.name "Yen Tran"
+</span><span class='line'>git config --global user.email yen@yentran.org
+</span><span class='line'>git config --list</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Info</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gitk
+</span><span class='line'>git status
+</span><span class='line'>git log
+</span><span class='line'>git log origin/master
+</span><span class='line'># Show endpoints such as origin
+</span><span class='line'>git remote show
+</span><span class='line'># Show origin params
+</span><span class='line'>git remote show origin</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Branch (Local)</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git branch &lt;branch&gt; &lt;sha1_of_commit&gt;
+</span><span class='line'># Ex: git branch foo 7e2785d</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Delete branch
+</span><span class='line'>git branch -d &lt;branch&gt;
+</span><span class='line'>
+</span><span class='line'># Create branch:
+</span><span class='line'>git branch &lt;branch&gt;
+</span><span class='line'>git checkout &lt;branch&gt;
+</span><span class='line'># Check out and automatically creates branch
+</span><span class='line'>git checkout -b &lt;branch&gt;
+</span><span class='line'># List local branches
+</span><span class='line'>git br 
+</span><span class='line'># List remote branches
+</span><span class='line'>git branch -r
+</span><span class='line'># List all branches
+</span><span class='line'>git branch -a
+</span><span class='line'># Verbose list of local branches and HEAD commit
+</span><span class='line'>git branch -v</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Check out a previous check-in</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git log
+</span><span class='line'>#  Locate desired checkin and copy SHA; e.g., f2bc540fc6817b0409571f6e5a562dffa6396017
+</span><span class='line'>git checkout &lt;SHA&gt;
+</span><span class='line'># Do stuff, publish, etc.
+</span><span class='line'>git checkout master</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Cherry-pick</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Source branch
+</span><span class='line'>git co 2012-01-01-A
+</span><span class='line'># Get top log entry
+</span><span class='line'>git log -1
+</span><span class='line'># Copy first few characters of SHA hash
+</span><span class='line'># Destination branch
+</span><span class='line'>git co master
+</span><span class='line'>git cherry-pick 96f39d92de93
+</span><span class='line'># Review changes
+</span><span class='line'>git diff HEAD~1</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Clone</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># SSH keys under ~/.ssh
+</span><span class='line'>git clone git@donny:repo.git
+</span><span class='line'># Directory is optional; automatically created if not specified
+</span><span class='line'>git clone gitolite@donny:repo.git [directory]</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Commit</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Also automatically stage and commit
+</span><span class='line'>git commit -a -m "commit message here"
+</span><span class='line'># Add to previous commit or Rename a commit message
+</span><span class='line'>git commit --amend
+</span><span class='line'># Select reword for the desired commit in the interactive editor
+</span><span class='line'># Edit the message
+</span><span class='line'># Save
+</span><span class='line'>git rebase -i master</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Create new repo</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git init
+</span><span class='line'>#  So that subsequent add can ignore files
+</span><span class='line'>git add .gitignore
+</span><span class='line'>git remote add origin git@donny:repo.git
+</span><span class='line'>git remote add origin git@github.com:user/repo.git
+</span><span class='line'># add and commit files (-u option updates local)
+</span><span class='line'>git push -u origin master</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Diff</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Graphical version
+</span><span class='line'>git difftool
+</span><span class='line'>git diff &lt;directory&gt;
+</span><span class='line'>git difftool HEAD~1
+</span><span class='line'># Diff files that have been staged
+</span><span class='line'>git diff --cached
+</span><span class='line'># Diff local changes against repository
+</span><span class='line'>git diff origin/master</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Help</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>man git-log
+</span><span class='line'>man git-show
+</span><span class='line'># etc.</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Log</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Get top 1 log entry
+</span><span class='line'>git log -1
+</span><span class='line'># Show history beyond renames
+</span><span class='line'>git log --follow file
+</span><span class='line'># Include diffs
+</span><span class='line'>git log -p file</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Stage</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add &lt;file&gt;...
+</span><span class='line'>git add .
+</span><span class='line'># Opposite of add; use when files are renamed, etc.
+</span><span class='line'>git rm &lt;file&gt;...</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Stash</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git stash
+</span><span class='line'>git stash list
+</span><span class='line'># Show changes in stash, where 0 is the number of the stashed item as shown by git stash list
+</span><span class='line'>git show @{0}
+</span><span class='line'># Drop specified stash where xx is number shown in stash list
+</span><span class='line'>git stash drop stash@{xx}</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Drop local changes</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Change state of working copy to match repository, if file has not been added to index/staging
+</span><span class='line'>git checkout -- &lt;filename&gt;
+</span><span class='line'># Ditto, but if file has been added to index
+</span><span class='line'>git reset &lt;filename&gt;
+</span><span class='line'>git stash save --keep-index</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Pull</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git pull origin master
+</span><span class='line'>git checkout master</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Rebase: resolve conflict</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout &lt;branch&gt;
+</span><span class='line'>git rebase master
+</span><span class='line'>git status
+</span><span class='line'>git add &lt;file&gt;
+</span><span class='line'># Fix conflicts
+</span><span class='line'>git rebase --continue</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Rebase: interactive</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git rebase -i origin/master
+</span><span class='line'>git rebase -i
+</span><span class='line'># In the text editor, select s or squash on the bottom-most commits to squash them</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Refs</h3>
+
+<p>You may get this error when running &ldquo;git branch -d foo&rdquo;:
+warning: deleting branch &lsquo;foo&rsquo; that has been merged to</p>
+
+<pre><code>   'refs/remotes/origin/foo', but not yet merged to HEAD.
+</code></pre>
+
+<p>Deleted branch foo (was 334730a).
+From <a href="http://stackoverflow.com/questions/18506456/git-how-to-delete-a-local-ref-branch:">http://stackoverflow.com/questions/18506456/git-how-to-delete-a-local-ref-branch:</a></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Remove local ref
+</span><span class='line'>git update-ref -d refs/remotes/origins/foo</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Ref log</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git reflog</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Remote</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Remove origin
+</span><span class='line'>git remote rm origin
+</span><span class='line'>git remote add origin git@donny:etagout.git
+</span><span class='line'>git remote show origin</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Remote Branch</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Create branch. Reference: http://git-scm.com/book/en/Git-Branching-Remote-Branches
+</span><span class='line'>git branch &lt;branch&gt;
+</span><span class='line'># Show local branches configured for push/pull, i.e. tracking branches
+</span><span class='line'>git remote show origin
+</span><span class='line'>git push &lt;remote&gt; &lt;branch&gt;
+</span><span class='line'># Ex: git push origin foo
+</span><span class='line'># or
+</span><span class='line'>git push &lt;remote&gt; &lt;local_branch&gt;:&lt;branch&gt;
+</span><span class='line'># Ex: git push origin foo:bar</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Tracking branch</h3>
+
+<h4>Creating a new tracking branch</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout -b &lt;local_branch&gt; &lt;remote&gt;/&lt;branch&gt; 
+</span><span class='line'># Ex:
+</span><span class='line'>#   git checkout -b foo origin/foo
+</span><span class='line'>#   git checkout -b bar origin/foo # local branch has a different name
+</span><span class='line'># Alternative:
+</span><span class='line'>git checkout --track origin/foo
+</span><span class='line'># Local branch has a different name
+</span><span class='line'>git checkout -b bar --track origin/foo
+</span><span class='line'># Within a tracking branch, push and pull automatically knows which server and branch to push to/pull from
+</span><span class='line'>git pull
+</span><span class='line'>git push</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Setting up tracking information for an existing branch</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git branch --set-upstream &lt;remote&gt;/&lt;branch&gt; &lt;local_branch&gt;
+</span><span class='line'># or
+</span><span class='line'>git branch -u &lt;remote&gt;/&lt;branch&gt; &lt;local_branch&gt;
+</span><span class='line'># Ex:
+</span><span class='line'># git branch -u origin/foo # when within branch foo
+</span><span class='line'># git branch -u origin/foo foo # when not within branch foo
+</span><span class='line'># Pull branch
+</span><span class='line'>git pull &lt;remote&gt; &lt;branch&gt;
+</span><span class='line'># Delete branch
+</span><span class='line'>git push &lt;remote&gt; :&lt;branch&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Pruning stale remote branches</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git remote show origin
+</span><span class='line'>    master    tracked
+</span><span class='line'>    refs/remotes/origin/fix        stale (use 'git remote prune' to remove)
+</span><span class='line'>    refs/remotes/origin/story_5008 stale (use 'git remote prune' to remove)
+</span><span class='line'># Simulate deleting stale branches
+</span><span class='line'>git remote prune origin --dry-run
+</span><span class='line'># Actually delete stale branches
+</span><span class='line'>git remote prune origin</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Commit</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Switch to my branch
+</span><span class='line'>git checkout &lt;branch&gt;
+</span><span class='line'>git status
+</span><span class='line'># View diff per file
+</span><span class='line'>git difftool
+</span><span class='line'># Add all files in to staging area
+</span><span class='line'>git add .
+</span><span class='line'>git status
+</span><span class='line'># Commit to local repository
+</span><span class='line'>git commit
+</span><span class='line'># Switch to master
+</span><span class='line'>git checkout master
+</span><span class='line'># Pull down master updates
+</span><span class='line'>git pull origin master
+</span><span class='line'>git checkout &lt;branch&gt;
+</span><span class='line'># Rewind my branch, pull down master updates, then add my update on top
+</span><span class='line'>git rebase master
+</span><span class='line'>git checkout master
+</span><span class='line'># Merge my update back to local master
+</span><span class='line'>git merge &lt;branch&gt;
+</span><span class='line'># Pull down updates that occurred on canonical repository in the meantime
+</span><span class='line'>git pull origin master
+</span><span class='line'># Push local updates to canonical repository
+</span><span class='line'>git push origin master
+</span><span class='line'>git log</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Reset</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Changes after specified revision show up as uncommitted
+</span><span class='line'>git reset SHA
+</span><span class='line'># Changes after specified revision do not show up
+</span><span class='line'>git reset SHA
+</span><span class='line'># Unstage
+</span><span class='line'>git reset HEAD &lt;file&gt;
+</span><span class='line'># Jump to 1 commit below HEAD, rolling back previous commit
+</span><span class='line'>git reset HEAD~1
+</span><span class='line'># Reset everything to HEAD, overwriting local changes...caution!
+</span><span class='line'>git reset --hard HEAD</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Show</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># View diff
+</span><span class='line'>git show SHA
+</span><span class='line'># View content of file
+</span><span class='line'>git show SHA:file</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Filing away local changes</h3>
+
+<p>Create a new branch and commit the desired changes to it:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git branch &lt;branch&gt;
+</span><span class='line'>git checkout &lt;branch&gt;
+</span><span class='line'>git add &lt;files&gt;...
+</span><span class='line'>git commit</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Merging origin changes with local changes:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout &lt;branch&gt;
+</span><span class='line'>git add &lt;file&gt;
+</span><span class='line'>git commit
+</span><span class='line'>git checkout master
+</span><span class='line'>git pull origin master
+</span><span class='line'>git checkout &lt;branch&gt;
+</span><span class='line'>git rebase master
+</span><span class='line'># Resolve conflicts
+</span><span class='line'>git rebase --continue
+</span><span class='line'># Roll back your commit
+</span><span class='line'>git reset HEAD~1</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Better:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout &lt;branch&gt;
+</span><span class='line'>git stash
+</span><span class='line'>git checkout master
+</span><span class='line'>git pull origin master
+</span><span class='line'>git checkout &lt;branch&gt;
+</span><span class='line'>git rebase master
+</span><span class='line'>git stash pop</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Merging multiple branches</h3>
+
+<pre>
+Branch 2
+|
+Branch 1 (committed)
+|
+master
+</pre>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git commit
+</span><span class='line'>git checkout branch1
+</span><span class='line'>git merge branch2
+</span><span class='line'># Pick one commit and stash the other, then edit aggregate comment for both commits from the previous branch1 and branch2 comments
+</span><span class='line'>git rebase -i master
+</span><span class='line'>git co master
+</span><span class='line'># Merge aggregate commits into master
+</span><span class='line'>git merge branch1
+</span><span class='line'># Should see aggregate comment
+</span><span class='line'>git log</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Tag</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Check out a tag
+</span><span class='line'>git checkout 2011-09-16
+</span><span class='line'># Make sure your local master contains EXACTLY what you want tagged -- "git log" to double check
+</span><span class='line'>git checkout master
+</span><span class='line'># Create a tag
+</span><span class='line'>git tag -a "tag name"
+</span><span class='line'># This removes the tag from your local master
+</span><span class='line'>git tag -d "tag name"
+</span><span class='line'># DANGER - the colon tells git to DELETE something -- without a confirm prompt ! -- here, we're deleting the remote master's tag
+</span><span class='line'>git push origin :"tag name"
+</span><span class='line'># This creates the tag on your local master
+</span><span class='line'>git tag "tag name"
+</span><span class='line'># This pushes the new tag back onto remote master
+</span><span class='line'>git push --tags
+</span><span class='line'># List tags
+</span><span class='line'>git tag
+</span><span class='line'># Fetch all tags
+</span><span class='line'>git fetch --tags</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Yen Tran</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-07T16:02:00-05:00" pubdate data-updated="true">Feb 7<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/technology/'>technology</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dinhyen.github.io/blog/2014/02/07/my-git-cheat-sheet/" data-via="dinhyen" data-counturl="http://dinhyen.github.io/blog/2014/02/07/my-git-cheat-sheet/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/02/07/sports-i-would-watch/" title="Previous Post: Sports I would watch">&laquo; Sports I would watch</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Categories</h1>
+  <ul id="categories">
+    
+     
+      <li data-category="Photoshop">
+        <a href="/blog/categories/photoshop">Photoshop</a> <em>2</em>
+      </li>
+    
+     
+      <li data-category="travel">
+        <a href="/blog/categories/travel">travel</a> <em>20</em>
+      </li>
+    
+     
+      <li data-category="outdoors">
+        <a href="/blog/categories/outdoors">outdoors</a> <em>9</em>
+      </li>
+    
+     
+      <li data-category="photography">
+        <a href="/blog/categories/photography">photography</a> <em>20</em>
+      </li>
+    
+     
+      <li data-category="hockey">
+        <a href="/blog/categories/hockey">hockey</a> <em>11</em>
+      </li>
+    
+     
+      <li data-category="city">
+        <a href="/blog/categories/city">city</a> <em>6</em>
+      </li>
+    
+     
+      <li data-category="drawing">
+        <a href="/blog/categories/drawing">drawing</a> <em>1</em>
+      </li>
+    
+     
+      <li data-category="technology">
+        <a href="/blog/categories/technology">technology</a> <em>38</em>
+      </li>
+    
+     
+      <li data-category="review">
+        <a href="/blog/categories/review">review</a> <em>25</em>
+      </li>
+    
+     
+      <li data-category="hiking">
+        <a href="/blog/categories/hiking">hiking</a> <em>9</em>
+      </li>
+    
+     
+      <li data-category="other">
+        <a href="/blog/categories/other">other</a> <em>1</em>
+      </li>
+    
+  </ul>
+</section>
+<script type="text/javascript">
+  $(function() {
+    var categories = [];
+    $('[data-category]').each(function() {
+      categories.push(this);
+    });
+    categories.sort(function (a, b) {
+      return a.attributes['data-category'].value.toLowerCase() <= b.attributes['data-category'].value.toLowerCase()
+            ? -1 : 1;
+    });
+    $('#categories').html(categories);
+  });
+</script>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/07/my-git-cheat-sheet/">My Git Cheat Sheet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/07/sports-i-would-watch/">Sports I Would Watch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/">Using Angular Root Scope for Communication Between Controllers</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/23/updating-sql-server-primary-key/">Updating SQL Server Primary Key</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/19/top-10-archive/">Top 10 Archive</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Yen Tran -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
