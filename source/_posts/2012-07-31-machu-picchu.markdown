@@ -27,7 +27,7 @@ At Machu Picchu, the Incas must have been just as much in awe of this wondrous l
 
 Before coming to Peru, I've seen many photos of the classic view of Machu Picchu and formed a fairly detailed mental map.  But nothing could have prepared me for the beauty of the real thing.   Words or pictures fail to do it justice.  You may be there at sunrise, mid-day and sunset, when it's sunny, foggy and rainy.  You may spend hours being immersed in its surroundings. You may climb all of its peaks and explore all of its corners.  Yet in the end, it would still seem somehow unreal, as if it's a mythical place that would fade away into the mist as soon as you look away.
 
-Machu Picchu is built on top of a mountain, which is itself surrounded by much taller peaks. It is like the center of a flower, surrounded by petals.  At sunrise, the complex would remain swathed in shadows, until the sun rises high enough to surmount the surrounding peaks and bathe it in a golden light.  At certain times during the year, notably the summer soltice, sun light first falls on the complex at its highest point, Intihuatana or "Hitching Post of the Sun".  The sun-worshipping Incas held their most important ceremonies on such occasions.
+Machu Picchu is built on top of a mountain, which is itself surrounded by much taller peaks. It is like the center of a flower, surrounded by petals.  At sunrise, the complex would remain swathed in shadows, until the sun rises high enough to surmount the surrounding peaks and bathe it in a golden light.  At certain times during the year, notably the summer solstice, sun light first falls on the complex at its highest point, Intihuatana or "Hitching Post of the Sun".  The sun-worshipping Incas held their most important ceremonies on such occasions.
 
 Machu Picchu is only reachable by train or on foot.  The closest train station is at Ollantaytambo, a worthy destination in its own right.  The alternative, the famed Inca trail, follows the footsteps of the Incas and traverses mountains to reach Machu Picchu.  It is quite crowded these days, but the trek would still be an experience of a lifetime.  The train stops at the town of Aguas Calientes (officially, Machu Picchu Pueblo) which lies at the foot of the mountain and exists almost solely as a hub for exploring Machu Picchu.  From here, a road zigzags up the mountain through several switchbacks to reach the ancient city. 
 
@@ -113,7 +113,7 @@ The privileged Royal District which surrounds the Temple of the Sun.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/peru-machu-picchu/dsc_2733.jpg' />
 
-The lesser residential and warehouse district, dubbed the "Mortar District" by our guidebook due it being more "crudely" constructed using mortar.
+The lesser residential and warehouse district, dubbed the "Mortar District" by our guidebook due to it being more "crudely" constructed using mortar.
 
 <img src='https://dl.dropboxusercontent.com/u/52804626/peru-machu-picchu/dsc_2731.jpg' />
 

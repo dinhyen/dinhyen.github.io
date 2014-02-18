@@ -207,8 +207,7 @@ git rebase -i
 ###  Refs
 
 You may get this error when running "git branch -d foo":
-warning: deleting branch 'foo' that has been merged to
-       'refs/remotes/origin/foo', but not yet merged to HEAD.
+warning: deleting branch 'foo' that has been merged to 'refs/remotes/origin/foo', but not yet merged to HEAD.
 Deleted branch foo (was 334730a).
 From http://stackoverflow.com/questions/18506456/git-how-to-delete-a-local-ref-branch:
 ```
@@ -384,13 +383,12 @@ git stash pop
 ```
 
 ### Merging multiple branches
-<pre>
-Branch 2
-|
-Branch 1 (committed)
-|
-master
-</pre>
+
+    Branch 2
+    |
+    Branch 1 (committed)
+    |
+    master
 
 ```
 git commit

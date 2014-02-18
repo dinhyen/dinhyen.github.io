@@ -9,6 +9,6 @@ I was really excited to have the chance to visit Nijmegen, as the town was a foc
 
 The Nijmegen bridge today looks much as it did in 1944. The iron bridge, over a mile long, spans the tranquil Waal river. While I was there, a few rusty artillery pieces along the river bank were the sole reminders of the tragic events that had transpired here. 
 
-Unfortunately I cannot track down the photo I took of the bridge so this page will be unillustrated. The town itself was lively as there was an open market that day. We enjoyed a walk along the waterfront and on a wooded hill above it. As my memories of events 6 years ago [Editor's note: as of 2005] are a little hazy, that's all I can tell you :)
+Unfortunately I cannot track down the photo I took of the bridge so this page will be unillustrated. The town itself was lively as there was an open market that day. We enjoyed a walk along the waterfront and on a wooded hill above it. As my memories of events 6 years ago are a little hazy, that's all I can tell you :)
 
 Last visit: June 1999
