@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="View in Plunkr I have a page with tabular data which I want to be able to sort without having to go back to the server. Also a nice-to-have would be &hellip;">
+  <meta name="description" content="I&rsquo;m still pretty new to Ruby. Hopefully one day I&rsquo;ll know enough to be able to look back and slap myself on the forehead for struggling &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,257 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/10/31/helper-method-generate-nested-tags-from-block/">Helper Method to Generate Nested Tags From Block</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-31T00:00:00-04:00" pubdate data-updated="true">Oct 31<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;m still pretty new to Ruby. Hopefully one day I&rsquo;ll know enough to be able to look back and slap myself on the forehead for struggling with these issues.</p>
+
+<p>Right now our views generate a menu from a simple set of links:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I&rsquo;d like to convert them to a drop-down menu that looks like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="x">&lt;div class=&quot;dropdown&quot;&gt;</span>
+</span><span class='line'><span class="x">  &lt;a class=&quot;dropdown-toggle&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;caret&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
+</span><span class='line'><span class="x">  &lt;ul class=&quot;dropdown-menu&quot;&gt;</span>
+</span><span class='line'><span class="x">    &lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x">&lt;/li&gt; </span>
+</span><span class='line'><span class="x">    &lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x">&lt;/li&gt;</span>
+</span><span class='line'><span class="x">  &lt;/ul&gt;</span>
+</span><span class='line'><span class="x">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I&rsquo;d like to minimize the changes to the markup as much as possible.  Initially I tried using a partial:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="x">&lt;!-- /shared/_dropdown.html.erb --&gt;</span>
+</span><span class='line'><span class="x">&lt;div class=&quot;dropdown&quot;&gt;</span>
+</span><span class='line'><span class="x">  &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;caret&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
+</span><span class='line'><span class="x">  &lt;ul class=&quot;dropdown-menu&quot;&gt;</span>
+</span><span class='line'><span class="x">    &lt;li&gt;</span>
+</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">    &lt;/li&gt;</span>
+</span><span class='line'><span class="x">  &lt;/ul&gt;</span>
+</span><span class='line'><span class="x">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The view would then include the partial:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="s2">&quot;shared/dropdown&quot;</span> <span class="k">do</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;bar, &quot;</span><span class="c1">#&quot; </span><span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However, this put both links inside a single <code>&lt;li&gt;</code> tag.  It looked fine with some CSS styles, but not generating the proper markup bothered me a bit.  So I tried using a helper method which should offer some more flexibility.  The helper method would be taking a block, decompose it into individual anchor tags and and wrap them in the proper markup.</p>
+
+<p>I started off with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">dropdown</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">content</span> <span class="o">=</span> <span class="n">capture</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <code>capture</code> helper method captures the block and stores it in a variable that I can process. More importantly, it also works for strings within the block.  This is <a href="http://blog.agile-pandas.com/2011/01/13/rails-capture-vs-with-output-buffer">an important distinction</a> between <code>capture</code> and a similar helper method, <code>with_output_buffer</code>.</p>
+
+<p>If the block is empty, there is nothing to do. Otherwise, I&rsquo;d turn them into links.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="n">content</span> <span class="o">=</span> <span class="n">capture</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">))</span> <span class="o">&amp;&amp;</span> <span class="n">anchors</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sr">/\n/</span><span class="p">)</span><span class="o">.</span><span class="n">reject</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="n">a</span><span class="o">.</span><span class="n">empty?</span> <span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="n">anchors</span><span class="o">.</span><span class="n">present?</span>
+</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To generate the top-level div is pretty straight-forward:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s1">&#39;dropdown&#39;</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If this were in a view, I could just merrily include other content_tags in the block argument.  However, in a helper mehod, the content is stored inside an output buffer.  I would have to use <code>concat</code> to add it to the output buffer.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown&quot;</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">concat</span> <span class="n">link_to</span><span class="p">(</span><span class="n">content_tag</span><span class="p">(</span><span class="ss">:i</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;caret&quot;</span><span class="p">),</span> <span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown-toggle&quot;</span><span class="p">,</span> <span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:toggle</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown&quot;</span> <span class="p">})</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next I wanted to add a <code>ul</code> tag and pass its content inside a block. I would also have to use <code>concat</code> as before.  In my initial attempt, I tried to do the following:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:ul</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s1">&#39;dropdown-menu&#39;</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This resulted in a syntax error. The <code>content_tag</code> is correctly treated as the first argument to <code>concat</code>.  However because of Ruby&rsquo;s order of precedence, the block is intepreted as belonging to <code>concat</code>, not <code>content_tag</code> as intended.  To be able to use <code>concat</code> with the <code>do..end</code> syntax, I would have to wrap <code>concat</code>&rsquo;s arguments inside parentheses:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">concat</span><span class="p">(</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:ul</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s1">&#39;dropdown-menu&#39;</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'><span class="k">end</span> <span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This looked quirky and not very ruby-ish.  Fortunately, it turned out that the other block syntax using curly braces has higher precedence than <code>do..end</code> (<a href="http://stackoverflow.com/questions/2122380/using-do-block-vs-brackets?lq=1">source</a>).  This let me eliminate the redundant parentheses:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:ul</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown-menu&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finally the links were added inside <code>li</code> tags:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">anchors</span><span class="o">.</span><span class="n">collect</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:li</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">html_safe</span><span class="p">)</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s the full method which turned out to be quite short:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">dropdown</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">(</span><span class="n">content</span> <span class="o">=</span> <span class="n">capture</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">))</span> <span class="o">&amp;&amp;</span> <span class="n">anchors</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sr">/\n/</span><span class="p">)</span><span class="o">.</span><span class="n">reject</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="n">a</span><span class="o">.</span><span class="n">blank?</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">anchors</span><span class="o">.</span><span class="n">present?</span>
+</span><span class='line'>    <span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown&quot;</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'>      <span class="n">concat</span> <span class="n">link_to</span><span class="p">(</span><span class="n">content_tag</span><span class="p">(</span><span class="ss">:i</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;icon-caret&quot;</span><span class="p">),</span> <span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown-toggle </span><span class="si">#{</span><span class="n">toggleClass</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:toggle</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown&quot;</span> <span class="p">})</span>
+</span><span class='line'>      <span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:ul</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown-menu&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="n">anchors</span><span class="o">.</span><span class="n">collect</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:li</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">html_safe</span><span class="p">)</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/10/23/bruins-took-down-sabres-in-costly-victory/">Bruins Took Down Sabres in Costly Victory</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-23T00:00:00-04:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It was game 1 of the World Series.  Yawn. Since our pickup game was canceled in part due to the aforementioned sport&mdash;eh recreational&mdash;event, it was going to be either a work night or an early night.  Fortunately, the Bruins came to the rescue by taking on the Sabres.  It&rsquo;s a good thing it was on NBCSports/Versus instead of NESN, where viewers would have been bombarded with a constant barrage of WS updates, even though the network TV announcers are downright annoying. The Bruins welcome the undefeated Sharks tomorrow at home, but tonight would be a Bear-Buffalo grudge match.</p>
+
+<p>The game was billed as a Wednesday Rivalry Game.  The Bruins&#8217; record was 5-2 and the Sabres 1-8-1, so these were clearly two teams headed in different directions. In fact, it hasn&rsquo;t been much of a rivalry since they last faced each other in the 2nd round of the 2009-10 playoffs.  The Sabres have not made the playoffs in the last two years.  They have the second worst record in the league.  The only other team with a similarly dismal record, the Broadstreet Bumblers, got their coach fired just 3 games into the season.  Nevertheless, the Sabres were one of the few teams with a winning record against the Bruins last season and, like the Canadiens, always seem to find ways to beat the Bruins.</p>
+
+<p>But it wouldn&rsquo;t happen tonight. Just from this game, it was clear why they&rsquo;ve been struggling.  They were terrible in their zone. They got beat to the puck.  They got beat in one-on-one battles. They weren&rsquo;t strong enough on the puck carrier to get it back. On offense, they weren&rsquo;t playing as a team.  Skilled guys tried to make plays by themselves.  Cody Hodgson tried to  take on 4 Bruins defenders on the power play&mdash;that doesn&rsquo;t work even in peewee hockey. Guys were taking themselves off-sides. They were a terribly disorganized team who seemed unfocused and unconfident. And then there was John Scott, a 6&#8217;8, 260-lb monster who looks vaguely like Liev Schreiber.  By NHL standards, he can barely skate (even though he&rsquo;s better than every normal person and probably most minor leaguers).  He&rsquo;s there to intimidate and even terrorize.  Just <a href="http://sports.yahoo.com/blogs/nhl-puck-daddy/john-scott-explains-why-attacked-poor-nearly-defenseless-202830725--nhl.html">ask Phil Kessel</a>.  Admittedly, in hockey, particularly &ldquo;old-time hockey&rdquo;, being intimidating can sometimes have as much of an impact as being skillful.</p>
+
+<p>The lone bright spot for the Sabres had to be Ryan Miller.  The Bruins had odd-man rushes all night.  Despite the lopsided score, it would have been much worse if it weren&rsquo;t for him. He made several outstanding saves that would have gotten by lesser goalies. The most sparkling save was on a tic-tac-toe play that started on one side of the net and ended on the other with with David Krejci catching the puck on his backhand and quickly flipping it with his forehand, only to be robbed by Miller&rsquo;s glove. Of the goals he gave up, three were perfect backdoor plays that he had no chance on. One he would have stopped if his stick hadn&rsquo;t been pushed out of position by a falling teammate.  Only the last one was somewhat saveable, but by then the game was out of reach.</p>
+
+<p>The Bruins&#8217; 5-2 victory was marred by an ugly incident. Long after he had released the puck, Loui Eriksson was blindsided by Scott with a hit to the head that spun him around and knocked him to the ground.  He struggled to get up but stumbled, clearly disoriented. This is a scary hit that was eerily reminiscent of the Matt Cooke hit on Marc Savard that ended Savard&rsquo;s promising career.  Eriksson was woozy and had to be helped off the ice. One can only hope that his long-term health isn&rsquo;t compromised.  He&rsquo;s undoubtedly lost for tomorrow night&rsquo;s game, if not longer.  This type of hits, where the &ldquo;head is the principal area of contact&rdquo;, is something the league has been trying to stamp out.  Already several multi-game suspensions have been handed out this season for similar plays.  It&rsquo;s quite expected that the league will come down hard on Scott.</p>
+
+<p>The Bruins responded with Adam McQuaid tackling Scott and wrestling him down.  Perhaps that was enough.  I&rsquo;m not one to demand that the Bruins respond to a dirty play with dirty plays of their own.  It&rsquo;s important to many hockey fans that the team stand up for their teammates.  After the Savard incident, the Bruins were criticized by some for their lack of response. Maybe Shawn Thornton will take on Scott the next time they meet (provided Scott is playing), but it wouldn&rsquo;t be good for Thornton given that Scott is in a totally different weight class.  Maybe someone will engage Steve Ott, another dirty Sabre (his sucker punch on Krejci went unnoticed by the refs).  I really think a more measured response is to make them pay on the scoreboard.  The Bruins did just that, by scoring a goal on the PP resulting from Scott&rsquo;s major penalty.  If Scott&rsquo;s action was a intended as &ldquo;message-sending&rdquo;, it already failed, because experience has shown that when faced with adversity, this team becomes stronger.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1243,123 +1494,6 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/03/08/you-played-with-who/">You Played With Who?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-08T00:00:00-05:00" pubdate data-updated="true">Mar 8<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Since 1999 I&rsquo;ve helped run a pickup hockey group at the Skating Club of Boston.  We&rsquo;re really not crazy about the rink there.  The ice is intended for figure skaters so it&rsquo;s soft and thus slow and quick to become choppy.  There is no glass above the boards so if you shoot high enough you&rsquo;d have to go fish for the puck under the stands. And since figure skaters generally stay in the middle of the ice, the edges are neglected and not well maintained; this is a problem if you try to &ldquo;wrap the puck around the board&rdquo;. Nevertheless, the location is great and we got to know the rink manager there quite well.  He gives us extra ice time and at the end of the year we try to return the favor by collecting to give him a nice X-mas check.</p>
-
-<p>Our group started off as a bunch of friends who played intramural hockey at MIT together.  Over the years, people have come and gone, but I&rsquo;m the only constant. Since I still put the roster together every week, year round, I&rsquo;ve gotten to know a bit about the people who have played with us. I guess I could say I&rsquo;m a sort of unofficial historian.  Because of our academic origin, we&rsquo;ve always had a strong contingent of people with advanced degrees.  We&rsquo;ve had several PhDs, MDs and lawyers.  A few are current professors at local universities.  But probably thanks to hockey&rsquo;s grassroots appeal, I&rsquo;m amazed at the diversity we&rsquo;ve had.  We&rsquo;ve had cops, EMTs, firefighters,  architects, engineers, scientists, pilots, artists, designers, writers, tech entrepreneurs, a maître d’hôtel, a restauranteur, a couple of finance guys, a bunch of software guys.  Indie singers and DJs have leaped over the boards.  Which is somewhat surprising because we obviously have no marketing department.  It&rsquo;s probably just word of mouth or pure serendipity that some of these guys end up playing with us.  Over the years, there are some note-worthy names who have laced up the skates with us. So far as I remember here are some.</p>
-
-<ul>
-<li>The 1999 World Junior Ice Dancing champion</li>
-<li>A Boston Police superintendent and head of the Bureau of Investigative Services</li>
-<li>The platform director at Twitter</li>
-<li>The founder of Colorkinetics (now Philips)</li>
-<li>The former CEO of Akamai</li>
-<li>The current general manager of the Red Sox. He&rsquo;s a quiet, good player who liked to be on defense. One of the complaints I remembered was that he didn&rsquo;t get off the ice very much.</li>
-<li>The bassist for the punk band NOFX.  He just showed up at the rink with a hockey bag. The other guys told him to wait to check with me whether he could play (we don&rsquo;t want too many skaters).  We had room so he stayed.  Turned out he was in town for a concert and, being a hockey enthusiast and player, he brought his gears along. Apparently he does this on road trips.  Not all of us have heard of NOFX, but those who did were quite excited when they found out.  He was only an average player, but does possess first-class enthusiasm.</li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/13/fix-external-lockout-for-american-standard-freedom-90-furnace/">Fix External Lockout for American Standard Freedom 90 Furnace</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-13T00:00:00-05:00" pubdate data-updated="true">Feb 13<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Some of my blogs are of the &ldquo;I&rsquo;d better write this down so I don&rsquo;t forget it&rdquo; variety.  This is one of them. This is intended primarily for future me, but it would be cool if anyone else finds it useful.</p>
-
-<p>The equipment in question is an American Standard (Trane) Freedom 90 gas furnace that&rsquo;s about 7 years old. Recently, in fact right in the middle of a <a href="http://www.weather.com/news/weather-winter/nemo-historical-ranks-20130212">record-setting snowstorm</a>, it started blowing only cold air.</p>
-
-<p>I followed the instructions in the manual to reset it (off-on-off-on in less than 30 seconds), to no avail. The burners would get ignited, then seemed to flame out.  The control board then tried to restart the process.  This would go on 5 times or so.  After that the blower fan would be going, but only ice-cold air was coming out.  The red light on the control board flashed twice in roughly 3-second intervals.  According to the manual, this indicated an &ldquo;External Lockout (retries or recycles exceeded)&rdquo; error.</p>
-
-<p>Some online forums (google &ldquo;external lockout&rdquo;) implicated the flame sensor. Apparently it needs to be cleaned about once a year.  I&rsquo;ve never seen it much less touched it, so it&rsquo;s highly suspect.  Before working inside the furnace, it goes without saying that you must first turn down the thermostat and shut off power to the furnace. To get to it, remove the two panels on the front of the furnace starting with the bottom panel.</p>
-
-<p>The burner unit is in an enclosed box at the top of the cabinet. There&rsquo;s a round viewport on the front bezel where you can observe the burners in action (provided they are running).</p>
-
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/furnace-repair/DSC_5005.jpg" alt="DSC_5005" width="334" height="500" /></p>
-
-<p>Remove the front door with an 8mm wrench. It hinges at the top and can be tricky to remove.</p>
-
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/furnace-repair/DSC_4999.jpg" alt="DSC_4999" width="500" height="500" /></p>
-
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/furnace-repair/DSC_4996.jpg" alt="DSC_4996" width="334" height="500" /></p>
-
-<p>Locate the flame sensor.</p>
-
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/furnace-repair/DSC_4995.jpg" alt="DSC_4995" width="500" height="334" /></p>
-
-<p>Remove it with a socket screwdriver.</p>
-
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/furnace-repair/DSC_4993.jpg" alt="DSC_4993" width="500" height="334" /></p>
-
-<p>Thoroughly clean the sensor&rsquo;s rod and contact with sandpaper. I&rsquo;d use 150-grit as well as a finer sandpaper.</p>
-
-<p>Replace the flame sensor. To test it out, you should replace just the burner door and the bottom panel of the cabinet; there&rsquo;s a door switch that prevents operation unless the panel is in place (or it is manually depressed). You can view the burners through the viewport.  Turn on the power and turn up the thermostat to call for heat.</p>
-
-<p>In my case, the first attempt wasn&rsquo;t successful.  Before calling for service, I decided clean the flame sensor again even more thoroughly.  There was some rust on the contact that I made sure to remove with a fine-grit sandpaper. This must have done the trick.</p>
-
-<p>Note to self: Clean the air filter while you&rsquo;re at it</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -1413,7 +1547,7 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>38</em>
+        <a href="/blog/categories/technology">technology</a> <em>39</em>
       </li>
     
      
@@ -1428,7 +1562,7 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
     
      
       <li data-category="other">
-        <a href="/blog/categories/other">other</a> <em>1</em>
+        <a href="/blog/categories/other">other</a> <em>2</em>
       </li>
     
   </ul>
@@ -1451,6 +1585,14 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/02/07/my-git-cheat-sheet/">My Git Cheat Sheet</a>
       </li>
     
@@ -1460,14 +1602,6 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
     
       <li class="post">
         <a href="/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/">Using Angular Root Scope for Communication Between Controllers</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/23/updating-sql-server-primary-key/">Updating SQL Server Primary Key</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/19/top-10-archive/">Top 10 Archive</a>
       </li>
     
   </ul>

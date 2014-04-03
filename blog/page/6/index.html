@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="In my Visual Studio project, I want to run an external executable, SQLMetal, in a build event.  The only problem is that the location of the &hellip;">
+  <meta name="description" content="This scenario is probably unusual but it did happen to me. I had a view named Foo.aspx and partial view named Foo.ascx. The view rendered the partial &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,145 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/03/stack-overflow-exception-when-mvc-view-and-partial-view-have-the-same-name/">Stack Overflow Exception When MVC View and Partial View Have the Same Name</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-03T00:00:00-04:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This scenario is probably unusual but it did happen to me. I had a view named Foo.aspx and partial view named Foo.ascx. The view rendered the partial as follows:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="p">&lt;%</span> <span class="n">Html</span><span class="p">.</span><span class="n">RenderPartial</span><span class="p">(</span><span class="s">&quot;Foo&quot;</span><span class="p">);</span> <span class="p">%&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When attempting to load the view, ASP.NET spins for a while then eventually throws a stack overflow exception. Apparently when executing the above statement, MVC searches for files named &ldquo;Foo&rdquo;, including the view itself. It must have attempted to render the view and gone into a recursive loop.</p>
+
+<p>The quick fix is to give the partial view some other name, or explicitly provide its location in the render statement:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="p">&lt;%</span> <span class="n">Html</span><span class="p">.</span><span class="n">RenderPartial</span><span class="p">(</span><span class="s">&quot;~/Views/Home/Foo.ascx&quot;</span><span class="p">);</span> <span class="p">%&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/03/mapping-pagedlist-with-automapper/">Mapping PagedList With AutoMapper</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-03T00:00:00-04:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;m using an implementation of PagedList based on that <a href="http://wekeroad.com/2007/12/10/aspnet-mvc-pagedlistt/">given by Rob Conery</a>.</p>
+
+<p>I want to convert a paged list of business objects to a paged list of view model objects with <a href="http://automapper.org/">AutoMapper</a>. In order for AutoMapper to work in this case, it needs to know how to convert a paged list.  This can be done with a <a href="https://github.com/AutoMapper/AutoMapper/wiki/Custom-type-converters">custom type converter</a>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="k">public</span> <span class="k">class</span> <span class="nc">PagedListConverter</span> <span class="p">:</span> <span class="n">ITypeConverter</span><span class="p">&lt;</span><span class="n">PagedList</span><span class="p">&lt;</span><span class="n">Person</span><span class="p">&gt;,</span> <span class="n">PagedList</span><span class="p">&lt;</span><span class="n">PersonViewModel</span><span class="p">&gt;&gt;</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>   <span class="k">public</span> <span class="n">PagedList</span><span class="p">&lt;</span><span class="n">PersonViewModel</span><span class="p">&gt;</span> <span class="n">Convert</span><span class="p">(</span><span class="n">ResolutionContext</span> <span class="n">context</span><span class="p">)</span>
+</span><span class='line'>   <span class="p">{</span>
+</span><span class='line'>      <span class="kt">var</span> <span class="n">models</span> <span class="p">=</span> <span class="p">(</span><span class="n">PagedList</span><span class="p">&lt;</span><span class="n">Person</span><span class="p">&gt;)</span><span class="n">context</span><span class="p">.</span><span class="n">SourceValue</span><span class="p">;</span>
+</span><span class='line'>      <span class="kt">var</span> <span class="n">viewModels</span> <span class="p">=</span> <span class="n">models</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="n">Mapper</span><span class="p">.</span><span class="n">Map</span><span class="p">&lt;</span><span class="n">Person</span><span class="p">,</span> <span class="n">PersonViewModel</span><span class="p">&gt;(</span><span class="n">p</span><span class="p">)).</span><span class="n">ToList</span><span class="p">();</span>
+</span><span class='line'>      <span class="k">return</span> <span class="k">new</span> <span class="n">PagedList</span><span class="p">&lt;</span><span class="n">PersonViewModel</span><span class="p">&gt;(</span><span class="n">viewModels</span><span class="p">,</span> <span class="n">models</span><span class="p">.</span><span class="n">PageIndex</span><span class="p">,</span> <span class="n">models</span><span class="p">.</span><span class="n">PageSize</span><span class="p">);</span>
+</span><span class='line'>   <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To create the mappings:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="n">Mapper</span><span class="p">.</span><span class="n">CreateMap</span><span class="p">&lt;</span><span class="n">Person</span><span class="p">,</span> <span class="n">PersonViewModel</span><span class="p">&gt;();</span>
+</span><span class='line'><span class="n">Mapper</span>
+</span><span class='line'>   <span class="p">.</span><span class="n">CreateMap</span><span class="p">&lt;</span><span class="n">PagedList</span><span class="p">&lt;</span><span class="n">Person</span><span class="p">&gt;,</span> <span class="n">PagedList</span><span class="p">&lt;</span><span class="n">PersonViewModel</span><span class="p">&gt;&gt;()</span>
+</span><span class='line'>   <span class="p">.</span><span class="n">ConvertUsing</span><span class="p">&lt;</span><span class="n">PagedListConverter</span><span class="p">&gt;();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And to perform the mappings with some sample data:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">persons</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Person</span><span class="p">&gt;</span> <span class="p">{</span>
+</span><span class='line'>   <span class="k">new</span> <span class="n">Person</span> <span class="p">{</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Luke Skywalker&quot;</span><span class="p">,</span> <span class="n">Phone</span> <span class="p">=</span> <span class="s">&quot;2947-3479&quot;</span> <span class="p">},</span>
+</span><span class='line'>   <span class="k">new</span> <span class="n">Person</span> <span class="p">{</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Darth Vader&quot;</span><span class="p">,</span> <span class="n">Phone</span> <span class="p">=</span> <span class="s">&quot;2038-3424&quot;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="kt">var</span> <span class="n">inputList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PagedList</span><span class="p">&lt;</span><span class="n">Person</span><span class="p">&gt;(</span><span class="n">persons</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
+</span><span class='line'><span class="kt">var</span> <span class="n">outputList</span> <span class="p">=</span> <span class="n">Mapper</span><span class="p">.</span><span class="n">Map</span><span class="p">&lt;</span><span class="n">PagedList</span><span class="p">&lt;</span><span class="n">Person</span><span class="p">&gt;,</span> <span class="n">PagedList</span><span class="p">&lt;</span><span class="n">PersonViewModel</span><span class="p">&gt;&gt;(</span><span class="n">inputList</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -745,144 +884,6 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/12/21/visual-studio-line-number-macros/">Visual Studio Line Number Macros</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-21T00:00:00-05:00" pubdate data-updated="true">Dec 21<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In Visual Studio, it&rsquo;s easy enough to turn on and off line numbers.  You&rsquo;ll have to select Tools > Options > Text Editor, expand the language of choice, select General, then toggle Line numbers under the Display section.  This can get tedious if you want to be able to show and hide line numbers at will.  To turn this process into a single click, you can record custom macros to show and hide line numbers.  However, you may not realize that the macros to do just that are already included with Visual Studio. Further, these macros will turn on and off line numbers for a number of editor types, including C#, VB, HTML and plain text.</p>
-
-<p>For easy access, you can put frequently used macros into a custom toolbar. This can be done as follows:</p>
-
-<ul>
-<li>Create a new toolbar by right-clicking on menu bar and selecting Customize</li>
-</ul>
-
-
-<p><img title="macro-4" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-41.png" width="535" height="490" /></p>
-
-<ul>
-<li>Select New and enter a name</li>
-</ul>
-
-
-<p><img title="macro-2" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-2.png" width="326" height="133" /></p>
-
-<ul>
-<li>On the newly created toolbar, which is empty at the moment, open the drop-down menu and select Add or Remove Buttons > Customize</li>
-<li>On the Customize dialog, select Add Command</li>
-<li>On the Add Command dialog, select Macros in the Categories pane.  In the Commands pane, select Macros.Samples.Utilities.TurnOnLineNumbers</li>
-</ul>
-
-
-<p><img title="macro-3" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-3.png" width="585" height="370" /></p>
-
-<ul>
-<li>Do the same to add the TurnOffLineNumbers macro, or any other useful macro</li>
-<li>Back on the Add Command dialog, select Modify Selection to change the macro&rsquo;s display name to something more readable</li>
-</ul>
-
-
-<p><img title="macro-4" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-41.png" width="535" height="490" /></p>
-
-<ul>
-<li>The macros are now added to the new toolbar</li>
-</ul>
-
-
-<p><img title="macro-5" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-5.png" width="572" height="67" /></p>
-
-<p>If you&rsquo;re interested in viewing or modifying the sample macros that come with Visual Studio, open the Macros editor by selecting Tools > Macros > Macros IDE.  If you&rsquo;ve written VBA macros for Excel or Word, this should look familiar. The Samples project contains modules for a number of useful macros.  The line number macros above are defined in the Utilities module.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/12/13/msbuild-project-directory/">MSBuild Project Directory</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-13T00:00:00-05:00" pubdate data-updated="true">Dec 13<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>We&rsquo;re using MSBuild in <a href="http://hudson-ci.org/">Hudson</a> as part of our continuous integration process.  We put the MSBuild scripts in the same directory as the Visual Studio solution file. Everything has been working well until until we decided, as an experiment, to put the MSBuild scripts in a separate directory from the solution.  Then the build process started to fail with error MSB3202, &ldquo;the project file was not found&rdquo;.</p>
-
-<p>By using MSBuild&rsquo;s  &#8221;/verbosity:diagnostic&#8221; flag, we were able to look at the list of properties that MSBuild was using.  In particular, there was a property named MSBuildProjectDirectory which was set to the same directory as the scripts.  Our scripts use relative path to locate the projects; i.e.,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;ItemGroup&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;Projects</span> <span class="na">Include=</span><span class="s">&quot;**\*.csproj&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'><span class="nt">&lt;/ItemGroup&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It&rsquo;s no surprise then that because the MSBuildProjectDirectory was now pointing to the wrong directory, the projects could not be found.</p>
-
-<p>Because MSBuildProjectDirectory is a reserved property, it can&rsquo;t be modified. We need another way to locate the projects by explicitly specifying the project directories.  Hudson provides a few options for retrieving the project directory.  For example, we can use the work space environment variable:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;ItemGroup&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;Projects</span> <span class="na">Include=</span><span class="s">&quot;$(WORKSPACE)\**\*.csproj&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'><span class="nt">&lt;/ItemGroup&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -936,7 +937,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>38</em>
+        <a href="/blog/categories/technology">technology</a> <em>39</em>
       </li>
     
      
@@ -951,7 +952,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     
      
       <li data-category="other">
-        <a href="/blog/categories/other">other</a> <em>1</em>
+        <a href="/blog/categories/other">other</a> <em>2</em>
       </li>
     
   </ul>
@@ -974,6 +975,14 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/02/07/my-git-cheat-sheet/">My Git Cheat Sheet</a>
       </li>
     
@@ -983,14 +992,6 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     
       <li class="post">
         <a href="/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/">Using Angular Root Scope for Communication Between Controllers</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/23/updating-sql-server-primary-key/">Updating SQL Server Primary Key</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/19/top-10-archive/">Top 10 Archive</a>
       </li>
     
   </ul>

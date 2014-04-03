@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Simple tasks with Grunt - Yen's Blog</title>
+  <meta name="author" content="Yen Tran">
+
+  
+  <meta name="description" content="Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&rsquo;re &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dinhyen.github.io/blog/2014/03/03/simple-tasks-with-grunt">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Yen's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="/stylesheets/darkbox.css" rel="stylesheet" type="text/css">
+<script src="/javascripts/darkbox.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24469490-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Yen's Blog</a></h1>
+  
+    <h2>Lens, Wheels, Skates, Keyboard</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dinhyen.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/travel">Travel</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Simple Tasks With Grunt</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-03T15:16:00-05:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&rsquo;re working with conventional server-side platforms.  Unfortunately, when it comes to JavaScripts and CSS, automation tools are harder to find. That is, until Grunt comes along (following Node, which turned upside down the whole idea of server vs client side in the first place).</p>
+
+<p>As a self-described &ldquo;task runner&rdquo;, Grunt is powerful and pleasantly approachable.  Its succinctness makes it a joy to use.  This carries over into the Grunt documentation, which is really excellent.  Inspired by the <a href="http://gruntjs.com/sample-gruntfile">Sample Gruntfile tutorial</a>, I&rsquo;d like to walk through my own <code>Gruntfile</code> created for a <a href="https://github.com/dinhyen/darkbox">small JavaScript library</a>.  The goal is to automate a typical process of building the app, from generating CSS from Sass, aggregating various source files into a single file, and minifying the result.</p>
+
+<p>Once you <a href="http://gruntjs.com/installing-grunt">have Grunt installed</a> using the Node Package Manager, you will need a <code>package.json</code> file, just as for other Node utilities.  The quickest way to create a <code>package.json</code> file is to simply run <code>npm init</code> which generates the file after a series of questions.</p>
+
+<p>The following libraries will be used:</p>
+
+<ul>
+<li><a href="https://github.com/gruntjs/grunt-contrib-compass">grunt-contrib-compass</a>: generates CSS from Sass</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat</a>: combines various files into a single file</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-cssmin">grunt-contrib-cssmin</a>: minifies CSS</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-jshint">grunt-contrib-jshint</a>: combs through JavaScript and flags errors or usage issues</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify</a>: mangles and minifies JavaScript</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch</a>: performs tasks whenever a file changes</li>
+</ul>
+
+
+<p>The recommended approach, as stated at the beginning of the documentation for each plugin, is to run <code>npm install grunt-contrib-xxx --save-dev</code>, which has the dual benefit of installing the plugin and also adding a reference to it in <code>package.json</code>.</p>
+
+<p>Besides <code>package.json</code>, the only other file you need is <code>Gruntfile</code>, in which you define and configure the tasks to run. Configuration options are specified as the argument to <code>grunt.initConfig</code>.</p>
+
+<p>The first line reads in <code>package.json</code> and turns it into an object.  In this case, I&rsquo;m interested in product name, but it can provide <a href="http://package.json.nodejitsu.com">many other useful properties</a>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>All <code>Gruntfile</code> tasks share the <a href="http://gruntjs.com/configuring-tasks">same basic syntax</a> for specifying options, input and output.  Each task&rsquo;s configuration block is named after the plugin; for example, the configuration block for the <code>grunt-contrib-uglify</code> is simply <code>uglify</code>.  Each task can have arbitrary targets.  You&rsquo;ll probably see a &ldquo;test&rdquo; target for testing or a &ldquo;dist&rdquo; target for building a distribution.  Since I want to build CSS and JavaScript, here I have 2 targets, &ldquo;scripts&rdquo; and &ldquo;stylesheets&rdquo;.  When there are multiple targets in a task, each target can be executed directly.  For example, <code>grunt concat:scripts</code> runs just the &ldquo;scripts&rdquo; target.  If you don&rsquo;t provide a target, then all targets would be run in order.</p>
+
+<p>The Compass task generates CSS from Sass source.  Of course, Compass <a href="http://compass-style.org/install">must be installed</a> first.  The following options simply instruct Compass to process Sass files in the directory &ldquo;sass&rdquo; and generate the corresponding CSS files in the directory &ldquo;css&rdquo;.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">compass</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">sassDir</span><span class="o">:</span> <span class="s1">&#39;sass&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">cssDir</span><span class="o">:</span> <span class="s1">&#39;css&#39;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When developing, it would be nice to be able to preview changes made to the Sass source.  This is where the watch plugin comes in.  In the simplest use case it simply detects that one or more files have been changed and then runs certain tasks.  The following options allow me to re-generate CSS each time a Sass file is modified.  Start watching by typing <code>grunt watch</code> at the command prompt.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">files</span><span class="o">:</span> <span class="s1">&#39;**/*.scss&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;compass&#39;</span><span class="p">]</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Typically JavaScript and CSS source is distributed over multiple files.  In production you&rsquo;d want to combine the various source files into a single file for performance reason.  This can be done with the concat plugin.  For the source, I&rsquo;m using a globbing pattern for simplicity; <code>src/**/*.js</code> means all <code>.js</code> files in the <code>src</code> directory and any of its sub-directories.  The files would be combined in alphabetical order. An alternative would be to specify an array of individual files.  While this lets you control the ordering of files, it becomes unwieldy for a large number of files. Of course, there are <a href="http://gruntjs.com/configuring-tasks#globbing-patterns">many ways</a> to skin the cat.  For the output, I&rsquo;m using the project&rsquo;s name which comes from <code>package.json</code>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">concat</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">separator</span><span class="o">:</span> <span class="s1">&#39;;&#39;</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;src/**/*.js&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.js&#39;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;css/**/*.css&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.css&#39;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The cssmin plugin provides CSS minification.  The source should be the output of the concat stage.  Note the variable substitution syntax.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">cssmin</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&lt;%= concat.stylesheets.dest %&gt;&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.min.css&#39;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The uglify plugin is the JavaScript equivalent of cssmin.  It also mangles variable names which reduces file size further at the expense of readability.  Since mangling pretty much makes your JavaScript indecipherable and impossible to debug, you can also provide a <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source map</a> which lets you view the original, non-uglified source when debugging.  The uglify plugin have all these and sundry options.  Here it also inserts a comment with some basic information at the top of the file.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">uglify</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">banner</span><span class="o">:</span> <span class="s1">&#39;/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today(&quot;yyyy-mm-dd&quot;) %&gt; */\n&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">sourceMap</span><span class="o">:</span> <span class="kc">true</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&lt;%= concat.scripts.dest %&gt;&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.min.js&#39;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The jshint configuration block just sets some <a href="http://www.jshint.com/docs/options">options for jshint</a>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">jshint</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">curly</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">eqeqeq</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">immed</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">latedef</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">newcap</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">noarg</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">sub</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">undef</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">unused</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">boss</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">eqnull</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">node</span><span class="o">:</span> <span class="kc">true</span>
+</span><span class='line'>  <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finally register a default task and a useful task.  Tasks would be executed in the order specified.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;jshint&#39;</span><span class="p">,</span> <span class="s1">&#39;compass&#39;</span><span class="p">,</span> <span class="s1">&#39;concat&#39;</span><span class="p">,</span> <span class="s1">&#39;cssmin&#39;</span><span class="p">,</span> <span class="s1">&#39;uglify&#39;</span><span class="p">]);</span>
+</span><span class='line'><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;sassify&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;compass&#39;</span><span class="p">]);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To run a task, simply specify the task&rsquo;s name as a argument to <code>grunt</code> on the command line; e.g., <code>grunt jshint</code>.  Simply typing <code>grunt</code> runs the default task.  Below is the output for running the default task; even for this small set of tasks, running them manually or maintaining a script without Grunt would have been a tedious chore.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Running</span> <span class="s2">&quot;jshint:scripts&quot;</span> <span class="p">(</span><span class="nx">jshint</span><span class="p">)</span> <span class="nx">task</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="mi">2</span> <span class="nx">files</span> <span class="nx">lint</span> <span class="nx">free</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;compass:stylesheets&quot;</span> <span class="p">(</span><span class="nx">compass</span><span class="p">)</span> <span class="nx">task</span>
+</span><span class='line'><span class="nx">unchanged</span> <span class="nx">sass</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">scss</span>
+</span><span class='line'><span class="nx">unchanged</span> <span class="nx">sass</span><span class="o">/</span><span class="nx">mixins</span><span class="p">.</span><span class="nx">scss</span>
+</span><span class='line'><span class="nx">unchanged</span> <span class="nx">sass</span><span class="o">/</span><span class="nx">screen</span><span class="p">.</span><span class="nx">scss</span>
+</span><span class='line'><span class="nx">Compilation</span> <span class="nx">took</span> <span class="mf">0.012</span><span class="nx">s</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;concat:scripts&quot;</span> <span class="p">(</span><span class="nx">concat</span><span class="p">)</span> <span class="nx">task</span>
+</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">js</span> <span class="nx">created</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;concat:stylesheets&quot;</span> <span class="p">(</span><span class="nx">concat</span><span class="p">)</span> <span class="nx">task</span>
+</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">css</span> <span class="nx">created</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;cssmin:stylesheets&quot;</span> <span class="p">(</span><span class="nx">cssmin</span><span class="p">)</span> <span class="nx">task</span>
+</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">css</span> <span class="nx">created</span><span class="o">:</span> <span class="mf">3.9</span> <span class="nx">kB</span> <span class="err">→</span> <span class="mf">2.78</span> <span class="nx">kB</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;uglify:scripts&quot;</span> <span class="p">(</span><span class="nx">uglify</span><span class="p">)</span> <span class="nx">task</span>
+</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">map</span> <span class="nx">created</span> <span class="p">(</span><span class="nx">source</span> <span class="nx">map</span><span class="p">).</span>
+</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">js</span> <span class="nx">created</span><span class="o">:</span> <span class="mf">5.45</span> <span class="nx">kB</span> <span class="err">→</span> <span class="mf">2.51</span> <span class="nx">kB</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Done</span><span class="p">,</span> <span class="nx">without</span> <span class="nx">errors</span><span class="p">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Below is the entire <code>Gruntfile</code>.  Happy grunting.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+</span><span class='line'>    <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">compass</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">sassDir</span><span class="o">:</span> <span class="s1">&#39;sass&#39;</span><span class="p">,</span>
+</span><span class='line'>          <span class="nx">cssDir</span><span class="o">:</span> <span class="s1">&#39;css&#39;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">concat</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">separator</span><span class="o">:</span> <span class="s1">&#39;;&#39;</span>
+</span><span class='line'>        <span class="p">},</span>
+</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;src/**/*.js&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.js&#39;</span>
+</span><span class='line'>      <span class="p">},</span>
+</span><span class='line'>      <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;css/**/*.css&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.css&#39;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">cssmin</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&lt;%= concat.stylesheets.dest %&gt;&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.min.css&#39;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">jshint</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">curly</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">eqeqeq</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">immed</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">latedef</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">newcap</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">noarg</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">sub</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">undef</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">unused</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">boss</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">eqnull</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">node</span><span class="o">:</span> <span class="kc">true</span>
+</span><span class='line'>      <span class="p">},</span>
+</span><span class='line'>      <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Gruntfile.js&#39;</span><span class="p">,</span> <span class="s1">&#39;src/*.js&#39;</span><span class="p">]</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">uglify</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">banner</span><span class="o">:</span> <span class="s1">&#39;/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today(&quot;yyyy-mm-dd&quot;) %&gt; */\n&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">sourceMap</span><span class="o">:</span> <span class="kc">true</span>
+</span><span class='line'>      <span class="p">},</span>
+</span><span class='line'>      <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&lt;%= concat.scripts.dest %&gt;&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.min.js&#39;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">files</span><span class="o">:</span> <span class="s1">&#39;**/*.scss&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;compass&#39;</span><span class="p">]</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-compass&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-concat&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-cssmin&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-jshint&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-uglify&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-watch&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;jshint&#39;</span><span class="p">,</span> <span class="s1">&#39;compass&#39;</span><span class="p">,</span> <span class="s1">&#39;concat&#39;</span><span class="p">,</span> <span class="s1">&#39;cssmin&#39;</span><span class="p">,</span> <span class="s1">&#39;uglify&#39;</span><span class="p">]);</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;sassify&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;compass&#39;</span><span class="p">]);</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Yen Tran</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-03T15:16:00-05:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/technology/'>technology</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dinhyen.github.io/blog/2014/03/03/simple-tasks-with-grunt/" data-via="dinhyen" data-counturl="http://dinhyen.github.io/blog/2014/03/03/simple-tasks-with-grunt/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/" title="Previous Post: Quelques impressions sur la culture française">&laquo; Quelques impressions sur la culture française</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Categories</h1>
+  <ul id="categories">
+    
+     
+      <li data-category="Photoshop">
+        <a href="/blog/categories/photoshop">Photoshop</a> <em>2</em>
+      </li>
+    
+     
+      <li data-category="travel">
+        <a href="/blog/categories/travel">travel</a> <em>20</em>
+      </li>
+    
+     
+      <li data-category="outdoors">
+        <a href="/blog/categories/outdoors">outdoors</a> <em>9</em>
+      </li>
+    
+     
+      <li data-category="photography">
+        <a href="/blog/categories/photography">photography</a> <em>20</em>
+      </li>
+    
+     
+      <li data-category="hockey">
+        <a href="/blog/categories/hockey">hockey</a> <em>11</em>
+      </li>
+    
+     
+      <li data-category="city">
+        <a href="/blog/categories/city">city</a> <em>6</em>
+      </li>
+    
+     
+      <li data-category="drawing">
+        <a href="/blog/categories/drawing">drawing</a> <em>1</em>
+      </li>
+    
+     
+      <li data-category="technology">
+        <a href="/blog/categories/technology">technology</a> <em>39</em>
+      </li>
+    
+     
+      <li data-category="review">
+        <a href="/blog/categories/review">review</a> <em>25</em>
+      </li>
+    
+     
+      <li data-category="hiking">
+        <a href="/blog/categories/hiking">hiking</a> <em>9</em>
+      </li>
+    
+     
+      <li data-category="other">
+        <a href="/blog/categories/other">other</a> <em>2</em>
+      </li>
+    
+  </ul>
+</section>
+<script type="text/javascript">
+  $(function() {
+    var categories = [];
+    $('[data-category]').each(function() {
+      categories.push(this);
+    });
+    categories.sort(function (a, b) {
+      return a.attributes['data-category'].value.toLowerCase() <= b.attributes['data-category'].value.toLowerCase()
+            ? -1 : 1;
+    });
+    $('#categories').html(categories);
+  });
+</script>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/07/my-git-cheat-sheet/">My Git Cheat Sheet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/07/sports-i-would-watch/">Sports I Would Watch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/">Using Angular Root Scope for Communication Between Controllers</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Yen Tran -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

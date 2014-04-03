@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="There are lots of great Git guides out there. This is intended simply to be a reference for me during those dark times when I can&rsquo;t remember &hellip;">
+  <meta name="description" content="Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&rsquo;re &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,478 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-03T15:16:00-05:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&rsquo;re working with conventional server-side platforms.  Unfortunately, when it comes to JavaScripts and CSS, automation tools are harder to find. That is, until Grunt comes along (following Node, which turned upside down the whole idea of server vs client side in the first place).</p>
+
+<p>As a self-described &ldquo;task runner&rdquo;, Grunt is powerful and pleasantly approachable.  Its succinctness makes it a joy to use.  This carries over into the Grunt documentation, which is really excellent.  Inspired by the <a href="http://gruntjs.com/sample-gruntfile">Sample Gruntfile tutorial</a>, I&rsquo;d like to walk through my own <code>Gruntfile</code> created for a <a href="https://github.com/dinhyen/darkbox">small JavaScript library</a>.  The goal is to automate a typical process of building the app, from generating CSS from Sass, aggregating various source files into a single file, and minifying the result.</p>
+
+<p>Once you <a href="http://gruntjs.com/installing-grunt">have Grunt installed</a> using the Node Package Manager, you will need a <code>package.json</code> file, just as for other Node utilities.  The quickest way to create a <code>package.json</code> file is to simply run <code>npm init</code> which generates the file after a series of questions.</p>
+
+<p>The following libraries will be used:</p>
+
+<ul>
+<li><a href="https://github.com/gruntjs/grunt-contrib-compass">grunt-contrib-compass</a>: generates CSS from Sass</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat</a>: combines various files into a single file</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-cssmin">grunt-contrib-cssmin</a>: minifies CSS</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-jshint">grunt-contrib-jshint</a>: combs through JavaScript and flags errors or usage issues</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify</a>: mangles and minifies JavaScript</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch</a>: performs tasks whenever a file changes</li>
+</ul>
+
+
+<p>The recommended approach, as stated at the beginning of the documentation for each plugin, is to run <code>npm install grunt-contrib-xxx --save-dev</code>, which has the dual benefit of installing the plugin and also adding a reference to it in <code>package.json</code>.</p>
+
+<p>Besides <code>package.json</code>, the only other file you need is <code>Gruntfile</code>, in which you define and configure the tasks to run. Configuration options are specified as the argument to <code>grunt.initConfig</code>.</p>
+
+<p>The first line reads in <code>package.json</code> and turns it into an object.  In this case, I&rsquo;m interested in product name, but it can provide <a href="http://package.json.nodejitsu.com">many other useful properties</a>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>All <code>Gruntfile</code> tasks share the <a href="http://gruntjs.com/configuring-tasks">same basic syntax</a> for specifying options, input and output.  Each task&rsquo;s configuration block is named after the plugin; for example, the configuration block for the <code>grunt-contrib-uglify</code> is simply <code>uglify</code>.  Each task can have arbitrary targets.  You&rsquo;ll probably see a &ldquo;test&rdquo; target for testing or a &ldquo;dist&rdquo; target for building a distribution.  Since I want to build CSS and JavaScript, here I have 2 targets, &ldquo;scripts&rdquo; and &ldquo;stylesheets&rdquo;.  When there are multiple targets in a task, each target can be executed directly.  For example, <code>grunt concat:scripts</code> runs just the &ldquo;scripts&rdquo; target.  If you don&rsquo;t provide a target, then all targets would be run in order.</p>
+
+<p>The Compass task generates CSS from Sass source.  Of course, Compass <a href="http://compass-style.org/install">must be installed</a> first.  The following options simply instruct Compass to process Sass files in the directory &ldquo;sass&rdquo; and generate the corresponding CSS files in the directory &ldquo;css&rdquo;.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">compass</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">sassDir</span><span class="o">:</span> <span class="s1">&#39;sass&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">cssDir</span><span class="o">:</span> <span class="s1">&#39;css&#39;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When developing, it would be nice to be able to preview changes made to the Sass source.  This is where the watch plugin comes in.  In the simplest use case it simply detects that one or more files have been changed and then runs certain tasks.  The following options allow me to re-generate CSS each time a Sass file is modified.  Start watching by typing <code>grunt watch</code> at the command prompt.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">files</span><span class="o">:</span> <span class="s1">&#39;**/*.scss&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;compass&#39;</span><span class="p">]</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Typically JavaScript and CSS source is distributed over multiple files.  In production you&rsquo;d want to combine the various source files into a single file for performance reason.  This can be done with the concat plugin.  For the source, I&rsquo;m using a globbing pattern for simplicity; <code>src/**/*.js</code> means all <code>.js</code> files in the <code>src</code> directory and any of its sub-directories.  The files would be combined in alphabetical order. An alternative would be to specify an array of individual files.  While this lets you control the ordering of files, it becomes unwieldy for a large number of files. Of course, there are <a href="http://gruntjs.com/configuring-tasks#globbing-patterns">many ways</a> to skin the cat.  For the output, I&rsquo;m using the project&rsquo;s name which comes from <code>package.json</code>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">concat</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">separator</span><span class="o">:</span> <span class="s1">&#39;;&#39;</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;src/**/*.js&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.js&#39;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;css/**/*.css&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.css&#39;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The cssmin plugin provides CSS minification.  The source should be the output of the concat stage.  Note the variable substitution syntax.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">cssmin</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&lt;%= concat.stylesheets.dest %&gt;&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.min.css&#39;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The uglify plugin is the JavaScript equivalent of cssmin.  It also mangles variable names which reduces file size further at the expense of readability.  Since mangling pretty much makes your JavaScript indecipherable and impossible to debug, you can also provide a <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source map</a> which lets you view the original, non-uglified source when debugging.  The uglify plugin have all these and sundry options.  Here it also inserts a comment with some basic information at the top of the file.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">uglify</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">banner</span><span class="o">:</span> <span class="s1">&#39;/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today(&quot;yyyy-mm-dd&quot;) %&gt; */\n&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">sourceMap</span><span class="o">:</span> <span class="kc">true</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&lt;%= concat.scripts.dest %&gt;&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.min.js&#39;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The jshint configuration block just sets some <a href="http://www.jshint.com/docs/options">options for jshint</a>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">jshint</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">curly</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">eqeqeq</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">immed</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">latedef</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">newcap</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">noarg</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">sub</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">undef</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">unused</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">boss</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">eqnull</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">node</span><span class="o">:</span> <span class="kc">true</span>
+</span><span class='line'>  <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finally register a default task and a useful task.  Tasks would be executed in the order specified.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;jshint&#39;</span><span class="p">,</span> <span class="s1">&#39;compass&#39;</span><span class="p">,</span> <span class="s1">&#39;concat&#39;</span><span class="p">,</span> <span class="s1">&#39;cssmin&#39;</span><span class="p">,</span> <span class="s1">&#39;uglify&#39;</span><span class="p">]);</span>
+</span><span class='line'><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;sassify&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;compass&#39;</span><span class="p">]);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To run a task, simply specify the task&rsquo;s name as a argument to <code>grunt</code> on the command line; e.g., <code>grunt jshint</code>.  Simply typing <code>grunt</code> runs the default task.  Below is the output for running the default task; even for this small set of tasks, running them manually or maintaining a script without Grunt would have been a tedious chore.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Running</span> <span class="s2">&quot;jshint:scripts&quot;</span> <span class="p">(</span><span class="nx">jshint</span><span class="p">)</span> <span class="nx">task</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="mi">2</span> <span class="nx">files</span> <span class="nx">lint</span> <span class="nx">free</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;compass:stylesheets&quot;</span> <span class="p">(</span><span class="nx">compass</span><span class="p">)</span> <span class="nx">task</span>
+</span><span class='line'><span class="nx">unchanged</span> <span class="nx">sass</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">scss</span>
+</span><span class='line'><span class="nx">unchanged</span> <span class="nx">sass</span><span class="o">/</span><span class="nx">mixins</span><span class="p">.</span><span class="nx">scss</span>
+</span><span class='line'><span class="nx">unchanged</span> <span class="nx">sass</span><span class="o">/</span><span class="nx">screen</span><span class="p">.</span><span class="nx">scss</span>
+</span><span class='line'><span class="nx">Compilation</span> <span class="nx">took</span> <span class="mf">0.012</span><span class="nx">s</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;concat:scripts&quot;</span> <span class="p">(</span><span class="nx">concat</span><span class="p">)</span> <span class="nx">task</span>
+</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">js</span> <span class="nx">created</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;concat:stylesheets&quot;</span> <span class="p">(</span><span class="nx">concat</span><span class="p">)</span> <span class="nx">task</span>
+</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">css</span> <span class="nx">created</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;cssmin:stylesheets&quot;</span> <span class="p">(</span><span class="nx">cssmin</span><span class="p">)</span> <span class="nx">task</span>
+</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">css</span> <span class="nx">created</span><span class="o">:</span> <span class="mf">3.9</span> <span class="nx">kB</span> <span class="err">→</span> <span class="mf">2.78</span> <span class="nx">kB</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;uglify:scripts&quot;</span> <span class="p">(</span><span class="nx">uglify</span><span class="p">)</span> <span class="nx">task</span>
+</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">map</span> <span class="nx">created</span> <span class="p">(</span><span class="nx">source</span> <span class="nx">map</span><span class="p">).</span>
+</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">js</span> <span class="nx">created</span><span class="o">:</span> <span class="mf">5.45</span> <span class="nx">kB</span> <span class="err">→</span> <span class="mf">2.51</span> <span class="nx">kB</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Done</span><span class="p">,</span> <span class="nx">without</span> <span class="nx">errors</span><span class="p">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Below is the entire <code>Gruntfile</code>.  Happy grunting.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+</span><span class='line'>    <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">compass</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">sassDir</span><span class="o">:</span> <span class="s1">&#39;sass&#39;</span><span class="p">,</span>
+</span><span class='line'>          <span class="nx">cssDir</span><span class="o">:</span> <span class="s1">&#39;css&#39;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">concat</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">separator</span><span class="o">:</span> <span class="s1">&#39;;&#39;</span>
+</span><span class='line'>        <span class="p">},</span>
+</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;src/**/*.js&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.js&#39;</span>
+</span><span class='line'>      <span class="p">},</span>
+</span><span class='line'>      <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;css/**/*.css&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.css&#39;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">cssmin</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&lt;%= concat.stylesheets.dest %&gt;&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.min.css&#39;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">jshint</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">curly</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">eqeqeq</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">immed</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">latedef</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">newcap</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">noarg</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">sub</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">undef</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">unused</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">boss</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">eqnull</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">node</span><span class="o">:</span> <span class="kc">true</span>
+</span><span class='line'>      <span class="p">},</span>
+</span><span class='line'>      <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Gruntfile.js&#39;</span><span class="p">,</span> <span class="s1">&#39;src/*.js&#39;</span><span class="p">]</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">uglify</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">banner</span><span class="o">:</span> <span class="s1">&#39;/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today(&quot;yyyy-mm-dd&quot;) %&gt; */\n&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">sourceMap</span><span class="o">:</span> <span class="kc">true</span>
+</span><span class='line'>      <span class="p">},</span>
+</span><span class='line'>      <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&lt;%= concat.scripts.dest %&gt;&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.min.js&#39;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">files</span><span class="o">:</span> <span class="s1">&#39;**/*.scss&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;compass&#39;</span><span class="p">]</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-compass&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-concat&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-cssmin&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-jshint&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-uglify&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-watch&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;jshint&#39;</span><span class="p">,</span> <span class="s1">&#39;compass&#39;</span><span class="p">,</span> <span class="s1">&#39;concat&#39;</span><span class="p">,</span> <span class="s1">&#39;cssmin&#39;</span><span class="p">,</span> <span class="s1">&#39;uglify&#39;</span><span class="p">]);</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;sassify&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;compass&#39;</span><span class="p">]);</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-09T10:10:00-05:00" pubdate data-updated="true">Feb 9<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Il me parait que nous avons les même ou presque les même idées sur la notion d’amitié.  Celles-ci sont les idées qu’un ami est quelqu’un avec qui on a des gôuts en commun, avec qui on aime passer du temps, qui on s’entend très bien, sur qui on peut compter, en qui on peut faire confiance, qui n’hésite pas à l’aider aux moments difficiles, ou qui respecte les opinions de l’autre et qui partage ses opinions sans hésitation.  Mails je pense qu’il existe une différence entre nous.  Pour les Francais il existe deux catégories, les amis et les copains.  Pour les Américains, il y a aussi quelques catégories, comme &ldquo;friends&rdquo; ou &ldquo;acquaintances&rdquo;, qui peut être l’equivalence pour &ldquo;copain&rdquo;.  Mails généralement, la démarcation entre les catégories n’est pas très claire. Un copain est quelqu’un avec qui on peut échanger des salutations à la classe le matin.  On a tendance à appeler quelqu’un un ami quand on lui parle souvent, même si on ne le connait pas très bien.  De même façon, on est prêt à considérer un étranger un ami après l’avoir seulement  rencontré quelques fois, bien que peut-être il ne soit pas un bon ami.  Il y a un concept appelé &ldquo;making friends&rdquo;.  Quand on va quelque part, on essaie de dialoguer et rencontrer plusieurs personnes pour s’adapter; on essaie de ne pas être seul.  Dans un cas radical, il y a des personnes qui se rencontrent sur l’Internet et qui considérent l’autre un ami, même s’ils ne se rencontrent jamais en face!</p>
+
+<p>Sur le forum, il est clair que pour vous il y a une grande distinction entre un ami et un copain.  Par exemple, pour vous les autres étudiants en classes préparatoires peut-être sont votre copains parce que vous ne les revoyez plus après, bien que vous les rencontriez souvent.  Pour nous, les camarades de classe sont souvent notre bons amis, précisément parce que nous les rencontrons tous les jours.  C’est mon impression que les Américains sont un peu plus ouverts à l’egard d’amitié.  Comment pensez-vous de cette vue?  Elle est d’accord avec l’auteur Caroll.  Selon elle, les enfants américains sont encouragés à &ldquo;jouer avec d’autres enfants du même age&rdquo; ou à &ldquo;apprendre à entrer en relation avec des étrangers&rdquo;.  Est-ce que les parents français encouragent leurs enfants à faire comme ça?</p>
+
+<p>J’ai un deuxième commentaire sur l’éducation d’enfant en France et aux E.U.  Je suis d’accord avec l’auteur que les enfants français devraient se comporter bien dans la société, donc ils apprennent les notions de discipline, de respect, d’être responsables. En revanche, les enfants américains ont plus de libertés dont leurs parents croient qu’ils ont besoin pour explorer, pour se dévélopper, pour s’epanouir.  Elle a raison, mais selon moi ce n’implique pas que les enfants américains sont laissés tout faire!  Au moin, la notion de politesse est un élément très important dans l’éducation des enfants américains.  Par exemple, les mots &ldquo;merci&rdquo; et &ldquo;s’il vous plait&rdquo; sont les plus accentués, comme &ldquo;les mots magiques&rdquo;, par les parents.  Ce n’est pas très étonnant que les Américains, les enfants et même les adultes, utilisent ces mots très souvent.  Ce n’est pas étonnant aussi que les Américains sont expertes dans les entreprises de service, dans lesquelles la politesse et l’attention pour les clients sont très importants.  On peut généraliser les principes fondamentaux, mais l’actualité est souvent plus compliquée.  Je suis d’accord avec Matthieu, qui a remarqué que les relations entre parents et enfants, françaises ou américaines, dépendent de la personnalité des parents, de leur conviction sur l’éducation, ou de la façon dont ils ont été élévés.À l’egard d’éléver un enfant, je pense qu’il est préférable qu’on l’aide et l’influence au lieu de le forcer à faire quelquechose.  En revanche, on doit intervenir quand il va faire mal et, si nécessaire, je crois qu’on peut le gronder ou lui donner une fessée. Surtout, il est essentiel de lui donner les occasions de s’explorer.  On devrait l’encourager à découvrir lui-même ce qu’il aime, ce qu’il veut devenir, ce qu’il veut étudier à l’université, etc.  Bien sûr, on devrait l’encourager à suivre une bonne voie ou à choisir un bon métier, mais toujours on l’encourage à avoir l’indépendance de pensées et d’actions.  Par exemple, l’enfant voudrait devenir une artiste; même si ses parents désireraient qu’il devienne un médécin, ils le soutiendront encore.  Les parents sont les conseillers et aussie une autorité. Je pense que c’est un aspect très positif de la philosophie d’éducation américaine, parce qu’il est probable que l’enfant sera heureux dans la vie.  Il parait que le système français est plus rigide, dans le sens que l’enfant doit obéir aux désirs des parents.  Est-ce que c’est vrai ou faux?  Pensez-vous que l’indépendance de pensée est importante pour les enfants? Selon l’auteur, les parents français et leur manière d’éducation de leurs enfants sont soumis à un &ldquo;test&rdquo; par le reste de la sociéte.  Trouvez-vous naturel si les autres donnent conseil aux parents pour éduquer leurs enfants ou les reprimandent?  Je pense que l’éducation d’un enfant est une affaire très privée.  Je saurais quand mon enfant n’a pas de comportement acceptable.  Je serais prêt à recevoir les conseils de la famille ou d’amis, parce qu’ils auraient les désirs sincères, mais je ne pense pas que les jugements de l’autre soient appropriés.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -400,12 +872,8 @@
 <h3>Refs</h3>
 
 <p>You may get this error when running &ldquo;git branch -d foo&rdquo;:
-warning: deleting branch &lsquo;foo&rsquo; that has been merged to</p>
-
-<pre><code>   'refs/remotes/origin/foo', but not yet merged to HEAD.
-</code></pre>
-
-<p>Deleted branch foo (was 334730a).
+warning: deleting branch &lsquo;foo&rsquo; that has been merged to &lsquo;refs/remotes/origin/foo&rsquo;, but not yet merged to HEAD.
+Deleted branch foo (was 334730a).
 From <a href="http://stackoverflow.com/questions/18506456/git-how-to-delete-a-local-ref-branch:">http://stackoverflow.com/questions/18506456/git-how-to-delete-a-local-ref-branch:</a></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -676,16 +1144,12 @@ From <a href="http://stackoverflow.com/questions/18506456/git-how-to-delete-a-lo
 
 <h3>Merging multiple branches</h3>
 
-<pre>
-Branch 2
+<pre><code>Branch 2
 |
 Branch 1 (committed)
 |
 master
-</pre>
-
-
-
+</code></pre>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -2164,257 +2628,6 @@ sat FEB 12, 2005</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/31/helper-method-generate-nested-tags-from-block/">Helper Method to Generate Nested Tags From Block</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-31T00:00:00-04:00" pubdate data-updated="true">Oct 31<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I&rsquo;m still pretty new to Ruby. Hopefully one day I&rsquo;ll know enough to be able to look back and slap myself on the forehead for struggling with these issues.</p>
-
-<p>Right now our views generate a menu from a simple set of links:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x"></span>
-</span><span class='line'><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x"></span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I&rsquo;d like to convert them to a drop-down menu that looks like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="x">&lt;div class=&quot;dropdown&quot;&gt;</span>
-</span><span class='line'><span class="x">  &lt;a class=&quot;dropdown-toggle&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;caret&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
-</span><span class='line'><span class="x">  &lt;ul class=&quot;dropdown-menu&quot;&gt;</span>
-</span><span class='line'><span class="x">    &lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x">&lt;/li&gt; </span>
-</span><span class='line'><span class="x">    &lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x">&lt;/li&gt;</span>
-</span><span class='line'><span class="x">  &lt;/ul&gt;</span>
-</span><span class='line'><span class="x">&lt;/div&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I&rsquo;d like to minimize the changes to the markup as much as possible.  Initially I tried using a partial:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="x">&lt;!-- /shared/_dropdown.html.erb --&gt;</span>
-</span><span class='line'><span class="x">&lt;div class=&quot;dropdown&quot;&gt;</span>
-</span><span class='line'><span class="x">  &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;caret&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span>
-</span><span class='line'><span class="x">  &lt;ul class=&quot;dropdown-menu&quot;&gt;</span>
-</span><span class='line'><span class="x">    &lt;li&gt;</span>
-</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><span class="x"></span>
-</span><span class='line'><span class="x">    &lt;/li&gt;</span>
-</span><span class='line'><span class="x">  &lt;/ul&gt;</span>
-</span><span class='line'><span class="x">&lt;/div&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The view would then include the partial:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="s2">&quot;shared/dropdown&quot;</span> <span class="k">do</span> <span class="cp">%&gt;</span><span class="x"></span>
-</span><span class='line'><span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;#&quot;</span> <span class="cp">%&gt;</span><span class="x"></span>
-</span><span class='line'><span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">&quot;bar, &quot;</span><span class="c1">#&quot; </span><span class="cp">%&gt;</span><span class="x"></span>
-</span><span class='line'><span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span><span class="x"></span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>However, this put both links inside a single <code>&lt;li&gt;</code> tag.  It looked fine with some CSS styles, but not generating the proper markup bothered me a bit.  So I tried using a helper method which should offer some more flexibility.  The helper method would be taking a block, decompose it into individual anchor tags and and wrap them in the proper markup.</p>
-
-<p>I started off with:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">dropdown</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
-</span><span class='line'>  <span class="n">content</span> <span class="o">=</span> <span class="n">capture</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The <code>capture</code> helper method captures the block and stores it in a variable that I can process. More importantly, it also works for strings within the block.  This is <a href="http://blog.agile-pandas.com/2011/01/13/rails-capture-vs-with-output-buffer">an important distinction</a> between <code>capture</code> and a similar helper method, <code>with_output_buffer</code>.</p>
-
-<p>If the block is empty, there is nothing to do. Otherwise, I&rsquo;d turn them into links.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">(</span><span class="n">content</span> <span class="o">=</span> <span class="n">capture</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">))</span> <span class="o">&amp;&amp;</span> <span class="n">anchors</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sr">/\n/</span><span class="p">)</span><span class="o">.</span><span class="n">reject</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="n">a</span><span class="o">.</span><span class="n">empty?</span> <span class="p">}</span>
-</span><span class='line'><span class="k">if</span> <span class="n">anchors</span><span class="o">.</span><span class="n">present?</span>
-</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To generate the top-level div is pretty straight-forward:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s1">&#39;dropdown&#39;</span><span class="p">)</span> <span class="k">do</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If this were in a view, I could just merrily include other content_tags in the block argument.  However, in a helper mehod, the content is stored inside an output buffer.  I would have to use <code>concat</code> to add it to the output buffer.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown&quot;</span><span class="p">)</span> <span class="k">do</span>
-</span><span class='line'>  <span class="n">concat</span> <span class="n">link_to</span><span class="p">(</span><span class="n">content_tag</span><span class="p">(</span><span class="ss">:i</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;caret&quot;</span><span class="p">),</span> <span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown-toggle&quot;</span><span class="p">,</span> <span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:toggle</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown&quot;</span> <span class="p">})</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Next I wanted to add a <code>ul</code> tag and pass its content inside a block. I would also have to use <code>concat</code> as before.  In my initial attempt, I tried to do the following:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:ul</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s1">&#39;dropdown-menu&#39;</span><span class="p">)</span> <span class="k">do</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This resulted in a syntax error. The <code>content_tag</code> is correctly treated as the first argument to <code>concat</code>.  However because of Ruby&rsquo;s order of precedence, the block is intepreted as belonging to <code>concat</code>, not <code>content_tag</code> as intended.  To be able to use <code>concat</code> with the <code>do..end</code> syntax, I would have to wrap <code>concat</code>&rsquo;s arguments inside parentheses:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">concat</span><span class="p">(</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:ul</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s1">&#39;dropdown-menu&#39;</span><span class="p">)</span> <span class="k">do</span>
-</span><span class='line'><span class="k">end</span> <span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This looked quirky and not very ruby-ish.  Fortunately, it turned out that the other block syntax using curly braces has higher precedence than <code>do..end</code> (<a href="http://stackoverflow.com/questions/2122380/using-do-block-vs-brackets?lq=1">source</a>).  This let me eliminate the redundant parentheses:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:ul</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown-menu&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Finally the links were added inside <code>li</code> tags:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">anchors</span><span class="o">.</span><span class="n">collect</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:li</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">html_safe</span><span class="p">)</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here&rsquo;s the full method which turned out to be quite short:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">dropdown</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">(</span><span class="n">content</span> <span class="o">=</span> <span class="n">capture</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">))</span> <span class="o">&amp;&amp;</span> <span class="n">anchors</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sr">/\n/</span><span class="p">)</span><span class="o">.</span><span class="n">reject</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="n">a</span><span class="o">.</span><span class="n">blank?</span> <span class="p">}</span>
-</span><span class='line'>  <span class="k">if</span> <span class="n">anchors</span><span class="o">.</span><span class="n">present?</span>
-</span><span class='line'>    <span class="n">content_tag</span><span class="p">(</span><span class="ss">:div</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown&quot;</span><span class="p">)</span> <span class="k">do</span>
-</span><span class='line'>      <span class="n">concat</span> <span class="n">link_to</span><span class="p">(</span><span class="n">content_tag</span><span class="p">(</span><span class="ss">:i</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;icon-caret&quot;</span><span class="p">),</span> <span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown-toggle </span><span class="si">#{</span><span class="n">toggleClass</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:toggle</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown&quot;</span> <span class="p">})</span>
-</span><span class='line'>      <span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:ul</span><span class="p">,</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="s2">&quot;dropdown-menu&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="n">anchors</span><span class="o">.</span><span class="n">collect</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="n">concat</span> <span class="n">content_tag</span><span class="p">(</span><span class="ss">:li</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">html_safe</span><span class="p">)</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/23/bruins-took-down-sabres-in-costly-victory/">Bruins Took Down Sabres in Costly Victory</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-23T00:00:00-04:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It was game 1 of the World Series.  Yawn. Since our pickup game was canceled in part due to the aforementioned sport&mdash;eh recreational&mdash;event, it was going to be either a work night or an early night.  Fortunately, the Bruins came to the rescue by taking on the Sabres.  It&rsquo;s a good thing it was on NBCSports/Versus instead of NESN, where viewers would have been bombarded with a constant barrage of WS updates, even though the network TV announcers are downright annoying. The Bruins welcome the undefeated Sharks tomorrow at home, but tonight would be a Bear-Buffalo grudge match.</p>
-
-<p>The game was billed as a Wednesday Rivalry Game.  The Bruins&#8217; record was 5-2 and the Sabres 1-8-1, so these were clearly two teams headed in different directions. In fact, it hasn&rsquo;t been much of a rivalry since they last faced each other in the 2nd round of the 2009-10 playoffs.  The Sabres have not made the playoffs in the last two years.  They have the second worst record in the league.  The only other team with a similarly dismal record, the Broadstreet Bumblers, got their coach fired just 3 games into the season.  Nevertheless, the Sabres were one of the few teams with a winning record against the Bruins last season and, like the Canadiens, always seem to find ways to beat the Bruins.</p>
-
-<p>But it wouldn&rsquo;t happen tonight. Just from this game, it was clear why they&rsquo;ve been struggling.  They were terrible in their zone. They got beat to the puck.  They got beat in one-on-one battles. They weren&rsquo;t strong enough on the puck carrier to get it back. On offense, they weren&rsquo;t playing as a team.  Skilled guys tried to make plays by themselves.  Cody Hodgson tried to  take on 4 Bruins defenders on the power play&mdash;that doesn&rsquo;t work even in peewee hockey. Guys were taking themselves off-sides. They were a terribly disorganized team who seemed unfocused and unconfident. And then there was John Scott, a 6&#8217;8, 260-lb monster who looks vaguely like Liev Schreiber.  By NHL standards, he can barely skate (even though he&rsquo;s better than every normal person and probably most minor leaguers).  He&rsquo;s there to intimidate and even terrorize.  Just <a href="http://sports.yahoo.com/blogs/nhl-puck-daddy/john-scott-explains-why-attacked-poor-nearly-defenseless-202830725--nhl.html">ask Phil Kessel</a>.  Admittedly, in hockey, particularly &ldquo;old-time hockey&rdquo;, being intimidating can sometimes have as much of an impact as being skillful.</p>
-
-<p>The lone bright spot for the Sabres had to be Ryan Miller.  The Bruins had odd-man rushes all night.  Despite the lopsided score, it would have been much worse if it weren&rsquo;t for him. He made several outstanding saves that would have gotten by lesser goalies. The most sparkling save was on a tic-tac-toe play that started on one side of the net and ended on the other with with David Krejci catching the puck on his backhand and quickly flipping it with his forehand, only to be robbed by Miller&rsquo;s glove. Of the goals he gave up, three were perfect backdoor plays that he had no chance on. One he would have stopped if his stick hadn&rsquo;t been pushed out of position by a falling teammate.  Only the last one was somewhat saveable, but by then the game was out of reach.</p>
-
-<p>The Bruins&#8217; 5-2 victory was marred by an ugly incident. Long after he had released the puck, Loui Eriksson was blindsided by Scott with a hit to the head that spun him around and knocked him to the ground.  He struggled to get up but stumbled, clearly disoriented. This is a scary hit that was eerily reminiscent of the Matt Cooke hit on Marc Savard that ended Savard&rsquo;s promising career.  Eriksson was woozy and had to be helped off the ice. One can only hope that his long-term health isn&rsquo;t compromised.  He&rsquo;s undoubtedly lost for tomorrow night&rsquo;s game, if not longer.  This type of hits, where the &ldquo;head is the principal area of contact&rdquo;, is something the league has been trying to stamp out.  Already several multi-game suspensions have been handed out this season for similar plays.  It&rsquo;s quite expected that the league will come down hard on Scott.</p>
-
-<p>The Bruins responded with Adam McQuaid tackling Scott and wrestling him down.  Perhaps that was enough.  I&rsquo;m not one to demand that the Bruins respond to a dirty play with dirty plays of their own.  It&rsquo;s important to many hockey fans that the team stand up for their teammates.  After the Savard incident, the Bruins were criticized by some for their lack of response. Maybe Shawn Thornton will take on Scott the next time they meet (provided Scott is playing), but it wouldn&rsquo;t be good for Thornton given that Scott is in a totally different weight class.  Maybe someone will engage Steve Ott, another dirty Sabre (his sucker punch on Krejci went unnoticed by the refs).  I really think a more measured response is to make them pay on the scoreboard.  The Bruins did just that, by scoring a goal on the PP resulting from Scott&rsquo;s major penalty.  If Scott&rsquo;s action was a intended as &ldquo;message-sending&rdquo;, it already failed, because experience has shown that when faced with adversity, this team becomes stronger.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -2466,7 +2679,7 @@ sat FEB 12, 2005</p>
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>38</em>
+        <a href="/blog/categories/technology">technology</a> <em>39</em>
       </li>
     
      
@@ -2481,7 +2694,7 @@ sat FEB 12, 2005</p>
     
      
       <li data-category="other">
-        <a href="/blog/categories/other">other</a> <em>1</em>
+        <a href="/blog/categories/other">other</a> <em>2</em>
       </li>
     
   </ul>
@@ -2504,6 +2717,14 @@ sat FEB 12, 2005</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/02/07/my-git-cheat-sheet/">My Git Cheat Sheet</a>
       </li>
     
@@ -2513,14 +2734,6 @@ sat FEB 12, 2005</p>
     
       <li class="post">
         <a href="/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/">Using Angular Root Scope for Communication Between Controllers</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/23/updating-sql-server-primary-key/">Updating SQL Server Primary Key</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/19/top-10-archive/">Top 10 Archive</a>
       </li>
     
   </ul>

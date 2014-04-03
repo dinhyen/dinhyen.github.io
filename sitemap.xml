@@ -428,7 +428,7 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2012/07/16/lima/</loc>
-        <lastmod>2013-11-17T11:22:16-05:00</lastmod>
+        <lastmod>2014-02-13T20:03:06-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2012/07/17/cusco/</loc>
@@ -444,7 +444,7 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2012/07/31/machu-picchu/</loc>
-        <lastmod>2013-11-17T11:22:16-05:00</lastmod>
+        <lastmod>2014-02-13T20:11:21-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2012/08/07/ollantaytambo/</loc>
@@ -578,7 +578,17 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/2014/02/07/my-git-cheat-sheet/</loc>
-        <lastmod>2014-02-09T16:36:20-05:00</lastmod>
+        <lastmod>2014-02-10T12:48:07-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://dinhyen.github.io/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/
+        </loc>
+        <lastmod>2014-04-03T17:44:30-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dinhyen.github.io/blog/2014/03/03/simple-tasks-with-grunt/</loc>
+        <lastmod>2014-04-03T17:46:52-04:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/about/</loc>
@@ -586,11 +596,11 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/archives/</loc>
-        <lastmod>2014-02-09T16:36:20-05:00</lastmod>
+        <lastmod>2014-04-03T17:46:52-04:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/</loc>
-        <lastmod>2014-02-09T16:36:20-05:00</lastmod>
+        <lastmod>2014-04-03T17:46:52-04:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/robots.txt</loc>
@@ -898,7 +908,7 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/netherlands/nijmegen/</loc>
-        <lastmod>2013-11-20T15:15:58-05:00</lastmod>
+        <lastmod>2014-02-14T15:33:11-05:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/travel/netherlands/roosendaal/</loc>

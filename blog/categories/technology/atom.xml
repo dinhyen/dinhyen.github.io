@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technology | Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2014-02-09T16:42:11-05:00</updated>
+  <updated>2014-04-03T17:47:14-04:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -12,6 +12,274 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Simple tasks with Grunt]]></title>
+    <link href="http://dinhyen.github.io/blog/2014/03/03/simple-tasks-with-grunt/"/>
+    <updated>2014-03-03T15:16:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2014/03/03/simple-tasks-with-grunt</id>
+    <content type="html"><![CDATA[<p>Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&rsquo;re working with conventional server-side platforms.  Unfortunately, when it comes to JavaScripts and CSS, automation tools are harder to find. That is, until Grunt comes along (following Node, which turned upside down the whole idea of server vs client side in the first place).</p>
+
+<p>As a self-described &ldquo;task runner&rdquo;, Grunt is powerful and pleasantly approachable.  Its succinctness makes it a joy to use.  This carries over into the Grunt documentation, which is really excellent.  Inspired by the <a href="http://gruntjs.com/sample-gruntfile">Sample Gruntfile tutorial</a>, I&rsquo;d like to walk through my own <code>Gruntfile</code> created for a <a href="https://github.com/dinhyen/darkbox">small JavaScript library</a>.  The goal is to automate a typical process of building the app, from generating CSS from Sass, aggregating various source files into a single file, and minifying the result.</p>
+
+<p>Once you <a href="http://gruntjs.com/installing-grunt">have Grunt installed</a> using the Node Package Manager, you will need a <code>package.json</code> file, just as for other Node utilities.  The quickest way to create a <code>package.json</code> file is to simply run <code>npm init</code> which generates the file after a series of questions.</p>
+
+<p>The following libraries will be used:</p>
+
+<ul>
+<li><a href="https://github.com/gruntjs/grunt-contrib-compass">grunt-contrib-compass</a>: generates CSS from Sass</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat</a>: combines various files into a single file</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-cssmin">grunt-contrib-cssmin</a>: minifies CSS</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-jshint">grunt-contrib-jshint</a>: combs through JavaScript and flags errors or usage issues</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify</a>: mangles and minifies JavaScript</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch</a>: performs tasks whenever a file changes</li>
+</ul>
+
+
+<p>The recommended approach, as stated at the beginning of the documentation for each plugin, is to run <code>npm install grunt-contrib-xxx --save-dev</code>, which has the dual benefit of installing the plugin and also adding a reference to it in <code>package.json</code>.</p>
+
+<p>Besides <code>package.json</code>, the only other file you need is <code>Gruntfile</code>, in which you define and configure the tasks to run. Configuration options are specified as the argument to <code>grunt.initConfig</code>.</p>
+
+<p>The first line reads in <code>package.json</code> and turns it into an object.  In this case, I&rsquo;m interested in product name, but it can provide <a href="http://package.json.nodejitsu.com">many other useful properties</a>.</p>
+
+<p><code>javascript
+pkg: grunt.file.readJSON('package.json'),
+</code></p>
+
+<p>All <code>Gruntfile</code> tasks share the <a href="http://gruntjs.com/configuring-tasks">same basic syntax</a> for specifying options, input and output.  Each task&rsquo;s configuration block is named after the plugin; for example, the configuration block for the <code>grunt-contrib-uglify</code> is simply <code>uglify</code>.  Each task can have arbitrary targets.  You&rsquo;ll probably see a &ldquo;test&rdquo; target for testing or a &ldquo;dist&rdquo; target for building a distribution.  Since I want to build CSS and JavaScript, here I have 2 targets, &ldquo;scripts&rdquo; and &ldquo;stylesheets&rdquo;.  When there are multiple targets in a task, each target can be executed directly.  For example, <code>grunt concat:scripts</code> runs just the &ldquo;scripts&rdquo; target.  If you don&rsquo;t provide a target, then all targets would be run in order.</p>
+
+<p>The Compass task generates CSS from Sass source.  Of course, Compass <a href="http://compass-style.org/install">must be installed</a> first.  The following options simply instruct Compass to process Sass files in the directory &ldquo;sass&rdquo; and generate the corresponding CSS files in the directory &ldquo;css&rdquo;.
+``` javascript
+compass: {
+  stylesheets: {</p>
+
+<pre><code>options: {
+  sassDir: 'sass',
+  cssDir: 'css'
+}
+</code></pre>
+
+<p>  }
+}
+```</p>
+
+<p>When developing, it would be nice to be able to preview changes made to the Sass source.  This is where the watch plugin comes in.  In the simplest use case it simply detects that one or more files have been changed and then runs certain tasks.  The following options allow me to re-generate CSS each time a Sass file is modified.  Start watching by typing <code>grunt watch</code> at the command prompt.</p>
+
+<p>``` javascript
+watch: {
+  stylesheets: {</p>
+
+<pre><code>files: '**/*.scss',
+tasks: ['compass']
+</code></pre>
+
+<p>  }
+}
+```</p>
+
+<p>Typically JavaScript and CSS source is distributed over multiple files.  In production you&rsquo;d want to combine the various source files into a single file for performance reason.  This can be done with the concat plugin.  For the source, I&rsquo;m using a globbing pattern for simplicity; <code>src/**/*.js</code> means all <code>.js</code> files in the <code>src</code> directory and any of its sub-directories.  The files would be combined in alphabetical order. An alternative would be to specify an array of individual files.  While this lets you control the ordering of files, it becomes unwieldy for a large number of files. Of course, there are <a href="http://gruntjs.com/configuring-tasks#globbing-patterns">many ways</a> to skin the cat.  For the output, I&rsquo;m using the project&rsquo;s name which comes from <code>package.json</code>.</p>
+
+<p>``` javascript
+concat: {
+  scripts: {</p>
+
+<pre><code>options: {
+  separator: ';'
+},
+src: 'src/**/*.js',
+dest: 'dist/&lt;%= pkg.name %&gt;.js'
+</code></pre>
+
+<p>  },
+  stylesheets: {</p>
+
+<pre><code>src: 'css/**/*.css',
+dest: 'dist/&lt;%= pkg.name %&gt;.css'
+</code></pre>
+
+<p>  }
+}
+```</p>
+
+<p>The cssmin plugin provides CSS minification.  The source should be the output of the concat stage.  Note the variable substitution syntax.</p>
+
+<p>``` javascript
+cssmin: {
+  stylesheets: {</p>
+
+<pre><code>src: '&lt;%= concat.stylesheets.dest %&gt;',
+dest: 'dist/&lt;%= pkg.name %&gt;.min.css'
+</code></pre>
+
+<p>  }
+}
+```</p>
+
+<p>The uglify plugin is the JavaScript equivalent of cssmin.  It also mangles variable names which reduces file size further at the expense of readability.  Since mangling pretty much makes your JavaScript indecipherable and impossible to debug, you can also provide a <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source map</a> which lets you view the original, non-uglified source when debugging.  The uglify plugin have all these and sundry options.  Here it also inserts a comment with some basic information at the top of the file.</p>
+
+<p>``` javascript
+uglify: {
+  options: {</p>
+
+<pre><code>banner: '/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today("yyyy-mm-dd") %&gt; */\n',
+sourceMap: true
+</code></pre>
+
+<p>  },
+  scripts: {</p>
+
+<pre><code>src: '&lt;%= concat.scripts.dest %&gt;',
+dest: 'dist/&lt;%= pkg.name %&gt;.min.js'
+</code></pre>
+
+<p>  }
+}
+```</p>
+
+<p>The jshint configuration block just sets some <a href="http://www.jshint.com/docs/options">options for jshint</a>.
+``` javascript
+jshint: {
+  options: {</p>
+
+<pre><code>curly: true,
+eqeqeq: true,
+immed: true,
+latedef: true,
+newcap: true,
+noarg: true,
+sub: true,
+undef: true,
+unused: true,
+boss: true,
+eqnull: true,
+node: true
+</code></pre>
+
+<p>  }
+```</p>
+
+<p>Finally register a default task and a useful task.  Tasks would be executed in the order specified.
+<code>javascript
+grunt.registerTask('default', ['jshint', 'compass', 'concat', 'cssmin', 'uglify']);
+grunt.registerTask('sassify', ['compass']);
+</code></p>
+
+<p>To run a task, simply specify the task&rsquo;s name as a argument to <code>grunt</code> on the command line; e.g., <code>grunt jshint</code>.  Simply typing <code>grunt</code> runs the default task.  Below is the output for running the default task; even for this small set of tasks, running them manually or maintaining a script without Grunt would have been a tedious chore.</p>
+
+<p>```
+Running &ldquo;jshint:scripts&rdquo; (jshint) task</p>
+
+<blockquote><blockquote><p>2 files lint free.</p></blockquote></blockquote>
+
+<p>Running &ldquo;compass:stylesheets&rdquo; (compass) task
+unchanged sass/darkbox.scss
+unchanged sass/mixins.scss
+unchanged sass/screen.scss
+Compilation took 0.012s</p>
+
+<p>Running &ldquo;concat:scripts&rdquo; (concat) task
+File dist/darkbox.js created.</p>
+
+<p>Running &ldquo;concat:stylesheets&rdquo; (concat) task
+File dist/darkbox.css created.</p>
+
+<p>Running &ldquo;cssmin:stylesheets&rdquo; (cssmin) task
+File dist/darkbox.min.css created: 3.9 kB → 2.78 kB</p>
+
+<p>Running &ldquo;uglify:scripts&rdquo; (uglify) task
+File dist/darkbox.min.map created (source map).
+File dist/darkbox.min.js created: 5.45 kB → 2.51 kB</p>
+
+<p>Done, without errors.
+```</p>
+
+<p>Below is the entire <code>Gruntfile</code>.  Happy grunting.</p>
+
+<p>``` javascript
+module.exports = function (grunt) {</p>
+
+<p>  grunt.initConfig({</p>
+
+<pre><code>pkg: grunt.file.readJSON('package.json'),
+compass: {
+  stylesheets: {
+    options: {
+      sassDir: 'sass',
+      cssDir: 'css'
+    }
+  }
+},
+concat: {
+  scripts: {
+    options: {
+      separator: ';'
+    },
+    src: 'src/**/*.js',
+    dest: 'dist/&lt;%= pkg.name %&gt;.js'
+  },
+  stylesheets: {
+    src: 'css/**/*.css',
+    dest: 'dist/&lt;%= pkg.name %&gt;.css'
+  }
+},
+cssmin: {
+  stylesheets: {
+    src: '&lt;%= concat.stylesheets.dest %&gt;',
+    dest: 'dist/&lt;%= pkg.name %&gt;.min.css'
+  }
+},
+jshint: {
+  options: {
+    curly: true,
+    eqeqeq: true,
+    immed: true,
+    latedef: true,
+    newcap: true,
+    noarg: true,
+    sub: true,
+    undef: true,
+    unused: true,
+    boss: true,
+    eqnull: true,
+    node: true
+  },
+  scripts: {
+    src: ['Gruntfile.js', 'src/*.js']
+  }
+},
+uglify: {
+  options: {
+    banner: '/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today("yyyy-mm-dd") %&gt; */\n',
+    sourceMap: true
+  },
+  scripts: {
+    src: '&lt;%= concat.scripts.dest %&gt;',
+    dest: 'dist/&lt;%= pkg.name %&gt;.min.js'
+  }
+},
+watch: {
+  stylesheets: {
+    files: '**/*.scss',
+    tasks: ['compass']
+  }
+}
+</code></pre>
+
+<p>  });</p>
+
+<p>  grunt.loadNpmTasks(&lsquo;grunt-contrib-compass&rsquo;);
+  grunt.loadNpmTasks(&lsquo;grunt-contrib-concat&rsquo;);
+  grunt.loadNpmTasks(&lsquo;grunt-contrib-cssmin&rsquo;);
+  grunt.loadNpmTasks(&lsquo;grunt-contrib-jshint&rsquo;);
+  grunt.loadNpmTasks(&lsquo;grunt-contrib-uglify&rsquo;);
+  grunt.loadNpmTasks(&lsquo;grunt-contrib-watch&rsquo;);</p>
+
+<p>  grunt.registerTask(&lsquo;default&rsquo;, [&lsquo;jshint&rsquo;, &lsquo;compass&rsquo;, &lsquo;concat&rsquo;, &lsquo;cssmin&rsquo;, &lsquo;uglify&rsquo;]);
+  grunt.registerTask(&lsquo;sassify&rsquo;, [&lsquo;compass&rsquo;]);
+};
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[My Git cheat sheet]]></title>
@@ -27,7 +295,7 @@
 <h1>These will show up in git log</h1>
 
 <p>git config &mdash;global user.name &ldquo;Yen Tran&rdquo;
-git config &mdash;global user.email <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x79;&#101;&#x6e;&#x40;&#121;&#x65;&#110;&#x74;&#114;&#x61;&#110;&#46;&#x6f;&#x72;&#x67;">&#x79;&#x65;&#110;&#64;&#x79;&#x65;&#110;&#116;&#x72;&#x61;&#x6e;&#x2e;&#111;&#114;&#x67;</a>
+git config &mdash;global user.email <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#x79;&#x65;&#x6e;&#64;&#121;&#x65;&#x6e;&#x74;&#114;&#97;&#x6e;&#46;&#x6f;&#x72;&#103;">&#x79;&#101;&#x6e;&#x40;&#121;&#101;&#x6e;&#116;&#114;&#x61;&#110;&#x2e;&#111;&#114;&#103;</a>
 git config &mdash;list
 ```</p>
 
@@ -296,12 +564,8 @@ git rebase -i</p>
 <h3>Refs</h3>
 
 <p>You may get this error when running &ldquo;git branch -d foo&rdquo;:
-warning: deleting branch &lsquo;foo&rsquo; that has been merged to</p>
-
-<pre><code>   'refs/remotes/origin/foo', but not yet merged to HEAD.
-</code></pre>
-
-<p>Deleted branch foo (was 334730a).
+warning: deleting branch &lsquo;foo&rsquo; that has been merged to &lsquo;refs/remotes/origin/foo&rsquo;, but not yet merged to HEAD.
+Deleted branch foo (was 334730a).
 From <a href="http://stackoverflow.com/questions/18506456/git-how-to-delete-a-local-ref-branch:">http://stackoverflow.com/questions/18506456/git-how-to-delete-a-local-ref-branch:</a>
 ```</p>
 
@@ -553,14 +817,12 @@ git stash pop
 
 <h3>Merging multiple branches</h3>
 
-<pre>
-Branch 2
+<pre><code>Branch 2
 |
 Branch 1 (committed)
 |
 master
-</pre>
-
+</code></pre>
 
 <p>```
 git commit
@@ -1053,131 +1315,6 @@ site = YAML.load_file('_config.yml')
 <h3>Conclusion</h3>
 
 <p>Octopress/Jekyll makes it easy and fun to tweak, hack and do so efficiently. I only wish I&rsquo;d made the switch earlier!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Helper method to generate nested tags from block]]></title>
-    <link href="http://dinhyen.github.io/blog/2013/10/31/helper-method-generate-nested-tags-from-block/"/>
-    <updated>2013-10-31T00:00:00-04:00</updated>
-    <id>http://dinhyen.github.io/blog/2013/10/31/helper-method-generate-nested-tags-from-block</id>
-    <content type="html"><![CDATA[<p>I&rsquo;m still pretty new to Ruby. Hopefully one day I&rsquo;ll know enough to be able to look back and slap myself on the forehead for struggling with these issues.</p>
-
-<p>Right now our views generate a menu from a simple set of links:
-<code>erb
-&lt;%= link_to "foo", "#" %&gt;
-&lt;%= link_to "bar", "#" %&gt;
-</code></p>
-
-<p>I&rsquo;d like to convert them to a drop-down menu that looks like this:
-``` erb</p>
-
-<div class="dropdown">
-    <a class="dropdown-toggle" href="#"><i class="caret"></i></a>
-    <ul class="dropdown-menu">
-    <li><%= link_to "foo", "#" %></li> 
-    <li><%= link_to "bar", "#" %></li>
-  </ul>
-</div>
-
-
-<p>```</p>
-
-<p>I&rsquo;d like to minimize the changes to the markup as much as possible.  Initially I tried using a partial:
-``` erb</p>
-
-<!-- /shared/_dropdown.html.erb -->
-
-
-<div class="dropdown">
-  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="caret"></i></a>
-  <ul class="dropdown-menu">
-    <li>
-      <%= yield %>
-    </li>
-  </ul>
-</div>
-
-
-<p>```</p>
-
-<p>The view would then include the partial:
-<code>erb
-&lt;%= render :layout =&gt; "shared/dropdown" do %&gt;
-  &lt;%= link_to "foo", "#" %&gt;
-  &lt;%= link_to "bar, "#" %&gt;
-&lt;% end %&gt;
-</code></p>
-
-<p>However, this put both links inside a single <code>&lt;li&gt;</code> tag.  It looked fine with some CSS styles, but not generating the proper markup bothered me a bit.  So I tried using a helper method which should offer some more flexibility.  The helper method would be taking a block, decompose it into individual anchor tags and and wrap them in the proper markup.</p>
-
-<p>I started off with:
-<code>ruby
-def dropdown(&amp;block)
-  content = capture(&amp;block)
-end
-</code></p>
-
-<p>The <code>capture</code> helper method captures the block and stores it in a variable that I can process. More importantly, it also works for strings within the block.  This is <a href="http://blog.agile-pandas.com/2011/01/13/rails-capture-vs-with-output-buffer">an important distinction</a> between <code>capture</code> and a similar helper method, <code>with_output_buffer</code>.</p>
-
-<p>If the block is empty, there is nothing to do. Otherwise, I&rsquo;d turn them into links.</p>
-
-<p><code>ruby
-(content = capture(&amp;block)) &amp;&amp; anchors = content.split(/\n/).reject { |a| a.empty? }
-if anchors.present?
-  ...
-end
-</code></p>
-
-<p>To generate the top-level div is pretty straight-forward:
-<code>ruby
-content_tag(:div, :class =&gt; 'dropdown') do
-end
-</code></p>
-
-<p>If this were in a view, I could just merrily include other content_tags in the block argument.  However, in a helper mehod, the content is stored inside an output buffer.  I would have to use <code>concat</code> to add it to the output buffer.
-<code>ruby
-content_tag(:div, :class =&gt; "dropdown") do
-  concat link_to(content_tag(:i, "", :class =&gt; "caret"), "#", :class =&gt; "dropdown-toggle", :data =&gt; { :toggle =&gt; "dropdown" })
-end
-</code></p>
-
-<p>Next I wanted to add a <code>ul</code> tag and pass its content inside a block. I would also have to use <code>concat</code> as before.  In my initial attempt, I tried to do the following:
-<code>ruby
-concat content_tag(:ul, :class =&gt; 'dropdown-menu') do
-...
-end
-</code>
-This resulted in a syntax error. The <code>content_tag</code> is correctly treated as the first argument to <code>concat</code>.  However because of Ruby&rsquo;s order of precedence, the block is intepreted as belonging to <code>concat</code>, not <code>content_tag</code> as intended.  To be able to use <code>concat</code> with the <code>do..end</code> syntax, I would have to wrap <code>concat</code>&rsquo;s arguments inside parentheses:
-<code>ruby
-concat( content_tag(:ul, :class =&gt; 'dropdown-menu') do
-end )
-</code>
-This looked quirky and not very ruby-ish.  Fortunately, it turned out that the other block syntax using curly braces has higher precedence than <code>do..end</code> (<a href="http://stackoverflow.com/questions/2122380/using-do-block-vs-brackets?lq=1">source</a>).  This let me eliminate the redundant parentheses:
-<code>ruby
-concat content_tag(:ul, :class =&gt; "dropdown-menu") { ... }
-</code></p>
-
-<p>Finally the links were added inside <code>li</code> tags:
-<code>ruby
-anchors.collect { |a| concat content_tag(:li, a.html_safe) }
-</code></p>
-
-<p>Here&rsquo;s the full method which turned out to be quite short:
-``` ruby
-def dropdown(&amp;block)
-  (content = capture(&amp;block)) &amp;&amp; anchors = content.split(/\n/).reject { |a| a.blank? }
-  if anchors.present?</p>
-
-<pre><code>content_tag(:div, :class =&gt; "dropdown") do
-  concat link_to(content_tag(:i, "", :class =&gt; "icon-caret"), "#", :class =&gt; "dropdown-toggle #{toggleClass}", :data =&gt; { :toggle =&gt; "dropdown" })
-  concat content_tag(:ul, :class =&gt; "dropdown-menu") { anchors.collect { |a| concat content_tag(:li, a.html_safe) } }
-end
-</code></pre>
-
-<p>  end
-end
-```</p>
 ]]></content>
   </entry>
   

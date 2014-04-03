@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="View location in Google Maps Few places in Boston are as beautiful as Mount Auburn Cemetery. While it is famous as the final resting place of many &hellip;">
+  <meta name="description" content="In Visual Studio, it&rsquo;s easy enough to turn on and off line numbers.  You&rsquo;ll have to select Tools > Options > Text Editor, expand the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,144 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/12/21/visual-studio-line-number-macros/">Visual Studio Line Number Macros</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-21T00:00:00-05:00" pubdate data-updated="true">Dec 21<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In Visual Studio, it&rsquo;s easy enough to turn on and off line numbers.  You&rsquo;ll have to select Tools > Options > Text Editor, expand the language of choice, select General, then toggle Line numbers under the Display section.  This can get tedious if you want to be able to show and hide line numbers at will.  To turn this process into a single click, you can record custom macros to show and hide line numbers.  However, you may not realize that the macros to do just that are already included with Visual Studio. Further, these macros will turn on and off line numbers for a number of editor types, including C#, VB, HTML and plain text.</p>
+
+<p>For easy access, you can put frequently used macros into a custom toolbar. This can be done as follows:</p>
+
+<ul>
+<li>Create a new toolbar by right-clicking on menu bar and selecting Customize</li>
+</ul>
+
+
+<p><img title="macro-4" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-41.png" width="535" height="490" /></p>
+
+<ul>
+<li>Select New and enter a name</li>
+</ul>
+
+
+<p><img title="macro-2" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-2.png" width="326" height="133" /></p>
+
+<ul>
+<li>On the newly created toolbar, which is empty at the moment, open the drop-down menu and select Add or Remove Buttons > Customize</li>
+<li>On the Customize dialog, select Add Command</li>
+<li>On the Add Command dialog, select Macros in the Categories pane.  In the Commands pane, select Macros.Samples.Utilities.TurnOnLineNumbers</li>
+</ul>
+
+
+<p><img title="macro-3" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-3.png" width="585" height="370" /></p>
+
+<ul>
+<li>Do the same to add the TurnOffLineNumbers macro, or any other useful macro</li>
+<li>Back on the Add Command dialog, select Modify Selection to change the macro&rsquo;s display name to something more readable</li>
+</ul>
+
+
+<p><img title="macro-4" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-41.png" width="535" height="490" /></p>
+
+<ul>
+<li>The macros are now added to the new toolbar</li>
+</ul>
+
+
+<p><img title="macro-5" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-5.png" width="572" height="67" /></p>
+
+<p>If you&rsquo;re interested in viewing or modifying the sample macros that come with Visual Studio, open the Macros editor by selecting Tools > Macros > Macros IDE.  If you&rsquo;ve written VBA macros for Excel or Word, this should look familiar. The Samples project contains modules for a number of useful macros.  The line number macros above are defined in the Utilities module.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/12/13/msbuild-project-directory/">MSBuild Project Directory</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-13T00:00:00-05:00" pubdate data-updated="true">Dec 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We&rsquo;re using MSBuild in <a href="http://hudson-ci.org/">Hudson</a> as part of our continuous integration process.  We put the MSBuild scripts in the same directory as the Visual Studio solution file. Everything has been working well until until we decided, as an experiment, to put the MSBuild scripts in a separate directory from the solution.  Then the build process started to fail with error MSB3202, &ldquo;the project file was not found&rdquo;.</p>
+
+<p>By using MSBuild&rsquo;s  &#8221;/verbosity:diagnostic&#8221; flag, we were able to look at the list of properties that MSBuild was using.  In particular, there was a property named MSBuildProjectDirectory which was set to the same directory as the scripts.  Our scripts use relative path to locate the projects; i.e.,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;ItemGroup&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;Projects</span> <span class="na">Include=</span><span class="s">&quot;**\*.csproj&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ItemGroup&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It&rsquo;s no surprise then that because the MSBuildProjectDirectory was now pointing to the wrong directory, the projects could not be found.</p>
+
+<p>Because MSBuildProjectDirectory is a reserved property, it can&rsquo;t be modified. We need another way to locate the projects by explicitly specifying the project directories.  Hudson provides a few options for retrieving the project directory.  For example, we can use the work space environment variable:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;ItemGroup&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;Projects</span> <span class="na">Include=</span><span class="s">&quot;$(WORKSPACE)\**\*.csproj&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ItemGroup&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -735,100 +873,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/07/streams-of-silver-forgotten-realms-the-icewind-dale-trilogy-book-2-by-r-a-salvatore/">Streams of Silver (Forgotten Realms: The Icewind Dale Trilogy, Book 2) by R. a. Salvatore</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-07T00:00:00-04:00" pubdate data-updated="true">Sep 7<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img class="pull-left" title="Streams_of_Silver" src="https://dl.dropboxusercontent.com/u/52804626/images/Streams_of_Silver-182x300.jpg" width="182" height="300" />Good things come in trilogies and, in most cases, the second of the series is the best&hellip;Streams of Silver is perhaps the zenith of the Icewind Dale trilogy. There are plenty of exciting adventures, desperate battles, horrifying monsters, devious sorcerers, dark dungeons, but most importantly, there is an element of the unknown. In the first novel, we all know the identity of the villain and what his nefarious plans are. Here, the companions, and the readers, have no idea what to expect, what horrible discovery they will make once they reach their destination. However, this book is more than just swashbuckling and dungeon exploring. We gain an insight into the mind of Drizzt, the mental conflicts and emotional sacrifices he must endure to uphold his principles. Even though there isn&rsquo;t a neatly wrapped conclusion by the end, this book is proof that sometimes the journey is better than the destination!</p>
-
-<p>The series continues with Bruenor, Wulfgar, Drizzt and Regis embarking on a quest to discover the doom that befell Bruenor&rsquo;s ancestral home, Mithral Hall. Many difficulties face the companions, not the least of which is the dwarf&rsquo;s inability to recollect even the approximate location of this underground kingdom, where precious mithril is so abundant that it flows in streams along the walls. Regis, on the other hand, is pursued by a deadly bounty-hunter intent on collecting his gem, and his head. The companions also attract the attention of a devious wizard of the Hosttower of the Arcane Brotherhood for their previous involvement with the crystal Crenshinibon. Along the way, the companions must deal with hordes of monsters, including trolls, ghostly unicorn, giant worm, bog monsters, even a banshee, but yet the assassin and his cohorts are ever their greatest threat. Once they rediscover Mithral Hall, they must be prepared to face its terrifying secret.</p>
-
-<p>Of course, the essence and the main attraction of Dungeons &amp; Dragons are the dungeons themselves, where rich treasures await discovery and monsters may lurk around every corner. For me, the most exciting part of the Lord of the Rings, indeed of any fantasy, is Moria. There is much of Moria here. There is the central plot that the dwarves had delved too deep and unwittingly released a dormant horror. Then there is the companions&#8217; effort to solve a puzzle to open a hidden door and gain the entrance to the underground passage, and the climactic confrontation at a bridge over a chasm which leads to the exit from the mines. This is perhaps RA Salvatore&rsquo;s nod to his inspiration (he admitted that reading Tolkien had led to his interest in the genre). Nevertheless, there are much that are original here, and the plot is seldom predictable.</p>
-
-<p>Of interest is the exploration of Drizzt&rsquo;s emotional depths. That he has refuted the ways of his people is clear, but here we also get to appreciate the emotional cost of his decision. There would come a time when the pain of his rejection by the surface world because of his dark elf heritage becomes unbearable. As Drizzt struggles to reconcile with his decision, he will need to draw on the support of his friends and on an unlikely source. Bruenor&rsquo;s conflict is also highlighted. All his life he has longed to return to the home of his childhood, of which he is the rightful king, yet he may need to realize that his true home belongs with the friends he has made.</p>
-
-<p>Overall, this is an exciting buddy road adventure with strong character development that makes it much more well-rounded than it otherwise would be.</p>
-
-<p><em>Originally posted March 14, 2003 on Amazon.com</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/07/rhapsody-child-of-blood-by-elizabeth-haydon/">Rhapsody: Child of Blood by Elizabeth Haydon</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-07T00:00:00-04:00" pubdate data-updated="true">Sep 7<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img class="pull-left" title="rhapsody_child_of_blood" src="https://dl.dropboxusercontent.com/u/52804626/images/rhapsody_child_of_blood-180x300.jpg" width="180" height="300" />I was attracted to Rhapsody, the first book of the Rhapsody trilogy, by way of its critical acclaim as one of the best fantasy debut in years. The book does not disappoint. It&rsquo;s a marvellously executed masterpiece of high fantasy in the tradition of Tolkien that we all know and love. The characters are original and wonderfully appealing, the setting at once exotic and beautiful. Elizabeth Haydon brings to life a rarity in modern fantasy fiction: a female protagonist. In Rhapsody, the eponymous heroine is a young woman, half-human, half-Lirin (something akin to an elven race), a musician, singer, and Namer, the latter being a practioner of an art that allows her to create magic by invoking qualities associated with the name of someone or something. Being on the run from villains, she unwittingly enlists the help of two mysterious characters: a hideous, deadly assassin and a monstrous, wisecracking military sergeant. Both are themselves fugitives from an ancient, omnipotent evil. Together they embark on a long journey through the center of the world, and find themselves in a strange new land, in a time that may have been centuries removed from their own. With all that they have ever known long gone, they must struggle to explore their new world and combat a horror that may have followed them from the old world. Tied into all of this is the fate of two young lovers who are brought together for the briefest moments before being flung centuries apart.</p>
-
-<p>Haydon portrays a heroine that is immediately likeable and sympathetic. She is vulnerable yet strong, innocent yet wise, naive yet experienced, gentle yet hardened. Her fierce independence, touched with a fiery temper, is balanced only by her boundless compassion and sense of justice. Unlike many other heroes, aside from her innate ability as a Namer who can perform magic with her voice and her music, she doesn&rsquo;t possess any other superhuman power. Even her skills have to be painstakingly learned and constantly practiced. She comes to master the use of the sword, but as the result of training, not inborn ability. This is a refreshing change from the Richard Rahl-stereotype who is given a magic sword and almost immediate gains the skills contained within it. The other two protagonists complement the heroine perfectly, and each has his own history and contribute significantly to the plot. The half-monstrous, possibly cannibalistic, sergeant is apt to dish out humorous one-liners, contrary to his fearsome appearance. The harsh, cruel assassin may yet learn to like and love Rhapsody as one of his own family. As the story progresses, the readers immerse in the intertwining lives of the three main characters and grow with them as they grow, until their peculiar relationship no longer seems strange but familiar and intimate.</p>
-
-<p>Haydon has masterful command of the pen. Her prose is beautifully rendered; I often find myself going back over many a passage to fully relish and appreciate all of her words. She revels in bringing out details and manages to evoke not only sights but also sounds, somehow making them feel alive as if they could float out of the page. Her world is exotic, populated both strange and familiar races, creatures, and personae, brought to life with meticulous details. Her descriptive prose makes use of many modern scientific and technical elements, such as the description of nature of music and that of the physiology of a certain character. She bring to life many fantastic adventures. The passage through the center of the world is hardly a new concept, yet made startlingly so by very original ideas: the giant roots, the cleansing fire, the unimaginable horror dormant within. And of course, the ancient mountain realm of Canrif hasn&rsquo;t produced such breathless anticipation in me since the Fellowship entered Moria.</p>
-
-<p>The pacing of the book is steady. There is indeed a climax at the end, but along the way Haydon sprinkles enough revelations to keep the reader enthralled. There is seldom a boring moment when you wish the author would just get on to the next point. Even when the pace seems to slow, the dialogues are a joy to read. Instead of being space fillers, the sometimes acerbic, oftentimes witty, always razor-sharp verbal repartees are a feast for the eyes. Rhapsody in particular, has a tremendous wit, and a sly humor that rivals that of her monstrous friend. Their verbal exchanges do a great deal to lighten the mood and speed the story along.</p>
-
-<p>If any complaint can be found, it would be with certain characterization of the heroine. Surely, her femininity offers her certain unique advantages over her traditional male counterparts. For one thing, she usually gets overlooked as the underdog at the start of a fight; many an opponent would come to regret the mistake, if he lives through it. Secondly, however unwittingly, she is able to attract and seduce male characters simply with her appearance. This comes into play often as Rhapsody is possessive of a stunning, perfect beauty. In retrospect, I was wrong to have said she is blessed with no inborn gift. Rhapsody&rsquo;s beauty and its effect on men indeed prove powerful enough and significant enough to drive many major plot points. It&rsquo;s just too convenient and detracts from her other positive qualities. Perhaps, as an offset to this unfair advantage, Rhapsody is blissfully oblivious of her own beauty, stubbornly believing instead that men happen to stare at her because of her racially mixed&mdash;thus freakish and alien&mdash;appearance. This self-delusion is kept up for the whole book and into the next! Given her astute power of observation, it would be hard to believe such inanity, which can only be ascribed to either extreme naïveté or plain stupidity.</p>
-
-<p>The other complaint I had, albeit only a minor one, is the speed with which the assassin character is able to build a powerful, sophisticated civilization from scattered tribes of a primitive people. In contrast, in Robert Jordan&rsquo;s universe, it took the hero the whole book and more to do more or less the same (on the other hand, as of now Jordan&rsquo;s series is also 10 books and counting, with the end nowhere in sight). Perhaps this isn&rsquo;t so much a weakness as a stretch in the mantle of believability, but this hardly detracts from the enjoyment of the book.</p>
-
-<p><em>Originally posted December 23, 2003 on Amazon.com</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -882,7 +926,7 @@
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>38</em>
+        <a href="/blog/categories/technology">technology</a> <em>39</em>
       </li>
     
      
@@ -897,7 +941,7 @@
     
      
       <li data-category="other">
-        <a href="/blog/categories/other">other</a> <em>1</em>
+        <a href="/blog/categories/other">other</a> <em>2</em>
       </li>
     
   </ul>
@@ -920,6 +964,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/02/07/my-git-cheat-sheet/">My Git Cheat Sheet</a>
       </li>
     
@@ -929,14 +981,6 @@
     
       <li class="post">
         <a href="/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/">Using Angular Root Scope for Communication Between Controllers</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/23/updating-sql-server-primary-key/">Updating SQL Server Primary Key</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/19/top-10-archive/">Top 10 Archive</a>
       </li>
     
   </ul>
