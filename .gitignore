@@ -1,6 +1,7 @@
 .preview-mode
 .pygments-cache
-.rvmrc
+.ruby-version
+.ruby-gemset
 .sass-cache
 _deploy
 *.sublime-*
