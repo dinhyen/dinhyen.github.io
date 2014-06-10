@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>A MoCA home network - Yen's Blog</title>
+  <meta name="author" content="Yen Tran">
+
+  
+  <meta name="description" content="The benefits of a wired home network are many. I use the SiliconDust HDHomerun Prime network TV tuners to watch cable TV on any computer in the house &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dinhyen.github.io/blog/2014/04/09/moca-home-network">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Yen's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="/stylesheets/darkbox.css" rel="stylesheet" type="text/css">
+<script src="/javascripts/darkbox.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24469490-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Yen's Blog</a></h1>
+  
+    <h2>Lens, Wheels, Skates, Keyboard</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dinhyen.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/travel">Travel</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">A MoCA Home Network</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-09T13:27:00-04:00" pubdate data-updated="true">Apr 9<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>The benefits of a wired home network are many.  I use the <a href="http://www.silicondust.com/products/hdhomerun/prime">SiliconDust HDHomerun Prime</a> network TV tuners to watch cable TV on any computer in the house without the need for a set-top box.  However, it is quite bandwidth-intensive and even a wireless-N connection just doesn&rsquo;t cut it.  The picture would be plagued with stutters, pause and artifacts and is pretty much unwatchable, especially hockey with its lightning-fast actions.</p>
+
+<p>For wired connectivity without an existing Ethernet network there are three options.  The best option from both cost and performance standpoints is available if the house is wired for a land line with Cat-5/5e/6 wiring, which is invariably the case with a modern construction.  In this case you can just use the existing wiring and swap the existing RJ11 telephone jacks for RJ45 Ethernet jacks.  This requires a bit of manual labor but the results are beautiful and satisfying.  I did this for a previous residence and it worked wonderfully. Unfortunately in my current house the wiring leaves something to be desired.  The phones lines are not wired point-to-point but daisy-chained together; this rules out an Ethernet network.</p>
+
+<p>The second option is to use the power lines themselves, which hopefully every house comes equipped with. I used a pair of TP-Link AV500 Nano power line adapters.  Installation couldn&rsquo;t be any easier&mdash;plug them into the power sockets and they just work. The LAN connection is automatically detected in Windows and OS X.  My tests showed that the connection was able to achieve the the full bandwidth that I am supposed to get. My TV feed no longer stuttered or became corrupted. Unfortunately this solution isn&rsquo;t perfect either.  Under heavy load the adapters had a nasty habit of tripping the circuit breakers.  I couldn&rsquo;t even run the network speed test while Windows Media Center was playing without bringing the power down.  Since the powerline adapters don&rsquo;t play nice with surge protectors I don&rsquo;t really have a way to prevent it from happening.</p>
+
+<p>This leaves the last option, a home network over the coaxial cabling, which like most American household we have plenty of. Each room has one, sometimes two, coaxial outlets. The industry standard for a home network over coaxial cabling is the Multimedia over Coaxial Alliance (MoCA) standard.  It seems to be a relatively young technology as there aren&rsquo;t many products for it. Interestingly this is something I&rsquo;m already using as a Verizon FiOS subscriber.  Verizon uses MoCA for the Optical Network Terminal (ONT) which converts the optical fiber signal to electric signal. To use the coaxial cabling to carry Ethernet network traffic requires a MoCA network adapter or bridge, which converts between the different signal formats. I have the standard <a href="http://www.actiontec.com/189.html">Actiontec MI424WR router</a>, which has a built-in MoCA adapter.   It would act as one endpoint.  For each additional endpoint, I would need a separate MoCA network adapter. There are only a handful of MoCA network adapters, the most popular of which the <a href="http://www.actiontec.com/251.html">Actiontec ECB2500C</a>.</p>
+
+<p>I wasn&rsquo;t sure about the best way to set up the MoCA network.  The MI424WR router can connect to the ONT via a coaxial or Cat-5, but it has only one coaxial terminal. In my case the MoCA WAN comes into the router via the coaxial connection. At first I wasn&rsquo;t sure whether I could connect to the MoCA LAN using the same coaxial terminal. I thought that I could only connect the router to the MoCA WAN, then would need an additional MoCA adapter for each outgoing connection from the router.  This possible setup is shown in the below figure.  I would need 4 MoCA adapters for extending connectivity to 2 rooms.</p>
+
+<p><img src="http://yentran.isamonkey.org/gallery/moca-home-network/moca-bad.png" alt="" /></p>
+
+<p>Fortunately, this scenario isn&rsquo;t necessary.  It turns out that the router can connect to both MoCA WAN and MoCA LAN through the same coaxial connection. This is because the respective networks operate over different frequency bands and do not interfere with each other. I would only need a MoCA adapter at each receiving end.  Since I can use the router as a MoCA adapter in one room, I&rsquo;d only need one additional MoCA adapter.</p>
+
+<p><img src="http://yentran.isamonkey.org/gallery/moca-home-network/moca-good.png" alt="" /></p>
+
+<p>Of note, the cable splitter must be MoCA-compatible. Since MoCA operates in the 0.5-1.65 GHz frequence band, the splitter should be rated for at least this range. Fortunately there are many inexpensive options.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Yen Tran</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-09T13:27:00-04:00" pubdate data-updated="true">Apr 9<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/technology/'>technology</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dinhyen.github.io/blog/2014/04/09/moca-home-network/" data-via="dinhyen" data-counturl="http://dinhyen.github.io/blog/2014/04/09/moca-home-network/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/03/03/simple-tasks-with-grunt/" title="Previous Post: Simple tasks with Grunt">&laquo; Simple tasks with Grunt</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Categories</h1>
+  <ul id="categories">
+    
+     
+      <li data-category="Photoshop">
+        <a href="/blog/categories/photoshop">Photoshop</a> <em>2</em>
+      </li>
+    
+     
+      <li data-category="travel">
+        <a href="/blog/categories/travel">travel</a> <em>20</em>
+      </li>
+    
+     
+      <li data-category="outdoors">
+        <a href="/blog/categories/outdoors">outdoors</a> <em>9</em>
+      </li>
+    
+     
+      <li data-category="photography">
+        <a href="/blog/categories/photography">photography</a> <em>20</em>
+      </li>
+    
+     
+      <li data-category="hockey">
+        <a href="/blog/categories/hockey">hockey</a> <em>11</em>
+      </li>
+    
+     
+      <li data-category="city">
+        <a href="/blog/categories/city">city</a> <em>6</em>
+      </li>
+    
+     
+      <li data-category="drawing">
+        <a href="/blog/categories/drawing">drawing</a> <em>1</em>
+      </li>
+    
+     
+      <li data-category="technology">
+        <a href="/blog/categories/technology">technology</a> <em>40</em>
+      </li>
+    
+     
+      <li data-category="review">
+        <a href="/blog/categories/review">review</a> <em>25</em>
+      </li>
+    
+     
+      <li data-category="hiking">
+        <a href="/blog/categories/hiking">hiking</a> <em>9</em>
+      </li>
+    
+     
+      <li data-category="other">
+        <a href="/blog/categories/other">other</a> <em>2</em>
+      </li>
+    
+  </ul>
+</section>
+<script type="text/javascript">
+  $(function() {
+    var categories = [];
+    $('[data-category]').each(function() {
+      categories.push(this);
+    });
+    categories.sort(function (a, b) {
+      return a.attributes['data-category'].value.toLowerCase() <= b.attributes['data-category'].value.toLowerCase()
+            ? -1 : 1;
+    });
+    $('#categories').html(categories);
+  });
+</script>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/04/09/moca-home-network/">A MoCA Home Network</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/07/my-git-cheat-sheet/">My Git Cheat Sheet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/07/sports-i-would-watch/">Sports I Would Watch</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Yen Tran -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

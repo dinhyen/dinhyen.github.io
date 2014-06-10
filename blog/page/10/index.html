@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="If you&rsquo;re looking for an enthralling fantasy epic, look no further than the Sword of Truth series. Though Wizard&rsquo;s First Rule isn&rsquo;t &hellip;">
+  <meta name="description" content="Up to IIS 7 (Windows Vista and Windows Server 2008), the default app pool identity is NetworkService 7. In IIS 7.5 (Windows 7 and Windows Server 2008 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,69 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/06/granting-permissions-to-the-application-pool-identity-in-iis-7-5/">How to Grant Permissions to the Application Pool Identity for IIS 7.5</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-06T00:00:00-04:00" pubdate data-updated="true">Sep 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Up to IIS 7 (Windows Vista and Windows Server 2008), the default app pool identity is NetworkService 7. In IIS 7.5 (Windows 7 and Windows Server 2008 R2) the app pool identity is changed to something called ApplicationPoolIdentity.</p>
+
+<p>Let&rsquo;s say you set up a virtual directory or application that uses this app pool. You&rsquo;ll need to grant access permission on the physical path to ApplicationPoolIdentity. However, you&rsquo;d find that there is no such user account. According to <a href="http://blogs.iis.net/webdevelopertips/archive/2009/10/02/tip-98-did-you-know-the-default-application-pool-identity-in-iis-7-5-windows-7-changed-from-networkservice-to-apppoolidentity.aspx">an IIS Team blog</a>, the user account associated with ApplicationPoolIdentity is actually <code>IIS AppPool\&lt;App pool name&gt;</code>. The intention is to further reinforce app pool isolation through the use of a separate user account for each app pool.</p>
+
+<p>To grant permission to ApplicationPoolIdentity:</p>
+
+<ul>
+<li>Open the IIS Manager</li>
+<li>Right-click on the desired virtual directory or application and select Edit Permission. Alternatively, you could have used Windows Explorer to browse to the physical path and open its Properties panel.</li>
+<li>On the Security tab, select Edit, then Add</li>
+<li>If the location is set to the domain, select Locations and change it to the local machine</li>
+<li>In the textbox, enter <code>IIS AppPool\[Site Name]</code> for example, <code>IIS AppPool\Default Web Site</code></li>
+</ul>
+
+
+<p><img title="select-1" src="https://dl.dropboxusercontent.com/u/52804626/images/select-1-300x159.png" width="300" height="159" /></p>
+
+<ul>
+<li>Select Check Names and a valid user account name should appear</li>
+</ul>
+
+
+<p><img title="select-2" src="https://dl.dropboxusercontent.com/u/52804626/images/select-2-300x159.png" width="300" height="159" /></p>
+
+<ul>
+<li>Select the desired permissions; for example, Read &amp; Execute</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1062,42 +1125,6 @@ I follow an approach of first putting down a base layer by using a soft pencil t
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/07/05/quebec-1-july/">Québec, 1-July</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-07-05T00:00:00-04:00" pubdate data-updated="true">Jul 5<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>We decided to take off around 16:00 on Friday.  In addition to the rush hour, we anticipated no fewer than 100000 Bostonians to be on the move for the long weekend. So we avoided the main highways altogether.  Our plans worked, and when we re-connected with Interstate-93 North it was in Manchester, NH, some 60 miles away. The drive through the magnificent White Mountains was quite pleasant, as usual. Nevertheless, it was to be a very long drive.  My car&rsquo;s GPS has no coverage for the Québec region, so from about Drummondville onward it was driving the old-fashion way.  We made it to the B&amp;B in the St. Roch district around 23:30, not bad despite my reputation as an alleged slowpoke.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/11/">&larr; Older</a>
@@ -1151,7 +1178,7 @@ I follow an approach of first putting down a base layer by using a soft pencil t
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>39</em>
+        <a href="/blog/categories/technology">technology</a> <em>40</em>
       </li>
     
      
@@ -1189,6 +1216,10 @@ I follow an approach of first putting down a base layer by using a soft pencil t
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/09/moca-home-network/">A MoCA Home Network</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a>
       </li>
     
@@ -1202,10 +1233,6 @@ I follow an approach of first putting down a base layer by using a soft pencil t
     
       <li class="post">
         <a href="/blog/2014/02/07/sports-i-would-watch/">Sports I Would Watch</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/">Using Angular Root Scope for Communication Between Controllers</a>
       </li>
     
   </ul>

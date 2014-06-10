@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="In Visual Studio, it&rsquo;s easy enough to turn on and off line numbers.  You&rsquo;ll have to select Tools > Options > Text Editor, expand the &hellip;">
+  <meta name="description" content="I have an HTC Aria which runs now-ancient Android 2.1. This phone is far from being the latest and greatest, to put it mildly, but I like its small &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,101 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/12/31/installing-cyanogenmod-on-the-htc-aria/">Upgrading the HTC Aria With Android Gingerbread and CyanogenMod</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-31T00:00:00-05:00" pubdate data-updated="true">Dec 31<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have an HTC Aria which runs now-ancient Android 2.1. This phone is far from being the latest and greatest, to put it mildly, but I like its small form factor. After putting up with it for a year, I have had enough and decided to upgrade it to Gingerbread.  This is how I did it. As this is my first attempt, no doubt there are different and better ways to do things. Kudos should go to the developer and enthusiast community for making all of this possible.</p>
+
+<h3>Root the phone</h3>
+
+<p>Avoid the hassle of dealing with Windows USB drivers. Download and run the custom Linux image with pre-configured utilities as described in <a href="http://forum.xda-developers.com/showpost.php?p=7449486&amp;amp;postcount=1">this post</a>.  Follow the instructions in the post to root the phone and install the ClockworkMod recovery image.</p>
+
+<h3>Backup application data</h3>
+
+<p>Backup is always a good idea, especially before making such a radical change to the phone.  Now that I have root access, there are a few options. The Mybackup Root app from the Android Market lets you backup data including contacts, SMS, call log, calendar, dictionary, music playlists, etc.  You can also use it to backup applications (APKs) and application data. The backups are saved to the phone&rsquo;s SD card.  In my case, I mount the phone as USB storage and copy the backup to a computer just to be on the safe side. The backups are found on the SD card under /rerware.</p>
+
+<h3>Download CyanogenMod</h3>
+
+<p>I decide to go with CyanogenMod, a very popular mod with support for a wide range of Android devices, including the Aria.  The current version of CyanogenMod as of this writing, version 7, is based on Android Gingerbread.</p>
+
+<p><a href="http://download.CyanogenMod.com">Download</a> CyanogenMod. Select the latest stable build or, if you&rsquo;re feeling adventurous, a nightly build. For the Aria, select the Liberty on the device list. Copy the CyanogenMod zip file to the phone&rsquo;s root directory.</p>
+
+<h3>Reboot into recovery mode</h3>
+
+<p>First turn off phone (taking out the battery is the quickest way). Boot into recovery mode by holding down Volume Down and Power buttons.  Once phone boots, the screen should show HBOOT. Use the Volume buttons to scroll and the Power button to select &ldquo;recovery&rdquo; to put the phone in recovery mode.</p>
+
+<h3>Backup (again)</h3>
+
+<p>In case some thing goes wrong, I&rsquo;d like to be able to go back to the way things were.  ClockworkMod recovery provides a powerful backup utility called nandroid, which lets you backup the entire content of the phone&rsquo;s SD card (NAND flash &mdash; NANDroid, get it? :&ndash;))  To use nandroid, select &ldquo;nandroid&rdquo; in recovery mode and follow the on-screen instructions. I also copy the backups from the SD card to a computer for good measure (after rebooting and mounting the phone as USB mass storage).</p>
+
+<h3>Install CyanogenMod</h3>
+
+<p>This step is based on instructions provided in <a href="http://forum.xda-developers.com/showthread.php?t=956223">this post</a>.  In recovery mode, wipe the phone in preparation for the new OS by selecting the following:</p>
+
+<ul>
+<li>Wipe cache partition</li>
+<li>Wipe data/factory reset</li>
+<li>Clear Dalvik cache (under Advanced)</li>
+</ul>
+
+
+<p>To install the mod, again in recovery mode:</p>
+
+<ul>
+<li>Select &ldquo;install zip from SD card&rdquo;</li>
+<li>Select &ldquo;choose zip from SD card&rdquo; and locate the zip file you copied earlier on the SD card</li>
+<li>Wait for the install to complete</li>
+<li>Go back a couple of levels and select &ldquo;reboot system now&rdquo;</li>
+</ul>
+
+
+<p>You should see the CyanogenMod skateboarding Android logo while the phone reboots. Once your phone comes up, it will be sporting the sleek interface of Android Gingerbread! Here&rsquo;s a screenshot as proof:</p>
+
+<p><img title="htc-aria-after" src="https://dl.dropboxusercontent.com/u/52804626/images/htc-aria-after.png" width="320" height="480" /></p>
+
+<h3>Install the Google Apps package</h3>
+
+<p>It&rsquo;s highly recommended that you also install the <a href="http://goo-inside.me/gapps">Google Apps package</a> . This package contains useful apps which for certain reasons the CyanogenMod team is not able to bundle with the mod. These include the Android Market, Gmail, Facebook, Google Maps, YouTube, etc.</p>
+
+<p>There are a few ways to install the package, the simplest of which is to follow the same steps to install CyanogenMod using ClockworkMod recovery. In my case, I was only able to successfully install the latest app package; the older packages just did not work.</p>
+
+<p>The installation actually takes place once the phone is rebooted. Android Market is automatically installed first, then it&rsquo;s used to install the other apps. <a href="http://www.youtube.com/watch?v=DHgZNnHdrSA">This video</a> shows the process step by step. In my case, I have to install just the Android Market, then install other apps from there; otherwise the apps would crash when launched.</p>
+
+<h3>Restore backups</h3>
+
+<p>If you&rsquo;ve made backups using Mybackup Root, you can reinstall the app then use it to restore your data.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -823,56 +918,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/07/the-art-of-the-fellowship-of-the-ring-the-lord-of-the-rings-by-gary-russell/">The Art of the Fellowship of the Ring (the Lord of the Rings) by Gary Russell</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-07T00:00:00-04:00" pubdate data-updated="true">Sep 7<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img class="pull-left" title="ArtOfLOTR" src="https://dl.dropboxusercontent.com/u/52804626/images/ArtOfLOTR.jpg" width="185" height="241" />Bringing Tolkien&rsquo;s Middle Earth to life is a monumental task. The locations, creatures and monsters have to be conceptualized, designed and created from the ground up. Capturing the spirit of Tolkien&rsquo;s work is an even more daunting challenge because of its tremendous scope, complexity and beauty. Furthermore, its legions of fans are staunch in their visions of Tolkien&rsquo;s universe, and satisfying all of them is impossible.</p>
-
-<p>That the movie has been a phenomenal success and, more importantly, an incredible realization of Tolkien&rsquo;s visions is a testament to the skills and dedication of Peter Jackson and his team. The most visible aspect of the movie is the artistry underlying the costumes, weapons, architecture, and scenics. Jackson&rsquo;s most far-reaching impact was perhaps his decision to bring in two of the most influential Tolkien artists, Alan Lee and John Howe, as art directors. Both have illustrated Tolkien for a long time and in many cases their works have become widely accepted if not standard interpretations of Tolkien. The artists and their talented teams are responsible for virtually every element of the movie. Indeed, the production designs have the look and feel of works of art. The most direct result is the movie&rsquo;s breathtaking beauty, which exceeds even the most fertile imagination among Tolkien fans. A secondary result is the harmony and consistency of artistic elements and designs from beginning to end.</p>
-
-<p>The book is a comprehensive chronicle of the art of the movie. Its 192 pages are lavishly illustrated with lush color photographs and gorgeous drawings and paintings. The book is divided into four main chapters: Locations, Costumes, Armory, and Creatures.</p>
-
-<p>The Locations chapter is further divided into sections that correspond to major locations. These are Bag End, Bree, Weathertop, Isengard, Rivendell, The Misty Mountains, Lothlorien, Anduin, and Amon Hen. I couldn&rsquo;t help but stare in stupefied silence at the paradise-like beauty of Rivendell or the alien grace and intricacy of Lothlorien. This section alone is worth the price of the book. The architectural pencil drawings are outstanding. Many excellent designs were created even though only a few eventually made it into the movie. If, like me, you get goose bumps when the camera sweeps through the hall of Dwarrowdelf, know that it&rsquo;s no coincidence.</p>
-
-<p>The costume and armory designs are most conspicuous for their painstaking details. Each costume is unique and manages to evoke the characteristics of each race. Thus hobbits look like townspeople out for a stroll, human tunics are rugged and martial, dwarven armor exudes fine craftsmanship, and the flowing robes of the elves accentuate their delicate features and natural grace. The weapon designs follow the same line and display remarkable details. Sauron&rsquo;s various armor designs are my favorite.</p>
-
-<p>The Creatures chapter shows drawings, composites, maquettes, and sculptures of the various Orc races, the Uruk-Hais, the troll, the Watcher, the Ringwraiths, and the Balrog. The design of the Watcher illustrates the high artistic standard of the designers. Tolkien never described the Watcher in details, so many outstanding designs were considered and rejected before one was finally selected. Of all the creatures that stalk, crawl and fly in the movie, perhaps the Balrog is the most awe-inspiring. The Balrog is another creature that Tolkien only briefly described. It&rsquo;s fascinating to see the various interpretations, from reptilian to winged humanoids to centaur-like. The end result of all this is one of the most awesome monsters on the silver screen.</p>
-
-<p>This treasure trove of artwork is a must-have not only for Tolkien lovers and fans of the movie but also for those who appreciate great fantasy art.</p>
-
-<p><em>Originally posted April 30, 2003 on Amazon.com</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -926,7 +971,7 @@
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>39</em>
+        <a href="/blog/categories/technology">technology</a> <em>40</em>
       </li>
     
      
@@ -964,6 +1009,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/09/moca-home-network/">A MoCA Home Network</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a>
       </li>
     
@@ -977,10 +1026,6 @@
     
       <li class="post">
         <a href="/blog/2014/02/07/sports-i-would-watch/">Sports I Would Watch</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/">Using Angular Root Scope for Communication Between Controllers</a>
       </li>
     
   </ul>
