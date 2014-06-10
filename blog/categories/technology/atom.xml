@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technology | Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2014-06-10T18:02:33-04:00</updated>
+  <updated>2014-06-10T19:57:41-04:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -26,13 +26,15 @@
 
 <p>This leaves the last option, a home network over the coaxial cabling, which like most American household we have plenty of. Each room has one, sometimes two, coaxial outlets. The industry standard for a home network over coaxial cabling is the Multimedia over Coaxial Alliance (MoCA) standard.  It seems to be a relatively young technology as there aren&rsquo;t many products for it. Interestingly this is something I&rsquo;m already using as a Verizon FiOS subscriber.  Verizon uses MoCA for the Optical Network Terminal (ONT) which converts the optical fiber signal to electric signal. To use the coaxial cabling to carry Ethernet network traffic requires a MoCA network adapter or bridge, which converts between the different signal formats. I have the standard <a href="http://www.actiontec.com/189.html">Actiontec MI424WR router</a>, which has a built-in MoCA adapter.   It would act as one endpoint.  For each additional endpoint, I would need a separate MoCA network adapter. There are only a handful of MoCA network adapters, the most popular of which the <a href="http://www.actiontec.com/251.html">Actiontec ECB2500C</a>.</p>
 
-<p>I wasn&rsquo;t sure about the best way to set up the MoCA network.  The MI424WR router can connect to the ONT via a coaxial or Cat-5, but it has only one coaxial terminal. In my case the MoCA WAN comes into the router via the coaxial connection. At first I wasn&rsquo;t sure whether I could connect to the MoCA LAN using the same coaxial terminal. I thought that I could only connect the router to the MoCA WAN, then would need an additional MoCA adapter for each outgoing connection from the router.  This possible setup is shown in the below figure.  I would need 4 MoCA adapters for extending connectivity to 2 rooms.</p>
+<p>I wasn&rsquo;t sure about the best way to set up the MoCA network.  The MI424WR router can connect to the ONT via a coaxial or Cat-5 cable, but it has only one coaxial terminal. In my case the MoCA WAN comes into the router via the coaxial connection. At first I wasn&rsquo;t sure whether I could connect to the MoCA LAN using the same coaxial terminal. I thought that since the router is connected to the MoCA WAN coaxially, I would need an additional MoCA adapter for each outgoing connection from the router to the MoCA LAN.  This possible setup is shown in the below figure.  I would need 4 MoCA adapters to extend connectivity to 2 rooms.</p>
 
 <p><img src="http://yentran.isamonkey.org/gallery/moca-home-network/moca-bad.png" alt="" /></p>
 
 <p>Fortunately, this scenario isn&rsquo;t necessary.  It turns out that the router can connect to both MoCA WAN and MoCA LAN through the same coaxial connection. This is because the respective networks operate over different frequency bands and do not interfere with each other. I would only need a MoCA adapter at each receiving end.  Since I can use the router as a MoCA adapter in one room, I&rsquo;d only need one additional MoCA adapter.</p>
 
 <p><img src="http://yentran.isamonkey.org/gallery/moca-home-network/moca-good.png" alt="" /></p>
+
+<p>If you need more than one Ethernet port, Adaptec also makes a 4-port coaxial network adapter (ECB3500T01), which is only marginally more expensive than a 1-port adapter.  It would be a more compact solution than using an Ethernet switch with the 1-port adapter.</p>
 
 <p>Of note, the cable splitter must be MoCA-compatible. Since MoCA operates in the 0.5-1.65 GHz frequence band, the splitter should be rated for at least this range. Fortunately there are many inexpensive options.</p>
 ]]></content>
@@ -320,7 +322,7 @@ watch: {
 <h1>These will show up in git log</h1>
 
 <p>git config &mdash;global user.name &ldquo;Yen Tran&rdquo;
-git config &mdash;global user.email <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x79;&#101;&#110;&#x40;&#121;&#101;&#110;&#116;&#114;&#97;&#110;&#x2e;&#x6f;&#114;&#103;">&#x79;&#x65;&#x6e;&#x40;&#121;&#101;&#x6e;&#x74;&#114;&#x61;&#110;&#x2e;&#111;&#114;&#103;</a>
+git config &mdash;global user.email <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x79;&#x65;&#x6e;&#64;&#x79;&#101;&#110;&#x74;&#x72;&#x61;&#110;&#46;&#x6f;&#x72;&#103;">&#x79;&#101;&#x6e;&#x40;&#x79;&#101;&#x6e;&#116;&#x72;&#x61;&#110;&#46;&#111;&#114;&#x67;</a>
 git config &mdash;list
 ```</p>
 
