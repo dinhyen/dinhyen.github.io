@@ -4,7 +4,7 @@
   <title><![CDATA[Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2014-06-10T19:57:41-04:00</updated>
+  <updated>2014-06-10T20:00:43-04:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -34,7 +34,7 @@
 
 <p><img src="http://yentran.isamonkey.org/gallery/moca-home-network/moca-good.png" alt="" /></p>
 
-<p>If you need more than one Ethernet port, Adaptec also makes a 4-port coaxial network adapter (ECB3500T01), which is only marginally more expensive than a 1-port adapter.  It would be a more compact solution than using an Ethernet switch with the 1-port adapter.</p>
+<p>If you need more than one Ethernet port, Adaptec also makes a 4-port Home Theater Coaxial Network Adapter (ECB3500T01), which is only marginally more expensive than a 1-port adapter.  It would be a more compact solution than using an Ethernet switch with the 1-port adapter.</p>
 
 <p>Of note, the cable splitter must be MoCA-compatible. Since MoCA operates in the 0.5-1.65 GHz frequence band, the splitter should be rated for at least this range. Fortunately there are many inexpensive options.</p>
 ]]></content>
