@@ -12,11 +12,11 @@ My initial attempt was to add a new Execute Shell build step to run `xcopy`.  Si
 ```
 xcopy c:\\source\\app\\* \\\\server\\share\\app
 ```
-This works, but in order for xcopy to copy subdirectories, refrain from prompting everytime it needs to overwrite a file and take other actions necessary for unsupervised execution, I need to specify additional parameters.
+This worked, but in order for xcopy to copy subdirectories, refrain from prompting everytime it needs to overwrite a file and take other actions necessary for unsupervised execution, I needed to specify additional parameters.
 ```
 xcopy c:\\source\\app\\* \\\\server\\share /c /k /e /r /y /exclude:c:\\source\\xcopy_exclude.txt
 ```
-Unfortunately this is when xcopy blows up with the "invalid number of parameters" error.  It probably has to do with the shell not passing the parameters to xcopy.  No dice if I put the command in a batch file then executing it.  Ditto when I tried `robocopy`, which prints a nicer error message but is functionally the same as xcopy.  As a note, you could test all of this in a Bourne shell rather than invoking Hudson every time.
+Unfortunately this was when xcopy blows up with the "invalid number of parameters" error.  It probably had to do with the shell not passing the parameters to xcopy.  No dice if I put the command in a batch file then executing it.  Ditto when I tried `robocopy`, which prints a nicer error message but is functionally the same as xcopy.  As a note, you could test all of this in a Bourne shell rather than invoking Hudson every time.
 
 It occurred to me to use something that's native to the shell, rather than trying to get it to play nice with xcopy.  You'd still have to deal with the backslash in the share:
 ```
