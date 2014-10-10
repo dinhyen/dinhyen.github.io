@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technology | Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2014-10-09T22:45:47-04:00</updated>
+  <updated>2014-10-09T22:49:11-04:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -24,11 +24,11 @@
 <code>
 xcopy c:\\source\\app\\* \\\\server\\share\\app
 </code>
-This works, but in order for xcopy to copy subdirectories, refrain from prompting everytime it needs to overwrite a file and take other actions necessary for unsupervised execution, I need to specify additional parameters.
+This worked, but in order for xcopy to copy subdirectories, refrain from prompting everytime it needs to overwrite a file and take other actions necessary for unsupervised execution, I needed to specify additional parameters.
 <code>
 xcopy c:\\source\\app\\* \\\\server\\share /c /k /e /r /y /exclude:c:\\source\\xcopy_exclude.txt
 </code>
-Unfortunately this is when xcopy blows up with the &ldquo;invalid number of parameters&rdquo; error.  It probably has to do with the shell not passing the parameters to xcopy.  No dice if I put the command in a batch file then executing it.  Ditto when I tried <code>robocopy</code>, which prints a nicer error message but is functionally the same as xcopy.  As a note, you could test all of this in a Bourne shell rather than invoking Hudson every time.</p>
+Unfortunately this was when xcopy blows up with the &ldquo;invalid number of parameters&rdquo; error.  It probably had to do with the shell not passing the parameters to xcopy.  No dice if I put the command in a batch file then executing it.  Ditto when I tried <code>robocopy</code>, which prints a nicer error message but is functionally the same as xcopy.  As a note, you could test all of this in a Bourne shell rather than invoking Hudson every time.</p>
 
 <p>It occurred to me to use something that&rsquo;s native to the shell, rather than trying to get it to play nice with xcopy.  You&rsquo;d still have to deal with the backslash in the share:
 <code>
@@ -350,7 +350,7 @@ watch: {
 <h1>These will show up in git log</h1>
 
 <p>git config &mdash;global user.name &ldquo;Yen Tran&rdquo;
-git config &mdash;global user.email <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x79;&#101;&#110;&#64;&#x79;&#x65;&#x6e;&#x74;&#x72;&#x61;&#x6e;&#x2e;&#111;&#114;&#103;">&#121;&#101;&#110;&#x40;&#121;&#x65;&#x6e;&#116;&#114;&#97;&#x6e;&#x2e;&#111;&#114;&#103;</a>
+git config &mdash;global user.email <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x79;&#x65;&#x6e;&#x40;&#121;&#x65;&#x6e;&#x74;&#x72;&#x61;&#x6e;&#x2e;&#x6f;&#x72;&#x67;">&#121;&#101;&#110;&#64;&#x79;&#101;&#110;&#116;&#x72;&#97;&#110;&#x2e;&#x6f;&#x72;&#x67;</a>
 git config &mdash;list
 ```</p>
 
