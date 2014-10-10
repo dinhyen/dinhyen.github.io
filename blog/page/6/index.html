@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="Some highlights during my visit to the Berkshires in the autumn of 2010: The Cascade (map): Trail head begins at the end of a very suburban road.   &hellip;">
+  <meta name="description" content="I don&rsquo;t think anyone would argue that regularly backing up data is a good idea.  At the same time, most people including myself don&rsquo;t do &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,58 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/10/backing-up-your-site-with-vdeck/">Backing Up Your Site With VDeck</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-10T00:00:00-04:00" pubdate data-updated="true">May 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I don&rsquo;t think anyone would argue that regularly backing up data is a good idea.  At the same time, most people including myself don&rsquo;t do so nearly often enough.  Fortunately, the VDeck control panel provided by my web host helps make backing up and restoring data a cinch.</p>
+
+<p>To back up my Wordpress blog, I need to back up both the files and the MySQL database.  To back up files, use the Archive Gateway.</p>
+
+<p><img title="vdeck-1" src="https://dl.dropboxusercontent.com/u/52804626/images/vdeck-1.png" width="695" height="190" /></p>
+
+<p>The Archive Gateway lets you create an archive of one or more folders, which you can retrieve by FTP.  Downloading a single large file is a lot faster than downloading hundreds of small files.  This page also lets you restore files from an archive.</p>
+
+<p><img title="vdeck-2" src="https://dl.dropboxusercontent.com/u/52804626/images/vdeck-2.png" width="643" height="528" /></p>
+
+<p>To back up the database, use the MySQL Database tool.</p>
+
+<p><img title="vdeck-3" src="https://dl.dropboxusercontent.com/u/52804626/images/vdeck-3.png" width="695" height="190" /></p>
+
+<p>On the Backup tab, you can create a backup for an entire database or for individual tables.</p>
+
+<p><img title="vdeck-4" src="https://dl.dropboxusercontent.com/u/52804626/images/vdeck-4.png" width="756" height="425" /></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -837,48 +889,6 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/03/installing-antivirus-changes-firefox-keyword-url/">Installing Antivirus Program Changes FireFox Keyword URL</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-03T00:00:00-05:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I tried out a well-known cloud-based antivirus solution.  It worked well enough, but after I installed it, I noticed that my FireFox searches were now redirected from Google to Yahoo!.  In the FF config screen (which can be opened by typing &ldquo;about:config&rdquo; in the location bar), I noticed that the keyword.URL setting had been changed to Yahoo!:</p>
-
-<p><img title="panda-yahoo-keyword-url" src="https://dl.dropboxusercontent.com/u/52804626/images/panda-yahoo-keyword-url.png" width="1212" height="113" /></p>
-
-<p>This setting dictates which search service is used when the user enters a keyword (i.e., anything that does not resemble a URL like <a href="http://yahoo.com">http://yahoo.com</a>).  While Yahoo! search is no doubt capable, this type of unsolicited change is quite annoying, particularly for a product that&rsquo;s intended to detect and remove malware.  I reverted the setting back to Google by changing its value to <code>http://www.google.com/search?ie=UTF-8&amp;amp;oe=UTF-8&amp;amp;q=</code>.</p>
-
-<p>Needless to say I wasn&rsquo;t sticking with this product.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -932,7 +942,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>40</em>
+        <a href="/blog/categories/technology">technology</a> <em>41</em>
       </li>
     
      
@@ -970,6 +980,10 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/15/copying-files-in-hudson/">Copying Files in Hudson</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/04/09/moca-home-network/">A MoCA Home Network</a>
       </li>
     
@@ -983,10 +997,6 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     
       <li class="post">
         <a href="/blog/2014/02/07/my-git-cheat-sheet/">My Git Cheat Sheet</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/02/07/sports-i-would-watch/">Sports I Would Watch</a>
       </li>
     
   </ul>

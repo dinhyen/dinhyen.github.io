@@ -4,7 +4,7 @@
   <title><![CDATA[Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2014-07-07T16:13:27-04:00</updated>
+  <updated>2014-10-09T22:45:47-04:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Copying files in Hudson]]></title>
+    <link href="http://dinhyen.github.io/blog/2014/04/15/copying-files-in-hudson/"/>
+    <updated>2014-04-15T20:05:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2014/04/15/copying-files-in-hudson</id>
+    <content type="html"><![CDATA[<p>Copying files somewhere is pretty standard procedure when deploying an app.  Interestingly I&rsquo;ve never had to copy files directly in Hudson.  Until now I&rsquo;ve only deployed .NET apps in Hudson and used MSBuild&rsquo;s Copy task to copy the files to a share folder.  Now that I want to deploy Angular and other client apps in Hudson, I&rsquo;d have to copy the files manually.</p>
+
+<p>My initial attempt was to add a new Execute Shell build step to run <code>xcopy</code>.  Since Hudson executes the command through the Bourne shell, which interprets any backslash in the path as the escape character, I&rsquo;d have to escape the backslash itself.  Why Windows has to be different from everyone else is a major source of annoyance if you have to move back and forth between Windows and *nix.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>xcopy c:\\source\\app\\* \\\\server\\share\\app</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This works, but in order for xcopy to copy subdirectories, refrain from prompting everytime it needs to overwrite a file and take other actions necessary for unsupervised execution, I need to specify additional parameters.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>xcopy c:\\source\\app\\* \\\\server\\share /c /k /e /r /y /exclude:c:\\source\\xcopy_exclude.txt</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Unfortunately this is when xcopy blows up with the &ldquo;invalid number of parameters&rdquo; error.  It probably has to do with the shell not passing the parameters to xcopy.  No dice if I put the command in a batch file then executing it.  Ditto when I tried <code>robocopy</code>, which prints a nicer error message but is functionally the same as xcopy.  As a note, you could test all of this in a Bourne shell rather than invoking Hudson every time.</p>
+
+<p>It occurred to me to use something that&rsquo;s native to the shell, rather than trying to get it to play nice with xcopy.  You&rsquo;d still have to deal with the backslash in the share:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cp -r /c/source/app/* \\\\server\\share</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This worked!  Also for things like &ldquo;rm -rf&rdquo;.  We&rsquo;re done, right?  Well, this mixmatching of different command-line styles seems unwieldy.  After I experimented further, it turned out that I had made an error from the start.  In addition to the Execute Shell build step, there&rsquo;s another type called Execute Windows Batch Command.  This build step allows you to run commands in a Windows shell.  Thus you can run execute xcopy, or anything else, as you would in the command prompt without needing to escape backslash.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A MoCA home network]]></title>
@@ -37,6 +68,8 @@
 <p>If you need more than one Ethernet port, Adaptec also makes a 4-port Home Theater Coaxial Network Adapter (ECB3500T01), which is only marginally more expensive than a 1-port adapter.  It would be a more compact solution than using an Ethernet switch with the 1-port adapter.</p>
 
 <p>Of note, the cable splitter must be MoCA-compatible. Since MoCA operates in the 0.5-1.65 GHz frequence band, the splitter should be rated for at least this range. Fortunately there are many inexpensive options.</p>
+
+<p>Update (Oct 9, 2014): It turns out that Verizon sells a Verizon-branded <a href="https://teleproducts.verizon.com/fileshare/plm/brochure/ATWECB3000N_brochure.pdf">Fios wireless network extender</a> for $75 which comes with 2 Gigabit Ethernet ports as well as Wireless-N and MoCA connectivity, ostensibly to extend a home network to hard-to-reach places.  In retrospect the Wireless-N Wi-Fi extender would have made it a better purchase than the 4-port Home Theater Coaxial Network Adapter.</p>
 ]]></content>
   </entry>
   
@@ -778,8 +811,16 @@ From <a href="http://stackoverflow.com/questions/18506456/git-how-to-delete-a-lo
 <span class='line-number'>4</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'># Remove origin
 </span><span class='line'>git remote rm origin
-</span><span class='line'>git remote add origin git@donny:etagout.git
+</span><span class='line'>git remote add origin git@server:repo.git
 </span><span class='line'>git remote show origin</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Change origin URL
+</span><span class='line'>git remote set-url origin git@server:repo.git</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>Remote Branch</h3>
@@ -3273,177 +3314,6 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
 <p>The search box is defined to be &ldquo;active&rdquo; when the text box has focus or when it contains text. The latter condition accounts for the scenario in which the user types something then clicks away; the search box should stay expanded instead of collapsed.</p>
 
 <p>The <code>submit()</code> handler ensures that the user enters at least 2 non-white space characters.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Animate textbox using KnockoutJS]]></title>
-    <link href="http://dinhyen.github.io/blog/2013/04/24/animate-textbox-using-knockoutjs/"/>
-    <updated>2013-04-24T00:00:00-04:00</updated>
-    <id>http://dinhyen.github.io/blog/2013/04/24/animate-textbox-using-knockoutjs</id>
-    <content type="html"><![CDATA[<p><a href="http://jsfiddle.net/CHMaQ/23/">View the live example</a></p>
-
-<p><a href="http://knockoutjs.com">KnockoutJS</a> is a dynamic UI framework that can really liberate you from the tedium of low-level DOM manipulations.  Even though I&rsquo;ve only played with it for a little while, I&rsquo;ve become a huge fan. One of my initial attempts is to create an animated text input similar to Twitter&rsquo;s.</p>
-
-<p>The UI is quite simple. The textbox should display a &ldquo;placeholder&rdquo; prompt.  When the user clicks inside the textbox, expand it and display a save button, initially disabled.  If the user types something (other than white space), enable the button.  If the textbox loses focus, shrink it to its original size, unless it contains a valid comment.</p>
-
-<p>To show the placeholder prompt, I could use the HTML5 &ldquo;placeholder&rdquo; attribute. Unfortunately this isn&rsquo;t supported by all browsers (what else but IE 9 and below). So I&rsquo;m using a div to wrap the textbox and display the prompt as an overlay.</p>
-
-<p>The view model&rsquo;s isEditing boolean observable reflects whether the textbox has focus.  It&rsquo;s wired to the hasfocus binding on the textbox.  Additionally, clicking anywhere on the wrapper div should activate the observable, since the user should be able to focus by clicking on the overlaying prompt.</p>
-
-<p>The content of the textbox is tied to the newComment observable. Per the valueUpdate binding, it is updated after a key press.  Additionally, the propertychange and input parameters allow it to be updated when the user copies and pastes with the mouse or keyboard.</p>
-
-<p>To animate the textbox, I use a custom binding which is also wired to the isEditing observable. The animation should be performed only when the textbox is empty or contains only white space. When the textbox has focus, it&rsquo;s expanded.  When it loses focus, it&rsquo;s collapsed.</p>
-
-<p>The button is shown when the textbox has focus. Additionally it&rsquo;s only enabled when the user enters non-white space text. Clicking on the button simply adds adds the new comment to the comments observable array and clears the textbox. The beauty is that KnockoutJS automatically updates the UI to reflect the change.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-overlay&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;click: isEditing&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;caption&quot;</span><span class="nt">&gt;</span>Write something...<span class="nt">&lt;/div&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">&quot;#newComment&quot;</span> <span class="na">name=</span><span class="s">&quot;newComment&quot;</span> <span class="na">cols=</span><span class="s">&quot;20&quot;</span> <span class="na">rows=</span><span class="s">&quot;2&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;value: newComment, valueUpdate: [&#39;afterkeydown&#39;,&#39;propertychange&#39;,&#39;input&#39;], hasfocus: isEditing, animateTextbox: isEditing&quot;</span><span class="nt">&gt;&lt;/textarea&gt;</span>
-</span><span class='line'><span class="nt">&lt;/span&gt;</span>
-</span><span class='line'><span class="nt">&lt;button</span> <span class="na">data-bind=</span><span class="s">&quot;click: save, enable: hasNewComment, visible: shouldShowSave&quot;</span><span class="nt">&gt;</span>Comment<span class="nt">&lt;/button&gt;</span>
-</span><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-info&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;visible: comments().length == 0&quot;</span><span class="nt">&gt;</span>No comments found<span class="nt">&lt;/div&gt;</span>
-</span><span class='line'><span class="nt">&lt;table</span> <span class="na">data-bind=</span><span class="s">&quot;visible: comments().length &gt; 0&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;thead&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;tr&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;th&gt;</span>Date<span class="nt">&lt;/th&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;th&gt;</span>User<span class="nt">&lt;/th&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;th&gt;</span>Comment<span class="nt">&lt;/th&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;/tr&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/thead&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;tbody</span> <span class="na">data-bind=</span><span class="s">&quot;foreach: comments&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;tr&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;td</span> <span class="na">data-bind=</span><span class="s">&quot;text: date&quot;</span><span class="nt">&gt;&lt;/td&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;td</span> <span class="na">data-bind=</span><span class="s">&quot;text: user&quot;</span><span class="nt">&gt;&lt;/td&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;td</span> <span class="na">data-bind=</span><span class="s">&quot;text: text&quot;</span><span class="nt">&gt;&lt;/td&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;/tr&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/tbody&gt;</span>
-</span><span class='line'><span class="nt">&lt;/table&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">Comment</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">date</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">date</span><span class="p">);</span>
-</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">user</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">);</span>
-</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">text</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">text</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">function</span> <span class="nx">CommentViewModel</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
-</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">comments</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observableArray</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">isEditing</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">newComment</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">();</span>
-</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">hasNewComment</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">computed</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">newComment</span><span class="p">()).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>  <span class="p">});</span>
-</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">shouldShowSave</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">computed</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nx">self</span><span class="p">.</span><span class="nx">isEditing</span><span class="p">()</span> <span class="o">||</span> <span class="nx">self</span><span class="p">.</span><span class="nx">hasNewComment</span><span class="p">();</span>
-</span><span class='line'>  <span class="p">});</span>
-</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">save</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">self</span><span class="p">.</span><span class="nx">comments</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="k">new</span> <span class="nx">Comment</span><span class="p">({</span>
-</span><span class='line'>           <span class="nx">date</span><span class="o">:</span> <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">()).</span><span class="nx">toLocaleString</span><span class="p">(),</span>
-</span><span class='line'>           <span class="nx">user</span><span class="o">:</span> <span class="s1">&#39;Me&#39;</span><span class="p">,</span>
-</span><span class='line'>           <span class="nx">text</span><span class="o">:</span> <span class="nx">self</span><span class="p">.</span><span class="nx">newComment</span><span class="p">()</span> <span class="p">})</span>
-</span><span class='line'>      <span class="p">);</span>
-</span><span class='line'>      <span class="nx">self</span><span class="p">.</span><span class="nx">newComment</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">};</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ko</span><span class="p">.</span><span class="nx">bindingHandlers</span><span class="p">.</span><span class="nx">animateTextbox</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">ko</span><span class="p">.</span><span class="nx">bindingHandlers</span><span class="p">.</span><span class="nx">animateTextbox</span><span class="p">.</span><span class="nx">animate</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">},</span>
-</span><span class='line'>  <span class="nx">update</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">ko</span><span class="p">.</span><span class="nx">bindingHandlers</span><span class="p">.</span><span class="nx">animateTextbox</span><span class="p">.</span><span class="nx">animate</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">},</span>
-</span><span class='line'>  <span class="nx">animate</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="kd">var</span> <span class="nx">hasFocus</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">unwrapObservable</span><span class="p">(</span><span class="nx">valueAccessor</span><span class="p">());</span>
-</span><span class='line'>    <span class="kd">var</span> <span class="nx">hasNewComment</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">elem</span><span class="p">).</span><span class="nx">val</span><span class="p">()).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">hasNewComment</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="nx">elem</span><span class="p">)</span>
-</span><span class='line'>          <span class="p">.</span><span class="nx">animate</span><span class="p">({</span> <span class="nx">height</span><span class="o">:</span> <span class="nx">hasFocus</span> <span class="o">?</span> <span class="s1">&#39;100px&#39;</span> <span class="o">:</span> <span class="s1">&#39;20px&#39;</span> <span class="p">},</span> <span class="mi">500</span><span class="p">)</span>
-</span><span class='line'>          <span class="p">.</span><span class="nx">closest</span><span class="p">(</span><span class="s1">&#39;.input-overlay&#39;</span><span class="p">).</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">,</span> <span class="nx">hasFocus</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">ko</span><span class="p">.</span><span class="nx">applyBindings</span><span class="p">(</span><span class="k">new</span> <span class="nx">CommentViewModel</span><span class="p">([]));</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
 ]]></content>
   </entry>
   

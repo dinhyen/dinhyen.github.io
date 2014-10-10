@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Photoshop - Yen's Blog</title>
+  <title>Copying files in Hudson - Yen's Blog</title>
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="Category: Photoshop">
+  <meta name="description" content="Copying files somewhere is pretty standard procedure when deploying an app. Interestingly I&rsquo;ve never had to copy files directly in Hudson. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://dinhyen.github.ioblog/categories/photoshop">
+  <link rel="canonical" href="http://dinhyen.github.io/blog/2014/04/15/copying-files-in-hudson">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Yen's Blog" type="application/atom+xml">
@@ -78,53 +78,107 @@
 </nav>
   <div id="main">
     <div id="content">
-      <link href="/stylesheets/breadcrumbs.css" rel="stylesheet" type="text/css">
-<script id="breadcrumbs-js" src="/javascripts/breadcrumbs.js" type="text/javascript"></script>
-
-<div>
-<article role="article">
+      <div>
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Photoshop</h1>
+    
+      <h1 class="entry-title">Copying Files in Hudson</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-15T20:05:00-04:00" pubdate data-updated="true">Apr 15<span>th</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>Copying files somewhere is pretty standard procedure when deploying an app.  Interestingly I&rsquo;ve never had to copy files directly in Hudson.  Until now I&rsquo;ve only deployed .NET apps in Hudson and used MSBuild&rsquo;s Copy task to copy the files to a share folder.  Now that I want to deploy Angular and other client apps in Hudson, I&rsquo;d have to copy the files manually.</p>
 
-  
-  <h2>2011</h2>
+<p>My initial attempt was to add a new Execute Shell build step to run <code>xcopy</code>.  Since Hudson executes the command through the Bourne shell, which interprets any backslash in the path as the escape character, I&rsquo;d have to escape the backslash itself.  Why Windows has to be different from everyone else is a major source of annoyance if you have to move back and forth between Windows and *nix.</p>
 
-<article>
-  
-<h1><a href="/blog/2011/04/28/ooh-shiny/">Ooh shiny</a></h1>
-<time datetime="2011-04-28T00:00:00-04:00" pubdate><span class='month'>Apr</span> <span class='day'>28</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/photoshop/'>Photoshop</a></span>
-</footer>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>xcopy c:\\source\\app\\* \\\\server\\share\\app</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
+<p>This works, but in order for xcopy to copy subdirectories, refrain from prompting everytime it needs to overwrite a file and take other actions necessary for unsupervised execution, I need to specify additional parameters.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>xcopy c:\\source\\app\\* \\\\server\\share /c /k /e /r /y /exclude:c:\\source\\xcopy_exclude.txt</span></code></pre></td></tr></table></div></figure>
 
 
+<p>Unfortunately this is when xcopy blows up with the &ldquo;invalid number of parameters&rdquo; error.  It probably has to do with the shell not passing the parameters to xcopy.  No dice if I put the command in a batch file then executing it.  Ditto when I tried <code>robocopy</code>, which prints a nicer error message but is functionally the same as xcopy.  As a note, you could test all of this in a Bourne shell rather than invoking Hudson every time.</p>
 
-<article>
-  
-<h1><a href="/blog/2011/04/26/its-alive/">It's alive!</a></h1>
-<time datetime="2011-04-26T00:00:00-04:00" pubdate><span class='month'>Apr</span> <span class='day'>26</span> <span class='year'>2011</span></time>
+<p>It occurred to me to use something that&rsquo;s native to the shell, rather than trying to get it to play nice with xcopy.  You&rsquo;d still have to deal with the backslash in the share:</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/photoshop/'>Photoshop</a></span>
-</footer>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cp -r /c/source/app/* \\\\server\\share</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
-
+<p>This worked!  Also for things like &ldquo;rm -rf&rdquo;.  We&rsquo;re done, right?  Well, this mixmatching of different command-line styles seems unwieldy.  After I experimented further, it turned out that I had made an error from the start.  In addition to the Execute Shell build step, there&rsquo;s another type called Execute Windows Batch Command.  This build step allows you to run commands in a Windows shell.  Thus you can run execute xcopy, or anything else, as you would in the command prompt without needing to escape backslash.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Yen Tran</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-15T20:05:00-04:00" pubdate data-updated="true">Apr 15<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/technology/'>technology</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dinhyen.github.io/blog/2014/04/15/copying-files-in-hudson/" data-via="dinhyen" data-counturl="http://dinhyen.github.io/blog/2014/04/15/copying-files-in-hudson/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/04/09/moca-home-network/" title="Previous Post: A MoCA home network">&laquo; A MoCA home network</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

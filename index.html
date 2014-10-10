@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="The benefits of a wired home network are many. I use the SiliconDust HDHomerun Prime network TV tuners to watch cable TV on any computer in the house &hellip;">
+  <meta name="description" content="Copying files somewhere is pretty standard procedure when deploying an app. Interestingly I&rsquo;ve never had to copy files directly in Hudson. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,6 +86,64 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/04/15/copying-files-in-hudson/">Copying Files in Hudson</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-15T20:05:00-04:00" pubdate data-updated="true">Apr 15<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Copying files somewhere is pretty standard procedure when deploying an app.  Interestingly I&rsquo;ve never had to copy files directly in Hudson.  Until now I&rsquo;ve only deployed .NET apps in Hudson and used MSBuild&rsquo;s Copy task to copy the files to a share folder.  Now that I want to deploy Angular and other client apps in Hudson, I&rsquo;d have to copy the files manually.</p>
+
+<p>My initial attempt was to add a new Execute Shell build step to run <code>xcopy</code>.  Since Hudson executes the command through the Bourne shell, which interprets any backslash in the path as the escape character, I&rsquo;d have to escape the backslash itself.  Why Windows has to be different from everyone else is a major source of annoyance if you have to move back and forth between Windows and *nix.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>xcopy c:\\source\\app\\* \\\\server\\share\\app</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This works, but in order for xcopy to copy subdirectories, refrain from prompting everytime it needs to overwrite a file and take other actions necessary for unsupervised execution, I need to specify additional parameters.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>xcopy c:\\source\\app\\* \\\\server\\share /c /k /e /r /y /exclude:c:\\source\\xcopy_exclude.txt</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Unfortunately this is when xcopy blows up with the &ldquo;invalid number of parameters&rdquo; error.  It probably has to do with the shell not passing the parameters to xcopy.  No dice if I put the command in a batch file then executing it.  Ditto when I tried <code>robocopy</code>, which prints a nicer error message but is functionally the same as xcopy.  As a note, you could test all of this in a Bourne shell rather than invoking Hudson every time.</p>
+
+<p>It occurred to me to use something that&rsquo;s native to the shell, rather than trying to get it to play nice with xcopy.  You&rsquo;d still have to deal with the backslash in the share:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cp -r /c/source/app/* \\\\server\\share</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This worked!  Also for things like &ldquo;rm -rf&rdquo;.  We&rsquo;re done, right?  Well, this mixmatching of different command-line styles seems unwieldy.  After I experimented further, it turned out that I had made an error from the start.  In addition to the Execute Shell build step, there&rsquo;s another type called Execute Windows Batch Command.  This build step allows you to run commands in a Windows shell.  Thus you can run execute xcopy, or anything else, as you would in the command prompt without needing to escape backslash.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/04/09/moca-home-network/">A MoCA Home Network</a></h1>
     
     
@@ -128,6 +186,8 @@
 <p>If you need more than one Ethernet port, Adaptec also makes a 4-port Home Theater Coaxial Network Adapter (ECB3500T01), which is only marginally more expensive than a 1-port adapter.  It would be a more compact solution than using an Ethernet switch with the 1-port adapter.</p>
 
 <p>Of note, the cable splitter must be MoCA-compatible. Since MoCA operates in the 0.5-1.65 GHz frequence band, the splitter should be rated for at least this range. Fortunately there are many inexpensive options.</p>
+
+<p>Update (Oct 9, 2014): It turns out that Verizon sells a Verizon-branded <a href="https://teleproducts.verizon.com/fileshare/plm/brochure/ATWECB3000N_brochure.pdf">Fios wireless network extender</a> for $75 which comes with 2 Gigabit Ethernet ports as well as Wireless-N and MoCA connectivity, ostensibly to extend a home network to hard-to-reach places.  In retrospect the Wireless-N Wi-Fi extender would have made it a better purchase than the 4-port Home Theater Coaxial Network Adapter.</p>
 </div>
   
   
@@ -950,8 +1010,16 @@ From <a href="http://stackoverflow.com/questions/18506456/git-how-to-delete-a-lo
 <span class='line-number'>4</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'># Remove origin
 </span><span class='line'>git remote rm origin
-</span><span class='line'>git remote add origin git@donny:etagout.git
+</span><span class='line'>git remote add origin git@server:repo.git
 </span><span class='line'>git remote show origin</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Change origin URL
+</span><span class='line'>git remote set-url origin git@server:repo.git</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>Remote Branch</h3>
@@ -2514,130 +2582,6 @@ sat FEB 12, 2005</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/11/13/sigma-50mm-lens/">Sigma 50mm f/1.4 Lens for Nikon AF</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-11-13T00:00:00-05:00" pubdate data-updated="true">Nov 13<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I&rsquo;m fond of landscape photography.  However when there&rsquo;s a human subject, applying the same kind of composition can come out looking too formal or posed.  I&rsquo;d like to achieve more of the natural, spontaneous, spur-of-the-moment feel.  For that I want to have a lens that&rsquo;s fast, focuses quickly and has good bokeh.  A prime lens would have those qualities at a much lower price point than a telephoto lens.  With that settled, I had to decide between 35, 50 and 85mm.  From what I&rsquo;ve read, the general opinion is that the wide-angle 35mm prime lens is good for landscape or street scenes, while 85mm is good for an intimate, close-up portrait.  That leaves the 50mm, which can do either almost as well and happens to be the (only) lens on my first camera, a <a href="http://en.wikipedia.org/wiki/Canon_AT-1">Canon AT-1</a>.  That it&rsquo;s famously associated with Henri Cartier-Bresson can&rsquo;t be a bad thing either.</p>
-
-<p>Nikon offers two 50mm lenses at f/1.4 and f/1.8.  I chose the Sigma 50mm f/1.4 over the Nikon counterparts. For one, the reviews for the Sigma are universally outstanding.  Even though bokeh quality is somewhat subjective, the general consensus is that the Sigma is better. For almost the same price as the Nikon 50mm f/1.4, it looks and feels much more solid than the plasticky-looking Nikon equivalent. Furthermore, it has the professional-standard 77mm filter size instead of the 58mm and 52mm filter sizes for the Nikon lenses.</p>
-
-<p>The Sigma is very solid with a nice heft. It&rsquo;s plastic, but manages to feel upscale and not cheap.  It comes with a canvas pouch, a lens hood and a lens cover. It&rsquo;s made in Japan, which is nice for a lens at this price range.  Even my much more expensive Nikon 24-120mm f/4 zoom is made in Thailand.  Strangely, there&rsquo;s no marker on the lens to line up with the camera body, so I had to fiddle around a bit to get it to screw in.</p>
-
-<p>Now onto the test images. All photos are taken with a Nikon D600 in either aperture priority or manual mode with auto ISO sensitivity. The first shoot is a walkaround our neighborhood.</p>
-
-<p>This is a rather clich&eacute; shot.  The subject is flat so all of it can be in focus. I thought the sharpness is very good.</p>
-
-<figure>
-<img src="https://dl.dropboxusercontent.com/u/52804626/sigma-50mm/dsc_5105.jpg" />
-<figcaption>Exposure 1/1000 @ f/1.8, 100 ISO</figcaption>
-</figure>
-
-
-<p>Here Kate is inspecting our walkway. In daylight the lens focuses easily. I think focusing works best at this distance.  Depth of field is good with the lens wide open and so is bokeh. The 50mm focal length is perfect for portraits that include the upper body or shoulder.</p>
-
-<figure>
-<img src="https://dl.dropboxusercontent.com/u/52804626/sigma-50mm/dsc_5096.jpg" />
-<figcaption>Exposure 1/1250 @ f/1.8, 100 ISO</figcaption>
-</figure>
-
-
-<p>I love this shot, and not just because of the subject.  Because of the closeness, I had to stop down the aperture a bit while focusing on the eyes.  Otherwise the other parts of the face would be out of focus.</p>
-
-<figure>
-<img src="https://dl.dropboxusercontent.com/u/52804626/sigma-50mm/dsc_5059.jpg" />
-<figcaption>Exposure 1/50 @ f/5, 1800 ISO</figcaption>
-</figure>
-
-
-<p>The second shoot was at a ballroom competition at Tufts University where my friends were competing. Here I put the D600 in continuous servo AF mode with 9 focusing points.  I shot in manual mode with the shutter speed set at a sufficiently high value to prevent blurring. I also <a href="http://www.luminescentphoto.com/blog/2010/11/05/nikon-af-on-technique">set the AE/AL button to AF-on</a> so that shutter release button just, well, release.</p>
-
-<p>This is a rather flashy couple that clearly dominated the rest of the field.  They were quite adept at showmanship.  Not surprisingly, they took first place.</p>
-
-<figure>
-<img src="https://dl.dropboxusercontent.com/u/52804626/sigma-50mm/dsc_5164.jpg" />
-<figcaption>Exposure 1/400 @ f/2.2, 720 ISO</figcaption>
-</figure>
-
-
-<p>Here they are practicing in the corridor above the main floor.  The setting is very nice, as is the photogenic couple. This has almost an Instagram feel to it.</p>
-
-<figure>
-<img src="https://dl.dropboxusercontent.com/u/52804626/sigma-50mm/dsc_5335.jpg" />
-<figcaption>Exposure 1/400 @ f/1.8, 3200 ISO</figcaption>
-</figure>
-
-
-<p>This is at the maximum aperture.  Again sharpness is excellent at a range of about 3m.  I had several long-distance shots from around 20-40m with continuous servo AF that didn&rsquo;t turn out very good.  The subject was blurry while the background was in sharper focus. Either the autofocus wasn&rsquo;t working well, or I just didn&rsquo;t have the right setting.  I switched from 9- to 21-point focusing mode and got somewhat better results.  In general I think this lens suits close-ups better.</p>
-
-<figure>
-<img src="https://dl.dropboxusercontent.com/u/52804626/sigma-50mm/dsc_5377.jpg" />
-<figcaption>Exposure 1/400 @ f/1.4, 2800 ISO</figcaption>
-</figure>
-
-
-<figure>
-<img src="https://dl.dropboxusercontent.com/u/52804626/sigma-50mm/dsc_5312.jpg" />
-<figcaption>Exposure 400 @ f/2.2, 3200 ISO</figcaption>
-</figure>
-
-
-<p>The last shoot is at a friend&rsquo;s house. I had to use continuous focusing again because the subject was rather, ahem, mobile.  Some shots turned out quite blurry even with high shutter speed.  I&rsquo;ll have to look into this more.  This shows the nice subject isolation possible with the ridiculously large aperture.</p>
-
-<figure>
-<img src="https://dl.dropboxusercontent.com/u/52804626/sigma-50mm/dsc_5737.jpg" />
-<figcaption>Exposure 1/60 @ f/1.4, 450 ISO</figcaption>
-</figure>
-
-
-
-
-<figure>
-<img src="https://dl.dropboxusercontent.com/u/52804626/sigma-50mm/dsc_5938.jpg" />
-<figcaption>Exposure 1/160 @ f/2.2, 3200 ISO</figcaption>
-</figure>
-
-
-
-
-<figure>
-<img src="https://dl.dropboxusercontent.com/u/52804626/sigma-50mm/dsc_6000.jpg" />
-<figcaption>Exposure 1/160 @ f/2.2, 2800 ISO</figcaption>
-</figure>
-
-
-<p>In conclusion, I love this lens! I like the ability to just point and shoot without worrying too much about composition.  Being so used to carefully composing a shot, I&rsquo;ve had to resist that impulse a bit and just focus on capturing the moment as it happens.  The results look and feel natural and effortless.   Needless to say this lens will get a lot more work in the future.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -2689,7 +2633,7 @@ sat FEB 12, 2005</p>
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>40</em>
+        <a href="/blog/categories/technology">technology</a> <em>41</em>
       </li>
     
      
@@ -2727,6 +2671,10 @@ sat FEB 12, 2005</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/15/copying-files-in-hudson/">Copying Files in Hudson</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/04/09/moca-home-network/">A MoCA Home Network</a>
       </li>
     
@@ -2740,10 +2688,6 @@ sat FEB 12, 2005</p>
     
       <li class="post">
         <a href="/blog/2014/02/07/my-git-cheat-sheet/">My Git Cheat Sheet</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/02/07/sports-i-would-watch/">Sports I Would Watch</a>
       </li>
     
   </ul>

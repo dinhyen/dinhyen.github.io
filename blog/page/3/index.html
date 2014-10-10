@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="I recently upgraded the hard drive on my MacBook Pro running Snow Leopard to a 120GB OCZ Vertex 3 SSD. As advertised, the boot up and application &hellip;">
+  <meta name="description" content="View the live example KnockoutJS is a dynamic UI framework that can really liberate you from the tedium of low-level DOM manipulations. Even though I &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,204 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/24/animate-textbox-using-knockoutjs/">Animate Textbox Using KnockoutJS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-24T00:00:00-04:00" pubdate data-updated="true">Apr 24<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://jsfiddle.net/CHMaQ/23/">View the live example</a></p>
+
+<p><a href="http://knockoutjs.com">KnockoutJS</a> is a dynamic UI framework that can really liberate you from the tedium of low-level DOM manipulations.  Even though I&rsquo;ve only played with it for a little while, I&rsquo;ve become a huge fan. One of my initial attempts is to create an animated text input similar to Twitter&rsquo;s.</p>
+
+<p>The UI is quite simple. The textbox should display a &ldquo;placeholder&rdquo; prompt.  When the user clicks inside the textbox, expand it and display a save button, initially disabled.  If the user types something (other than white space), enable the button.  If the textbox loses focus, shrink it to its original size, unless it contains a valid comment.</p>
+
+<p>To show the placeholder prompt, I could use the HTML5 &ldquo;placeholder&rdquo; attribute. Unfortunately this isn&rsquo;t supported by all browsers (what else but IE 9 and below). So I&rsquo;m using a div to wrap the textbox and display the prompt as an overlay.</p>
+
+<p>The view model&rsquo;s isEditing boolean observable reflects whether the textbox has focus.  It&rsquo;s wired to the hasfocus binding on the textbox.  Additionally, clicking anywhere on the wrapper div should activate the observable, since the user should be able to focus by clicking on the overlaying prompt.</p>
+
+<p>The content of the textbox is tied to the newComment observable. Per the valueUpdate binding, it is updated after a key press.  Additionally, the propertychange and input parameters allow it to be updated when the user copies and pastes with the mouse or keyboard.</p>
+
+<p>To animate the textbox, I use a custom binding which is also wired to the isEditing observable. The animation should be performed only when the textbox is empty or contains only white space. When the textbox has focus, it&rsquo;s expanded.  When it loses focus, it&rsquo;s collapsed.</p>
+
+<p>The button is shown when the textbox has focus. Additionally it&rsquo;s only enabled when the user enters non-white space text. Clicking on the button simply adds adds the new comment to the comments observable array and clears the textbox. The beauty is that KnockoutJS automatically updates the UI to reflect the change.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-overlay&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;click: isEditing&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;caption&quot;</span><span class="nt">&gt;</span>Write something...<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">&quot;#newComment&quot;</span> <span class="na">name=</span><span class="s">&quot;newComment&quot;</span> <span class="na">cols=</span><span class="s">&quot;20&quot;</span> <span class="na">rows=</span><span class="s">&quot;2&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;value: newComment, valueUpdate: [&#39;afterkeydown&#39;,&#39;propertychange&#39;,&#39;input&#39;], hasfocus: isEditing, animateTextbox: isEditing&quot;</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+</span><span class='line'><span class="nt">&lt;/span&gt;</span>
+</span><span class='line'><span class="nt">&lt;button</span> <span class="na">data-bind=</span><span class="s">&quot;click: save, enable: hasNewComment, visible: shouldShowSave&quot;</span><span class="nt">&gt;</span>Comment<span class="nt">&lt;/button&gt;</span>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-info&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;visible: comments().length == 0&quot;</span><span class="nt">&gt;</span>No comments found<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;table</span> <span class="na">data-bind=</span><span class="s">&quot;visible: comments().length &gt; 0&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;thead&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;tr&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;th&gt;</span>Date<span class="nt">&lt;/th&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;th&gt;</span>User<span class="nt">&lt;/th&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;th&gt;</span>Comment<span class="nt">&lt;/th&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/tr&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/thead&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;tbody</span> <span class="na">data-bind=</span><span class="s">&quot;foreach: comments&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;tr&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;td</span> <span class="na">data-bind=</span><span class="s">&quot;text: date&quot;</span><span class="nt">&gt;&lt;/td&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;td</span> <span class="na">data-bind=</span><span class="s">&quot;text: user&quot;</span><span class="nt">&gt;&lt;/td&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;td</span> <span class="na">data-bind=</span><span class="s">&quot;text: text&quot;</span><span class="nt">&gt;&lt;/td&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/tr&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/tbody&gt;</span>
+</span><span class='line'><span class="nt">&lt;/table&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">Comment</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">date</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">date</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">user</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">text</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">text</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">CommentViewModel</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">comments</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observableArray</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">isEditing</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">newComment</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">();</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">hasNewComment</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">computed</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">newComment</span><span class="p">()).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">shouldShowSave</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">computed</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">self</span><span class="p">.</span><span class="nx">isEditing</span><span class="p">()</span> <span class="o">||</span> <span class="nx">self</span><span class="p">.</span><span class="nx">hasNewComment</span><span class="p">();</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">save</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">self</span><span class="p">.</span><span class="nx">comments</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="k">new</span> <span class="nx">Comment</span><span class="p">({</span>
+</span><span class='line'>           <span class="nx">date</span><span class="o">:</span> <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">()).</span><span class="nx">toLocaleString</span><span class="p">(),</span>
+</span><span class='line'>           <span class="nx">user</span><span class="o">:</span> <span class="s1">&#39;Me&#39;</span><span class="p">,</span>
+</span><span class='line'>           <span class="nx">text</span><span class="o">:</span> <span class="nx">self</span><span class="p">.</span><span class="nx">newComment</span><span class="p">()</span> <span class="p">})</span>
+</span><span class='line'>      <span class="p">);</span>
+</span><span class='line'>      <span class="nx">self</span><span class="p">.</span><span class="nx">newComment</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ko</span><span class="p">.</span><span class="nx">bindingHandlers</span><span class="p">.</span><span class="nx">animateTextbox</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">ko</span><span class="p">.</span><span class="nx">bindingHandlers</span><span class="p">.</span><span class="nx">animateTextbox</span><span class="p">.</span><span class="nx">animate</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">update</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">ko</span><span class="p">.</span><span class="nx">bindingHandlers</span><span class="p">.</span><span class="nx">animateTextbox</span><span class="p">.</span><span class="nx">animate</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">animate</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">valueAccessor</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">hasFocus</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">unwrapObservable</span><span class="p">(</span><span class="nx">valueAccessor</span><span class="p">());</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">hasNewComment</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">elem</span><span class="p">).</span><span class="nx">val</span><span class="p">()).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">hasNewComment</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="nx">elem</span><span class="p">)</span>
+</span><span class='line'>          <span class="p">.</span><span class="nx">animate</span><span class="p">({</span> <span class="nx">height</span><span class="o">:</span> <span class="nx">hasFocus</span> <span class="o">?</span> <span class="s1">&#39;100px&#39;</span> <span class="o">:</span> <span class="s1">&#39;20px&#39;</span> <span class="p">},</span> <span class="mi">500</span><span class="p">)</span>
+</span><span class='line'>          <span class="p">.</span><span class="nx">closest</span><span class="p">(</span><span class="s1">&#39;.input-overlay&#39;</span><span class="p">).</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">,</span> <span class="nx">hasFocus</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">ko</span><span class="p">.</span><span class="nx">applyBindings</span><span class="p">(</span><span class="k">new</span> <span class="nx">CommentViewModel</span><span class="p">([]));</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -814,162 +1012,6 @@ dism /image:C: /add-driver /driver:D:\mydrivers /recurse
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/09/paris-flashback/">Paris 1999</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-09T00:00:00-04:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I took a trip outside of the US for the first time in 1999.  My sister and I got to spend a week in Paris, then took a train to the Netherlands where we toured the country for another week with a friend.  Traveling so far from home by ourselves was exciting enough, and being in the most beautiful and metropolitan city in the world turned it into an unforgettable experience.  We were like a sponge, soaking in and absorbing all the sights that we had only read or even dreamed about.  I had an old manual <a href="http://en.wikipedia.org/wiki/Canon_AT-1">Canon AT-1</a> that my dad had given me.  It&rsquo;s a far cry from contemporary DSLRs, but that didn&rsquo;t stop me from taking as many pictures as possible.  In many ways, this was the beginning of my interest in travel and photography.  I&rsquo;ve been able to return to Paris many times since then, but the curiosity, passion and wide-eyed wonder of that first trip are some things that remain and hopefully never cease.</p>
-
-<p>The unmistakable landmark.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/paristoureiffel99-06-09.jpg' /></p>
-
-<p>View from the top of the tower toward the Palais de Chaillot.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisvuedelatour99-06-09.jpg' /></p>
-
-<p>Miniature Statue of Liberty in the Jardin du Luxembourg.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisstatuedeliberte99-06-10.jpg' /></p>
-
-<p>We wandered over to Place Vendôme.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisplacevendomecolumn99-06-14.jpg' /></p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisritz99-06-15.jpg' /></p>
-
-<p>The Louvre is of course only the most well-known museum in the world.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parislouvrereclining99-06-12.jpg' />
-<img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parislouvrecourtyard99-06-12.jpg' /></p>
-
-<p>But for us it was a bit overwhelming and crowded.  We preferred the Musée d&#8217;Orsay.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parismuseedorsaylobby99-06-11.jpg' />
-<img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parismuseedorsayclock99-06-11.jpg' /></p>
-
-<p>Which is not without aces of its own.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parismuseedorsaywhistlersmother99-06-12.jpg' /></p>
-
-<p>The Musée Rodin was another on our list.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parismuseerodintroishommes99-06-12.jpg' /></p>
-
-<p>Notre Dame from the Seine.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisnotredamefrombateaumouche99-06-15.jpg' /></p>
-
-<p>View of the Pont des Invalides from the same Bateau Mouche.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisbridge99-06-14.jpg' /></p>
-
-<p>Paris has a fountain or monument at each square and street corner, it seems.  This is <a href="http://en.wikipedia.org/wiki/Fontaine_Moli%C3%A8re">Fontaine Molière</a>.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisfoutainemoliere99-06-15.jpg' /></p>
-
-<p>The Fontaine Saint-Michel with its ostentatious and somewhat incongruous pink marble columns.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisbatiment99-06-10.jpg' /></p>
-
-<p>The Tour Saint-Jacques is the most prominent feature at Place du Chatelet.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parischatelet99-06-13.jpg' /></p>
-
-<p>On the way to Palais Royal.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisfontainenearpalaisroyal.jpg' /></p>
-
-<p>Ste-Eustache is an island of solitude in bustling Les Halles.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/pariseglisesteustacheentrance99-06-10.jpg' /></p>
-
-<p>The renowned Sorbonne.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisnearsorbonne990-60-15.jpg' /></p>
-
-<p>From the other side.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parissorbonnecourtyard99-06-10.jpg' /></p>
-
-<p>One of the many churches, St-Étienne-du-Mont.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisbaroquechurchnearpantheonfacade99-06-12.jpg' /></p>
-
-<p>Maybe the most celebrated basilica of all.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisbasiliquesacrecoeur99-06.jpg' /></p>
-
-<p>One of the luminaries interred at Cimetière de Montparnasse.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/pariscimetieremontparnasse99-06-14.jpg' /></p>
-
-<p>Yet another famous monument in a city full of them.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parislarcdetriomphe99-06-13.jpg' /></p>
-
-<p>And the equally famous boulevard.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parischampselysees99-06-13.jpg' /></p>
-
-<p>The modern La Défense is Paris&#8217; answer to the skyline of Manhattan.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisladefensebigthumb99-06-13.jpg' /></p>
-
-<p>The storied Hôtel de Ville with its very French exterior that would have made <a href="http://en.wikipedia.org/wiki/Haussmann%27s_renovation_of_Paris">Baron Haussmann</a> proud.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisplacedauphine99-06-10.jpg' /></p>
-
-<p>I had to take this photo, somewhere in the Quartier Latin, to show my French teacher, Gilberte.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisgaleriefurstenberg99-06-15.jpg' /></p>
-
-<p>To get away from the city for a bit, we headed to the Château de Bagatelle in the Bois de Boulogne park.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisparcdebagatellemansion99-06-09.jpg' /></p>
-
-<p>And met some of its more colorful residents.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisparcdebagatellepeacock99-06-09.jpg' /></p>
-
-<p>The ornate throne room at Château de Versailles.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/versaillesthroneroom99-06-11.jpg' /></p>
-
-<p>And finally we&rsquo;re off to the Gare du Nord for the trip to Holland on a TGV.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/paris-1999/parisgaredunord99-06-16.jpg' /></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -1023,7 +1065,7 @@ dism /image:C: /add-driver /driver:D:\mydrivers /recurse
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>40</em>
+        <a href="/blog/categories/technology">technology</a> <em>41</em>
       </li>
     
      
@@ -1061,6 +1103,10 @@ dism /image:C: /add-driver /driver:D:\mydrivers /recurse
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/15/copying-files-in-hudson/">Copying Files in Hudson</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/04/09/moca-home-network/">A MoCA Home Network</a>
       </li>
     
@@ -1074,10 +1120,6 @@ dism /image:C: /add-driver /driver:D:\mydrivers /recurse
     
       <li class="post">
         <a href="/blog/2014/02/07/my-git-cheat-sheet/">My Git Cheat Sheet</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/02/07/sports-i-would-watch/">Sports I Would Watch</a>
       </li>
     
   </ul>

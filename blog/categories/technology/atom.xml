@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technology | Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2014-07-07T16:13:27-04:00</updated>
+  <updated>2014-10-09T22:45:47-04:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Copying files in Hudson]]></title>
+    <link href="http://dinhyen.github.io/blog/2014/04/15/copying-files-in-hudson/"/>
+    <updated>2014-04-15T20:05:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2014/04/15/copying-files-in-hudson</id>
+    <content type="html"><![CDATA[<p>Copying files somewhere is pretty standard procedure when deploying an app.  Interestingly I&rsquo;ve never had to copy files directly in Hudson.  Until now I&rsquo;ve only deployed .NET apps in Hudson and used MSBuild&rsquo;s Copy task to copy the files to a share folder.  Now that I want to deploy Angular and other client apps in Hudson, I&rsquo;d have to copy the files manually.</p>
+
+<p>My initial attempt was to add a new Execute Shell build step to run <code>xcopy</code>.  Since Hudson executes the command through the Bourne shell, which interprets any backslash in the path as the escape character, I&rsquo;d have to escape the backslash itself.  Why Windows has to be different from everyone else is a major source of annoyance if you have to move back and forth between Windows and *nix.
+<code>
+xcopy c:\\source\\app\\* \\\\server\\share\\app
+</code>
+This works, but in order for xcopy to copy subdirectories, refrain from prompting everytime it needs to overwrite a file and take other actions necessary for unsupervised execution, I need to specify additional parameters.
+<code>
+xcopy c:\\source\\app\\* \\\\server\\share /c /k /e /r /y /exclude:c:\\source\\xcopy_exclude.txt
+</code>
+Unfortunately this is when xcopy blows up with the &ldquo;invalid number of parameters&rdquo; error.  It probably has to do with the shell not passing the parameters to xcopy.  No dice if I put the command in a batch file then executing it.  Ditto when I tried <code>robocopy</code>, which prints a nicer error message but is functionally the same as xcopy.  As a note, you could test all of this in a Bourne shell rather than invoking Hudson every time.</p>
+
+<p>It occurred to me to use something that&rsquo;s native to the shell, rather than trying to get it to play nice with xcopy.  You&rsquo;d still have to deal with the backslash in the share:
+<code>
+cp -r /c/source/app/* \\\\server\\share
+</code></p>
+
+<p>This worked!  Also for things like &ldquo;rm -rf&rdquo;.  We&rsquo;re done, right?  Well, this mixmatching of different command-line styles seems unwieldy.  After I experimented further, it turned out that I had made an error from the start.  In addition to the Execute Shell build step, there&rsquo;s another type called Execute Windows Batch Command.  This build step allows you to run commands in a Windows shell.  Thus you can run execute xcopy, or anything else, as you would in the command prompt without needing to escape backslash.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A MoCA home network]]></title>
@@ -37,6 +63,8 @@
 <p>If you need more than one Ethernet port, Adaptec also makes a 4-port Home Theater Coaxial Network Adapter (ECB3500T01), which is only marginally more expensive than a 1-port adapter.  It would be a more compact solution than using an Ethernet switch with the 1-port adapter.</p>
 
 <p>Of note, the cable splitter must be MoCA-compatible. Since MoCA operates in the 0.5-1.65 GHz frequence band, the splitter should be rated for at least this range. Fortunately there are many inexpensive options.</p>
+
+<p>Update (Oct 9, 2014): It turns out that Verizon sells a Verizon-branded <a href="https://teleproducts.verizon.com/fileshare/plm/brochure/ATWECB3000N_brochure.pdf">Fios wireless network extender</a> for $75 which comes with 2 Gigabit Ethernet ports as well as Wireless-N and MoCA connectivity, ostensibly to extend a home network to hard-to-reach places.  In retrospect the Wireless-N Wi-Fi extender would have made it a better purchase than the 4-port Home Theater Coaxial Network Adapter.</p>
 ]]></content>
   </entry>
   
@@ -322,7 +350,7 @@ watch: {
 <h1>These will show up in git log</h1>
 
 <p>git config &mdash;global user.name &ldquo;Yen Tran&rdquo;
-git config &mdash;global user.email <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#x79;&#x65;&#x6e;&#64;&#x79;&#x65;&#110;&#116;&#114;&#x61;&#110;&#x2e;&#111;&#114;&#x67;">&#121;&#x65;&#110;&#x40;&#121;&#101;&#110;&#x74;&#114;&#97;&#x6e;&#46;&#111;&#x72;&#x67;</a>
+git config &mdash;global user.email <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x79;&#101;&#110;&#64;&#x79;&#x65;&#x6e;&#x74;&#x72;&#x61;&#x6e;&#x2e;&#111;&#114;&#103;">&#121;&#101;&#110;&#x40;&#121;&#x65;&#x6e;&#116;&#114;&#97;&#x6e;&#x2e;&#111;&#114;&#103;</a>
 git config &mdash;list
 ```</p>
 
@@ -614,8 +642,15 @@ git reflog
 <h1>Remove origin</h1>
 
 <p>git remote rm origin
-git remote add origin git@donny:etagout.git
+git remote add origin git@server:repo.git
 git remote show origin
+```</p>
+
+<p>```</p>
+
+<h1>Change origin URL</h1>
+
+<p>git remote set-url origin git@server:repo.git
 ```</p>
 
 <h3>Remote Branch</h3>
@@ -1025,34 +1060,6 @@ $http.get('tasks.json').success(
 ```</p>
 
 <p><a href="http://embed.plnkr.co/BwEtA3Ftp9SJ0OJCPHyv/preview" target="_blank">View the second version in Plunker</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Updating SQL Server Primary Key]]></title>
-    <link href="http://dinhyen.github.io/blog/2013/11/23/updating-sql-server-primary-key/"/>
-    <updated>2013-11-23T16:34:00-05:00</updated>
-    <id>http://dinhyen.github.io/blog/2013/11/23/updating-sql-server-primary-key</id>
-    <content type="html"><![CDATA[<p>A requirement recently came up to update the primary key of a SQL Server table.  We get user data from a third-party single sign-on service and store them locally.  When the SSO software was upgraded, user IDs were changed, so we need to update our local users but retain existing data.  I suppose one way to do so would be to drop any existing foreign-key constraint and update all related tables.  Unfortunately, the User table is related to practically every other table in the schema. Updating a bunch tables manually, without the safety net of relational integrity, would be a bit dodgy. Fortunately, there&rsquo;s a less painful approach using the <a href="http://technet.microsoft.com/en-us/library/ms186973.aspx">ON UPDATE CASCADE</a> clause.</p>
-
-<p>In a simple example, I have a LineItem table, whose <code>userId</code> field references User&rsquo;s <code>Id</code> field. Since the existing FK relationship doesn&rsquo;t have ON DELETE CASCADE, I&rsquo;d have to &ldquo;alter&rdquo; the constraint to add it.  But because is no &ldquo;alter contraint&rdquo; in T-SQL, I&rsquo;d have to drop and re-add the constraint.</p>
-
-<p>``` sql
-/<em> drop existing constraint </em>/
-ALTER TABLE [dbo].[LineItem] DROP CONSTRAINT [FK_LineItem_User]
-GO</p>
-
-<p>/<em> add constraint </em>/
-ALTER TABLE [dbo].[LineItem]  WITH CHECK ADD  CONSTRAINT [FK_LineItem_User] FOREIGN KEY([UserId])
-REFERENCES [dbo].[User] ([Id])
-ON UPDATE CASCADE
-GO</p>
-
-<p>ALTER TABLE [dbo].[LineItem] CHECK CONSTRAINT [FK_LineItem_User]
-GO
-```</p>
-
-<p>Thereafter when I update an Id in the User table, the change would be cascaded to LineItem and all other related tables.</p>
 ]]></content>
   </entry>
   
