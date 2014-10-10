@@ -226,8 +226,13 @@ git reflog
 ```
 # Remove origin
 git remote rm origin
-git remote add origin git@donny:etagout.git
+git remote add origin git@server:repo.git
 git remote show origin
+```
+
+```
+# Change origin URL
+git remote set-url origin git@server:repo.git
 ```
 
 ###  Remote Branch
