@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="I don&rsquo;t think anyone would argue that regularly backing up data is a good idea.  At the same time, most people including myself don&rsquo;t do &hellip;">
+  <meta name="description" content="We use Hudson to deploy our web application to different environments such as QA, demo and production. We need to customize the web.config, primarily &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,117 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/11/modifying-config-file-in-an-msbuild-project/">Modifying .config File in an MSBuild Project</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-11T00:00:00-04:00" pubdate data-updated="true">May 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We use <a href="http://hudson-ci.org">Hudson</a> to deploy our web application to different environments such as QA, demo and production. We need to customize the web.config, primarily the database connection string, for each environment . Previously we had to maintain multiple copies of the web.config and copy the appropriate one for each deployment destination.  Obviously keeping around different versions of the same file is far from ideal.</p>
+
+<p>As an improvement, we decide to keep a single web.config and modify the connection string on the fly during deployment.  Fortunately, MSBuild provides the tasks to do just this.  XmlPeek reads from and XmlPoke modifies the content of an XML file using XPath syntax.</p>
+
+<p>The XmlPeek and XmlPoke tasks are available with MSBuild 4.0.  Unfortunately we are constrained to using MSBuild 3.5, so we had to add the following references to the MSBuild project.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;UsingTask</span> <span class="na">TaskName=</span><span class="s">&quot;Microsoft.Build.Tasks.XmlPeek&quot;</span> <span class="na">AssemblyName=</span><span class="s">&quot;Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;UsingTask</span> <span class="na">TaskName=</span><span class="s">&quot;Microsoft.Build.Tasks.XmlPoke&quot;</span> <span class="na">AssemblyName=</span><span class="s">&quot;Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot;</span><span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Our connection string is stored in the typical manner in the web.config:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;configuration&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;connectionStrings&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;add</span> <span class="na">name=</span><span class="s">&quot;MyAppConnectionString&quot;</span> <span class="na">connectionString=</span><span class="s">&quot;Data Source=default;Initial Catalog=default;Integrated Security=SSPI;&quot;</span>
+</span><span class='line'>      <span class="na">providerName=</span><span class="s">&quot;System.Data.SqlClient&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/connectionStrings&gt;</span>
+</span><span class='line'><span class="nt">&lt;/configuration&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We pass in the new value of the connection string as a project parameter named MyConnectionString, which Hudson turns into an environment variable named <code>$(MyConnectionString)</code>.  We make it a project parameter so that it can be modified as needed by IT without help from development.  The connection string has to be URL-encoded; for example, semicolons must be replaced by <code>%3B</code> as shown below.</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/52804626/images/hudson-conn-string.png" title="hudson-conn-string" width="739" height="128" class="aligncenter size-full wp-image-1148" /></p>
+
+<p>The following snippets read and replace the value of the connection string.  The XPath query returns the connection string attribute for any node which has the name attribute of MyAppConnectionString.  Note that the XML namespace must be HTML-encoded. We don&rsquo;t need the value of the existing connection string, but can use it for logging purpose.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;PropertyGroup&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;WebConfig&gt;</span>c:\builds\MyApp\Web.config<span class="nt">&lt;/WebConfig&gt;</span>
+</span><span class='line'><span class="nt">&lt;/PropertyGroup&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;Target</span> <span class="na">Name=</span><span class="s">&quot;ReadWebConfig&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;XmlPeek</span> <span class="na">Namespaces=</span><span class="s">&quot;&amp;lt;Namespace Prefix=&#39;msb&#39; Uri=&#39;http://schemas.microsoft.com/developer/msbuild/2003&#39;/&amp;gt;&quot;</span>
+</span><span class='line'>      <span class="na">XmlInputPath=</span><span class="s">&quot;$(WebConfig)&quot;</span>
+</span><span class='line'>      <span class="na">Query=</span><span class="s">&quot;//add[@name=&#39;MyAppConnectionString&#39;]/@connectionString&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;Output</span> <span class="na">TaskParameter=</span><span class="s">&quot;Result&quot;</span> <span class="na">ItemName=</span><span class="s">&quot;Peeked&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/XmlPeek&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;Message</span> <span class="na">Text=</span><span class="s">&quot;@(Peeked)&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/Target&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;Target</span> <span class="na">Name=</span><span class="s">&quot;UpdateWebConfig&quot;</span>  <span class="na">Condition=</span><span class="s">&quot; &#39;$(MyAppConnectionString)&#39; != &#39;&#39; &quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;XmlPoke</span> <span class="na">Namespaces=</span><span class="s">&quot;&amp;lt;Namespace Prefix=&#39;msb&#39; Uri=&#39;http://schemas.microsoft.com/developer/msbuild/2003&#39;/&amp;gt;&quot;</span>
+</span><span class='line'>      <span class="na">XmlInputPath=</span><span class="s">&quot;$(WebConfig)&quot;</span>
+</span><span class='line'>      <span class="na">Query=</span><span class="s">&quot;//add[@name=&#39;MyAppConnectionString&#39;]/@connectionString&quot;</span>
+</span><span class='line'>      <span class="na">Value=</span><span class="s">&quot;$(MyAppConnectionString)&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/Target&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -841,54 +952,6 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/11/modifying-sql-server-table-without-dropping-and-recreating-it/">Modifying SQL Server Table Without Dropping and Recreating It</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-11T00:00:00-05:00" pubdate data-updated="true">Jan 11<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The SQL Server Designer is a nice visual tool for making modifications to a table. However, when you save the changes, SQL Server actually drops the entire table and then recreates it (if there are data in the table, they would be retained). This happens even if the changes made do not actually require that the table be re-created. This is presumably so that SQL Server can accommodate all possible types of modification.</p>
-
-<p>However, oftentimes it&rsquo;s not possible to drop a table. This can happen if the table has relationships with other tables. You could drop the relationships first, but it may be more trouble than it&rsquo;s worth when you&rsquo;re just making changes to a column.</p>
-
-<p>The solution is quite simple&mdash;just use SQL instead of the Designer. For instance, to add an int column to a table, you could use the alter table command:</p>
-
-<pre>alter table [table name] add [column name] int null</pre>
-
-
-<p>The added column must be nullable if there are existing data, because there are no values in the column when it is added. To make the column non-nullable, first provide a value in the column for all data rows then do the following:</p>
-
-<pre>alter table [table name] alter column [column name] int not null</pre>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -942,7 +1005,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>41</em>
+        <a href="/blog/categories/technology">technology</a> <em>42</em>
       </li>
     
      
@@ -980,6 +1043,10 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/18/angular-in-jekyll-or-octopress/">Angular in Jekyll/Octopress</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/04/15/copying-files-in-hudson/">Copying Files in Hudson</a>
       </li>
     
@@ -993,10 +1060,6 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     
       <li class="post">
         <a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/02/07/my-git-cheat-sheet/">My Git Cheat Sheet</a>
       </li>
     
   </ul>

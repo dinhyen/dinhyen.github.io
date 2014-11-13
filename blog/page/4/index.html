@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="I took a trip outside of the US for the first time in 1999. My sister and I got to spend a week in Paris, then took a train to the Netherlands where &hellip;">
+  <meta name="description" content="I wanted to upgrade a couple of PCs by replacing the motherboard (by the way, when buying PC components, if there&rsquo;s a Microcenter store nearby &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,64 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/16/replacing-motherboard-without-reinstalling-windows/">Replacing Motherboard Without Reinstalling Windows</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-16T00:00:00-04:00" pubdate data-updated="true">Sep 16<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I wanted to upgrade a couple of PCs by replacing the motherboard (by the way, when buying PC components, if there&rsquo;s a <a href="http://microcenter.com/">Microcenter</a> store nearby, try it first; at the time of this writing their $50 bundle discount for a motherboard-CPU combo cannot be beat, even by much-loved online enthusiast stores).  Afterwards, I found that Windows 7 wouldn&rsquo;t boot.</p>
+
+<p>In my prior experience, Windows would automatically detect the new motherboard and reconfigure itself accordingly.  However, in those cases, I&rsquo;d always replaced an AMD motherboard with the same.  This time I finally succumbed to Intel&rsquo;s growing CPU superiority and swapped an AMD motherboard for an Intel one. Windows would load drivers, crash, then reboot.  Apparently Windows wasn&rsquo;t able to load the drivers to work with the new motherboard. I ran Startup Repair once without success.  After I ran it the second time, Windows complained that &ldquo;Startup Repair cannot repair this computer automatically&rdquo;.  I was resigned to reinstalling Windows from scratch.  This isn&rsquo;t actually a horrible thing, since all my data are on a separate partition, but it would mean I&rsquo;d have to reinstall and configure apps all over again.</p>
+
+<p>Luckily I found <a href="http://www.msigeek.com/2661/add-or-remove-a-driver-from-a-wim-image-using-dism">a post</a> describing how to use the DISM (Deployment Image Servicing and Management) command-line tool.  This tool, intended for sysadmin use, allows you to load drivers into an existing Windows image or installation.  Our goal is to pre-load the necessary drivers to hopefully allow Windows to run on the new motherboard.  Here are the steps that worked for me.</p>
+
+<ol>
+<li>Download drivers for the new motherboard.  I&rsquo;m using a USB flash drive as a boot/recovery drive so I copied them there, but you could use separate USB flash drive or even a DVD-R. You need the chipset and SATA drivers.  You can ignore the audio, LAN, video, etc. drivers as they are not necessary for Windows to load and can be left till later. Driver packaging depends on the manufacturer.  In my case, for my <a href="http://www.gigabyte.com/products/product-page.aspx?pid=3726#dl">Gigabyte motherboard</a> the chipset drivers are bundled in a single archive, while for the <a href="http://www.asrock.com/mb/Intel/Z77%20Extreme4/?cat=Download&amp;os=Win7">Asrock motherboard</a>, they&rsquo;re all in separate files. Extract the files (some executables can be extracted) and copy only the appropriate folder for your flavor of Windows. The folder should contain an .INF file and .DLL or .SYS files.</li>
+<li>Boot from your Windows install/recovery DVD or USB flash drive and select Repair</li>
+<li>Select Advanced Options</li>
+<li>Choose the Command Prompt option to get the command line</li>
+<li>Now determine the drive where Windows is installed. This may not be where you think it is if the drives are remapped, say when you boot from a USB flash drive. The quickest way is just to list the files on drives C:, D:, E:, etc. and figure out which is which.</li>
+<li>Let&rsquo;s say Windows is installed under C: and the drivers are under D:\mydrivers, use DISM follows:</li>
+</ol>
+
+
+<pre>
+dism /image:C: /add-driver /driver:D:\mydrivers /recurse
+</pre>
+
+
+<p>The <code>/recurse</code> option conveniently lets DISM  install all drivers found under the specified folder.
+1. Reboot. If Windows successfully boots, congratulations! The next step would be to configure the Ethernet adapter so you can install the rest of the drivers.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -3008,109 +3066,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/10/acadia-national-park-jesup-path/">Acadia National Park: Jesup Path</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-10T00:00:00-04:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://maps.google.com/maps/ms?msid=214490968088440958659.0004c4860317ce599cad3&amp;msa=0&amp;ll=44.366462,-68.211515&amp;spn=0.014895,0.015643">Map</a> of our hike on Jesup Path.</p>
-
-<p>Along with <a href="http://www.yentran.org/blog/2012/07/acadia-national-park-dorr-mountain/%22%20title=%22Acadia%20National%20Park:%20Dorr%20Mountain">Emery Path</a>, Jesup Path is another trail which can be found at the Sieur de Monts spring area. Straight and level, it&rsquo;s hardly a challenging hike.  Its claim to fame, I think, is an eternity of boardwalk amid a picturesque forest of birch trees and tall grass.</p>
-
-<!-- Darkbox -->
-
-
-<div class="darkbox">
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5700.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5700.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5702.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5702.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5717.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5717.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5718.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5718.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5720.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5720.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5722.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5722.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5724.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5724.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5727.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5727.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5733.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5733.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5735.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5735.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5738.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5738.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5742.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5742.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5745.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5745.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5746.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5746.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5755.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5755.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5757.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5757.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5763.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5763.jpg" />
-</a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/dsc_5764.jpg" data-darkbox="acadia-jesup">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-jesup/thumbs/dsc_5764.jpg" />
-</a>
-
-</div>
-
-
-<!-- End darkbox -->
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -3164,7 +3119,7 @@
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>41</em>
+        <a href="/blog/categories/technology">technology</a> <em>42</em>
       </li>
     
      
@@ -3202,6 +3157,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/18/angular-in-jekyll-or-octopress/">Angular in Jekyll/Octopress</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/04/15/copying-files-in-hudson/">Copying Files in Hudson</a>
       </li>
     
@@ -3215,10 +3174,6 @@
     
       <li class="post">
         <a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/02/07/my-git-cheat-sheet/">My Git Cheat Sheet</a>
       </li>
     
   </ul>

@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="I&rsquo;m fond of landscape photography. However when there&rsquo;s a human subject, applying the same kind of composition can come out looking too &hellip;">
+  <meta name="description" content="I&rsquo;ve been using WordPress since 2011. It works well enough, but for me there are a few drawbacks. It&rsquo;s slow. It takes time to do anything &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,411 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/11/18/so-long-wordpress-hello-octopress/">So Long WordPress, Hello Octopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-18T00:00:00-05:00" pubdate data-updated="true">Nov 18<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;ve been using WordPress since 2011.  It works well enough, but for me there are a few drawbacks.</p>
+
+<ul>
+<li><p>It&rsquo;s slow. It takes time to do anything from creating a post to previewing to deploying it.  I prefer to edit text in a proper text editor, with the full array of keyboard shortcuts, so I usually end up copying and pasting anyways.  But using the UI to do everything is cumbersome.  Of course I could install a local instance of WordPress so I can preview locally.  However, I would have to deploy everything, posts and images, every time. This seems inefficient for just adding a new post.</p></li>
+<li><p>It&rsquo;s hard to backup.  I could export the WordPress content as an XML file, but this is only useful to WordPress.  For a full manual backup, I would use Control Panel to export the database, then FTP into the site and download the entire WordPress content folder as an archive.  This is time-consuming and a far cry from proper version control.</p></li>
+<li><p>It&rsquo;s hard to customize.  There are probably a dozen plugins for anything I will ever want to do.  While I could view and edit the plugin source, without an easy way to test it&rsquo;s effectively a blackbox.  Further, I wouldn&rsquo;t want to have deal with PHP just to customize a plugin.</p></li>
+</ul>
+
+
+<p>So it&rsquo;s an easy to decision to put WordPress out to pasture.  I looked at Jekyll and deploying on Heroku. Jekyll seems like a good choice because it&rsquo;s used by GitHub, so it&rsquo;s more likely to be developed and less likely to go away.  I also checked out <a href="http://ruhoh.org">Ruhoh</a>, which is created by a Jekyll developer to address some of its shortcomings.  I really liked Ruhoh for the customizability, <a href="http://mustache.github.io">Mustache</a> markup syntax and incremental page generation.  I may go back to Ruhoh at some point.  I finally settled on Octopress.  It adds a theming engine and a host of productivity enhancements to Jekyll as well as beautiful syntax highlighting.  It makes it trivially simple to deploy to GitHub Pages.</p>
+
+<p>There are many good articles written about using Octopress.  The <a href="http://octopress.org/docs">documentation</a>, for one, is a very good place to start.  Here are just some of the issues I ran into along the way.</p>
+
+<h3>Importing from WordPress</h3>
+
+<p>I used Jekyll&rsquo;s <a href="http://jekyllrb.com/docs/migrations">migration tools</a>, specifically <code>hpricot</code> to process a WordPress export XML file to generate posts and pages.  The process worked quite well, although as expected some manual cleanups were necessary.</p>
+
+<h3>Setting up DNS</h3>
+
+<p>This is probably a no-brainer for many people, unfortunately I&rsquo;m not among them.  Since my blog is now hosted by GitHub Pages, I had to configure my DNS to point my domain to the new IP address.  The process is quite clearly laid out in the <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">documentation</a>.  In my case, I had to create an <em>A record</em> for my top-level domain, <code>yentran.org</code>, to point to <code>204.232.175.78</code>.  I also created a CNAME record for the subdomain <code>www.yentran.org</code> as an alias which points to the same address.  I was concerned that my email address <code>xxx@yentran.org</code> would be broken.  It turns not to be the case.  Email forwarding relies on a MX record, which continues to point to my ISP&rsquo;s IP address.  There&rsquo;s also a wildcard record, which catches any unknown subdomain for which there is no matching A or CNAME record.</p>
+
+<h3>Images</h3>
+
+<p>Previously I used NextGen gallery to manage images.  NextGen stores images in separate folders, so it&rsquo;s simple to copy them (rather than searching for them on my hard drive).</p>
+
+<p>I now use Dropbox&rsquo;s Public folder to host images.  This allows me to easily manage images.  In Lightroom (or any other image organizing software), I can export the images directly to Dropbox&rsquo;s local sync folder and the images immediately becomes available for linking.  If I want to modify images&mdash;such as resizing them&mdash;I can work directly with the Dropbox sync folder without having to make changes to the site.</p>
+
+<h3>Image gallery</h3>
+
+<p>I used Lightbox 2 jQuery plugin to display an image gallery.  However, it doesn&rsquo;t work with hotlinked images.  I decided to <a href="https://github.com/dinhyen/darkbox">roll my own</a>.</p>
+
+<p>I wrote a small Ruby + <a href="http://whatisthor.com">Thor</a> utility to generate the necessary markup for images based on the Dropbox folder  and append it to posts.  Thor is awesome.</p>
+
+<h3>Blogging with Octopress</h3>
+
+<p>Everytime you add or modify a post or page, Jekyll regenerates the entire site.  This is so that it can properly update the site metadata.  However, this can take a long time, particularly if you have many posts and pages.  Octopress provides a useful optimization tool.  Type <code>rake isolate["post name"]</code> moves all other posts except the specified post into a _stash folder, so that regeneration is significantly faster.  Once you&rsquo;re done, type <code>rake integrate</code> to move the other posts back; just don&rsquo;t forget to do this before deploying.</p>
+
+<h3>Categories</h3>
+
+<p>Octopress doesn&rsquo;t provide an out-of-the-box way to display categories, but this can be easily done. I want display them as an aside (Octopress-speak for a sidebar plugin or partial).  I based mine on Octostrap3&rsquo;s <a href="http://kaworu.github.io/octopress/blog/2013/10/03/category-list-aside">Category List aside</a>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;section&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;h1&gt;</span>Categories<span class="nt">&lt;/h1&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;categories&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    {% for category in site.categories %}
+</span><span class='line'>     {% capture category_url %}{{ site.category_dir }}/{{ category | first | slugize | downcase | replace:&#39; &#39;,&#39;-&#39; }}{% endcapture %}
+</span><span class='line'>      <span class="nt">&lt;li</span> <span class="na">data-category=</span><span class="s">&quot;{{ category | first }}&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ root_url | append:&#39;/&#39; | append:category_url }}&quot;</span><span class="nt">&gt;</span>{{ category | first }}<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;em&gt;</span>{{ category | last | size }}<span class="nt">&lt;/em&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>    {% endfor %}
+</span><span class='line'>  <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'><span class="nt">&lt;/section&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Each category in the <code>site.categories</code> collection is an array, the first element being the category name and the last containing the pages in the category.  Unfortunately Jekyll&rsquo;s Liquid markup language doesn&rsquo;t have a way to sort a collection of arrays.  I opted to use JavaScript. This isn&rsquo;t ideal, but some of Octopress&rsquo;s own asides use the same approach.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">categories</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[data-category]&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">categories</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>  <span class="nx">categories</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">attributes</span><span class="p">[</span><span class="s1">&#39;data-category&#39;</span><span class="p">].</span><span class="nx">value</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="nx">b</span><span class="p">.</span><span class="nx">attributes</span><span class="p">[</span><span class="s1">&#39;data-category&#39;</span><span class="p">].</span><span class="nx">value</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span>
+</span><span class='line'>          <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#categories&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">categories</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Breadcrumbs</h3>
+
+<p>This would be another nice-to-have for Octopress.  There are a few solutions to display breadcrumbs using Liquid.  However, the more I work with Liquid, the less I like it.  I would much prefer Mustache.  So I again went with a JavaScript solution, which would still work if later on I decide to go with another blogging framework.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">breadcrumbs</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">url_parts</span><span class="p">,</span> <span class="nx">$html</span><span class="p">,</span> <span class="nx">$li</span><span class="p">,</span> <span class="nx">$content</span><span class="p">,</span> <span class="nx">href</span><span class="p">,</span> <span class="nx">text</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="nx">i</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">url</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">url_parts</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">grep</span><span class="p">(</span><span class="nx">url</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/index\.html/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="sr">/\//</span><span class="p">),</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">x</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">url_parts</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if at the top level</span>
+</span><span class='line'>    <span class="k">return</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">$html</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;ol class=&quot;breadcrumbs&quot;&gt;&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">url_parts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">text</span> <span class="o">=</span> <span class="nx">url_parts</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span><span class='line'>    <span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="nx">url_parts</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">$content</span> <span class="o">=</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">url_parts</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;a&gt;&#39;</span><span class="p">).</span><span class="nx">prop</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">,</span> <span class="nx">href</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="o">:</span> <span class="nx">text</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$content</span><span class="p">).</span><span class="nx">appendTo</span><span class="p">(</span><span class="nx">$html</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="nx">$html</span><span class="p">.</span><span class="nx">insertAfter</span><span class="p">(</span><span class="s1">&#39;#breadcrumbs-js&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">breadcrumbs</span><span class="p">();</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s the CSS:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.breadcrumbs</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">font-family</span><span class="o">:</span> <span class="n">PT</span> <span class="n">Sans</span><span class="o">,</span> <span class="n">helvetica</span><span class="o">,</span> <span class="k">sans-serif</span><span class="o">,</span> <span class="n">arial</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">padding</span><span class="o">:</span> <span class="m">30px</span> <span class="m">15px</span> <span class="m">0</span> <span class="m">55px</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.breadcrumbs</span> <span class="nt">li</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">list-style</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">padding-left</span><span class="o">:</span> <span class="m">15px</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.breadcrumbs</span> <span class="nt">li</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:last-child</span><span class="o">)</span><span class="nd">:after</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">padding-left</span><span class="o">:</span> <span class="m">15px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;/&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.breadcrumbs</span> <span class="nt">li</span><span class="nd">:first-child</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">padding-left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c">/* Octopress classic theme */</span>
+</span><span class='line'><span class="nf">#content</span> <span class="nc">.breadcrumbs</span> <span class="o">+</span> <span class="nt">div</span> <span class="o">&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">margin-top</span><span class="o">:</span> <span class="m">15px</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nf">#content</span> <span class="nc">.breadcrumbs</span> <span class="o">+</span> <span class="nt">div</span> <span class="o">&gt;</span> <span class="nt">article</span> <span class="o">&gt;</span> <span class="nt">header</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">padding-top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I created a partial consisting of the JavaScript and the necessary CSS, then included it in the <code>pages.html</code> layout.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="p">{</span><span class="o">%</span> <span class="n">render_partial</span> <span class="n">_includes</span><span class="o">/</span><span class="n">custom</span><span class="o">/</span><span class="n">breadcrumbs</span><span class="o">.</span><span class="n">html</span> <span class="o">%</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Navigation</h3>
+
+<p>On my <a href="/travel">travel pages</a>, I want to have a hierarchy of links to different destinations:</p>
+
+<pre><code>USA
+  Arizona
+    Grand Canyon National Park
+  Florida
+    Cape Canaveral
+</code></pre>
+
+<p>It should be set up so that if I add a new destination, I wouldn&rsquo;t have to hunt down all the pages containing the links in order add a new one.  Luckily, with Jekyll all of the site&rsquo;s metadata is stored in a single YAML file and accessible through the <code>site</code> variable.  In order to capture the navigation hierarchy, I added the following to <code>_config.yml</code>:</p>
+
+<pre><code>travel:
+  usa:
+    - name: "Arizona"
+      url:  az
+      places:
+        - name: "Grand Canyon National Park"
+          url:  grand-canyon-national-park
+    - name: "Florida"
+      url:  fl
+      places:
+        - name: "Cape Canaveral"
+          url:  cape-canaveral
+</code></pre>
+
+<p><a href="http://www.yaml.org">YAML</a> is a really compact, highly readable format.  In the block above, indentation denotes nesting, <code>:</code> denotes a key-value pair and <code>-</code> denotes a collection.  The parser turns the above YAML into the following hash:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="s2">&quot;travel&quot;</span> <span class="o">=&gt;</span> <span class="err">{</span>
+</span><span class='line'>    <span class="s2">&quot;usa&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+</span><span class='line'>      <span class="err">{</span>
+</span><span class='line'>        <span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Arizona&quot;</span><span class="o">,</span> <span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;az&quot;</span><span class="o">,</span> <span class="s2">&quot;places&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+</span><span class='line'>          <span class="err">{</span><span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Grand Canyon National Park&quot;</span><span class="o">,</span> <span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;grand-canyon-national-park&quot;</span><span class="p">}</span>
+</span><span class='line'>        <span class="o">]</span>
+</span><span class='line'>      <span class="err">}</span><span class="o">,</span>
+</span><span class='line'>      <span class="p">{</span>
+</span><span class='line'>        <span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Florida&quot;</span><span class="o">,</span> <span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;fl&quot;</span><span class="o">,</span> <span class="s2">&quot;places&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+</span><span class='line'>          <span class="err">{</span><span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Cape Canaveral&quot;</span><span class="o">,</span> <span class="s2">&quot;url&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;cape-canaveral&quot;</span><span class="p">}</span>
+</span><span class='line'>        <span class="o">]</span>
+</span><span class='line'>      <span class="err">}</span>
+</span><span class='line'>    <span class="o">]</span>
+</span><span class='line'>  <span class="err">}</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After making modifications to <code>_config.yml</code>, I could quickly examine them by firing up the interactive Ruby shell, <code>irb</code>, then typing the following:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">require</span> <span class="s1">&#39;yaml&#39;</span>
+</span><span class='line'><span class="nt">site</span> <span class="o">=</span> <span class="nt">YAML</span><span class="nc">.load_file</span><span class="o">(</span><span class="s1">&#39;_config.yml&#39;</span><span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I can access the navigation metadata as follows:</p>
+
+<ul>
+<li><code>site["travel"]</code> returns a hash containing country objects</li>
+<li><code>site["travel"]["usa"]</code> returns an array of state objects</li>
+<li><code>site["travel"]["usa"][0]</code> returns the first element of the array, which is Arizona</li>
+<li><code>site["travel"]["usa"][0]["name"]</code> returns the text &ldquo;Arizona&rdquo; and <code>site["travel"]["usa"][0]["url"]</code> the corresponding URL</li>
+<li><code>site["travel"]["usa"][0]["places"]</code> returns an array of locations in Arizona</li>
+<li><code>site["travel"]["usa"][0]["places"][0]</code> returns the object for Grand Canyon National Park, and so on</li>
+</ul>
+
+
+<p>Jekyll makes it even nicer to work with the hash by turning keys into instance methods.  So instead of writing <code>site["travel"]["usa"][0]["places"][0]</code>, I could also write <code>site.travel.usa[0].places[0]</code>.</p>
+
+<p>In order to generate the following HTML for the navigation:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/travel/usa&quot;</span><span class="nt">&gt;</span>USA<span class="nt">&lt;/a&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/travel/usa/az&quot;</span><span class="nt">&gt;</span>Arizona<span class="nt">&lt;/a&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/travel/usa/az/grand-canyon-national-park&quot;</span><span class="nt">&gt;</span>Grand Canyon National Park<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/travel/usa/fl&quot;</span><span class="nt">&gt;</span>Florida<span class="nt">&lt;/a&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/travel/usa/fl/cape-canaveral&quot;</span><span class="nt">&gt;</span>Cape Canaveral<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ul&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I used the following Liquid code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ root_url }}/travel/usa&quot;</span><span class="nt">&gt;</span>USA<span class="nt">&lt;/a&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>      {% for state in site.travel.usa %}
+</span><span class='line'>        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ root_url }}/travel/usa/{{ state.url }}&quot;</span><span class="nt">&gt;</span>{{ state.name }}<span class="nt">&lt;/a&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>            {% for place in state.places %}
+</span><span class='line'>              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ root_url }}/travel/usa/{{ state.url }}/{{ place.url }}&quot;</span><span class="nt">&gt;</span>{{ place.name }}<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>            {% endfor %}
+</span><span class='line'>          <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>      {% endfor %}
+</span><span class='line'>    <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ul&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now if I want to add another destination, I&rsquo;d only have to modify the YAML.</p>
+
+<h3>Conclusion</h3>
+
+<p>Octopress/Jekyll makes it easy and fun to tweak, hack and do so efficiently. I only wish I&rsquo;d made the switch earlier!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1149,281 +1554,6 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/02/search-box-using-knockoutjs/">Search Box Using KnockoutJS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-02T00:00:00-04:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://jsfiddle.net/dinhyen/GaDJD">View the live example</a></p>
-
-<p>We&rsquo;re gradually gravitating toward AngularJS because it&rsquo;s more powerful and flexible. However with AngularJS we have some issues with IE7, which unfortunately we&rsquo;re stuck supporting. So when I want to add some simple enhancements to the search box, I went back to KnockoutJS.  For a simple scenario such as this, KnockoutJS works great. If we had to do this using plain jQuery, we&rsquo;d have to juggle keypress, focus and blur events which is just unnecessary drudgery!</p>
-
-<p>The enhanced search text box should display a prompt; since the HTML5 &ldquo;placeholder&rdquo; property isn&rsquo;t supported in IE9 and below, we&rsquo;ll need to use JavaScript. When focused it should expand and show a cursor. It should submit when the user hits Return, but only if the user enters (or copies and pastes) 2 or more characters into the text box. When the user starts typing, it should display an icon to clear the text box.</p>
-
-<p>The markup is as follows:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;form</span> <span class="na">id=</span><span class="s">&quot;site-search&quot;</span> <span class="na">action=</span><span class="s">&quot;/Search&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;css: { active: isActive() }, submit: submit&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;search-magnify&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;click: edit&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-search&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/label&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;search-overlay&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;click: edit, visible: !isActive()&quot;</span><span class="nt">&gt;</span>Search site...<span class="nt">&lt;/div&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;search-input&quot;</span> <span class="na">name=</span><span class="s">&quot;searchText&quot;</span> <span class="na">autocomplete=</span><span class="s">&quot;off&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;hasfocus: editing, value: text, valueUpdate: [&#39;afterkeydown&#39;,&#39;propertychange&#39;,&#39;input&#39;]&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;search-reset&quot;</span> <span class="na">data-bind=</span><span class="s">&quot;click: clear, visible: hasText()&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-remove-sign&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/label&gt;</span>
-</span><span class='line'><span class="nt">&lt;/form&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To show the prompt, I&rsquo;m using an overlay container.  It&rsquo;s not very elegant, but I want to avoid changing the content of the textbox. With an MVC framework like KnockoutJS, the behavioral directives are wired into the markup via the data binding syntax; you don&rsquo;t have to peruse a separate JavaScript file. Even if you don&rsquo;t know the syntax, it&rsquo;s almost as understandable as plain English.  So clicking the magnifying glass or the overlay puts the search box in &ldquo;edit&rdquo; mode; clicking on the text also activates &ldquo;edit&rdquo; mode by giving it focus via the hasfocus binding.  The Reset/Clear icon is visible only when there is some text. When the search box is &ldquo;active&rdquo;, the form has a special CSS class, &ldquo;active&rdquo;, and the overlay becomes invisible.</p>
-
-<p>The valueUpdate binding ensures that KnockoutJS updates the text box&rsquo;s value when the user types on the keyboard or pastes with the mouse.</p>
-
-<p>The stylesheet (in <a href="http://sass-lang.com">SASS</a> which is easier to read) is as follows:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nf">#site-search</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">background-color</span><span class="o">:</span> <span class="err">$</span><span class="n">bodyBackground</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">border-style</span><span class="o">:</span> <span class="k">solid</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">border-width</span><span class="o">:</span> <span class="m">1px</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">border-color</span><span class="o">:</span> <span class="err">$</span><span class="n">filterBorderShadow</span> <span class="err">$</span><span class="n">filterBorder</span> <span class="err">$</span><span class="n">filterBorderHighlight</span> <span class="err">$</span><span class="n">filterBorder</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">color</span><span class="o">:</span> <span class="err">$</span><span class="n">grayTextColor</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">margin</span><span class="o">:</span> <span class="m">3px</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
-</span><span class='line'>  <span class="n">label</span><span class="o">,</span>
-</span><span class='line'>  <span class="n">input</span><span class="o">,</span>
-</span><span class='line'>  <span class="n">div</span> <span class="err">{</span>
-</span><span class='line'>    <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
-</span><span class='line'>    <span class="o">@</span><span class="n">include</span> <span class="n">ie7</span><span class="o">-</span><span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">();</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>  <span class="nc">.search-input</span> <span class="p">{</span>
-</span><span class='line'>    <span class="o">@</span><span class="n">include</span> <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
-</span><span class='line'>    <span class="o">@</span><span class="n">include</span> <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="p">(</span><span class="k">none</span><span class="p">);</span>
-</span><span class='line'>    <span class="o">@</span><span class="n">include</span> <span class="n">transition</span><span class="p">(</span><span class="k">width</span> <span class="m">0.8s</span><span class="p">);</span>
-</span><span class='line'>    <span class="k">background-color</span><span class="o">:</span> <span class="k">transparent</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">border-style</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="err">$</span><span class="n">grayTextColor</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">line-height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">outline</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">padding</span><span class="o">:</span> <span class="m">5px</span> <span class="m">25px</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">width</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">z-index</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-</span><span class='line'>    <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">:</span><span class="n">focus</span><span class="o">,</span>
-</span><span class='line'>    <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">:</span><span class="n">active</span> <span class="err">{</span>
-</span><span class='line'>      <span class="o">@</span><span class="n">include</span> <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="p">(</span><span class="k">none</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="err">}</span>
-</span><span class='line'>  <span class="nc">.search-overlay</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">font-style</span><span class="o">:</span> <span class="k">italic</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">left</span><span class="o">:</span> <span class="m">25px</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">top</span><span class="o">:</span> <span class="m">3px</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">z-index</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>  <span class="nc">.search-magnify</span><span class="o">,</span>
-</span><span class='line'>  <span class="nc">.search-reset</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">cursor</span><span class="o">:</span> <span class="k">default</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">top</span><span class="o">:</span> <span class="m">3px</span><span class="p">;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>  <span class="nc">.search-magnify</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">left</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>  <span class="nc">.search-reset</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">right</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span>
-</span><span class='line'>    <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">:</span><span class="n">hover</span> <span class="err">{</span>
-</span><span class='line'>      <span class="k">color</span><span class="o">:</span> <span class="err">$</span><span class="n">linkColor</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="err">}</span>
-</span><span class='line'><span class="err">}</span>
-</span><span class='line'><span class="nf">#site-search</span><span class="nc">.active</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">background-color</span><span class="o">:</span> <span class="err">$</span><span class="nb">white</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">color</span><span class="o">:</span> <span class="err">$</span><span class="n">textColor</span><span class="p">;</span>
-</span><span class='line'>  <span class="o">.</span><span class="n">search</span><span class="o">-</span><span class="n">input</span> <span class="err">{</span>
-</span><span class='line'>    <span class="k">color</span><span class="o">:</span> <span class="err">$</span><span class="n">textColor</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">width</span><span class="o">:</span> <span class="m">150px</span><span class="p">;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>  <span class="nc">.search-reset</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
-</span><span class='line'>    <span class="o">@</span><span class="n">include</span> <span class="n">ie7</span><span class="o">-</span><span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">();</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="err">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Of note is when the form has the &ldquo;active&rdquo; CSS class, we change the style and width of the text box and also set the CSS3 &ldquo;transition&rdquo; property which results a nice animation (which of course won&rsquo;t show up in IE9 or lower but that&rsquo;s ok).</p>
-
-<p>Finally the model which makes everything tick is as follows:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">SiteSearchViewModel</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
-</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">editing</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">edit</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">self</span><span class="p">.</span><span class="nx">editing</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">};</span>
-</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">isActive</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">editing</span><span class="p">()</span> <span class="o">||</span> <span class="nx">self</span><span class="p">.</span><span class="nx">hasText</span><span class="p">());</span>
-</span><span class='line'>  <span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">text</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">clear</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">self</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
-</span><span class='line'>    <span class="nx">self</span><span class="p">.</span><span class="nx">editing</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">};</span>
-</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">hasText</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">computed</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">text</span><span class="p">()).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>  <span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nx">self</span><span class="p">.</span><span class="nx">submit</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">text</span><span class="p">()).</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">;</span>
-</span><span class='line'>  <span class="p">};</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">ko</span><span class="p">.</span><span class="nx">applyBindings</span><span class="p">(</span><span class="k">new</span> <span class="nx">SiteSearchViewModel</span><span class="p">());</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The search box is defined to be &ldquo;active&rdquo; when the text box has focus or when it contains text. The latter condition accounts for the scenario in which the user types something then clicks away; the search box should stay expanded instead of collapsed.</p>
-
-<p>The <code>submit()</code> handler ensures that the user enters at least 2 non-white space characters.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -1477,7 +1607,7 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>41</em>
+        <a href="/blog/categories/technology">technology</a> <em>42</em>
       </li>
     
      
@@ -1515,6 +1645,10 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/18/angular-in-jekyll-or-octopress/">Angular in Jekyll/Octopress</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/04/15/copying-files-in-hudson/">Copying Files in Hudson</a>
       </li>
     
@@ -1528,10 +1662,6 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
     
       <li class="post">
         <a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/02/07/my-git-cheat-sheet/">My Git Cheat Sheet</a>
       </li>
     
   </ul>

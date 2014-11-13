@@ -129,6 +129,20 @@
 
 
 <p>This worked!  Also for things like &ldquo;rm -rf&rdquo;.  We&rsquo;re done, right?  Well, this mixmatching of different command-line styles seems unwieldy.  After I experimented further, it turned out that I had made an error from the start.  In addition to the Execute Shell build step, there&rsquo;s another type called Execute Windows Batch Command.  This build step allows you to run commands in a Windows shell.  Thus you can run execute xcopy, or anything else, as you would in the command prompt without needing to escape backslash.</p>
+
+<p>I&rsquo;d also like to be able to specify the share folder at run time so the project can be deployed to different servers.  In my initial attempt, I created a drop-down list parameter for the server name.  Then I figured to use the following xcopy command which incorporates the SERVER parameter.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>xcopy c:\source\app\* \\%SERVER%\app</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The %SERVER% syntax is used to reference an environment variable in Windows.  This approach turned out to be an abject failure.  It turned out that entire share has to be specified as an environment variable; e.g., %SHARE% should point to \server\app.  Then I could issue commands such as:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>del /s /q %SHARE%\*
+</span><span class='line'>xcopy c:\source\app\* %SHARE%</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 
@@ -176,6 +190,8 @@
       
         <a class="basic-alignment left" href="/blog/2014/04/09/moca-home-network/" title="Previous Post: A MoCA home network">&laquo; A MoCA home network</a>
       
+      
+        <a class="basic-alignment right" href="/blog/2014/04/18/angular-in-jekyll-or-octopress/" title="Next Post: Angular in Jekyll/Octopress">Angular in Jekyll/Octopress &raquo;</a>
       
     </p>
   </footer>
@@ -226,7 +242,7 @@
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>41</em>
+        <a href="/blog/categories/technology">technology</a> <em>42</em>
       </li>
     
      
@@ -264,6 +280,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/18/angular-in-jekyll-or-octopress/">Angular in Jekyll/Octopress</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/04/15/copying-files-in-hudson/">Copying Files in Hudson</a>
       </li>
     
@@ -277,10 +297,6 @@
     
       <li class="post">
         <a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/02/07/my-git-cheat-sheet/">My Git Cheat Sheet</a>
       </li>
     
   </ul>

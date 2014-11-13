@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technology | Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2014-10-09T22:49:11-04:00</updated>
+  <updated>2014-11-12T23:52:33-05:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Angular in Jekyll/Octopress]]></title>
+    <link href="http://dinhyen.github.io/blog/2014/04/18/angular-in-jekyll-or-octopress/"/>
+    <updated>2014-04-18T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2014/04/18/angular-in-jekyll-or-octopress</id>
+    <content type="html"><![CDATA[<p>Have a problem with Angular scope variable binding not working on a Jekyll or Octopress (which uses Jekyll) page?  It so happens that Jekyll&rsquo;s Liquid Template uses the same  syntax as Angular and would attempt to process the markup before Angular can get to it.  To get around the problem, you can surround Angular markup with <code>&#123;% raw %&#125;</code> and <code>&#123;% endraw %&#125;</code> tags.  Alternatively, you can also forgo from using this syntax altogether and use Angular&rsquo;s <code>ng-bind</code> directive to bind a variable to a DOM element.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Copying files in Hudson]]></title>
@@ -36,6 +45,16 @@ cp -r /c/source/app/* \\\\server\\share
 </code></p>
 
 <p>This worked!  Also for things like &ldquo;rm -rf&rdquo;.  We&rsquo;re done, right?  Well, this mixmatching of different command-line styles seems unwieldy.  After I experimented further, it turned out that I had made an error from the start.  In addition to the Execute Shell build step, there&rsquo;s another type called Execute Windows Batch Command.  This build step allows you to run commands in a Windows shell.  Thus you can run execute xcopy, or anything else, as you would in the command prompt without needing to escape backslash.</p>
+
+<p>I&rsquo;d also like to be able to specify the share folder at run time so the project can be deployed to different servers.  In my initial attempt, I created a drop-down list parameter for the server name.  Then I figured to use the following xcopy command which incorporates the SERVER parameter.
+<code>
+xcopy c:\source\app\* \\%SERVER%\app
+</code>
+The %SERVER% syntax is used to reference an environment variable in Windows.  This approach turned out to be an abject failure.  It turned out that entire share has to be specified as an environment variable; e.g., %SHARE% should point to \server\app.  Then I could issue commands such as:
+<code>
+del /s /q %SHARE%\*
+xcopy c:\source\app\* %SHARE%
+</code></p>
 ]]></content>
   </entry>
   
@@ -350,7 +369,7 @@ watch: {
 <h1>These will show up in git log</h1>
 
 <p>git config &mdash;global user.name &ldquo;Yen Tran&rdquo;
-git config &mdash;global user.email <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x79;&#x65;&#x6e;&#x40;&#121;&#x65;&#x6e;&#x74;&#x72;&#x61;&#x6e;&#x2e;&#x6f;&#x72;&#x67;">&#121;&#101;&#110;&#64;&#x79;&#101;&#110;&#116;&#x72;&#97;&#110;&#x2e;&#x6f;&#x72;&#x67;</a>
+git config &mdash;global user.email <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#121;&#101;&#x6e;&#x40;&#121;&#101;&#x6e;&#116;&#x72;&#x61;&#110;&#46;&#x6f;&#x72;&#103;">&#x79;&#x65;&#x6e;&#x40;&#x79;&#x65;&#110;&#x74;&#114;&#x61;&#110;&#46;&#111;&#x72;&#103;</a>
 git config &mdash;list
 ```</p>
 
@@ -945,121 +964,6 @@ git co master</p>
 
 <p>git fetch &mdash;tags
 ```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using Angular root scope for communication between controllers]]></title>
-    <link href="http://dinhyen.github.io/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers/"/>
-    <updated>2013-12-07T13:28:00-05:00</updated>
-    <id>http://dinhyen.github.io/blog/2013/12/07/using-angular-root-scope-for-communication-between-controllers</id>
-    <content type="html"><![CDATA[<p>Angular makes it simple to create standard index and details views.  Using the ubiquitous task list as an example, I can set up routes using the <code>$route</code> service as follows:</p>
-
-<p><code>javascript
-$routeProvider
-  .when('/tasks', { templateUrl: '_tasks.html', controller: 'TasksIndexCtrl' })
-  .when('/task/:id', { templateUrl: '_task.html', controller: 'TaskDetailsCtrl' })
-  .otherwise({ redirectTo: '/tasks' });
-}
-</code></p>
-
-<p>The routes definitions specify the Angular controller and HTML template to use when the user navigates to a particular path.  Here we have 2 controllers, one for the index page and one for the details page.</p>
-
-<p>The index controller retrieves the task list as a JSON array via the <code>$http</code> service:
-``` javascript
-function ($scope, $http) {
-  $http.get(&lsquo;tasks.json&rsquo;).success(</p>
-
-<pre><code>function (data) {
-  $scope.tasks = data;
-}
-</code></pre>
-
-<p>  );
-}
-```</p>
-
-<p>The index view renders each task with a link which embeds the task&rsquo;s id.  When clicked, the link redirects to the task&rsquo;s details view.
-
-<code>html
-&lt;a href='#/task/{{task.id}}'&gt;{{task.name}}&lt;/a&gt;
-</code>
-</p>
-
-<p>The details controller also retrieves task data as JSON via <code>$http</code>, after extracting the id value from <code>$routeParams</code>.
-``` javascript
-function ($scope, $http, $routeParams) {
-  $http.get(&lsquo;task-&rsquo; + $routeParams.id + &lsquo;.json&rsquo;).success(</p>
-
-<pre><code>function (data) {
-  $scope.task = data;
-}
-</code></pre>
-
-<p>  );
-}
-```</p>
-
-<p><a href="http://embed.plnkr.co/CzbeallomRCE4HuVWtzO/preview" target="_blank">View the first version in Plunker</a></p>
-
-<p>So far it&rsquo;s pretty run-of-the-mill.  But let&rsquo;s say the task list also contains sufficient data to show each task&rsquo;s details (the index page simply displays fewer information due to space constraint).  There&rsquo;d be no need for a separate request to pull data for the details page.  The details controller can just search in-memory, within the task list which is already retrieved.  However, since each controller has its own scope and can&rsquo;t access another&rsquo;s scope, there has to be another way to share data between controllers.</p>
-
-<p>Enters the <a href="http://docs.angularjs.org/guide/scope">root scope</a>, which acts as the parent scope for all other scopes.  If a property can&rsquo;t be found in a scope, Angular searchs its parent scope and so on until it reaches the root scope (as a consequence of prototypical inheritance).  Putting the task list in the root scope would allow Angular to find it in the index controller and, because all scopes share the same root scope, also allow the details controller to access it.</p>
-
-<p>Modifying the index controller to save the task list to the root scope:
-``` javascript
-function ($rootScope, $http) {
-  $rootScope.tasks = [];
-  $http.get(&lsquo;tasks.json&rsquo;).success(</p>
-
-<pre><code>function (data) {
-  $rootScope.tasks = data;
-}
-</code></pre>
-
-<p>  );
-}
-```</p>
-
-<p>Instead of making an HTTP request, the details controller can search for a task by id within the root scope.  When it finds the tasks, it saves it to its own scope.  It&rsquo;s probably a good idea to not pollute the root scope any more than necessary.
-``` javascript
-function ($rootScope, $scope, $routeParams) {
-  var getTask = function (id) {</p>
-
-<pre><code>id = parseInt(id, 10);
-for (var i = 0; task = $rootScope.tasks[i]; ++i) {
-  if (task.id === id) {
-    return task;
-  }
-}
-return task;
-</code></pre>
-
-<p>  };</p>
-
-<p>  $scope.task = getTask($routeParams.id);
-}
-```</p>
-
-<p>Each time the user returns to the index page, a fresh request is made to retrieve the task list.  I could optimize it further by retrieving the task list only if it has changed.  To do so, I&rsquo;d need to keep track of the modification time.  Here, I&rsquo;m only making the simple check to see whether the task list has already been populated.</p>
-
-<p>``` javascript
-function ($rootScope, $http) {
-  if (typeof $rootScope.tasks === &lsquo;undefined&rsquo;) {</p>
-
-<pre><code>$rootScope.tasks = [];
-$http.get('tasks.json').success(
-  function (data) {
-    $rootScope.tasks = data;
-  }
-);
-</code></pre>
-
-<p>  }
-}
-```</p>
-
-<p><a href="http://embed.plnkr.co/BwEtA3Ftp9SJ0OJCPHyv/preview" target="_blank">View the second version in Plunker</a></p>
 ]]></content>
   </entry>
   
