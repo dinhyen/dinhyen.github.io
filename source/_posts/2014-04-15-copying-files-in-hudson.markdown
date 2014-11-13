@@ -24,3 +24,13 @@ cp -r /c/source/app/* \\\\server\\share
 ```
 
 This worked!  Also for things like "rm -rf".  We're done, right?  Well, this mixmatching of different command-line styles seems unwieldy.  After I experimented further, it turned out that I had made an error from the start.  In addition to the Execute Shell build step, there's another type called Execute Windows Batch Command.  This build step allows you to run commands in a Windows shell.  Thus you can run execute xcopy, or anything else, as you would in the command prompt without needing to escape backslash.
+
+I'd also like to be able to specify the share folder at run time so the project can be deployed to different servers.  In my initial attempt, I created a drop-down list parameter for the server name.  Then I figured to use the following xcopy command which incorporates the SERVER parameter.
+```
+xcopy c:\source\app\* \\%SERVER%\app
+```
+The %SERVER% syntax is used to reference an environment variable in Windows.  This approach turned out to be an abject failure.  It turned out that entire share has to be specified as an environment variable; e.g., %SHARE% should point to \\server\app.  Then I could issue commands such as:
+```
+del /s /q %SHARE%\*
+xcopy c:\source\app\* %SHARE%
+```
