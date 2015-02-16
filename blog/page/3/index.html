@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="View the live example We&rsquo;re gradually gravitating toward AngularJS because it&rsquo;s more powerful and flexible. However with AngularJS we &hellip;">
+  <meta name="description" content="View the live example It seems like I&rsquo;m always working on search boxes, but here goes another. My goal here is to display an icon inside the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,75 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/09/fun-with-css-sibling-selectors/">Fun With CSS Sibling Selectors</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-09T00:00:00-04:00" pubdate data-updated="true">Aug 9<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://jsfiddle.net/dinhyen/q4FKT/1/">View the live example</a></p>
+
+<p>It seems like I&rsquo;m always <a href="/blog/2013/07/02/search-box-using-knockoutjs/" title="Search box using KnockoutJS">working on search boxes</a>, but here goes another. My goal here is to display an icon inside the search box. Initially, the search box has a dark background. When clicked, the background changes to white. The icon should changes its color based on whether or not the search box has focus. If we were using a font-based icon such as <a href="http://fortawesome.github.io/Font-Awesome/">Fontawesome</a>, which is awesome by the way, styling the icon would be a simple exercise.  However, we&rsquo;re using an image-based icon, so it&rsquo;s not possible to change its color.</p>
+
+<p>One solution is to use 2 icons, dark and light. We swap them depending on whether the input has focus. If the input is inactive, we show the light icon and hide the dark icon.  If the input is focused, we do the opposite.</p>
+
+<p>To access the icon in the context of the input, we use the CSS sibling selector <code>~</code>. Unlike the other CSS sibling selector, <code>+</code>, the <code>~</code> selector doesn&rsquo;t require that the second element be immediately adjacent to the first.  This is important since we have 2 icons, the second of which wouldn&rsquo;t be adjacent to the input.  We also use the <code>not()</code> selector to select the element that lacks the specified class.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.navbar-search-wrapper</span> <span class="nt">input</span> <span class="o">~</span> <span class="nc">.icon-search.icon-white</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.navbar-search-wrapper</span> <span class="nt">input</span><span class="nd">:focus</span> <span class="o">~</span> <span class="nc">.icon-search.icon-white</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.navbar-search-wrapper</span> <span class="nt">input</span> <span class="o">~</span> <span class="nc">.icon-search</span><span class="nd">:not</span><span class="o">(</span><span class="nc">.icon-white</span><span class="o">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.navbar-search-wrapper</span> <span class="nt">input</span><span class="nd">:focus</span> <span class="o">~</span> <span class="nc">.icon-search</span><span class="nd">:not</span><span class="o">(</span><span class="nc">.icon-white</span><span class="o">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1175,60 +1244,6 @@ git checkout --track origin/story_1
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/04/looper/">Looper</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-04T00:00:00-04:00" pubdate data-updated="true">Nov 4<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Looper, starring Bruce Willis and that awkward kid in Third Rock from the Sun, is a terrific movie with extraordinary storytelling, tightly woven narrative and great acting. I really enjoy it very much, despite some misgivings about its remorseless violence and relentlessly depressing depiction of the future. However, since I&rsquo;ve been asked if I can poke any hole in it, I&rsquo;ve taken it upon myself as a task to find a chink or two in the movie&rsquo;s formidable armor, much in the same spirit as <a href="http://www.juliansanchez.com/2012/06/11/whats-wrong-with-prometheus-a-partial-list">this critique</a>. There are probably a few holes in my own armor, as I&rsquo;ve only sat through the movie once and may miss details here and there. Needless to say, this is going to contain <strong>massive spoilers</strong>. I mean, it&rsquo;s pretty much going to give whole the movie away. So if you haven&rsquo;t seen the movie and would like to at some point, you will not want to read further. With that disclaimer out of the way, here goes.</p>
-
-<ul>
-<li>Joe (Joseph Gordon-Levitt) and others like him are Loopers, hired killers who execute prisoners sent from the future by an criminal syndicate via a time machine. The Looper waits at a certain location, typically in the middle of a field or in an abandoned courtyard. At the appointed time, the victim appears in front of them, tied and hooded. He pulls the trigger, removes the payment in the form of silver bars taped to the back of the victim, and disposes of the body in a furnace. Things are done this way, we&rsquo;re told, because in the future, it&rsquo;s very difficult to make people disappear without a trace. My question is, the criminals could operate a time machine but couldn&rsquo;t find a way to operate an incinerator?</li>
-<li>The criminals go through the trouble of sending a man to the past to recruit and manage the Loopers and deal with things that could go wrong (which does). They risk polluting the time line if the victims end up escaping (they do). This seems like a needlessly complex scheme fraught with risk. Couldn&rsquo;t they just send the victim back 10,000 years or so where he would have perished without so much as a ding on the timeline. Okay, so maybe the time machine has a limited range and only works for the last 30 years or so. Couldn&rsquo;t they have set one up in the middle of a lake or just off shore? Make sure the victim is weighed down and he would just disappear beneath the waves.</li>
-<li>The Looper is given the time on a piece of paper and the victim appears exactly at the appointed time. Nevermind the fact that they have to synchronize their watches over, oh, 30 years or so, how do they send a message from the future to set the time?</li>
-<li>While future-Joe (Bruce Willis) followed present-Joe back to his apartment, he walked across an open garage and shot a thug sitting inside a car. Given that present-Joe is only armed with a blunderbuss&mdash;which he keeps on him&mdash;when future-Joe steals his truck, where does future-Joe get a gun?</li>
-<li>For being professional killers, the thugs are horrendous shots. The one on top of the balcony at present-Joe&rsquo;s apartment keeps missing future-Joe who is only 30&mdash;40 feet away. Near the end, Kid Blue with his peashooter, again keeps missing present-Joe by a mile (though he was riding a hoverbike which makes aiming difficult).</li>
-<li>Future-Seth ends up escaping. Under interrogation, present-Joe gives away present-Seth, who is captured. While future-Seth is running away, his fingers and leg begin to disappear and a tattoo appears on his forearm with an address. Mutilated, he barely makes it to the address, whereupon he is promptly shot. Apparently the bad guys mutilate present-Seth to directly affect future-Seth. This is a terrific setup for what would happen later in the movie. Nevertheless, since the goal is to get rid of the Seths, couldn&rsquo;t they just have killed present-Seth?</li>
-<li>Loopers are dismissed with a final payment of gold bars. They know that in 30 years they would be captured and sent back to be executed, thus closing the loop. With the knowledge and the means, future-Joe does nothing to avoid this fate?</li>
-<li>The in the &ldquo;flash forward&rdquo;, Joe goes to China. As the year goes by, he gets older. All of a sudden, he turns from Joseph Gordon-Levitt who has shoulder-length black hair into Bruce Willis who is 30 years older and almost completely bald.</li>
-<li>The entire diner empties out without neither present- or future-Joe, who sit in the middle of it, noticing.</li>
-<li>At the diner shootout, present-Joe joins the thugs in shooting at future-Joe. The thugs completely ignore present-Joe without realizing that with him they have immediate and lethal leverage over the other.</li>
-<li>Kid Blue, on the tracks of future-Joe, goes to a guy who shows him a video feed of future-Joe approaching and peeking into the window of the prostitute&rsquo;s apartment. It seems like an extraordinary coincidence that he finds the right guy who has access to the right camera at the right location in a huge metropolis.</li>
-<li>Most of the cars have tubes or pipes running around the rear, presumably into the fuel door. What is the purpose of the pipes? If they carry some sort of fuel, as is the most likely explanation, why leave them exposed in the back vulnerable to a rear-end collision or mischief.</li>
-</ul>
-
-
-<p>In all fairness, this is a very well-written and -executed movie. These are minor nitpicks and by no means should detract from your enjoyment of it.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -1282,7 +1297,7 @@ git checkout --track origin/story_1
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>42</em>
+        <a href="/blog/categories/technology">technology</a> <em>43</em>
       </li>
     
      
@@ -1320,6 +1335,10 @@ git checkout --track origin/story_1
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop/">How to Not Upgrade the Nexus 7 to Lollipop</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/04/18/angular-in-jekyll-or-octopress/">Angular in Jekyll/Octopress</a>
       </li>
     
@@ -1335,10 +1354,6 @@ git checkout --track origin/story_1
         <a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a>
-      </li>
-    
   </ul>
 </section>
 
@@ -1348,7 +1363,7 @@ git checkout --track origin/story_1
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Yen Tran -
+  Copyright &copy; 2015 - Yen Tran -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

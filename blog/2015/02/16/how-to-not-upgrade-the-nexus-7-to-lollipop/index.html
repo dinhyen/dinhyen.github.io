@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to not upgrade the Nexus 7 to Lollipop - Yen's Blog</title>
+  <meta name="author" content="Yen Tran">
+
+  
+  <meta name="description" content="I have a first-generation Nexus 7 tablet made by Asus which ran KitKat 4.4. When the OTA Lollipop update became available, I couldn&rsquo;t wait to &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dinhyen.github.io/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Yen's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="/stylesheets/darkbox.css" rel="stylesheet" type="text/css">
+<script src="/javascripts/darkbox.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24469490-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Yen's Blog</a></h1>
+  
+    <h2>Lens, Wheels, Skates, Keyboard</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dinhyen.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/travel">Travel</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">How to Not Upgrade the Nexus 7 to Lollipop</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-16T00:00:00-05:00" pubdate data-updated="true">Feb 16<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I have a first-generation Nexus 7 tablet made by Asus which ran KitKat 4.4.  When the OTA Lollipop update became available, I couldn&rsquo;t wait to install it.  The latest and greatest Android running on Google hardware seemed to be a match made in heaven; it would be better, prettier and faster, right?  As you can probably guess from the title of this post, the answer was a resounding <em>no</em>.  Everything became sluggish, swipes would only registered after a couple of seconds, random things popped open and close.  The tablet was downright unusable.</p>
+
+<p>Rather than splurging for a new tablet, which was probably what Google wanted me to do, I opted to go back to KitKat, since the hardware itself was perfectly fine.  The <a href="https://developers.google.com/android/nexus/images">process to restore the KitKat system image</a> using the ADB command-line tool that accompanies the Android SDK was quite simple.  I had some difficulty to get my Windows 7 machine to recognize the Nexus 7, until I installed the <a href="http://developer.android.com/sdk/win-usb.html">Google USB drivers</a>.  Alternatively, I could have ran ADB on a Mac, for which USB drivers wouldn&rsquo;t have been necessary.  An important part of the process was to make sure I chose the correct system image.  For a Nexus 7, the KitKat image was &ldquo;nakasi&rdquo; 4.4.4 (KTU84P).  The image archive contained a flashing script that I executed after unlocking the bootloader.  The whole thing took about 5 minutes once everything worked.</p>
+
+<p>So with its brain transplanted with a fresh KitKat image, the Nexus was back to its own happy self.  Unfortunately, the good feeling didn&rsquo;t last long.  In short order, Android started notifying me that the 5.0 system update aka Lollipop had <em>already</em> been downloaded and ready to install.  There was no way to dismiss the notification or tell it to remind me again in, oh, never.  The helpful notification sat in the system tray and just generally got in the way.  This is by far one of the worst instances of nagware-ism.</p>
+
+<p>To disable the system update notification, I had to root Android.  Fortunately at this point there were a few mature tools that make doing so quite simple.  I used the <a href="http://www.wugfresh.com/nrt">Nexus Root Toolkit 2.0.4</a>.  Since I was on a fresh install of KitKat, all I had to do was to 1) unlock the bootloader, and 2) root.  The toolkit also installs a couple of useful tool such as SuperSU and BusyBox Installer.  The latter lets you grant root privilege on-demand to any app that requests it.</p>
+
+<p>The next step was to turn off the system update notification service.  There are a few apps, the one I used being DisableService.  Once I navigated to the Google System Service node, System Update Service was already disabled.  Hmm, clearly that wasn&rsquo;t it because there was still a big fat notification in the system tray.  It turned out that I had to go to the Google Play Services node.  Lo and behold, there was another System Update Service.  Disabling this one and restarting the device did the trick.</p>
+
+<p><img src="http://yentran.isamonkey.org/gallery/nexus-7-kitkat/disable-service.png" alt="" /></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Yen Tran</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-16T00:00:00-05:00" pubdate data-updated="true">Feb 16<span>th</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/technology/'>technology</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dinhyen.github.io/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop/" data-via="dinhyen" data-counturl="http://dinhyen.github.io/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/04/18/angular-in-jekyll-or-octopress/" title="Previous Post: Angular in Jekyll/Octopress">&laquo; Angular in Jekyll/Octopress</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Categories</h1>
+  <ul id="categories">
+    
+     
+      <li data-category="Photoshop">
+        <a href="/blog/categories/photoshop">Photoshop</a> <em>2</em>
+      </li>
+    
+     
+      <li data-category="travel">
+        <a href="/blog/categories/travel">travel</a> <em>20</em>
+      </li>
+    
+     
+      <li data-category="outdoors">
+        <a href="/blog/categories/outdoors">outdoors</a> <em>9</em>
+      </li>
+    
+     
+      <li data-category="photography">
+        <a href="/blog/categories/photography">photography</a> <em>20</em>
+      </li>
+    
+     
+      <li data-category="hockey">
+        <a href="/blog/categories/hockey">hockey</a> <em>11</em>
+      </li>
+    
+     
+      <li data-category="city">
+        <a href="/blog/categories/city">city</a> <em>6</em>
+      </li>
+    
+     
+      <li data-category="drawing">
+        <a href="/blog/categories/drawing">drawing</a> <em>1</em>
+      </li>
+    
+     
+      <li data-category="technology">
+        <a href="/blog/categories/technology">technology</a> <em>43</em>
+      </li>
+    
+     
+      <li data-category="review">
+        <a href="/blog/categories/review">review</a> <em>25</em>
+      </li>
+    
+     
+      <li data-category="hiking">
+        <a href="/blog/categories/hiking">hiking</a> <em>9</em>
+      </li>
+    
+     
+      <li data-category="other">
+        <a href="/blog/categories/other">other</a> <em>2</em>
+      </li>
+    
+  </ul>
+</section>
+<script type="text/javascript">
+  $(function() {
+    var categories = [];
+    $('[data-category]').each(function() {
+      categories.push(this);
+    });
+    categories.sort(function (a, b) {
+      return a.attributes['data-category'].value.toLowerCase() <= b.attributes['data-category'].value.toLowerCase()
+            ? -1 : 1;
+    });
+    $('#categories').html(categories);
+  });
+</script>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop/">How to Not Upgrade the Nexus 7 to Lollipop</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/18/angular-in-jekyll-or-octopress/">Angular in Jekyll/Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/15/copying-files-in-hudson/">Copying Files in Hudson</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/09/moca-home-network/">A MoCA Home Network</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Yen Tran -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

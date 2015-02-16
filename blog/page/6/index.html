@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="We use Hudson to deploy our web application to different environments such as QA, demo and production. We need to customize the web.config, primarily &hellip;">
+  <meta name="description" content="I ran into an subtle bug today. Let&rsquo;s say we have a shopping cart page that displays order details and allows the user to remove items from the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,80 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/18/deleting-from-collection-with-linq-to-sql/">Deleting From Collection With LINQ to SQL</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-18T00:00:00-04:00" pubdate data-updated="true">May 18<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I ran into an subtle bug today.  Let&rsquo;s say we have a shopping cart page that displays order details and allows the user to remove items from the order.  We retrieve the items in the order with the following:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">items</span> <span class="p">=</span> <span class="n">DataContext</span><span class="p">.</span><span class="n">Orders</span><span class="p">.</span><span class="n">Single</span><span class="p">(</span><span class="n">o</span> <span class="p">=&gt;</span> <span class="n">o</span><span class="p">.</span><span class="n">Id</span> <span class="p">==</span> <span class="n">orderId</span><span class="p">).</span><span class="n">Items</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To remove an item from the order, we have the following:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">itemToDelete</span> <span class="p">=</span> <span class="n">DataContext</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Single</span><span class="p">(</span><span class="n">i</span> <span class="p">=&gt;</span> <span class="n">i</span><span class="p">.</span><span class="n">Id</span> <span class="p">==</span> <span class="n">itemId</span><span class="p">);</span>
+</span><span class='line'><span class="n">DataContext</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">DeleteOnSubmit</span><span class="p">(</span><span class="n">itemToDelete</span><span class="p">);</span>
+</span><span class='line'><span class="n">DataContext</span><span class="p">.</span><span class="n">SubmitChanges</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It&rsquo;s run-of-the-mill as far as LINQ to SQL goes.  However, we ran into the issue in which an item was still being listed even after it had been deleted.  It turned out that this was caused by how we handled deleting the item. Because we delete the item directly from the database without updating the collection that contains it,  LINQ to SQL presumably doesn&rsquo;t know that the collection has been modified and doesn&rsquo;t re-fetch it from the database, resulting in the collection being out-of-date.</p>
+
+<p>To fix this issue, we can fetch the items directly from the items table:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">items</span> <span class="p">=</span> <span class="n">DataContext</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">i</span> <span class="p">=&gt;</span> <span class="n">i</span><span class="p">.</span><span class="n">OrderId</span> <span class="p">==</span> <span class="n">orderId</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Alternatively, we can remove the item from the collection prior to deleting it.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">itemToDelete</span> <span class="p">=</span> <span class="n">DataContext</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Single</span><span class="p">(</span><span class="n">i</span> <span class="p">=&gt;</span> <span class="n">i</span><span class="p">.</span><span class="n">Id</span> <span class="p">==</span> <span class="n">itemId</span><span class="p">);</span>
+</span><span class='line'><span class="n">DataContext</span><span class="p">.</span><span class="n">DataContext</span><span class="p">.</span><span class="n">Orders</span><span class="p">.</span><span class="n">Single</span><span class="p">(</span><span class="n">o</span> <span class="p">=&gt;</span> <span class="n">o</span><span class="p">.</span><span class="n">Id</span> <span class="p">==</span> <span class="n">orderId</span><span class="p">).</span><span class="n">Items</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">itemToDelete</span><span class="p">);</span>
+</span><span class='line'><span class="n">DataContext</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">DeleteOnSubmit</span><span class="p">(</span><span class="n">itemToDelete</span><span class="p">);</span>
+</span><span class='line'><span class="n">DataContext</span><span class="p">.</span><span class="n">SubmitChanges</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -904,54 +978,6 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/23/on-the-bruins-2011-white-house-appearance/">On the Bruins&#8217; 2011 White House Appearance</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-23T00:00:00-05:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.whitehouse.gov/blog/2012/01/23/president-obama-welcomes-boston-bruins"><img title="Bruins 2011 White House photo" src="https://dl.dropboxusercontent.com/u/52804626/images/20120123-potus-boston-bruins.jpg" width="560" height="373" /></a></p>
-
-<p>Today the Bruins appeared at the White House where President Obama greeted them and honored their accomplishments as 2011 Stanley Cup champions. Included in the group photo were Americans, Canadians, Czechs, a Slovak, a Finn, and a German. Notable in his absence was Bruins goalie Tim Thomas, Stanley Cup playoffs MVP, winner of multiple awards and the only American player who made significant contribution to the team&rsquo;s Cup run. The details of Thomas&#8217; absence are covered elsewhere, but it has become clear that it is politically motivated.</p>
-
-<p>Thomas is known for many things&mdash;his unorthodox style, his underdog status, his fierce competitiveness, his infectious grin, his modesty, his loyalty to teammates, and his classy behavior. In the Stanley Cup Finals series, after beating the Bruins in game 5, Vancouver goalie Roberto Luongo publicly made disparaging remarks about Thomas&#8217; playing style. Thomas kept quiet and focused on his own play. The Bruins proceeded to embarrass Luongo in game 6 and Thomas shut out the Canucks in the final and deciding game. Even though he was vindicated, Thomas refrained from responding in kind to Luongo, even when he was presented with many opportunities to do so by the media.</p>
-
-<p>What does being classy mean? Despite being overused, it is still a neat little word which does its job so well so succinctly. To me it means the willingness to do the right thing even if one is averse or opposed to it. The &ldquo;right&rdquo; thing depends a great deal on one&rsquo;s perspective. Yet there are many qualities such as honor, loyalty and respect that can be considered to be universally admired.  Having known little about Thomas&#8217; personal life, today&rsquo;s events came as a surprise and ultimately a disappointment for me.</p>
-
-<p>The White House appearance is a long-standing tradition in which the President fetes (an American) professional sports champion. It is a ceremonial event with little, if any, political benefit for the President. It is an event in which the team&rsquo;s achievements are recognized by the highest office in the land. It is an occasion for the players to congratulate and honor each other. But it is not only for the athletes. It is also an honor for the club, the coaches, the general manager, the staff, the front office and the owners. Just as importantly, it is a significant honor for a large number of Bruins fans, who have not celebrated a championship in 39 years&mdash;or, for many, ever.</p>
-
-<p>In consideration of his teammates, his employers and his fans, the right thing for Thomas to do would be to appear with the team, regardless of his political leaning. The most cherished of hockey traditions is the handshake at center ice following the conclusion of a playoffs series. This tradition exudes sportsmanship and embodies the widely admired qualities of respecting one&rsquo;s opponent and being gracious in victory and defeat. Thomas shook hands with Vancouver players who fought, hacked, slashed, bit, taunted his teammates and friends, even viciously knocking out one of them. If it was okay to shake hands with bitter opponents, would it not be okay to shake hands with someone who doesn&rsquo;t share his political convictions? With his absence, Thomas refused to show respect to the President. More seriously, by standing apart from his teammates, he undermines the very foundation of a Bruins team that prides itself on unity and allegiance to one another. Thomas, it pains me to say that this is not a classy move on your part.</p>
-
-<p>Overshadowed in the reactions to Thomas&#8217; decision is how Bruins general manager Peter Chiarelli handled the situation. Chiarelli could have made the visit mandatory and suspended Thomas if he was a no-show. He did neither. He chose the least disruptive course of actions. While he tried for some time to convince Thomas, in the end he left it up to him. In Chiarelli&rsquo;s words, &ldquo;We&rsquo;re like a family. We have our issues. You deal with them, move on, and try and support everyone.&rdquo; Chiarelli did the right thing and took utmost care to balance the interest of the team and of the individual. As Chiarelli said, Thomas is a part of the Bruins family&mdash;a very important part. Even if a family member does something you don&rsquo;t agree with, you still support him.  I will cheer for and wish Thomas continued success on and off the ice. It&rsquo;s the only classy thing to do.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -1005,7 +1031,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>42</em>
+        <a href="/blog/categories/technology">technology</a> <em>43</em>
       </li>
     
      
@@ -1043,6 +1069,10 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop/">How to Not Upgrade the Nexus 7 to Lollipop</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/04/18/angular-in-jekyll-or-octopress/">Angular in Jekyll/Octopress</a>
       </li>
     
@@ -1058,10 +1088,6 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
         <a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a>
-      </li>
-    
   </ul>
 </section>
 
@@ -1071,7 +1097,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Yen Tran -
+  Copyright &copy; 2015 - Yen Tran -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

@@ -9,7 +9,18 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="Map of our hike on Jesup Path. Along with Emery Path, Jesup Path is another trail which can be found at the Sieur de Monts spring area. Straight and &hellip;">
+  <meta name="description" content="Sometimes I&rsquo;d like to only allow a property to be set in the constructor. Something like this: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+private Foo _foo;
+public &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +91,82 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/10/auto-property-with-private-setter/">Auto Property With Private Setter</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-10T00:00:00-04:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Sometimes I&rsquo;d like to only allow a property to be set in the constructor. Something like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="k">private</span> <span class="n">Foo</span> <span class="n">_foo</span><span class="p">;</span>
+</span><span class='line'><span class="k">public</span> <span class="n">Foo</span> <span class="n">Foo</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">_foo</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">public</span> <span class="nf">Bar</span><span class="p">(</span><span class="n">Foo</span> <span class="n">foo</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">_foo</span> <span class="p">=</span> <span class="n">foo</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This neat little pattern lets you do the same with fewer members (and lines of code):</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="k">public</span> <span class="n">Foo</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">private</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">public</span> <span class="nf">Bar</span><span class="p">(</span><span class="n">Foo</span> <span class="n">foo</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">Foo</span> <span class="p">=</span> <span class="n">foo</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1229,80 +1316,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/18/deleting-from-collection-with-linq-to-sql/">Deleting From Collection With LINQ to SQL</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-18T00:00:00-04:00" pubdate data-updated="true">May 18<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I ran into an subtle bug today.  Let&rsquo;s say we have a shopping cart page that displays order details and allows the user to remove items from the order.  We retrieve the items in the order with the following:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">items</span> <span class="p">=</span> <span class="n">DataContext</span><span class="p">.</span><span class="n">Orders</span><span class="p">.</span><span class="n">Single</span><span class="p">(</span><span class="n">o</span> <span class="p">=&gt;</span> <span class="n">o</span><span class="p">.</span><span class="n">Id</span> <span class="p">==</span> <span class="n">orderId</span><span class="p">).</span><span class="n">Items</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To remove an item from the order, we have the following:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">itemToDelete</span> <span class="p">=</span> <span class="n">DataContext</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Single</span><span class="p">(</span><span class="n">i</span> <span class="p">=&gt;</span> <span class="n">i</span><span class="p">.</span><span class="n">Id</span> <span class="p">==</span> <span class="n">itemId</span><span class="p">);</span>
-</span><span class='line'><span class="n">DataContext</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">DeleteOnSubmit</span><span class="p">(</span><span class="n">itemToDelete</span><span class="p">);</span>
-</span><span class='line'><span class="n">DataContext</span><span class="p">.</span><span class="n">SubmitChanges</span><span class="p">();</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It&rsquo;s run-of-the-mill as far as LINQ to SQL goes.  However, we ran into the issue in which an item was still being listed even after it had been deleted.  It turned out that this was caused by how we handled deleting the item. Because we delete the item directly from the database without updating the collection that contains it,  LINQ to SQL presumably doesn&rsquo;t know that the collection has been modified and doesn&rsquo;t re-fetch it from the database, resulting in the collection being out-of-date.</p>
-
-<p>To fix this issue, we can fetch the items directly from the items table:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">items</span> <span class="p">=</span> <span class="n">DataContext</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">i</span> <span class="p">=&gt;</span> <span class="n">i</span><span class="p">.</span><span class="n">OrderId</span> <span class="p">==</span> <span class="n">orderId</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Alternatively, we can remove the item from the collection prior to deleting it.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">itemToDelete</span> <span class="p">=</span> <span class="n">DataContext</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Single</span><span class="p">(</span><span class="n">i</span> <span class="p">=&gt;</span> <span class="n">i</span><span class="p">.</span><span class="n">Id</span> <span class="p">==</span> <span class="n">itemId</span><span class="p">);</span>
-</span><span class='line'><span class="n">DataContext</span><span class="p">.</span><span class="n">DataContext</span><span class="p">.</span><span class="n">Orders</span><span class="p">.</span><span class="n">Single</span><span class="p">(</span><span class="n">o</span> <span class="p">=&gt;</span> <span class="n">o</span><span class="p">.</span><span class="n">Id</span> <span class="p">==</span> <span class="n">orderId</span><span class="p">).</span><span class="n">Items</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">itemToDelete</span><span class="p">);</span>
-</span><span class='line'><span class="n">DataContext</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">DeleteOnSubmit</span><span class="p">(</span><span class="n">itemToDelete</span><span class="p">);</span>
-</span><span class='line'><span class="n">DataContext</span><span class="p">.</span><span class="n">SubmitChanges</span><span class="p">();</span>
-</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -1356,7 +1369,7 @@
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>42</em>
+        <a href="/blog/categories/technology">technology</a> <em>43</em>
       </li>
     
      
@@ -1394,6 +1407,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop/">How to Not Upgrade the Nexus 7 to Lollipop</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/04/18/angular-in-jekyll-or-octopress/">Angular in Jekyll/Octopress</a>
       </li>
     
@@ -1409,10 +1426,6 @@
         <a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a>
-      </li>
-    
   </ul>
 </section>
 
@@ -1422,7 +1435,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Yen Tran -
+  Copyright &copy; 2015 - Yen Tran -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
