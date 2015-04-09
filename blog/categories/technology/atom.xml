@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: technology | Yen's Blog]]></title>
+  <title><![CDATA[Category: Technology | Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2015-02-16T17:00:20-05:00</updated>
+  <updated>2015-04-09T09:53:30-04:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -14,363 +14,57 @@
 
   
   <entry>
-    <title type="html"><![CDATA[How to not upgrade the Nexus 7 to Lollipop]]></title>
-    <link href="http://dinhyen.github.io/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop/"/>
-    <updated>2015-02-16T00:00:00-05:00</updated>
-    <id>http://dinhyen.github.io/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop</id>
-    <content type="html"><![CDATA[<p>I have a first-generation Nexus 7 tablet made by Asus which ran KitKat 4.4.  When the OTA Lollipop update became available, I couldn&rsquo;t wait to install it.  The latest and greatest Android running on Google hardware seemed to be a match made in heaven; it would be better, prettier and faster, right?  As you can probably guess from the title of this post, the answer was a resounding <em>no</em>.  Everything became sluggish, swipes would only registered after a couple of seconds, random things popped open and close.  The tablet was downright unusable.</p>
+    <title type="html"><![CDATA[Installing the Curt 11064 trailer hitch on a 2009 Honda Fit Sport]]></title>
+    <link href="http://dinhyen.github.io/blog/2015/04/08/installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/"/>
+    <updated>2015-04-08T23:13:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2015/04/08/installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport</id>
+    <content type="html"><![CDATA[<p>As if that&rsquo;s not specific enough, I could also add On a Cold Sleety Night, After the Family Had Gone to Bed, While Feeling Renewed Pangs of Hunger.  I feel compelled to write this post so that Kate wouldn&rsquo;t think I spent all that time in the garage playing video games (I wish I could).  I was deciding between the Curt and a DrawTite trailer hitch.  The Curt seemed more substantial, is made in Wisconsin (the DrawTite is made in Mexico) and as it turned out is surprisingly lighter (lighter being relative, more on that later).  Installing the DrawTite requires moving the exhaust pipe out of the way, while the Curt requires drilling a hole.  The latter raises its installation difficulty to 6/10 according to a reputable web site.  I thought what the heck I could handle a drill, so I went with the Curt.  Installation should take about an hour, according to the same web site.  It ended up taking much longer than that&mdash;I won&rsquo;t say by how much because it&rsquo;s rather embarrassing, and that doesn&rsquo;t even include the amount of time buying tools online and repeated trips to the local hardware store.  I could of course have the professionals at Rack Attack or even U-Haul do the job for reasonable cost, but that would have been a much shorter blog post.</p>
 
-<p>Rather than splurging for a new tablet, which was probably what Google wanted me to do, I opted to go back to KitKat, since the hardware itself was perfectly fine.  The <a href="https://developers.google.com/android/nexus/images">process to restore the KitKat system image</a> using the ADB command-line tool that accompanies the Android SDK was quite simple.  I had some difficulty to get my Windows 7 machine to recognize the Nexus 7, until I installed the <a href="http://developer.android.com/sdk/win-usb.html">Google USB drivers</a>.  Alternatively, I could have ran ADB on a Mac, for which USB drivers wouldn&rsquo;t have been necessary.  An important part of the process was to make sure I chose the correct system image.  For a Nexus 7, the KitKat image was &ldquo;nakasi&rdquo; 4.4.4 (KTU84P).  The image archive contained a flashing script that I executed after unlocking the bootloader.  The whole thing took about 5 minutes once everything worked.</p>
-
-<p>So with its brain transplanted with a fresh KitKat image, the Nexus was back to its own happy self.  Unfortunately, the good feeling didn&rsquo;t last long.  In short order, Android started notifying me that the 5.0 system update aka Lollipop had <em>already</em> been downloaded and ready to install.  There was no way to dismiss the notification or tell it to remind me again in, oh, never.  The helpful notification sat in the system tray and just generally got in the way.  This is by far one of the worst instances of nagware-ism.</p>
-
-<p>To disable the system update notification, I had to root Android.  Fortunately at this point there were a few mature tools that make doing so quite simple.  I used the <a href="http://www.wugfresh.com/nrt">Nexus Root Toolkit 2.0.4</a>.  Since I was on a fresh install of KitKat, all I had to do was to 1) unlock the bootloader, and 2) root.  The toolkit also installs a couple of useful tool such as SuperSU and BusyBox Installer.  The latter lets you grant root privilege on-demand to any app that requests it.</p>
-
-<p>The next step was to turn off the system update notification service.  There are a few apps, the one I used being DisableService.  Once I navigated to the Google System Service node, System Update Service was already disabled.  Hmm, clearly that wasn&rsquo;t it because there was still a big fat notification in the system tray.  It turned out that I had to go to the Google Play Services node.  Lo and behold, there was another System Update Service.  Disabling this one and restarting the device did the trick.</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/nexus-7-kitkat/disable-service.png" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Angular in Jekyll/Octopress]]></title>
-    <link href="http://dinhyen.github.io/blog/2014/04/18/angular-in-jekyll-or-octopress/"/>
-    <updated>2014-04-18T00:00:00-04:00</updated>
-    <id>http://dinhyen.github.io/blog/2014/04/18/angular-in-jekyll-or-octopress</id>
-    <content type="html"><![CDATA[<p>Have a problem with Angular scope variable binding not working on a Jekyll or Octopress (which uses Jekyll) page?  It so happens that Jekyll&rsquo;s Liquid Template uses the same  syntax as Angular and would attempt to process the markup before Angular can get to it.  To get around the problem, you can surround Angular markup with <code>&#123;% raw %&#125;</code> and <code>&#123;% endraw %&#125;</code> tags.  Alternatively, you can also forgo from using this syntax altogether and use Angular&rsquo;s <code>ng-bind</code> directive to bind a variable to a DOM element.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Copying files in Hudson]]></title>
-    <link href="http://dinhyen.github.io/blog/2014/04/15/copying-files-in-hudson/"/>
-    <updated>2014-04-15T20:05:00-04:00</updated>
-    <id>http://dinhyen.github.io/blog/2014/04/15/copying-files-in-hudson</id>
-    <content type="html"><![CDATA[<p>Copying files somewhere is pretty standard procedure when deploying an app.  Interestingly I&rsquo;ve never had to copy files directly in Hudson.  Until now I&rsquo;ve only deployed .NET apps in Hudson and used MSBuild&rsquo;s Copy task to copy the files to a share folder.  Now that I want to deploy Angular and other client apps in Hudson, I&rsquo;d have to copy the files manually.</p>
-
-<p>My initial attempt was to add a new Execute Shell build step to run <code>xcopy</code>.  Since Hudson executes the command through the Bourne shell, which interprets any backslash in the path as the escape character, I&rsquo;d have to escape the backslash itself.  Why Windows has to be different from everyone else is a major source of annoyance if you have to move back and forth between Windows and *nix.
-<code>
-xcopy c:\\source\\app\\* \\\\server\\share\\app
-</code>
-This worked, but in order for xcopy to copy subdirectories, refrain from prompting everytime it needs to overwrite a file and take other actions necessary for unsupervised execution, I needed to specify additional parameters.
-<code>
-xcopy c:\\source\\app\\* \\\\server\\share /c /k /e /r /y /exclude:c:\\source\\xcopy_exclude.txt
-</code>
-Unfortunately this was when xcopy blows up with the &ldquo;invalid number of parameters&rdquo; error.  It probably had to do with the shell not passing the parameters to xcopy.  No dice if I put the command in a batch file then executing it.  Ditto when I tried <code>robocopy</code>, which prints a nicer error message but is functionally the same as xcopy.  As a note, you could test all of this in a Bourne shell rather than invoking Hudson every time.</p>
-
-<p>It occurred to me to use something that&rsquo;s native to the shell, rather than trying to get it to play nice with xcopy.  You&rsquo;d still have to deal with the backslash in the share:
-<code>
-cp -r /c/source/app/* \\\\server\\share
-</code></p>
-
-<p>This worked!  Also for things like &ldquo;rm -rf&rdquo;.  We&rsquo;re done, right?  Well, this mixmatching of different command-line styles seems unwieldy.  After I experimented further, it turned out that I had made an error from the start.  In addition to the Execute Shell build step, there&rsquo;s another type called Execute Windows Batch Command.  This build step allows you to run commands in a Windows shell.  Thus you can run execute xcopy, or anything else, as you would in the command prompt without needing to escape backslash.</p>
-
-<p>I&rsquo;d also like to be able to specify the share folder at run time so the project can be deployed to different servers.  In my initial attempt, I created a drop-down list parameter for the server name.  Then I figured to use the following xcopy command which incorporates the SERVER parameter.
-<code>
-xcopy c:\source\app\* \\%SERVER%\app
-</code>
-The %SERVER% syntax is used to reference an environment variable in Windows.  This approach turned out to be an abject failure.  It turned out that entire share has to be specified as an environment variable; e.g., %SHARE% should point to \server\app.  Then I could issue commands such as:
-<code>
-del /s /q %SHARE%\*
-xcopy c:\source\app\* %SHARE%
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A MoCA home network]]></title>
-    <link href="http://dinhyen.github.io/blog/2014/04/09/moca-home-network/"/>
-    <updated>2014-04-09T13:27:00-04:00</updated>
-    <id>http://dinhyen.github.io/blog/2014/04/09/moca-home-network</id>
-    <content type="html"><![CDATA[<p>The benefits of a wired home network are many.  I use the <a href="http://www.silicondust.com/products/hdhomerun/prime">SiliconDust HDHomerun Prime</a> network TV tuners to watch cable TV on any computer in the house without the need for a set-top box.  However, it is quite bandwidth-intensive and even a wireless-N connection just doesn&rsquo;t cut it.  The picture would be plagued with stutters, pause and artifacts and pretty much unwatchable, especially for hockey with its lightning-fast actions.</p>
-
-<p>For wired connectivity without an existing Ethernet network there are three options.  The best option from both cost and performance standpoints is available if the house is wired for a land line with Cat-5/5e/6 wiring, which is invariably the case with a modern construction.  In this case you can just repurpose the existing wiring and swap out the RJ11 telephone jacks for RJ45 Ethernet jacks.  This requires a bit of manual labor but the results are beautiful and satisfying.  I did this for a previous residence and it worked wonderfully. Unfortunately in my current house the wiring leaves something to be desired.  The phones lines are not wired point-to-point but daisy-chained together; this rules out an Ethernet network.</p>
-
-<p>The second option is to use the power lines themselves, which hopefully every house comes equipped with. I used a pair of TP-Link AV500 Nano power line adapters.  Installation couldn&rsquo;t be any easier&mdash;plug them into the power sockets and they just work. The LAN connection is automatically detected in Windows and OS X.  My tests showed that the connection was able to achieve the the full bandwidth that I am supposed to get. My TV feed no longer stuttered or became corrupted. Unfortunately this solution isn&rsquo;t perfect either.  Under heavy load the adapters had a nasty habit of tripping the circuit breakers.  I couldn&rsquo;t even run the network speed test while Windows Media Center was playing without bringing the power down.  Since the powerline adapters don&rsquo;t play nice with surge protectors I don&rsquo;t really have a way to prevent it from happening.</p>
-
-<p>This leaves the last option, a home network over the coaxial cabling, which like most American household we have plenty of. Each room has one coaxial outlet, or even two. The industry standard for a home network over coaxial cabling is the Multimedia over Coaxial Alliance (MoCA) standard.  It seems to be a relatively young technology as there aren&rsquo;t many products for it. Interestingly this is something I&rsquo;m already using as a Verizon FiOS subscriber.  Verizon uses MoCA for the Optical Network Terminal (ONT) which converts the optical fiber signal to electric signal. To use the coaxial cabling to carry Ethernet network traffic requires a MoCA network adapter or bridge, which converts between the different signal formats. I have the standard <a href="http://www.actiontec.com/189.html">Actiontec MI424WR router</a>, which has a built-in MoCA adapter.   It would act as one endpoint.  For each additional endpoint, I would need a separate MoCA network adapter. There are only a handful of MoCA network adapters, the most popular of which the <a href="http://www.actiontec.com/251.html">Actiontec ECB2500C</a>.</p>
-
-<p>I wasn&rsquo;t sure about the best way to set up the MoCA network.  The MI424WR router can connect to the ONT via a coaxial or Cat-5 cable. In my case the MoCA WAN comes into the router via the coaxial connection. However, since the router has only one coaxial terminal, I wasn&rsquo;t sure whether I could connect to the MoCA LAN using the same coaxial terminal. I thought that since the router is connected to the MoCA WAN coaxially, I would need an additional MoCA adapter for each outgoing connection from the router to the MoCA LAN.  This possible setup is shown in the below figure.  I would need 4 MoCA adapters to extend connectivity to 2 rooms.</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/moca-home-network/moca-bad.png" alt="" /></p>
-
-<p>Fortunately, this scenario isn&rsquo;t necessary.  It turns out that the router can connect to both MoCA WAN and MoCA LAN through the same coaxial connection. This is because the respective networks operate over different frequency bands and do not interfere with each other. I would only need a MoCA adapter at each receiving end.  Since I can use the router as a MoCA adapter in one room, I&rsquo;d only need one additional MoCA adapter.</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/moca-home-network/moca-good.png" alt="" /></p>
-
-<p>If you need more than one Ethernet port, Adaptec also makes a 4-port Home Theater Coaxial Network Adapter (ECB3500T01), which is only marginally more expensive than a 1-port adapter.  It would be a more compact solution than using an Ethernet switch with the 1-port adapter.</p>
-
-<p>Of note, the cable splitter must be MoCA-compatible. Since MoCA operates in the 0.5-1.65 GHz frequence band, the splitter should be rated for at least this range. Fortunately there are many inexpensive options.</p>
-
-<p>Update (Oct 9, 2014): It turns out that Verizon sells a Verizon-branded <a href="https://teleproducts.verizon.com/fileshare/plm/brochure/ATWECB3000N_brochure.pdf">Fios wireless network extender</a> for $75 which comes with 2 Gigabit Ethernet ports as well as Wireless-N and MoCA connectivity, ostensibly to extend a home network to hard-to-reach places.  In retrospect the Wireless-N Wi-Fi extender would have made it a better purchase than the 4-port Home Theater Coaxial Network Adapter.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Simple tasks with Grunt]]></title>
-    <link href="http://dinhyen.github.io/blog/2014/03/03/simple-tasks-with-grunt/"/>
-    <updated>2014-03-03T15:16:00-05:00</updated>
-    <id>http://dinhyen.github.io/blog/2014/03/03/simple-tasks-with-grunt</id>
-    <content type="html"><![CDATA[<p>Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&rsquo;re working with conventional server-side platforms.  Unfortunately, when it comes to JavaScripts and CSS, automation tools are harder to find. That is, until Grunt comes along (following Node, which turned upside down the whole idea of server vs client side in the first place).</p>
-
-<p>As a self-described &ldquo;task runner&rdquo;, Grunt is powerful and pleasantly approachable.  Its succinctness makes it a joy to use.  This carries over into the Grunt documentation, which is really excellent.  Inspired by the <a href="http://gruntjs.com/sample-gruntfile">Sample Gruntfile tutorial</a>, I&rsquo;d like to walk through my own <code>Gruntfile</code> created for a <a href="https://github.com/dinhyen/darkbox">small JavaScript library</a>.  The goal is to automate a typical process of building the app, from generating CSS from Sass, aggregating various source files into a single file, and minifying the result.</p>
-
-<p>Once you <a href="http://gruntjs.com/installing-grunt">have Grunt installed</a> using the Node Package Manager, you will need a <code>package.json</code> file, just as for other Node utilities.  The quickest way to create a <code>package.json</code> file is to simply run <code>npm init</code> which generates the file after a series of questions.</p>
-
-<p>The following libraries will be used:</p>
+<p>Gearhead that I am, here&rsquo;s the list of tools I used with varying degree of competency and success:</p>
 
 <ul>
-<li><a href="https://github.com/gruntjs/grunt-contrib-compass">grunt-contrib-compass</a>: generates CSS from Sass</li>
-<li><a href="https://github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat</a>: combines various files into a single file</li>
-<li><a href="https://github.com/gruntjs/grunt-contrib-cssmin">grunt-contrib-cssmin</a>: minifies CSS</li>
-<li><a href="https://github.com/gruntjs/grunt-contrib-jshint">grunt-contrib-jshint</a>: combs through JavaScript and flags errors or usage issues</li>
-<li><a href="https://github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify</a>: mangles and minifies JavaScript</li>
-<li><a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch</a>: performs tasks whenever a file changes</li>
+<li>Rhino ramps</li>
+<li>Large garden stone masquerading as wheel chock</li>
+<li>Heavy-duty Milwaukee &frac12;" &ldquo;Hole Shooter&rdquo; drill</li>
+<li>17/32" black oxide drill bit, &frac12;" drive</li>
+<li>Tree-shaped tungsten carbide burring bit</li>
+<li>Torque wrench, up to 150 lb-ft, &frac12;" drive</li>
+<li>&frac34;" socket, &frac12;" drive</li>
+<li>&frac12;" drive extension rod</li>
+<li>Wire guide</li>
+<li>Regular cordless drill</li>
+<li>Assorted screwdrivers</li>
+<li>Pair of pliers</li>
+<li>Silicone lubricant</li>
+<li>Blocks of wood (as headrest)</li>
+<li>Bunch of collapsed cardboard boxes to lie on</li>
+<li>Wearable LED head lamp</li>
+<li>Sharpie permanent marker</li>
+<li>iPhone (to take picture and record video)</li>
 </ul>
 
 
-<p>The recommended approach, as stated at the beginning of the documentation for each plugin, is to run <code>npm install grunt-contrib-xxx --save-dev</code>, which has the dual benefit of installing the plugin and also adding a reference to it in <code>package.json</code>.</p>
+<p>Here&rsquo;s the executive summary: make sure you remove the plastic cover immediately aft of the rear wheelwell on the driver side.  Then feel free to skip the rest of this post.</p>
 
-<p>Besides <code>package.json</code>, the only other file you need is <code>Gruntfile</code>, in which you define and configure the tasks to run. Configuration options are specified as the argument to <code>grunt.initConfig</code>.</p>
+<p>The helpful <a href="https://www.etrailer.com/tv-install-trailer-hitch-2012-honda-fit-11064.aspx">installation video</a> seemed easy enough.  The lack of swearing had me feeling optimistic.  After I had the car on the ramps and all the tools assembled, things started off pretty well.  The most difficult part was &ldquo;hanging&rdquo; the hitch in place so that I could use it as a template to mark the hole to drill on the driver side.  It was difficult because I had to hold the hitch with one hand while tightening the nut with the other, and there was little wiggle room.  I ended up supporting the hitch with my knee on one end and shoulder/forearm on the other; if it were a yoga pose it would be name &ldquo;opossum faking death&rdquo;.  It wasn&rsquo;t pretty or doctor-approved but it worked.  Drilling the hole was challenging too because the &ldquo;Hole Shooter&rdquo; weighs like a mini-hitch; they do not make things light in Wisconsin.  The video mentioned enlarging the drilled hole so that the bulky spacer can be pushed through.  I had read elsewhere that instead the adjacent pre-drilled hole could be used with a wire guide to pull the spacer and bolt through.  As a test, I was able to get the wire guide through, so this seemed promising.  The hole was just a tad smaller than the spacer, so I went to the hardware store to get the burr bit; this wasn&rsquo;t a wasted trip as I had to return the rental &ldquo;Hole Shooter&rdquo;.  I was tempted to go with a tapered file rather than the burr bit, but luckily I didn&rsquo;t or I wouldn&rsquo;t be writing this until tomorrow at the earliest.  Anyways, after enlarging the hole, the spacer fit but seemed to be too long to go through.  I dutifully enlarged the hole further until it could fit through.  Light at the end of the tunnel.  But lo and behold, as I tried to pull it through with the wire guide, something blocked its way.  So now the spacer was completely in the whole, but stuck.  I had visions of the spacer rattling inside the frame tube for the next few years as I drive down the road, hitch-less.  Finally, with the help of screwdriver to nudge the spacer and push it up through another, smaller hole, and a pair of plies to grab it by the end, I was able to extract the spacer.  I peeped through the hole and was able to to make out a semi-circular opening between it and the hole I drilled.  The opening must not have been large enough for the spacer to fit, and definitely not for the bolt.  So now back to the pre-shortcut plan of enlarging the drilled hole.  To make more room, I decided to completely remove the plastic cover.</p>
 
-<p>The first line reads in <code>package.json</code> and turns it into an object.  In this case, I&rsquo;m interested in product name, but it can provide <a href="http://package.json.nodejitsu.com">many other useful properties</a>.</p>
+<p>You see, I had only loosened the cover and pushed it out of the way to access the pre-drilled hole.  I violated my own rule of &ldquo;never take shortcuts&rdquo;.  Removing it wasn&rsquo;t hard, just pop open 2-4 plastic fasteners and 2 screws.  Once the cover was off, I looked around and discovered to my amazement that there was a large rearward opening the into compartment I was trying so hard to get into!  It WAS possible to come in through the South Entrance.  Afterward it took me about 10 seconds to get the bolt and spacer in place.</p>
 
-<p><code>javascript
-pkg: grunt.file.readJSON('package.json'),
-</code></p>
+<p>This video shows the opening relative to the drilled hole.</p>
 
-<p>All <code>Gruntfile</code> tasks share the <a href="http://gruntjs.com/configuring-tasks">same basic syntax</a> for specifying options, input and output.  Each task&rsquo;s configuration block is named after the plugin; for example, the configuration block for the <code>grunt-contrib-uglify</code> is simply <code>uglify</code>.  Each task can have arbitrary targets.  You&rsquo;ll probably see a &ldquo;test&rdquo; target for testing or a &ldquo;dist&rdquo; target for building a distribution.  Since I want to build CSS and JavaScript, here I have 2 targets, &ldquo;scripts&rdquo; and &ldquo;stylesheets&rdquo;.  When there are multiple targets in a task, each target can be executed directly.  For example, <code>grunt concat:scripts</code> runs just the &ldquo;scripts&rdquo; target.  If you don&rsquo;t provide a target, then all targets would be run in order.</p>
+<iframe src="http://www.youtube.com/embed/AFs9emotQQg?modestbranding=1" allowfullscreen="true" height="400px" width="100%"></iframe>
 
-<p>The Compass task generates CSS from Sass source.  Of course, Compass <a href="http://compass-style.org/install">must be installed</a> first.  The following options simply instruct Compass to process Sass files in the directory &ldquo;sass&rdquo; and generate the corresponding CSS files in the directory &ldquo;css&rdquo;.
-``` javascript
-compass: {
-  stylesheets: {</p>
 
-<pre><code>options: {
-  sassDir: 'sass',
-  cssDir: 'css'
-}
-</code></pre>
+<p>Here&rsquo;s the view from below.</p>
 
-<p>  }
-}
-```</p>
+<p><img src="http://yentran.isamonkey.org/gallery/curt-hitch/curt-hitch-access.jpg" alt="" /></p>
 
-<p>When developing, it would be nice to be able to preview changes made to the Sass source.  This is where the watch plugin comes in.  In the simplest use case it simply detects that one or more files have been changed and then runs certain tasks.  The following options allow me to re-generate CSS each time a Sass file is modified.  Start watching by typing <code>grunt watch</code> at the command prompt.</p>
+<p>I took this video by sticking the headlight into the opening, then inserting the iPhone right above it.  As you can see, there was no way that anything could have been pulled through that semi-circular opening.  Overzealous googling led me through a wild goose chase.</p>
 
-<p>``` javascript
-watch: {
-  stylesheets: {</p>
+<iframe src="http://www.youtube.com/embed/XC3CNcJDP1U?modestbranding=1" allowfullscreen="true" height="400px" width="100%"></iframe>
 
-<pre><code>files: '**/*.scss',
-tasks: ['compass']
-</code></pre>
 
-<p>  }
-}
-```</p>
-
-<p>Typically JavaScript and CSS source is distributed over multiple files.  In production you&rsquo;d want to combine the various source files into a single file for performance reason.  This can be done with the concat plugin.  For the source, I&rsquo;m using a globbing pattern for simplicity; <code>src/**/*.js</code> means all <code>.js</code> files in the <code>src</code> directory and any of its sub-directories.  The files would be combined in alphabetical order. An alternative would be to specify an array of individual files.  While this lets you control the ordering of files, it becomes unwieldy for a large number of files. Of course, there are <a href="http://gruntjs.com/configuring-tasks#globbing-patterns">many ways</a> to skin the cat.  For the output, I&rsquo;m using the project&rsquo;s name which comes from <code>package.json</code>.</p>
-
-<p>``` javascript
-concat: {
-  scripts: {</p>
-
-<pre><code>options: {
-  separator: ';'
-},
-src: 'src/**/*.js',
-dest: 'dist/&lt;%= pkg.name %&gt;.js'
-</code></pre>
-
-<p>  },
-  stylesheets: {</p>
-
-<pre><code>src: 'css/**/*.css',
-dest: 'dist/&lt;%= pkg.name %&gt;.css'
-</code></pre>
-
-<p>  }
-}
-```</p>
-
-<p>The cssmin plugin provides CSS minification.  The source should be the output of the concat stage.  Note the variable substitution syntax.</p>
-
-<p>``` javascript
-cssmin: {
-  stylesheets: {</p>
-
-<pre><code>src: '&lt;%= concat.stylesheets.dest %&gt;',
-dest: 'dist/&lt;%= pkg.name %&gt;.min.css'
-</code></pre>
-
-<p>  }
-}
-```</p>
-
-<p>The uglify plugin is the JavaScript equivalent of cssmin.  It also mangles variable names which reduces file size further at the expense of readability.  Since mangling pretty much makes your JavaScript indecipherable and impossible to debug, you can also provide a <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source map</a> which lets you view the original, non-uglified source when debugging.  The uglify plugin have all these and sundry options.  Here it also inserts a comment with some basic information at the top of the file.</p>
-
-<p>``` javascript
-uglify: {
-  options: {</p>
-
-<pre><code>banner: '/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today("yyyy-mm-dd") %&gt; */\n',
-sourceMap: true
-</code></pre>
-
-<p>  },
-  scripts: {</p>
-
-<pre><code>src: '&lt;%= concat.scripts.dest %&gt;',
-dest: 'dist/&lt;%= pkg.name %&gt;.min.js'
-</code></pre>
-
-<p>  }
-}
-```</p>
-
-<p>The jshint configuration block just sets some <a href="http://www.jshint.com/docs/options">options for jshint</a>.
-``` javascript
-jshint: {
-  options: {</p>
-
-<pre><code>curly: true,
-eqeqeq: true,
-immed: true,
-latedef: true,
-newcap: true,
-noarg: true,
-sub: true,
-undef: true,
-unused: true,
-boss: true,
-eqnull: true,
-node: true
-</code></pre>
-
-<p>  }
-```</p>
-
-<p>Finally register a default task and a useful task.  Tasks would be executed in the order specified.
-<code>javascript
-grunt.registerTask('default', ['jshint', 'compass', 'concat', 'cssmin', 'uglify']);
-grunt.registerTask('sassify', ['compass']);
-</code></p>
-
-<p>To run a task, simply specify the task&rsquo;s name as a argument to <code>grunt</code> on the command line; e.g., <code>grunt jshint</code>.  Simply typing <code>grunt</code> runs the default task.  Below is the output for running the default task; even for this small set of tasks, running them manually or maintaining a script without Grunt would have been a tedious chore.</p>
-
-<p>```
-Running &ldquo;jshint:scripts&rdquo; (jshint) task</p>
-
-<blockquote><blockquote><p>2 files lint free.</p></blockquote></blockquote>
-
-<p>Running &ldquo;compass:stylesheets&rdquo; (compass) task
-unchanged sass/darkbox.scss
-unchanged sass/mixins.scss
-unchanged sass/screen.scss
-Compilation took 0.012s</p>
-
-<p>Running &ldquo;concat:scripts&rdquo; (concat) task
-File dist/darkbox.js created.</p>
-
-<p>Running &ldquo;concat:stylesheets&rdquo; (concat) task
-File dist/darkbox.css created.</p>
-
-<p>Running &ldquo;cssmin:stylesheets&rdquo; (cssmin) task
-File dist/darkbox.min.css created: 3.9 kB → 2.78 kB</p>
-
-<p>Running &ldquo;uglify:scripts&rdquo; (uglify) task
-File dist/darkbox.min.map created (source map).
-File dist/darkbox.min.js created: 5.45 kB → 2.51 kB</p>
-
-<p>Done, without errors.
-```</p>
-
-<p>Below is the entire <code>Gruntfile</code>.  Happy grunting.</p>
-
-<p>``` javascript
-module.exports = function (grunt) {</p>
-
-<p>  grunt.initConfig({</p>
-
-<pre><code>pkg: grunt.file.readJSON('package.json'),
-compass: {
-  stylesheets: {
-    options: {
-      sassDir: 'sass',
-      cssDir: 'css'
-    }
-  }
-},
-concat: {
-  scripts: {
-    options: {
-      separator: ';'
-    },
-    src: 'src/**/*.js',
-    dest: 'dist/&lt;%= pkg.name %&gt;.js'
-  },
-  stylesheets: {
-    src: 'css/**/*.css',
-    dest: 'dist/&lt;%= pkg.name %&gt;.css'
-  }
-},
-cssmin: {
-  stylesheets: {
-    src: '&lt;%= concat.stylesheets.dest %&gt;',
-    dest: 'dist/&lt;%= pkg.name %&gt;.min.css'
-  }
-},
-jshint: {
-  options: {
-    curly: true,
-    eqeqeq: true,
-    immed: true,
-    latedef: true,
-    newcap: true,
-    noarg: true,
-    sub: true,
-    undef: true,
-    unused: true,
-    boss: true,
-    eqnull: true,
-    node: true
-  },
-  scripts: {
-    src: ['Gruntfile.js', 'src/*.js']
-  }
-},
-uglify: {
-  options: {
-    banner: '/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today("yyyy-mm-dd") %&gt; */\n',
-    sourceMap: true
-  },
-  scripts: {
-    src: '&lt;%= concat.scripts.dest %&gt;',
-    dest: 'dist/&lt;%= pkg.name %&gt;.min.js'
-  }
-},
-watch: {
-  stylesheets: {
-    files: '**/*.scss',
-    tasks: ['compass']
-  }
-}
-</code></pre>
-
-<p>  });</p>
-
-<p>  grunt.loadNpmTasks(&lsquo;grunt-contrib-compass&rsquo;);
-  grunt.loadNpmTasks(&lsquo;grunt-contrib-concat&rsquo;);
-  grunt.loadNpmTasks(&lsquo;grunt-contrib-cssmin&rsquo;);
-  grunt.loadNpmTasks(&lsquo;grunt-contrib-jshint&rsquo;);
-  grunt.loadNpmTasks(&lsquo;grunt-contrib-uglify&rsquo;);
-  grunt.loadNpmTasks(&lsquo;grunt-contrib-watch&rsquo;);</p>
-
-<p>  grunt.registerTask(&lsquo;default&rsquo;, [&lsquo;jshint&rsquo;, &lsquo;compass&rsquo;, &lsquo;concat&rsquo;, &lsquo;cssmin&rsquo;, &lsquo;uglify&rsquo;]);
-  grunt.registerTask(&lsquo;sassify&rsquo;, [&lsquo;compass&rsquo;]);
-};
-```</p>
+<p>The hitch is finally in place and we are in business.</p>
 ]]></content>
   </entry>
   

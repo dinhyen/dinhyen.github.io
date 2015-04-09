@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="A long time ago, before I settled into a comfortable life in suburbia and write dry articles about computer, I was in grad school and belonged to a &hellip;">
+  <meta name="description" content="A requirement recently came up to update the primary key of a SQL Server table. We get user data from a third-party single sign-on service and store &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,75 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/11/23/updating-sql-server-primary-key/">Updating SQL Server Primary Key</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-23T16:34:00-05:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A requirement recently came up to update the primary key of a SQL Server table.  We get user data from a third-party single sign-on service and store them locally.  When the SSO software was upgraded, user IDs were changed, so we need to update our local users but retain existing data.  I suppose one way to do so would be to drop any existing foreign-key constraint and update all related tables.  Unfortunately, the User table is related to practically every other table in the schema. Updating a bunch tables manually, without the safety net of relational integrity, would be a bit dodgy. Fortunately, there&rsquo;s a less painful approach using the <a href="http://technet.microsoft.com/en-us/library/ms186973.aspx">ON UPDATE CASCADE</a> clause.</p>
+
+<p>In a simple example, I have a LineItem table, whose <code>userId</code> field references User&rsquo;s <code>Id</code> field. Since the existing FK relationship doesn&rsquo;t have ON DELETE CASCADE, I&rsquo;d have to &ldquo;alter&rdquo; the constraint to add it.  But because is no &ldquo;alter contraint&rdquo; in T-SQL, I&rsquo;d have to drop and re-add the constraint.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="cm">/* drop existing constraint */</span>
+</span><span class='line'><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">LineItem</span><span class="p">]</span> <span class="k">DROP</span> <span class="k">CONSTRAINT</span> <span class="p">[</span><span class="n">FK_LineItem_User</span><span class="p">]</span>
+</span><span class='line'><span class="k">GO</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/* add constraint */</span>
+</span><span class='line'><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">LineItem</span><span class="p">]</span>  <span class="k">WITH</span> <span class="k">CHECK</span> <span class="k">ADD</span>  <span class="k">CONSTRAINT</span> <span class="p">[</span><span class="n">FK_LineItem_User</span><span class="p">]</span> <span class="k">FOREIGN</span> <span class="k">KEY</span><span class="p">([</span><span class="n">UserId</span><span class="p">])</span>
+</span><span class='line'><span class="k">REFERENCES</span> <span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="k">User</span><span class="p">]</span> <span class="p">([</span><span class="n">Id</span><span class="p">])</span>
+</span><span class='line'><span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CASCADE</span>
+</span><span class='line'><span class="k">GO</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">LineItem</span><span class="p">]</span> <span class="k">CHECK</span> <span class="k">CONSTRAINT</span> <span class="p">[</span><span class="n">FK_LineItem_User</span><span class="p">]</span>
+</span><span class='line'><span class="k">GO</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>Thereafter when I update an Id in the User table, the change would be cascaded to LineItem and all other related tables.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1827,180 +1896,6 @@ set arg2=%arg2:"=%
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/09/17/bruins-training-camp-2013/">Bruins Training Camp 2013</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-17T00:00:00-04:00" pubdate data-updated="true">Sep 17<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Having moved to the &lsquo;burbs recently, I look forward to attending the Bruins&rsquo; regular-season practice sessions at Ristuccia Arena in Wilmington, now that it&rsquo;s only a few miles away.  The 2013 Training Camp, though, was held at TD Garden the weekend of September 14-15. Of course I was going to be there.</p>
-
-<p>The 2013 season was a bit of a roller coaster ride.  It was thrilling at times, but ultimately disappointing. It was a hard pill to swallow watching the Blackhawks celebrate with the Cup on our ice. Then came the off-season changes.  The departures of Tyler Seguin and Rich Perveley were certainly shocking, particularly Seguin who were expected to be the next Bruins superstar. Then came the arrival of Jarome Iginla, whom most Bruins fans including myself were gleefully cheering against especially during the Penguins series.  Seeing Iginla wearing the spoked B would be a little weird, to say the least.  Even the anticipated free-agency departures of popular Bruins Nathan Horton (to Columbus) and Andrew Ference (to Edmonton) were hard to take. I like Ference in particular, for his leadership qualities and environmental activism.  It didn&rsquo;t help matter that a very solid goalie and likeable player in Anton Khudobin also left, which was a surprise.</p>
-
-<p>Having endured the summer of baseball and the start of football season, I am beyond thrill at the return of hockey.  Judging from the turnout for the training camp, despite the early weekend hours, many Bruins fans were feeling the same way.  Part of the eagerness must come from anticipating the new faces on the roster.  But for the most part, I just wanted to spectate the most exciting team sports invented by man.</p>
-
-<p>The Training Camp consisted of 2 groups.  With 50-odd participants and only a few open roster spots, it was clear that most of the new guys were going to end up elsewhere, whether with the baby Bruins in Providence, their junior/college team or some place like Saskatoon.  Nevertheless, it was a chance for the coaches to evaluate players or for fans like me to familiarize ourselves with our prospects.</p>
-
-<p>I&rsquo;m guessing the opening-day roster will look something like this:</p>
-
-<p>Milan Lucic (17) &ndash; David Krejci (46) &ndash; Jarome Iginla (12)<br/>
-Brad Marchand (63) &ndash; Patrice Bergeron (37) &ndash; Loui Eriksson (21)<br/>
-Carl Soderberg (34) &ndash; Chris Kelly (23) &ndash; ???<br/>
-Daniel Paille (20) &ndash; Gregory Campbell (11) &ndash; Shawn Thornton (22)</p>
-
-<p>Zdeno Chara (33) &ndash; Johnny Boychuk (55)<br/>
-Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
-??? &ndash; Adam McQuaid (54)</p>
-
-<p>Tuukka Rask (40)<br/>
-???</p>
-
-<p>On defense, Matt Bartkowski (43) and Torey Krug (47), both left-shots, are likely candidates.  Both played last season, Krug having stood out in the Rangers series.  Local guy David Warsofsky is probably also in consideration.  The empty forward and goalie spots are wide-open. That&rsquo;s why we&rsquo;re here.</p>
-
-<p>Seth Griffith misses an open-net chance on Niklas Svedberg.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1460.jpg' /></p>
-
-<p>Dennis Seidenberg patrols the blue line on his unusual t-blade.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1479.jpg' /></p>
-
-<p>Crowd around Svedberg.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1533.jpg' /></p>
-
-<p>Chris Kelly cirling the net.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1535.jpg' /></p>
-
-<p>New signee Matthew Lindblad trying to get a bead on Tuukka Rask.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1564.jpg' /></p>
-
-<p>Brad Marchand buzzes the net as usual.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1740.jpg' /></p>
-
-<p>Patrice Bergeron looks to be in full form after the serious injuries sustained in the Blackhawks series.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1644.jpg' /></p>
-
-<p>Newcomer Loui Eriksson (21) drives to the net, guarded by Dougie Hamilton (27).</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1614.jpg' /></p>
-
-<p>Another look at Eriksson.  He seemed to be an open-ice player who isn&rsquo;t afraid of going to the crease. He&rsquo;s bigger than Seguin and has good speed. The demise of our team speed with the departures of Seguin and Peverley is greatly exaggerated.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1712.jpg' /></p>
-
-<p>Jordan Caron (38) and Reilly Smith. Caron has been up and down with the big club. Of all the young guys he probably has the most NHL experience. Maybe he can stick around this time.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1680.jpg' /></p>
-
-<p>Chris Casto in full flight.  Hockey players can look like they&rsquo;re sprinting.  Actually, it&rsquo;s not quite true. They&rsquo;re much faster than a sprinter.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1716.jpg' /></p>
-
-<p>Marchand trying to shake off Hamilton.  That&rsquo;s probably not a great gap for Hamilton, but you can&rsquo;t stay too close to Marchand or he&rsquo;ll make you look bad.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1755.jpg' /></p>
-
-<p>Mike Moore finds out the hard way where the goal post is.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1634.jpg' /></p>
-
-<p>Hamilton should probably be between his check and the net instead of chasing him but, meh, it&rsquo;s practice. He&rsquo;s huge, at 6&#8217;5 he&rsquo;s second only to Chara.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1747.jpg' /></p>
-
-<p><a href="http://www.youtube.com/watch?v=h15m87WsCHQ">This gutsy display of sportsmanship and determination</a> after his leg was broken by an Evgeni Malkin slapshot made Gregory Campbell a Bruin forever. This isn&rsquo;t Lionel Messi crying after he got tripped.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2170.jpg' /></p>
-
-<p>Matt Bartkowski sees something wince-worthy. On the right is Carl Soderberg.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1845.jpg' /></p>
-
-<p>Adam McQuaid with a rare smile.  In the background Shawn Thornton juggles the puck on the blade of his stick. The tough guy has mad skillz.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1911.jpg' /></p>
-
-<p>Milan Lucic having a laugh with (or at?) Bartkowski.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1920.jpg' /></p>
-
-<p>I&rsquo;m going with &ldquo;laugh with&rdquo;. Bart is such a jokester.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_1931.jpg' /></p>
-
-<p>Chara having a chat with Nick Johnson (32) and Alexander Fallstrom (59).  Those are not midgets&mdash;both are listed at 6&#8217;2. Chara is just a monster, and I mean that in an admiring way.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2023.jpg' /></p>
-
-<p>He can move too.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2111.jpg' /></p>
-
-<p>New &ldquo;old&rdquo; face Jarome Iginla.  He potted 2 against the Habs two nights after this in a pre-season game in Montreal. Welcome to Boston, Iggy.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2040.jpg' /></p>
-
-<p>Lucic with a wicked snap shot.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2051.jpg' /></p>
-
-<p>The 3rd member of the projected top line and my favorite player.  The bruising line of Lucic-Iginla-Krejci is going to give defensemen nightmares. They have great hands, decent speed, hit like a train and are impossible to contain.  They bring back fond memories of the so-called 700 Pound Line of Joe Thornton, Mike Knuble and Glen Murray.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2123.jpg' /></p>
-
-<p>Torey Krug with Mark Messier&rsquo;s patented snap shot off the wrong leg. Which, by the way, everyone is using these days.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2062.jpg' /></p>
-
-<p>Fallstrom with a good flex of the stick.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2073.jpg' /></p>
-
-<p>A first look at Malcolm Subban.  You know, the brother of Boston&rsquo;s public enemy #1 PK Subban. He did say he never liked his brother anyways. The kid is all right.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2100.jpg' /></p>
-
-<p>Kevan Miller who hails from, get this, Los Angeles.  That&rsquo;s right, a California kid playing pro hockey.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2108.jpg' /></p>
-
-<p>Close-up of Daniel Paille.</p>
-
-<p><img src='https://dl.dropboxusercontent.com/u/52804626/bruins-2013/dsc_2150.jpg' /></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -2072,6 +1967,11 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
         <a href="/blog/categories/other">other</a> <em>2</em>
       </li>
     
+     
+      <li data-category="Technology">
+        <a href="/blog/categories/technology">Technology</a> <em>1</em>
+      </li>
+    
   </ul>
 </section>
 <script type="text/javascript">
@@ -2092,6 +1992,10 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/04/08/installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/">Installing the Curt 11064 Trailer Hitch on a 2009 Honda Fit Sport</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop/">How to Not Upgrade the Nexus 7 to Lollipop</a>
       </li>
     
@@ -2105,10 +2009,6 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
     
       <li class="post">
         <a href="/blog/2014/04/09/moca-home-network/">A MoCA Home Network</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a>
       </li>
     
   </ul>
