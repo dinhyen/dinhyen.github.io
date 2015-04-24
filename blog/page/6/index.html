@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="Once you reach the terminus of the Minuteman Bikeway at Bedford Railroad Depot, most people turn around and head back. It&rsquo;s understandable, &hellip;">
+  <meta name="description" content="Let&rsquo;s say for a shopping cart we have an Order entity, a Product entity and an OrderDetails entity which serves as a bridge. The OrderDetails &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,112 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/29/editing-collection-with-linq-to-sql/">Edit Collection With LINQ to SQL</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-29T00:00:00-04:00" pubdate data-updated="true">Jun 29<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Let&rsquo;s say for a shopping cart we have an Order entity, a Product entity and an OrderDetails entity which serves as a bridge. The OrderDetails entity has OrderId and ProductId fields to associate products with orders. We also have an Order domain object which is passed from the business logic layer to the repository layer.</p>
+
+<p>Since products can be added or removed from an order, we need to manage the order details for each Order.  We can either update OrderDetails directly in the database or via the Order.OrderDetails collection.</p>
+
+<h3>Deleting</h3>
+
+<p>When handling deletions, we can determine products removed from the order (i.e., products which are present in the database object but not in the domain object) as follows:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">toDelete</span> <span class="p">=</span>
+</span><span class='line'>  <span class="k">from</span> <span class="n">od</span> <span class="k">in</span> <span class="n">order</span><span class="p">.</span><span class="n">OrderDetails</span>
+</span><span class='line'>  <span class="k">where</span> <span class="p">!</span><span class="n">domainOrder</span><span class="p">.</span><span class="n">OrderDetails</span><span class="p">.</span><span class="n">Any</span><span class="p">(</span><span class="n">o</span> <span class="p">=&gt;</span> <span class="n">o</span><span class="p">.</span><span class="n">ProductId</span> <span class="p">==</span> <span class="n">od</span><span class="p">.</span><span class="n">ProductId</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">select</span> <span class="n">od</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Deleting the order details directly from the database works:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="n">DataContext</span><span class="p">.</span><span class="n">OrderDetails</span><span class="p">.</span><span class="n">DeleteAllOnSubmit</span><span class="p">(</span><span class="n">toDelete</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However, trying to delete the order details using the Order.OrderDetails collection removes only the relationship between Order and OrderDetails.  This would fail because of the foreign key constraint.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">item</span> <span class="k">in</span> <span class="n">toDelete</span><span class="p">)</span>
+</span><span class='line'>     <span class="n">order</span><span class="p">.</span><span class="n">OrderDetails</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Adding</h3>
+
+<p>When handling additions, we can determine products added to the order (i.e., products which are present in the domain order object but not in the database order object) as follows:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">toAdd</span> <span class="p">=</span>
+</span><span class='line'>  <span class="k">from</span> <span class="n">od</span> <span class="k">in</span> <span class="n">domainOrder</span><span class="p">.</span><span class="n">OrderDetails</span>
+</span><span class='line'>  <span class="k">where</span> <span class="p">!</span><span class="n">order</span><span class="p">.</span><span class="n">OrderDetails</span><span class="p">.</span><span class="n">Any</span><span class="p">(</span><span class="n">o</span> <span class="p">=&gt;</span> <span class="n">o</span><span class="p">.</span><span class="n">ProductId</span> <span class="p">==</span> <span class="n">od</span><span class="p">.</span><span class="n">ProductId</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">select</span> <span class="k">new</span> <span class="n">OrderDetails</span>
+</span><span class='line'>             <span class="p">{</span>
+</span><span class='line'>          <span class="n">OrderId</span> <span class="p">=</span> <span class="n">order</span><span class="p">.</span><span class="n">Id</span><span class="p">,</span>
+</span><span class='line'>          <span class="n">ProductId</span> <span class="p">=</span> <span class="n">od</span><span class="p">.</span><span class="n">ProductId</span>
+</span><span class='line'>             <span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here a different scenario applies.  Adding directly to the database succeeds, but the Order.OrderDetails collection isn&rsquo;t updated to show the added Products.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="n">DataContext</span><span class="p">.</span><span class="n">OrderDetails</span><span class="p">.</span><span class="n">InsertAllOnSubmit</span><span class="p">(</span><span class="n">toAdd</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To ensure the Order.OrderDetails collection is also up-to-date, we&rsquo;d have to add the order details via the collection.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="n">order</span><span class="p">.</span><span class="n">OrderDetails</span><span class="p">.</span><span class="n">AddRange</span><span class="p">(</span><span class="n">toAdd</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -593,7 +699,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/04/03/locating-program-files-folder-in-Visual-Studio/">Locating Program Files Folder in Visual Studio on 32-bit and X64 Environments</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/04/03/locating-program-files-folder-in-visual-studio/">Locating Program Files Folder in Visual Studio on 32-bit and X64 Environments</a></h1>
     
     
       <p class="meta">
@@ -765,47 +871,6 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/31/using-lightbox-with-nextgen-gallery/">Using Lightbox With NextGen Gallery</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-31T00:00:00-04:00" pubdate data-updated="true">Mar 31<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In my former Wordpress blog, I used the excellent <a href="http://wordpress.org/extend/plugins/nextgen-gallery/">NextGen plugin</a> to manage images in galleries.  When embedded in a post, the gallery is rendered as thumbnails, whose full-size version  is shown as an overlay when clicked.  I also like to embed inline images so that I can include a caption.  Inline images, however, are still directly linked and not shown as an overlay.  When viewed, it requires an additional click or two to go back to the post.</p>
-
-<p>To make sure that inline images are opened on the same page, I use the <a href="http://wordpress.org/extend/plugins/slimbox/">Slimbox plugin</a>.  This works well, except that now when gallery thumbnails are clicked, two full-sized versions are shown, one by NextGen&rsquo;s built-in effect and one by Slimbox.</p>
-
-<p>To solve this problem, I opened NextGen&rsquo;s options page and locate the Effects tab.  By default, the JavaScript Thumbnail effect is set to Shutter.  I changed it to None (or Lightbox) to ensure that only Slimbox handles the effect (Slimbox is a clone of Lightbox).  The only drawback of not using the Shutter effect is that you can&rsquo;t use Ajax pagination with the gallery if pagination is turned on (as of NextGen 1.9.3).
-<img title="nextgen-slimbox" src="https://dl.dropboxusercontent.com/u/52804626/images/nextgen-slimbox.png" width="800" height="578" /></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -879,7 +944,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     
      
       <li data-category="Technology">
-        <a href="/blog/categories/technology">Technology</a> <em>1</em>
+        <a href="/blog/categories/technology">Technology</a> <em>2</em>
       </li>
     
   </ul>
@@ -910,15 +975,15 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
       </li>
     
       <li class="post">
+        <a href="/blog/2014/04/24/validating-required-form-fields-with-angular/">Validating Required Form Fields With Angular</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/04/18/angular-in-jekyll-or-octopress/">Angular in Jekyll/Octopress</a>
       </li>
     
       <li class="post">
         <a href="/blog/2014/04/15/copying-files-in-hudson/">Copying Files in Hudson</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/09/moca-home-network/">A MoCA Home Network</a>
       </li>
     
   </ul>
