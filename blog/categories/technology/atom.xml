@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Technology | Yen's Blog]]></title>
+  <title><![CDATA[Category: technology | Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2015-04-24T15:39:02-04:00</updated>
+  <updated>2015-04-24T16:12:50-04:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -69,6 +69,25 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[How to not upgrade the Nexus 7 to Lollipop]]></title>
+    <link href="http://dinhyen.github.io/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop/"/>
+    <updated>2015-02-16T00:00:00-05:00</updated>
+    <id>http://dinhyen.github.io/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop</id>
+    <content type="html"><![CDATA[<p>I have a first-generation Nexus 7 tablet made by Asus which ran KitKat 4.4.  When the OTA Lollipop update became available, I couldn&rsquo;t wait to install it.  The latest and greatest Android running on Google hardware seemed to be a match made in heaven; it would be better, prettier and faster, right?  As you can probably guess from the title of this post, the answer was a resounding <em>no</em>.  Everything became sluggish, swipes would only registered after a couple of seconds, random things popped open and close.  The tablet was downright unusable.</p>
+
+<p>Rather than splurging for a new tablet, which was probably what Google wanted me to do, I opted to go back to KitKat, since the hardware itself was perfectly fine.  The <a href="https://developers.google.com/android/nexus/images">process to restore the KitKat system image</a> using the ADB command-line tool that accompanies the Android SDK was quite simple.  I had some difficulty to get my Windows 7 machine to recognize the Nexus 7, until I installed the <a href="http://developer.android.com/sdk/win-usb.html">Google USB drivers</a>.  Alternatively, I could have ran ADB on a Mac, for which USB drivers wouldn&rsquo;t have been necessary.  An important part of the process was to make sure I chose the correct system image.  For a Nexus 7, the KitKat image was &ldquo;nakasi&rdquo; 4.4.4 (KTU84P).  The image archive contained a flashing script that I executed after unlocking the bootloader.  The whole thing took about 5 minutes once everything worked.</p>
+
+<p>So with its brain transplanted with a fresh KitKat image, the Nexus was back to its own happy self.  Unfortunately, the good feeling didn&rsquo;t last long.  In short order, Android started notifying me that the 5.0 system update aka Lollipop had <em>already</em> been downloaded and ready to install.  There was no way to dismiss the notification or tell it to remind me again in, oh, never.  The helpful notification sat in the system tray and just generally got in the way.  This is by far one of the worst instances of nagware-ism.</p>
+
+<p>To disable the system update notification, I had to root Android.  Fortunately at this point there were a few mature tools that make doing so quite simple.  I used the <a href="http://www.wugfresh.com/nrt">Nexus Root Toolkit 2.0.4</a>.  Since I was on a fresh install of KitKat, all I had to do was to 1) unlock the bootloader, and 2) root.  The toolkit also installs a couple of useful tool such as SuperSU and BusyBox Installer.  The latter lets you grant root privilege on-demand to any app that requests it.</p>
+
+<p>The next step was to turn off the system update notification service.  There are a few apps, the one I used being DisableService.  Once I navigated to the Google System Service node, System Update Service was already disabled.  Hmm, clearly that wasn&rsquo;t it because there was still a big fat notification in the system tray.  It turned out that I had to go to the Google Play Services node.  Lo and behold, there was another System Update Service.  Disabling this one and restarting the device did the trick.</p>
+
+<p><img src="http://yentran.isamonkey.org/gallery/nexus-7-kitkat/disable-service.png" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Validating required form fields with Angular]]></title>
     <link href="http://dinhyen.github.io/blog/2014/04/24/validating-required-form-fields-with-angular/"/>
     <updated>2014-04-24T13:33:00-04:00</updated>
@@ -115,6 +134,51 @@
 <p>```</p>
 
 <p>Here&rsquo;s the <a href="http://plnkr.co/edit/bB8mGsX6bHMZu4SvfCA2">plunk</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Angular in Jekyll/Octopress]]></title>
+    <link href="http://dinhyen.github.io/blog/2014/04/18/angular-in-jekyll-or-octopress/"/>
+    <updated>2014-04-18T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2014/04/18/angular-in-jekyll-or-octopress</id>
+    <content type="html"><![CDATA[<p>Have a problem with Angular scope variable binding not working on a Jekyll or Octopress (which uses Jekyll) page?  It so happens that Jekyll&rsquo;s Liquid Template uses the same  syntax as Angular and would attempt to process the markup before Angular can get to it.  To get around the problem, you can surround Angular markup with <code>&#123;% raw %&#125;</code> and <code>&#123;% endraw %&#125;</code> tags.  Alternatively, you can also forgo from using this syntax altogether and use Angular&rsquo;s <code>ng-bind</code> directive to bind a variable to a DOM element.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Copying files in Hudson]]></title>
+    <link href="http://dinhyen.github.io/blog/2014/04/15/copying-files-in-hudson/"/>
+    <updated>2014-04-15T20:05:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2014/04/15/copying-files-in-hudson</id>
+    <content type="html"><![CDATA[<p>Copying files somewhere is pretty standard procedure when deploying an app.  Interestingly I&rsquo;ve never had to copy files directly in Hudson.  Until now I&rsquo;ve only deployed .NET apps in Hudson and used MSBuild&rsquo;s Copy task to copy the files to a share folder.  Now that I want to deploy Angular and other client apps in Hudson, I&rsquo;d have to copy the files manually.</p>
+
+<p>My initial attempt was to add a new Execute Shell build step to run <code>xcopy</code>.  Since Hudson executes the command through the Bourne shell, which interprets any backslash in the path as the escape character, I&rsquo;d have to escape the backslash itself.  Why Windows has to be different from everyone else is a major source of annoyance if you have to move back and forth between Windows and *nix.
+<code>
+xcopy c:\\source\\app\\* \\\\server\\share\\app
+</code>
+This worked, but in order for xcopy to copy subdirectories, refrain from prompting everytime it needs to overwrite a file and take other actions necessary for unsupervised execution, I needed to specify additional parameters.
+<code>
+xcopy c:\\source\\app\\* \\\\server\\share /c /k /e /r /y /exclude:c:\\source\\xcopy_exclude.txt
+</code>
+Unfortunately this was when xcopy blows up with the &ldquo;invalid number of parameters&rdquo; error.  It probably had to do with the shell not passing the parameters to xcopy.  No dice if I put the command in a batch file then executing it.  Ditto when I tried <code>robocopy</code>, which prints a nicer error message but is functionally the same as xcopy.  As a note, you could test all of this in a Bourne shell rather than invoking Hudson every time.</p>
+
+<p>It occurred to me to use something that&rsquo;s native to the shell, rather than trying to get it to play nice with xcopy.  You&rsquo;d still have to deal with the backslash in the share:
+<code>
+cp -r /c/source/app/* \\\\server\\share
+</code></p>
+
+<p>This worked!  Also for things like &ldquo;rm -rf&rdquo;.  We&rsquo;re done, right?  Well, this mixmatching of different command-line styles seems unwieldy.  After I experimented further, it turned out that I had made an error from the start.  In addition to the Execute Shell build step, there&rsquo;s another type called Execute Windows Batch Command.  This build step allows you to run commands in a Windows shell.  Thus you can run execute xcopy, or anything else, as you would in the command prompt without needing to escape backslash.</p>
+
+<p>I&rsquo;d also like to be able to specify the share folder at run time so the project can be deployed to different servers.  In my initial attempt, I created a drop-down list parameter for the server name.  Then I figured to use the following xcopy command which incorporates the SERVER parameter.
+<code>
+xcopy c:\source\app\* \\%SERVER%\app
+</code>
+The %SERVER% syntax is used to reference an environment variable in Windows.  This approach turned out to be an abject failure.  It turned out that entire share has to be specified as an environment variable; e.g., %SHARE% should point to \server\app.  Then I could issue commands such as:
+<code>
+del /s /q %SHARE%\*
+xcopy c:\source\app\* %SHARE%
+</code></p>
 ]]></content>
   </entry>
   
