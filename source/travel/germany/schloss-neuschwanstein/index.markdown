@@ -1,0 +1,13 @@
+---
+layout: page
+title: "Schloss Neuschwanstein"
+comments: true
+sharing: true
+footer: true
+---
+<h3><em>Happily ever after</em></h3>
+
+Last visit: 2003
+Pros: Real-life fairy tale castle
+Cons: Long lines to get in
+In a nutshell: Fairy tale can come true, for a fee

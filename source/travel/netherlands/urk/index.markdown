@@ -1,0 +1,16 @@
+---
+layout: page
+title: Urk
+published: true
+---
+Urk's connection to the sea was unarguably stronger than most, as the town was formerly an island. The land mass around the island had been reclaimed from the sea, and nowadays one can drive to town instead of having to swim. It was definitely a strange experience walking on fertile fields that should have been underwater. 
+
+This is the monument to fishermen lost at sea. The statue depicts a woman waiting in vain for her loved one to return. On the bronze plaques around the statue were engraved the names of hundreds of those who never came back.
+
+<img src="https://dl.dropboxusercontent.com/u/52804626/urk/UrkLostatSeaMonument99-06.jpg" />
+
+Along the "shoreline", roughly where the statue's gaze was directed, one could see a row of modern windmills, the wind-driven turbines.
+
+I also saw a Chinese restaurant in Urk. This was another confirmation of my theory that one can always find a Chinese restaurant anywhere :)
+
+Last visit: June 1999

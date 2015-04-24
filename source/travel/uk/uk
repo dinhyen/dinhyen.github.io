@@ -1,0 +1,10 @@
+---
+layout: page
+title: UK
+published: true
+---
+<ul>
+  {% for place in site.travel.uk %}
+    <li><a href="{{ root_url }}/travel/uk/{{ place.url }}">{{ place.name }}</a></li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,60 @@
+---
+layout: post
+title: Berkshires 2010
+categories:
+- photography
+- travel
+tags:
+- berkshires
+- foliage
+---
+Some highlights during my visit to the Berkshires in the autumn of 2010:
+
+The Cascade ([map](http://maps.google.com/maps/ms?msa=0&amp;msid=214490968088440958659.0004929eb67eb5032f79a&amp;ie=UTF8&amp;ll=42.516651,-73.214264&amp;spn=0.982862,1.20163&amp;t=h&amp;z=10&amp;vpsrc=1&amp;iwloc=0004929f78dbe3c7fe1fd)): Trail head begins at the end of a very suburban road.  Very limited street parking (think 2-3 spaces, depending on the skills of the driver).  A short hike takes you over a nice wooden bridge as well as a fallen log-bridge.  The waterfalls drops into a shallow pool at the trail.
+
+Mount Greylock summit ([map](http://maps.google.com/maps/ms?msa=0&amp;msid=214490968088440958659.0004929eb67eb5032f79a&amp;ie=UTF8&amp;t=h&amp;vpsrc=0&amp;z=10&amp;iwloc=0004929f3564437b92260)): The foliage on Mount Greylock was past-peak when we were there. Yet the view from the summit was still to-die-for.  Climb to the top of the memorial for an even better look.  The  tower features a lighthouse beacon originally intended for Boston Harbor, but which somehow ended up atop a mountain.
+
+[March Cataract Falls](http://www.newenglandwaterfalls.com/waterfall.php?name=March%20Cataract%20Falls) ([map](http://maps.google.com/maps/ms?msa=0&amp;msid=214490968088440958659.0004929eb67eb5032f79a&amp;ie=UTF8&amp;t=h&amp;vpsrc=0&amp;ll=42.788346,-73.214264&amp;spn=0.978578,1.20163&amp;z=10&amp;iwloc=0004929f88481008bdeae)): Majestic falls on Mount Greylock.
+
+[Pine Cobble Trail](http://www.wrlf.org/properties-trails/trails/the-pine-cobble-trail/) ([map](http://maps.google.com/maps/ms?msa=0&amp;msid=214490968088440958659.0004929eb67eb5032f79a&amp;ie=UTF8&amp;ll=42.71638,-73.1855&amp;spn=0.007654,0.010021&amp;t=h&amp;z=17&amp;vpsrc=6&amp;iwloc=0004929f24ca09d1b965c)): Moderate trail with spectacular view of Williamstown. The north side of the summit offers a stunning lookout as well.
+
+Lenox: Home to Tanglewood and beautiful drives under the arbor of giant trees.
+
+<!-- Darkbox -->
+<div class="darkbox">
+<a href="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/dsc_4422.jpg" data-darkbox="berkshires-2010">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/thumbs/dsc_4422.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/dsc_4447.jpg" data-darkbox="berkshires-2010">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/thumbs/dsc_4447.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/dsc_4448.jpg" data-darkbox="berkshires-2010">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/thumbs/dsc_4448.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/dsc_4459.jpg" data-darkbox="berkshires-2010">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/thumbs/dsc_4459.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/dsc_4462.jpg" data-darkbox="berkshires-2010">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/thumbs/dsc_4462.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/dsc_4481.jpg" data-darkbox="berkshires-2010">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/thumbs/dsc_4481.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/dsc_4526.jpg" data-darkbox="berkshires-2010">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/thumbs/dsc_4526.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/dsc_4527.jpg" data-darkbox="berkshires-2010">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/thumbs/dsc_4527.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/dsc_4536.jpg" data-darkbox="berkshires-2010">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/thumbs/dsc_4536.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/dsc_4561.jpg" data-darkbox="berkshires-2010">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/thumbs/dsc_4561.jpg" />
+</a>
+<a href="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/dsc_4615.jpg" data-darkbox="berkshires-2010">
+  <img src="https://dl.dropboxusercontent.com/u/52804626/berkshires-2010/thumbs/dsc_4615.jpg" />
+</a>
+
+</div>
+<!-- End darkbox -->

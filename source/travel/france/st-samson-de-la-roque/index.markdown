@@ -1,0 +1,14 @@
+---
+layout: page
+title: "St-Samson-de-la-Roque"
+comments: true
+sharing: true
+footer: true
+---
+<h3><em>Tiny Samson</em></h3>
+
+Having just crossed the Pont de Normandie, we decided to come to this tiny promontory to get a good look at it. Well, we saw something all right in the fog.
+
+Completed in 1995, the Normandy bridge was the longest cable-stayed bridge in the world at the time, until it was surpassed by another in Hiroshima.
+
+Last visit: 2004

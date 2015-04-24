@@ -1,0 +1,19 @@
+---
+layout: page
+title: "F&eacute;camp"
+comments: true
+sharing: true
+footer: true
+---
+<h3><em>Fishing F&eacute;camp</em></h2>
+Or so it seems. As we took a tour along the harbor, it seems that fishing is both the main occupation and diversion of the town. Nevertheless, we were very happy to find out about the remarkable Benedictine abbey. Normandy continually surprised us, accustomed as we are to the bland seaside towns in the USA. It seems that every town we've been to has some example of outstanding architecture. I guess that's one of the things we love about Europe.
+
+The courtyard of the abbey
+
+This and others like all along the coast may have the White Cliffs of Dover eating their chalky dust.
+
+Pros: good seafood (probably) and fishing (almost certainly)
+Cons: not great if you don't like to fish or are allergic to seafood
+In a nutshell: Draw your own conclusions (in my case I love seafood)
+
+

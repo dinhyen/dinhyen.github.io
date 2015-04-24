@@ -1,0 +1,19 @@
+---
+layout: post
+title: Ooh shiny
+categories:
+- Photoshop
+tags:
+- Illustrator
+- logo
+- Photoshop
+---
+Some time ago I took a software engineering class.  For the term project we divided up into teams and worked on a project of our own choosing from beginning to end.  Ours was an e-commerce application, the source code for which still resides on Google Code.
+
+We were the Fantastic Five because, you'd never guess it, there were 5 of us. I created the logo for the project.  For the "super-hero" effect, it has 2 stylized F's, made to look like wings flanking a shield.  I drew the shape in Illustrator and applied a chrome effect to it in Photoshop.  This is the original.
+
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/f5flogo.png?w=300" alt="Fantastic Five Logo" />
+
+Here's another version in ice blue.
+
+<img src="https://dl.dropboxusercontent.com/u/52804626/images/f5flogoblue.png?w=300" alt="Fantastic Five Logo Blue" />
