@@ -4,7 +4,7 @@ title: "Validating required form fields with Angular"
 date: 2014-04-24 13:33
 comments: true
 categories:
-- Technology
+- technology
 ---
 Two things can happen when the user fills out a form field: the entered value is incorrect or the value is missing.  With Angular validating either case is consistent and simple.  The issue is when to show the error message: as the value is being entered, after the field loses focus or after the user submits the form.  I think that for a better usability, the user should be informed that the value is incorrect while entering the value.  This way the user isn't forced to scan the form to locate the problem.  If the user makes a mistake, it's more convenient to be able to fix it while already editing the field.  And we also take full advantage of Angular's instant update.  This approach works well for validating whether a value is correct.
 

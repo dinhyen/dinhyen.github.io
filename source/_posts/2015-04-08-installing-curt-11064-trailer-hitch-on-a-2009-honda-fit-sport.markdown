@@ -4,7 +4,7 @@ title: "Installing the Curt 11064 trailer hitch on a 2009 Honda Fit Sport"
 date: 2015-04-08 23:13
 comments: true
 categories:
-- Technology
+- technology
 ---
 As if that's not specific enough, I could also add On a Cold Sleety Night, After the Family Had Gone to Bed, While Feeling Renewed Pangs of Hunger.  I feel compelled to write this post so that Kate wouldn't think I spent all that time in the garage playing video games (I wish I could).  I was deciding between the Curt and a DrawTite trailer hitch.  The Curt seemed more substantial, is made in Wisconsin (the DrawTite is made in Mexico) and as it turned out is surprisingly lighter (lighter being relative, more on that later).  Installing the DrawTite requires moving the exhaust pipe out of the way, while the Curt requires drilling a hole.  The latter raises its installation difficulty to 6/10 according to a reputable web site.  I thought what the heck I could handle a drill, so I went with the Curt.  Installation should take about an hour, according to the same web site.  It ended up taking much longer than that--I won't say by how much because it's rather embarrassing, and that doesn't even include the amount of time buying tools online and repeated trips to the local hardware store.  I could of course have had the professionals at Rack Attack or even U-Haul do the job for reasonable cost, but that would have been a much shorter blog post.
 
