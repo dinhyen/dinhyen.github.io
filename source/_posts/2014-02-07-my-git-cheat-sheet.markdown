@@ -292,6 +292,8 @@ git remote show origin
 git remote prune origin --dry-run
 # Actually delete stale branches
 git remote prune origin
+# Or
+git fetch origin --prune
 ```
 
 ###  Commit
