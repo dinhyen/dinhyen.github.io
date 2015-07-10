@@ -27,7 +27,7 @@ The `validateSum` function should return true (valid) if the sum of the 2 fields
 
 ```
 $scope.validateSum = function () {
-  if ($scope.field1 && $scope.field2) {
+  if ($scope.field1 !== null && $scope.field2 !== null) {
     return parseFloat($scope.field1) + parseFloat($scope.field2) === 10;
   } else {
     return true;
