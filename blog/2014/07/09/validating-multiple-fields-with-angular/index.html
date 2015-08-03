@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Validating multiple fields with Angular - Yen's Blog</title>
+  <meta name="author" content="Yen Tran">
+
+  
+  <meta name="description" content="Angular makes it simple to validate a single form field. Validating multiple fields requires a bit more work. The approach that works for me is use a &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dinhyen.github.io/blog/2014/07/09/validating-multiple-fields-with-angular">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Yen's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="/stylesheets/darkbox.css" rel="stylesheet" type="text/css">
+<script src="/javascripts/darkbox.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24469490-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Yen's Blog</a></h1>
+  
+    <h2>Lens, Wheels, Skates, Keyboard</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dinhyen.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/travel">Travel</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Validating Multiple Fields With Angular</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-09T16:52:00-04:00" pubdate data-updated="true">Jul 9<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Angular makes it simple to validate a single form field.  Validating multiple fields requires a bit more work.  The approach that works for me is use a directive to lay out the framework, but to perform the actual validation in the parent scope.  Since the user defines the specifics of the validation, any arbitrary validation can be performed and the directive can be kept simple.</p>
+
+<p>In this example, I&rsquo;d like to validate that the sum of 2 text inputs equals 10.  I would specify that the validation should be performed via the <code>multi</code> directive, which also specifies the custom validation function from the parent scope.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;form name="form" novalidate&gt;
+</span><span class='line'>  &lt;p&gt;
+</span><span class='line'>    &lt;input type="text" name="field1" ng-model="field1" multi="validateSum" /&gt;
+</span><span class='line'>    &lt;span ng-show="form.field1.$error.multi"&gt;Must add up to 10&lt;/span&gt;
+</span><span class='line'>  &lt;/p&gt;
+</span><span class='line'>  &lt;p&gt;
+</span><span class='line'>    &lt;input type="text" name="field2" ng-model="field2" multi="validateSum" /&gt;
+</span><span class='line'>    &lt;span ng-show="form.field2.$error.multi"&gt;Must add up to 10&lt;/span&gt;
+</span><span class='line'>  &lt;/p&gt;
+</span><span class='line'>&lt;/form&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <code>validateSum</code> function should return true (valid) if the sum of the 2 fields equals 10, or if any of the fields is empty.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$scope.validateSum = function () {
+</span><span class='line'>  if ($scope.field1 !== null && $scope.field2 !== null) {
+</span><span class='line'>    return parseFloat($scope.field1) + parseFloat($scope.field2) === 10;
+</span><span class='line'>  } else {
+</span><span class='line'>    return true;
+</span><span class='line'>  }
+</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The directive specifies the validation function as a value of the <code>multi</code> attribute: <code>multi="validateSum"</code>.  This isn&rsquo;t quite idiomatic for Angular.  The preferred alternative is probably to create an isolate scope for the directive and pass in the function via <code>&amp;</code> or <code>&amp;anotherAttribute</code>.  I just think providing the external function as the value of the directive&rsquo;s attribute is cleaner and more succinct.  However, this approach requires a bit of extra handling in the directive&rsquo;s postlink function:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> var validate = $parse(attrs.multi)(scope);</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <code>$parse</code> service evaluates the value of <code>attrs.multi</code>, which is the string <code>validateSum</code>, in the context of the directive&rsquo;s scope.  Essentially this gives us the reference to <code>scope.validateSum</code>, which is created automatically by Angular and points to the function defined in the parent scope.</p>
+
+<p>In order to work properly with Angular&rsquo;s form validation, the directive integrates with Angular&rsquo;s <code>ngModel</code> directive.  This is specified with <code>require: 'ngModel'</code> in the directive definition object.  Once this is done, the model&rsquo;s controller is provided as a 4th parameter to the directive&rsquo;s postlink function.</p>
+
+<p>When the user changes the value of an input, we should perform the validation.  If the validation fails, the model should be marked as invalid, which results in the form being invalid, and we can display an error message and prevent the form from being submitted.  This is as simple as calling <code>ngModelController.$setValidity</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ngModelCtrl.$viewChangeListeners.push(function () {
+</span><span class='line'>  ngModelCtrl.$setValidity('multi', validate());
+</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Calling <code>validate()</code> would invoke <code>scope.validateSum()</code> which would invoke <code>validateSum()</code> in the parent scope to perform the actual validation.  Note that validation is performed only after a change has been made, so any existing model value wouldn&rsquo;t be validated.</p>
+
+<p>Any key can be used with <code>$setValidity</code>, in this case <code>multi</code>.  If the input is invalid, the special error object <code>formName.inputName.$error</code> would become <code>{ multi: true }</code>.  We can key on the presence of the <code>multi</code> property to manually display an error message, or use <a href="https://docs.angularjs.org/api/ngMessages/directive/ngMessages">ngMessages</a>.</p>
+
+<p>When the user changes an input, we should validate it and related inputs, as the overall validity depends on all inputs.  Since the inputs could be anywhere in the DOM, I figured the best way to notify all inputs is to use a root scope broadcast.  Since the input which triggers the event would also handle it, it&rsquo;s sufficient to just triggers the event in the change handler and validate in the broadcast handler.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scope.$on('multi:valueChanged', function (event) {
+</span><span class='line'>  ngModelCtrl.$setValidity('multi', validate());
+</span><span class='line'>});
+</span><span class='line'>
+</span><span class='line'>ngModelCtrl.$viewChangeListeners.push(function () {
+</span><span class='line'>  $rootScope.$broadcast('multi:valueChanged');
+</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is the directive in its entirety:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>app.directive('multi', ['$parse', '$rootScope', function ($parse, $rootScope) {
+</span><span class='line'>  return {
+</span><span class='line'>    restrict: 'A',
+</span><span class='line'>    require: 'ngModel',
+</span><span class='line'>    link: function (scope, elem, attrs, ngModelCtrl) {
+</span><span class='line'>      var validate = $parse(attrs.multi)(scope);
+</span><span class='line'>
+</span><span class='line'>      ngModelCtrl.$viewChangeListeners.push(function () {
+</span><span class='line'>        // ngModelCtrl.$setValidity('multi', validate());
+</span><span class='line'>        $rootScope.$broadcast('multi:valueChanged');
+</span><span class='line'>      });
+</span><span class='line'>
+</span><span class='line'>      var deregisterListener = scope.$on('multi:valueChanged', function (event) {
+</span><span class='line'>        ngModelCtrl.$setValidity('multi', validate());
+</span><span class='line'>      });
+</span><span class='line'>      scope.$on('$destroy', deregisterListener); // optional, only required for $rootScope.$on
+</span><span class='line'>    }
+</span><span class='line'>  };
+</span><span class='line'>}]);</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And there you have it.</p>
+
+<p>Here&rsquo;s the <a href="http://plnkr.co/edit/BHnxxKhhP0xG96MekAtr">plunk</a>;</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Yen Tran</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-09T16:52:00-04:00" pubdate data-updated="true">Jul 9<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/technology/'>technology</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dinhyen.github.io/blog/2014/07/09/validating-multiple-fields-with-angular/" data-via="dinhyen" data-counturl="http://dinhyen.github.io/blog/2014/07/09/validating-multiple-fields-with-angular/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/04/24/validating-required-form-fields-with-angular/" title="Previous Post: Validating required form fields with Angular">&laquo; Validating required form fields with Angular</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop/" title="Next Post: How to not upgrade the Nexus 7 to Lollipop">How to not upgrade the Nexus 7 to Lollipop &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Categories</h1>
+  <ul id="categories">
+    
+     
+      <li data-category="Photoshop">
+        <a href="/blog/categories/photoshop">Photoshop</a> <em>2</em>
+      </li>
+    
+     
+      <li data-category="travel">
+        <a href="/blog/categories/travel">travel</a> <em>20</em>
+      </li>
+    
+     
+      <li data-category="outdoors">
+        <a href="/blog/categories/outdoors">outdoors</a> <em>9</em>
+      </li>
+    
+     
+      <li data-category="photography">
+        <a href="/blog/categories/photography">photography</a> <em>20</em>
+      </li>
+    
+     
+      <li data-category="hockey">
+        <a href="/blog/categories/hockey">hockey</a> <em>11</em>
+      </li>
+    
+     
+      <li data-category="city">
+        <a href="/blog/categories/city">city</a> <em>6</em>
+      </li>
+    
+     
+      <li data-category="drawing">
+        <a href="/blog/categories/drawing">drawing</a> <em>1</em>
+      </li>
+    
+     
+      <li data-category="technology">
+        <a href="/blog/categories/technology">technology</a> <em>46</em>
+      </li>
+    
+     
+      <li data-category="review">
+        <a href="/blog/categories/review">review</a> <em>25</em>
+      </li>
+    
+     
+      <li data-category="hiking">
+        <a href="/blog/categories/hiking">hiking</a> <em>9</em>
+      </li>
+    
+     
+      <li data-category="other">
+        <a href="/blog/categories/other">other</a> <em>2</em>
+      </li>
+    
+  </ul>
+</section>
+<script type="text/javascript">
+  $(function() {
+    var categories = [];
+    $('[data-category]').each(function() {
+      categories.push(this);
+    });
+    categories.sort(function (a, b) {
+      return a.attributes['data-category'].value.toLowerCase() <= b.attributes['data-category'].value.toLowerCase()
+            ? -1 : 1;
+    });
+    $('#categories').html(categories);
+  });
+</script>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/04/08/installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/">Installing the Curt 11064 Trailer Hitch on a 2009 Honda Fit Sport</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop/">How to Not Upgrade the Nexus 7 to Lollipop</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/07/09/validating-multiple-fields-with-angular/">Validating Multiple Fields With Angular</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/24/validating-required-form-fields-with-angular/">Validating Required Form Fields With Angular</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/18/angular-in-jekyll-or-octopress/">Angular in Jekyll/Octopress</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Yen Tran -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

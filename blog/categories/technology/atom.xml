@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technology | Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2015-04-24T16:12:50-04:00</updated>
+  <updated>2015-08-03T16:40:40-04:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -88,6 +88,117 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Validating multiple fields with Angular]]></title>
+    <link href="http://dinhyen.github.io/blog/2014/07/09/validating-multiple-fields-with-angular/"/>
+    <updated>2014-07-09T16:52:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2014/07/09/validating-multiple-fields-with-angular</id>
+    <content type="html"><![CDATA[<p>Angular makes it simple to validate a single form field.  Validating multiple fields requires a bit more work.  The approach that works for me is use a directive to lay out the framework, but to perform the actual validation in the parent scope.  Since the user defines the specifics of the validation, any arbitrary validation can be performed and the directive can be kept simple.</p>
+
+<p>In this example, I&rsquo;d like to validate that the sum of 2 text inputs equals 10.  I would specify that the validation should be performed via the <code>multi</code> directive, which also specifies the custom validation function from the parent scope.</p>
+
+<p>```
+<form name="form" novalidate>
+  <p></p>
+
+<pre><code>&lt;input type="text" name="field1" ng-model="field1" multi="validateSum" /&gt;
+&lt;span ng-show="form.field1.$error.multi"&gt;Must add up to 10&lt;/span&gt;
+</code></pre>
+
+<p>  </p>
+  <p></p>
+
+<pre><code>&lt;input type="text" name="field2" ng-model="field2" multi="validateSum" /&gt;
+&lt;span ng-show="form.field2.$error.multi"&gt;Must add up to 10&lt;/span&gt;
+</code></pre>
+
+<p>  </p>
+</form>
+```</p>
+
+<p>The <code>validateSum</code> function should return true (valid) if the sum of the 2 fields equals 10, or if any of the fields is empty.</p>
+
+<p>```
+$scope.validateSum = function () {
+  if ($scope.field1 !== null &amp;&amp; $scope.field2 !== null) {</p>
+
+<pre><code>return parseFloat($scope.field1) + parseFloat($scope.field2) === 10;
+</code></pre>
+
+<p>  } else {</p>
+
+<pre><code>return true;
+</code></pre>
+
+<p>  }
+};
+```</p>
+
+<p>The directive specifies the validation function as a value of the <code>multi</code> attribute: <code>multi="validateSum"</code>.  This isn&rsquo;t quite idiomatic for Angular.  The preferred alternative is probably to create an isolate scope for the directive and pass in the function via <code>&amp;</code> or <code>&amp;anotherAttribute</code>.  I just think providing the external function as the value of the directive&rsquo;s attribute is cleaner and more succinct.  However, this approach requires a bit of extra handling in the directive&rsquo;s postlink function:</p>
+
+<p><code>
+ var validate = $parse(attrs.multi)(scope);
+</code></p>
+
+<p>The <code>$parse</code> service evaluates the value of <code>attrs.multi</code>, which is the string <code>validateSum</code>, in the context of the directive&rsquo;s scope.  Essentially this gives us the reference to <code>scope.validateSum</code>, which is created automatically by Angular and points to the function defined in the parent scope.</p>
+
+<p>In order to work properly with Angular&rsquo;s form validation, the directive integrates with Angular&rsquo;s <code>ngModel</code> directive.  This is specified with <code>require: 'ngModel'</code> in the directive definition object.  Once this is done, the model&rsquo;s controller is provided as a 4th parameter to the directive&rsquo;s postlink function.</p>
+
+<p>When the user changes the value of an input, we should perform the validation.  If the validation fails, the model should be marked as invalid, which results in the form being invalid, and we can display an error message and prevent the form from being submitted.  This is as simple as calling <code>ngModelController.$setValidity</code>:</p>
+
+<p><code>
+ngModelCtrl.$viewChangeListeners.push(function () {
+  ngModelCtrl.$setValidity('multi', validate());
+});
+</code></p>
+
+<p>Calling <code>validate()</code> would invoke <code>scope.validateSum()</code> which would invoke <code>validateSum()</code> in the parent scope to perform the actual validation.  Note that validation is performed only after a change has been made, so any existing model value wouldn&rsquo;t be validated.</p>
+
+<p>Any key can be used with <code>$setValidity</code>, in this case <code>multi</code>.  If the input is invalid, the special error object <code>formName.inputName.$error</code> would become <code>{ multi: true }</code>.  We can key on the presence of the <code>multi</code> property to manually display an error message, or use <a href="https://docs.angularjs.org/api/ngMessages/directive/ngMessages">ngMessages</a>.</p>
+
+<p>When the user changes an input, we should validate it and related inputs, as the overall validity depends on all inputs.  Since the inputs could be anywhere in the DOM, I figured the best way to notify all inputs is to use a root scope broadcast.  Since the input which triggers the event would also handle it, it&rsquo;s sufficient to just triggers the event in the change handler and validate in the broadcast handler.</p>
+
+<p>```
+scope.$on(&lsquo;multi:valueChanged&rsquo;, function (event) {
+  ngModelCtrl.$setValidity(&lsquo;multi&rsquo;, validate());
+});</p>
+
+<p>ngModelCtrl.$viewChangeListeners.push(function () {
+  $rootScope.$broadcast(&lsquo;multi:valueChanged&rsquo;);
+});
+```</p>
+
+<p>This is the directive in its entirety:
+```
+app.directive(&lsquo;multi&rsquo;, [&lsquo;$parse&rsquo;, &lsquo;$rootScope&rsquo;, function ($parse, $rootScope) {
+  return {</p>
+
+<pre><code>restrict: 'A',
+require: 'ngModel',
+link: function (scope, elem, attrs, ngModelCtrl) {
+  var validate = $parse(attrs.multi)(scope);
+
+  ngModelCtrl.$viewChangeListeners.push(function () {
+    // ngModelCtrl.$setValidity('multi', validate());
+    $rootScope.$broadcast('multi:valueChanged');
+  });
+
+  var deregisterListener = scope.$on('multi:valueChanged', function (event) {
+    ngModelCtrl.$setValidity('multi', validate());
+  });
+  scope.$on('$destroy', deregisterListener); // optional, only required for $rootScope.$on
+}
+</code></pre>
+
+<p>  };
+}]);
+```
+And there you have it.</p>
+
+<p>Here&rsquo;s the <a href="http://plnkr.co/edit/BHnxxKhhP0xG96MekAtr">plunk</a>;</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Validating required form fields with Angular]]></title>
     <link href="http://dinhyen.github.io/blog/2014/04/24/validating-required-form-fields-with-angular/"/>
     <updated>2014-04-24T13:33:00-04:00</updated>
@@ -143,42 +254,6 @@
     <updated>2014-04-18T00:00:00-04:00</updated>
     <id>http://dinhyen.github.io/blog/2014/04/18/angular-in-jekyll-or-octopress</id>
     <content type="html"><![CDATA[<p>Have a problem with Angular scope variable binding not working on a Jekyll or Octopress (which uses Jekyll) page?  It so happens that Jekyll&rsquo;s Liquid Template uses the same  syntax as Angular and would attempt to process the markup before Angular can get to it.  To get around the problem, you can surround Angular markup with <code>&#123;% raw %&#125;</code> and <code>&#123;% endraw %&#125;</code> tags.  Alternatively, you can also forgo from using this syntax altogether and use Angular&rsquo;s <code>ng-bind</code> directive to bind a variable to a DOM element.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Copying files in Hudson]]></title>
-    <link href="http://dinhyen.github.io/blog/2014/04/15/copying-files-in-hudson/"/>
-    <updated>2014-04-15T20:05:00-04:00</updated>
-    <id>http://dinhyen.github.io/blog/2014/04/15/copying-files-in-hudson</id>
-    <content type="html"><![CDATA[<p>Copying files somewhere is pretty standard procedure when deploying an app.  Interestingly I&rsquo;ve never had to copy files directly in Hudson.  Until now I&rsquo;ve only deployed .NET apps in Hudson and used MSBuild&rsquo;s Copy task to copy the files to a share folder.  Now that I want to deploy Angular and other client apps in Hudson, I&rsquo;d have to copy the files manually.</p>
-
-<p>My initial attempt was to add a new Execute Shell build step to run <code>xcopy</code>.  Since Hudson executes the command through the Bourne shell, which interprets any backslash in the path as the escape character, I&rsquo;d have to escape the backslash itself.  Why Windows has to be different from everyone else is a major source of annoyance if you have to move back and forth between Windows and *nix.
-<code>
-xcopy c:\\source\\app\\* \\\\server\\share\\app
-</code>
-This worked, but in order for xcopy to copy subdirectories, refrain from prompting everytime it needs to overwrite a file and take other actions necessary for unsupervised execution, I needed to specify additional parameters.
-<code>
-xcopy c:\\source\\app\\* \\\\server\\share /c /k /e /r /y /exclude:c:\\source\\xcopy_exclude.txt
-</code>
-Unfortunately this was when xcopy blows up with the &ldquo;invalid number of parameters&rdquo; error.  It probably had to do with the shell not passing the parameters to xcopy.  No dice if I put the command in a batch file then executing it.  Ditto when I tried <code>robocopy</code>, which prints a nicer error message but is functionally the same as xcopy.  As a note, you could test all of this in a Bourne shell rather than invoking Hudson every time.</p>
-
-<p>It occurred to me to use something that&rsquo;s native to the shell, rather than trying to get it to play nice with xcopy.  You&rsquo;d still have to deal with the backslash in the share:
-<code>
-cp -r /c/source/app/* \\\\server\\share
-</code></p>
-
-<p>This worked!  Also for things like &ldquo;rm -rf&rdquo;.  We&rsquo;re done, right?  Well, this mixmatching of different command-line styles seems unwieldy.  After I experimented further, it turned out that I had made an error from the start.  In addition to the Execute Shell build step, there&rsquo;s another type called Execute Windows Batch Command.  This build step allows you to run commands in a Windows shell.  Thus you can run execute xcopy, or anything else, as you would in the command prompt without needing to escape backslash.</p>
-
-<p>I&rsquo;d also like to be able to specify the share folder at run time so the project can be deployed to different servers.  In my initial attempt, I created a drop-down list parameter for the server name.  Then I figured to use the following xcopy command which incorporates the SERVER parameter.
-<code>
-xcopy c:\source\app\* \\%SERVER%\app
-</code>
-The %SERVER% syntax is used to reference an environment variable in Windows.  This approach turned out to be an abject failure.  It turned out that entire share has to be specified as an environment variable; e.g., %SHARE% should point to \server\app.  Then I could issue commands such as:
-<code>
-del /s /q %SHARE%\*
-xcopy c:\source\app\* %SHARE%
-</code></p>
 ]]></content>
   </entry>
   

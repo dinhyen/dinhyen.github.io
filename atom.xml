@@ -4,7 +4,7 @@
   <title><![CDATA[Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2015-04-24T16:12:50-04:00</updated>
+  <updated>2015-08-03T16:40:40-04:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -84,6 +84,145 @@
 <p>The next step was to turn off the system update notification service.  There are a few apps, the one I used being DisableService.  Once I navigated to the Google System Service node, System Update Service was already disabled.  Hmm, clearly that wasn&rsquo;t it because there was still a big fat notification in the system tray.  It turned out that I had to go to the Google Play Services node.  Lo and behold, there was another System Update Service.  Disabling this one and restarting the device did the trick.</p>
 
 <p><img src="http://yentran.isamonkey.org/gallery/nexus-7-kitkat/disable-service.png" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Validating multiple fields with Angular]]></title>
+    <link href="http://dinhyen.github.io/blog/2014/07/09/validating-multiple-fields-with-angular/"/>
+    <updated>2014-07-09T16:52:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2014/07/09/validating-multiple-fields-with-angular</id>
+    <content type="html"><![CDATA[<p>Angular makes it simple to validate a single form field.  Validating multiple fields requires a bit more work.  The approach that works for me is use a directive to lay out the framework, but to perform the actual validation in the parent scope.  Since the user defines the specifics of the validation, any arbitrary validation can be performed and the directive can be kept simple.</p>
+
+<p>In this example, I&rsquo;d like to validate that the sum of 2 text inputs equals 10.  I would specify that the validation should be performed via the <code>multi</code> directive, which also specifies the custom validation function from the parent scope.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;form name="form" novalidate&gt;
+</span><span class='line'>  &lt;p&gt;
+</span><span class='line'>    &lt;input type="text" name="field1" ng-model="field1" multi="validateSum" /&gt;
+</span><span class='line'>    &lt;span ng-show="form.field1.$error.multi"&gt;Must add up to 10&lt;/span&gt;
+</span><span class='line'>  &lt;/p&gt;
+</span><span class='line'>  &lt;p&gt;
+</span><span class='line'>    &lt;input type="text" name="field2" ng-model="field2" multi="validateSum" /&gt;
+</span><span class='line'>    &lt;span ng-show="form.field2.$error.multi"&gt;Must add up to 10&lt;/span&gt;
+</span><span class='line'>  &lt;/p&gt;
+</span><span class='line'>&lt;/form&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <code>validateSum</code> function should return true (valid) if the sum of the 2 fields equals 10, or if any of the fields is empty.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$scope.validateSum = function () {
+</span><span class='line'>  if ($scope.field1 !== null && $scope.field2 !== null) {
+</span><span class='line'>    return parseFloat($scope.field1) + parseFloat($scope.field2) === 10;
+</span><span class='line'>  } else {
+</span><span class='line'>    return true;
+</span><span class='line'>  }
+</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The directive specifies the validation function as a value of the <code>multi</code> attribute: <code>multi="validateSum"</code>.  This isn&rsquo;t quite idiomatic for Angular.  The preferred alternative is probably to create an isolate scope for the directive and pass in the function via <code>&amp;</code> or <code>&amp;anotherAttribute</code>.  I just think providing the external function as the value of the directive&rsquo;s attribute is cleaner and more succinct.  However, this approach requires a bit of extra handling in the directive&rsquo;s postlink function:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> var validate = $parse(attrs.multi)(scope);</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <code>$parse</code> service evaluates the value of <code>attrs.multi</code>, which is the string <code>validateSum</code>, in the context of the directive&rsquo;s scope.  Essentially this gives us the reference to <code>scope.validateSum</code>, which is created automatically by Angular and points to the function defined in the parent scope.</p>
+
+<p>In order to work properly with Angular&rsquo;s form validation, the directive integrates with Angular&rsquo;s <code>ngModel</code> directive.  This is specified with <code>require: 'ngModel'</code> in the directive definition object.  Once this is done, the model&rsquo;s controller is provided as a 4th parameter to the directive&rsquo;s postlink function.</p>
+
+<p>When the user changes the value of an input, we should perform the validation.  If the validation fails, the model should be marked as invalid, which results in the form being invalid, and we can display an error message and prevent the form from being submitted.  This is as simple as calling <code>ngModelController.$setValidity</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ngModelCtrl.$viewChangeListeners.push(function () {
+</span><span class='line'>  ngModelCtrl.$setValidity('multi', validate());
+</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Calling <code>validate()</code> would invoke <code>scope.validateSum()</code> which would invoke <code>validateSum()</code> in the parent scope to perform the actual validation.  Note that validation is performed only after a change has been made, so any existing model value wouldn&rsquo;t be validated.</p>
+
+<p>Any key can be used with <code>$setValidity</code>, in this case <code>multi</code>.  If the input is invalid, the special error object <code>formName.inputName.$error</code> would become <code>{ multi: true }</code>.  We can key on the presence of the <code>multi</code> property to manually display an error message, or use <a href="https://docs.angularjs.org/api/ngMessages/directive/ngMessages">ngMessages</a>.</p>
+
+<p>When the user changes an input, we should validate it and related inputs, as the overall validity depends on all inputs.  Since the inputs could be anywhere in the DOM, I figured the best way to notify all inputs is to use a root scope broadcast.  Since the input which triggers the event would also handle it, it&rsquo;s sufficient to just triggers the event in the change handler and validate in the broadcast handler.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>scope.$on('multi:valueChanged', function (event) {
+</span><span class='line'>  ngModelCtrl.$setValidity('multi', validate());
+</span><span class='line'>});
+</span><span class='line'>
+</span><span class='line'>ngModelCtrl.$viewChangeListeners.push(function () {
+</span><span class='line'>  $rootScope.$broadcast('multi:valueChanged');
+</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is the directive in its entirety:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>app.directive('multi', ['$parse', '$rootScope', function ($parse, $rootScope) {
+</span><span class='line'>  return {
+</span><span class='line'>    restrict: 'A',
+</span><span class='line'>    require: 'ngModel',
+</span><span class='line'>    link: function (scope, elem, attrs, ngModelCtrl) {
+</span><span class='line'>      var validate = $parse(attrs.multi)(scope);
+</span><span class='line'>
+</span><span class='line'>      ngModelCtrl.$viewChangeListeners.push(function () {
+</span><span class='line'>        // ngModelCtrl.$setValidity('multi', validate());
+</span><span class='line'>        $rootScope.$broadcast('multi:valueChanged');
+</span><span class='line'>      });
+</span><span class='line'>
+</span><span class='line'>      var deregisterListener = scope.$on('multi:valueChanged', function (event) {
+</span><span class='line'>        ngModelCtrl.$setValidity('multi', validate());
+</span><span class='line'>      });
+</span><span class='line'>      scope.$on('$destroy', deregisterListener); // optional, only required for $rootScope.$on
+</span><span class='line'>    }
+</span><span class='line'>  };
+</span><span class='line'>}]);</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And there you have it.</p>
+
+<p>Here&rsquo;s the <a href="http://plnkr.co/edit/BHnxxKhhP0xG96MekAtr">plunk</a>;</p>
 ]]></content>
   </entry>
   
@@ -1055,6 +1194,8 @@ From <a href="http://stackoverflow.com/questions/18506456/git-how-to-delete-a-lo
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>git remote show origin
 </span><span class='line'>    master    tracked
 </span><span class='line'>    refs/remotes/origin/fix        stale (use 'git remote prune' to remove)
@@ -1062,7 +1203,9 @@ From <a href="http://stackoverflow.com/questions/18506456/git-how-to-delete-a-lo
 </span><span class='line'># Simulate deleting stale branches
 </span><span class='line'>git remote prune origin --dry-run
 </span><span class='line'># Actually delete stale branches
-</span><span class='line'>git remote prune origin</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>git remote prune origin
+</span><span class='line'># Or
+</span><span class='line'>git fetch origin --prune</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>Commit</h3>
@@ -2843,121 +2986,6 @@ sat FEB 12, 2005</p>
 </span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">searchTerm</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
 </span><span class='line'>  <span class="k">return</span> <span class="nx">fieldValue</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">searchTerm</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">())</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span>
 </span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Wix: Executing custom action before starting Windows service]]></title>
-    <link href="http://dinhyen.github.io/blog/2013/09/27/wix-executing-custom-action-before-starting-windows-service/"/>
-    <updated>2013-09-27T00:00:00-04:00</updated>
-    <id>http://dinhyen.github.io/blog/2013/09/27/wix-executing-custom-action-before-starting-windows-service</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve been trying to get a Wix installer to work. This particular scenario is pretty simple. I want to configure the database via a custom action, then start a Windows service which then queries the database before starting.  This would seem like a commonplace scenario. However, Wix documentations are sparse and I&rsquo;ve been wrangling with this for some time.  I finally found a solution.  While I loathe to reference a StackOverflow answer, as a favor to my future self I&rsquo;m going to do so anyways.</p>
-
-<p>The following defines the component that installs and starts the service and creates a feature that references it.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;ComponentGroup</span> <span class="na">Id=</span><span class="s">&#39;b_SyncSvcComps&#39;</span> <span class="na">Directory=</span><span class="s">&#39;b_SyncInstallDir&#39;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;Component</span> <span class="na">Id=</span><span class="s">&#39;b_SyncSvc&#39;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;File</span> <span class="na">Id=</span><span class="s">&#39;b_SyncExe&#39;</span> <span class="na">Name=</span><span class="s">&#39;MyService.exe&#39;</span> <span class="na">Source=</span><span class="s">&#39;$(var.syncSrcDir)\MyService.exe&#39;</span> <span class="na">DiskId=</span><span class="s">&#39;1&#39;</span> <span class="na">KeyPath=</span><span class="s">&#39;yes&#39;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;ServiceInstall</span> <span class="na">Id=</span><span class="s">&#39;b_InstallSyncSvc&#39;</span> <span class="na">Type=</span><span class="s">&#39;ownProcess&#39;</span> <span class="na">Name=</span><span class="s">&#39;MyService&#39;</span> <span class="na">DisplayName=</span><span class="s">&#39;My Service&#39;</span> <span class="na">Description=</span><span class="s">&#39;My Service&#39;</span> <span class="na">Start=</span><span class="s">&#39;auto&#39;</span> <span class="na">Account=</span><span class="s">&#39;[SERVICEACCOUNT]&#39;</span> <span class="na">Password=</span><span class="s">&#39;[SERVICEPASSWORD]&#39;</span> <span class="na">ErrorControl=</span><span class="s">&#39;normal&#39;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;ServiceControl</span> <span class="na">Id=</span><span class="s">&#39;b_StartSyncSvc&#39;</span> <span class="na">Start=</span><span class="s">&#39;install&#39;</span> <span class="na">Stop=</span><span class="s">&#39;both&#39;</span> <span class="na">Remove=</span><span class="s">&#39;uninstall&#39;</span> <span class="na">Name=</span><span class="s">&#39;MyService&#39;</span> <span class="na">Wait=</span><span class="s">&#39;yes&#39;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/Component&gt;</span>
-</span><span class='line'><span class="nt">&lt;/ComponentGroup&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nt">&lt;Feature</span> <span class="na">Id=</span><span class="s">&#39;b_ConnectedModeFeature&#39;</span> <span class="na">Title=</span><span class="s">&#39;Connected Mode Features&#39;</span> <span class="na">Level=</span><span class="s">&#39;1&#39;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;ComponentGroupRef</span> <span class="na">Id=</span><span class="s">&#39;b_SyncSvcComps&#39;</span> <span class="nt">/&gt;</span>
-</span><span class='line'><span class="nt">&lt;/Feature&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The following snippet in Product.wxs actually installs the feature:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;Feature</span> <span class="na">Id=</span><span class="s">&#39;b_Features&#39;</span> <span class="na">Title=</span><span class="s">&#39;[ProductName]&#39;</span> <span class="na">Level=</span><span class="s">&#39;1&#39;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;FeatureRef</span> <span class="na">Id=</span><span class="s">&#39;b_ConnectedModeFeature&#39;</span> <span class="nt">/&gt;</span>
-</span><span class='line'><span class="nt">&lt;/Feature&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This is the initial version of the custom action that I want to run.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;CustomAction</span> <span class="na">Id=</span><span class="s">&quot;DbBatchCmd&quot;</span> <span class="na">Directory=</span><span class="s">&#39;B_DBINSTALLDIR&#39;</span> <span class="na">Execute=</span><span class="s">&quot;immediate&quot;</span> <span class="na">Impersonate=</span><span class="s">&quot;yes&quot;</span> <span class="na">Return=</span><span class="s">&quot;check&quot;</span> <span class="na">ExeCommand=</span><span class="s">&quot;[SystemFolder]\cmd /c &amp;quot;&amp;quot;setup_database.cmd&amp;quot; &amp;quot;[b_WebServer]&amp;quot; &amp;quot;[b_DbServer]&amp;quot;&amp;quot;&quot;</span> <span class="nt">/&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The following snippet in Product.wxs runs the custom action.  Here it is run after InstallFinalize, the last possible step in the installation&rsquo;s sequence of events.  The condition ensures that it is only run if the product isn&rsquo;t already installed.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;InstallExecuteSequence&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;Custom</span> <span class="na">Action=</span><span class="s">&quot;DbBatchCmd&quot;</span> <span class="na">After=</span><span class="s">&quot;InstallFinalize&quot;</span><span class="nt">&gt;</span>NOT Installed<span class="nt">&lt;/Custom&gt;</span>
-</span><span class='line'><span class="nt">&lt;/InstallExecuteSequence&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>According to the above, the installer tries to start the service before it runs the custom action to configure the database.  Of course, since the service requires the database to be set up, it balks.</p>
-
-<p>Among others, I tried running the custom action earlier using the <code>Before="StartServices"</code> and <code>After="InstallFiles"</code> attributes. The latter makes sense because the installer needs to copy files to the file system before it can execute the script.  When inspected with Orca, the MSI has the correct InstallExecuteSequence:</p>
-
-<pre>
-...
-InstallFiles              4000
-DbBatchCmd  NOT Installed 4001
-InstallServices VersionNT 5800
-StartServices VersionNT   5900
-...
-InstallFinalize           6600
-</pre>
-
-
-<p>However, the installer never executes the custom action.  It always tries to start the service and almost immediately fails. In fact, the custom action only runs when it&rsquo;s set to <code>After="InstallFinalize"</code> as above.</p>
-
-<p>One of the key things was provided by the helpful if somewhat verbose Windows installer log, which is created when you start the installer as follows:</p>
-
-<pre>
-msiexec /i myinstaller.msi /l*v myinstaller.log
-</pre>
-
-
-<p>Someday, Microsoft will have consistent command-line arguments.  The log has this to say about the service:</p>
-
-<pre>
-MSI (s) (3C:A8) [17:10:02:607]: Note: 1: 2262 2: Error 3: -2147287038 
-Info 1721.There is a problem with this Windows Installer package. A program required for this install to complete could not be run. Contact your support personnel or package vendor. Action: DbBatchCmd, location: C:\inetpub\wwwroot\MyApp\Database\, command: C:\Windows\SysWOW64\\cmd /c ""setup_database.cmd" "my_webserver" "my_dbserver"" 
-Action ended 17:10:02: ShipBatchCmd. Return value 1.
-</pre>
-
-
-<p>This is followed by entries for InstallServices and StartServices.  So the installer does try to run the custom action but fails.</p>
-
-<p>The <a href="http://stackoverflow.com/questions/778210/wix-trying-to-figure-out-install-sequences">answer</a> is provided by Rob Mensching, who created Wix.  According to him, <code>After="InstallFiles"</code> is correct. However, the execution needs to be &ldquo;deferred&rdquo; until the files are actually copied to the file system.  Below is the corrected XML.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;CustomAction</span> <span class="na">Id=</span><span class="s">&quot;DbBatchCmd&quot;</span> <span class="na">Directory=</span><span class="s">&#39;B_DBINSTALLDIR&#39;</span> <span class="na">Execute=</span><span class="s">&quot;deferred&quot;</span> <span class="na">ExeCommand=</span><span class="s">&quot;[SystemFolder]\cmd /c &amp;quot;&amp;quot;setup_database.cmd&amp;quot; &amp;quot;[b_WebServer]&amp;quot; &amp;quot;[b_DbServer]&amp;quot;&amp;quot;&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nt">&lt;InstallExecuteSequence&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;Custom</span> <span class="na">Action=</span><span class="s">&quot;DbBatchCmd&quot;</span> <span class="na">After=</span><span class="s">&quot;InstallFiles&quot;</span><span class="nt">&gt;</span>NOT Installed<span class="nt">&lt;/Custom&gt;</span>
-</span><span class='line'><span class="nt">&lt;/InstallExecuteSequence&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
