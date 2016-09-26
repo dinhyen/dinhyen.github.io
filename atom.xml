@@ -4,7 +4,7 @@
   <title><![CDATA[Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2015-08-03T16:40:40-04:00</updated>
+  <updated>2016-09-25T21:26:23-04:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -2646,6 +2646,8 @@ sat FEB 12, 2005</p>
 <p>All this resulted in lost time and furthered the perception that MS just can&rsquo;t seem to make simple tasks as effortless as Apple.  Finally I figured it out &mdash; Network Discovery had to be turned on.  I&rsquo;m not sure why it was turned off in the first place, but it had to be running for WMC to detect the tuners.</p>
 
 <p>Simply open Windows Explorer and select the Network tab in the sidebar.  You should see the HDHomerun Live DRIxxxx devices under the Media Devices section.  If you don&rsquo;t, Windows will ask if you want to turn on Network Discovery.  Do this.  If you&rsquo;re lucky, once you&rsquo;ll have done this WMC will immediately detect the tuner and you&rsquo;re done. Otherwise, you can turn on Network Discovery in the Network and Sharing Center > Advanced sharing settings.</p>
+
+<p>If you&rsquo;ve swapped out the CableCARD then done the above and still get the same error, you may need to set up Windows Media Center again to update its settings.  Go to Settings > General > Windows Media Center Setup > Set Up TV Signal.  Completing the wizard should configure Windows Media Center to work with the new tuners.</p>
 ]]></content>
   </entry>
   
