@@ -18,7 +18,7 @@ I'm using a WordPress theme that loads jQuery and other JavaScripts in the heade
 ```
 
 Using Chrome's Developer console (i.e., hit F12) to view the Resources for the page, I could see that jQuery is being loaded.
-<img title="jquery-cdn-1" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-11.png" width="333" height="279" />
+<img title="jquery-cdn-1" src="http://yentran.isamonkey.org/gallery/images/jquery-cdn-11.png" width="333" height="279" />
 I wanted to load jQuery from Google's Content Delivery Network ([why](http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you)?). My initial attempt was to simply change  the jQuery reference to the CDN location (I also upgraded to version 1.7.1 while I was at it):
 
 ``` html
@@ -27,7 +27,7 @@ I wanted to load jQuery from Google's Content Delivery Network ([why](http://enc
 
 This worked, and Chrome's Developer console showed that jQuery was being loaded from the CDN. However, there was another problem. WordPress apparently also loads jQuery by default, so the page ended up with an extra copy.
 
-<img title="jquery-cdn-2" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-21.png" width="400" height="415" />
+<img title="jquery-cdn-2" src="http://yentran.isamonkey.org/gallery/images/jquery-cdn-21.png" width="400" height="415" />
 
 To remove the redundant copy, I removed the jQuery references from the header.php script, then added the following lines to the functions.php script in the theme folder which use WordPress's built-in function **wp_enqueue_script** to ensure that only one copy of jQuery is included.
 
@@ -64,4 +64,4 @@ The corresponding references, of course, should be removed from header.php.
 
 Finally, verifying with the Developer console shows that everything is loaded correctly.
 
-<img title="jquery-cdn-3" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-31.png" width="399" height="414" />
+<img title="jquery-cdn-3" src="http://yentran.isamonkey.org/gallery/images/jquery-cdn-31.png" width="399" height="414" />

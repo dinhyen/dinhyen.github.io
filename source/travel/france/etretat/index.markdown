@@ -9,15 +9,15 @@ Our coastal tour of Normandy en route from F&eacute;camp to Le Havre took us to 
 
 La Falaise d'Aval.
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/etretat/img_8812.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/etretat/img_8812.jpg" />
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/etretat/EtretatRock1.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/etretat/EtretatRock1.jpg" />
 
 La Falaise d'Amont.
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/etretat/img_8816.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/etretat/img_8816.jpg" />
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/etretat/EtretatCliffEast.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/etretat/EtretatCliffEast.jpg" />
 
 Last visit: June 2004
 Pros: Nice walk

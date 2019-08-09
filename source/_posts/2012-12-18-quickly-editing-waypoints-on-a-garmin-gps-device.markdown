@@ -14,13 +14,13 @@ The Garmin stores waypoints in a GPX file (kudos to them for using standards-bas
 
 The first step is to connect the Garmin to the PC. After that you'll be able to browse the Garmin's memory card. Locate the current.gpx file under Drive\Garmin\GPX.
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/images/garmin_folder.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/images/garmin_folder.jpg" />
 
 Copy current.gpx to the PC. You can also back up the file this way.
 
 Open the copy of current.gpx in GPX Editor. Select the Google map tab, then select the plus icon to add a waypoint.
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/images/gps_editor.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/images/gps_editor.jpg" />
 
 Once the waypoint is added, it shows in the list on the left. You can edit it and give it a more meaningful name.
 

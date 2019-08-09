@@ -14,21 +14,21 @@ Vienna is very popular with tourists. In Heldenplatz, there are literally hundre
 The tour of the Imperial apartments in Hofburg Palace is disappointingly short, unless you're really curious about the personal lives of Kaiser Franz Jozef and Kaiserin Sissi. Furthermore you cannot take any photos! The Imperial Museum in Innsbruck is much more satisfying, and you can take all the photos that you want.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/ViennaRathausFacadeWhole2.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/ViennaRathausFacadeWhole2.jpg" />
   <figcaption>Rathaus, about 8h</figcaption>
 </figure>
 
 Schoenbrunn is perhaps the only other European palace that can claim (almost) equal footing with Versailles. I prefer the vast tracts of luxuriant green space surrounding this palace to Versailles'.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/ViennaSchoenbrunnFountain.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/ViennaSchoenbrunnFountain.jpg" />
   <figcaption>Schoenbrunn</figcaption>
 </figure>
 
 Example of heroic architecture found in the government district of Vienna.  The fountain in front of the Parliament depicts Pallas-Athena.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/ViennaParliamentFountain.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/ViennaParliamentFountain.jpg" />
   <figcaption>Parliament</figcaption>
 </figure>
 
@@ -39,17 +39,17 @@ The summer residence of the Habsburgs, Schoenbrunn rivals the palace of the Sun 
 Tree-shaded walkways crisscross Schoenbrunn's garden and statues are partially hidden in the green hedges. I prefer Schoenbrunn's more picturesque and friendly garden to Versailles'.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/img_3045.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/img_3045.jpg" />
   <figcaption></figcaption>
 </figure>
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/ViennaSchoenbrunnGarden.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/ViennaSchoenbrunnGarden.jpg" />
   <figcaption>Schoenbrunn garden</figcaption>
 </figure>
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/img_3055.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/img_3055.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -60,21 +60,21 @@ The graceful spires of the Votive Church make it my favorite church in Vienna. I
 Like most structures, the Votive Church is at its most ethereal when limned by the early morning light.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/ViennaVovivkircheMorning.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/ViennaVovivkircheMorning.jpg" />
   <figcaption>Votiv church</figcaption>
 </figure>
 
 The lofty interior of the Votive Church will leave you breathless. The subdued lighting makes it looks most mystical.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/img_3149.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/img_3149.jpg" />
   <figcaption></figcaption>
 </figure>
 
 When we arrived, twilight was around 10pm. Now would have been a good time to get some night-time photos. Unfortunately thanks to some hotel mix-ups and my own difficulty navigating Viennese streets, we didn't check in until 10pm, by which time we was so hungry we had to go look for dinner. Fortunately, Votivkirche is just a few blocks from the pension, so we walked by there the following night.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/img_3058.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/img_3058.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -83,7 +83,7 @@ When we arrived, twilight was around 10pm. Now would have been a good time to ge
 A stone's throw away from the Gothic gem Rathaus is this imposing Classical edifice. Parliamentary statuary on Ringstrasse.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/img_3116.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/img_3116.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -92,7 +92,7 @@ A stone's throw away from the Gothic gem Rathaus is this imposing Classical edif
 The edifice occupying one end of Heldenplatz is the Nationalbibliothek, which means of course the National Bibliothek :)
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/img_3198.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/img_3198.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -101,7 +101,7 @@ The edifice occupying one end of Heldenplatz is the Nationalbibliothek, which me
 St. Stephen's Church, Vienna's most imposing landmark, is the heart of the city. The square in front of it is packed with throngs of tourists.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/img_3215.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/img_3215.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -110,21 +110,21 @@ For a closer look at the amazing tiled roof of Stephansdom, visitors can ride an
 The original tile roof of Stephansdom was burned down towards the end of WWII during fighting between Nazi and Soviet troops. It was rebuilt in the 1950s.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/ViennaStephansdomRoof.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/ViennaStephansdomRoof.jpg" />
   <figcaption>Stephansdom</figcaption>
 </figure>
 
 Below the Austrian eagle you can see the year of completion of the roof.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/img_3250.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/img_3250.jpg" />
   <figcaption></figcaption>
 </figure>
 
 Another superb Gothic interior.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/img_3228.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/img_3228.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -133,7 +133,7 @@ Another superb Gothic interior.
 The flower-bedecked window sills are an especially nice touch.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/img_3191.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/img_3191.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -142,7 +142,7 @@ The flower-bedecked window sills are an especially nice touch.
 Between the Museum of Natural History and the Museum of Art History is a manicured plaza dominated by a regal statue of a youthful-looking Empress Maria Theresa (ruled 1740-1780), perhaps the most influential of the Habsburg monarchs.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/ViennaMariaTheresaStatue.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/ViennaMariaTheresaStatue.jpg" />
   <figcaption>Maria Theresa statue</figcaption>
 </figure>
 
@@ -151,7 +151,7 @@ Between the Museum of Natural History and the Museum of Art History is a manicur
 The manicured Volksgarten in front of the Rathaus is a great place to take a break. Rows of green chairs line the sides of the garden and many locals come here to read, talk, and relax. At one end is the Burgtheater.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/img_3193.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/img_3193.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -160,7 +160,7 @@ The manicured Volksgarten in front of the Rathaus is a great place to take a bre
 Even though Mozart was born and raised in Salzburg, Vienna adopted him as well.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/vienna/img_3258.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/img_3258.jpg" />
   <figcaption></figcaption>
 </figure>
 

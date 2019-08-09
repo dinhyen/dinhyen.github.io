@@ -11,10 +11,10 @@ My friend's father didn't speak much English, but his mom did, so we conversed m
 
 After our warm and pleasant sojourn, we headed by train to our next stop in central Holland, Utrecht, to visit my friend's older sister.
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/boxmeer/BoxmeerLock1-99-06.jpg" title="BoxmeerLock1-99-06" width="640" height="425" />
+<img src="http://yentran.isamonkey.org/gallery/boxmeer/BoxmeerLock1-99-06.jpg" title="BoxmeerLock1-99-06" width="640" height="425" />
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/boxmeer/BoxmeerLock2-99-06.jpg" title="BoxmeerLock2-99-06" width="640" height="425" />
+<img src="http://yentran.isamonkey.org/gallery/boxmeer/BoxmeerLock2-99-06.jpg" title="BoxmeerLock2-99-06" width="640" height="425" />
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/boxmeer/BoxmeerLock3-99-06.jpg" title="BoxmeerLock3-99-06" width="640" height="425" />
+<img src="http://yentran.isamonkey.org/gallery/boxmeer/BoxmeerLock3-99-06.jpg" title="BoxmeerLock3-99-06" width="640" height="425" />
 
 Last visit: June 1999

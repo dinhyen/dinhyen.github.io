@@ -10,7 +10,7 @@ The task of selecting a name for this blog site was reduced to finding a number,
 
 Since this is my first post, it should have something interesting or at least Star Wars-related.  I think we can all agree that nothing beats a lightsaber duel.  I had this photo of our re-enactment of the Darth Maul,  Qui-Gon Jinn and Obi-Wan clash.  Before you snigger, only the idea of the Jedi fight was cool while the rest of Episode 1 was an abject failure.  In any case, the authenticity of this climactic scene was somewhat undermined by the fact that we were wielding twigs instead of lightsabers.
 
-<img title="Lightsaber_duel_Before" src="https://dl.dropboxusercontent.com/u/52804626/images/lightsaber_duel_before.jpg?w=300" alt="Stick duel" />
+<img title="Lightsaber_duel_Before" src="http://yentran.isamonkey.org/gallery/its-alive/lightsaber_duel_before.jpg?w=300" alt="Stick duel" />
 
 But that's a minor problem that a little tool known as Photoshop wouldn't be able to fix.  After all, didn't I try to learn Photoshop so I could do just this?
 
@@ -18,6 +18,6 @@ After more than a few tweaks, here's the result.  Unfortunately there was no ea
 
 For the record, Beracah was going down!
 
-<img title="Lightsaber_duel_After" src="https://dl.dropboxusercontent.com/u/52804626/images/lightsaber_duel_after.jpg?w=300" alt="Lightsaber duel" />
+<img title="Lightsaber_duel_After" src="http://yentran.isamonkey.org/gallery/its-alive/lightsaber_duel_after.jpg?w=300" alt="Lightsaber duel" />
 
 **Update**: Since being migrated to my own domain, yen99 is no more.   But its namesake lives on in hockey lore.

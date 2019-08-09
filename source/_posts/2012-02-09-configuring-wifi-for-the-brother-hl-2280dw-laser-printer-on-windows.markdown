@@ -14,33 +14,33 @@ With laser printer, scanner, Ethernet and Wifi interface rolled into one, the Br
 * Start the installer from the CD-ROM (double-click on start.exe if it doesn't launch automatically)
 * If this is the first installation, select Install MFL-Pro Suite. If you get the Wifi to work on the first attempt, you can stop reading. If not, try installing for either Ethernet or USB then go to the next step.
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/install-start.png" alt="install-start" />
+<img src="http://yentran.isamonkey.org/gallery/brother-printer/install-start.png" alt="install-start" />
 
 * Once the software is installed either for another interface (Ethernet or USB), start the installer and select Wireless LAN Setup Wizard
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-install.png" alt="wireless-install" />
+<img src="http://yentran.isamonkey.org/gallery/brother-printer/wireless-install.png" alt="wireless-install" />
 
 * On the Setting Up Wireless screen, I selected No to WPS/AOSS
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-wps.png" alt="wireless-wps" />
+<img src="http://yentran.isamonkey.org/gallery/brother-printer/wireless-wps.png" alt="wireless-wps" />
 
 * On Importance Notice, check and select next, assuming you know your Wifi network's settings
 * On the second Setting Up Wireless screen, select Temporarily use a USB cable (Recommended)
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-connect.png" alt="wireless-connect" />
+<img src="http://yentran.isamonkey.org/gallery/brother-printer/wireless-connect.png" alt="wireless-connect" />
 
 * Once you connect the USB cable, the installer attempts to connect to the printer
 * Once it completes, the little USB icon on the task bar should show success messages
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/usb-connected.png" alt="usb-connected" />
+<img src="http://yentran.isamonkey.org/gallery/brother-printer/usb-connected.png" alt="usb-connected" />
 
 * The installer then attempts to search for Wifi networks. If your network is discoverable, it should show up on the list. Otherwise, select Advanced to configure it manually. If you select an existing network, the installer automatically detects Authentication settings. In either case, you have to enter the network key or password. This is a fairly run-of-the-mill process for setting up Wifi.
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-ssid.png" alt="wireless-ssid" />
+<img src="http://yentran.isamonkey.org/gallery/brother-printer/wireless-ssid.png" alt="wireless-ssid" />
 
 * Once you're done configuring Wifi, the installer sends the settings to the printer
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-submit.png" alt="wireless-submit" />
+<img src="http://yentran.isamonkey.org/gallery/brother-printer/wireless-submit.png" alt="wireless-submit" />
 
 * Disconnect the USB cable
 
@@ -50,24 +50,24 @@ For various reasons, I want the printer to use a static instead of dynamic IP ad
 
 * Select Start > Devices and Printers
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/control-printers-off.png" alt="control-printers-off" />
+<img src="http://yentran.isamonkey.org/gallery/brother-printer/control-printers-off.png" alt="control-printers-off" />
 
 * Double click on the printer icon to open the Printer Properties. Notice that the printer may be Offline.
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-offline.png" alt="printer-offline" />
+<img src="http://yentran.isamonkey.org/gallery/brother-printer/printer-offline.png" alt="printer-offline" />
 
 * Double click on Customize your printer
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-properties.png" alt="printer-properties" />
+<img src="http://yentran.isamonkey.org/gallery/brother-printer/printer-properties.png" alt="printer-properties" />
 
 * Click Change Properties and enter the administrator password if prompted
 * Select the Ports tab
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-ports.png" alt="printer-ports" />
+<img src="http://yentran.isamonkey.org/gallery/brother-printer/printer-ports.png" alt="printer-ports" />
 
 * Select Configure Port and Enter the desired static IP address
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/port-setings.png" alt="port-setings" />
+<img src="http://yentran.isamonkey.org/gallery/brother-printer/port-setings.png" alt="port-setings" />
 
 ### Printer
 
@@ -82,59 +82,59 @@ For various reasons, I want the printer to use a static instead of dynamic IP ad
 * (Optional) Verify the value under DNS Server
 * Back in Windows, the printer should show up as Ready. If not, try turning the printer off and on.
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-ready.png" alt="printer-ready" />
+<img src="http://yentran.isamonkey.org/gallery/brother-printer/printer-ready.png" alt="printer-ready" />
 <!-- Darkbox -->
 <div class="darkbox">
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/control-printers-off.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/control-printers-off.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/control-printers-off.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/control-printers-off.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/install-start.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/install-start.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/install-start.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/install-start.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/port-setings.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/port-setings.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/port-setings.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/port-setings.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-offline.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/printer-offline.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/printer-offline.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/printer-offline.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-ports.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/printer-ports.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/printer-ports.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/printer-ports.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-properties.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/printer-properties.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/printer-properties.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/printer-properties.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-ready.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/printer-ready.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/printer-ready.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/printer-ready.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/usb-connected.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/usb-connected.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/usb-connected.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/usb-connected.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-connect.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-connect.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-connect.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-connect.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-disconnect.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-disconnect.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-disconnect.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-disconnect.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-finish.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-finish.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-finish.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-finish.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-install.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-install.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-install.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-install.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-notice.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-notice.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-notice.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-notice.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-search.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-search.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-search.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-search.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-ssid.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-ssid.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-ssid.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-ssid.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-submit.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-submit.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-submit.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-submit.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-wps.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-wps.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-wps.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-wps.png" />
 </a>
 
 </div>

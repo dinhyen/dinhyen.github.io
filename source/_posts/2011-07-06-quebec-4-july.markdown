@@ -13,41 +13,41 @@ Last morning in Québec. We took a 5-minute walk to check out the cool murals we
 
 <!-- Darkbox -->
 <div class="darkbox">
-<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-3/dsc_2689.jpg" data-darkbox="quebec-3">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-3/thumbs/dsc_2689.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/quebec-3/dsc_2689.jpg" data-darkbox="quebec-3">
+  <img src="http://yentran.isamonkey.org/gallery/quebec-3/thumbs/dsc_2689.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-3/dsc_2696.jpg" data-darkbox="quebec-3">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-3/thumbs/dsc_2696.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/quebec-3/dsc_2696.jpg" data-darkbox="quebec-3">
+  <img src="http://yentran.isamonkey.org/gallery/quebec-3/thumbs/dsc_2696.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-3/dsc_2706.jpg" data-darkbox="quebec-3">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-3/thumbs/dsc_2706.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/quebec-3/dsc_2706.jpg" data-darkbox="quebec-3">
+  <img src="http://yentran.isamonkey.org/gallery/quebec-3/thumbs/dsc_2706.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-3/dsc_2708.jpg" data-darkbox="quebec-3">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-3/thumbs/dsc_2708.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/quebec-3/dsc_2708.jpg" data-darkbox="quebec-3">
+  <img src="http://yentran.isamonkey.org/gallery/quebec-3/thumbs/dsc_2708.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-3/dsc_2712b.jpg" data-darkbox="quebec-3">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-3/thumbs/dsc_2712b.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/quebec-3/dsc_2712b.jpg" data-darkbox="quebec-3">
+  <img src="http://yentran.isamonkey.org/gallery/quebec-3/thumbs/dsc_2712b.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-3/dsc_2716.jpg" data-darkbox="quebec-3">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-3/thumbs/dsc_2716.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/quebec-3/dsc_2716.jpg" data-darkbox="quebec-3">
+  <img src="http://yentran.isamonkey.org/gallery/quebec-3/thumbs/dsc_2716.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-3/dsc_2719.jpg" data-darkbox="quebec-3">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-3/thumbs/dsc_2719.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/quebec-3/dsc_2719.jpg" data-darkbox="quebec-3">
+  <img src="http://yentran.isamonkey.org/gallery/quebec-3/thumbs/dsc_2719.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-3/dsc_2721.jpg" data-darkbox="quebec-3">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-3/thumbs/dsc_2721.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/quebec-3/dsc_2721.jpg" data-darkbox="quebec-3">
+  <img src="http://yentran.isamonkey.org/gallery/quebec-3/thumbs/dsc_2721.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-3/dsc_2724.jpg" data-darkbox="quebec-3">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-3/thumbs/dsc_2724.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/quebec-3/dsc_2724.jpg" data-darkbox="quebec-3">
+  <img src="http://yentran.isamonkey.org/gallery/quebec-3/thumbs/dsc_2724.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-3/dsc_2728.jpg" data-darkbox="quebec-3">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-3/thumbs/dsc_2728.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/quebec-3/dsc_2728.jpg" data-darkbox="quebec-3">
+  <img src="http://yentran.isamonkey.org/gallery/quebec-3/thumbs/dsc_2728.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-3/dsc_2730.jpg" data-darkbox="quebec-3">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-3/thumbs/dsc_2730.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/quebec-3/dsc_2730.jpg" data-darkbox="quebec-3">
+  <img src="http://yentran.isamonkey.org/gallery/quebec-3/thumbs/dsc_2730.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/quebec-3/dsc_2733.jpg" data-darkbox="quebec-3">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/quebec-3/thumbs/dsc_2733.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/quebec-3/dsc_2733.jpg" data-darkbox="quebec-3">
+  <img src="http://yentran.isamonkey.org/gallery/quebec-3/thumbs/dsc_2733.jpg" />
 </a>
 
 </div>

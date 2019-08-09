@@ -21,10 +21,10 @@ To grant permission to ApplicationPoolIdentity:
 * In the textbox, enter `IIS AppPool\[Site Name]` for example, `IIS AppPool\Default Web Site`
 
 
-<img title="select-1" src="https://dl.dropboxusercontent.com/u/52804626/images/select-1-300x159.png" width="300" height="159" />
+<img title="select-1" src="http://yentran.isamonkey.org/gallery/images/select-1-300x159.png" width="300" height="159" />
 
 * Select Check Names and a valid user account name should appear
 
-<img title="select-2" src="https://dl.dropboxusercontent.com/u/52804626/images/select-2-300x159.png" width="300" height="159" />
+<img title="select-2" src="http://yentran.isamonkey.org/gallery/images/select-2-300x159.png" width="300" height="159" />
 
 * Select the desired permissions; for example, Read &amp; Execute

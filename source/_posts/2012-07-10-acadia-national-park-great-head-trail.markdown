@@ -13,77 +13,77 @@ Great Head sticks out like a polyp from the southwest corner of Mount Desert Isl
 
 <!-- Darkbox -->
 <div class="darkbox">
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5766.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5766.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5766.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5766.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5770.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5770.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5770.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5770.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5776.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5776.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5776.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5776.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5784.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5784.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5784.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5784.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5794.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5794.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5794.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5794.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5798.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5798.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5798.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5798.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5806.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5806.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5806.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5806.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5814.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5814.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5814.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5814.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5830.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5830.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5830.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5830.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5833.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5833.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5833.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5833.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5838.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5838.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5838.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5838.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5839.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5839.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5839.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5839.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5842.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5842.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5842.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5842.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5844.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5844.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5844.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5844.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5846.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5846.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5846.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5846.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5851.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5851.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5851.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5851.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5856.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5856.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5856.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5856.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5874.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5874.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5874.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5874.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5879.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5879.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5879.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5879.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5888.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5888.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5888.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5888.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5890.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5890.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5890.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5890.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5896.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5896.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5896.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5896.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5900.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5900.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5900.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5900.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/dsc_5905.jpg" data-darkbox="acadia-great-head">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-great-head/thumbs/dsc_5905.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-great-head/dsc_5905.jpg" data-darkbox="acadia-great-head">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-great-head/thumbs/dsc_5905.jpg" />
 </a>
 
 </div>

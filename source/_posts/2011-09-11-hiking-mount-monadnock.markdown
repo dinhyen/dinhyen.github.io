@@ -11,7 +11,7 @@ tags:
 
 As far as big mountain goes,[ Mount Monadnock](http://en.wikipedia.org/wiki/Mount_Monadnock" targtet="_blank) in the southwestern corner of New Hampshire is relatively close to Boston.  Despite its proximity, we've never set foot on it. So we set out on a beautiful Saturday morning to redress this omission.
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3497.jpg" alt="Mount Monadnock" />
+<img src="http://yentran.isamonkey.org/gallery/monadnock/dsc_3497.jpg" alt="Mount Monadnock" />
 
 Monadnock's claim to fame is its status as most hiked mountain in the US.  Not so surprisingly, as soon as we arrived, the park ranger informed us that the parking lot was filled so that we'd have to park in the camping area.  Later on, we'd encounter people of all ages, shapes and sizes on the trail.
 
@@ -28,71 +28,71 @@ The trail systems here were partly created by the [Civilian Conservation Corps](
 
 <!-- Darkbox -->
 <div class="darkbox">
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3363.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3363.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3363.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3363.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3377.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3377.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3377.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3377.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3382.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3382.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3382.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3382.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3392.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3392.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3392.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3392.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3404.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3404.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3404.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3404.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3424.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3424.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3424.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3424.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3433.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3433.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3433.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3433.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3438.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3438.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3438.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3438.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3450.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3450.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3450.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3450.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3459.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3459.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3459.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3459.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3468.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3468.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3468.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3468.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3477.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3477.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3477.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3477.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3480.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3480.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3480.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3480.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3481.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3481.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3481.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3481.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3497.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3497.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3497.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3497.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3521.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3521.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3521.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3521.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3534.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3534.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3534.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3534.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3538.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3538.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3538.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3538.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3539.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3539.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3539.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3539.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3541.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3541.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3541.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3541.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3544.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3544.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3544.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3544.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/monadnock/dsc_3545.jpg" data-darkbox="monadnock">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/monadnock/thumbs/dsc_3545.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/monadnock/dsc_3545.jpg" data-darkbox="monadnock">
+  <img src="http://yentran.isamonkey.org/gallery/monadnock/thumbs/dsc_3545.jpg" />
 </a>
 
 </div>

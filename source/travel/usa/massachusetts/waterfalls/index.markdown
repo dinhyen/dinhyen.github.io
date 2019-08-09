@@ -14,26 +14,26 @@ It may be surprising that Massachusetts is the home of many waterfalls, some spe
 
 <!-- Darkbox -->
 <div class="darkbox">
-<a href="https://dl.dropboxusercontent.com/u/52804626/waterfalls-of-ma/dsc_4431.jpg" data-darkbox="waterfalls-of-ma" title="The Cascade">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/waterfalls-of-ma/thumbs/dsc_4431.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/waterfalls-of-ma/dsc_4431.jpg" data-darkbox="waterfalls-of-ma" title="The Cascade">
+  <img src="http://yentran.isamonkey.org/gallery/waterfalls-of-ma/thumbs/dsc_4431.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/waterfalls-of-ma/dsc_4562.jpg" data-darkbox="waterfalls-of-ma" title="March Cataract Falls">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/waterfalls-of-ma/thumbs/dsc_4562.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/waterfalls-of-ma/dsc_4562.jpg" data-darkbox="waterfalls-of-ma" title="March Cataract Falls">
+  <img src="http://yentran.isamonkey.org/gallery/waterfalls-of-ma/thumbs/dsc_4562.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/waterfalls-of-ma/dsc_5189a.jpg" data-darkbox="waterfalls-of-ma" title="Money Brook Falls">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/waterfalls-of-ma/thumbs/dsc_5189a.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/waterfalls-of-ma/dsc_5189a.jpg" data-darkbox="waterfalls-of-ma" title="Money Brook Falls">
+  <img src="http://yentran.isamonkey.org/gallery/waterfalls-of-ma/thumbs/dsc_5189a.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/waterfalls-of-ma/dsc_5399.jpg" data-darkbox="waterfalls-of-ma" title="Tannery Falls">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/waterfalls-of-ma/thumbs/dsc_5399.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/waterfalls-of-ma/dsc_5399.jpg" data-darkbox="waterfalls-of-ma" title="Tannery Falls">
+  <img src="http://yentran.isamonkey.org/gallery/waterfalls-of-ma/thumbs/dsc_5399.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/waterfalls-of-ma/dsc_5454.jpg" data-darkbox="waterfalls-of-ma" title="Waconah Falls">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/waterfalls-of-ma/thumbs/dsc_5454.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/waterfalls-of-ma/dsc_5454.jpg" data-darkbox="waterfalls-of-ma" title="Waconah Falls">
+  <img src="http://yentran.isamonkey.org/gallery/waterfalls-of-ma/thumbs/dsc_5454.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/waterfalls-of-ma/dsc_5678.jpg" data-darkbox="waterfalls-of-ma" title="Trap Falls">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/waterfalls-of-ma/thumbs/dsc_5678.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/waterfalls-of-ma/dsc_5678.jpg" data-darkbox="waterfalls-of-ma" title="Trap Falls">
+  <img src="http://yentran.isamonkey.org/gallery/waterfalls-of-ma/thumbs/dsc_5678.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/waterfalls-of-ma/dsc_6332.jpg" data-darkbox="waterfalls-of-ma" title="Royalston Falls">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/waterfalls-of-ma/thumbs/dsc_6332.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/waterfalls-of-ma/dsc_6332.jpg" data-darkbox="waterfalls-of-ma" title="Royalston Falls">
+  <img src="http://yentran.isamonkey.org/gallery/waterfalls-of-ma/thumbs/dsc_6332.jpg" />
 </a>
 </div>
 <!-- End darkbox -->

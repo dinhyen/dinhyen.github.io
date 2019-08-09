@@ -9,51 +9,51 @@ It would be a great omission not to visit Aix during your sojourn in Provence, f
 
 Aix isn't far from bustling Marseille, the second largest city in France. Yet it manages to retain a small-town feel. Its location at the threshold of Provence's rugged interior means that it's an excellent base for exploring Provence's renowned beauty.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencefontainequatredauphins.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencefontainequatredauphins.jpg'/>
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencewindows.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencewindows.jpg'/>
 
 Numerous fountains adorn the streets and squares in Aix's old quarters. Like many places in Europe, it's an excellent place to explore on foot. Perhaps one should expect no less, since Aix's most well-known attraction, the Cours Mirabeau, is a pedestrian boulevard.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencefontainesquare.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencefontainesquare.jpg'/>
 
 C&eacute;zanne's workshop where the artist lived and worked during the last years of his life.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceateliercezannefacade.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovenceateliercezannefacade.jpg'/>
 
 C&eacute;zanne's place of residence and workshop is in a quiet, somewhat isolated neighborhood not far from the old quarters. It's a rather unassuming 2-story house surrounded by a luxuriant garden that seems to have been left to grow untended. The workshop on the 2nd floor is basically a large room devoid of furnishings. Displayed here are many of C&eacute;zanne's still-life models, paintings, tools, and personal artifacts.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceateliercezannevert.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovenceateliercezannevert.jpg'/>
 
 This mausoleum on Avenue Pasteur is a rare exampple of French architecture in the revolutionary period. Larger-than-life statues celebrate a revolutionary hero.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencemonument.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencemonument.jpg'/>
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencestatuefence.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencestatuefence.jpg'/>
 
 The tourist magnet in Aix is the Cours Mirabeau, a rather short (440m) stretch of boulevard hemmed in by two rows of stately and very tall plane trees. At intervals it's broken up with large, natural-looking fountains gushing with water. its sides are lined with elegant 17th- and 18tth-century mansions. Despite its popularity with tourists, the Cours Mirabeau emanates a relaxing and refreshing feel.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencecoursmirabeau.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencecoursmirabeau.jpg'/>
 
 Statue of Le Roi (King) R&eacute;n&eacute; at the Cours Mirabeau
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceleroi.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovenceleroi.jpg'/>
 
 The fountain at La Place d'Albertas
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencefontaine.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencefontaine.jpg'/>
 
 The Caf&eacute; les Deux Garçons, frequented by C&eacute;zanne
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencecafelesdeuxgarcons.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencecafelesdeuxgarcons.jpg'/>
 
 Place Charles de Gaulle
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceplacecharlesdegaulle.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovenceplacecharlesdegaulle.jpg'/>
 
 Street scene in the Vieille Ville
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencestreetscene.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencestreetscene.jpg'/>
 
 Last visit: May 2004
 Pros: Some historical connections, trace the footsteps of C&eacute;zanne, vibrant small-town
@@ -61,44 +61,44 @@ Cons: No major attractions
 In a nutshell: One of many principal rest stops in Provence
 <!-- Darkbox -->
 <div class="darkbox">
-<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceateliercezannefacade.jpg" data-darkbox="aix-en-provence">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovenceateliercezannefacade.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovenceateliercezannefacade.jpg" data-darkbox="aix-en-provence">
+  <img src="http://yentran.isamonkey.org/gallery/aix-en-provence/thumbs/aixenprovenceateliercezannefacade.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceateliercezannevert.jpg" data-darkbox="aix-en-provence">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovenceateliercezannevert.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovenceateliercezannevert.jpg" data-darkbox="aix-en-provence">
+  <img src="http://yentran.isamonkey.org/gallery/aix-en-provence/thumbs/aixenprovenceateliercezannevert.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencecafelesdeuxgarcons.jpg" data-darkbox="aix-en-provence">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencecafelesdeuxgarcons.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencecafelesdeuxgarcons.jpg" data-darkbox="aix-en-provence">
+  <img src="http://yentran.isamonkey.org/gallery/aix-en-provence/thumbs/aixenprovencecafelesdeuxgarcons.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencecoursmirabeau.jpg" data-darkbox="aix-en-provence">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencecoursmirabeau.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencecoursmirabeau.jpg" data-darkbox="aix-en-provence">
+  <img src="http://yentran.isamonkey.org/gallery/aix-en-provence/thumbs/aixenprovencecoursmirabeau.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencefontaine.jpg" data-darkbox="aix-en-provence">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencefontaine.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencefontaine.jpg" data-darkbox="aix-en-provence">
+  <img src="http://yentran.isamonkey.org/gallery/aix-en-provence/thumbs/aixenprovencefontaine.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencefontainequatredauphins.jpg" data-darkbox="aix-en-provence">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencefontainequatredauphins.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencefontainequatredauphins.jpg" data-darkbox="aix-en-provence">
+  <img src="http://yentran.isamonkey.org/gallery/aix-en-provence/thumbs/aixenprovencefontainequatredauphins.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencefontainesquare.jpg" data-darkbox="aix-en-provence">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencefontainesquare.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencefontainesquare.jpg" data-darkbox="aix-en-provence">
+  <img src="http://yentran.isamonkey.org/gallery/aix-en-provence/thumbs/aixenprovencefontainesquare.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceleroi.jpg" data-darkbox="aix-en-provence">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovenceleroi.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovenceleroi.jpg" data-darkbox="aix-en-provence">
+  <img src="http://yentran.isamonkey.org/gallery/aix-en-provence/thumbs/aixenprovenceleroi.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencemonument.jpg" data-darkbox="aix-en-provence">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencemonument.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencemonument.jpg" data-darkbox="aix-en-provence">
+  <img src="http://yentran.isamonkey.org/gallery/aix-en-provence/thumbs/aixenprovencemonument.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovenceplacecharlesdegaulle.jpg" data-darkbox="aix-en-provence">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovenceplacecharlesdegaulle.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovenceplacecharlesdegaulle.jpg" data-darkbox="aix-en-provence">
+  <img src="http://yentran.isamonkey.org/gallery/aix-en-provence/thumbs/aixenprovenceplacecharlesdegaulle.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencestatuefence.jpg" data-darkbox="aix-en-provence">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencestatuefence.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencestatuefence.jpg" data-darkbox="aix-en-provence">
+  <img src="http://yentran.isamonkey.org/gallery/aix-en-provence/thumbs/aixenprovencestatuefence.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencestreetscene.jpg" data-darkbox="aix-en-provence">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencestreetscene.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencestreetscene.jpg" data-darkbox="aix-en-provence">
+  <img src="http://yentran.isamonkey.org/gallery/aix-en-provence/thumbs/aixenprovencestreetscene.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/aixenprovencewindows.jpg" data-darkbox="aix-en-provence">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/aix-en-provence/thumbs/aixenprovencewindows.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/aix-en-provence/aixenprovencewindows.jpg" data-darkbox="aix-en-provence">
+  <img src="http://yentran.isamonkey.org/gallery/aix-en-provence/thumbs/aixenprovencewindows.jpg" />
 </a>
 
 </div>

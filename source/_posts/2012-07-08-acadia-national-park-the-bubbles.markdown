@@ -15,77 +15,77 @@ We parked at the trail head of the Bubble Divide Trail, which neatly bisects Nor
 
 A bit beyond the summit is the main attraction, Bubble Rock, a gigantic boulder precariously balanced on a ledge on the side of the mountain.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5267.jpg' />
+<img src='http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5267.jpg' />
 
 The view from the other side is more striking.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5281.jpg' />
+<img src='http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5281.jpg' />
 
 You can try to move it, but it likely won't budge.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5275.jpg' />
+<img src='http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5275.jpg' />
 
 The Leaning Rock of South Bubble.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5284.jpg' />
+<img src='http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5284.jpg' />
 
 My god... it's full of trees.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5293.jpg' />
+<img src='http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5293.jpg' />
 
 Next up was North Bubble (872'/266m).  This dramatic cliff descends to Jordan Pond which can be glimpsed at the corner.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5315.jpg' />
+<img src='http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5315.jpg' />
 
 As promised the view is lovely.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5339.jpg' />
+<img src='http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5339.jpg' />
 
 And the return trip is just as scenic. Here's a rock we dubbed "Bubble Chunk".
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5344.jpg' />
+<img src='http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5344.jpg' />
 
 The mountain sides are carpeted with trees.  We will have to return in the autumn for the color show.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5347.jpg' />
+<img src='http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5347.jpg' />
 
 A last look at the Bubble Rock from the Park Loop Road.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5502a.jpg' />
+<img src='http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5502a.jpg' />
 <!-- Darkbox -->
 <div class="darkbox">
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5266.jpg" data-darkbox="acadia-bubbles">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5266.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5266.jpg" data-darkbox="acadia-bubbles">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-bubbles/thumbs/dsc_5266.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5267.jpg" data-darkbox="acadia-bubbles">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5267.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5267.jpg" data-darkbox="acadia-bubbles">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-bubbles/thumbs/dsc_5267.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5275.jpg" data-darkbox="acadia-bubbles">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5275.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5275.jpg" data-darkbox="acadia-bubbles">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-bubbles/thumbs/dsc_5275.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5281.jpg" data-darkbox="acadia-bubbles">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5281.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5281.jpg" data-darkbox="acadia-bubbles">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-bubbles/thumbs/dsc_5281.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5284.jpg" data-darkbox="acadia-bubbles">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5284.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5284.jpg" data-darkbox="acadia-bubbles">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-bubbles/thumbs/dsc_5284.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5293.jpg" data-darkbox="acadia-bubbles">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5293.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5293.jpg" data-darkbox="acadia-bubbles">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-bubbles/thumbs/dsc_5293.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5315.jpg" data-darkbox="acadia-bubbles">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5315.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5315.jpg" data-darkbox="acadia-bubbles">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-bubbles/thumbs/dsc_5315.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5339.jpg" data-darkbox="acadia-bubbles">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5339.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5339.jpg" data-darkbox="acadia-bubbles">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-bubbles/thumbs/dsc_5339.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5344.jpg" data-darkbox="acadia-bubbles">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5344.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5344.jpg" data-darkbox="acadia-bubbles">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-bubbles/thumbs/dsc_5344.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5347.jpg" data-darkbox="acadia-bubbles">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5347.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5347.jpg" data-darkbox="acadia-bubbles">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-bubbles/thumbs/dsc_5347.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/dsc_5502a.jpg" data-darkbox="acadia-bubbles">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/acadia-bubbles/thumbs/dsc_5502a.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/acadia-bubbles/dsc_5502a.jpg" data-darkbox="acadia-bubbles">
+  <img src="http://yentran.isamonkey.org/gallery/acadia-bubbles/thumbs/dsc_5502a.jpg" />
 </a>
 
 </div>

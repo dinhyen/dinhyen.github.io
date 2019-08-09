@@ -10,21 +10,21 @@ footer: true
 Innsbruck is most well-known as a winter resort and as the site of the 1964 and 1976 Winter Olympics. As we visited in the summertime, we couldn't experience any of its winter wonderland. However, to us it still exudes old-world attraction together with a vibrant mix of culture and charming architectural style.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/innsbruck/InnsbruckGoldenesDachleCafe.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/innsbruck/InnsbruckGoldenesDachleCafe.jpg" />
   <figcaption>In front of the Goldenes Dachl</figcaption>
 </figure>
 
 Places like Salzburg and Rothenburg are known for their lovely cast-iron signs that adorn shopfronts. I was pleasantly surprised to see such a splendid array of them in Innsbruck.  I got extremely shutter happy again here.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/innsbruck/InnsbruckGoldenesDachlSquare.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/innsbruck/InnsbruckGoldenesDachlSquare.jpg" />
   <figcaption></figcaption>
 </figure>
 
 The square in front of the Goldenes Dachl is a pedestrian-only zone filled with cafes and restaurants. While here I had my sole celebrity sighting on this trip. As I walked towards the Old Town Tower, I almost ran into a tower.. the Fawlty Tower himself: it was John Cleese! At least I thought it was my favorite Python (well, actually I like Palin more). He had the right height, the right look, the moustache, and clear glasses. He was with a much shorter woman I did not recognize. Of all the places to run into him. To this day I'm still kicking myself for my reaction, which was none, nada, nichts. I just stood there dumbly. "Cleese" held out his hand, politely motioning me to move past him. So I numbly did. He strode away as I look back. Hmm, his walk did not look funny at all.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/innsbruck/InnsbruckGirlsLunch.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/innsbruck/InnsbruckGirlsLunch.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -32,7 +32,7 @@ The square in front of the Goldenes Dachl is a pedestrian-only zone filled with 
 The river Inn is just steps away from the old town. Here you'll find the row of colorful facades.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/innsbruck/InnsbruckRiverHouses.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/innsbruck/InnsbruckRiverHouses.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -41,7 +41,7 @@ The river Inn is just steps away from the old town. Here you'll find the row of 
 This splendid Baroque church contains the tomb of Duke Ferdinand II. Its most unique feature is the array of 28 bronze statues of various noble gentlemen and ladies. You can rub some of them for good luck, including a very private spot on one statue :)
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/innsbruck/img_2838.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/innsbruck/img_2838.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -49,7 +49,7 @@ This splendid Baroque church contains the tomb of Duke Ferdinand II. Its most un
 The City Tower is the tallest structure in the Old Town and gives you a wonderful panorama of the city. Innsbruck doesn't have as many brilliant rooftops as Prague or Rothenburg, but the vistas of snow-covered mountains are breathtaking.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/innsbruck/InnsbruckTowerView.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/innsbruck/InnsbruckTowerView.jpg" />
   <figcaption>View from the Stadt Turm toward the baroque towers of the Dom zu St. Jakob.</figcaption>
 </figure>
 
@@ -58,14 +58,14 @@ The City Tower is the tallest structure in the Old Town and gives you a wonderfu
 The Triumphpforte rises at the south end of Maria-Theresienstrasse, the main tourist drag in Innsbruck. Like many structures in Austria, it was modeled on those in Rome. Built by Maria Theresa's order in 1765, it commemorated two events: the marriage of her son, later Kaiser Leopold II, to Maria Ludovica of Spain, and the death of her husband Francis I, who died during the celebrations. One side of the arch (the south side) represents happiness, while the other represents sadness.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/innsbruck/InnsbruckTriumphalArchOtherSide.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/innsbruck/InnsbruckTriumphalArchOtherSide.jpg" />
   <figcaption></figcaption>
 </figure>
 
 Notice the bicyclists. I always thought Dutch people are avid bicyclists. Austrians are even more so! Along every highway in Austria there are bicycle paths, even in the tiny towns in the Alps.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/innsbruck/InnsbruckTriumphalArch.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/innsbruck/InnsbruckTriumphalArch.jpg" />
   <figcaption>The happy side of the Triumphpforte</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ I'm a sucker for these decorative cast-iron store signs. There are numerous sign
 McDonald's has a presence here. I'm normally fond of seeing American companies abroad, though in the case of McDee's my feelings are a little ambivalent. At least they tried to fit in.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/innsbruck/InnsbruckMcDee.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/innsbruck/InnsbruckMcDee.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -86,12 +86,12 @@ McDonald's has a presence here. I'm normally fond of seeing American companies a
 Empress Maria Theresa turned the existing 15th-century mansion into a Baroque showcase. Halls after halls with exceedingly rich furnishing and decorations are testaments to the opulence of the Habsburgs. I prefer this museum to the Hofburg in Vienna. Its exhibits are more interesting, it's practically deserted, and, most importantly, you can take photos.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/innsbruck/InnsbruckImperialMuseumCourtyard.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/innsbruck/InnsbruckImperialMuseumCourtyard.jpg" />
   <figcaption>Courtyard of the Hofburg</figcaption>
 </figure>
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/innsbruck/InnsbruckImperialMuseumGrandBallroom.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/innsbruck/InnsbruckImperialMuseumGrandBallroom.jpg" />
   <figcaption>The Grand Ballroom, Hofburg</figcaption>
 </figure>
 
@@ -100,7 +100,7 @@ Empress Maria Theresa turned the existing 15th-century mansion into a Baroque sh
 This pedestrian-only street right in front of the Goldenes Dachl is lined with stores, some interesting, some not. I'm not a shopper (I was with people who are :) but I just loved the colorful buildings and of course the cast-iron signs.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/innsbruck/InnsbruckFriedrichstrasse.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/innsbruck/InnsbruckFriedrichstrasse.jpg" />
   <figcaption>Friedrichstrasse</figcaption>
 </figure>
 
@@ -109,7 +109,7 @@ This pedestrian-only street right in front of the Goldenes Dachl is lined with s
 Undoubtedly Innsbruck's most well-known attraction. The two-story Golden Roof isn't actually gold, but made of 2738 gold-plated copper tiles. It was built in from 1497-1500 by Niklas Tuering for Emperor Maximilian I. Reliefs on the balcony depicts Maximilian and his two wives, coats of arms, and Moorish scenes, among other things.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/innsbruck/InnsbruckGoldenesDachlCafeTallS.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/innsbruck/InnsbruckGoldenesDachlCafeTallS.jpg" />
   <figcaption></figcaption>
 </figure>
 

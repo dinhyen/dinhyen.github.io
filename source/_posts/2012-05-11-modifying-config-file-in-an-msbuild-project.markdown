@@ -32,7 +32,7 @@ Our connection string is stored in the typical manner in the web.config:
 
 We pass in the new value of the connection string as a project parameter named MyConnectionString, which Hudson turns into an environment variable named `$(MyConnectionString)`.  We make it a project parameter so that it can be modified as needed by IT without help from development.  The connection string has to be URL-encoded; for example, semicolons must be replaced by `%3B` as shown below.
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/images/hudson-conn-string.png" title="hudson-conn-string" width="739" height="128" class="aligncenter size-full wp-image-1148" />
+<img src="http://yentran.isamonkey.org/gallery/images/hudson-conn-string.png" title="hudson-conn-string" width="739" height="128" class="aligncenter size-full wp-image-1148" />
 
 The following snippets read and replace the value of the connection string.  The XPath query returns the connection string attribute for any node which has the name attribute of MyAppConnectionString.  Note that the XML namespace must be HTML-encoded. We don't need the value of the existing connection string, but can use it for logging purpose.
 

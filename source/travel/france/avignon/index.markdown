@@ -7,60 +7,60 @@ published: true
 
 Avignon's place in history was cemented in 1309 when Pope Clement V made Avignon his residence. Avignon became the center of the Roman church until the Pope returned to Rome in 1376. Then things got interesting. In protest over perceived Roman dominance, French cardinals elected another Pope, the so-called anti-Pope, to rule in Avignon. The precarious situation lasted until the schism was ended in 1417. By then Avignon's religious connection had bequeathed it with many legacies, the most impressive of which is the Palais des Papes, whose size and opulence dwarf the city that contains it.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/avignon/avignonpalaisdespapes.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/avignon/avignonpalaisdespapes.jpg'/>
 
 Avignon was the first stop on our tour of Provence. Not wanting to drive from Paris to Nice in one day (later on we actually drove from Nice to Rouen in one day), we stayed overnight in Avignon. We entered the city through its southern gate, opposite the train station. We had known that it's a walled city, but we didn't realize how tiny it was! The main thoroughfare, the Rue de la Republique, would be hard-pressed to qualify as a small avenue in other cities. Houses are narrow and closely packed together, yet they all managed to fit within the high, ancient walls. On the other hand, as one can imagine, it's a great city for walking. You can stroll from one end of the city to the other in about 15 minutes.
 
 The Pont d'Avignon, otherwise known as the Pont St-B&eacute;nezet, is made famous by the children's song in which "l'on y danse, l'on y danse". I had never heard of the song, but apparently it's quite well-known. Most of the bridge collapsed long ago, and as one can imagine it no longer carries vehicular traffic (which are currently born by a modern bridge just downstream). Yet the bridge remains as Avignon's most well-known attraction.
 
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/avignon/avignonpontdavignon.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/avignon/avignonpontdavignon.jpg'/>
 
 
 The massive Palais des Papes is a testament to the wealth of the church and to the skill of ancient builders. It dominates over the city, and is even more impressive inside than outside.
 
-<img src='https://dl.dropboxusercontent.com/u/52804626/avignon/avignonroofs.jpg'/>
+<img src='http://yentran.isamonkey.org/gallery/avignon/avignonroofs.jpg'/>
 
 Last visit: May 2004
 Pros: Palais des Papes
 Cons: Small streets impossible to drive in
 In a nutshell: Yet another facet of infinitely diverse Provence<!-- Darkbox -->
 <div class="darkbox">
-<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/avignonhoteldeville.jpg" data-darkbox="avignon">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/avignonhoteldeville.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/avignon/avignonhoteldeville.jpg" data-darkbox="avignon">
+  <img src="http://yentran.isamonkey.org/gallery/avignon/thumbs/avignonhoteldeville.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/avignonpalaisdespapes.jpg" data-darkbox="avignon">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/avignonpalaisdespapes.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/avignon/avignonpalaisdespapes.jpg" data-darkbox="avignon">
+  <img src="http://yentran.isamonkey.org/gallery/avignon/thumbs/avignonpalaisdespapes.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/avignonpontdavignon.jpg" data-darkbox="avignon">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/avignonpontdavignon.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/avignon/avignonpontdavignon.jpg" data-darkbox="avignon">
+  <img src="http://yentran.isamonkey.org/gallery/avignon/thumbs/avignonpontdavignon.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/avignonroofs.jpg" data-darkbox="avignon">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/avignonroofs.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/avignon/avignonroofs.jpg" data-darkbox="avignon">
+  <img src="http://yentran.isamonkey.org/gallery/avignon/thumbs/avignonroofs.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7254.jpg" data-darkbox="avignon">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7254.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/avignon/img_7254.jpg" data-darkbox="avignon">
+  <img src="http://yentran.isamonkey.org/gallery/avignon/thumbs/img_7254.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7255.jpg" data-darkbox="avignon">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7255.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/avignon/img_7255.jpg" data-darkbox="avignon">
+  <img src="http://yentran.isamonkey.org/gallery/avignon/thumbs/img_7255.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7256.jpg" data-darkbox="avignon">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7256.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/avignon/img_7256.jpg" data-darkbox="avignon">
+  <img src="http://yentran.isamonkey.org/gallery/avignon/thumbs/img_7256.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7269.jpg" data-darkbox="avignon">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7269.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/avignon/img_7269.jpg" data-darkbox="avignon">
+  <img src="http://yentran.isamonkey.org/gallery/avignon/thumbs/img_7269.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7273.jpg" data-darkbox="avignon">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7273.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/avignon/img_7273.jpg" data-darkbox="avignon">
+  <img src="http://yentran.isamonkey.org/gallery/avignon/thumbs/img_7273.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7275.jpg" data-darkbox="avignon">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7275.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/avignon/img_7275.jpg" data-darkbox="avignon">
+  <img src="http://yentran.isamonkey.org/gallery/avignon/thumbs/img_7275.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7306.jpg" data-darkbox="avignon">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7306.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/avignon/img_7306.jpg" data-darkbox="avignon">
+  <img src="http://yentran.isamonkey.org/gallery/avignon/thumbs/img_7306.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/avignon/img_7323.jpg" data-darkbox="avignon">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/avignon/thumbs/img_7323.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/avignon/img_7323.jpg" data-darkbox="avignon">
+  <img src="http://yentran.isamonkey.org/gallery/avignon/thumbs/img_7323.jpg" />
 </a>
 
 </div>

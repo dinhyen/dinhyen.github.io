@@ -9,6 +9,6 @@ As I outlined in my <a href="http://www.yentran.org/blog/netherlands/nijmegen/" 
 
 So much for the historical background. But as a tourist one may be more interested in the present. And Arnhem has an interesting attraction in the form of an outdoor museum. Among the displays are houses, farms, shops, and, yes, the inevitable Dutch windmills from different periods, all open for inspection. It's a unique and wonderful setting for a leisurely day (if weather permits, that is).
 
-<img src="https://dl.dropboxusercontent.com/u/52804626/arnhem/ArnhemOutdoorMuseumTopiaryGarden99-06.jpg" title="ArnhemOutdoorMuseumTopiaryGarden99-06" width="640" height="437" />
+<img src="http://yentran.isamonkey.org/gallery/arnhem/ArnhemOutdoorMuseumTopiaryGarden99-06.jpg" title="ArnhemOutdoorMuseumTopiaryGarden99-06" width="640" height="437" />
 
 Last visit: June 1999

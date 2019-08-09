@@ -10,21 +10,21 @@ footer: true
 Located just an hour from Munich at the foot of the picturesque Austrian Alps, Salzburg seems like a perfect getaway. Thanks to its splendid Baroque churches, charming palaces, well-preserved old town, the only intact medieval fortress in Europe, and of course its association with the Sound of Music, Salzburg is also a top tourist destination. And very touristy it is. But if one looks beyond the crowds and the lines, one will find a very charming little town indeed.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgSalzachBridge.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgSalzachBridge.jpg" />
   <figcaption>Salzach bridge</figcaption>
 </figure>
 
 The garden of Mirabell Palace, built by Prince-archbishop Wolf Dietrich for his mistress. The delightful garden has manicured lawns and hedges, water fountains and statues, and a wonderful view of the fortress on the hill.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgMirabelliGrandView.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgMirabelliGrandView.jpg" />
   <figcaption>Mirabelli garden</figcaption>
 </figure>
 
 Picturesque Getreidegasse is Salzburg's main tourist drag. Splendid cast-iron signs adorn many of the shopfronts and are what the street is known for. Here one can also find Salzburg's most famous address, Getreidegasse 9, Mozart's birthhouse.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgSignsWide.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgSignsWide.jpg" />
   <figcaption>Cast-iron signs along Getreidegasse</figcaption>
 </figure>
 
@@ -35,7 +35,7 @@ To the right of the street leading to the Festung Hohensalzburg funicular there 
 If this looks like the cemetery scene in the Sound of Music, you're right! However the movie was filmed not here but on a set in Hollywood, which was inspired by the actual cemetery.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgCemetery.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgCemetery.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -46,7 +46,7 @@ This 17th-century palace of the archbishop is rather unremarkable. What it's mos
 The gazebo where Lisl sings "I'm 16 going 17" is reputed to be here, though we searched in vain for it.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgHellbrunnLake.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgHellbrunnLake.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -57,7 +57,7 @@ Mirabelli Palace was built by Prince-Archbishop Wolf Dietrich von Altenau for hi
 Fans of the Sound of Music may recognize the statues where the children frolick and the arbor they come out of.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgMirabelliFountain.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgMirabelliFountain.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -66,7 +66,7 @@ Fans of the Sound of Music may recognize the statues where the children frolick 
 Up Linzergasse, another good shopping street, you'll find the baroque St. Sebastian church. On one side is the picturesque cemetery. Mozart's family is buried here.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgStSebastianHallway.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgStSebastianHallway.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -74,7 +74,7 @@ Up Linzergasse, another good shopping street, you'll find the baroque St. Sebast
 I'm a sucker for cast-iron signs, and there are lots of them along Getreidegasse, mostly concentrated between one end at the St. Blasius church and Mozart Geburtshaus. McDonald's is here in glorious cast-iron, and so is the Nordsee restaurant, whose coming caused even more uproar than McDonald's.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgSignsVertical.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgSignsVertical.jpg" />
   <figcaption>Getreidegasse</figcaption>
 </figure>
 
@@ -83,7 +83,7 @@ I'm a sucker for cast-iron signs, and there are lots of them along Getreidegasse
 The Festung Hohensalzburg dominates over the town. As you can imagine, it also offers the best vantage point for seeing the city from above. You can ride the funicular up, then enjoy a leisurely stroll down. At many points along the path, a nice vista of the city below will open up before you..
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgCityPanorama.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgCityPanorama.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -91,7 +91,7 @@ The Festung Hohensalzburg dominates over the town. As you can imagine, it also o
 Each morning I wake up to this view. Unfortunately it's in Maria Alm, in the Alpine wonderland about 80km south of Salzburg. The commute to and from Salzburg is extremely picturesque, though I wish we could have an extra 3 hours in Salzburg each day.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgAlps.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgAlps.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -100,29 +100,29 @@ Each morning I wake up to this view. Unfortunately it's in Maria Alm, in the Alp
 Remember the arbor from the Sound of Music?
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgMirabelliSideGarden.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgMirabelliSideGarden.jpg" />
   <figcaption></figcaption>
 </figure>
 
 It may appear that I'm a fan of the musical, but I categorically deny all such allegation. I only saw the movie six or seven times. Wait, I said too much.
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgMirabelliPurpleBushes.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgMirabelliPurpleBushes.jpg" />
   <figcaption></figcaption>
 </figure>
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgMirabelliGate.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgMirabelliGate.jpg" />
   <figcaption></figcaption>
 </figure>
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgMirabelliFence.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgMirabelliFence.jpg" />
   <figcaption></figcaption>
 </figure>
 
 <figure>
-  <img src="https://dl.dropboxusercontent.com/u/52804626/salzburg/SalzburgMirabelliFence2.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/salzburg/SalzburgMirabelliFence2.jpg" />
   <figcaption></figcaption>
 </figure>
 

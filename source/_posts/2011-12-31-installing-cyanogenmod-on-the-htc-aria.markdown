@@ -39,7 +39,7 @@ To install the mod, again in recovery mode:
 
 You should see the CyanogenMod skateboarding Android logo while the phone reboots. Once your phone comes up, it will be sporting the sleek interface of Android Gingerbread! Here's a screenshot as proof:
 
-<img title="htc-aria-after" src="https://dl.dropboxusercontent.com/u/52804626/images/htc-aria-after.png" width="320" height="480" />
+<img title="htc-aria-after" src="http://yentran.isamonkey.org/gallery/images/htc-aria-after.png" width="320" height="480" />
 
 ### Install the Google Apps package
 It's highly recommended that you also install the [Google Apps package](http://goo-inside.me/gapps) . This package contains useful apps which for certain reasons the CyanogenMod team is not able to bundle with the mod. These include the Android Market, Gmail, Facebook, Google Maps, YouTube, etc.
