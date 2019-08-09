@@ -14,21 +14,21 @@ Vienna is very popular with tourists. In Heldenplatz, there are literally hundre
 The tour of the Imperial apartments in Hofburg Palace is disappointingly short, unless you're really curious about the personal lives of Kaiser Franz Jozef and Kaiserin Sissi. Furthermore you cannot take any photos! The Imperial Museum in Innsbruck is much more satisfying, and you can take all the photos that you want.
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/vienna/ViennaRathausFacadeWhole2.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/viennarathausfacadewhole2.jpg" />
   <figcaption>Rathaus, about 8h</figcaption>
 </figure>
 
 Schoenbrunn is perhaps the only other European palace that can claim (almost) equal footing with Versailles. I prefer the vast tracts of luxuriant green space surrounding this palace to Versailles'.
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/vienna/ViennaSchoenbrunnFountain.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/viennaschoenbrunnfountain.jpg" />
   <figcaption>Schoenbrunn</figcaption>
 </figure>
 
 Example of heroic architecture found in the government district of Vienna.  The fountain in front of the Parliament depicts Pallas-Athena.
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/vienna/ViennaParliamentFountain.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/viennaparliamentfountain.jpg" />
   <figcaption>Parliament</figcaption>
 </figure>
 
@@ -44,7 +44,7 @@ Tree-shaded walkways crisscross Schoenbrunn's garden and statues are partially h
 </figure>
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/vienna/ViennaSchoenbrunnGarden.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/viennaschoenbrunngarden.jpg" />
   <figcaption>Schoenbrunn garden</figcaption>
 </figure>
 
@@ -60,7 +60,7 @@ The graceful spires of the Votive Church make it my favorite church in Vienna. I
 Like most structures, the Votive Church is at its most ethereal when limned by the early morning light.
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/vienna/ViennaVovivkircheMorning.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/viennavovivkirchemorning.jpg" />
   <figcaption>Votiv church</figcaption>
 </figure>
 
@@ -110,7 +110,7 @@ For a closer look at the amazing tiled roof of Stephansdom, visitors can ride an
 The original tile roof of Stephansdom was burned down towards the end of WWII during fighting between Nazi and Soviet troops. It was rebuilt in the 1950s.
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/vienna/ViennaStephansdomRoof.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/viennastephansdomroof.jpg" />
   <figcaption>Stephansdom</figcaption>
 </figure>
 
@@ -142,7 +142,7 @@ The flower-bedecked window sills are an especially nice touch.
 Between the Museum of Natural History and the Museum of Art History is a manicured plaza dominated by a regal statue of a youthful-looking Empress Maria Theresa (ruled 1740-1780), perhaps the most influential of the Habsburg monarchs.
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/vienna/ViennaMariaTheresaStatue.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/vienna/viennamariatheresastatue.jpg" />
   <figcaption>Maria Theresa statue</figcaption>
 </figure>
 

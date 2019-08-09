@@ -10,21 +10,21 @@ footer: true
 I put Melk on my itinerary after seeing a photo of this spiral staircase. The abbey dwarfed my highest expectations. As you can imagine, this splendiferous Baroque gem left an unforgettable impression.
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/melk/MelkNautilusStairCases.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/melk/melknautilusstaircases.jpg" />
   <figcaption>The famed "nautilus" staircase</figcaption>
 </figure>
 
 The ceiling in the chapel. Words fail me so I'll let the picture do the talking :)
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/melk/MelkCeiling.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/melk/melkceiling.jpg" />
   <figcaption>The chapel ceiling</figcaption>
 </figure>
   
 Awed would be an understatement.
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/melk/MelkAltarVerticalCropped.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/melk/melkaltarverticalcropped.jpg" />
   <figcaption>Looking toward the altar</figcaption>
 </figure>
 
@@ -40,14 +40,14 @@ The abbey stands on the site of a castle, which was given to Benedictine monks o
 </figure>
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/melk/MelkCourtyard.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/melk/melkcourtyard.jpg" />
   <figcaption>Courtyard of Melk Abbey</figcaption>
 </figure>
 
 I didn't plan it, but a priest just happened to be passing through the doorway.
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/melk/MelkDoorway.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/melk/melkdoorway.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -63,7 +63,7 @@ Stormy weather chased us from Salzburg. But beginning in Vienna, it looked great
 While the rest of the abbey is magnificent, the painted "Nautilus" staircases steal the show. I could see two, on both sides of the chapel, but there may be more. Unfortunately one cannot climb them. A mirror below the staircase highlights its striking painted underside. Photos of the staircases are my favorites from this trip :)
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/melk/MelkNautilusStaircaseVert2.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/melk/melknautilusstaircasevert2.jpg" />
   <figcaption></figcaption>
 </figure>
 
@@ -72,14 +72,14 @@ While the rest of the abbey is magnificent, the painted "Nautilus" staircases st
 The interior is the most lavish I have ever seen. Of note are the amazing altar, the fantastic dome, and the glorious ceiling murals.
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/melk/MelkAltarTallCropped.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/melk/melkaltartallcropped.jpg" />
   <figcaption>The altar</figcaption>
 </figure>
 
 Unfortunately my wide-angle lens is a little on the narrow side so I couldn't capture more of this spectacular dome and arched ceiling.
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/melk/MelkDome.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/melk/melkdome.jpg" />
   <figcaption>The chapel dome</figcaption>
 </figure>
 
@@ -120,7 +120,7 @@ This is what a Medieval strongbox looks like.  Just one key opens the lock.  And
 The outdoor balcony on the second floor offers an excellent view of the picturesque town below, nestled along a gentle curve of the Danube.
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/melk/MelkTownView.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/melk/melktownview.jpg" />
   <figcaption>View of the town</figcaption>
 </figure>
 
@@ -129,19 +129,19 @@ The outdoor balcony on the second floor offers an excellent view of the pictures
 Admission to the garden is included with the admission to the abbey, or you can purchase admission to the garden alone. This is a quiet park with many tree-shaded lanes and benches, but otherwise it's unremarkable. Oddly, in front of the pavilion there are a few steel-and-iron modern arts sculptures which are completely out of character with the rest of the abbey.
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/melk/MelkGardenFountain.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/melk/melkgardenfountain.jpg" />
   <figcaption>The garden pavilion</figcaption>
 </figure>
 
 Many benches adorn this secluded, forest-like garden.
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/melk/MelkGardenBench.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/melk/melkgardenbench.jpg" />
   <figcaption></figcaption>
 </figure>
 
 <figure>
-  <img src="http://yentran.isamonkey.org/gallery/melk/MelkGardenMossBark.jpg" />
+  <img src="http://yentran.isamonkey.org/gallery/melk/melkgardenmossbark.jpg" />
   <figcaption></figcaption>
 </figure>
 

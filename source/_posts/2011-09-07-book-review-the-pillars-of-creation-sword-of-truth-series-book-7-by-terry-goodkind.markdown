@@ -10,7 +10,7 @@ tags:
 - Pillars of Creation
 - Terry Goodkind
 ---
-<img class="pull-left" title="The_Pillars_of_Creation" src="http://yentran.isamonkey.org/gallery/images/The_Pillars_of_Creation-197x300.jpg" width="197" height="300" />Pillars of Creation follows the adventures of a young woman, Jennsen, illegitimate daughter of Darken Rahl, as she travels the world in search of escape and vengeance. She is aided by a spy of the Imperial Order who may be more than he appears to be. At the same time, Jennsen's unique ability may mean the end of all life, if she and Richard don't discover the truth in time.
+<img class="pull-left" title="thepillarsofcreation" src="http://yentran.isamonkey.org/gallery/images/thepillarsofcreation-197x300.jpg" width="197" height="300" />Pillars of Creation follows the adventures of a young woman, Jennsen, illegitimate daughter of Darken Rahl, as she travels the world in search of escape and vengeance. She is aided by a spy of the Imperial Order who may be more than he appears to be. At the same time, Jennsen's unique ability may mean the end of all life, if she and Richard don't discover the truth in time.
 
 Many reviewers have lamented the departure from the main plot line. True enough, the storyline here has little to do with the last installment, with the Midlands war and Richard's liberation of Altur'Rang. However, there are enough materials to advance some aspects of the story, notably the whereabouts of Nathan and the Imperial Order's attack on Aydindril. We also learn a great deal about the hitherto mostly unknown land of D'Hara and its people under the rule of the new Lord Rahl. This installment expands the Sword of Truth universe while introducing a character who may prove to be essential later in the series.
 

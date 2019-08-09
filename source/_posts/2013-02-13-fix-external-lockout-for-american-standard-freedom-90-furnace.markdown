@@ -17,21 +17,21 @@ Some online forums (google "external lockout") implicated the flame sensor. Appa
 
 The burner unit is in an enclosed box at the top of the cabinet. There's a round viewport on the front bezel where you can observe the burners in action (provided they are running).
 
-<img src="http://yentran.isamonkey.org/gallery/furnace-repair/DSC_5005.jpg" alt="DSC_5005" width="334" height="500" />
+<img src="http://yentran.isamonkey.org/gallery/furnace-repair/dsc_5005.jpg" alt="DSC_5005" width="334" height="500" />
 
 Remove the front door with an 8mm wrench. It hinges at the top and can be tricky to remove.
 
-<img src="http://yentran.isamonkey.org/gallery/furnace-repair/DSC_4999.jpg" alt="DSC_4999" width="500" height="500" />
+<img src="http://yentran.isamonkey.org/gallery/furnace-repair/dsc_4999.jpg" alt="DSC_4999" width="500" height="500" />
 
-<img src="http://yentran.isamonkey.org/gallery/furnace-repair/DSC_4996.jpg" alt="DSC_4996" width="334" height="500" />
+<img src="http://yentran.isamonkey.org/gallery/furnace-repair/dsc_4996.jpg" alt="DSC_4996" width="334" height="500" />
 
 Locate the flame sensor.
 
-<img src="http://yentran.isamonkey.org/gallery/furnace-repair/DSC_4995.jpg" alt="DSC_4995" width="500" height="334" />
+<img src="http://yentran.isamonkey.org/gallery/furnace-repair/dsc_4995.jpg" alt="DSC_4995" width="500" height="334" />
 
 Remove it with a socket screwdriver.
 
-<img src="http://yentran.isamonkey.org/gallery/furnace-repair/DSC_4993.jpg" alt="DSC_4993" width="500" height="334" />
+<img src="http://yentran.isamonkey.org/gallery/furnace-repair/dsc_4993.jpg" alt="DSC_4993" width="500" height="334" />
 
 Thoroughly clean the sensor's rod and contact with sandpaper. I'd use 150-grit as well as a finer sandpaper.
 

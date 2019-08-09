@@ -15,13 +15,13 @@ The Habitat is a quiet enclave, nestled between suburban streets, houses and eve
 
 I'll have more to write about the Audubon sanctuaries in the future.
 
-<img src="http://yentran.isamonkey.org/gallery/audubon-habitat/DSC_0506.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/audubon-habitat/dsc_0506.jpg" />
 <figcaption>Birch stand</figcaption>
 
-<img src="http://yentran.isamonkey.org/gallery/audubon-habitat/DSC_0451.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/audubon-habitat/dsc_0451.jpg" />
 <figcaption>This hawk was perched in the garden, unperturbed while a couple of purple finches screeched at it</figcaption>
 
-<img src="http://yentran.isamonkey.org/gallery/audubon-habitat/DSC_0485.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/audubon-habitat/dsc_0485.jpg" />
 <figcaption>A blue heron hunting in the Turtle Pond</figcaption>
 <!-- Darkbox -->
 <div class="darkbox">

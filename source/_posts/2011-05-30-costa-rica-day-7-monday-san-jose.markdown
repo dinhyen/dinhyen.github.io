@@ -9,7 +9,7 @@ tags:
 ---
 The flight was to be at 13:00 so we planned on departing no later than 10:30.  That left us about 1h after breakfast to explore downtown San Jose.  We were 4 blocks away from the Jade Museum, which owns the largest collection of Pre-Columbian jade artifacts anywhere. Unfortunately a museum was out of the question given the time constraint.
 
-<img src="http://yentran.isamonkey.org/gallery/costa-rica-7/DSC_0935.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/costa-rica-7/dsc_0935.jpg" />
 <figcaption>Parque Morazán</figcaption>
 
 There are quite a few pleasant green spaces which serve to provide respite in the brick and concrete jungle.  Our first stops were parks.  Parque Morazán features a rotunda which serves as a bandstand and the unofficial symbol of San Jose. Parque España is particularly nice, with tall shade trees and statuaries. One is of Juan Vásquez de Coronado, remembered as the colonizer of Costa Rica.

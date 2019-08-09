@@ -11,13 +11,13 @@ La Falaise d'Aval.
 
 <img src="http://yentran.isamonkey.org/gallery/etretat/img_8812.jpg" />
 
-<img src="http://yentran.isamonkey.org/gallery/etretat/EtretatRock1.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/etretat/etretatrock1.jpg" />
 
 La Falaise d'Amont.
 
 <img src="http://yentran.isamonkey.org/gallery/etretat/img_8816.jpg" />
 
-<img src="http://yentran.isamonkey.org/gallery/etretat/EtretatCliffEast.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/etretat/etretatcliffeast.jpg" />
 
 Last visit: June 2004
 Pros: Nice walk

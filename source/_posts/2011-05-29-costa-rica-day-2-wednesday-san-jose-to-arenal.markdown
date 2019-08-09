@@ -20,24 +20,24 @@ We managed to get some local currency from the ATM.  Strangely, it also dispens
 
 Having eaten our fill of oatmeal at Denny's, we couldn't wait to get out of town.  Next stop was Volcán Poás, one in a chain of volcanoes running along the country's mountainous spine.  The road was in decent condition, but winding.  Of course, we found ourselves stuck behind a big truck but were unable to pass because we couldn't see past the next bend in the road. Once we entered the national park, the road suddenly became very smooth.  They should put up a sign, "Your entrance fee at work".   The restrooms were nice, but this was the norm practically everywhere we went in Costa Rica.
 
-<img src="http://yentran.isamonkey.org/gallery/costa-rica-2/DSC_0087.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/costa-rica-2/dsc_0087.jpg" />
 <figcaption>Poor man&#39;s umbrellas, Volcán Poás National Park</figcaption>
 
 We had expected more strenuous hiking, but the way to the volcano was a gently sloped paved path lined with plants bearing gigantic leaves, appropriated nicknamed "Poor man's umbrellas".  The volcano itself is basically a big, smoking crater.  It was strange seeing something resembling the lunar surface amid a lush tropical landscape.  Having seen Mauna Kea, Haleakala, Mount Rainier, Mount St. Helens, Lassen Peak and Crater Lake, I wasn't overwhelmed, but it was nice nonetheless.
 
-<img src="http://yentran.isamonkey.org/gallery/costa-rica-2/DSC_0116.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/costa-rica-2/dsc_0116.jpg" />
 <figcaption>Lake Botos</figcaption>
 
 On the way down, we took a steep but well-maintained trail to another crater lake, one that is more peaceful and not quite so steamy.  The trail was alive with the sounds of birds. In fact, according to the guidebook, it is teeming with no fewer than 26 species of hummingbirds.  Unfortunately from our vantage point, we saw only the few birds that made it down to about 5-10 feel above ground, including some that actually hopped along on the ground.
 
 We were duly famished after the long hike. My last experience told me that the best place to sample some regional cuisine was the "soda", which is something of a small eatery.  It's the Costa Rican version of a fast-food place, although there are bona fide fast-food joints (ahem, Denny's) in big towns and even a local flavor of KFC, Pollo Rey, whose mascot is a dead ringer for Foghorn Leghorn.  We got some delicious home-cooked food, drinks, and coffee for around $16.  Meanwhile, it started raining like a moonsoon and didn't let up for about 45 minutes.  This, I assure you, was typical.
 
-<img src="http://yentran.isamonkey.org/gallery/costa-rica-2/DSC_0234.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/costa-rica-2/dsc_0234.jpg" />
 <figcaption>Toucan, La Paz Waterfalls Garden (north of Vara Blanca)</figcaption>
 
 Next destination was down the a cratered, half-paved road.  Believe me, any paving was better than no paving at all.  La Paz Waterfalls Garden seemed like a tourist trap, and the entrance price was steep at $35/person.  We pulled the trigger and was not disappointed.  You could spend hours in there (or, I should say, I could).  No need to climb trees to see birds, they were all there in a gigantic enclosure.  We started off with a regal-looking hawk, a menacing caracara and a turkey-like bird.  Then I wandered into the toucan cage.  I spent so much time in there even the toucans got annoyed and started making strafing runs at my head.  Other stars included butterflies, monkeys, a pair of sloths, ocelots and a couple of jaguars.  Then I caught glimpse of flittering, iridescent shapes.  Hummingbirds!  Who knew that after slogging through a 2-mile hike to see exactly 1 hummingbird, there they were, dozens of them, buzzing around the red feeders. Unfortunately, it was too dark to get good photos of them in the air.
 
-<img src="http://yentran.isamonkey.org/gallery/costa-rica-2/DSC_0385.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/costa-rica-2/dsc_0385.jpg" />
 <figcaption>Cascada Templo, La Paz Waterfalls Garden</figcaption>
 
 The biggest attractions were still to come.  Not one, not two, but three majestic waterfalls occur in quick succession.  The trail takes you close to the front of, and behind, the waterfalls.

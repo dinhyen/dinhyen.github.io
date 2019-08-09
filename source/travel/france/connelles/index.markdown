@@ -16,6 +16,6 @@ Our neighbors were mainly English vacationers, who made the short hop across the
 
 The C&ocirc;te des Deux Amants owes its name, as expected, to a lovelorn young couple. I don't remember the exact details, but I am sure your vivid imagination can fill them in :)
 
-<img src="http://yentran.isamonkey.org/gallery/connelles/ConnellesLesCotesdesAmantsRiver.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/connelles/connelleslescotesdesamantsriver.jpg" />
 
 Last visit: June 2004
