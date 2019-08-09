@@ -9,10 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="I&rsquo;m using a WordPress theme that loads jQuery and other JavaScripts in the header.php script: 1
-2
-3
-&lt;script type=&quot;text/javascript&quot &hellip;">
+  <meta name="description" content="In my Visual Studio project, I want to run an external executable, SQLMetal, in a build event.  The only problem is that the location of the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +80,69 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/03/locating-program-files-folder-in-visual-studio/">Locating Program Files Folder in Visual Studio on 32-bit and X64 Environments</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-03T00:00:00-04:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In my Visual Studio project, I want to run an external executable, SQLMetal, in a build event.  The only problem is that the location of the executable depends on whether the machine runs x64 or 32-bit Windows.  It is found in the <code>Program Files (x86)</code> folder on x64 Windows and <code>Program Files</code> on 32-bit Windows. I want to be able to build the project without modification in either environment.</p>
+
+<p>The solution is to specify the location of the Program Files dynamically by inserting the following lines in the .csproj file.  You can either open the .csproj file directly in a text editor or, in Visual Studio, unload the project then right-click and select Edit.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;PropertyGroup&gt;</span>
+</span><span class='line'>   <span class="nt">&lt;MyProgramFiles&gt;</span>c:\program files<span class="nt">&lt;/MyProgramFiles&gt;</span>
+</span><span class='line'><span class="nt">&lt;/PropertyGroup&gt;</span>
+</span><span class='line'><span class="nt">&lt;PropertyGroup</span> <span class="na">Condition=</span><span class="s">&quot;Exists(&#39;c:\program files (x86)&#39;)&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>   <span class="nt">&lt;MyProgramFiles&gt;</span>c:\program files (x86)<span class="nt">&lt;/MyProgramFiles&gt;</span>
+</span><span class='line'><span class="nt">&lt;/PropertyGroup&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The above lines ensure that the <code>$(MyProgramFiles)</code> property is set to <code>c:\program files (x86)</code>
+only if it exists on an x64 machine. Otherwise it uses the initial value of <code>c:\program files</code>.</p>
+
+<p>To use the property in a build event:</p>
+
+<pre>
+"$(MyProgramFiles)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools"\sqlmetal.exe ...
+</pre>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -823,126 +883,6 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/12/08/autumn-2009/">Autumn 2009</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-08T00:00:00-05:00" pubdate data-updated="true">Dec 8<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://maps.google.com/maps?q=42.371988364694396,-71.14621639251709">View location in Google Maps</a></p>
-
-<p>Few places in Boston are as beautiful as <a href="http://en.wikipedia.org/wiki/Mount_Auburn_Cemetery">Mount Auburn Cemetery</a>. While it is famous as the final resting place of many luminaries with connection to New England, its more enduring legacy is as a green urban jewel.  It would not be a stretch to invite comparison to Central Park.  While not as popular, Mount Auburn is certainly more than an equal in aesthetic appeal.</p>
-
-<p>With its winding trails, rolling hills, hidden glades, spectacular overlooks, stunning sculptures, and brilliantly designed landscape, Mount Auburn is a worthwhile destination at any time of year.  It is most attractive in the autumn, during which it is my favorite destination to view the foliage in Boston.  I usually  make several pilgrimages here every year from around mid-October to early November. These are some photos taken in 2009 at Mount Auburn and nearby Arlington.</p>
-
-<!-- Darkbox -->
-
-
-<div class="darkbox">
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0061.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0061.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0067.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0067.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0074.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0074.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0095.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0095.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0126.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0126.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0210.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0210.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0218.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0218.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0261.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0261.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0348.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0348.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0365.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0365.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0407.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0407.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0436.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0436.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0448.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0448.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0455.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0455.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0461.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0461.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0515.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0515.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0594.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0594.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0646.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0646.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0661.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0661.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0677.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0677.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0689.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0689.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0723.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0723.jpg" />
-</a>
-<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0726.jpg" data-darkbox="autumn-2009">
-  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0726.jpg" />
-</a>
-
-</div>
-
-
-<!-- End darkbox -->
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -996,7 +936,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>47</em>
+        <a href="/blog/categories/technology">technology</a> <em>48</em>
       </li>
     
      
@@ -1034,6 +974,10 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2017/08/09/deploying-site-after-cloning-octopress-repo/">Deploying Site After Cloning Octopress Repo</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/04/08/installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/">Installing the Curt 11064 Trailer Hitch on a 2009 Honda Fit Sport</a>
       </li>
     
@@ -1047,10 +991,6 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     
       <li class="post">
         <a href="/blog/2014/04/24/validating-required-form-fields-with-angular/">Validating Required Form Fields With Angular</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/18/angular-in-jekyll-or-octopress/">Angular in Jekyll/Octopress</a>
       </li>
     
   </ul>

@@ -9,7 +9,7 @@
   <meta name="author" content="Yen Tran">
 
   
-  <meta name="description" content="I&rsquo;ve been trying to get a Wix installer to work. This particular scenario is pretty simple. I want to configure the database via a custom &hellip;">
+  <meta name="description" content="View in Plunkr I have a page with tabular data which I want to be able to sort without having to go back to the server. Also a nice-to-have would be &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,178 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/09/28/simple-table-sorting-with-angular/">Simple Table Sorting With Angular</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-28T00:00:00-04:00" pubdate data-updated="true">Sep 28<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://plnkr.co/edit/rynrXkzGcSHeWZrSXENl">View in Plunkr</a></p>
+
+<p>I have a page with tabular data which I want to be able to sort without having to go back to the server. Also a nice-to-have would be the ability to filter the displayed items. Since I&rsquo;m trying to learn Angular, this seems like an excellent opportunity to try it out.</p>
+
+<p>In the controller, the variable items holds the data to be sorted/filtered, while filteredItems is initialized to an empty array. I also specify the initial sort field and direction.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">tableSortCtl</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$filter</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">$scope</span><span class="p">.</span><span class="nx">items</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">parseJSON</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#json&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">());</span>
+</span><span class='line'>  <span class="nx">$scope</span><span class="p">.</span><span class="nx">filteredItems</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>  <span class="nx">$scope</span><span class="p">.</span><span class="nx">sortField</span> <span class="o">=</span> <span class="s2">&quot;firstName&quot;</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">$scope</span><span class="p">.</span><span class="nx">descending</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The data are inserted as a JSON string into the page inside a <code>script</code> tag.  I could have made a separate request to retrieve the data.  But since the data are already available and used elsewhere on the page, I decided to save the extra request.  The JSON string is parsed into an array of objects with the help of jQuery.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;script </span><span class="na">id=</span><span class="s">&quot;json&quot;</span> <span class="na">type=</span><span class="s">&quot;application/json&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="p">[</span> <span class="p">{</span> <span class="s2">&quot;id&quot;</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;firstName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;lastName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Krige&quot;</span><span class="p">,</span> <span class="s2">&quot;birthdate&quot;</span> <span class="o">:</span> <span class="s2">&quot;1954-06-28&quot;</span><span class="p">,</span> <span class="s2">&quot;address&quot;</span> <span class="o">:</span> <span class="s2">&quot;123 Main Street&quot;</span><span class="p">,</span> <span class="s2">&quot;phone&quot;</span> <span class="o">:</span> <span class="s2">&quot;111-222-3333&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="s2">&quot;id&quot;</span> <span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;firstName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;lastName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Probert&quot;</span><span class="p">,</span> <span class="s2">&quot;birthdate&quot;</span> <span class="o">:</span> <span class="s2">&quot;1965-06-05&quot;</span><span class="p">,</span> <span class="s2">&quot;address&quot;</span> <span class="o">:</span> <span class="s2">&quot;23 Elm Street&quot;</span><span class="p">,</span> <span class="s2">&quot;phone&quot;</span> <span class="o">:</span> <span class="s2">&quot;359-324-1494&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="s2">&quot;id&quot;</span> <span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;firstName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="s2">&quot;lastName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Darwin&quot;</span><span class="p">,</span> <span class="s2">&quot;birthdate&quot;</span> <span class="o">:</span> <span class="s2">&quot;1809-02-12&quot;</span><span class="p">,</span> <span class="s2">&quot;address&quot;</span> <span class="o">:</span> <span class="s2">&quot;65 Finch Alley&quot;</span><span class="p">,</span> <span class="s2">&quot;phone&quot;</span> <span class="o">:</span> <span class="s2">&quot;782-624-6038&quot;</span> <span class="p">}</span> <span class="p">]</span>
+</span><span class='line'><span class="nt">&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s an excerpt of the markup:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'> <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">&quot;table table-striped&quot;</span> <span class="na">id=</span><span class="s">&quot;tag-list&quot;</span> <span class="na">ng-show=</span><span class="s">&quot;items.length &gt; 0&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;thead&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;tr&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">&quot;firstName&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;a</span> <span class="na">ng-click=</span><span class="s">&quot;sort(&#39;firstName&#39;)&quot;</span><span class="nt">&gt;</span>First name <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-sort&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/th&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/tr&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/thead&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;tbody&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;tr</span> <span class="na">ng-repeat=</span><span class="s">&quot;item in filteredItems | orderBy:sortField:descending&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;td&gt;</span><span class="nt">&lt;/td&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/tr&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/tbody&gt;</span>
+</span><span class='line'><span class="nt">&lt;/table&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The ng-repeat directive specifies that a new table row should be created for each item. With the parameterized orderBy filter, sorting is accomplished simply by assigning a value to the sort field and toggling the sort direction flag.  This is impressively straight-forward and elegant. The rest of the function is DOM-manipulation to display the proper sort arrow.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$scope</span><span class="p">.</span><span class="nx">sort</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">newSortField</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">sortField</span> <span class="o">==</span> <span class="nx">newSortField</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">$scope</span><span class="p">.</span><span class="nx">descending</span> <span class="o">=</span> <span class="o">!</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">descending</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">$scope</span><span class="p">.</span><span class="nx">sortField</span> <span class="o">=</span> <span class="nx">newSortField</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;th i&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">().</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;icon-sort&#39;</span><span class="p">);</span>  <span class="c1">// reset sort icon for columns with existing icons</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">descending</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">newSortField</span> <span class="o">+</span> <span class="s1">&#39; i&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">().</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;icon-caret-down&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">newSortField</span> <span class="o">+</span> <span class="s1">&#39; i&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">().</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;icon-caret-up&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s the markup for the text filter.  A change to the value of the textbox triggers the search.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;query&quot;</span> <span class="na">ng-change=</span><span class="s">&quot;search()&quot;</span> <span class="na">class=</span><span class="s">&quot;input-large&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Filter&quot;</span> <span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The search function simply iterates through all the fields of each item and attempts to find a simple (case-insensitive) match.  This works for numbers and strings but unfortunately not, for example, on the month name for a date field, for which we&rsquo;d have to do some additional processing.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$scope</span><span class="p">.</span><span class="nx">search</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">$scope</span><span class="p">.</span><span class="nx">filteredItems</span> <span class="o">=</span> <span class="nx">$filter</span><span class="p">(</span><span class="s1">&#39;filter&#39;</span><span class="p">)(</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">items</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">field</span> <span class="k">in</span> <span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">item</span><span class="p">[</span><span class="nx">field</span><span class="p">],</span> <span class="nx">$scope</span><span class="p">.</span><span class="nx">query</span><span class="p">))</span>
+</span><span class='line'>        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="nx">$scope</span><span class="p">.</span><span class="nx">match</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">fieldValue</span><span class="p">,</span> <span class="nx">searchTerm</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">fieldValue</span><span class="p">)</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">searchTerm</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">fieldValue</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">searchTerm</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">())</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1188,88 +1360,6 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/01/mini-project-adding-a-second-hard-drive-to-the-mac-mini/">Mini Project: Adding a Second Hard Drive to the Mac Mini</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-01T00:00:00-05:00" pubdate data-updated="true">Feb 1<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I want to replace the DVR that I get from Verizon Fios. Besides the monthly cost, it&rsquo;s an older unit that&rsquo;s slow and has the capacity for no more than a handful 3-hour hockey games recorded in HD. That is plainly unacceptable, especially during the Stanley Cup Playoffs. For the HD tuner, I decided to go with the SiliconDust HD Homerun Prime. For the DVR, I&rsquo;m going with a Mac Mini. I&rsquo;m a recent Mac convert, having used exclusively PCs until now. Even though I enjoy assembling PCs, I&rsquo;m at a point where I&rsquo;d like stuff to just work. Even more so, I&rsquo;m more and more a fan of the elegance and simplicity of OS X.</p>
-
-<p>The Mac Mini is like a work of art.  The model I have, however, has a drawback. While it is a level above the base model and comes with an Intel Core i7 processor, it has a rather sluggish 5400rpm hard drive. Since I plan on using it to watch live TV and record shows, I need more performance.</p>
-
-<p>The server edition of the Mac Mini comes in the same case, but has 2 internal hard drives. It turns out that all Mac Minis (2012) have 2 hard drive slots.  For my Mac Mini, the second slot sits empty.  I want to add a Solid State Drive (SSD). The SSD will host OS X and the applications, while the other hard drive will host media. Getting to it in the cramped, tightly packed innards of the Mini seems like a daunting task.  Fortunately <a href="http://www.macsales.com">OWC</a> comes to the rescue by providing a prepackaged solution.</p>
-
-<p>The <a href="http://eshop.macsales.com/item/OWC/DIYIMM11D2">OWC hard drive upgrade kit</a> for the Mini (2011-2012) comes with a flex cable to connect the hard drive, screws and tools. The cost for the kit is only a few dollars more than what you&rsquo;d have to spend to buy the flex cable separately.</p>
-
-<p>I also got an SSD from OWC. OWC&rsquo;s in-house brand, Mercury Electra, is highly rated and assembled in the USA. I always look for something that&rsquo;s at least partially made in the USA whenever that&rsquo;s an option, even if it costs more.</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/mac-mini-ssd/dsc_4942.jpg" alt="DSC_4942" width="500" height="500" />
-<img src="http://yentran.isamonkey.org/gallery/mac-mini-ssd/dsc_4948.jpg" alt="DSC_4948" width="500" height="500" />
-<img src="http://yentran.isamonkey.org/gallery/mac-mini-ssd/dsc_4951.jpg" alt="DSC_4951" width="500" height="500" /></p>
-
-<p>The online video instructions are quite excellent.  Even though the installation is rated as highly difficult, it&rsquo;s actually quite straight-forward if you&rsquo;ve ever assembled computers before.  All that&rsquo;s required are some nimble fingers to navigate the Mini&rsquo;s delicate insides.  Here&rsquo;s the Mini without its parts. It seems to have been carved out of a solid block of aluminum!</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/mac-mini-ssd/dsc_4945.jpg" alt="DSC_4945" width="500" height="500" /></p>
-
-<p>The SSD fits snugly into a plastic cage. It would sit below the stock hard drive.</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/mac-mini-ssd/dsc_4954.jpg" alt="DSC_4954" width="500" height="448" /></p>
-
-<p>With the power supply bar slid into the right side of the case.</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/mac-mini-ssd/dsc_4955.jpg" alt="DSC_4955" width="500" height="394" /></p>
-
-<p>This is the logic board assembly.  Isn&rsquo;t it adorable?</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/mac-mini-ssd/dsc_4956.jpg" alt="DSC_4956" width="500" height="359" /></p>
-
-<p>The logic board slides into place through an opening in the back.</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/mac-mini-ssd/dsc_4960.jpg" alt="DSC_4960" width="500" height="423" /></p>
-
-<p>Now the old hard drive goes on top.  The two tabs to its lower left are the SATA connection tabs. The old hard drive has two small plugs that inserts into two slots on the front of the case (top of picture). The AirPort antenna grate in turn screws into the drive. You can&rsquo;t see the slots when inserting the drive back into the case. I didn&rsquo;t seat the drive properly in my first attempt and couldn&rsquo;t attach the antenna because the drive was misaligned.  Turns out the slots are slightly elevated.  I had to raise the hard drive slightly when inserting it.</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/mac-mini-ssd/dsc_4962.jpg" alt="DSC_4962" width="500" height="416" /></p>
-
-<p>The AirPort antenna grate goes over the top.  The instructions plead with you not to overtighten the screws.</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/mac-mini-ssd/dsc_4964.jpg" alt="DSC_4964" width="500" height="444" /></p>
-
-<p>Finally the fan and the DIMMs.</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/mac-mini-ssd/dsc_4965.jpg" alt="DSC_4965" width="500" height="437" /></p>
-
-<p>After connecting the Mini to an Ethernet switch and booting into Recovery mode (by holding down Command-R when booting), I selected Internet Recovery and let it install OS X Mountain Lion over the wire.  Minutes later, I was done.  Did I mention I love Macs?</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -1323,7 +1413,7 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
     
      
       <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>47</em>
+        <a href="/blog/categories/technology">technology</a> <em>48</em>
       </li>
     
      
@@ -1361,6 +1451,10 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2017/08/09/deploying-site-after-cloning-octopress-repo/">Deploying Site After Cloning Octopress Repo</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/04/08/installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/">Installing the Curt 11064 Trailer Hitch on a 2009 Honda Fit Sport</a>
       </li>
     
@@ -1374,10 +1468,6 @@ Dennis Seidenberg (44) &ndash; Dougie Hamilton (27)<br/>
     
       <li class="post">
         <a href="/blog/2014/04/24/validating-required-form-fields-with-angular/">Validating Required Form Fields With Angular</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/18/angular-in-jekyll-or-octopress/">Angular in Jekyll/Octopress</a>
       </li>
     
   </ul>

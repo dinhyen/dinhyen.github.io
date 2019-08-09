@@ -627,8 +627,14 @@
         <lastmod>2019-08-09T09:05:09-04:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://dinhyen.github.io/blog/2017/08/09/deploying-site-after-cloning-octopress-repo/
+        </loc>
+        <lastmod>2019-08-09T10:11:25-04:00</lastmod>
+    </url>
+    <url>
         <loc>http://dinhyen.github.io/</loc>
-        <lastmod>2019-08-09T09:05:09-04:00</lastmod>
+        <lastmod>2019-08-09T10:11:25-04:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/about/</loc>
@@ -636,7 +642,7 @@
     </url>
     <url>
         <loc>http://dinhyen.github.io/blog/archives/</loc>
-        <lastmod>2019-08-09T09:05:09-04:00</lastmod>
+        <lastmod>2019-08-09T10:11:25-04:00</lastmod>
     </url>
     <url>
         <loc>http://dinhyen.github.io/robots.txt</loc>

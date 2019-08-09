@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technology | Yen's Blog]]></title>
   <link href="http://dinhyen.github.io/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://dinhyen.github.io/"/>
-  <updated>2019-08-09T09:56:54-04:00</updated>
+  <updated>2019-08-09T10:11:39-04:00</updated>
   <id>http://dinhyen.github.io/</id>
   <author>
     <name><![CDATA[Yen Tran]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Deploying site after cloning Octopress repo]]></title>
+    <link href="http://dinhyen.github.io/blog/2017/08/09/deploying-site-after-cloning-octopress-repo/"/>
+    <updated>2017-08-09T00:00:00-04:00</updated>
+    <id>http://dinhyen.github.io/blog/2017/08/09/deploying-site-after-cloning-octopress-repo</id>
+    <content type="html"><![CDATA[<p>Octopress instructions are for setting up a new repo; i.e. by running <code>rake setup_github_pages</code>.  It doesn’t work if you’ve cloned an existing repo.</p>
+
+<p>You have to manually set up a git repository in the <code>_deploy</code> directory which should track the master branch of the repo on GitHub.</p>
+
+<p>```</p>
+
+<h1>create new deploy dir</h1>
+
+<p>rm -rf <em>deploy
+mkdir </em>deploy
+cd _deploy</p>
+
+<h1>initialize empty git repo</h1>
+
+<p>git init
+git remote add origin git@github.com:your_login/your_repo.github.io.git</p>
+
+<h1>make origin default remote</h1>
+
+<p>git config branch.master.remote origin</p>
+
+<h1>track the master branch</h1>
+
+<p>git checkout &mdash;track origin/master</p>
+
+<h1>pull contents</h1>
+
+<p>git pull</p>
+
+<h1>view logs (should show automatically generated commit messages &ldquo;Site updated at 2017-09-28 etc.&rdquo;)</h1>
+
+<p>git log</p>
+
+<h1>Generate content (into the public dir)</h1>
+
+<p>rake generate</p>
+
+<h1>Deploy generated content (copying from public dir into deploy dir then commit)</h1>
+
+<p>rake deploy
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Installing the Curt 11064 trailer hitch on a 2009 Honda Fit Sport]]></title>
@@ -245,15 +294,6 @@ And there you have it.</p>
 <p>```</p>
 
 <p>Here&rsquo;s the <a href="http://plnkr.co/edit/bB8mGsX6bHMZu4SvfCA2">plunk</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Angular in Jekyll/Octopress]]></title>
-    <link href="http://dinhyen.github.io/blog/2014/04/18/angular-in-jekyll-or-octopress/"/>
-    <updated>2014-04-18T00:00:00-04:00</updated>
-    <id>http://dinhyen.github.io/blog/2014/04/18/angular-in-jekyll-or-octopress</id>
-    <content type="html"><![CDATA[<p>Have a problem with Angular scope variable binding not working on a Jekyll or Octopress (which uses Jekyll) page?  It so happens that Jekyll&rsquo;s Liquid Template uses the same  syntax as Angular and would attempt to process the markup before Angular can get to it.  To get around the problem, you can surround Angular markup with <code>&#123;% raw %&#125;</code> and <code>&#123;% endraw %&#125;</code> tags.  Alternatively, you can also forgo from using this syntax altogether and use Angular&rsquo;s <code>ng-bind</code> directive to bind a variable to a DOM element.</p>
 ]]></content>
   </entry>
   
