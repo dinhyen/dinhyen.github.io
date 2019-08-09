@@ -124,7 +124,7 @@
 
 
 <p>Using Chrome&rsquo;s Developer console (i.e., hit F12) to view the Resources for the page, I could see that jQuery is being loaded.
-<img title="jquery-cdn-1" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-11.png" width="333" height="279" />
+<img title="jquery-cdn-1" src="http://yentran.isamonkey.org/gallery/images/jquery-cdn-11.png" width="333" height="279" />
 I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you">why</a>?). My initial attempt was to simply change  the jQuery reference to the CDN location (I also upgraded to version 1.7.1 while I was at it):</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -134,7 +134,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 
 <p>This worked, and Chrome&rsquo;s Developer console showed that jQuery was being loaded from the CDN. However, there was another problem. WordPress apparently also loads jQuery by default, so the page ended up with an extra copy.</p>
 
-<p><img title="jquery-cdn-2" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-21.png" width="400" height="415" /></p>
+<p><img title="jquery-cdn-2" src="http://yentran.isamonkey.org/gallery/images/jquery-cdn-21.png" width="400" height="415" /></p>
 
 <p>To remove the redundant copy, I removed the jQuery references from the header.php script, then added the following lines to the functions.php script in the theme folder which use WordPress&rsquo;s built-in function <strong>wp_enqueue_script</strong> to ensure that only one copy of jQuery is included.</p>
 
@@ -190,7 +190,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 
 <p>Finally, verifying with the Developer console shows that everything is loaded correctly.</p>
 
-<p><img title="jquery-cdn-3" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-31.png" width="399" height="414" /></p>
+<p><img title="jquery-cdn-3" src="http://yentran.isamonkey.org/gallery/images/jquery-cdn-31.png" width="399" height="414" /></p>
 </div>
   
   
@@ -231,7 +231,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 <p>To make sure that inline images are opened on the same page, I use the <a href="http://wordpress.org/extend/plugins/slimbox/">Slimbox plugin</a>.  This works well, except that now when gallery thumbnails are clicked, two full-sized versions are shown, one by NextGen&rsquo;s built-in effect and one by Slimbox.</p>
 
 <p>To solve this problem, I opened NextGen&rsquo;s options page and locate the Effects tab.  By default, the JavaScript Thumbnail effect is set to Shutter.  I changed it to None (or Lightbox) to ensure that only Slimbox handles the effect (Slimbox is a clone of Lightbox).  The only drawback of not using the Shutter effect is that you can&rsquo;t use Ajax pagination with the gallery if pagination is turned on (as of NextGen 1.9.3).
-<img title="nextgen-slimbox" src="https://dl.dropboxusercontent.com/u/52804626/images/nextgen-slimbox.png" width="800" height="578" /></p>
+<img title="nextgen-slimbox" src="http://yentran.isamonkey.org/gallery/images/nextgen-slimbox.png" width="800" height="578" /></p>
 </div>
   
   
@@ -275,21 +275,21 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 </ul>
 
 
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/install-start.png" alt="install-start" /></p>
+<p><img src="http://yentran.isamonkey.org/gallery/brother-printer/install-start.png" alt="install-start" /></p>
 
 <ul>
 <li>Once the software is installed either for another interface (Ethernet or USB), start the installer and select Wireless LAN Setup Wizard</li>
 </ul>
 
 
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-install.png" alt="wireless-install" /></p>
+<p><img src="http://yentran.isamonkey.org/gallery/brother-printer/wireless-install.png" alt="wireless-install" /></p>
 
 <ul>
 <li>On the Setting Up Wireless screen, I selected No to WPS/AOSS</li>
 </ul>
 
 
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-wps.png" alt="wireless-wps" /></p>
+<p><img src="http://yentran.isamonkey.org/gallery/brother-printer/wireless-wps.png" alt="wireless-wps" /></p>
 
 <ul>
 <li>On Importance Notice, check and select next, assuming you know your Wifi network&rsquo;s settings</li>
@@ -297,7 +297,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 </ul>
 
 
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-connect.png" alt="wireless-connect" /></p>
+<p><img src="http://yentran.isamonkey.org/gallery/brother-printer/wireless-connect.png" alt="wireless-connect" /></p>
 
 <ul>
 <li>Once you connect the USB cable, the installer attempts to connect to the printer</li>
@@ -305,21 +305,21 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 </ul>
 
 
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/usb-connected.png" alt="usb-connected" /></p>
+<p><img src="http://yentran.isamonkey.org/gallery/brother-printer/usb-connected.png" alt="usb-connected" /></p>
 
 <ul>
 <li>The installer then attempts to search for Wifi networks. If your network is discoverable, it should show up on the list. Otherwise, select Advanced to configure it manually. If you select an existing network, the installer automatically detects Authentication settings. In either case, you have to enter the network key or password. This is a fairly run-of-the-mill process for setting up Wifi.</li>
 </ul>
 
 
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-ssid.png" alt="wireless-ssid" /></p>
+<p><img src="http://yentran.isamonkey.org/gallery/brother-printer/wireless-ssid.png" alt="wireless-ssid" /></p>
 
 <ul>
 <li>Once you&rsquo;re done configuring Wifi, the installer sends the settings to the printer</li>
 </ul>
 
 
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-submit.png" alt="wireless-submit" /></p>
+<p><img src="http://yentran.isamonkey.org/gallery/brother-printer/wireless-submit.png" alt="wireless-submit" /></p>
 
 <ul>
 <li>Disconnect the USB cable</li>
@@ -335,21 +335,21 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 </ul>
 
 
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/control-printers-off.png" alt="control-printers-off" /></p>
+<p><img src="http://yentran.isamonkey.org/gallery/brother-printer/control-printers-off.png" alt="control-printers-off" /></p>
 
 <ul>
 <li>Double click on the printer icon to open the Printer Properties. Notice that the printer may be Offline.</li>
 </ul>
 
 
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-offline.png" alt="printer-offline" /></p>
+<p><img src="http://yentran.isamonkey.org/gallery/brother-printer/printer-offline.png" alt="printer-offline" /></p>
 
 <ul>
 <li>Double click on Customize your printer</li>
 </ul>
 
 
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-properties.png" alt="printer-properties" /></p>
+<p><img src="http://yentran.isamonkey.org/gallery/brother-printer/printer-properties.png" alt="printer-properties" /></p>
 
 <ul>
 <li>Click Change Properties and enter the administrator password if prompted</li>
@@ -357,14 +357,14 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 </ul>
 
 
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-ports.png" alt="printer-ports" /></p>
+<p><img src="http://yentran.isamonkey.org/gallery/brother-printer/printer-ports.png" alt="printer-ports" /></p>
 
 <ul>
 <li>Select Configure Port and Enter the desired static IP address</li>
 </ul>
 
 
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/port-setings.png" alt="port-setings" /></p>
+<p><img src="http://yentran.isamonkey.org/gallery/brother-printer/port-setings.png" alt="port-setings" /></p>
 
 <h3>Printer</h3>
 
@@ -382,62 +382,62 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 </ul>
 
 
-<p><img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-ready.png" alt="printer-ready" /></p>
+<p><img src="http://yentran.isamonkey.org/gallery/brother-printer/printer-ready.png" alt="printer-ready" /></p>
 
 <!-- Darkbox -->
 
 
 <div class="darkbox">
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/control-printers-off.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/control-printers-off.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/control-printers-off.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/control-printers-off.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/install-start.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/install-start.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/install-start.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/install-start.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/port-setings.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/port-setings.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/port-setings.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/port-setings.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-offline.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/printer-offline.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/printer-offline.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/printer-offline.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-ports.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/printer-ports.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/printer-ports.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/printer-ports.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-properties.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/printer-properties.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/printer-properties.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/printer-properties.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/printer-ready.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/printer-ready.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/printer-ready.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/printer-ready.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/usb-connected.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/usb-connected.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/usb-connected.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/usb-connected.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-connect.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-connect.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-connect.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-connect.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-disconnect.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-disconnect.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-disconnect.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-disconnect.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-finish.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-finish.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-finish.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-finish.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-install.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-install.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-install.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-install.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-notice.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-notice.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-notice.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-notice.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-search.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-search.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-search.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-search.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-ssid.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-ssid.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-ssid.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-ssid.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-submit.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-submit.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-submit.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-submit.png" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/brother-printer/wireless-wps.png" data-darkbox="brother-printer">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/brother-printer/thumbs/wireless-wps.png" />
+<a href="http://yentran.isamonkey.org/gallery/brother-printer/wireless-wps.png" data-darkbox="brother-printer">
+  <img src="http://yentran.isamonkey.org/gallery/brother-printer/thumbs/wireless-wps.png" />
 </a>
 
 </div>
@@ -480,7 +480,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
   </header>
 
 
-  <div class="entry-content"><p><a href="http://www.whitehouse.gov/blog/2012/01/23/president-obama-welcomes-boston-bruins"><img title="Bruins 2011 White House photo" src="https://dl.dropboxusercontent.com/u/52804626/images/20120123-potus-boston-bruins.jpg" width="560" height="373" /></a></p>
+  <div class="entry-content"><p><a href="http://www.whitehouse.gov/blog/2012/01/23/president-obama-welcomes-boston-bruins"><img title="Bruins 2011 White House photo" src="http://yentran.isamonkey.org/gallery/images/20120123-potus-boston-bruins.jpg" width="560" height="373" /></a></p>
 
 <p>Today the Bruins appeared at the White House where President Obama greeted them and honored their accomplishments as 2011 Stanley Cup champions. Included in the group photo were Americans, Canadians, Czechs, a Slovak, a Finn, and a German. Notable in his absence was Bruins goalie Tim Thomas, Stanley Cup playoffs MVP, winner of multiple awards and the only American player who made significant contribution to the team&rsquo;s Cup run. The details of Thomas&#8217; absence are covered elsewhere, but it has become clear that it is politically motivated.</p>
 
@@ -578,7 +578,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 
   <div class="entry-content"><p>I tried out a well-known cloud-based antivirus solution.  It worked well enough, but after I installed it, I noticed that my FireFox searches were now redirected from Google to Yahoo!.  In the FF config screen (which can be opened by typing &ldquo;about:config&rdquo; in the location bar), I noticed that the keyword.URL setting had been changed to Yahoo!:</p>
 
-<p><img title="panda-yahoo-keyword-url" src="https://dl.dropboxusercontent.com/u/52804626/images/panda-yahoo-keyword-url.png" width="1212" height="113" /></p>
+<p><img title="panda-yahoo-keyword-url" src="http://yentran.isamonkey.org/gallery/images/panda-yahoo-keyword-url.png" width="1212" height="113" /></p>
 
 <p>This setting dictates which search service is used when the user enters a keyword (i.e., anything that does not resemble a URL like <a href="http://yahoo.com">http://yahoo.com</a>).  While Yahoo! search is no doubt capable, this type of unsolicited change is quite annoying, particularly for a product that&rsquo;s intended to detect and remove malware.  I reverted the setting back to Google by changing its value to <code>http://www.google.com/search?ie=UTF-8&amp;amp;oe=UTF-8&amp;amp;q=</code>.</p>
 
@@ -665,7 +665,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 
 <p>You should see the CyanogenMod skateboarding Android logo while the phone reboots. Once your phone comes up, it will be sporting the sleek interface of Android Gingerbread! Here&rsquo;s a screenshot as proof:</p>
 
-<p><img title="htc-aria-after" src="https://dl.dropboxusercontent.com/u/52804626/images/htc-aria-after.png" width="320" height="480" /></p>
+<p><img title="htc-aria-after" src="http://yentran.isamonkey.org/gallery/images/htc-aria-after.png" width="320" height="480" /></p>
 
 <h3>Install the Google Apps package</h3>
 
@@ -722,14 +722,14 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 </ul>
 
 
-<p><img title="macro-4" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-41.png" width="535" height="490" /></p>
+<p><img title="macro-4" src="http://yentran.isamonkey.org/gallery/images/macro-41.png" width="535" height="490" /></p>
 
 <ul>
 <li>Select New and enter a name</li>
 </ul>
 
 
-<p><img title="macro-2" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-2.png" width="326" height="133" /></p>
+<p><img title="macro-2" src="http://yentran.isamonkey.org/gallery/images/macro-2.png" width="326" height="133" /></p>
 
 <ul>
 <li>On the newly created toolbar, which is empty at the moment, open the drop-down menu and select Add or Remove Buttons > Customize</li>
@@ -738,7 +738,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 </ul>
 
 
-<p><img title="macro-3" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-3.png" width="585" height="370" /></p>
+<p><img title="macro-3" src="http://yentran.isamonkey.org/gallery/images/macro-3.png" width="585" height="370" /></p>
 
 <ul>
 <li>Do the same to add the TurnOffLineNumbers macro, or any other useful macro</li>
@@ -746,14 +746,14 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 </ul>
 
 
-<p><img title="macro-4" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-41.png" width="535" height="490" /></p>
+<p><img title="macro-4" src="http://yentran.isamonkey.org/gallery/images/macro-41.png" width="535" height="490" /></p>
 
 <ul>
 <li>The macros are now added to the new toolbar</li>
 </ul>
 
 
-<p><img title="macro-5" src="https://dl.dropboxusercontent.com/u/52804626/images/macro-5.png" width="572" height="67" /></p>
+<p><img title="macro-5" src="http://yentran.isamonkey.org/gallery/images/macro-5.png" width="572" height="67" /></p>
 
 <p>If you&rsquo;re interested in viewing or modifying the sample macros that come with Visual Studio, open the Macros editor by selecting Tools > Macros > Macros IDE.  If you&rsquo;ve written VBA macros for Excel or Word, this should look familiar. The Samples project contains modules for a number of useful macros.  The line number macros above are defined in the Utilities module.</p>
 </div>
@@ -861,74 +861,74 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 
 
 <div class="darkbox">
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0061.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0061.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0061.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0061.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0067.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0067.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0067.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0067.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0074.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0074.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0074.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0074.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0095.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0095.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0095.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0095.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0126.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0126.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0126.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0126.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0210.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0210.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0210.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0210.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0218.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0218.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0218.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0218.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0261.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0261.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0261.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0261.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0348.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0348.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0348.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0348.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0365.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0365.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0365.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0365.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0407.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0407.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0407.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0407.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0436.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0436.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0436.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0436.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0448.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0448.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0448.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0448.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0455.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0455.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0455.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0455.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0461.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0461.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0461.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0461.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0515.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0515.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0515.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0515.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0594.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0594.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0594.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0594.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0646.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0646.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0646.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0646.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0661.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0661.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0661.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0661.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0677.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0677.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0677.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0677.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0689.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0689.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0689.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0689.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0723.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0723.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0723.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0723.jpg" />
 </a>
-<a href="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/dsc_0726.jpg" data-darkbox="autumn-2009">
-  <img src="https://dl.dropboxusercontent.com/u/52804626/autumn-2009/thumbs/dsc_0726.jpg" />
+<a href="http://yentran.isamonkey.org/gallery/autumn-2009/dsc_0726.jpg" data-darkbox="autumn-2009">
+  <img src="http://yentran.isamonkey.org/gallery/autumn-2009/thumbs/dsc_0726.jpg" />
 </a>
 
 </div>
@@ -1062,7 +1062,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2016 - Yen Tran -
+  Copyright &copy; 2019 - Yen Tran -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

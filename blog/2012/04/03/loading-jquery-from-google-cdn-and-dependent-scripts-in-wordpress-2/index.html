@@ -121,7 +121,7 @@
 
 
 <p>Using Chrome&rsquo;s Developer console (i.e., hit F12) to view the Resources for the page, I could see that jQuery is being loaded.
-<img title="jquery-cdn-1" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-11.png" width="333" height="279" />
+<img title="jquery-cdn-1" src="http://yentran.isamonkey.org/gallery/images/jquery-cdn-11.png" width="333" height="279" />
 I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you">why</a>?). My initial attempt was to simply change  the jQuery reference to the CDN location (I also upgraded to version 1.7.1 while I was at it):</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -131,7 +131,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 
 <p>This worked, and Chrome&rsquo;s Developer console showed that jQuery was being loaded from the CDN. However, there was another problem. WordPress apparently also loads jQuery by default, so the page ended up with an extra copy.</p>
 
-<p><img title="jquery-cdn-2" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-21.png" width="400" height="415" /></p>
+<p><img title="jquery-cdn-2" src="http://yentran.isamonkey.org/gallery/images/jquery-cdn-21.png" width="400" height="415" /></p>
 
 <p>To remove the redundant copy, I removed the jQuery references from the header.php script, then added the following lines to the functions.php script in the theme folder which use WordPress&rsquo;s built-in function <strong>wp_enqueue_script</strong> to ensure that only one copy of jQuery is included.</p>
 
@@ -187,7 +187,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
 
 <p>Finally, verifying with the Developer console shows that everything is loaded correctly.</p>
 
-<p><img title="jquery-cdn-3" src="https://dl.dropboxusercontent.com/u/52804626/images/jquery-cdn-31.png" width="399" height="414" /></p>
+<p><img title="jquery-cdn-3" src="http://yentran.isamonkey.org/gallery/images/jquery-cdn-31.png" width="399" height="414" /></p>
 </div>
 
 
@@ -354,7 +354,7 @@ I wanted to load jQuery from Google&rsquo;s Content Delivery Network (<a href="h
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2016 - Yen Tran -
+  Copyright &copy; 2019 - Yen Tran -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
