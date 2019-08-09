@@ -7,7 +7,7 @@ Urk's connection to the sea was unarguably stronger than most, as the town was f
 
 This is the monument to fishermen lost at sea. The statue depicts a woman waiting in vain for her loved one to return. On the bronze plaques around the statue were engraved the names of hundreds of those who never came back.
 
-<img src="http://yentran.isamonkey.org/gallery/urk/UrkLostatSeaMonument99-06.jpg" />
+<img src="http://yentran.isamonkey.org/gallery/urk/urklostatseamonument99-06.jpg" />
 
 Along the "shoreline", roughly where the statue's gaze was directed, one could see a row of modern windmills, the wind-driven turbines.
 
