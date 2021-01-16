@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>logo on Yen&#39;s blog</title>
+    <link>http://yentran.org/tags/logo/</link>
+    <description>Recent content in logo on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Apr 2011 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/logo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ooh shiny</title>
+      <link>http://yentran.org/post/source/2011-04-28-ooh-shiny/</link>
+      <pubDate>Thu, 28 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2011-04-28-ooh-shiny/</guid>
+      <description>Some time ago I took a software engineering class. For the term project we divided up into teams and worked on a project of our own choosing from beginning to end. Ours was an e-commerce application, the source code for which still resides on Google Code.
+We were the Fantastic Five because, you&amp;rsquo;d never guess it, there were 5 of us. I created the logo for the project. For the &amp;ldquo;super-hero&amp;rdquo; effect, it has 2 stylized F&amp;rsquo;s, made to look like wings flanking a shield.</description>
+    </item>
+    
+  </channel>
+</rss>

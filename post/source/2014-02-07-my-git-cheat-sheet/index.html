@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My Git cheat sheet | Yen&#39;s blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="There are lots of great Git guides out there. This is intended simply to be a reference for me during those dark times when I can&rsquo;t remember the syntax for creating a tracking branch.
+Config # These will show up in git log git config --global user.name &quot;Yen Tran&quot; git config --global user.email yen@yentran.org git config --list Info gitk git status git log git log origin/master # Show endpoints such as origin git remote show # Show origin params git remote show origin Branch (Local) git branch &lt;branch&gt; &lt;sha1_of_commit&gt; # Ex: git branch foo 7e2785d # Delete branch git branch -d &lt;branch&gt; # Create branch: git branch &lt;branch&gt; git checkout &lt;branch&gt; # Check out and automatically creates branch git checkout -b &lt;branch&gt; # List local branches git br # List remote branches git branch -r # List all branches git branch -a # Verbose list of local branches and HEAD commit git branch -v Check out a previous check-in git log # Locate desired checkin and copy SHA; e.">
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="My Git cheat sheet" />
+<meta property="og:description" content="There are lots of great Git guides out there. This is intended simply to be a reference for me during those dark times when I can&rsquo;t remember the syntax for creating a tracking branch.
+Config # These will show up in git log git config --global user.name &quot;Yen Tran&quot; git config --global user.email yen@yentran.org git config --list Info gitk git status git log git log origin/master # Show endpoints such as origin git remote show # Show origin params git remote show origin Branch (Local) git branch &lt;branch&gt; &lt;sha1_of_commit&gt; # Ex: git branch foo 7e2785d # Delete branch git branch -d &lt;branch&gt; # Create branch: git branch &lt;branch&gt; git checkout &lt;branch&gt; # Check out and automatically creates branch git checkout -b &lt;branch&gt; # List local branches git br # List remote branches git branch -r # List all branches git branch -a # Verbose list of local branches and HEAD commit git branch -v Check out a previous check-in git log # Locate desired checkin and copy SHA; e." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://yentran.org/post/source/2014-02-07-my-git-cheat-sheet/" />
+<meta property="article:published_time" content="2014-02-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2014-02-07T00:00:00+00:00" />
+<meta itemprop="name" content="My Git cheat sheet">
+<meta itemprop="description" content="There are lots of great Git guides out there. This is intended simply to be a reference for me during those dark times when I can&rsquo;t remember the syntax for creating a tracking branch.
+Config # These will show up in git log git config --global user.name &quot;Yen Tran&quot; git config --global user.email yen@yentran.org git config --list Info gitk git status git log git log origin/master # Show endpoints such as origin git remote show # Show origin params git remote show origin Branch (Local) git branch &lt;branch&gt; &lt;sha1_of_commit&gt; # Ex: git branch foo 7e2785d # Delete branch git branch -d &lt;branch&gt; # Create branch: git branch &lt;branch&gt; git checkout &lt;branch&gt; # Check out and automatically creates branch git checkout -b &lt;branch&gt; # List local branches git br # List remote branches git branch -r # List all branches git branch -a # Verbose list of local branches and HEAD commit git branch -v Check out a previous check-in git log # Locate desired checkin and copy SHA; e.">
+<meta itemprop="datePublished" content="2014-02-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2014-02-07T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1316">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="My Git cheat sheet"/>
+<meta name="twitter:description" content="There are lots of great Git guides out there. This is intended simply to be a reference for me during those dark times when I can&rsquo;t remember the syntax for creating a tracking branch.
+Config # These will show up in git log git config --global user.name &quot;Yen Tran&quot; git config --global user.email yen@yentran.org git config --list Info gitk git status git log git log origin/master # Show endpoints such as origin git remote show # Show origin params git remote show origin Branch (Local) git branch &lt;branch&gt; &lt;sha1_of_commit&gt; # Ex: git branch foo 7e2785d # Delete branch git branch -d &lt;branch&gt; # Create branch: git branch &lt;branch&gt; git checkout &lt;branch&gt; # Check out and automatically creates branch git checkout -b &lt;branch&gt; # List local branches git br # List remote branches git branch -r # List all branches git branch -a # Verbose list of local branches and HEAD commit git branch -v Check out a previous check-in git log # Locate desired checkin and copy SHA; e."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Yen&#39;s blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=http://yentran.org/post/source/2014-02-07-my-git-cheat-sheet/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=http://yentran.org/post/source/2014-02-07-my-git-cheat-sheet/&amp;text=My%20Git%20cheat%20sheet" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://yentran.org/post/source/2014-02-07-my-git-cheat-sheet/&amp;title=My%20Git%20cheat%20sheet" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">My Git cheat sheet</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-02-07T00:00:00Z">February 7, 2014</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>There are lots of great Git guides out there.  This is intended simply to be a reference for me during those dark times when I can&rsquo;t remember the syntax for creating a tracking branch.</p>
+<h3 id="config">Config</h3>
+<pre><code># These will show up in git log
+git config --global user.name &quot;Yen Tran&quot;
+git config --global user.email yen@yentran.org
+git config --list
+</code></pre><h3 id="info">Info</h3>
+<pre><code>gitk
+git status
+git log
+git log origin/master
+# Show endpoints such as origin
+git remote show
+# Show origin params
+git remote show origin
+</code></pre><h3 id="branch-local">Branch (Local)</h3>
+<pre><code>git branch &lt;branch&gt; &lt;sha1_of_commit&gt;
+# Ex: git branch foo 7e2785d
+</code></pre><pre><code># Delete branch
+git branch -d &lt;branch&gt;
+
+# Create branch:
+git branch &lt;branch&gt;
+git checkout &lt;branch&gt;
+# Check out and automatically creates branch
+git checkout -b &lt;branch&gt;
+# List local branches
+git br 
+# List remote branches
+git branch -r
+# List all branches
+git branch -a
+# Verbose list of local branches and HEAD commit
+git branch -v
+</code></pre><h3 id="check-out-a-previous-check-in">Check out a previous check-in</h3>
+<pre><code>git log
+#  Locate desired checkin and copy SHA; e.g., f2bc540fc6817b0409571f6e5a562dffa6396017
+git checkout &lt;SHA&gt;
+# Do stuff, publish, etc.
+git checkout master
+</code></pre><h3 id="cherry-pick">Cherry-pick</h3>
+<pre><code># Source branch
+git co 2012-01-01-A
+# Get top log entry
+git log -1
+# Copy first few characters of SHA hash
+# Destination branch
+git co master
+git cherry-pick 96f39d92de93
+# Review changes
+git diff HEAD~1
+</code></pre><h3 id="clone">Clone</h3>
+<pre><code># SSH keys under ~/.ssh
+git clone git@donny:repo.git
+# Directory is optional; automatically created if not specified
+git clone gitolite@donny:repo.git [directory]
+</code></pre><h3 id="commit">Commit</h3>
+<pre><code># Also automatically stage and commit
+git commit -a -m &quot;commit message here&quot;
+# Add to previous commit or Rename a commit message
+git commit --amend
+# Select reword for the desired commit in the interactive editor
+# Edit the message
+# Save
+git rebase -i master
+</code></pre><h3 id="create-new-repo">Create new repo</h3>
+<pre><code>git init
+#  So that subsequent add can ignore files
+git add .gitignore
+git remote add origin git@donny:repo.git
+git remote add origin git@github.com:user/repo.git
+# add and commit files (-u option updates local)
+git push -u origin master
+</code></pre><h3 id="diff">Diff</h3>
+<pre><code># Graphical version
+git difftool
+git diff &lt;directory&gt;
+git difftool HEAD~1
+# Diff files that have been staged
+git diff --cached
+# Diff local changes against repository
+git diff origin/master
+</code></pre><h3 id="help">Help</h3>
+<pre><code>man git-log
+man git-show
+# etc.
+</code></pre><h3 id="log">Log</h3>
+<pre><code># Get top 1 log entry
+git log -1
+# Show history beyond renames
+git log --follow file
+# Include diffs
+git log -p file
+</code></pre><h3 id="stage">Stage</h3>
+<pre><code>git add &lt;file&gt;...
+git add .
+# Opposite of add; use when files are renamed, etc.
+git rm &lt;file&gt;...
+</code></pre><h3 id="stash">Stash</h3>
+<pre><code>git stash
+git stash list
+# Show changes in stash, where 0 is the number of the stashed item as shown by git stash list
+git show @{0}
+# Drop specified stash where xx is number shown in stash list
+git stash drop stash@{xx}
+</code></pre><h3 id="drop-local-changes">Drop local changes</h3>
+<pre><code># Change state of working copy to match repository, if file has not been added to index/staging
+git checkout -- &lt;filename&gt;
+# Ditto, but if file has been added to index
+git reset &lt;filename&gt;
+git stash save --keep-index
+</code></pre><h3 id="pull">Pull</h3>
+<pre><code>git pull origin master
+git checkout master
+</code></pre><h3 id="rebase-resolve-conflict">Rebase: resolve conflict</h3>
+<pre><code>git checkout &lt;branch&gt;
+git rebase master
+git status
+git add &lt;file&gt;
+# Fix conflicts
+git rebase --continue
+</code></pre><h3 id="rebase-interactive">Rebase: interactive</h3>
+<pre><code>git rebase -i origin/master
+git rebase -i
+# In the text editor, select s or squash on the bottom-most commits to squash them
+</code></pre><h3 id="refs">Refs</h3>
+<p>You may get this error when running &ldquo;git branch -d foo&rdquo;:
+warning: deleting branch &lsquo;foo&rsquo; that has been merged to &lsquo;refs/remotes/origin/foo&rsquo;, but not yet merged to HEAD.
+Deleted branch foo (was 334730a).
+From <a href="http://stackoverflow.com/questions/18506456/git-how-to-delete-a-local-ref-branch:">http://stackoverflow.com/questions/18506456/git-how-to-delete-a-local-ref-branch:</a></p>
+<pre><code># Remove local ref
+git update-ref -d refs/remotes/origins/foo
+</code></pre><h3 id="ref-log">Ref log</h3>
+<pre><code>git reflog
+</code></pre><h3 id="remote">Remote</h3>
+<pre><code># Remove origin
+git remote rm origin
+git remote add origin git@server:repo.git
+git remote show origin
+</code></pre><pre><code># Change origin URL
+git remote set-url origin git@server:repo.git
+</code></pre><h3 id="remote-branch">Remote Branch</h3>
+<pre><code># Create branch. Reference: http://git-scm.com/book/en/Git-Branching-Remote-Branches
+git branch &lt;branch&gt;
+# Show local branches configured for push/pull, i.e. tracking branches
+git remote show origin
+git push &lt;remote&gt; &lt;branch&gt;
+# Ex: git push origin foo
+# or
+git push &lt;remote&gt; &lt;local_branch&gt;:&lt;branch&gt;
+# Ex: git push origin foo:bar
+</code></pre><h3 id="tracking-branch">Tracking branch</h3>
+<h4 id="creating-a-new-tracking-branch">Creating a new tracking branch</h4>
+<pre><code>git checkout -b &lt;local_branch&gt; &lt;remote&gt;/&lt;branch&gt; 
+# Ex:
+#   git checkout -b foo origin/foo
+#   git checkout -b bar origin/foo # local branch has a different name
+# Alternative:
+git checkout --track origin/foo
+# Local branch has a different name
+git checkout -b bar --track origin/foo
+# Within a tracking branch, push and pull automatically knows which server and branch to push to/pull from
+git pull
+git push
+</code></pre><h4 id="setting-up-tracking-information-for-an-existing-branch">Setting up tracking information for an existing branch</h4>
+<pre><code>git branch --set-upstream &lt;remote&gt;/&lt;branch&gt; &lt;local_branch&gt;
+# or
+git branch -u &lt;remote&gt;/&lt;branch&gt; &lt;local_branch&gt;
+# Ex:
+# git branch -u origin/foo # when within branch foo
+# git branch -u origin/foo foo # when not within branch foo
+# Pull branch
+git pull &lt;remote&gt; &lt;branch&gt;
+# Delete branch
+git push &lt;remote&gt; :&lt;branch&gt;
+</code></pre><h4 id="pruning-stale-remote-branches">Pruning stale remote branches</h4>
+<pre><code>git remote show origin
+    master    tracked
+    refs/remotes/origin/fix        stale (use 'git remote prune' to remove)
+    refs/remotes/origin/story_5008 stale (use 'git remote prune' to remove)
+# Simulate deleting stale branches
+git remote prune origin --dry-run
+# Actually delete stale branches
+git remote prune origin
+# Or
+git fetch origin --prune
+</code></pre><h3 id="commit-1">Commit</h3>
+<pre><code># Switch to my branch
+git checkout &lt;branch&gt;
+git status
+# View diff per file
+git difftool
+# Add all files in to staging area
+git add .
+git status
+# Commit to local repository
+git commit
+# Switch to master
+git checkout master
+# Pull down master updates
+git pull origin master
+git checkout &lt;branch&gt;
+# Rewind my branch, pull down master updates, then add my update on top
+git rebase master
+git checkout master
+# Merge my update back to local master
+git merge &lt;branch&gt;
+# Pull down updates that occurred on canonical repository in the meantime
+git pull origin master
+# Push local updates to canonical repository
+git push origin master
+git log
+</code></pre><h3 id="reset">Reset</h3>
+<pre><code># Changes after specified revision show up as uncommitted
+git reset SHA
+# Changes after specified revision do not show up
+git reset SHA
+# Unstage
+git reset HEAD &lt;file&gt;
+# Jump to 1 commit below HEAD, rolling back previous commit
+git reset HEAD~1
+# Reset everything to HEAD, overwriting local changes...caution!
+git reset --hard HEAD
+</code></pre><h3 id="show">Show</h3>
+<pre><code># View diff
+git show SHA
+# View content of file
+git show SHA:file
+</code></pre><h3 id="filing-away-local-changes">Filing away local changes</h3>
+<p>Create a new branch and commit the desired changes to it:</p>
+<pre><code>git branch &lt;branch&gt;
+git checkout &lt;branch&gt;
+git add &lt;files&gt;...
+git commit
+</code></pre><p>Merging origin changes with local changes:</p>
+<pre><code>git checkout &lt;branch&gt;
+git add &lt;file&gt;
+git commit
+git checkout master
+git pull origin master
+git checkout &lt;branch&gt;
+git rebase master
+# Resolve conflicts
+git rebase --continue
+# Roll back your commit
+git reset HEAD~1
+</code></pre><p>Better:</p>
+<pre><code>git checkout &lt;branch&gt;
+git stash
+git checkout master
+git pull origin master
+git checkout &lt;branch&gt;
+git rebase master
+git stash pop
+</code></pre><h3 id="merging-multiple-branches">Merging multiple branches</h3>
+<pre><code>Branch 2
+|
+Branch 1 (committed)
+|
+master
+</code></pre>
+<pre><code>git commit
+git checkout branch1
+git merge branch2
+# Pick one commit and stash the other, then edit aggregate comment for both commits from the previous branch1 and branch2 comments
+git rebase -i master
+git co master
+# Merge aggregate commits into master
+git merge branch1
+# Should see aggregate comment
+git log
+</code></pre><h3 id="tag">Tag</h3>
+<pre><code># Check out a tag
+git checkout 2011-09-16
+# Make sure your local master contains EXACTLY what you want tagged -- &quot;git log&quot; to double check
+git checkout master
+# Create a tag
+git tag -a &quot;tag name&quot;
+# This removes the tag from your local master
+git tag -d &quot;tag name&quot;
+# DANGER - the colon tells git to DELETE something -- without a confirm prompt ! -- here, we're deleting the remote master's tag
+git push origin :&quot;tag name&quot;
+# This creates the tag on your local master
+git tag &quot;tag name&quot;
+# This pushes the new tag back onto remote master
+git push --tags
+# List tags
+git tag
+# Fetch all tags
+git fetch --tags
+</code></pre><ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://yentran.org" >
+    &copy;  Yen's blog 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

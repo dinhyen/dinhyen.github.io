@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>asp.net mvc on Yen&#39;s blog</title>
+    <link>http://yentran.org/tags/asp.net-mvc/</link>
+    <description>Recent content in asp.net mvc on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Apr 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/asp.net-mvc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stack overflow exception when MVC View and Partial View have the same name</title>
+      <link>http://yentran.org/post/source/2012-04-03-stack-overflow-exception-when-mvc-view-and-partial-view-have-the-same-name/</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-04-03-stack-overflow-exception-when-mvc-view-and-partial-view-have-the-same-name/</guid>
+      <description>This scenario is probably unusual but it did happen to me. I had a view named Foo.aspx and partial view named Foo.ascx. The view rendered the partial as follows:
+&amp;lt;% Html.RenderPartial(&amp;#34;Foo&amp;#34;); %&amp;gt; When attempting to load the view, ASP.NET spins for a while then eventually throws a stack overflow exception. Apparently when executing the above statement, MVC searches for files named &amp;ldquo;Foo&amp;rdquo;, including the view itself. It must have attempted to render the view and gone into a recursive loop.</description>
+    </item>
+    
+    <item>
+      <title>AutoMapper doesn&#39;t work for mismatched types</title>
+      <link>http://yentran.org/post/source/2011-12-08-automapper-mismatched-types/</link>
+      <pubDate>Thu, 08 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2011-12-08-automapper-mismatched-types/</guid>
+      <description>We&amp;rsquo;re using AutoMapper in ASP.NET MVC automate the mapping of properties between entity and view model objects. This is a highly useful tool which helps us avoid the tedium of having to assigning properties manually. Here&amp;rsquo;s a good introduction to using AutoMapper.
+In one case, I find that the AutoMapper doesn&amp;rsquo;t work for all properties. One property in particular doesn&amp;rsquo;t get mapped. If I manually assign a value to it as a test, I would get a ForeignKeyReferenceAlreadyHasValueException.</description>
+    </item>
+    
+  </channel>
+</rss>

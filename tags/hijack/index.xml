@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hijack on Yen&#39;s blog</title>
+    <link>http://yentran.org/tags/hijack/</link>
+    <description>Recent content in hijack on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 Aug 2011 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/hijack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Removing malware</title>
+      <link>http://yentran.org/post/source/2011-08-23-removing-malware/</link>
+      <pubDate>Tue, 23 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2011-08-23-removing-malware/</guid>
+      <description>My computer got a dose of malware today. The trojan got a hold of my USB drive. It made all of my files and folders hidden, then injected executables with the same names. It also hid the .exe extension so that the executables appeared in place of the legitimate objects they were masquerading. It gave the fake folders the right icon so that they looked just like folders. The objective is to fool the user into double-clicking the folders to open them but instead executing the trojan.</description>
+    </item>
+    
+  </channel>
+</rss>

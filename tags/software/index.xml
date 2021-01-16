@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software on Yen&#39;s blog</title>
+    <link>http://yentran.org/tags/software/</link>
+    <description>Recent content in software on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Feb 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configuring Wifi for the Brother HL-2280DW Laser Printer on Windows</title>
+      <link>http://yentran.org/post/source/2012-02-09-configuring-wifi-for-the-brother-hl-2280dw-laser-printer-on-windows/</link>
+      <pubDate>Thu, 09 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-02-09-configuring-wifi-for-the-brother-hl-2280dw-laser-printer-on-windows/</guid>
+      <description>With laser printer, scanner, Ethernet and Wifi interface rolled into one, the Brother HL-2280DW is quite a little champ. However, for me, getting the Wifi to work was a bit of a challenge. The installer would die silently after configuring Wifi but without having installed the software. After some trial and error, I was able to successfully install for Ethernet . With the software installed, I was able to configure Wifi afterward.</description>
+    </item>
+    
+  </channel>
+</rss>

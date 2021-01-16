@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Yen&#39;s blog</title>
+    <link>http://yentran.org/tags/git/</link>
+    <description>Recent content in git on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Dec 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up Git to work remotely</title>
+      <link>http://yentran.org/post/source/2012-12-15-setting-up-git-to-work-remotely/</link>
+      <pubDate>Sat, 15 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-12-15-setting-up-git-to-work-remotely/</guid>
+      <description>At home I use a MacBook to connect via VPN to the office. I&amp;rsquo;d have access to the intranet but not shell access to my workstation. Since I usually work on the same project at home and at the office, I need to keep my work synchronized. One way to do that is with a Git remote branch.
+At the office, I&amp;rsquo;d create a local branch for the story I&amp;rsquo;d like to work on:</description>
+    </item>
+    
+    <item>
+      <title>Using Hudson with Git and MSBuild on Windows</title>
+      <link>http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</link>
+      <pubDate>Thu, 15 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</guid>
+      <description>We use Hudson as our continuous integration server (although we&amp;rsquo;re thinking about moving to Jenkins, but that&amp;rsquo;s a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.
+Pre-requisites We use the following software. The listed versions are the latest as of the time of writing, but other combinations should work.
+ Java Runtime Environment (JRE) 7 Apache Tomcat 7.0 Hudson 2.</description>
+    </item>
+    
+  </channel>
+</rss>

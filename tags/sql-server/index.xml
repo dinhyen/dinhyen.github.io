@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sql server on Yen&#39;s blog</title>
+    <link>http://yentran.org/tags/sql-server/</link>
+    <description>Recent content in sql server on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Jan 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/sql-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Modifying SQL Server table without dropping and recreating it</title>
+      <link>http://yentran.org/post/source/2012-01-11-modifying-sql-server-table-without-dropping-and-recreating-it/</link>
+      <pubDate>Wed, 11 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-01-11-modifying-sql-server-table-without-dropping-and-recreating-it/</guid>
+      <description>The SQL Server Designer is a nice visual tool for making modifications to a table. However, when you save the changes, SQL Server actually drops the entire table and then recreates it (if there are data in the table, they would be retained). This happens even if the changes made do not actually require that the table be re-created. This is presumably so that SQL Server can accommodate all possible types of modification.</description>
+    </item>
+    
+  </channel>
+</rss>

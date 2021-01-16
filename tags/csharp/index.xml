@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>csharp on Yen&#39;s blog</title>
+    <link>http://yentran.org/tags/csharp/</link>
+    <description>Recent content in csharp on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 May 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deleting from collection with LINQ to SQL</title>
+      <link>http://yentran.org/post/source/2012-05-18-deleting-from-collection-with-linq-to-sql/</link>
+      <pubDate>Fri, 18 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-05-18-deleting-from-collection-with-linq-to-sql/</guid>
+      <description>I ran into an subtle bug today. Let&amp;rsquo;s say we have a shopping cart page that displays order details and allows the user to remove items from the order. We retrieve the items in the order with the following:
+var items = DataContext.Orders.Single(o =&amp;gt; o.Id == orderId).Items; To remove an item from the order, we have the following:
+var itemToDelete = DataContext.Items.Single(i =&amp;gt; i.Id == itemId); DataContext.Items.DeleteOnSubmit(itemToDelete); DataContext.SubmitChanges(); It&amp;rsquo;s run-of-the-mill as far as LINQ to SQL goes.</description>
+    </item>
+    
+    <item>
+      <title>Mapping PagedList with AutoMapper</title>
+      <link>http://yentran.org/post/source/2012-04-03-mapping-pagedlist-with-automapper/</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-04-03-mapping-pagedlist-with-automapper/</guid>
+      <description>I&amp;rsquo;m using an implementation of PagedList based on that given by Rob Conery.
+I want to convert a paged list of business objects to a paged list of view model objects with AutoMapper. In order for AutoMapper to work in this case, it needs to know how to convert a paged list. This can be done with a custom type converter:
+public class PagedListConverter : ITypeConverter&amp;lt;PagedList&amp;lt;Person&amp;gt;, PagedList&amp;lt;PersonViewModel&amp;gt;&amp;gt; { public PagedList&amp;lt;PersonViewModel&amp;gt; Convert(ResolutionContext context) { var models = (PagedList&amp;lt;Person&amp;gt;)context.</description>
+    </item>
+    
+  </channel>
+</rss>

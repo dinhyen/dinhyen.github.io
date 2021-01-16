@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Using Hudson with Git and MSBuild on Windows | Yen&#39;s blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="We use Hudson as our continuous integration server (although we&rsquo;re thinking about moving to Jenkins, but that&rsquo;s a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.
+Pre-requisites We use the following software. The listed versions are the latest as of the time of writing, but other combinations should work.
+ Java Runtime Environment (JRE) 7 Apache Tomcat 7.0 Hudson 2.">
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Using Hudson with Git and MSBuild on Windows" />
+<meta property="og:description" content="We use Hudson as our continuous integration server (although we&rsquo;re thinking about moving to Jenkins, but that&rsquo;s a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.
+Pre-requisites We use the following software. The listed versions are the latest as of the time of writing, but other combinations should work.
+ Java Runtime Environment (JRE) 7 Apache Tomcat 7.0 Hudson 2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/" />
+<meta property="article:published_time" content="2012-11-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2012-11-15T00:00:00+00:00" />
+<meta itemprop="name" content="Using Hudson with Git and MSBuild on Windows">
+<meta itemprop="description" content="We use Hudson as our continuous integration server (although we&rsquo;re thinking about moving to Jenkins, but that&rsquo;s a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.
+Pre-requisites We use the following software. The listed versions are the latest as of the time of writing, but other combinations should work.
+ Java Runtime Environment (JRE) 7 Apache Tomcat 7.0 Hudson 2.">
+<meta itemprop="datePublished" content="2012-11-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2012-11-15T00:00:00+00:00" />
+<meta itemprop="wordCount" content="889">
+
+
+
+<meta itemprop="keywords" content="ci,git,hudson,msbuild," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using Hudson with Git and MSBuild on Windows"/>
+<meta name="twitter:description" content="We use Hudson as our continuous integration server (although we&rsquo;re thinking about moving to Jenkins, but that&rsquo;s a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.
+Pre-requisites We use the following software. The listed versions are the latest as of the time of writing, but other combinations should work.
+ Java Runtime Environment (JRE) 7 Apache Tomcat 7.0 Hudson 2."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Yen&#39;s blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/&amp;text=Using%20Hudson%20with%20Git%20and%20MSBuild%20on%20Windows" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/&amp;title=Using%20Hudson%20with%20Git%20and%20MSBuild%20on%20Windows" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Using Hudson with Git and MSBuild on Windows</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2012-11-15T00:00:00Z">November 15, 2012</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>We use <a href="http://hudson-ci.org/">Hudson</a> as our continuous integration server (although we&rsquo;re thinking about moving to <a href="http://jenkins-ci.org/">Jenkins</a>, but that&rsquo;s a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.</p>
+<h1 id="pre-requisites">Pre-requisites</h1>
+<p>We use the following software. The listed versions are the latest as of the time of writing, but other combinations should work.</p>
+<ul>
+<li>Java Runtime Environment (JRE) 7</li>
+<li>Apache Tomcat 7.0</li>
+<li>Hudson 2.2.1</li>
+</ul>
+<h1 id="apache-tomcat">Apache Tomcat</h1>
+<p>Download and install the <a href="http://tomcat.apache.org/download-70.cgi">Tomcat 7.0 Windows Service Installer</a>. In our case, the server already runs IIS on port 80, so we install Tomcat on a different port.  Remember this port as you will need it to access the Manager and Hudson.</p>
+<p>Since Hudson will need to perform tasks that require access to more than one servers, such as deploying to a network share, we create a domain account which would be granted the necessary permissions wherever applicable. Configure Tomcat to run under the domain account as follows:</p>
+<ul>
+<li>From the Start menu, run Configure Tomcat as Admin. Alternatively, you could open the Services console (shortcut: run Service.msc as Admin) and select Properties for the Apache Tomcat 7.0 service.</li>
+<li>Under the Log On tab, enter the credentials for the domain account
+<!-- raw HTML omitted --></li>
+<li>Restart Tomcat</li>
+</ul>
+<p>You can restart Tomcat by running the command prompt as Admin then type <code>net start tomcat7</code> to start or <code>net stop tomcat7</code> to stop the service.</p>
+<p>Grant Read/Execute permission to the Tomcat account for the web application folders (e.g., webapps\manager, webapps\root) and Full Control for temp folder.</p>
+<p>Out of the box, the Manager is not accessible out of security consideration. You&rsquo;d have to specify the user who&rsquo;s allowed to access the page:</p>
+<ul>
+<li>Open c:\program files (x86)\Tomcat 7.0\conf\tomcat-users.xml</li>
+<li>Enter the credentials for the user and specify the role as &ldquo;manager-gui&rdquo; with the following:
+<code>&lt;user username=&quot;admin&quot; password=&quot;password&quot; roles=&quot;manager-gui&quot;/&gt;</code></li>
+</ul>
+<p>You can access the Manager at http://server:port/manager/html.</p>
+<h1 id="hudson">Hudson</h1>
+<h2 id="install-hudson">Install Hudson</h2>
+<p><a href="http://hudson-ci.org/">Download</a> the latest production .war.</p>
+<p>To deploy Hudson:</p>
+<ul>
+<li>Copy .war to the Tomcat webapps folder. The name of the .war will be part of Hudson&rsquo;s URL, so rename hudson-2.1.2.war to hudson.war to shorten the URL. If Hudson is the only app, you can also rename the .war root.war to be able to access Hudson at the root URL.</li>
+<li>Grant the Tomcat account full control to the webapps folder. This is because Tomcat needs to unpack the .war into a folder. After it&rsquo;s deployed, you can reset the permissions for the Tomcat account back to Read &amp; Execute.</li>
+<li>Restart the Tomcat service if necessary.</li>
+</ul>
+<p>To upgrade Hudson:</p>
+<ul>
+<li>Stop the Tomcat service</li>
+<li>Remove the old Hudson .war and folder from the webapps folder</li>
+<li>Following the procedure to deploy Hudson</li>
+<li>Your jobs should be saved to the .hudson folder in the user&rsquo;s home directory by default (e.g., c:\Users\TomcatAccount.hudson on Windows). They should be there when you start Hudson.</li>
+</ul>
+<p>To restart Hudson:</p>
+<ul>
+<li>Browse to Tomcat Manager</li>
+<li>Select Reload for the /hudson application</li>
+</ul>
+<p>If you&rsquo;ve named the .war hudson.war, you can access Hudson at http://server:port/hudson.</p>
+<h2 id="set-up-git">Set up Git</h2>
+<p>Hudson needs to locate the SSH RSA key files (in the .ssh folder) to use with Git. In order to do so, you need to specify the %HOME% environment variable, if it&rsquo;s not set.</p>
+<p>It&rsquo;s convenient to do so in Hudson:</p>
+<ul>
+<li>From the Hudson dashboard, select Manage Hudson</li>
+<li>Select Configure System</li>
+<li>Under the Global properties section, add the HOME environment variable and set it to the home directory of the Tomcat account where the .ssh folder is located.
+<!-- raw HTML omitted --></li>
+</ul>
+<h2 id="set-up-msbuild">Set up MSBuild</h2>
+<p>MSBuild is the Visual Studio build system. To install the MSBuild plugin, which allows you to access MSBuild:</p>
+<ul>
+<li>From the Hudson dashboard, select Manage Hudson</li>
+<li>Select Manage Plugins</li>
+<li>In the Available tab, check MSBuild and select Install</li>
+</ul>
+<p>To configure the MSBuild plugin:</p>
+<ul>
+<li>From the Hudson dashboard, select Manage Hudson</li>
+<li>Select Configure System</li>
+<li>Under the MSBuild section, provide the path to the MSBuild executable similar to below.
+<!-- raw HTML omitted --></li>
+</ul>
+<h2 id="e-mail-notification">E-mail notification</h2>
+<p><!-- raw HTML omitted --></p>
+<h2 id="create-a-hudson-job">Create a Hudson job</h2>
+<p>Creating a job in Hudson is pretty straight forward, with just a form to fill out and no XML to fiddle with.</p>
+<h3 id="name">Name</h3>
+<p><!-- raw HTML omitted --></p>
+<h3 id="workspace">Workspace</h3>
+<p>The custom workspace is the location where you source code will go after being pulled from version control.</p>
+<p><!-- raw HTML omitted --></p>
+<h3 id="source-code-management">Source Code Management</h3>
+<p>The URL of a Git repository is of the form gitaccount@server:gitrepository.git.</p>
+<p><!-- raw HTML omitted --></p>
+<h3 id="build">Build</h3>
+<p>This can be a multi-step process. You can have as many step as necessary. To add a build step, select an option from the Add build step dropdown.</p>
+<p>In our case, we want to allow the user to select a particular Git tag to build. The list of tags is specified as Choice parameter. The selected value will be stored in an environment variable of the same name, $TAG.</p>
+<p><!-- raw HTML omitted --></p>
+<p>To pull down the tag, we execute a series of step to ensure all tags are pulled down, then checkout the selected tag.</p>
+<p><!-- raw HTML omitted --></p>
+<p>The final step uses MSBuild to run our build script.</p>
+<p><!-- raw HTML omitted --></p>
+<h3 id="post-build">Post-build</h3>
+<p>The Chuck Norris plugin gives us a thumbs up for a successful build.  If the build fails, well let&rsquo;s just say you don&rsquo;t want to make Chuck angry.</p>
+<p><!-- raw HTML omitted --></p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>FATAL: One of setGitDir or setWorkTree must be called</strong></p>
+<ul>
+<li>Try using a different workspace directory for each project</li>
+<li>Try deleting workspace directory</li>
+</ul>
+<p><strong>HTTP Status 500 - java.lang.IllegalStateException: No output folder</strong></p>
+<ul>
+<li>Grant permission to the Tomcat account for the app you&rsquo;re accessing (e.g., webapps\root)</li>
+</ul>
+<h1 id="references">References</h1>
+<p><a href="http://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html#Configuring_Manager_Application_Access">Configuring Tomcat manager</a></p>
+<p><a href="http://wiki.hudson-ci.org/display/HUDSON/Tomcat">Install and upgrade guide for Hudson</a></p>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/ci" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ci</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/git" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">git</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/hudson" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">hudson</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/msbuild" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">msbuild</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/post/source/2012-05-11-modifying-config-file-in-an-msbuild-project/">Modifying .config file in an MSBuild project</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/post/source/2011-12-13-msbuild-project-directory/">MSBuild Project Directory</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://yentran.org" >
+    &copy;  Yen's blog 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

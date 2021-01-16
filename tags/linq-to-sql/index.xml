@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linq to sql on Yen&#39;s blog</title>
+    <link>http://yentran.org/tags/linq-to-sql/</link>
+    <description>Recent content in linq to sql on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Jun 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/linq-to-sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Edit collection with LINQ to SQL</title>
+      <link>http://yentran.org/post/source/2012-06-29-editing-collection-with-linq-to-sql/</link>
+      <pubDate>Fri, 29 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-06-29-editing-collection-with-linq-to-sql/</guid>
+      <description>Let&amp;rsquo;s say for a shopping cart we have an Order entity, a Product entity and an OrderDetails entity which serves as a bridge. The OrderDetails entity has OrderId and ProductId fields to associate products with orders. We also have an Order domain object which is passed from the business logic layer to the repository layer.
+Since products can be added or removed from an order, we need to manage the order details for each Order.</description>
+    </item>
+    
+    <item>
+      <title>Deleting from collection with LINQ to SQL</title>
+      <link>http://yentran.org/post/source/2012-05-18-deleting-from-collection-with-linq-to-sql/</link>
+      <pubDate>Fri, 18 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-05-18-deleting-from-collection-with-linq-to-sql/</guid>
+      <description>I ran into an subtle bug today. Let&amp;rsquo;s say we have a shopping cart page that displays order details and allows the user to remove items from the order. We retrieve the items in the order with the following:
+var items = DataContext.Orders.Single(o =&amp;gt; o.Id == orderId).Items; To remove an item from the order, we have the following:
+var itemToDelete = DataContext.Items.Single(i =&amp;gt; i.Id == itemId); DataContext.Items.DeleteOnSubmit(itemToDelete); DataContext.SubmitChanges(); It&amp;rsquo;s run-of-the-mill as far as LINQ to SQL goes.</description>
+    </item>
+    
+    <item>
+      <title>AutoMapper doesn&#39;t work for mismatched types</title>
+      <link>http://yentran.org/post/source/2011-12-08-automapper-mismatched-types/</link>
+      <pubDate>Thu, 08 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2011-12-08-automapper-mismatched-types/</guid>
+      <description>We&amp;rsquo;re using AutoMapper in ASP.NET MVC automate the mapping of properties between entity and view model objects. This is a highly useful tool which helps us avoid the tedium of having to assigning properties manually. Here&amp;rsquo;s a good introduction to using AutoMapper.
+In one case, I find that the AutoMapper doesn&amp;rsquo;t work for all properties. One property in particular doesn&amp;rsquo;t get mapped. If I manually assign a value to it as a test, I would get a ForeignKeyReferenceAlreadyHasValueException.</description>
+    </item>
+    
+  </channel>
+</rss>

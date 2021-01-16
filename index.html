@@ -1,584 +1,69 @@
-
 <!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>Yen's Blog</title>
-  <meta name="author" content="Yen Tran">
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Yen&#39;s blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
 
-  
-  <meta name="description" content="Octopress instructions are for setting up a new repo; i.e. by running rake setup_github_pages. It doesn’t work if you’ve cloned an existing repo. You &hellip;">
-  
+    
+    
+      <link href="/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css" rel="stylesheet">
+    
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
 
-  
-  <link rel="canonical" href="http://dinhyen.github.io">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Yen's Blog" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="/stylesheets/darkbox.css" rel="stylesheet" type="text/css">
-<script src="/javascripts/darkbox.js" type="text/javascript"></script>
-  
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-24469490-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Yen's Blog</a></h1>
-  
-    <h2>Lens, Wheels, Skates, Keyboard</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:dinhyen.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/travel">Travel</a></li>
-  <li><a href="/about">About</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
+    
       
-  <header>
+
     
-      <h1 class="entry-title"><a href="/blog/2017/08/09/deploying-site-after-cloning-octopress-repo/">Deploying Site After Cloning Octopress Repo</a></h1>
+
     
     
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-08-09T00:00:00-04:00" pubdate data-updated="true">Aug 9<span>th</span>, 2017</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Octopress instructions are for setting up a new repo; i.e. by running <code>rake setup_github_pages</code>.  It doesn’t work if you’ve cloned an existing repo.</p>
-
-<p>You have to manually set up a git repository in the <code>_deploy</code> directory which should track the master branch of the repo on GitHub.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># create new deploy dir
-</span><span class='line'>rm -rf _deploy
-</span><span class='line'>mkdir _deploy
-</span><span class='line'>cd _deploy
-</span><span class='line'># initialize empty git repo
-</span><span class='line'>git init
-</span><span class='line'>git remote add origin git@github.com:your_login/your_repo.github.io.git
-</span><span class='line'># make origin default remote
-</span><span class='line'>git config branch.master.remote origin
-</span><span class='line'># track the master branch
-</span><span class='line'>git checkout --track origin/master
-</span><span class='line'># pull contents
-</span><span class='line'>git pull
-</span><span class='line'># view logs (should show automatically generated commit messages "Site updated at 2017-09-28 etc.")
-</span><span class='line'>git log
-</span><span class='line'>
-</span><span class='line'># Generate content (into the public dir)
-</span><span class='line'>rake generate
-</span><span class='line'># Deploy generated content (copying from public dir into deploy dir then commit)
-</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+      <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Yen&#39;s blog" />
+      <link href="/index.xml" rel="feed" type="application/rss+xml" title="Yen&#39;s blog" />
       
+    
+    
+    <meta property="og:title" content="Yen&#39;s blog" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://yentran.org/" />
+<meta property="og:updated_time" content="2017-08-09T00:00:00+00:00" />
+<meta itemprop="name" content="Yen&#39;s blog">
+<meta itemprop="description" content="">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Yen&#39;s blog"/>
+<meta name="twitter:description" content=""/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
   <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/04/08/installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/">Installing the Curt 11064 Trailer Hitch on a 2009 Honda Fit Sport</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-04-08T23:13:00-04:00" pubdate data-updated="true">Apr 8<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>As if that&rsquo;s not specific enough, I could also add On a Cold Sleety Night, After the Family Had Gone to Bed, While Feeling Renewed Pangs of Hunger.  I feel compelled to write this post so that Kate wouldn&rsquo;t think I spent all that time in the garage playing video games (I wish I could).  I was deciding between the Curt and a DrawTite trailer hitch.  The Curt seemed more substantial, is made in Wisconsin (the DrawTite is made in Mexico) and as it turned out is surprisingly lighter (lighter being relative, more on that later).  Installing the DrawTite requires moving the exhaust pipe out of the way, while the Curt requires drilling a hole.  The latter raises its installation difficulty to 6/10 according to a reputable web site.  I thought what the heck I could handle a drill, so I went with the Curt.  Installation should take about an hour, according to the same web site.  It ended up taking much longer than that&mdash;I won&rsquo;t say by how much because it&rsquo;s rather embarrassing, and that doesn&rsquo;t even include the amount of time buying tools online and repeated trips to the local hardware store.  I could of course have had the professionals at Rack Attack or even U-Haul do the job for reasonable cost, but that would have been a much shorter blog post.</p>
-
-<p>Gearhead that I think I am, here&rsquo;s the list of tools I used with varying degrees of competency and success:</p>
-
-<ul>
-<li>Rhino ramps</li>
-<li>Large garden stone masquerading as wheel chock</li>
-<li>Heavy-duty Milwaukee &frac12;&#8221; &ldquo;Hole Shooter&rdquo; drill</li>
-<li>17/32&#8221; black oxide drill bit, &frac12;&#8221; drive</li>
-<li>Tree-shaped tungsten carbide burr bit</li>
-<li>Torque wrench, up to 150 lb-ft, &frac12;&#8221; drive</li>
-<li>&frac34;&#8221; socket, &frac12;&#8221; drive</li>
-<li>&frac12;&#8221; drive extension rod</li>
-<li>Wire guide</li>
-<li>Regular cordless drill</li>
-<li>Assorted screwdrivers</li>
-<li>Pair of pliers</li>
-<li>Silicone lubricant</li>
-<li>Blocks of wood (as headrest)</li>
-<li>Bunch of collapsed cardboard boxes to lie on</li>
-<li>Wearable LED head lamp</li>
-<li>Sharpie permanent marker</li>
-<li>iPhone (to take picture and record video)</li>
-</ul>
-
-
-<p>Here&rsquo;s the executive summary: make sure you remove the plastic cover immediately aft of the rear wheelwell on the driver side.  Then feel free to skip the rest of this post.</p>
-
-<p>The helpful <a href="https://www.etrailer.com/tv-install-trailer-hitch-2012-honda-fit-11064.aspx">installation video</a> seemed easy enough.  The lack of swearing had me feeling optimistic.  After I had the car on the ramps and all the tools assembled, things started off pretty well.  The most difficult part was &ldquo;hanging&rdquo; the hitch in place so that I could use it as a template to mark the hole to drill on the driver side.  It was difficult because I had to hold the hitch with one hand while tightening the nut with the other, and there was little wiggle room.  I ended up supporting the hitch with my knee on one end and shoulder/forearm on the other; if it were a yoga pose it would be name &ldquo;opossum faking death&rdquo;.  It wasn&rsquo;t pretty or doctor-approved but it worked.  Drilling the hole was challenging too because the &ldquo;Hole Shooter&rdquo; weighs like a mini-hitch; they do not make things light in Wisconsin.  The video mentioned enlarging the drilled hole so that the bulky spacer can be pushed through.  I had read elsewhere that instead the adjacent pre-drilled hole could be used with a wire guide to pull the spacer and bolt through.  As a test, I was able to get the wire guide through, so this seemed promising.  The hole was just a tad smaller than the spacer, so I went to the hardware store to get the burr bit; this wasn&rsquo;t a wasted trip as I had to return the rental &ldquo;Hole Shooter&rdquo;.  I was tempted to go with a tapered file rather than the burr bit, but luckily I didn&rsquo;t or I wouldn&rsquo;t be writing this until tomorrow at the earliest.  Anyways, after enlarging the hole, the spacer fit but seemed to be too long to go through.  I dutifully enlarged the hole further until it could fit through.  Light at the end of the tunnel, literally.  But lo and behold, as I tried to pull it through with the wire guide, something blocked its way.  So now the spacer was completely in the whole, but stuck.  I had visions of the spacer rattling inside the frame tube for the next few years as I drive down the road, hitch-less.  Finally, with the help of screwdriver to nudge the spacer and push it up through another, smaller hole, and a pair of pliers to grab it by the end, I was able to extract the spacer.  I peeped through the hole and was able to to make out a semi-circular opening between it and the hole I drilled.  The opening must not have been large enough for the spacer to fit, and definitely not for the bolt.  That&rsquo;s the last time I listen to an Internet advice!  Well, maybe.  So now back to the pre-shortcut plan of enlarging the drilled hole.  To make more room, I decided to completely remove the plastic cover.</p>
-
-<p>You see, I had only loosened the cover and pushed it out of the way to access the pre-drilled hole.  I violated my own rule of &ldquo;never take shortcuts&rdquo;.  Removing it wasn&rsquo;t hard, just pop open 2-4 plastic fasteners and 2 screws.  Once the cover was off, I looked around and discovered to my amazement that there was a large rearward opening the into compartment I was trying so hard to get into!  It WAS possible to come in through the South Entrance.  Afterward it took me about 10 seconds to get the bolt and spacer in place.</p>
-
-<p>This video shows the opening relative to the drilled hole.</p>
-
-<iframe src="http://www.youtube.com/embed/AFs9emotQQg?modestbranding=1" allowfullscreen="true" height="400px" width="100%"></iframe>
-
-
-<p>Here&rsquo;s the view from below.</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/curt-hitch/curt-hitch-access.jpg" alt="" /></p>
-
-<p>I took this video by sticking the headlight into the opening, then inserting the iPhone right above it.  As you can see, there was no way that anything could have been pulled through that semi-circular opening.  Overzealous googling led me through a wild goose chase.</p>
-
-<iframe src="http://www.youtube.com/embed/XC3CNcJDP1U?modestbranding=1" allowfullscreen="true" height="400px" width="100%"></iframe>
-
-
-<p>The hitch is finally in place and we are in business.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop/">How to Not Upgrade the Nexus 7 to Lollipop</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-16T00:00:00-05:00" pubdate data-updated="true">Feb 16<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I have a first-generation Nexus 7 tablet made by Asus which ran KitKat 4.4.  When the OTA Lollipop update became available, I couldn&rsquo;t wait to install it.  The latest and greatest Android running on Google hardware seemed to be a match made in heaven; it would be better, prettier and faster, right?  As you can probably guess from the title of this post, the answer was a resounding <em>no</em>.  Everything became sluggish, swipes would only registered after a couple of seconds, random things popped open and close.  The tablet was downright unusable.</p>
-
-<p>Rather than splurging for a new tablet, which was probably what Google wanted me to do, I opted to go back to KitKat, since the hardware itself was perfectly fine.  The <a href="https://developers.google.com/android/nexus/images">process to restore the KitKat system image</a> using the ADB command-line tool that accompanies the Android SDK was quite simple.  I had some difficulty to get my Windows 7 machine to recognize the Nexus 7, until I installed the <a href="http://developer.android.com/sdk/win-usb.html">Google USB drivers</a>.  Alternatively, I could have ran ADB on a Mac, for which USB drivers wouldn&rsquo;t have been necessary.  An important part of the process was to make sure I chose the correct system image.  For a Nexus 7, the KitKat image was &ldquo;nakasi&rdquo; 4.4.4 (KTU84P).  The image archive contained a flashing script that I executed after unlocking the bootloader.  The whole thing took about 5 minutes once everything worked.</p>
-
-<p>So with its brain transplanted with a fresh KitKat image, the Nexus was back to its own happy self.  Unfortunately, the good feeling didn&rsquo;t last long.  In short order, Android started notifying me that the 5.0 system update aka Lollipop had <em>already</em> been downloaded and ready to install.  There was no way to dismiss the notification or tell it to remind me again in, oh, never.  The helpful notification sat in the system tray and just generally got in the way.  This is by far one of the worst instances of nagware-ism.</p>
-
-<p>To disable the system update notification, I had to root Android.  Fortunately at this point there were a few mature tools that make doing so quite simple.  I used the <a href="http://www.wugfresh.com/nrt">Nexus Root Toolkit 2.0.4</a>.  Since I was on a fresh install of KitKat, all I had to do was to 1) unlock the bootloader, and 2) root.  The toolkit also installs a couple of useful tool such as SuperSU and BusyBox Installer.  The latter lets you grant root privilege on-demand to any app that requests it.</p>
-
-<p>The next step was to turn off the system update notification service.  There are a few apps, the one I used being DisableService.  Once I navigated to the Google System Service node, System Update Service was already disabled.  Hmm, clearly that wasn&rsquo;t it because there was still a big fat notification in the system tray.  It turned out that I had to go to the Google Play Services node.  Lo and behold, there was another System Update Service.  Disabling this one and restarting the device did the trick.</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/nexus-7-kitkat/disable-service.png" alt="" /></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+        Yen&#39;s blog
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/07/09/validating-multiple-fields-with-angular/">Validating Multiple Fields With Angular</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-09T16:52:00-04:00" pubdate data-updated="true">Jul 9<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Angular makes it simple to validate a single form field.  Validating multiple fields requires a bit more work.  The approach that works for me is use a directive to lay out the framework, but to perform the actual validation in the parent scope.  Since the user defines the specifics of the validation, any arbitrary validation can be performed and the directive can be kept simple.</p>
-
-<p>In this example, I&rsquo;d like to validate that the sum of 2 text inputs equals 10.  I would specify that the validation should be performed via the <code>multi</code> directive, which also specifies the custom validation function from the parent scope.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;form name="form" novalidate&gt;
-</span><span class='line'>  &lt;p&gt;
-</span><span class='line'>    &lt;input type="text" name="field1" ng-model="field1" multi="validateSum" /&gt;
-</span><span class='line'>    &lt;span ng-show="form.field1.$error.multi"&gt;Must add up to 10&lt;/span&gt;
-</span><span class='line'>  &lt;/p&gt;
-</span><span class='line'>  &lt;p&gt;
-</span><span class='line'>    &lt;input type="text" name="field2" ng-model="field2" multi="validateSum" /&gt;
-</span><span class='line'>    &lt;span ng-show="form.field2.$error.multi"&gt;Must add up to 10&lt;/span&gt;
-</span><span class='line'>  &lt;/p&gt;
-</span><span class='line'>&lt;/form&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The <code>validateSum</code> function should return true (valid) if the sum of the 2 fields equals 10, or if any of the fields is empty.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$scope.validateSum = function () {
-</span><span class='line'>  if ($scope.field1 !== null && $scope.field2 !== null) {
-</span><span class='line'>    return parseFloat($scope.field1) + parseFloat($scope.field2) === 10;
-</span><span class='line'>  } else {
-</span><span class='line'>    return true;
-</span><span class='line'>  }
-</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The directive specifies the validation function as a value of the <code>multi</code> attribute: <code>multi="validateSum"</code>.  This isn&rsquo;t quite idiomatic for Angular.  The preferred alternative is probably to create an isolate scope for the directive and pass in the function via <code>&amp;</code> or <code>&amp;anotherAttribute</code>.  I just think providing the external function as the value of the directive&rsquo;s attribute is cleaner and more succinct.  However, this approach requires a bit of extra handling in the directive&rsquo;s postlink function:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> var validate = $parse(attrs.multi)(scope);</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The <code>$parse</code> service evaluates the value of <code>attrs.multi</code>, which is the string <code>validateSum</code>, in the context of the directive&rsquo;s scope.  Essentially this gives us the reference to <code>scope.validateSum</code>, which is created automatically by Angular and points to the function defined in the parent scope.</p>
-
-<p>In order to work properly with Angular&rsquo;s form validation, the directive integrates with Angular&rsquo;s <code>ngModel</code> directive.  This is specified with <code>require: 'ngModel'</code> in the directive definition object.  Once this is done, the model&rsquo;s controller is provided as a 4th parameter to the directive&rsquo;s postlink function.</p>
-
-<p>When the user changes the value of an input, we should perform the validation.  If the validation fails, the model should be marked as invalid, which results in the form being invalid, and we can display an error message and prevent the form from being submitted.  This is as simple as calling <code>ngModelController.$setValidity</code>:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ngModelCtrl.$viewChangeListeners.push(function () {
-</span><span class='line'>  ngModelCtrl.$setValidity('multi', validate());
-</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Calling <code>validate()</code> would invoke <code>scope.validateSum()</code> which would invoke <code>validateSum()</code> in the parent scope to perform the actual validation.  Note that validation is performed only after a change has been made, so any existing model value wouldn&rsquo;t be validated.</p>
-
-<p>Any key can be used with <code>$setValidity</code>, in this case <code>multi</code>.  If the input is invalid, the special error object <code>formName.inputName.$error</code> would become <code>{ multi: true }</code>.  We can key on the presence of the <code>multi</code> property to manually display an error message, or use <a href="https://docs.angularjs.org/api/ngMessages/directive/ngMessages">ngMessages</a>.</p>
-
-<p>When the user changes an input, we should validate it and related inputs, as the overall validity depends on all inputs.  Since the inputs could be anywhere in the DOM, I figured the best way to notify all inputs is to use a root scope broadcast.  Since the input which triggers the event would also handle it, it&rsquo;s sufficient to just triggers the event in the change handler and validate in the broadcast handler.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>scope.$on('multi:valueChanged', function (event) {
-</span><span class='line'>  ngModelCtrl.$setValidity('multi', validate());
-</span><span class='line'>});
-</span><span class='line'>
-</span><span class='line'>ngModelCtrl.$viewChangeListeners.push(function () {
-</span><span class='line'>  $rootScope.$broadcast('multi:valueChanged');
-</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This is the directive in its entirety:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>app.directive('multi', ['$parse', '$rootScope', function ($parse, $rootScope) {
-</span><span class='line'>  return {
-</span><span class='line'>    restrict: 'A',
-</span><span class='line'>    require: 'ngModel',
-</span><span class='line'>    link: function (scope, elem, attrs, ngModelCtrl) {
-</span><span class='line'>      var validate = $parse(attrs.multi)(scope);
-</span><span class='line'>
-</span><span class='line'>      ngModelCtrl.$viewChangeListeners.push(function () {
-</span><span class='line'>        // ngModelCtrl.$setValidity('multi', validate());
-</span><span class='line'>        $rootScope.$broadcast('multi:valueChanged');
-</span><span class='line'>      });
-</span><span class='line'>
-</span><span class='line'>      var deregisterListener = scope.$on('multi:valueChanged', function (event) {
-</span><span class='line'>        ngModelCtrl.$setValidity('multi', validate());
-</span><span class='line'>      });
-</span><span class='line'>      scope.$on('$destroy', deregisterListener); // optional, only required for $rootScope.$on
-</span><span class='line'>    }
-</span><span class='line'>  };
-</span><span class='line'>}]);</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And there you have it.</p>
-
-<p>Here&rsquo;s the <a href="http://plnkr.co/edit/BHnxxKhhP0xG96MekAtr">plunk</a>;</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+    </a>
+    <div class="flex-l items-center">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/24/validating-required-form-fields-with-angular/">Validating Required Form Fields With Angular</a></h1>
-    
-    
-      <p class="meta">
-        
 
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-24T13:33:00-04:00" pubdate data-updated="true">Apr 24<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Two things can happen when the user fills out a form field: the entered value is incorrect or the value is missing.  With Angular validating either case is consistent and simple.  The issue is when to show the error message: as the value is being entered, after the field loses focus or after the user submits the form.  I think that for a better usability, the user should be informed that the value is incorrect while entering the value.  This way the user isn&rsquo;t forced to scan the form to locate the problem.  If the user makes a mistake, it&rsquo;s more convenient to be able to fix it while already editing the field.  And we also take full advantage of Angular&rsquo;s instant update.  This approach works well for validating whether a value is correct.</p>
-
-<p>However validating a required field is different.  We don&rsquo;t know if a value is missing until the user submits the form.  So to handle both scenarios, we should be able to display an error message as the user enters a value and after the user submits the form.</p>
-
-<p>Before Angular 1.3, showing an error message requires some logic based on field statuses such as invalid or dirty.  With Angular 1.3 and later, we can use the new <code>ngMessages</code> directive to show an error message only when it is present.  Take as an example the following text field:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span> <span class="na">required</span> <span class="na">ng-maxlength=</span><span class="s">&quot;5&quot;</span><span class="nt">&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Following is how we can display an instantaneous error message as soon as the max length is exceeded.  If this is the case, the <code>form.name.$error</code> property would have the value <code>"$error":{"maxlength":true}</code> and only the <code>span</code> for <code>maxlength</code> would be displayed.  Only one error message would be displayed at a time.  If there are multiple matches, for example <code>maxlength</code> and <code>pattern</code>, I believe the one which appears earliest would be used.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">ng-messages=</span><span class="s">&quot;form.name.$error&quot;</span> <span class="na">class=</span><span class="s">&quot;help-block&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;span</span> <span class="na">ng-message=</span><span class="s">&quot;maxlength&quot;</span><span class="nt">&gt;</span>max length 5<span class="nt">&lt;/span&gt;</span>
-</span><span class='line'><span class="nt">&lt;/div&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To display an error message for missing value, unfortunately, still relies on a flag for whether the form is submitted.  This would be shown after the user submits the form.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">ng-show=</span><span class="s">&quot;form.$submitted&quot;</span> <span class="na">ng-messages=</span><span class="s">&quot;form.name.$error&quot;</span> <span class="na">class=</span><span class="s">&quot;help-block&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;span</span> <span class="na">ng-message=</span><span class="s">&quot;required&quot;</span><span class="nt">&gt;</span>required<span class="nt">&lt;/span&gt;</span>
-</span><span class='line'><span class="nt">&lt;/div&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Finally, we can apply a CSS class to the container when an error condition exists; i.e., when the field contains an invalid value and either the field has been modified (dirty) or the form has been submitted.  Because the field is required, it is already invalid from the start, so the additional checks ensure that we don&rsquo;t apply the error styling right off the bat, which would be a disconcerting experience.  We&rsquo;re using Bootstrap which has a class, <code>.has-error</code>, which applies red text and border to labels, inputs and help blocks.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span> <span class="na">ng-class=</span><span class="s">&quot;{&#39;has-error&#39;:form.name.$invalid &amp;&amp; (form.name.$dirty || form.$submitted)}&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'><span class="nt">&lt;/div&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here&rsquo;s the <a href="http://plnkr.co/edit/bB8mGsX6bHMZu4SvfCA2">plunk</a>.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/18/angular-in-jekyll-or-octopress/">Angular in Jekyll/Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-18T00:00:00-04:00" pubdate data-updated="true">Apr 18<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Have a problem with Angular scope variable binding not working on a Jekyll or Octopress (which uses Jekyll) page?  It so happens that Jekyll&rsquo;s Liquid Template uses the same  syntax as Angular and would attempt to process the markup before Angular can get to it.  To get around the problem, you can surround Angular markup with <code>&#123;% raw %&#125;</code> and <code>&#123;% endraw %&#125;</code> tags.  Alternatively, you can also forgo from using this syntax altogether and use Angular&rsquo;s <code>ng-bind</code> directive to bind a variable to a DOM element.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/15/copying-files-in-hudson/">Copying Files in Hudson</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -587,731 +72,200 @@
 
 
 
-  
 
 
-<time datetime="2014-04-15T20:05:00-04:00" pubdate data-updated="true">Apr 15<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
 
 
-  <div class="entry-content"><p>Copying files somewhere is pretty standard procedure when deploying an app.  Interestingly I&rsquo;ve never had to copy files directly in Hudson.  Until now I&rsquo;ve only deployed .NET apps in Hudson and used MSBuild&rsquo;s Copy task to copy the files to a share folder.  Now that I want to deploy Angular and other client apps in Hudson, I&rsquo;d have to copy the files manually.</p>
 
-<p>My initial attempt was to add a new Execute Shell build step to run <code>xcopy</code>.  Since Hudson executes the command through the Bourne shell, which interprets any backslash in the path as the escape character, I&rsquo;d have to escape the backslash itself.  Why Windows has to be different from everyone else is a major source of annoyance if you have to move back and forth between Windows and *nix.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>xcopy c:\\source\\app\\* \\\\server\\share\\app</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This worked, but in order for xcopy to copy subdirectories, refrain from prompting everytime it needs to overwrite a file and take other actions necessary for unsupervised execution, I needed to specify additional parameters.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>xcopy c:\\source\\app\\* \\\\server\\share /c /k /e /r /y /exclude:c:\\source\\xcopy_exclude.txt</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Unfortunately this was when xcopy blows up with the &ldquo;invalid number of parameters&rdquo; error.  It probably had to do with the shell not passing the parameters to xcopy.  No dice if I put the command in a batch file then executing it.  Ditto when I tried <code>robocopy</code>, which prints a nicer error message but is functionally the same as xcopy.  As a note, you could test all of this in a Bourne shell rather than invoking Hudson every time.</p>
-
-<p>It occurred to me to use something that&rsquo;s native to the shell, rather than trying to get it to play nice with xcopy.  You&rsquo;d still have to deal with the backslash in the share:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cp -r /c/source/app/* \\\\server\\share</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This worked!  Also for things like &ldquo;rm -rf&rdquo;.  We&rsquo;re done, right?  Well, this mixmatching of different command-line styles seems unwieldy.  After I experimented further, it turned out that I had made an error from the start.  In addition to the Execute Shell build step, there&rsquo;s another type called Execute Windows Batch Command.  This build step allows you to run commands in a Windows shell.  Thus you can run execute xcopy, or anything else, as you would in the command prompt without needing to escape backslash.</p>
-
-<p>I&rsquo;d also like to be able to specify the share folder at run time so the project can be deployed to different servers.  In my initial attempt, I created a drop-down list parameter for the server name.  Then I figured to use the following xcopy command which incorporates the SERVER parameter.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>xcopy c:\source\app\* \\%SERVER%\app</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The %SERVER% syntax is used to reference an environment variable in Windows.  This approach turned out to be an abject failure.  It turned out that entire share has to be specified as an environment variable; e.g., %SHARE% should point to \server\app.  Then I could issue commands such as:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>del /s /q %SHARE%\*
-</span><span class='line'>xcopy c:\source\app\* %SHARE%</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/09/moca-home-network/">A MoCA Home Network</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-09T13:27:00-04:00" pubdate data-updated="true">Apr 9<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The benefits of a wired home network are many.  I use the <a href="http://www.silicondust.com/products/hdhomerun/prime">SiliconDust HDHomerun Prime</a> network TV tuners to watch cable TV on any computer in the house without the need for a set-top box.  However, it is quite bandwidth-intensive and even a wireless-N connection just doesn&rsquo;t cut it.  The picture would be plagued with stutters, pause and artifacts and pretty much unwatchable, especially for hockey with its lightning-fast actions.</p>
-
-<p>For wired connectivity without an existing Ethernet network there are three options.  The best option from both cost and performance standpoints is available if the house is wired for a land line with Cat-5/5e/6 wiring, which is invariably the case with a modern construction.  In this case you can just repurpose the existing wiring and swap out the RJ11 telephone jacks for RJ45 Ethernet jacks.  This requires a bit of manual labor but the results are beautiful and satisfying.  I did this for a previous residence and it worked wonderfully. Unfortunately in my current house the wiring leaves something to be desired.  The phones lines are not wired point-to-point but daisy-chained together; this rules out an Ethernet network.</p>
-
-<p>The second option is to use the power lines themselves, which hopefully every house comes equipped with. I used a pair of TP-Link AV500 Nano power line adapters.  Installation couldn&rsquo;t be any easier&mdash;plug them into the power sockets and they just work. The LAN connection is automatically detected in Windows and OS X.  My tests showed that the connection was able to achieve the the full bandwidth that I am supposed to get. My TV feed no longer stuttered or became corrupted. Unfortunately this solution isn&rsquo;t perfect either.  Under heavy load the adapters had a nasty habit of tripping the circuit breakers.  I couldn&rsquo;t even run the network speed test while Windows Media Center was playing without bringing the power down.  Since the powerline adapters don&rsquo;t play nice with surge protectors I don&rsquo;t really have a way to prevent it from happening.</p>
-
-<p>This leaves the last option, a home network over the coaxial cabling, which like most American household we have plenty of. Each room has one coaxial outlet, or even two. The industry standard for a home network over coaxial cabling is the Multimedia over Coaxial Alliance (MoCA) standard.  It seems to be a relatively young technology as there aren&rsquo;t many products for it. Interestingly this is something I&rsquo;m already using as a Verizon FiOS subscriber.  Verizon uses MoCA for the Optical Network Terminal (ONT) which converts the optical fiber signal to electric signal. To use the coaxial cabling to carry Ethernet network traffic requires a MoCA network adapter or bridge, which converts between the different signal formats. I have the standard <a href="http://www.actiontec.com/189.html">Actiontec MI424WR router</a>, which has a built-in MoCA adapter.   It would act as one endpoint.  For each additional endpoint, I would need a separate MoCA network adapter. There are only a handful of MoCA network adapters, the most popular of which the <a href="http://www.actiontec.com/251.html">Actiontec ECB2500C</a>.</p>
-
-<p>I wasn&rsquo;t sure about the best way to set up the MoCA network.  The MI424WR router can connect to the ONT via a coaxial or Cat-5 cable. In my case the MoCA WAN comes into the router via the coaxial connection. However, since the router has only one coaxial terminal, I wasn&rsquo;t sure whether I could connect to the MoCA LAN using the same coaxial terminal. I thought that since the router is connected to the MoCA WAN coaxially, I would need an additional MoCA adapter for each outgoing connection from the router to the MoCA LAN.  This possible setup is shown in the below figure.  I would need 4 MoCA adapters to extend connectivity to 2 rooms.</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/moca-home-network/moca-bad.png" alt="" /></p>
-
-<p>Fortunately, this scenario isn&rsquo;t necessary.  It turns out that the router can connect to both MoCA WAN and MoCA LAN through the same coaxial connection. This is because the respective networks operate over different frequency bands and do not interfere with each other. I would only need a MoCA adapter at each receiving end.  Since I can use the router as a MoCA adapter in one room, I&rsquo;d only need one additional MoCA adapter.</p>
-
-<p><img src="http://yentran.isamonkey.org/gallery/moca-home-network/moca-good.png" alt="" /></p>
-
-<p>If you need more than one Ethernet port, Adaptec also makes a 4-port Home Theater Coaxial Network Adapter (ECB3500T01), which is only marginally more expensive than a 1-port adapter.  It would be a more compact solution than using an Ethernet switch with the 1-port adapter.</p>
-
-<p>Of note, the cable splitter must be MoCA-compatible. Since MoCA operates in the 0.5-1.65 GHz frequence band, the splitter should be rated for at least this range. Fortunately there are many inexpensive options.</p>
-
-<p>Update (Oct 9, 2014): It turns out that Verizon sells a Verizon-branded <a href="https://teleproducts.verizon.com/fileshare/plm/brochure/ATWECB3000N_brochure.pdf">Fios wireless network extender</a> for $75 which comes with 2 Gigabit Ethernet ports as well as Wireless-N and MoCA connectivity, ostensibly to extend a home network to hard-to-reach places.  In retrospect the Wireless-N Wi-Fi extender would have made it a better purchase than the 4-port Home Theater Coaxial Network Adapter.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/03/simple-tasks-with-grunt/">Simple Tasks With Grunt</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-03T15:16:00-05:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&rsquo;re working with conventional server-side platforms.  Unfortunately, when it comes to JavaScripts and CSS, automation tools are harder to find. That is, until Grunt comes along (following Node, which turned upside down the whole idea of server vs client side in the first place).</p>
-
-<p>As a self-described &ldquo;task runner&rdquo;, Grunt is powerful and pleasantly approachable.  Its succinctness makes it a joy to use.  This carries over into the Grunt documentation, which is really excellent.  Inspired by the <a href="http://gruntjs.com/sample-gruntfile">Sample Gruntfile tutorial</a>, I&rsquo;d like to walk through my own <code>Gruntfile</code> created for a <a href="https://github.com/dinhyen/darkbox">small JavaScript library</a>.  The goal is to automate a typical process of building the app, from generating CSS from Sass, aggregating various source files into a single file, and minifying the result.</p>
-
-<p>Once you <a href="http://gruntjs.com/installing-grunt">have Grunt installed</a> using the Node Package Manager, you will need a <code>package.json</code> file, just as for other Node utilities.  The quickest way to create a <code>package.json</code> file is to simply run <code>npm init</code> which generates the file after a series of questions.</p>
-
-<p>The following libraries will be used:</p>
-
-<ul>
-<li><a href="https://github.com/gruntjs/grunt-contrib-compass">grunt-contrib-compass</a>: generates CSS from Sass</li>
-<li><a href="https://github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat</a>: combines various files into a single file</li>
-<li><a href="https://github.com/gruntjs/grunt-contrib-cssmin">grunt-contrib-cssmin</a>: minifies CSS</li>
-<li><a href="https://github.com/gruntjs/grunt-contrib-jshint">grunt-contrib-jshint</a>: combs through JavaScript and flags errors or usage issues</li>
-<li><a href="https://github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify</a>: mangles and minifies JavaScript</li>
-<li><a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch</a>: performs tasks whenever a file changes</li>
-</ul>
-
-
-<p>The recommended approach, as stated at the beginning of the documentation for each plugin, is to run <code>npm install grunt-contrib-xxx --save-dev</code>, which has the dual benefit of installing the plugin and also adding a reference to it in <code>package.json</code>.</p>
-
-<p>Besides <code>package.json</code>, the only other file you need is <code>Gruntfile</code>, in which you define and configure the tasks to run. Configuration options are specified as the argument to <code>grunt.initConfig</code>.</p>
-
-<p>The first line reads in <code>package.json</code> and turns it into an object.  In this case, I&rsquo;m interested in product name, but it can provide <a href="http://package.json.nodejitsu.com">many other useful properties</a>.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>All <code>Gruntfile</code> tasks share the <a href="http://gruntjs.com/configuring-tasks">same basic syntax</a> for specifying options, input and output.  Each task&rsquo;s configuration block is named after the plugin; for example, the configuration block for the <code>grunt-contrib-uglify</code> is simply <code>uglify</code>.  Each task can have arbitrary targets.  You&rsquo;ll probably see a &ldquo;test&rdquo; target for testing or a &ldquo;dist&rdquo; target for building a distribution.  Since I want to build CSS and JavaScript, here I have 2 targets, &ldquo;scripts&rdquo; and &ldquo;stylesheets&rdquo;.  When there are multiple targets in a task, each target can be executed directly.  For example, <code>grunt concat:scripts</code> runs just the &ldquo;scripts&rdquo; target.  If you don&rsquo;t provide a target, then all targets would be run in order.</p>
-
-<p>The Compass task generates CSS from Sass source.  Of course, Compass <a href="http://compass-style.org/install">must be installed</a> first.  The following options simply instruct Compass to process Sass files in the directory &ldquo;sass&rdquo; and generate the corresponding CSS files in the directory &ldquo;css&rdquo;.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">compass</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">sassDir</span><span class="o">:</span> <span class="s1">&#39;sass&#39;</span><span class="p">,</span>
-</span><span class='line'>      <span class="nx">cssDir</span><span class="o">:</span> <span class="s1">&#39;css&#39;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When developing, it would be nice to be able to preview changes made to the Sass source.  This is where the watch plugin comes in.  In the simplest use case it simply detects that one or more files have been changed and then runs certain tasks.  The following options allow me to re-generate CSS each time a Sass file is modified.  Start watching by typing <code>grunt watch</code> at the command prompt.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">files</span><span class="o">:</span> <span class="s1">&#39;**/*.scss&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;compass&#39;</span><span class="p">]</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Typically JavaScript and CSS source is distributed over multiple files.  In production you&rsquo;d want to combine the various source files into a single file for performance reason.  This can be done with the concat plugin.  For the source, I&rsquo;m using a globbing pattern for simplicity; <code>src/**/*.js</code> means all <code>.js</code> files in the <code>src</code> directory and any of its sub-directories.  The files would be combined in alphabetical order. An alternative would be to specify an array of individual files.  While this lets you control the ordering of files, it becomes unwieldy for a large number of files. Of course, there are <a href="http://gruntjs.com/configuring-tasks#globbing-patterns">many ways</a> to skin the cat.  For the output, I&rsquo;m using the project&rsquo;s name which comes from <code>package.json</code>.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">concat</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">separator</span><span class="o">:</span> <span class="s1">&#39;;&#39;</span>
-</span><span class='line'>    <span class="p">},</span>
-</span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;src/**/*.js&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.js&#39;</span>
-</span><span class='line'>  <span class="p">},</span>
-</span><span class='line'>  <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;css/**/*.css&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.css&#39;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The cssmin plugin provides CSS minification.  The source should be the output of the concat stage.  Note the variable substitution syntax.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">cssmin</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&lt;%= concat.stylesheets.dest %&gt;&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.min.css&#39;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The uglify plugin is the JavaScript equivalent of cssmin.  It also mangles variable names which reduces file size further at the expense of readability.  Since mangling pretty much makes your JavaScript indecipherable and impossible to debug, you can also provide a <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source map</a> which lets you view the original, non-uglified source when debugging.  The uglify plugin have all these and sundry options.  Here it also inserts a comment with some basic information at the top of the file.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">uglify</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">banner</span><span class="o">:</span> <span class="s1">&#39;/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today(&quot;yyyy-mm-dd&quot;) %&gt; */\n&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">sourceMap</span><span class="o">:</span> <span class="kc">true</span>
-</span><span class='line'>  <span class="p">},</span>
-</span><span class='line'>  <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&lt;%= concat.scripts.dest %&gt;&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.min.js&#39;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The jshint configuration block just sets some <a href="http://www.jshint.com/docs/options">options for jshint</a>.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">jshint</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">curly</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">eqeqeq</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">immed</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">latedef</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">newcap</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">noarg</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">sub</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">undef</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">unused</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">boss</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">eqnull</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">node</span><span class="o">:</span> <span class="kc">true</span>
-</span><span class='line'>  <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Finally register a default task and a useful task.  Tasks would be executed in the order specified.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;jshint&#39;</span><span class="p">,</span> <span class="s1">&#39;compass&#39;</span><span class="p">,</span> <span class="s1">&#39;concat&#39;</span><span class="p">,</span> <span class="s1">&#39;cssmin&#39;</span><span class="p">,</span> <span class="s1">&#39;uglify&#39;</span><span class="p">]);</span>
-</span><span class='line'><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;sassify&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;compass&#39;</span><span class="p">]);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To run a task, simply specify the task&rsquo;s name as a argument to <code>grunt</code> on the command line; e.g., <code>grunt jshint</code>.  Simply typing <code>grunt</code> runs the default task.  Below is the output for running the default task; even for this small set of tasks, running them manually or maintaining a script without Grunt would have been a tedious chore.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Running</span> <span class="s2">&quot;jshint:scripts&quot;</span> <span class="p">(</span><span class="nx">jshint</span><span class="p">)</span> <span class="nx">task</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="mi">2</span> <span class="nx">files</span> <span class="nx">lint</span> <span class="nx">free</span><span class="p">.</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;compass:stylesheets&quot;</span> <span class="p">(</span><span class="nx">compass</span><span class="p">)</span> <span class="nx">task</span>
-</span><span class='line'><span class="nx">unchanged</span> <span class="nx">sass</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">scss</span>
-</span><span class='line'><span class="nx">unchanged</span> <span class="nx">sass</span><span class="o">/</span><span class="nx">mixins</span><span class="p">.</span><span class="nx">scss</span>
-</span><span class='line'><span class="nx">unchanged</span> <span class="nx">sass</span><span class="o">/</span><span class="nx">screen</span><span class="p">.</span><span class="nx">scss</span>
-</span><span class='line'><span class="nx">Compilation</span> <span class="nx">took</span> <span class="mf">0.012</span><span class="nx">s</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;concat:scripts&quot;</span> <span class="p">(</span><span class="nx">concat</span><span class="p">)</span> <span class="nx">task</span>
-</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">js</span> <span class="nx">created</span><span class="p">.</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;concat:stylesheets&quot;</span> <span class="p">(</span><span class="nx">concat</span><span class="p">)</span> <span class="nx">task</span>
-</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">css</span> <span class="nx">created</span><span class="p">.</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;cssmin:stylesheets&quot;</span> <span class="p">(</span><span class="nx">cssmin</span><span class="p">)</span> <span class="nx">task</span>
-</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">css</span> <span class="nx">created</span><span class="o">:</span> <span class="mf">3.9</span> <span class="nx">kB</span> <span class="err">→</span> <span class="mf">2.78</span> <span class="nx">kB</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Running</span> <span class="s2">&quot;uglify:scripts&quot;</span> <span class="p">(</span><span class="nx">uglify</span><span class="p">)</span> <span class="nx">task</span>
-</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">map</span> <span class="nx">created</span> <span class="p">(</span><span class="nx">source</span> <span class="nx">map</span><span class="p">).</span>
-</span><span class='line'><span class="nx">File</span> <span class="nx">dist</span><span class="o">/</span><span class="nx">darkbox</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">js</span> <span class="nx">created</span><span class="o">:</span> <span class="mf">5.45</span> <span class="nx">kB</span> <span class="err">→</span> <span class="mf">2.51</span> <span class="nx">kB</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Done</span><span class="p">,</span> <span class="nx">without</span> <span class="nx">errors</span><span class="p">.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Below is the entire <code>Gruntfile</code>.  Happy grunting.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-<span class='line-number'>77</span>
-<span class='line-number'>78</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
-</span><span class='line'>    <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span>
-</span><span class='line'>    <span class="nx">compass</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>          <span class="nx">sassDir</span><span class="o">:</span> <span class="s1">&#39;sass&#39;</span><span class="p">,</span>
-</span><span class='line'>          <span class="nx">cssDir</span><span class="o">:</span> <span class="s1">&#39;css&#39;</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>    <span class="p">},</span>
-</span><span class='line'>    <span class="nx">concat</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>          <span class="nx">separator</span><span class="o">:</span> <span class="s1">&#39;;&#39;</span>
-</span><span class='line'>        <span class="p">},</span>
-</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;src/**/*.js&#39;</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.js&#39;</span>
-</span><span class='line'>      <span class="p">},</span>
-</span><span class='line'>      <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;css/**/*.css&#39;</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.css&#39;</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>    <span class="p">},</span>
-</span><span class='line'>    <span class="nx">cssmin</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&lt;%= concat.stylesheets.dest %&gt;&#39;</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.min.css&#39;</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>    <span class="p">},</span>
-</span><span class='line'>    <span class="nx">jshint</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">curly</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">eqeqeq</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">immed</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">latedef</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">newcap</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">noarg</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">sub</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">undef</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">unused</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">boss</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">eqnull</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">node</span><span class="o">:</span> <span class="kc">true</span>
-</span><span class='line'>      <span class="p">},</span>
-</span><span class='line'>      <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Gruntfile.js&#39;</span><span class="p">,</span> <span class="s1">&#39;src/*.js&#39;</span><span class="p">]</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>    <span class="p">},</span>
-</span><span class='line'>    <span class="nx">uglify</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">banner</span><span class="o">:</span> <span class="s1">&#39;/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today(&quot;yyyy-mm-dd&quot;) %&gt; */\n&#39;</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">sourceMap</span><span class="o">:</span> <span class="kc">true</span>
-</span><span class='line'>      <span class="p">},</span>
-</span><span class='line'>      <span class="nx">scripts</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&lt;%= concat.scripts.dest %&gt;&#39;</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;dist/&lt;%= pkg.name %&gt;.min.js&#39;</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>    <span class="p">},</span>
-</span><span class='line'>    <span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">stylesheets</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">files</span><span class="o">:</span> <span class="s1">&#39;**/*.scss&#39;</span><span class="p">,</span>
-</span><span class='line'>        <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;compass&#39;</span><span class="p">]</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-compass&#39;</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-concat&#39;</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-cssmin&#39;</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-jshint&#39;</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-uglify&#39;</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-watch&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;jshint&#39;</span><span class="p">,</span> <span class="s1">&#39;compass&#39;</span><span class="p">,</span> <span class="s1">&#39;concat&#39;</span><span class="p">,</span> <span class="s1">&#39;cssmin&#39;</span><span class="p">,</span> <span class="s1">&#39;uglify&#39;</span><span class="p">]);</span>
-</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;sassify&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;compass&#39;</span><span class="p">]);</span>
-</span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/02/09/quelques-impressions-sur-la-culture-francaise/">Quelques Impressions Sur La Culture Française</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-09T10:10:00-05:00" pubdate data-updated="true">Feb 9<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Il me parait que nous avons les même ou presque les même idées sur la notion d’amitié.  Celles-ci sont les idées qu’un ami est quelqu’un avec qui on a des gôuts en commun, avec qui on aime passer du temps, qui on s’entend très bien, sur qui on peut compter, en qui on peut faire confiance, qui n’hésite pas à l’aider aux moments difficiles, ou qui respecte les opinions de l’autre et qui partage ses opinions sans hésitation.  Mails je pense qu’il existe une différence entre nous.  Pour les Francais il existe deux catégories, les amis et les copains.  Pour les Américains, il y a aussi quelques catégories, comme &ldquo;friends&rdquo; ou &ldquo;acquaintances&rdquo;, qui peut être l’equivalence pour &ldquo;copain&rdquo;.  Mails généralement, la démarcation entre les catégories n’est pas très claire. Un copain est quelqu’un avec qui on peut échanger des salutations à la classe le matin.  On a tendance à appeler quelqu’un un ami quand on lui parle souvent, même si on ne le connait pas très bien.  De même façon, on est prêt à considérer un étranger un ami après l’avoir seulement  rencontré quelques fois, bien que peut-être il ne soit pas un bon ami.  Il y a un concept appelé &ldquo;making friends&rdquo;.  Quand on va quelque part, on essaie de dialoguer et rencontrer plusieurs personnes pour s’adapter; on essaie de ne pas être seul.  Dans un cas radical, il y a des personnes qui se rencontrent sur l’Internet et qui considérent l’autre un ami, même s’ils ne se rencontrent jamais en face!</p>
-
-<p>Sur le forum, il est clair que pour vous il y a une grande distinction entre un ami et un copain.  Par exemple, pour vous les autres étudiants en classes préparatoires peut-être sont votre copains parce que vous ne les revoyez plus après, bien que vous les rencontriez souvent.  Pour nous, les camarades de classe sont souvent notre bons amis, précisément parce que nous les rencontrons tous les jours.  C’est mon impression que les Américains sont un peu plus ouverts à l’egard d’amitié.  Comment pensez-vous de cette vue?  Elle est d’accord avec l’auteur Caroll.  Selon elle, les enfants américains sont encouragés à &ldquo;jouer avec d’autres enfants du même age&rdquo; ou à &ldquo;apprendre à entrer en relation avec des étrangers&rdquo;.  Est-ce que les parents français encouragent leurs enfants à faire comme ça?</p>
-
-<p>J’ai un deuxième commentaire sur l’éducation d’enfant en France et aux E.U.  Je suis d’accord avec l’auteur que les enfants français devraient se comporter bien dans la société, donc ils apprennent les notions de discipline, de respect, d’être responsables. En revanche, les enfants américains ont plus de libertés dont leurs parents croient qu’ils ont besoin pour explorer, pour se dévélopper, pour s’epanouir.  Elle a raison, mais selon moi ce n’implique pas que les enfants américains sont laissés tout faire!  Au moin, la notion de politesse est un élément très important dans l’éducation des enfants américains.  Par exemple, les mots &ldquo;merci&rdquo; et &ldquo;s’il vous plait&rdquo; sont les plus accentués, comme &ldquo;les mots magiques&rdquo;, par les parents.  Ce n’est pas très étonnant que les Américains, les enfants et même les adultes, utilisent ces mots très souvent.  Ce n’est pas étonnant aussi que les Américains sont expertes dans les entreprises de service, dans lesquelles la politesse et l’attention pour les clients sont très importants.  On peut généraliser les principes fondamentaux, mais l’actualité est souvent plus compliquée.  Je suis d’accord avec Matthieu, qui a remarqué que les relations entre parents et enfants, françaises ou américaines, dépendent de la personnalité des parents, de leur conviction sur l’éducation, ou de la façon dont ils ont été élévés.À l’egard d’éléver un enfant, je pense qu’il est préférable qu’on l’aide et l’influence au lieu de le forcer à faire quelquechose.  En revanche, on doit intervenir quand il va faire mal et, si nécessaire, je crois qu’on peut le gronder ou lui donner une fessée. Surtout, il est essentiel de lui donner les occasions de s’explorer.  On devrait l’encourager à découvrir lui-même ce qu’il aime, ce qu’il veut devenir, ce qu’il veut étudier à l’université, etc.  Bien sûr, on devrait l’encourager à suivre une bonne voie ou à choisir un bon métier, mais toujours on l’encourage à avoir l’indépendance de pensées et d’actions.  Par exemple, l’enfant voudrait devenir une artiste; même si ses parents désireraient qu’il devienne un médécin, ils le soutiendront encore.  Les parents sont les conseillers et aussie une autorité. Je pense que c’est un aspect très positif de la philosophie d’éducation américaine, parce qu’il est probable que l’enfant sera heureux dans la vie.  Il parait que le système français est plus rigide, dans le sens que l’enfant doit obéir aux désirs des parents.  Est-ce que c’est vrai ou faux?  Pensez-vous que l’indépendance de pensée est importante pour les enfants? Selon l’auteur, les parents français et leur manière d’éducation de leurs enfants sont soumis à un &ldquo;test&rdquo; par le reste de la sociéte.  Trouvez-vous naturel si les autres donnent conseil aux parents pour éduquer leurs enfants ou les reprimandent?  Je pense que l’éducation d’un enfant est une affaire très privée.  Je saurais quand mon enfant n’a pas de comportement acceptable.  Je serais prêt à recevoir les conseils de la famille ou d’amis, parce qu’ils auraient les désirs sincères, mais je ne pense pas que les jugements de l’autre soient appropriés.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Categories</h1>
-  <ul id="categories">
-    
-     
-      <li data-category="Photoshop">
-        <a href="/blog/categories/photoshop">Photoshop</a> <em>2</em>
-      </li>
-    
-     
-      <li data-category="travel">
-        <a href="/blog/categories/travel">travel</a> <em>20</em>
-      </li>
-    
-     
-      <li data-category="outdoors">
-        <a href="/blog/categories/outdoors">outdoors</a> <em>9</em>
-      </li>
-    
-     
-      <li data-category="photography">
-        <a href="/blog/categories/photography">photography</a> <em>20</em>
-      </li>
-    
-     
-      <li data-category="hockey">
-        <a href="/blog/categories/hockey">hockey</a> <em>11</em>
-      </li>
-    
-     
-      <li data-category="city">
-        <a href="/blog/categories/city">city</a> <em>6</em>
-      </li>
-    
-     
-      <li data-category="drawing">
-        <a href="/blog/categories/drawing">drawing</a> <em>1</em>
-      </li>
-    
-     
-      <li data-category="technology">
-        <a href="/blog/categories/technology">technology</a> <em>48</em>
-      </li>
-    
-     
-      <li data-category="review">
-        <a href="/blog/categories/review">review</a> <em>25</em>
-      </li>
-    
-     
-      <li data-category="hiking">
-        <a href="/blog/categories/hiking">hiking</a> <em>9</em>
-      </li>
-    
-     
-      <li data-category="other">
-        <a href="/blog/categories/other">other</a> <em>2</em>
-      </li>
-    
-  </ul>
-</section>
-<script type="text/javascript">
-  $(function() {
-    var categories = [];
-    $('[data-category]').each(function() {
-      categories.push(this);
-    });
-    categories.sort(function (a, b) {
-      return a.attributes['data-category'].value.toLowerCase() <= b.attributes['data-category'].value.toLowerCase()
-            ? -1 : 1;
-    });
-    $('#categories').html(categories);
-  });
-</script>
-<section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2017/08/09/deploying-site-after-cloning-octopress-repo/">Deploying Site After Cloning Octopress Repo</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/04/08/installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/">Installing the Curt 11064 Trailer Hitch on a 2009 Honda Fit Sport</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/16/how-to-not-upgrade-the-nexus-7-to-lollipop/">How to Not Upgrade the Nexus 7 to Lollipop</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/07/09/validating-multiple-fields-with-angular/">Validating Multiple Fields With Angular</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/24/validating-required-form-fields-with-angular/">Validating Required Form Fields With Angular</a>
-      </li>
-    
-  </ul>
-</section>
-
-  
-</aside>
 
     </div>
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2019 - Yen Tran -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+</nav>
 
-</footer>
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          Yen&#39;s blog
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
+    
+  </article>
+  
+  
+  
+  
+  
+  
+  
+    
+    
+
+    <div class="pa3 pa4-ns w-100 w-70-ns center">
+      
+       
+          <h1 class="flex-none">
+            Recent Posts
+          </h1>
+        
+
+      
+
+      <section class="w-100 mw8">
+        
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="http://yentran.org/post/source/2017-08-09-deploying-site-after-cloning-octopress-repo/" class="color-inherit dim link">
+            Deploying site after cloning Octopress repo
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          Octopress instructions are for setting up a new repo; i.e. by running rake setup_github_pages. It doesn’t work if you’ve cloned an existing repo.
+You have to manually set up a git repository in the _deploy directory which should track the master branch of the repo on GitHub.
+# create new deploy dir rm -rf _deploy mkdir _deploy cd _deploy # initialize empty git repo git init git remote add origin git@github.
+        </div>
+          <a href="http://yentran.org/post/source/2017-08-09-deploying-site-after-cloning-octopress-repo/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="http://yentran.org/post/source/2015-04-08-installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/" class="color-inherit dim link">
+            Installing the Curt 11064 trailer hitch on a 2009 Honda Fit Sport
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          As if that&rsquo;s not specific enough, I could also add On a Cold Sleety Night, After the Family Had Gone to Bed, While Feeling Renewed Pangs of Hunger. I feel compelled to write this post so that Kate wouldn&rsquo;t think I spent all that time in the garage playing video games (I wish I could). I was deciding between the Curt and a DrawTite trailer hitch. The Curt seemed more substantial, is made in Wisconsin (the DrawTite is made in Mexico) and as it turned out is surprisingly lighter (lighter being relative, more on that later).
+        </div>
+          <a href="http://yentran.org/post/source/2015-04-08-installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="http://yentran.org/post/source/2015-02-16-how-to-not-upgrade-the-nexus-7-to-lollipop/" class="color-inherit dim link">
+            How to not upgrade the Nexus 7 to Lollipop
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          I have a first-generation Nexus 7 tablet made by Asus which ran KitKat 4.4. When the OTA Lollipop update became available, I couldn&rsquo;t wait to install it. The latest and greatest Android running on Google hardware seemed to be a match made in heaven; it would be better, prettier and faster, right? As you can probably guess from the title of this post, the answer was a resounding no. Everything became sluggish, swipes would only registered after a couple of seconds, random things popped open and close.
+        </div>
+          <a href="http://yentran.org/post/source/2015-02-16-how-to-not-upgrade-the-nexus-7-to-lollipop/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+      </section>
+
+      
+      <section class="w-100">
+        <h1 class="f3">More</h1>
+        
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://yentran.org/post/source/2014-07-09-validating-multiple-fields-with-angular/" class="link black dim">
+              Validating multiple fields with Angular
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://yentran.org/post/source/2014-04-24-validating-required-form-fields-with-angular/" class="link black dim">
+              Validating required form fields with Angular
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://yentran.org/post/source/2014-04-18-angular-in-jekyll-or-octopress/" class="link black dim">
+              Angular in Jekyll/Octopress
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://yentran.org/post/source/2014-04-15-copying-files-in-hudson/" class="link black dim">
+              Copying files in Hudson
+            </a>
+          </h2>
+        
+
+        
+        
+          <a href="http://yentran.org/post/" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">All Posts</a>
+        
+        </section>
+      
+
+      </div>
   
 
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://yentran.org" >
+    &copy;  Yen's blog 2021 
+  </a>
+    <div>
 
 
 
 
 
 
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 
 
 
-</body>
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
 </html>

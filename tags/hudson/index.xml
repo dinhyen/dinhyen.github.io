@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hudson on Yen&#39;s blog</title>
+    <link>http://yentran.org/tags/hudson/</link>
+    <description>Recent content in hudson on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Nov 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/hudson/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Hudson with Git and MSBuild on Windows</title>
+      <link>http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</link>
+      <pubDate>Thu, 15 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</guid>
+      <description>We use Hudson as our continuous integration server (although we&amp;rsquo;re thinking about moving to Jenkins, but that&amp;rsquo;s a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.
+Pre-requisites We use the following software. The listed versions are the latest as of the time of writing, but other combinations should work.
+ Java Runtime Environment (JRE) 7 Apache Tomcat 7.0 Hudson 2.</description>
+    </item>
+    
+    <item>
+      <title>Modifying .config file in an MSBuild project</title>
+      <link>http://yentran.org/post/source/2012-05-11-modifying-config-file-in-an-msbuild-project/</link>
+      <pubDate>Fri, 11 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-05-11-modifying-config-file-in-an-msbuild-project/</guid>
+      <description>We use Hudson to deploy our web application to different environments such as QA, demo and production. We need to customize the web.config, primarily the database connection string, for each environment . Previously we had to maintain multiple copies of the web.config and copy the appropriate one for each deployment destination. Obviously keeping around different versions of the same file is far from ideal.
+As an improvement, we decide to keep a single web.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>xmlpeek on Yen&#39;s blog</title>
+    <link>http://yentran.org/tags/xmlpeek/</link>
+    <description>Recent content in xmlpeek on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 May 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/xmlpeek/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Modifying .config file in an MSBuild project</title>
+      <link>http://yentran.org/post/source/2012-05-11-modifying-config-file-in-an-msbuild-project/</link>
+      <pubDate>Fri, 11 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-05-11-modifying-config-file-in-an-msbuild-project/</guid>
+      <description>We use Hudson to deploy our web application to different environments such as QA, demo and production. We need to customize the web.config, primarily the database connection string, for each environment . Previously we had to maintain multiple copies of the web.config and copy the appropriate one for each deployment destination. Obviously keeping around different versions of the same file is far from ideal.
+As an improvement, we decide to keep a single web.</description>
+    </item>
+    
+  </channel>
+</rss>

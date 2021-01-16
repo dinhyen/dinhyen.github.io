@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wix on Yen&#39;s blog</title>
+    <link>http://yentran.org/tags/wix/</link>
+    <description>Recent content in wix on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Sep 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/wix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wix: Executing custom action before starting Windows service</title>
+      <link>http://yentran.org/post/source/2013-09-27-wix-executing-custom-action-before-starting-windows-service/</link>
+      <pubDate>Fri, 27 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-09-27-wix-executing-custom-action-before-starting-windows-service/</guid>
+      <description>I&amp;rsquo;ve been trying to get a Wix installer to work. This particular scenario is pretty simple. I want to configure the database via a custom action, then start a Windows service which then queries the database before starting. This would seem like a commonplace scenario. However, Wix documentations are sparse and I&amp;rsquo;ve been wrangling with this for some time. I finally found a solution. While I loathe to reference a StackOverflow answer, as a favor to my future self I&amp;rsquo;m going to do so anyways.</description>
+    </item>
+    
+    <item>
+      <title>Wix: Batch files.  Yes, really.</title>
+      <link>http://yentran.org/post/source/2013-09-26-wix-batch-file/</link>
+      <pubDate>Thu, 26 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-09-26-wix-batch-file/</guid>
+      <description>Batch files are the last resort due to its Neanderthal abilities and exasperating syntax. But if I want to run a bunch of things on bare-boned Windows Server 2003, this seems like the quickest if not only option.
+I tried something like this, by creating a property for the system executable cmd.exe, which would execute the batch script via the /c switch. Then I created a custom action that relies on the property.</description>
+    </item>
+    
+  </channel>
+</rss>

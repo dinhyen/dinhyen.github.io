@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>technology on Yen&#39;s blog</title>
+    <link>http://yentran.org/categories/technology/</link>
+    <description>Recent content in technology on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Aug 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploying site after cloning Octopress repo</title>
+      <link>http://yentran.org/post/source/2017-08-09-deploying-site-after-cloning-octopress-repo/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2017-08-09-deploying-site-after-cloning-octopress-repo/</guid>
+      <description>Octopress instructions are for setting up a new repo; i.e. by running rake setup_github_pages. It doesn’t work if you’ve cloned an existing repo.
+You have to manually set up a git repository in the _deploy directory which should track the master branch of the repo on GitHub.
+# create new deploy dir rm -rf _deploy mkdir _deploy cd _deploy # initialize empty git repo git init git remote add origin git@github.</description>
+    </item>
+    
+    <item>
+      <title>Installing the Curt 11064 trailer hitch on a 2009 Honda Fit Sport</title>
+      <link>http://yentran.org/post/source/2015-04-08-installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/</link>
+      <pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2015-04-08-installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/</guid>
+      <description>As if that&amp;rsquo;s not specific enough, I could also add On a Cold Sleety Night, After the Family Had Gone to Bed, While Feeling Renewed Pangs of Hunger. I feel compelled to write this post so that Kate wouldn&amp;rsquo;t think I spent all that time in the garage playing video games (I wish I could). I was deciding between the Curt and a DrawTite trailer hitch. The Curt seemed more substantial, is made in Wisconsin (the DrawTite is made in Mexico) and as it turned out is surprisingly lighter (lighter being relative, more on that later).</description>
+    </item>
+    
+    <item>
+      <title>How to not upgrade the Nexus 7 to Lollipop</title>
+      <link>http://yentran.org/post/source/2015-02-16-how-to-not-upgrade-the-nexus-7-to-lollipop/</link>
+      <pubDate>Mon, 16 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2015-02-16-how-to-not-upgrade-the-nexus-7-to-lollipop/</guid>
+      <description>I have a first-generation Nexus 7 tablet made by Asus which ran KitKat 4.4. When the OTA Lollipop update became available, I couldn&amp;rsquo;t wait to install it. The latest and greatest Android running on Google hardware seemed to be a match made in heaven; it would be better, prettier and faster, right? As you can probably guess from the title of this post, the answer was a resounding no. Everything became sluggish, swipes would only registered after a couple of seconds, random things popped open and close.</description>
+    </item>
+    
+    <item>
+      <title>Validating multiple fields with Angular</title>
+      <link>http://yentran.org/post/source/2014-07-09-validating-multiple-fields-with-angular/</link>
+      <pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2014-07-09-validating-multiple-fields-with-angular/</guid>
+      <description>Angular makes it simple to validate a single form field. Validating multiple fields requires a bit more work. The approach that works for me is use a directive to lay out the framework, but to perform the actual validation in the parent scope. Since the user defines the specifics of the validation, any arbitrary validation can be performed and the directive can be kept simple.
+In this example, I&amp;rsquo;d like to validate that the sum of 2 text inputs equals 10.</description>
+    </item>
+    
+    <item>
+      <title>Validating required form fields with Angular</title>
+      <link>http://yentran.org/post/source/2014-04-24-validating-required-form-fields-with-angular/</link>
+      <pubDate>Thu, 24 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2014-04-24-validating-required-form-fields-with-angular/</guid>
+      <description>Two things can happen when the user fills out a form field: the entered value is incorrect or the value is missing. With Angular validating either case is consistent and simple. The issue is when to show the error message: as the value is being entered, after the field loses focus or after the user submits the form. I think that for a better usability, the user should be informed that the value is incorrect while entering the value.</description>
+    </item>
+    
+    <item>
+      <title>Angular in Jekyll/Octopress</title>
+      <link>http://yentran.org/post/source/2014-04-18-angular-in-jekyll-or-octopress/</link>
+      <pubDate>Fri, 18 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2014-04-18-angular-in-jekyll-or-octopress/</guid>
+      <description>Have a problem with Angular scope variable binding not working on a Jekyll or Octopress (which uses Jekyll) page? It so happens that Jekyll&amp;rsquo;s Liquid Template uses the same {{ foo }} syntax as Angular and would attempt to process the markup before Angular can get to it. To get around the problem, you can surround Angular markup with {% raw %}and {% endraw %}tags. Alternatively, you can also forgo from using this syntax altogether and use Angular&amp;rsquo;s ng-bind directive to bind a variable to a DOM element.</description>
+    </item>
+    
+    <item>
+      <title>Copying files in Hudson</title>
+      <link>http://yentran.org/post/source/2014-04-15-copying-files-in-hudson/</link>
+      <pubDate>Tue, 15 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2014-04-15-copying-files-in-hudson/</guid>
+      <description>Copying files somewhere is pretty standard procedure when deploying an app. Interestingly I&amp;rsquo;ve never had to copy files directly in Hudson. Until now I&amp;rsquo;ve only deployed .NET apps in Hudson and used MSBuild&amp;rsquo;s Copy task to copy the files to a share folder. Now that I want to deploy Angular and other client apps in Hudson, I&amp;rsquo;d have to copy the files manually.
+My initial attempt was to add a new Execute Shell build step to run xcopy.</description>
+    </item>
+    
+    <item>
+      <title>A MoCA home network</title>
+      <link>http://yentran.org/post/source/2014-04-09-moca-home-network/</link>
+      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2014-04-09-moca-home-network/</guid>
+      <description>The benefits of a wired home network are many. I use the SiliconDust HDHomerun Prime network TV tuners to watch cable TV on any computer in the house without the need for a set-top box. However, it is quite bandwidth-intensive and even a wireless-N connection just doesn&amp;rsquo;t cut it. The picture would be plagued with stutters, pause and artifacts and pretty much unwatchable, especially for hockey with its lightning-fast actions.</description>
+    </item>
+    
+    <item>
+      <title>Simple tasks with Grunt</title>
+      <link>http://yentran.org/post/source/2014-03-03-simple-tasks-with-grunt/</link>
+      <pubDate>Mon, 03 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2014-03-03-simple-tasks-with-grunt/</guid>
+      <description>Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&amp;rsquo;re working with conventional server-side platforms. Unfortunately, when it comes to JavaScripts and CSS, automation tools are harder to find. That is, until Grunt comes along (following Node, which turned upside down the whole idea of server vs client side in the first place).
+As a self-described &amp;ldquo;task runner&amp;rdquo;, Grunt is powerful and pleasantly approachable.</description>
+    </item>
+    
+    <item>
+      <title>My Git cheat sheet</title>
+      <link>http://yentran.org/post/source/2014-02-07-my-git-cheat-sheet/</link>
+      <pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2014-02-07-my-git-cheat-sheet/</guid>
+      <description>There are lots of great Git guides out there. This is intended simply to be a reference for me during those dark times when I can&amp;rsquo;t remember the syntax for creating a tracking branch.
+Config # These will show up in git log git config --global user.name &amp;quot;Yen Tran&amp;quot; git config --global user.email yen@yentran.org git config --list Info gitk git status git log git log origin/master # Show endpoints such as origin git remote show # Show origin params git remote show origin Branch (Local) git branch &amp;lt;branch&amp;gt; &amp;lt;sha1_of_commit&amp;gt; # Ex: git branch foo 7e2785d # Delete branch git branch -d &amp;lt;branch&amp;gt; # Create branch: git branch &amp;lt;branch&amp;gt; git checkout &amp;lt;branch&amp;gt; # Check out and automatically creates branch git checkout -b &amp;lt;branch&amp;gt; # List local branches git br # List remote branches git branch -r # List all branches git branch -a # Verbose list of local branches and HEAD commit git branch -v Check out a previous check-in git log # Locate desired checkin and copy SHA; e.</description>
+    </item>
+    
+    <item>
+      <title>Using Angular root scope for communication between controllers</title>
+      <link>http://yentran.org/post/source/2013-12-07-using-angular-root-scope-for-communication-between-controllers/</link>
+      <pubDate>Sat, 07 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-12-07-using-angular-root-scope-for-communication-between-controllers/</guid>
+      <description>Angular makes it simple to create standard index and details views. Using the ubiquitous task list as an example, I can set up routes using the $route service as follows:
+$routeProvider .when(&amp;#39;/tasks&amp;#39;, { templateUrl: &amp;#39;_tasks.html&amp;#39;, controller: &amp;#39;TasksIndexCtrl&amp;#39; }) .when(&amp;#39;/task/:id&amp;#39;, { templateUrl: &amp;#39;_task.html&amp;#39;, controller: &amp;#39;TaskDetailsCtrl&amp;#39; }) .otherwise({ redirectTo: &amp;#39;/tasks&amp;#39; }); } The routes definitions specify the Angular controller and HTML template to use when the user navigates to a particular path. Here we have 2 controllers, one for the index page and one for the details page.</description>
+    </item>
+    
+    <item>
+      <title>Updating SQL Server Primary Key</title>
+      <link>http://yentran.org/post/source/2013-11-23-updating-sql-server-primary-key/</link>
+      <pubDate>Sat, 23 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-11-23-updating-sql-server-primary-key/</guid>
+      <description>A requirement recently came up to update the primary key of a SQL Server table. We get user data from a third-party single sign-on service and store them locally. When the SSO software was upgraded, user IDs were changed, so we need to update our local users but retain existing data. I suppose one way to do so would be to drop any existing foreign-key constraint and update all related tables.</description>
+    </item>
+    
+    <item>
+      <title>So long WordPress, hello Octopress</title>
+      <link>http://yentran.org/post/source/2013-11-18-so-long-wordpress-hello-octopress/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-11-18-so-long-wordpress-hello-octopress/</guid>
+      <description>I&amp;rsquo;ve been using WordPress since 2011. It works well enough, but for me there are a few drawbacks.
+  It&amp;rsquo;s slow. It takes time to do anything from creating a post to previewing to deploying it. I prefer to edit text in a proper text editor, with the full array of keyboard shortcuts, so I usually end up copying and pasting anyways. But using the UI to do everything is cumbersome.</description>
+    </item>
+    
+    <item>
+      <title>Fixing Windows Media Center No Tuner Available Error With HDHomeRun Prime</title>
+      <link>http://yentran.org/post/source/2013-11-02-fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/</link>
+      <pubDate>Sat, 02 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-11-02-fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/</guid>
+      <description>I have the HDHomeRun Prime network tuner. Recently, after a Verizon FiOS tech rebooted the ONT to fix a network issue, I got the dreaded Viewing or Listening Conflict. No tuner available to satisfy the current request error when trying to view Live TV in Windows Media Center. When I tried Settings &amp;gt; Windows Media Center setup, I got the error:
+ Tuner Not found. The TV signal cannot be configured because a TV tuner was not detected.</description>
+    </item>
+    
+    <item>
+      <title>Helper method to generate nested tags from block</title>
+      <link>http://yentran.org/post/source/2013-10-31-helper-method-generate-nested-tags-from-block/</link>
+      <pubDate>Thu, 31 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-10-31-helper-method-generate-nested-tags-from-block/</guid>
+      <description>I&amp;rsquo;m still pretty new to Ruby. Hopefully one day I&amp;rsquo;ll know enough to be able to look back and slap myself on the forehead for struggling with these issues.
+Right now our views generate a menu from a simple set of links:
+&amp;lt;%= link_to &amp;quot;foo&amp;quot;, &amp;quot;#&amp;quot; %&amp;gt; &amp;lt;%= link_to &amp;quot;bar&amp;quot;, &amp;quot;#&amp;quot; %&amp;gt; I&amp;rsquo;d like to convert them to a drop-down menu that looks like this:
+&amp;lt;div class=&amp;quot;dropdown&amp;quot;&amp;gt; &amp;lt;a class=&amp;quot;dropdown-toggle&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;caret&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;ul class=&amp;quot;dropdown-menu&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;%= link_to &amp;quot;foo&amp;quot;, &amp;quot;#&amp;quot; %&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;%= link_to &amp;quot;bar&amp;quot;, &amp;quot;#&amp;quot; %&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; I&amp;rsquo;d like to minimize the changes to the markup as much as possible.</description>
+    </item>
+    
+    <item>
+      <title>Simple table sorting with Angular</title>
+      <link>http://yentran.org/post/source/2013-09-28-simple-table-sorting-with-angular/</link>
+      <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-09-28-simple-table-sorting-with-angular/</guid>
+      <description>View in Plunkr
+I have a page with tabular data which I want to be able to sort without having to go back to the server. Also a nice-to-have would be the ability to filter the displayed items. Since I&amp;rsquo;m trying to learn Angular, this seems like an excellent opportunity to try it out.
+In the controller, the variable items holds the data to be sorted/filtered, while filteredItems is initialized to an empty array.</description>
+    </item>
+    
+    <item>
+      <title>Wix: Executing custom action before starting Windows service</title>
+      <link>http://yentran.org/post/source/2013-09-27-wix-executing-custom-action-before-starting-windows-service/</link>
+      <pubDate>Fri, 27 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-09-27-wix-executing-custom-action-before-starting-windows-service/</guid>
+      <description>I&amp;rsquo;ve been trying to get a Wix installer to work. This particular scenario is pretty simple. I want to configure the database via a custom action, then start a Windows service which then queries the database before starting. This would seem like a commonplace scenario. However, Wix documentations are sparse and I&amp;rsquo;ve been wrangling with this for some time. I finally found a solution. While I loathe to reference a StackOverflow answer, as a favor to my future self I&amp;rsquo;m going to do so anyways.</description>
+    </item>
+    
+    <item>
+      <title>Wix: Batch files.  Yes, really.</title>
+      <link>http://yentran.org/post/source/2013-09-26-wix-batch-file/</link>
+      <pubDate>Thu, 26 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-09-26-wix-batch-file/</guid>
+      <description>Batch files are the last resort due to its Neanderthal abilities and exasperating syntax. But if I want to run a bunch of things on bare-boned Windows Server 2003, this seems like the quickest if not only option.
+I tried something like this, by creating a property for the system executable cmd.exe, which would execute the batch script via the /c switch. Then I created a custom action that relies on the property.</description>
+    </item>
+    
+    <item>
+      <title>Fun with CSS sibling selectors</title>
+      <link>http://yentran.org/post/source/2013-08-09-fun-with-css-sibling-selectors/</link>
+      <pubDate>Fri, 09 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-08-09-fun-with-css-sibling-selectors/</guid>
+      <description>View the live example
+It seems like I&amp;rsquo;m always working on search boxes, but here goes another. My goal here is to display an icon inside the search box. Initially, the search box has a dark background. When clicked, the background changes to white. The icon should changes its color based on whether or not the search box has focus. If we were using a font-based icon such as Fontawesome, which is awesome by the way, styling the icon would be a simple exercise.</description>
+    </item>
+    
+    <item>
+      <title>Search box using KnockoutJS</title>
+      <link>http://yentran.org/post/source/2013-07-02-search-box-using-knockoutjs/</link>
+      <pubDate>Tue, 02 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-07-02-search-box-using-knockoutjs/</guid>
+      <description>View the live example
+We&amp;rsquo;re gradually gravitating toward AngularJS because it&amp;rsquo;s more powerful and flexible. However with AngularJS we have some issues with IE7, which unfortunately we&amp;rsquo;re stuck supporting. So when I want to add some simple enhancements to the search box, I went back to KnockoutJS. For a simple scenario such as this, KnockoutJS works great. If we had to do this using plain jQuery, we&amp;rsquo;d have to juggle keypress, focus and blur events which is just unnecessary drudgery!</description>
+    </item>
+    
+    <item>
+      <title>Animate textbox using KnockoutJS</title>
+      <link>http://yentran.org/post/source/2013-04-24-animate-textbox-using-knockoutjs/</link>
+      <pubDate>Wed, 24 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-04-24-animate-textbox-using-knockoutjs/</guid>
+      <description>View the live example
+KnockoutJS is a dynamic UI framework that can really liberate you from the tedium of low-level DOM manipulations. Even though I&amp;rsquo;ve only played with it for a little while, I&amp;rsquo;ve become a huge fan. One of my initial attempts is to create an animated text input similar to Twitter&amp;rsquo;s.
+The UI is quite simple. The textbox should display a &amp;ldquo;placeholder&amp;rdquo; prompt. When the user clicks inside the textbox, expand it and display a save button, initially disabled.</description>
+    </item>
+    
+    <item>
+      <title>Intermittent, temporary freezing on MacBook with OCZ Vertex 3</title>
+      <link>http://yentran.org/post/source/2013-03-19-intermittent-temporary-freezing-on-macbook-with-ocz-vertex-3/</link>
+      <pubDate>Tue, 19 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-03-19-intermittent-temporary-freezing-on-macbook-with-ocz-vertex-3/</guid>
+      <description>I recently upgraded the hard drive on my MacBook Pro running Snow Leopard to a 120GB OCZ Vertex 3 SSD. As advertised, the boot up and application start times are dramatically reduced. The SSD is everything I had hoped for. Well, almost. There has been a persistent and quite annoying issue. At random intervals, the computer would be come unresponsive. I could move the mouse or type on the keyboard, but nothing woud happen.</description>
+    </item>
+    
+    <item>
+      <title>Fix External Lockout for American Standard Freedom 90 furnace</title>
+      <link>http://yentran.org/post/source/2013-02-13-fix-external-lockout-for-american-standard-freedom-90-furnace/</link>
+      <pubDate>Wed, 13 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-02-13-fix-external-lockout-for-american-standard-freedom-90-furnace/</guid>
+      <description>Some of my blogs are of the &amp;ldquo;I&amp;rsquo;d better write this down so I don&amp;rsquo;t forget it&amp;rdquo; variety. This is one of them. This is intended primarily for future me, but it would be cool if anyone else finds it useful.
+The equipment in question is an American Standard (Trane) Freedom 90 gas furnace that&amp;rsquo;s about 7 years old. Recently, in fact right in the middle of a record-setting snowstorm, it started blowing only cold air.</description>
+    </item>
+    
+    <item>
+      <title>Mini project: Adding a second hard drive to the Mac Mini</title>
+      <link>http://yentran.org/post/source/2013-02-01-mini-project-adding-a-second-hard-drive-to-the-mac-mini/</link>
+      <pubDate>Fri, 01 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2013-02-01-mini-project-adding-a-second-hard-drive-to-the-mac-mini/</guid>
+      <description>I want to replace the DVR that I get from Verizon Fios. Besides the monthly cost, it&amp;rsquo;s an older unit that&amp;rsquo;s slow and has the capacity for no more than a handful 3-hour hockey games recorded in HD. That is plainly unacceptable, especially during the Stanley Cup Playoffs. For the HD tuner, I decided to go with the SiliconDust HD Homerun Prime. For the DVR, I&amp;rsquo;m going with a Mac Mini.</description>
+    </item>
+    
+    <item>
+      <title>Quickly editing waypoints on a Garmin GPS device</title>
+      <link>http://yentran.org/post/source/2012-12-18-quickly-editing-waypoints-on-a-garmin-gps-device/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-12-18-quickly-editing-waypoints-on-a-garmin-gps-device/</guid>
+      <description>When we traveled by car in Spain and Portugal in 2007, it&amp;rsquo;s hard to believe that we managed to get around several cities using only a Michelin road atlas and a bunch of printouts of online maps. This time we&amp;rsquo;re fully embracing 21st-century technology and bringing along a GPS device. To help save time, I like to enter destinations or waypoints ahead of time. On my Garmin nüvi 255W, it&amp;rsquo;s a time-consuming process to enter waypoints (which Garmin calls Favorites).</description>
+    </item>
+    
+    <item>
+      <title>Setting up Git to work remotely</title>
+      <link>http://yentran.org/post/source/2012-12-15-setting-up-git-to-work-remotely/</link>
+      <pubDate>Sat, 15 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-12-15-setting-up-git-to-work-remotely/</guid>
+      <description>At home I use a MacBook to connect via VPN to the office. I&amp;rsquo;d have access to the intranet but not shell access to my workstation. Since I usually work on the same project at home and at the office, I need to keep my work synchronized. One way to do that is with a Git remote branch.
+At the office, I&amp;rsquo;d create a local branch for the story I&amp;rsquo;d like to work on:</description>
+    </item>
+    
+    <item>
+      <title>Using Hudson with Git and MSBuild on Windows</title>
+      <link>http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</link>
+      <pubDate>Thu, 15 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</guid>
+      <description>We use Hudson as our continuous integration server (although we&amp;rsquo;re thinking about moving to Jenkins, but that&amp;rsquo;s a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.
+Pre-requisites We use the following software. The listed versions are the latest as of the time of writing, but other combinations should work.
+ Java Runtime Environment (JRE) 7 Apache Tomcat 7.0 Hudson 2.</description>
+    </item>
+    
+    <item>
+      <title>Replacing motherboard without reinstalling Windows</title>
+      <link>http://yentran.org/post/source/2012-09-16-replacing-motherboard-without-reinstalling-windows/</link>
+      <pubDate>Sun, 16 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-09-16-replacing-motherboard-without-reinstalling-windows/</guid>
+      <description>I wanted to upgrade a couple of PCs by replacing the motherboard (by the way, when buying PC components, if there&amp;rsquo;s a Microcenter store nearby, try it first; at the time of this writing their $50 bundle discount for a motherboard-CPU combo cannot be beat, even by much-loved online enthusiast stores). Afterwards, I found that Windows 7 wouldn&amp;rsquo;t boot.
+In my prior experience, Windows would automatically detect the new motherboard and reconfigure itself accordingly.</description>
+    </item>
+    
+    <item>
+      <title>Auto property with private setter</title>
+      <link>http://yentran.org/post/source/2012-07-10-auto-property-with-private-setter/</link>
+      <pubDate>Tue, 10 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-07-10-auto-property-with-private-setter/</guid>
+      <description>Sometimes I&amp;rsquo;d like to only allow a property to be set in the constructor. Something like this:
+private Foo _foo; public Foo Foo { get { return _foo; } } public Bar(Foo foo) { _foo = foo; } This neat little pattern lets you do the same with fewer members (and lines of code):
+public Foo { get; private set; } public Bar(Foo foo) { Foo = foo; } </description>
+    </item>
+    
+    <item>
+      <title>Edit collection with LINQ to SQL</title>
+      <link>http://yentran.org/post/source/2012-06-29-editing-collection-with-linq-to-sql/</link>
+      <pubDate>Fri, 29 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-06-29-editing-collection-with-linq-to-sql/</guid>
+      <description>Let&amp;rsquo;s say for a shopping cart we have an Order entity, a Product entity and an OrderDetails entity which serves as a bridge. The OrderDetails entity has OrderId and ProductId fields to associate products with orders. We also have an Order domain object which is passed from the business logic layer to the repository layer.
+Since products can be added or removed from an order, we need to manage the order details for each Order.</description>
+    </item>
+    
+    <item>
+      <title>Deleting from collection with LINQ to SQL</title>
+      <link>http://yentran.org/post/source/2012-05-18-deleting-from-collection-with-linq-to-sql/</link>
+      <pubDate>Fri, 18 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-05-18-deleting-from-collection-with-linq-to-sql/</guid>
+      <description>I ran into an subtle bug today. Let&amp;rsquo;s say we have a shopping cart page that displays order details and allows the user to remove items from the order. We retrieve the items in the order with the following:
+var items = DataContext.Orders.Single(o =&amp;gt; o.Id == orderId).Items; To remove an item from the order, we have the following:
+var itemToDelete = DataContext.Items.Single(i =&amp;gt; i.Id == itemId); DataContext.Items.DeleteOnSubmit(itemToDelete); DataContext.SubmitChanges(); It&amp;rsquo;s run-of-the-mill as far as LINQ to SQL goes.</description>
+    </item>
+    
+    <item>
+      <title>Modifying .config file in an MSBuild project</title>
+      <link>http://yentran.org/post/source/2012-05-11-modifying-config-file-in-an-msbuild-project/</link>
+      <pubDate>Fri, 11 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-05-11-modifying-config-file-in-an-msbuild-project/</guid>
+      <description>We use Hudson to deploy our web application to different environments such as QA, demo and production. We need to customize the web.config, primarily the database connection string, for each environment . Previously we had to maintain multiple copies of the web.config and copy the appropriate one for each deployment destination. Obviously keeping around different versions of the same file is far from ideal.
+As an improvement, we decide to keep a single web.</description>
+    </item>
+    
+    <item>
+      <title>Backing up your site with VDeck</title>
+      <link>http://yentran.org/post/source/2012-05-10-backing-up-your-site-with-vdeck/</link>
+      <pubDate>Thu, 10 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-05-10-backing-up-your-site-with-vdeck/</guid>
+      <description>I don&amp;rsquo;t think anyone would argue that regularly backing up data is a good idea. At the same time, most people including myself don&amp;rsquo;t do so nearly often enough. Fortunately, the VDeck control panel provided by my web host helps make backing up and restoring data a cinch.
+To back up my Wordpress blog, I need to back up both the files and the MySQL database. To back up files, use the Archive Gateway.</description>
+    </item>
+    
+    <item>
+      <title>Loading jQuery from Google CDN and dependent scripts in WordPress</title>
+      <link>http://yentran.org/post/source/2012-04-03-loading-jquery-from-google-cdn-and-dependent-scripts-in-wordpress-2/</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-04-03-loading-jquery-from-google-cdn-and-dependent-scripts-in-wordpress-2/</guid>
+      <description>I&amp;rsquo;m using a WordPress theme that loads jQuery and other JavaScripts in the header.php script:
+&amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;&amp;lt;?php bloginfo(&amp;#39;template_directory&amp;#39;); ?&amp;gt;/js/jquery-1.4.2.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;&amp;lt;?php bloginfo(&amp;#39;template_directory&amp;#39;); ?&amp;gt;/js/jquery.prettyPhoto.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;&amp;lt;?php bloginfo(&amp;#39;template_directory&amp;#39;); ?&amp;gt;/js/custom.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; Using Chrome&amp;rsquo;s Developer console (i.e., hit F12) to view the Resources for the page, I could see that jQuery is being loaded. I wanted to load jQuery from Google&amp;rsquo;s Content Delivery Network (why?). My initial attempt was to simply change the jQuery reference to the CDN location (I also upgraded to version 1.</description>
+    </item>
+    
+    <item>
+      <title>Locating Program Files folder in Visual Studio on 32-bit and x64 environments</title>
+      <link>http://yentran.org/post/source/2012-04-03-locating-program-files-folder-in-visual-studio/</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-04-03-locating-program-files-folder-in-visual-studio/</guid>
+      <description>In my Visual Studio project, I want to run an external executable, SQLMetal, in a build event. The only problem is that the location of the executable depends on whether the machine runs x64 or 32-bit Windows. It is found in the Program Files (x86) folder on x64 Windows and Program Files on 32-bit Windows. I want to be able to build the project without modification in either environment.
+The solution is to specify the location of the Program Files dynamically by inserting the following lines in the .</description>
+    </item>
+    
+    <item>
+      <title>Mapping PagedList with AutoMapper</title>
+      <link>http://yentran.org/post/source/2012-04-03-mapping-pagedlist-with-automapper/</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-04-03-mapping-pagedlist-with-automapper/</guid>
+      <description>I&amp;rsquo;m using an implementation of PagedList based on that given by Rob Conery.
+I want to convert a paged list of business objects to a paged list of view model objects with AutoMapper. In order for AutoMapper to work in this case, it needs to know how to convert a paged list. This can be done with a custom type converter:
+public class PagedListConverter : ITypeConverter&amp;lt;PagedList&amp;lt;Person&amp;gt;, PagedList&amp;lt;PersonViewModel&amp;gt;&amp;gt; { public PagedList&amp;lt;PersonViewModel&amp;gt; Convert(ResolutionContext context) { var models = (PagedList&amp;lt;Person&amp;gt;)context.</description>
+    </item>
+    
+    <item>
+      <title>Stack overflow exception when MVC View and Partial View have the same name</title>
+      <link>http://yentran.org/post/source/2012-04-03-stack-overflow-exception-when-mvc-view-and-partial-view-have-the-same-name/</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-04-03-stack-overflow-exception-when-mvc-view-and-partial-view-have-the-same-name/</guid>
+      <description>This scenario is probably unusual but it did happen to me. I had a view named Foo.aspx and partial view named Foo.ascx. The view rendered the partial as follows:
+&amp;lt;% Html.RenderPartial(&amp;#34;Foo&amp;#34;); %&amp;gt; When attempting to load the view, ASP.NET spins for a while then eventually throws a stack overflow exception. Apparently when executing the above statement, MVC searches for files named &amp;ldquo;Foo&amp;rdquo;, including the view itself. It must have attempted to render the view and gone into a recursive loop.</description>
+    </item>
+    
+    <item>
+      <title>Using Lightbox with NextGen gallery</title>
+      <link>http://yentran.org/post/source/2012-03-31-using-lightbox-with-nextgen-gallery/</link>
+      <pubDate>Sat, 31 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-03-31-using-lightbox-with-nextgen-gallery/</guid>
+      <description>In my former Wordpress blog, I used the excellent NextGen plugin to manage images in galleries. When embedded in a post, the gallery is rendered as thumbnails, whose full-size version is shown as an overlay when clicked. I also like to embed inline images so that I can include a caption. Inline images, however, are still directly linked and not shown as an overlay. When viewed, it requires an additional click or two to go back to the post.</description>
+    </item>
+    
+    <item>
+      <title>Configuring Wifi for the Brother HL-2280DW Laser Printer on Windows</title>
+      <link>http://yentran.org/post/source/2012-02-09-configuring-wifi-for-the-brother-hl-2280dw-laser-printer-on-windows/</link>
+      <pubDate>Thu, 09 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-02-09-configuring-wifi-for-the-brother-hl-2280dw-laser-printer-on-windows/</guid>
+      <description>With laser printer, scanner, Ethernet and Wifi interface rolled into one, the Brother HL-2280DW is quite a little champ. However, for me, getting the Wifi to work was a bit of a challenge. The installer would die silently after configuring Wifi but without having installed the software. After some trial and error, I was able to successfully install for Ethernet . With the software installed, I was able to configure Wifi afterward.</description>
+    </item>
+    
+    <item>
+      <title>Modifying SQL Server table without dropping and recreating it</title>
+      <link>http://yentran.org/post/source/2012-01-11-modifying-sql-server-table-without-dropping-and-recreating-it/</link>
+      <pubDate>Wed, 11 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-01-11-modifying-sql-server-table-without-dropping-and-recreating-it/</guid>
+      <description>The SQL Server Designer is a nice visual tool for making modifications to a table. However, when you save the changes, SQL Server actually drops the entire table and then recreates it (if there are data in the table, they would be retained). This happens even if the changes made do not actually require that the table be re-created. This is presumably so that SQL Server can accommodate all possible types of modification.</description>
+    </item>
+    
+    <item>
+      <title>Installing antivirus program changes FireFox keyword URL</title>
+      <link>http://yentran.org/post/source/2012-01-03-installing-antivirus-changes-firefox-keyword-url/</link>
+      <pubDate>Tue, 03 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-01-03-installing-antivirus-changes-firefox-keyword-url/</guid>
+      <description>I tried out a well-known cloud-based antivirus solution. It worked well enough, but after I installed it, I noticed that my FireFox searches were now redirected from Google to Yahoo!. In the FF config screen (which can be opened by typing &amp;ldquo;about:config&amp;rdquo; in the location bar), I noticed that the keyword.URL setting had been changed to Yahoo!:
+This setting dictates which search service is used when the user enters a keyword (i.</description>
+    </item>
+    
+    <item>
+      <title>Upgrading the HTC Aria with Android Gingerbread and CyanogenMod</title>
+      <link>http://yentran.org/post/source/2011-12-31-installing-cyanogenmod-on-the-htc-aria/</link>
+      <pubDate>Sat, 31 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2011-12-31-installing-cyanogenmod-on-the-htc-aria/</guid>
+      <description>I have an HTC Aria which runs now-ancient Android 2.1. This phone is far from being the latest and greatest, to put it mildly, but I like its small form factor. After putting up with it for a year, I have had enough and decided to upgrade it to Gingerbread. This is how I did it. As this is my first attempt, no doubt there are different and better ways to do things.</description>
+    </item>
+    
+    <item>
+      <title>Visual Studio line number macros</title>
+      <link>http://yentran.org/post/source/2011-12-21-visual-studio-line-number-macros/</link>
+      <pubDate>Wed, 21 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2011-12-21-visual-studio-line-number-macros/</guid>
+      <description>In Visual Studio, it&amp;rsquo;s easy enough to turn on and off line numbers. You&amp;rsquo;ll have to select Tools &amp;gt; Options &amp;gt; Text Editor, expand the language of choice, select General, then toggle Line numbers under the Display section. This can get tedious if you want to be able to show and hide line numbers at will. To turn this process into a single click, you can record custom macros to show and hide line numbers.</description>
+    </item>
+    
+    <item>
+      <title>MSBuild Project Directory</title>
+      <link>http://yentran.org/post/source/2011-12-13-msbuild-project-directory/</link>
+      <pubDate>Tue, 13 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2011-12-13-msbuild-project-directory/</guid>
+      <description>We&amp;rsquo;re using MSBuild in Hudson as part of our continuous integration process. We put the MSBuild scripts in the same directory as the Visual Studio solution file. Everything has been working well until until we decided, as an experiment, to put the MSBuild scripts in a separate directory from the solution. Then the build process started to fail with error MSB3202, &amp;ldquo;the project file was not found&amp;rdquo;.
+By using MSBuild&amp;rsquo;s &amp;ldquo;/verbosity:diagnostic&amp;rdquo; flag, we were able to look at the list of properties that MSBuild was using.</description>
+    </item>
+    
+    <item>
+      <title>AutoMapper doesn&#39;t work for mismatched types</title>
+      <link>http://yentran.org/post/source/2011-12-08-automapper-mismatched-types/</link>
+      <pubDate>Thu, 08 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2011-12-08-automapper-mismatched-types/</guid>
+      <description>We&amp;rsquo;re using AutoMapper in ASP.NET MVC automate the mapping of properties between entity and view model objects. This is a highly useful tool which helps us avoid the tedium of having to assigning properties manually. Here&amp;rsquo;s a good introduction to using AutoMapper.
+In one case, I find that the AutoMapper doesn&amp;rsquo;t work for all properties. One property in particular doesn&amp;rsquo;t get mapped. If I manually assign a value to it as a test, I would get a ForeignKeyReferenceAlreadyHasValueException.</description>
+    </item>
+    
+    <item>
+      <title>How to grant permissions to the Application Pool Identity for IIS 7.5</title>
+      <link>http://yentran.org/post/source/2011-09-06-granting-permissions-to-the-application-pool-identity-in-iis-7-5/</link>
+      <pubDate>Tue, 06 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2011-09-06-granting-permissions-to-the-application-pool-identity-in-iis-7-5/</guid>
+      <description>Up to IIS 7 (Windows Vista and Windows Server 2008), the default app pool identity is NetworkService 7. In IIS 7.5 (Windows 7 and Windows Server 2008 R2) the app pool identity is changed to something called ApplicationPoolIdentity.
+Let&amp;rsquo;s say you set up a virtual directory or application that uses this app pool. You&amp;rsquo;ll need to grant access permission on the physical path to ApplicationPoolIdentity. However, you&amp;rsquo;d find that there is no such user account.</description>
+    </item>
+    
+    <item>
+      <title>Removing malware</title>
+      <link>http://yentran.org/post/source/2011-08-23-removing-malware/</link>
+      <pubDate>Tue, 23 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2011-08-23-removing-malware/</guid>
+      <description>My computer got a dose of malware today. The trojan got a hold of my USB drive. It made all of my files and folders hidden, then injected executables with the same names. It also hid the .exe extension so that the executables appeared in place of the legitimate objects they were masquerading. It gave the fake folders the right icon so that they looked just like folders. The objective is to fool the user into double-clicking the folders to open them but instead executing the trojan.</description>
+    </item>
+    
+    <item>
+      <title>Installing Windows 7 for the ASRock 939Dual-SATA2 motherboard</title>
+      <link>http://yentran.org/post/source/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</link>
+      <pubDate>Sun, 14 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</guid>
+      <description>The ASRock 939Dual-SATA2 motherboard is a little long in the tooth but still quite capable. Mine has been running Windows XP Media Center Edition for some time and I decided to upgrade it to Windows 7. The challenge is that the motherboard&amp;rsquo;s JMicron SATA2 chipset isn&amp;rsquo;t detected automatically at installation. If you want to install Windows on a SATA hard drive, you will have to load the driver first. The other problem is that, as of the time of writing, there is no Windows 7 driver for the ULi integrated Ethernet controller due to the age of the hardware.</description>
+    </item>
+    
+  </channel>
+</rss>

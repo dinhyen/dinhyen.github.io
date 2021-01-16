@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows 7 on Yen&#39;s blog</title>
+    <link>http://yentran.org/tags/windows-7/</link>
+    <description>Recent content in Windows 7 on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Sep 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/windows-7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Replacing motherboard without reinstalling Windows</title>
+      <link>http://yentran.org/post/source/2012-09-16-replacing-motherboard-without-reinstalling-windows/</link>
+      <pubDate>Sun, 16 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-09-16-replacing-motherboard-without-reinstalling-windows/</guid>
+      <description>I wanted to upgrade a couple of PCs by replacing the motherboard (by the way, when buying PC components, if there&amp;rsquo;s a Microcenter store nearby, try it first; at the time of this writing their $50 bundle discount for a motherboard-CPU combo cannot be beat, even by much-loved online enthusiast stores). Afterwards, I found that Windows 7 wouldn&amp;rsquo;t boot.
+In my prior experience, Windows would automatically detect the new motherboard and reconfigure itself accordingly.</description>
+    </item>
+    
+    <item>
+      <title>Installing Windows 7 for the ASRock 939Dual-SATA2 motherboard</title>
+      <link>http://yentran.org/post/source/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</link>
+      <pubDate>Sun, 14 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</guid>
+      <description>The ASRock 939Dual-SATA2 motherboard is a little long in the tooth but still quite capable. Mine has been running Windows XP Media Center Edition for some time and I decided to upgrade it to Windows 7. The challenge is that the motherboard&amp;rsquo;s JMicron SATA2 chipset isn&amp;rsquo;t detected automatically at installation. If you want to install Windows on a SATA hard drive, you will have to load the driver first. The other problem is that, as of the time of writing, there is no Windows 7 driver for the ULi integrated Ethernet controller due to the age of the hardware.</description>
+    </item>
+    
+  </channel>
+</rss>

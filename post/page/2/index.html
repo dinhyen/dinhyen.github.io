@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Yen&#39;s blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+
+    
+
+    
+    
+      <link href="/post/index.xml" rel="alternate" type="application/rss+xml" title="Yen&#39;s blog" />
+      <link href="/post/index.xml" rel="feed" type="application/rss+xml" title="Yen&#39;s blog" />
+      
+    
+    
+    <meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://yentran.org/post/" />
+<meta property="og:updated_time" content="2017-08-09T00:00:00+00:00" />
+<meta itemprop="name" content="Posts">
+<meta itemprop="description" content="">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content=""/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Yen&#39;s blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          Posts
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+
+  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
+      
+    </section>
+    <aside class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        February 7, 2014
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="http://yentran.org/post/source/2014-02-07-my-git-cheat-sheet/" class="link black dim">
+        My Git cheat sheet
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      There are lots of great Git guides out there. This is intended simply to be a reference for me during those dark times when I can&rsquo;t remember the syntax for creating a tracking branch.
+Config # These will show up in git log git config --global user.name &quot;Yen Tran&quot; git config --global user.email yen@yentran.org git config --list Info gitk git status git log git log origin/master # Show endpoints such as origin git remote show # Show origin params git remote show origin Branch (Local) git branch &lt;branch&gt; &lt;sha1_of_commit&gt; # Ex: git branch foo 7e2785d # Delete branch git branch -d &lt;branch&gt; # Create branch: git branch &lt;branch&gt; git checkout &lt;branch&gt; # Check out and automatically creates branch git checkout -b &lt;branch&gt; # List local branches git br # List remote branches git branch -r # List all branches git branch -a # Verbose list of local branches and HEAD commit git branch -v Check out a previous check-in git log # Locate desired checkin and copy SHA; e.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        February 7, 2014
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="http://yentran.org/post/source/2014-02-07-sports-i-would-watch/" class="link black dim">
+        Sports I would watch
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      &hellip;if I had an unlimited amount of free time, bathroom breaks and no desire to have a life.
+ Olympic men&rsquo;s hockey Bruins hockey NHL hockey IIHF tournament hockey such as the World Juniors Top-flight European professional hockey (KHL, Swedish Elite League, Finnish Elite League) Olympic women&rsquo;s hockey. It&rsquo;s enjoyable but less exciting than the men&rsquo;s game due to the lack of strong competition; basically it&rsquo;s a 2-horse race between Canada and USA.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        December 7, 2013
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="http://yentran.org/post/source/2013-12-07-using-angular-root-scope-for-communication-between-controllers/" class="link black dim">
+        Using Angular root scope for communication between controllers
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Angular makes it simple to create standard index and details views. Using the ubiquitous task list as an example, I can set up routes using the $route service as follows:
+$routeProvider .when(&#39;/tasks&#39;, { templateUrl: &#39;_tasks.html&#39;, controller: &#39;TasksIndexCtrl&#39; }) .when(&#39;/task/:id&#39;, { templateUrl: &#39;_task.html&#39;, controller: &#39;TaskDetailsCtrl&#39; }) .otherwise({ redirectTo: &#39;/tasks&#39; }); } The routes definitions specify the Angular controller and HTML template to use when the user navigates to a particular path. Here we have 2 controllers, one for the index page and one for the details page.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        November 23, 2013
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="http://yentran.org/post/source/2013-11-23-updating-sql-server-primary-key/" class="link black dim">
+        Updating SQL Server Primary Key
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      A requirement recently came up to update the primary key of a SQL Server table. We get user data from a third-party single sign-on service and store them locally. When the SSO software was upgraded, user IDs were changed, so we need to update our local users but retain existing data. I suppose one way to do so would be to drop any existing foreign-key constraint and update all related tables.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        November 19, 2013
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="http://yentran.org/post/source/2013-11-19-top-10-archive/" class="link black dim">
+        Top 10 archive
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      A long time ago, before I settled into a comfortable life in suburbia and write dry articles about computer, I was in grad school and belonged to a student association. Yes, that sounds much more exciting. But we had lots of gatherings, movie nights, BBQ, parties, in general lots of opportunities to revel in our collective nerddom. When I moved out with roommmates, we indulged in more of the same. I loved top 10 lists and always had one for most of the events.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        November 18, 2013
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="http://yentran.org/post/source/2013-11-18-so-long-wordpress-hello-octopress/" class="link black dim">
+        So long WordPress, hello Octopress
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      I&rsquo;ve been using WordPress since 2011. It works well enough, but for me there are a few drawbacks.
+  It&rsquo;s slow. It takes time to do anything from creating a post to previewing to deploying it. I prefer to edit text in a proper text editor, with the full array of keyboard shortcuts, so I usually end up copying and pasting anyways. But using the UI to do everything is cumbersome.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        November 13, 2013
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="http://yentran.org/post/source/2013-11-13-sigma-50mm-lens/" class="link black dim">
+        Sigma 50mm f/1.4 lens for Nikon AF
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      I&rsquo;m fond of landscape photography. However when there&rsquo;s a human subject, applying the same kind of composition can come out looking too formal or posed. I&rsquo;d like to achieve more of the natural, spontaneous, spur-of-the-moment feel. For that I want to have a lens that&rsquo;s fast, focuses quickly and has good bokeh. A prime lens would have those qualities at a much lower price point than a telephoto lens. With that settled, I had to decide between 35, 50 and 85mm.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        November 2, 2013
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="http://yentran.org/post/source/2013-11-02-fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/" class="link black dim">
+        Fixing Windows Media Center No Tuner Available Error With HDHomeRun Prime
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      I have the HDHomeRun Prime network tuner. Recently, after a Verizon FiOS tech rebooted the ONT to fix a network issue, I got the dreaded Viewing or Listening Conflict. No tuner available to satisfy the current request error when trying to view Live TV in Windows Media Center. When I tried Settings &gt; Windows Media Center setup, I got the error:
+ Tuner Not found. The TV signal cannot be configured because a TV tuner was not detected.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        October 31, 2013
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="http://yentran.org/post/source/2013-10-31-helper-method-generate-nested-tags-from-block/" class="link black dim">
+        Helper method to generate nested tags from block
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      I&rsquo;m still pretty new to Ruby. Hopefully one day I&rsquo;ll know enough to be able to look back and slap myself on the forehead for struggling with these issues.
+Right now our views generate a menu from a simple set of links:
+&lt;%= link_to &quot;foo&quot;, &quot;#&quot; %&gt; &lt;%= link_to &quot;bar&quot;, &quot;#&quot; %&gt; I&rsquo;d like to convert them to a drop-down menu that looks like this:
+&lt;div class=&quot;dropdown&quot;&gt; &lt;a class=&quot;dropdown-toggle&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;caret&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;ul class=&quot;dropdown-menu&quot;&gt; &lt;li&gt;&lt;%= link_to &quot;foo&quot;, &quot;#&quot; %&gt;&lt;/li&gt; &lt;li&gt;&lt;%= link_to &quot;bar&quot;, &quot;#&quot; %&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; I&rsquo;d like to minimize the changes to the markup as much as possible.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        October 23, 2013
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="http://yentran.org/post/source/2013-10-23-bruins-took-down-sabres-in-costly-victory/" class="link black dim">
+        Bruins took down Sabres in costly victory
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      It was game 1 of the World Series. Yawn. Since our pickup game was canceled in part due to the aforementioned sport&ndash;eh recreational&ndash;event, it was going to be either a work night or an early night. Fortunately, the Bruins came to the rescue by taking on the Sabres. It&rsquo;s a good thing it was on NBCSports/Versus instead of NESN, where viewers would have been bombarded with a constant barrage of WS updates, even though the network TV announcers are downright annoying.
+    </div>
+  </div>
+
+        </div>
+      
+    </aside>
+    
+<ul class="pagination">
+  <li class="page-item">
+    <a href="/post/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/post/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/post/">1</a>
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="/post/page/2/">2</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/post/page/3/">3</a>
+  </li>
+  <li class="page-item disabled">
+    <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/post/page/13/">13</a>
+  </li>
+  <li class="page-item">
+    <a href="/post/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/post/page/13/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+  </li>
+</ul>
+
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://yentran.org" >
+    &copy;  Yen's blog 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pagedlist on Yen&#39;s blog</title>
+    <link>http://yentran.org/tags/pagedlist/</link>
+    <description>Recent content in pagedlist on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Apr 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/pagedlist/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mapping PagedList with AutoMapper</title>
+      <link>http://yentran.org/post/source/2012-04-03-mapping-pagedlist-with-automapper/</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://yentran.org/post/source/2012-04-03-mapping-pagedlist-with-automapper/</guid>
+      <description>I&amp;rsquo;m using an implementation of PagedList based on that given by Rob Conery.
+I want to convert a paged list of business objects to a paged list of view model objects with AutoMapper. In order for AutoMapper to work in this case, it needs to know how to convert a paged list. This can be done with a custom type converter:
+public class PagedListConverter : ITypeConverter&amp;lt;PagedList&amp;lt;Person&amp;gt;, PagedList&amp;lt;PersonViewModel&amp;gt;&amp;gt; { public PagedList&amp;lt;PersonViewModel&amp;gt; Convert(ResolutionContext context) { var models = (PagedList&amp;lt;Person&amp;gt;)context.</description>
+    </item>
+    
+  </channel>
+</rss>
