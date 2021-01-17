@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>macro on Yen&#39;s blog</title>
-    <link>http://yentran.org/tags/macro/</link>
+    <link>https://yentran.org/tags/macro/</link>
     <description>Recent content in macro on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Dec 2011 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/macro/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Dec 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/macro/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Visual Studio line number macros</title>
-      <link>http://yentran.org/post/source/2011-12-21-visual-studio-line-number-macros/</link>
+      <link>https://yentran.org/post/2011-12-21-visual-studio-line-number-macros/</link>
       <pubDate>Wed, 21 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-12-21-visual-studio-line-number-macros/</guid>
+      <guid>https://yentran.org/post/2011-12-21-visual-studio-line-number-macros/</guid>
       <description>In Visual Studio, it&amp;rsquo;s easy enough to turn on and off line numbers. You&amp;rsquo;ll have to select Tools &amp;gt; Options &amp;gt; Text Editor, expand the language of choice, select General, then toggle Line numbers under the Display section. This can get tedious if you want to be able to show and hide line numbers at will. To turn this process into a single click, you can record custom macros to show and hide line numbers.</description>
     </item>
     

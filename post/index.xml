@@ -2,17 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Yen&#39;s blog</title>
-    <link>http://yentran.org/post/</link>
+    <link>https://yentran.org/post/</link>
     <description>Recent content in Posts on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Aug 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Nov 2020 22:18:32 -0500</lastBuildDate><atom:link href="https://yentran.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The ChargePoint Home Flex EV Charger</title>
+      <link>https://yentran.org/post/2020-11-20-the-chargepoint-home-flex-ev-charger-review/</link>
+      <pubDate>Fri, 20 Nov 2020 22:18:32 -0500</pubDate>
+      
+      <guid>https://yentran.org/post/2020-11-20-the-chargepoint-home-flex-ev-charger-review/</guid>
+      <description>This review is about the ChargePoint Home Flex EV charger. The link below is an affiliate link through which I would receive a commission if you purchase the product.
+View product on Amazon
+We were an early adopter of the Chevrolet Bolt BEV, having owned one since its introductory year of 2017. In 2020 after our second car died, we went out and got another one. Having BEVs as all of our vehicles necesitates having a level 2 charger at home.</description>
+    </item>
+    
     <item>
       <title>Deploying site after cloning Octopress repo</title>
-      <link>http://yentran.org/post/source/2017-08-09-deploying-site-after-cloning-octopress-repo/</link>
+      <link>https://yentran.org/post/2017-08-09-deploying-site-after-cloning-octopress-repo/</link>
       <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2017-08-09-deploying-site-after-cloning-octopress-repo/</guid>
+      <guid>https://yentran.org/post/2017-08-09-deploying-site-after-cloning-octopress-repo/</guid>
       <description>Octopress instructions are for setting up a new repo; i.e. by running rake setup_github_pages. It doesn’t work if you’ve cloned an existing repo.
 You have to manually set up a git repository in the _deploy directory which should track the master branch of the repo on GitHub.
 # create new deploy dir rm -rf _deploy mkdir _deploy cd _deploy # initialize empty git repo git init git remote add origin git@github.</description>
@@ -20,171 +31,171 @@ You have to manually set up a git repository in the _deploy directory which shou
     
     <item>
       <title>Installing the Curt 11064 trailer hitch on a 2009 Honda Fit Sport</title>
-      <link>http://yentran.org/post/source/2015-04-08-installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/</link>
+      <link>https://yentran.org/post/2015-04-08-installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/</link>
       <pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2015-04-08-installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/</guid>
+      <guid>https://yentran.org/post/2015-04-08-installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/</guid>
       <description>As if that&amp;rsquo;s not specific enough, I could also add On a Cold Sleety Night, After the Family Had Gone to Bed, While Feeling Renewed Pangs of Hunger. I feel compelled to write this post so that Kate wouldn&amp;rsquo;t think I spent all that time in the garage playing video games (I wish I could). I was deciding between the Curt and a DrawTite trailer hitch. The Curt seemed more substantial, is made in Wisconsin (the DrawTite is made in Mexico) and as it turned out is surprisingly lighter (lighter being relative, more on that later).</description>
     </item>
     
     <item>
       <title>How to not upgrade the Nexus 7 to Lollipop</title>
-      <link>http://yentran.org/post/source/2015-02-16-how-to-not-upgrade-the-nexus-7-to-lollipop/</link>
+      <link>https://yentran.org/post/2015-02-16-how-to-not-upgrade-the-nexus-7-to-lollipop/</link>
       <pubDate>Mon, 16 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2015-02-16-how-to-not-upgrade-the-nexus-7-to-lollipop/</guid>
+      <guid>https://yentran.org/post/2015-02-16-how-to-not-upgrade-the-nexus-7-to-lollipop/</guid>
       <description>I have a first-generation Nexus 7 tablet made by Asus which ran KitKat 4.4. When the OTA Lollipop update became available, I couldn&amp;rsquo;t wait to install it. The latest and greatest Android running on Google hardware seemed to be a match made in heaven; it would be better, prettier and faster, right? As you can probably guess from the title of this post, the answer was a resounding no. Everything became sluggish, swipes would only registered after a couple of seconds, random things popped open and close.</description>
     </item>
     
     <item>
       <title>Validating multiple fields with Angular</title>
-      <link>http://yentran.org/post/source/2014-07-09-validating-multiple-fields-with-angular/</link>
+      <link>https://yentran.org/post/2014-07-09-validating-multiple-fields-with-angular/</link>
       <pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2014-07-09-validating-multiple-fields-with-angular/</guid>
+      <guid>https://yentran.org/post/2014-07-09-validating-multiple-fields-with-angular/</guid>
       <description>Angular makes it simple to validate a single form field. Validating multiple fields requires a bit more work. The approach that works for me is use a directive to lay out the framework, but to perform the actual validation in the parent scope. Since the user defines the specifics of the validation, any arbitrary validation can be performed and the directive can be kept simple.
 In this example, I&amp;rsquo;d like to validate that the sum of 2 text inputs equals 10.</description>
     </item>
     
     <item>
       <title>Validating required form fields with Angular</title>
-      <link>http://yentran.org/post/source/2014-04-24-validating-required-form-fields-with-angular/</link>
+      <link>https://yentran.org/post/2014-04-24-validating-required-form-fields-with-angular/</link>
       <pubDate>Thu, 24 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2014-04-24-validating-required-form-fields-with-angular/</guid>
+      <guid>https://yentran.org/post/2014-04-24-validating-required-form-fields-with-angular/</guid>
       <description>Two things can happen when the user fills out a form field: the entered value is incorrect or the value is missing. With Angular validating either case is consistent and simple. The issue is when to show the error message: as the value is being entered, after the field loses focus or after the user submits the form. I think that for a better usability, the user should be informed that the value is incorrect while entering the value.</description>
     </item>
     
     <item>
       <title>Angular in Jekyll/Octopress</title>
-      <link>http://yentran.org/post/source/2014-04-18-angular-in-jekyll-or-octopress/</link>
+      <link>https://yentran.org/post/2014-04-18-angular-in-jekyll-or-octopress/</link>
       <pubDate>Fri, 18 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2014-04-18-angular-in-jekyll-or-octopress/</guid>
+      <guid>https://yentran.org/post/2014-04-18-angular-in-jekyll-or-octopress/</guid>
       <description>Have a problem with Angular scope variable binding not working on a Jekyll or Octopress (which uses Jekyll) page? It so happens that Jekyll&amp;rsquo;s Liquid Template uses the same {{ foo }} syntax as Angular and would attempt to process the markup before Angular can get to it. To get around the problem, you can surround Angular markup with {% raw %}and {% endraw %}tags. Alternatively, you can also forgo from using this syntax altogether and use Angular&amp;rsquo;s ng-bind directive to bind a variable to a DOM element.</description>
     </item>
     
     <item>
       <title>Copying files in Hudson</title>
-      <link>http://yentran.org/post/source/2014-04-15-copying-files-in-hudson/</link>
+      <link>https://yentran.org/post/2014-04-15-copying-files-in-hudson/</link>
       <pubDate>Tue, 15 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2014-04-15-copying-files-in-hudson/</guid>
+      <guid>https://yentran.org/post/2014-04-15-copying-files-in-hudson/</guid>
       <description>Copying files somewhere is pretty standard procedure when deploying an app. Interestingly I&amp;rsquo;ve never had to copy files directly in Hudson. Until now I&amp;rsquo;ve only deployed .NET apps in Hudson and used MSBuild&amp;rsquo;s Copy task to copy the files to a share folder. Now that I want to deploy Angular and other client apps in Hudson, I&amp;rsquo;d have to copy the files manually.
 My initial attempt was to add a new Execute Shell build step to run xcopy.</description>
     </item>
     
     <item>
       <title>A MoCA home network</title>
-      <link>http://yentran.org/post/source/2014-04-09-moca-home-network/</link>
+      <link>https://yentran.org/post/2014-04-09-moca-home-network/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2014-04-09-moca-home-network/</guid>
+      <guid>https://yentran.org/post/2014-04-09-moca-home-network/</guid>
       <description>The benefits of a wired home network are many. I use the SiliconDust HDHomerun Prime network TV tuners to watch cable TV on any computer in the house without the need for a set-top box. However, it is quite bandwidth-intensive and even a wireless-N connection just doesn&amp;rsquo;t cut it. The picture would be plagued with stutters, pause and artifacts and pretty much unwatchable, especially for hockey with its lightning-fast actions.</description>
     </item>
     
     <item>
       <title>Simple tasks with Grunt</title>
-      <link>http://yentran.org/post/source/2014-03-03-simple-tasks-with-grunt/</link>
+      <link>https://yentran.org/post/2014-03-03-simple-tasks-with-grunt/</link>
       <pubDate>Mon, 03 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2014-03-03-simple-tasks-with-grunt/</guid>
+      <guid>https://yentran.org/post/2014-03-03-simple-tasks-with-grunt/</guid>
       <description>Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&amp;rsquo;re working with conventional server-side platforms. Unfortunately, when it comes to JavaScripts and CSS, automation tools are harder to find. That is, until Grunt comes along (following Node, which turned upside down the whole idea of server vs client side in the first place).
 As a self-described &amp;ldquo;task runner&amp;rdquo;, Grunt is powerful and pleasantly approachable.</description>
     </item>
     
     <item>
       <title>Quelques impressions sur la culture française</title>
-      <link>http://yentran.org/post/source/2014-02-09-quelques-impressions-sur-la-culture-francaise/</link>
+      <link>https://yentran.org/post/2014-02-09-quelques-impressions-sur-la-culture-francaise/</link>
       <pubDate>Sun, 09 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2014-02-09-quelques-impressions-sur-la-culture-francaise/</guid>
+      <guid>https://yentran.org/post/2014-02-09-quelques-impressions-sur-la-culture-francaise/</guid>
       <description>Il me parait que nous avons les même ou presque les même idées sur la notion d’amitié. Celles-ci sont les idées qu’un ami est quelqu’un avec qui on a des gôuts en commun, avec qui on aime passer du temps, qui on s’entend très bien, sur qui on peut compter, en qui on peut faire confiance, qui n’hésite pas à l’aider aux moments difficiles, ou qui respecte les opinions de l’autre et qui partage ses opinions sans hésitation.</description>
     </item>
     
     <item>
       <title>My Git cheat sheet</title>
-      <link>http://yentran.org/post/source/2014-02-07-my-git-cheat-sheet/</link>
+      <link>https://yentran.org/post/2014-02-07-my-git-cheat-sheet/</link>
       <pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2014-02-07-my-git-cheat-sheet/</guid>
+      <guid>https://yentran.org/post/2014-02-07-my-git-cheat-sheet/</guid>
       <description>There are lots of great Git guides out there. This is intended simply to be a reference for me during those dark times when I can&amp;rsquo;t remember the syntax for creating a tracking branch.
 Config # These will show up in git log git config --global user.name &amp;quot;Yen Tran&amp;quot; git config --global user.email yen@yentran.org git config --list Info gitk git status git log git log origin/master # Show endpoints such as origin git remote show # Show origin params git remote show origin Branch (Local) git branch &amp;lt;branch&amp;gt; &amp;lt;sha1_of_commit&amp;gt; # Ex: git branch foo 7e2785d # Delete branch git branch -d &amp;lt;branch&amp;gt; # Create branch: git branch &amp;lt;branch&amp;gt; git checkout &amp;lt;branch&amp;gt; # Check out and automatically creates branch git checkout -b &amp;lt;branch&amp;gt; # List local branches git br # List remote branches git branch -r # List all branches git branch -a # Verbose list of local branches and HEAD commit git branch -v Check out a previous check-in git log # Locate desired checkin and copy SHA; e.</description>
     </item>
     
     <item>
       <title>Sports I would watch</title>
-      <link>http://yentran.org/post/source/2014-02-07-sports-i-would-watch/</link>
+      <link>https://yentran.org/post/2014-02-07-sports-i-would-watch/</link>
       <pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2014-02-07-sports-i-would-watch/</guid>
+      <guid>https://yentran.org/post/2014-02-07-sports-i-would-watch/</guid>
       <description>&amp;hellip;if I had an unlimited amount of free time, bathroom breaks and no desire to have a life.
  Olympic men&amp;rsquo;s hockey Bruins hockey NHL hockey IIHF tournament hockey such as the World Juniors Top-flight European professional hockey (KHL, Swedish Elite League, Finnish Elite League) Olympic women&amp;rsquo;s hockey. It&amp;rsquo;s enjoyable but less exciting than the men&amp;rsquo;s game due to the lack of strong competition; basically it&amp;rsquo;s a 2-horse race between Canada and USA.</description>
     </item>
     
     <item>
       <title>Using Angular root scope for communication between controllers</title>
-      <link>http://yentran.org/post/source/2013-12-07-using-angular-root-scope-for-communication-between-controllers/</link>
+      <link>https://yentran.org/post/2013-12-07-using-angular-root-scope-for-communication-between-controllers/</link>
       <pubDate>Sat, 07 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-12-07-using-angular-root-scope-for-communication-between-controllers/</guid>
+      <guid>https://yentran.org/post/2013-12-07-using-angular-root-scope-for-communication-between-controllers/</guid>
       <description>Angular makes it simple to create standard index and details views. Using the ubiquitous task list as an example, I can set up routes using the $route service as follows:
 $routeProvider .when(&amp;#39;/tasks&amp;#39;, { templateUrl: &amp;#39;_tasks.html&amp;#39;, controller: &amp;#39;TasksIndexCtrl&amp;#39; }) .when(&amp;#39;/task/:id&amp;#39;, { templateUrl: &amp;#39;_task.html&amp;#39;, controller: &amp;#39;TaskDetailsCtrl&amp;#39; }) .otherwise({ redirectTo: &amp;#39;/tasks&amp;#39; }); } The routes definitions specify the Angular controller and HTML template to use when the user navigates to a particular path. Here we have 2 controllers, one for the index page and one for the details page.</description>
     </item>
     
     <item>
       <title>Updating SQL Server Primary Key</title>
-      <link>http://yentran.org/post/source/2013-11-23-updating-sql-server-primary-key/</link>
+      <link>https://yentran.org/post/2013-11-23-updating-sql-server-primary-key/</link>
       <pubDate>Sat, 23 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-11-23-updating-sql-server-primary-key/</guid>
+      <guid>https://yentran.org/post/2013-11-23-updating-sql-server-primary-key/</guid>
       <description>A requirement recently came up to update the primary key of a SQL Server table. We get user data from a third-party single sign-on service and store them locally. When the SSO software was upgraded, user IDs were changed, so we need to update our local users but retain existing data. I suppose one way to do so would be to drop any existing foreign-key constraint and update all related tables.</description>
     </item>
     
     <item>
       <title>Top 10 archive</title>
-      <link>http://yentran.org/post/source/2013-11-19-top-10-archive/</link>
+      <link>https://yentran.org/post/2013-11-19-top-10-archive/</link>
       <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-11-19-top-10-archive/</guid>
+      <guid>https://yentran.org/post/2013-11-19-top-10-archive/</guid>
       <description>A long time ago, before I settled into a comfortable life in suburbia and write dry articles about computer, I was in grad school and belonged to a student association. Yes, that sounds much more exciting. But we had lots of gatherings, movie nights, BBQ, parties, in general lots of opportunities to revel in our collective nerddom. When I moved out with roommmates, we indulged in more of the same. I loved top 10 lists and always had one for most of the events.</description>
     </item>
     
     <item>
       <title>So long WordPress, hello Octopress</title>
-      <link>http://yentran.org/post/source/2013-11-18-so-long-wordpress-hello-octopress/</link>
+      <link>https://yentran.org/post/2013-11-18-so-long-wordpress-hello-octopress/</link>
       <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-11-18-so-long-wordpress-hello-octopress/</guid>
+      <guid>https://yentran.org/post/2013-11-18-so-long-wordpress-hello-octopress/</guid>
       <description>I&amp;rsquo;ve been using WordPress since 2011. It works well enough, but for me there are a few drawbacks.
   It&amp;rsquo;s slow. It takes time to do anything from creating a post to previewing to deploying it. I prefer to edit text in a proper text editor, with the full array of keyboard shortcuts, so I usually end up copying and pasting anyways. But using the UI to do everything is cumbersome.</description>
     </item>
     
     <item>
       <title>Sigma 50mm f/1.4 lens for Nikon AF</title>
-      <link>http://yentran.org/post/source/2013-11-13-sigma-50mm-lens/</link>
+      <link>https://yentran.org/post/2013-11-13-sigma-50mm-lens/</link>
       <pubDate>Wed, 13 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-11-13-sigma-50mm-lens/</guid>
+      <guid>https://yentran.org/post/2013-11-13-sigma-50mm-lens/</guid>
       <description>I&amp;rsquo;m fond of landscape photography. However when there&amp;rsquo;s a human subject, applying the same kind of composition can come out looking too formal or posed. I&amp;rsquo;d like to achieve more of the natural, spontaneous, spur-of-the-moment feel. For that I want to have a lens that&amp;rsquo;s fast, focuses quickly and has good bokeh. A prime lens would have those qualities at a much lower price point than a telephoto lens. With that settled, I had to decide between 35, 50 and 85mm.</description>
     </item>
     
     <item>
       <title>Fixing Windows Media Center No Tuner Available Error With HDHomeRun Prime</title>
-      <link>http://yentran.org/post/source/2013-11-02-fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/</link>
+      <link>https://yentran.org/post/2013-11-02-fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/</link>
       <pubDate>Sat, 02 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-11-02-fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/</guid>
+      <guid>https://yentran.org/post/2013-11-02-fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/</guid>
       <description>I have the HDHomeRun Prime network tuner. Recently, after a Verizon FiOS tech rebooted the ONT to fix a network issue, I got the dreaded Viewing or Listening Conflict. No tuner available to satisfy the current request error when trying to view Live TV in Windows Media Center. When I tried Settings &amp;gt; Windows Media Center setup, I got the error:
  Tuner Not found. The TV signal cannot be configured because a TV tuner was not detected.</description>
     </item>
     
     <item>
       <title>Helper method to generate nested tags from block</title>
-      <link>http://yentran.org/post/source/2013-10-31-helper-method-generate-nested-tags-from-block/</link>
+      <link>https://yentran.org/post/2013-10-31-helper-method-generate-nested-tags-from-block/</link>
       <pubDate>Thu, 31 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-10-31-helper-method-generate-nested-tags-from-block/</guid>
+      <guid>https://yentran.org/post/2013-10-31-helper-method-generate-nested-tags-from-block/</guid>
       <description>I&amp;rsquo;m still pretty new to Ruby. Hopefully one day I&amp;rsquo;ll know enough to be able to look back and slap myself on the forehead for struggling with these issues.
 Right now our views generate a menu from a simple set of links:
 &amp;lt;%= link_to &amp;quot;foo&amp;quot;, &amp;quot;#&amp;quot; %&amp;gt; &amp;lt;%= link_to &amp;quot;bar&amp;quot;, &amp;quot;#&amp;quot; %&amp;gt; I&amp;rsquo;d like to convert them to a drop-down menu that looks like this:
@@ -193,19 +204,19 @@ Right now our views generate a menu from a simple set of links:
     
     <item>
       <title>Bruins took down Sabres in costly victory</title>
-      <link>http://yentran.org/post/source/2013-10-23-bruins-took-down-sabres-in-costly-victory/</link>
+      <link>https://yentran.org/post/2013-10-23-bruins-took-down-sabres-in-costly-victory/</link>
       <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-10-23-bruins-took-down-sabres-in-costly-victory/</guid>
+      <guid>https://yentran.org/post/2013-10-23-bruins-took-down-sabres-in-costly-victory/</guid>
       <description>It was game 1 of the World Series. Yawn. Since our pickup game was canceled in part due to the aforementioned sport&amp;ndash;eh recreational&amp;ndash;event, it was going to be either a work night or an early night. Fortunately, the Bruins came to the rescue by taking on the Sabres. It&amp;rsquo;s a good thing it was on NBCSports/Versus instead of NESN, where viewers would have been bombarded with a constant barrage of WS updates, even though the network TV announcers are downright annoying.</description>
     </item>
     
     <item>
       <title>Simple table sorting with Angular</title>
-      <link>http://yentran.org/post/source/2013-09-28-simple-table-sorting-with-angular/</link>
+      <link>https://yentran.org/post/2013-09-28-simple-table-sorting-with-angular/</link>
       <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-09-28-simple-table-sorting-with-angular/</guid>
+      <guid>https://yentran.org/post/2013-09-28-simple-table-sorting-with-angular/</guid>
       <description>View in Plunkr
 I have a page with tabular data which I want to be able to sort without having to go back to the server. Also a nice-to-have would be the ability to filter the displayed items. Since I&amp;rsquo;m trying to learn Angular, this seems like an excellent opportunity to try it out.
 In the controller, the variable items holds the data to be sorted/filtered, while filteredItems is initialized to an empty array.</description>
@@ -213,59 +224,59 @@ In the controller, the variable items holds the data to be sorted/filtered, whil
     
     <item>
       <title>Wix: Executing custom action before starting Windows service</title>
-      <link>http://yentran.org/post/source/2013-09-27-wix-executing-custom-action-before-starting-windows-service/</link>
+      <link>https://yentran.org/post/2013-09-27-wix-executing-custom-action-before-starting-windows-service/</link>
       <pubDate>Fri, 27 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-09-27-wix-executing-custom-action-before-starting-windows-service/</guid>
+      <guid>https://yentran.org/post/2013-09-27-wix-executing-custom-action-before-starting-windows-service/</guid>
       <description>I&amp;rsquo;ve been trying to get a Wix installer to work. This particular scenario is pretty simple. I want to configure the database via a custom action, then start a Windows service which then queries the database before starting. This would seem like a commonplace scenario. However, Wix documentations are sparse and I&amp;rsquo;ve been wrangling with this for some time. I finally found a solution. While I loathe to reference a StackOverflow answer, as a favor to my future self I&amp;rsquo;m going to do so anyways.</description>
     </item>
     
     <item>
       <title>Wix: Batch files.  Yes, really.</title>
-      <link>http://yentran.org/post/source/2013-09-26-wix-batch-file/</link>
+      <link>https://yentran.org/post/2013-09-26-wix-batch-file/</link>
       <pubDate>Thu, 26 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-09-26-wix-batch-file/</guid>
+      <guid>https://yentran.org/post/2013-09-26-wix-batch-file/</guid>
       <description>Batch files are the last resort due to its Neanderthal abilities and exasperating syntax. But if I want to run a bunch of things on bare-boned Windows Server 2003, this seems like the quickest if not only option.
 I tried something like this, by creating a property for the system executable cmd.exe, which would execute the batch script via the /c switch. Then I created a custom action that relies on the property.</description>
     </item>
     
     <item>
       <title>Bruins Training Camp 2013</title>
-      <link>http://yentran.org/post/source/2013-09-17-bruins-training-camp-2013/</link>
+      <link>https://yentran.org/post/2013-09-17-bruins-training-camp-2013/</link>
       <pubDate>Tue, 17 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-09-17-bruins-training-camp-2013/</guid>
+      <guid>https://yentran.org/post/2013-09-17-bruins-training-camp-2013/</guid>
       <description>Having moved to the &amp;lsquo;burbs recently, I look forward to attending the Bruins&amp;rsquo; regular-season practice sessions at Ristuccia Arena in Wilmington, now that it&amp;rsquo;s only a few miles away. The 2013 Training Camp, though, was held at TD Garden the weekend of September 14-15. Of course I was going to be there.
 The 2013 season was a bit of a roller coaster ride. It was thrilling at times, but ultimately disappointing.</description>
     </item>
     
     <item>
       <title>Fun with CSS sibling selectors</title>
-      <link>http://yentran.org/post/source/2013-08-09-fun-with-css-sibling-selectors/</link>
+      <link>https://yentran.org/post/2013-08-09-fun-with-css-sibling-selectors/</link>
       <pubDate>Fri, 09 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-08-09-fun-with-css-sibling-selectors/</guid>
+      <guid>https://yentran.org/post/2013-08-09-fun-with-css-sibling-selectors/</guid>
       <description>View the live example
 It seems like I&amp;rsquo;m always working on search boxes, but here goes another. My goal here is to display an icon inside the search box. Initially, the search box has a dark background. When clicked, the background changes to white. The icon should changes its color based on whether or not the search box has focus. If we were using a font-based icon such as Fontawesome, which is awesome by the way, styling the icon would be a simple exercise.</description>
     </item>
     
     <item>
       <title>Search box using KnockoutJS</title>
-      <link>http://yentran.org/post/source/2013-07-02-search-box-using-knockoutjs/</link>
+      <link>https://yentran.org/post/2013-07-02-search-box-using-knockoutjs/</link>
       <pubDate>Tue, 02 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-07-02-search-box-using-knockoutjs/</guid>
+      <guid>https://yentran.org/post/2013-07-02-search-box-using-knockoutjs/</guid>
       <description>View the live example
 We&amp;rsquo;re gradually gravitating toward AngularJS because it&amp;rsquo;s more powerful and flexible. However with AngularJS we have some issues with IE7, which unfortunately we&amp;rsquo;re stuck supporting. So when I want to add some simple enhancements to the search box, I went back to KnockoutJS. For a simple scenario such as this, KnockoutJS works great. If we had to do this using plain jQuery, we&amp;rsquo;d have to juggle keypress, focus and blur events which is just unnecessary drudgery!</description>
     </item>
     
     <item>
       <title>Animate textbox using KnockoutJS</title>
-      <link>http://yentran.org/post/source/2013-04-24-animate-textbox-using-knockoutjs/</link>
+      <link>https://yentran.org/post/2013-04-24-animate-textbox-using-knockoutjs/</link>
       <pubDate>Wed, 24 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-04-24-animate-textbox-using-knockoutjs/</guid>
+      <guid>https://yentran.org/post/2013-04-24-animate-textbox-using-knockoutjs/</guid>
       <description>View the live example
 KnockoutJS is a dynamic UI framework that can really liberate you from the tedium of low-level DOM manipulations. Even though I&amp;rsquo;ve only played with it for a little while, I&amp;rsquo;ve become a huge fan. One of my initial attempts is to create an animated text input similar to Twitter&amp;rsquo;s.
 The UI is quite simple. The textbox should display a &amp;ldquo;placeholder&amp;rdquo; prompt. When the user clicks inside the textbox, expand it and display a save button, initially disabled.</description>
@@ -273,66 +284,66 @@ The UI is quite simple. The textbox should display a &amp;ldquo;placeholder&amp;
     
     <item>
       <title>Intermittent, temporary freezing on MacBook with OCZ Vertex 3</title>
-      <link>http://yentran.org/post/source/2013-03-19-intermittent-temporary-freezing-on-macbook-with-ocz-vertex-3/</link>
+      <link>https://yentran.org/post/2013-03-19-intermittent-temporary-freezing-on-macbook-with-ocz-vertex-3/</link>
       <pubDate>Tue, 19 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-03-19-intermittent-temporary-freezing-on-macbook-with-ocz-vertex-3/</guid>
+      <guid>https://yentran.org/post/2013-03-19-intermittent-temporary-freezing-on-macbook-with-ocz-vertex-3/</guid>
       <description>I recently upgraded the hard drive on my MacBook Pro running Snow Leopard to a 120GB OCZ Vertex 3 SSD. As advertised, the boot up and application start times are dramatically reduced. The SSD is everything I had hoped for. Well, almost. There has been a persistent and quite annoying issue. At random intervals, the computer would be come unresponsive. I could move the mouse or type on the keyboard, but nothing woud happen.</description>
     </item>
     
     <item>
       <title>You played with who?</title>
-      <link>http://yentran.org/post/source/2013-03-08-you-played-with-who/</link>
+      <link>https://yentran.org/post/2013-03-08-you-played-with-who/</link>
       <pubDate>Fri, 08 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-03-08-you-played-with-who/</guid>
+      <guid>https://yentran.org/post/2013-03-08-you-played-with-who/</guid>
       <description>Since 1999 I&amp;rsquo;ve helped run a pickup hockey group at the Skating Club of Boston. We&amp;rsquo;re really not crazy about the rink there. The ice is intended for figure skaters so it&amp;rsquo;s soft and thus slow and quick to become choppy. There is no glass above the boards so if you shoot high enough you&amp;rsquo;d have to go fish for the puck under the stands. And since figure skaters generally stay in the middle of the ice, the edges are neglected and not well maintained; this is a problem if you try to &amp;ldquo;wrap the puck around the board&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>Fix External Lockout for American Standard Freedom 90 furnace</title>
-      <link>http://yentran.org/post/source/2013-02-13-fix-external-lockout-for-american-standard-freedom-90-furnace/</link>
+      <link>https://yentran.org/post/2013-02-13-fix-external-lockout-for-american-standard-freedom-90-furnace/</link>
       <pubDate>Wed, 13 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-02-13-fix-external-lockout-for-american-standard-freedom-90-furnace/</guid>
+      <guid>https://yentran.org/post/2013-02-13-fix-external-lockout-for-american-standard-freedom-90-furnace/</guid>
       <description>Some of my blogs are of the &amp;ldquo;I&amp;rsquo;d better write this down so I don&amp;rsquo;t forget it&amp;rdquo; variety. This is one of them. This is intended primarily for future me, but it would be cool if anyone else finds it useful.
 The equipment in question is an American Standard (Trane) Freedom 90 gas furnace that&amp;rsquo;s about 7 years old. Recently, in fact right in the middle of a record-setting snowstorm, it started blowing only cold air.</description>
     </item>
     
     <item>
       <title>Mini project: Adding a second hard drive to the Mac Mini</title>
-      <link>http://yentran.org/post/source/2013-02-01-mini-project-adding-a-second-hard-drive-to-the-mac-mini/</link>
+      <link>https://yentran.org/post/2013-02-01-mini-project-adding-a-second-hard-drive-to-the-mac-mini/</link>
       <pubDate>Fri, 01 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-02-01-mini-project-adding-a-second-hard-drive-to-the-mac-mini/</guid>
+      <guid>https://yentran.org/post/2013-02-01-mini-project-adding-a-second-hard-drive-to-the-mac-mini/</guid>
       <description>I want to replace the DVR that I get from Verizon Fios. Besides the monthly cost, it&amp;rsquo;s an older unit that&amp;rsquo;s slow and has the capacity for no more than a handful 3-hour hockey games recorded in HD. That is plainly unacceptable, especially during the Stanley Cup Playoffs. For the HD tuner, I decided to go with the SiliconDust HD Homerun Prime. For the DVR, I&amp;rsquo;m going with a Mac Mini.</description>
     </item>
     
     <item>
       <title>Quickly editing waypoints on a Garmin GPS device</title>
-      <link>http://yentran.org/post/source/2012-12-18-quickly-editing-waypoints-on-a-garmin-gps-device/</link>
+      <link>https://yentran.org/post/2012-12-18-quickly-editing-waypoints-on-a-garmin-gps-device/</link>
       <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-12-18-quickly-editing-waypoints-on-a-garmin-gps-device/</guid>
+      <guid>https://yentran.org/post/2012-12-18-quickly-editing-waypoints-on-a-garmin-gps-device/</guid>
       <description>When we traveled by car in Spain and Portugal in 2007, it&amp;rsquo;s hard to believe that we managed to get around several cities using only a Michelin road atlas and a bunch of printouts of online maps. This time we&amp;rsquo;re fully embracing 21st-century technology and bringing along a GPS device. To help save time, I like to enter destinations or waypoints ahead of time. On my Garmin nüvi 255W, it&amp;rsquo;s a time-consuming process to enter waypoints (which Garmin calls Favorites).</description>
     </item>
     
     <item>
       <title>Setting up Git to work remotely</title>
-      <link>http://yentran.org/post/source/2012-12-15-setting-up-git-to-work-remotely/</link>
+      <link>https://yentran.org/post/2012-12-15-setting-up-git-to-work-remotely/</link>
       <pubDate>Sat, 15 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-12-15-setting-up-git-to-work-remotely/</guid>
+      <guid>https://yentran.org/post/2012-12-15-setting-up-git-to-work-remotely/</guid>
       <description>At home I use a MacBook to connect via VPN to the office. I&amp;rsquo;d have access to the intranet but not shell access to my workstation. Since I usually work on the same project at home and at the office, I need to keep my work synchronized. One way to do that is with a Git remote branch.
 At the office, I&amp;rsquo;d create a local branch for the story I&amp;rsquo;d like to work on:</description>
     </item>
     
     <item>
       <title>Using Hudson with Git and MSBuild on Windows</title>
-      <link>http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</link>
+      <link>https://yentran.org/post/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</link>
       <pubDate>Thu, 15 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</guid>
+      <guid>https://yentran.org/post/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</guid>
       <description>We use Hudson as our continuous integration server (although we&amp;rsquo;re thinking about moving to Jenkins, but that&amp;rsquo;s a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.
 Pre-requisites We use the following software. The listed versions are the latest as of the time of writing, but other combinations should work.
  Java Runtime Environment (JRE) 7 Apache Tomcat 7.0 Hudson 2.</description>
@@ -340,94 +351,94 @@ Pre-requisites We use the following software. The listed versions are the latest
     
     <item>
       <title>Looper</title>
-      <link>http://yentran.org/post/source/2012-11-04-looper/</link>
+      <link>https://yentran.org/post/2012-11-04-looper/</link>
       <pubDate>Sun, 04 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-11-04-looper/</guid>
+      <guid>https://yentran.org/post/2012-11-04-looper/</guid>
       <description>Looper, starring Bruce Willis and that awkward kid in Third Rock from the Sun, is a terrific movie with extraordinary storytelling, tightly woven narrative and great acting. I really enjoy it very much, despite some misgivings about its remorseless violence and relentlessly depressing depiction of the future. However, since I&amp;rsquo;ve been asked if I can poke any hole in it, I&amp;rsquo;ve taken it upon myself as a task to find a chink or two in the movie&amp;rsquo;s formidable armor, much in the same spirit as this critique.</description>
     </item>
     
     <item>
       <title>Replacing motherboard without reinstalling Windows</title>
-      <link>http://yentran.org/post/source/2012-09-16-replacing-motherboard-without-reinstalling-windows/</link>
+      <link>https://yentran.org/post/2012-09-16-replacing-motherboard-without-reinstalling-windows/</link>
       <pubDate>Sun, 16 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-09-16-replacing-motherboard-without-reinstalling-windows/</guid>
+      <guid>https://yentran.org/post/2012-09-16-replacing-motherboard-without-reinstalling-windows/</guid>
       <description>I wanted to upgrade a couple of PCs by replacing the motherboard (by the way, when buying PC components, if there&amp;rsquo;s a Microcenter store nearby, try it first; at the time of this writing their $50 bundle discount for a motherboard-CPU combo cannot be beat, even by much-loved online enthusiast stores). Afterwards, I found that Windows 7 wouldn&amp;rsquo;t boot.
 In my prior experience, Windows would automatically detect the new motherboard and reconfigure itself accordingly.</description>
     </item>
     
     <item>
       <title>Paris 1999</title>
-      <link>http://yentran.org/post/source/2012-08-09-paris-flashback/</link>
+      <link>https://yentran.org/post/2012-08-09-paris-flashback/</link>
       <pubDate>Thu, 09 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-08-09-paris-flashback/</guid>
+      <guid>https://yentran.org/post/2012-08-09-paris-flashback/</guid>
       <description>I took a trip outside of the US for the first time in 1999. My sister and I got to spend a week in Paris, then took a train to the Netherlands where we toured the country for another week with a friend. Traveling so far from home by ourselves was exciting enough, and being in the most beautiful and metropolitan city in the world turned it into an unforgettable experience.</description>
     </item>
     
     <item>
       <title>Ollantaytambo, Peru (Day 6)</title>
-      <link>http://yentran.org/post/source/2012-08-07-ollantaytambo/</link>
+      <link>https://yentran.org/post/2012-08-07-ollantaytambo/</link>
       <pubDate>Tue, 07 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-08-07-ollantaytambo/</guid>
+      <guid>https://yentran.org/post/2012-08-07-ollantaytambo/</guid>
       <description>On our last day in Peru, our flight from Cusco wouldn&amp;rsquo;t be until 15h30. Until then we could either wander around Cusco or use our Boleto Turístico to explore the other ruins on the outskirts of Cusco (Puca Pucara, Q&amp;rsquo;enqo and Tambomachay). However, we had heard really good things about Ollantaytambo. As it turned out, when we returned from Machu Picchu the night before, Lima Tours sent a driver to pick us up at Ollantaytambo.</description>
     </item>
     
     <item>
       <title>Machu Picchu, Peru (Day 5, 6)</title>
-      <link>http://yentran.org/post/source/2012-07-31-machu-picchu/</link>
+      <link>https://yentran.org/post/2012-07-31-machu-picchu/</link>
       <pubDate>Tue, 31 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-07-31-machu-picchu/</guid>
+      <guid>https://yentran.org/post/2012-07-31-machu-picchu/</guid>
       <description>Map of our hike to Intipunku, the Inca Bridge and down to Aguas Calientes (the GPS track recorded by the logger is a little out of sync with Google Map, but you get the idea).
 Had Machu Picchu been built in Cusco, it would have been just as spectacular. But being perched on a remote mountaintop, invisible from below, covered by swirling mists, and (when &amp;ldquo;discovered&amp;rdquo; by Hiram Bingham) overrun by the jungle gives it an unmatched mystique.</description>
     </item>
     
     <item>
       <title>Sacsayhuamán, Peru (Day 4)</title>
-      <link>http://yentran.org/post/source/2012-07-24-sacsayhuaman/</link>
+      <link>https://yentran.org/post/2012-07-24-sacsayhuaman/</link>
       <pubDate>Tue, 24 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-07-24-sacsayhuaman/</guid>
+      <guid>https://yentran.org/post/2012-07-24-sacsayhuaman/</guid>
       <description>The largest Inca complex in Cusco is Sacsayhuamán, a walled fortress which stands on a hill overlooking the city. It&amp;rsquo;s believed that the Incas built the city of Cusco in the shape of a jaguar, with Sacsayhuamán representing the head (and the most formidable part) of the jaguar. It may be hard to see it now, as the city has undergone dramatic changes in the intervening centuries. But it&amp;rsquo;s easy to see how the jagged outline of the walls bears remarkable resemblance to rows of teeth.</description>
     </item>
     
     <item>
       <title>Písac, Peru (Day 4)</title>
-      <link>http://yentran.org/post/source/2012-07-19-pisac/</link>
+      <link>https://yentran.org/post/2012-07-19-pisac/</link>
       <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-07-19-pisac/</guid>
+      <guid>https://yentran.org/post/2012-07-19-pisac/</guid>
       <description>Map of our walking route of Písac.
 Most people know about Cusco and Machu Picchu, but there&amp;rsquo;s so much more. Stretched between the two is the valley formed by the Urubamba (or Vilcanota) river, the so-called Sacred Valley of the Incas. Inca settlements, temples and monuments are found through the valley and towns such as Písac and Ollantaytambo are home to spectacular ruins. Those who are up for an outdoor experience can even take the Inca trail, the ancient highway to Machu Picchu.</description>
     </item>
     
     <item>
       <title>Cusco, Peru (Day 3, 4, 6)</title>
-      <link>http://yentran.org/post/source/2012-07-17-cusco/</link>
+      <link>https://yentran.org/post/2012-07-17-cusco/</link>
       <pubDate>Tue, 17 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-07-17-cusco/</guid>
+      <guid>https://yentran.org/post/2012-07-17-cusco/</guid>
       <description>We arrived at airport with just 1 hour to spare. I am quite impressed with LAN Chile Airline. Plenty of professional bilingual staff are available to assist passengers at automated check-in kiosks. Oh and they&amp;rsquo;re all attractive young women. In other parts of the world some old traditions still persist. Our flight to Cusco was short, about 1h. Our Peruvian fellow passenger was nice enough to stick the my GPS receiver behind the window shade so that we get a GPS trace of the flight path.</description>
     </item>
     
     <item>
       <title>Lima, Peru (Day 1 &amp; 2)</title>
-      <link>http://yentran.org/post/source/2012-07-16-lima/</link>
+      <link>https://yentran.org/post/2012-07-16-lima/</link>
       <pubDate>Mon, 16 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-07-16-lima/</guid>
+      <guid>https://yentran.org/post/2012-07-16-lima/</guid>
       <description>Our Peru adventure didn&amp;rsquo;t start out well. Our flight from Boston was delayed for 90 min and managed to land in Newark 5 minutes after the connection had already left. We were rerouted to Miami and put on a flight to Lima that arrived at 4:30 in the morning. The streets were mostly devoid of traffic though surprisingly some street sweepers were out working. Leaving the airport we scurried through a warren of narrow streets not unlike San Jose, Costa Rica, but soon things opened up when we got on the highway that runs along the ocean.</description>
     </item>
     
     <item>
       <title>Revere Beach sand sculptures</title>
-      <link>http://yentran.org/post/source/2012-07-15-revere-beach-sand-sculptures/</link>
+      <link>https://yentran.org/post/2012-07-15-revere-beach-sand-sculptures/</link>
       <pubDate>Sun, 15 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-07-15-revere-beach-sand-sculptures/</guid>
+      <guid>https://yentran.org/post/2012-07-15-revere-beach-sand-sculptures/</guid>
       <description>The annual Revere Beach sculpting festival concluded over the weekend. But since it hadn&amp;rsquo;t rained, we figured there&amp;rsquo;s a good chance the sculptures were still around. We got there around twilight, which was even better because the absence of mid-day shadows allowed the subtle details of the sculptures to come out.
 Commemorating the 100th anniversary of Fenway Park.
 Not sure what this represents, other than a study in perspectives.
@@ -436,10 +447,10 @@ The rather grotesque and provocatively Lovecraftian gorehound.</description>
     
     <item>
       <title>Acadia National Park: Dorr Mountain</title>
-      <link>http://yentran.org/post/source/2012-07-10-acadia-national-park-dorr-mountain/</link>
+      <link>https://yentran.org/post/2012-07-10-acadia-national-park-dorr-mountain/</link>
       <pubDate>Tue, 10 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-07-10-acadia-national-park-dorr-mountain/</guid>
+      <guid>https://yentran.org/post/2012-07-10-acadia-national-park-dorr-mountain/</guid>
       <description>Map of our round-trip hike to Dorr Mountain from Sieur de Monts.
 Dorr Mountain is the second highest peak on Mount Desert Island, behind only Cadillac Mountain. It&amp;rsquo;s named after George Dorr, who&amp;rsquo;s affectionately known as the father of Acadia National Park. There are multiple paths to the summit. We chose to start from Sieur de Monts spring.
 There are a couple of trails crisscrossing the area. The most obvious is Emery Path, which begins right behind the small visitors&#39; center.</description>
@@ -447,30 +458,30 @@ There are a couple of trails crisscrossing the area. The most obvious is Emery P
     
     <item>
       <title>Acadia National Park: Great Head Trail</title>
-      <link>http://yentran.org/post/source/2012-07-10-acadia-national-park-great-head-trail/</link>
+      <link>https://yentran.org/post/2012-07-10-acadia-national-park-great-head-trail/</link>
       <pubDate>Tue, 10 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-07-10-acadia-national-park-great-head-trail/</guid>
+      <guid>https://yentran.org/post/2012-07-10-acadia-national-park-great-head-trail/</guid>
       <description>Map of our hike on the Great Head Trail.
 Great Head sticks out like a polyp from the southwest corner of Mount Desert Island. Its exposed location means that there are great views up and down the entire length of the island. Unfortunately its proximity and easy access to the ever popular Sand Beach also means that the likelihood of running into flip-flop-wearing, towel-toting, rubbernecking tourists who have never seen the inside of a trailhead is quite high.</description>
     </item>
     
     <item>
       <title>Acadia National Park: Jesup Path</title>
-      <link>http://yentran.org/post/source/2012-07-10-acadia-national-park-jesup-path/</link>
+      <link>https://yentran.org/post/2012-07-10-acadia-national-park-jesup-path/</link>
       <pubDate>Tue, 10 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-07-10-acadia-national-park-jesup-path/</guid>
+      <guid>https://yentran.org/post/2012-07-10-acadia-national-park-jesup-path/</guid>
       <description>Map of our hike on Jesup Path.
 Along with [Emery Path](http://www.yentran.org/blog/2012/07/acadia-national-park-dorr-mountain/&amp;quot; title=&amp;ldquo;Acadia National Park: Dorr Mountain), Jesup Path is another trail which can be found at the Sieur de Monts spring area. Straight and level, it&amp;rsquo;s hardly a challenging hike. Its claim to fame, I think, is an eternity of boardwalk amid a picturesque forest of birch trees and tall grass.</description>
     </item>
     
     <item>
       <title>Auto property with private setter</title>
-      <link>http://yentran.org/post/source/2012-07-10-auto-property-with-private-setter/</link>
+      <link>https://yentran.org/post/2012-07-10-auto-property-with-private-setter/</link>
       <pubDate>Tue, 10 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-07-10-auto-property-with-private-setter/</guid>
+      <guid>https://yentran.org/post/2012-07-10-auto-property-with-private-setter/</guid>
       <description>Sometimes I&amp;rsquo;d like to only allow a property to be set in the constructor. Something like this:
 private Foo _foo; public Foo Foo { get { return _foo; } } public Bar(Foo foo) { _foo = foo; } This neat little pattern lets you do the same with fewer members (and lines of code):
 public Foo { get; private set; } public Bar(Foo foo) { Foo = foo; } </description>
@@ -478,67 +489,67 @@ public Foo { get; private set; } public Bar(Foo foo) { Foo = foo; } </descriptio
     
     <item>
       <title>Acadia National Park: Cadillac Mountain</title>
-      <link>http://yentran.org/post/source/2012-07-08-acadia-national-park-cadillac-mountain/</link>
+      <link>https://yentran.org/post/2012-07-08-acadia-national-park-cadillac-mountain/</link>
       <pubDate>Sun, 08 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-07-08-acadia-national-park-cadillac-mountain/</guid>
+      <guid>https://yentran.org/post/2012-07-08-acadia-national-park-cadillac-mountain/</guid>
       <description>The tallest peak in Acadia and the first place in the continental US to see the morning light, Cadillac Mountain is also the most accessible &amp;ndash; you can just drive there. Nevertheless, its popularity doesn&amp;rsquo;t detract from its appeal. Unfortunately we couldn&amp;rsquo;t make it here early enough for sunrise, being worn out from hiking every day. So we had to settle for the &amp;ldquo;other golden hour&amp;rdquo;. Fortunately with a storm brewing in the distance all afternoon, we were treated to a beautiful sunset.</description>
     </item>
     
     <item>
       <title>Acadia National Park: The Bubbles</title>
-      <link>http://yentran.org/post/source/2012-07-08-acadia-national-park-the-bubbles/</link>
+      <link>https://yentran.org/post/2012-07-08-acadia-national-park-the-bubbles/</link>
       <pubDate>Sun, 08 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-07-08-acadia-national-park-the-bubbles/</guid>
+      <guid>https://yentran.org/post/2012-07-08-acadia-national-park-the-bubbles/</guid>
       <description>Map of our hike on the North and South Bubble Mountains
 When seen from a distance, it&amp;rsquo;s immediately obvious why the Bubbles are so named, though I&amp;rsquo;m sure you can think of more colorful analogies. Located just a short distance from the Park Loop Road and the popular Jordan Pond, they&amp;rsquo;re some of the most accessible climbs in the park. Both offer splendid views of Jordan Pond and, in the distance, the islands off the southern coast of Mount Desert Island.</description>
     </item>
     
     <item>
       <title>Acadia National Park: Biking the carriage roads</title>
-      <link>http://yentran.org/post/source/2012-07-05-acadia-national-park-biking-the-carriage-roads/</link>
+      <link>https://yentran.org/post/2012-07-05-acadia-national-park-biking-the-carriage-roads/</link>
       <pubDate>Thu, 05 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-07-05-acadia-national-park-biking-the-carriage-roads/</guid>
+      <guid>https://yentran.org/post/2012-07-05-acadia-national-park-biking-the-carriage-roads/</guid>
       <description>Another unique feature of Acadia is the extensive system of carriage roads. Built in the first half of the 20th century by the Rockefeller family for use by horses and carriages, these roads traverse Mount Desert Island and offer unparalleled access to the its interior. These are possibly the most scenic bike paths anywhere. Due to its length of more than 45 miles, the carriage roads are best experienced on a bicycle.</description>
     </item>
     
     <item>
       <title>Acadia National Park: Gorham Mountain</title>
-      <link>http://yentran.org/post/source/2012-07-05-acadia-national-park-gorham-mountain/</link>
+      <link>https://yentran.org/post/2012-07-05-acadia-national-park-gorham-mountain/</link>
       <pubDate>Thu, 05 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-07-05-acadia-national-park-gorham-mountain/</guid>
+      <guid>https://yentran.org/post/2012-07-05-acadia-national-park-gorham-mountain/</guid>
       <description>Map of our hike on Gorham Mountain Trail.
 Because it&amp;rsquo;s the only national park in the northeastern US, I&amp;rsquo;ve visited Acadia National Park several times over the years. But I&amp;rsquo;m a bit mystified that I&amp;rsquo;ve managed to hike it just once, and it was only last year. I think it is because I&amp;rsquo;ve come here in a large group, for which it&amp;rsquo;s not easy to plan a hike. Further, there are so many things to do that we&amp;rsquo;ve always managed to find other alternatives.</description>
     </item>
     
     <item>
       <title>Edit collection with LINQ to SQL</title>
-      <link>http://yentran.org/post/source/2012-06-29-editing-collection-with-linq-to-sql/</link>
+      <link>https://yentran.org/post/2012-06-29-editing-collection-with-linq-to-sql/</link>
       <pubDate>Fri, 29 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-06-29-editing-collection-with-linq-to-sql/</guid>
+      <guid>https://yentran.org/post/2012-06-29-editing-collection-with-linq-to-sql/</guid>
       <description>Let&amp;rsquo;s say for a shopping cart we have an Order entity, a Product entity and an OrderDetails entity which serves as a bridge. The OrderDetails entity has OrderId and ProductId fields to associate products with orders. We also have an Order domain object which is passed from the business logic layer to the repository layer.
 Since products can be added or removed from an order, we need to manage the order details for each Order.</description>
     </item>
     
     <item>
       <title>The Reformatory Branch Trail</title>
-      <link>http://yentran.org/post/source/2012-05-20-the-reformatory-branch-trail/</link>
+      <link>https://yentran.org/post/2012-05-20-the-reformatory-branch-trail/</link>
       <pubDate>Sun, 20 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-05-20-the-reformatory-branch-trail/</guid>
+      <guid>https://yentran.org/post/2012-05-20-the-reformatory-branch-trail/</guid>
       <description>Once you reach the terminus of the Minuteman Bikeway at Bedford Railroad Depot, most people turn around and head back. It&amp;rsquo;s understandable, because it&amp;rsquo;s a 10.5 mile ride back to Alewife Station in Cambridge. If I&amp;rsquo;m on a road bike, this is usually a water stop on the way to the northwest suburbs (Concord, Carlisle, Chelmsford, etc). However, it turns out that there other two other bike paths that start (or end) here.</description>
     </item>
     
     <item>
       <title>Deleting from collection with LINQ to SQL</title>
-      <link>http://yentran.org/post/source/2012-05-18-deleting-from-collection-with-linq-to-sql/</link>
+      <link>https://yentran.org/post/2012-05-18-deleting-from-collection-with-linq-to-sql/</link>
       <pubDate>Fri, 18 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-05-18-deleting-from-collection-with-linq-to-sql/</guid>
+      <guid>https://yentran.org/post/2012-05-18-deleting-from-collection-with-linq-to-sql/</guid>
       <description>I ran into an subtle bug today. Let&amp;rsquo;s say we have a shopping cart page that displays order details and allows the user to remove items from the order. We retrieve the items in the order with the following:
 var items = DataContext.Orders.Single(o =&amp;gt; o.Id == orderId).Items; To remove an item from the order, we have the following:
 var itemToDelete = DataContext.Items.Single(i =&amp;gt; i.Id == itemId); DataContext.Items.DeleteOnSubmit(itemToDelete); DataContext.SubmitChanges(); It&amp;rsquo;s run-of-the-mill as far as LINQ to SQL goes.</description>
@@ -546,30 +557,30 @@ var itemToDelete = DataContext.Items.Single(i =&amp;gt; i.Id == itemId); DataCon
     
     <item>
       <title>Modifying .config file in an MSBuild project</title>
-      <link>http://yentran.org/post/source/2012-05-11-modifying-config-file-in-an-msbuild-project/</link>
+      <link>https://yentran.org/post/2012-05-11-modifying-config-file-in-an-msbuild-project/</link>
       <pubDate>Fri, 11 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-05-11-modifying-config-file-in-an-msbuild-project/</guid>
+      <guid>https://yentran.org/post/2012-05-11-modifying-config-file-in-an-msbuild-project/</guid>
       <description>We use Hudson to deploy our web application to different environments such as QA, demo and production. We need to customize the web.config, primarily the database connection string, for each environment . Previously we had to maintain multiple copies of the web.config and copy the appropriate one for each deployment destination. Obviously keeping around different versions of the same file is far from ideal.
 As an improvement, we decide to keep a single web.</description>
     </item>
     
     <item>
       <title>Backing up your site with VDeck</title>
-      <link>http://yentran.org/post/source/2012-05-10-backing-up-your-site-with-vdeck/</link>
+      <link>https://yentran.org/post/2012-05-10-backing-up-your-site-with-vdeck/</link>
       <pubDate>Thu, 10 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-05-10-backing-up-your-site-with-vdeck/</guid>
+      <guid>https://yentran.org/post/2012-05-10-backing-up-your-site-with-vdeck/</guid>
       <description>I don&amp;rsquo;t think anyone would argue that regularly backing up data is a good idea. At the same time, most people including myself don&amp;rsquo;t do so nearly often enough. Fortunately, the VDeck control panel provided by my web host helps make backing up and restoring data a cinch.
 To back up my Wordpress blog, I need to back up both the files and the MySQL database. To back up files, use the Archive Gateway.</description>
     </item>
     
     <item>
       <title>Berkshires 2010</title>
-      <link>http://yentran.org/post/source/2012-04-04-berkshires-2010/</link>
+      <link>https://yentran.org/post/2012-04-04-berkshires-2010/</link>
       <pubDate>Wed, 04 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-04-04-berkshires-2010/</guid>
+      <guid>https://yentran.org/post/2012-04-04-berkshires-2010/</guid>
       <description>Some highlights during my visit to the Berkshires in the autumn of 2010:
 The Cascade (map): Trail head begins at the end of a very suburban road. Very limited street parking (think 2-3 spaces, depending on the skills of the driver). A short hike takes you over a nice wooden bridge as well as a fallen log-bridge. The waterfalls drops into a shallow pool at the trail.
 Mount Greylock summit (map): The foliage on Mount Greylock was past-peak when we were there.</description>
@@ -577,30 +588,30 @@ Mount Greylock summit (map): The foliage on Mount Greylock was past-peak when we
     
     <item>
       <title>Loading jQuery from Google CDN and dependent scripts in WordPress</title>
-      <link>http://yentran.org/post/source/2012-04-03-loading-jquery-from-google-cdn-and-dependent-scripts-in-wordpress-2/</link>
+      <link>https://yentran.org/post/2012-04-03-loading-jquery-from-google-cdn-and-dependent-scripts-in-wordpress-2/</link>
       <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-04-03-loading-jquery-from-google-cdn-and-dependent-scripts-in-wordpress-2/</guid>
+      <guid>https://yentran.org/post/2012-04-03-loading-jquery-from-google-cdn-and-dependent-scripts-in-wordpress-2/</guid>
       <description>I&amp;rsquo;m using a WordPress theme that loads jQuery and other JavaScripts in the header.php script:
 &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;&amp;lt;?php bloginfo(&amp;#39;template_directory&amp;#39;); ?&amp;gt;/js/jquery-1.4.2.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;&amp;lt;?php bloginfo(&amp;#39;template_directory&amp;#39;); ?&amp;gt;/js/jquery.prettyPhoto.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;&amp;lt;?php bloginfo(&amp;#39;template_directory&amp;#39;); ?&amp;gt;/js/custom.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; Using Chrome&amp;rsquo;s Developer console (i.e., hit F12) to view the Resources for the page, I could see that jQuery is being loaded. I wanted to load jQuery from Google&amp;rsquo;s Content Delivery Network (why?). My initial attempt was to simply change the jQuery reference to the CDN location (I also upgraded to version 1.</description>
     </item>
     
     <item>
       <title>Locating Program Files folder in Visual Studio on 32-bit and x64 environments</title>
-      <link>http://yentran.org/post/source/2012-04-03-locating-program-files-folder-in-visual-studio/</link>
+      <link>https://yentran.org/post/2012-04-03-locating-program-files-folder-in-visual-studio/</link>
       <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-04-03-locating-program-files-folder-in-visual-studio/</guid>
+      <guid>https://yentran.org/post/2012-04-03-locating-program-files-folder-in-visual-studio/</guid>
       <description>In my Visual Studio project, I want to run an external executable, SQLMetal, in a build event. The only problem is that the location of the executable depends on whether the machine runs x64 or 32-bit Windows. It is found in the Program Files (x86) folder on x64 Windows and Program Files on 32-bit Windows. I want to be able to build the project without modification in either environment.
 The solution is to specify the location of the Program Files dynamically by inserting the following lines in the .</description>
     </item>
     
     <item>
       <title>Mapping PagedList with AutoMapper</title>
-      <link>http://yentran.org/post/source/2012-04-03-mapping-pagedlist-with-automapper/</link>
+      <link>https://yentran.org/post/2012-04-03-mapping-pagedlist-with-automapper/</link>
       <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-04-03-mapping-pagedlist-with-automapper/</guid>
+      <guid>https://yentran.org/post/2012-04-03-mapping-pagedlist-with-automapper/</guid>
       <description>I&amp;rsquo;m using an implementation of PagedList based on that given by Rob Conery.
 I want to convert a paged list of business objects to a paged list of view model objects with AutoMapper. In order for AutoMapper to work in this case, it needs to know how to convert a paged list. This can be done with a custom type converter:
 public class PagedListConverter : ITypeConverter&amp;lt;PagedList&amp;lt;Person&amp;gt;, PagedList&amp;lt;PersonViewModel&amp;gt;&amp;gt; { public PagedList&amp;lt;PersonViewModel&amp;gt; Convert(ResolutionContext context) { var models = (PagedList&amp;lt;Person&amp;gt;)context.</description>
@@ -608,596 +619,596 @@ public class PagedListConverter : ITypeConverter&amp;lt;PagedList&amp;lt;Person&
     
     <item>
       <title>Stack overflow exception when MVC View and Partial View have the same name</title>
-      <link>http://yentran.org/post/source/2012-04-03-stack-overflow-exception-when-mvc-view-and-partial-view-have-the-same-name/</link>
+      <link>https://yentran.org/post/2012-04-03-stack-overflow-exception-when-mvc-view-and-partial-view-have-the-same-name/</link>
       <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-04-03-stack-overflow-exception-when-mvc-view-and-partial-view-have-the-same-name/</guid>
+      <guid>https://yentran.org/post/2012-04-03-stack-overflow-exception-when-mvc-view-and-partial-view-have-the-same-name/</guid>
       <description>This scenario is probably unusual but it did happen to me. I had a view named Foo.aspx and partial view named Foo.ascx. The view rendered the partial as follows:
 &amp;lt;% Html.RenderPartial(&amp;#34;Foo&amp;#34;); %&amp;gt; When attempting to load the view, ASP.NET spins for a while then eventually throws a stack overflow exception. Apparently when executing the above statement, MVC searches for files named &amp;ldquo;Foo&amp;rdquo;, including the view itself. It must have attempted to render the view and gone into a recursive loop.</description>
     </item>
     
     <item>
       <title>Using Lightbox with NextGen gallery</title>
-      <link>http://yentran.org/post/source/2012-03-31-using-lightbox-with-nextgen-gallery/</link>
+      <link>https://yentran.org/post/2012-03-31-using-lightbox-with-nextgen-gallery/</link>
       <pubDate>Sat, 31 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-03-31-using-lightbox-with-nextgen-gallery/</guid>
+      <guid>https://yentran.org/post/2012-03-31-using-lightbox-with-nextgen-gallery/</guid>
       <description>In my former Wordpress blog, I used the excellent NextGen plugin to manage images in galleries. When embedded in a post, the gallery is rendered as thumbnails, whose full-size version is shown as an overlay when clicked. I also like to embed inline images so that I can include a caption. Inline images, however, are still directly linked and not shown as an overlay. When viewed, it requires an additional click or two to go back to the post.</description>
     </item>
     
     <item>
       <title>Configuring Wifi for the Brother HL-2280DW Laser Printer on Windows</title>
-      <link>http://yentran.org/post/source/2012-02-09-configuring-wifi-for-the-brother-hl-2280dw-laser-printer-on-windows/</link>
+      <link>https://yentran.org/post/2012-02-09-configuring-wifi-for-the-brother-hl-2280dw-laser-printer-on-windows/</link>
       <pubDate>Thu, 09 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-02-09-configuring-wifi-for-the-brother-hl-2280dw-laser-printer-on-windows/</guid>
+      <guid>https://yentran.org/post/2012-02-09-configuring-wifi-for-the-brother-hl-2280dw-laser-printer-on-windows/</guid>
       <description>With laser printer, scanner, Ethernet and Wifi interface rolled into one, the Brother HL-2280DW is quite a little champ. However, for me, getting the Wifi to work was a bit of a challenge. The installer would die silently after configuring Wifi but without having installed the software. After some trial and error, I was able to successfully install for Ethernet . With the software installed, I was able to configure Wifi afterward.</description>
     </item>
     
     <item>
       <title>On the Bruins&#39; 2011 White House appearance</title>
-      <link>http://yentran.org/post/source/2012-01-23-on-the-bruins-2011-white-house-appearance/</link>
+      <link>https://yentran.org/post/2012-01-23-on-the-bruins-2011-white-house-appearance/</link>
       <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-01-23-on-the-bruins-2011-white-house-appearance/</guid>
+      <guid>https://yentran.org/post/2012-01-23-on-the-bruins-2011-white-house-appearance/</guid>
       <description>Today the Bruins appeared at the White House where President Obama greeted them and honored their accomplishments as 2011 Stanley Cup champions. Included in the group photo were Americans, Canadians, Czechs, a Slovak, a Finn, and a German. Notable in his absence was Bruins goalie Tim Thomas, Stanley Cup playoffs MVP, winner of multiple awards and the only American player who made significant contribution to the team&amp;rsquo;s Cup run. The details of Thomas&#39; absence are covered elsewhere, but it has become clear that it is politically motivated.</description>
     </item>
     
     <item>
       <title>Modifying SQL Server table without dropping and recreating it</title>
-      <link>http://yentran.org/post/source/2012-01-11-modifying-sql-server-table-without-dropping-and-recreating-it/</link>
+      <link>https://yentran.org/post/2012-01-11-modifying-sql-server-table-without-dropping-and-recreating-it/</link>
       <pubDate>Wed, 11 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-01-11-modifying-sql-server-table-without-dropping-and-recreating-it/</guid>
+      <guid>https://yentran.org/post/2012-01-11-modifying-sql-server-table-without-dropping-and-recreating-it/</guid>
       <description>The SQL Server Designer is a nice visual tool for making modifications to a table. However, when you save the changes, SQL Server actually drops the entire table and then recreates it (if there are data in the table, they would be retained). This happens even if the changes made do not actually require that the table be re-created. This is presumably so that SQL Server can accommodate all possible types of modification.</description>
     </item>
     
     <item>
       <title>Installing antivirus program changes FireFox keyword URL</title>
-      <link>http://yentran.org/post/source/2012-01-03-installing-antivirus-changes-firefox-keyword-url/</link>
+      <link>https://yentran.org/post/2012-01-03-installing-antivirus-changes-firefox-keyword-url/</link>
       <pubDate>Tue, 03 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-01-03-installing-antivirus-changes-firefox-keyword-url/</guid>
+      <guid>https://yentran.org/post/2012-01-03-installing-antivirus-changes-firefox-keyword-url/</guid>
       <description>I tried out a well-known cloud-based antivirus solution. It worked well enough, but after I installed it, I noticed that my FireFox searches were now redirected from Google to Yahoo!. In the FF config screen (which can be opened by typing &amp;ldquo;about:config&amp;rdquo; in the location bar), I noticed that the keyword.URL setting had been changed to Yahoo!:
 This setting dictates which search service is used when the user enters a keyword (i.</description>
     </item>
     
     <item>
       <title>Upgrading the HTC Aria with Android Gingerbread and CyanogenMod</title>
-      <link>http://yentran.org/post/source/2011-12-31-installing-cyanogenmod-on-the-htc-aria/</link>
+      <link>https://yentran.org/post/2011-12-31-installing-cyanogenmod-on-the-htc-aria/</link>
       <pubDate>Sat, 31 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-12-31-installing-cyanogenmod-on-the-htc-aria/</guid>
+      <guid>https://yentran.org/post/2011-12-31-installing-cyanogenmod-on-the-htc-aria/</guid>
       <description>I have an HTC Aria which runs now-ancient Android 2.1. This phone is far from being the latest and greatest, to put it mildly, but I like its small form factor. After putting up with it for a year, I have had enough and decided to upgrade it to Gingerbread. This is how I did it. As this is my first attempt, no doubt there are different and better ways to do things.</description>
     </item>
     
     <item>
       <title>Visual Studio line number macros</title>
-      <link>http://yentran.org/post/source/2011-12-21-visual-studio-line-number-macros/</link>
+      <link>https://yentran.org/post/2011-12-21-visual-studio-line-number-macros/</link>
       <pubDate>Wed, 21 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-12-21-visual-studio-line-number-macros/</guid>
+      <guid>https://yentran.org/post/2011-12-21-visual-studio-line-number-macros/</guid>
       <description>In Visual Studio, it&amp;rsquo;s easy enough to turn on and off line numbers. You&amp;rsquo;ll have to select Tools &amp;gt; Options &amp;gt; Text Editor, expand the language of choice, select General, then toggle Line numbers under the Display section. This can get tedious if you want to be able to show and hide line numbers at will. To turn this process into a single click, you can record custom macros to show and hide line numbers.</description>
     </item>
     
     <item>
       <title>MSBuild Project Directory</title>
-      <link>http://yentran.org/post/source/2011-12-13-msbuild-project-directory/</link>
+      <link>https://yentran.org/post/2011-12-13-msbuild-project-directory/</link>
       <pubDate>Tue, 13 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-12-13-msbuild-project-directory/</guid>
+      <guid>https://yentran.org/post/2011-12-13-msbuild-project-directory/</guid>
       <description>We&amp;rsquo;re using MSBuild in Hudson as part of our continuous integration process. We put the MSBuild scripts in the same directory as the Visual Studio solution file. Everything has been working well until until we decided, as an experiment, to put the MSBuild scripts in a separate directory from the solution. Then the build process started to fail with error MSB3202, &amp;ldquo;the project file was not found&amp;rdquo;.
 By using MSBuild&amp;rsquo;s &amp;ldquo;/verbosity:diagnostic&amp;rdquo; flag, we were able to look at the list of properties that MSBuild was using.</description>
     </item>
     
     <item>
       <title>AutoMapper doesn&#39;t work for mismatched types</title>
-      <link>http://yentran.org/post/source/2011-12-08-automapper-mismatched-types/</link>
+      <link>https://yentran.org/post/2011-12-08-automapper-mismatched-types/</link>
       <pubDate>Thu, 08 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-12-08-automapper-mismatched-types/</guid>
+      <guid>https://yentran.org/post/2011-12-08-automapper-mismatched-types/</guid>
       <description>We&amp;rsquo;re using AutoMapper in ASP.NET MVC automate the mapping of properties between entity and view model objects. This is a highly useful tool which helps us avoid the tedium of having to assigning properties manually. Here&amp;rsquo;s a good introduction to using AutoMapper.
 In one case, I find that the AutoMapper doesn&amp;rsquo;t work for all properties. One property in particular doesn&amp;rsquo;t get mapped. If I manually assign a value to it as a test, I would get a ForeignKeyReferenceAlreadyHasValueException.</description>
     </item>
     
     <item>
       <title>Autumn 2009</title>
-      <link>http://yentran.org/post/source/2011-12-08-autumn-2009/</link>
+      <link>https://yentran.org/post/2011-12-08-autumn-2009/</link>
       <pubDate>Thu, 08 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-12-08-autumn-2009/</guid>
+      <guid>https://yentran.org/post/2011-12-08-autumn-2009/</guid>
       <description>View location in Google Maps
 Few places in Boston are as beautiful as Mount Auburn Cemetery. While it is famous as the final resting place of many luminaries with connection to New England, its more enduring legacy is as a green urban jewel. It would not be a stretch to invite comparison to Central Park. While not as popular, Mount Auburn is certainly more than an equal in aesthetic appeal.</description>
     </item>
     
     <item>
       <title>Broadmoor Wildlife Sanctuary</title>
-      <link>http://yentran.org/post/source/2011-09-11-broadmoor-wildlife-sanctuary/</link>
+      <link>https://yentran.org/post/2011-09-11-broadmoor-wildlife-sanctuary/</link>
       <pubDate>Sun, 11 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-11-broadmoor-wildlife-sanctuary/</guid>
+      <guid>https://yentran.org/post/2011-09-11-broadmoor-wildlife-sanctuary/</guid>
       <description>Broadmoor is another outstanding Audubon sanctuary. Though to be fair, none of the Audubon properties we&amp;rsquo;ve visited in Massachusetts has disappointed us yet. Despite sounding like something out of The Hounds of the Baskervilles, Broadmoor is situated in a tranquil setting along the bank of the Indian Brook,which flows into the meandering Charles River. In fact, part of the sanctuary borders the Charles.
 Broadmoor comprises of ponds, vernal pools, meadows, tall forests, hillocks, stone bridges, small cascades, and lots of boardwalks.</description>
     </item>
     
     <item>
       <title>Hiking Mount Monadnock</title>
-      <link>http://yentran.org/post/source/2011-09-11-hiking-mount-monadnock/</link>
+      <link>https://yentran.org/post/2011-09-11-hiking-mount-monadnock/</link>
       <pubDate>Sun, 11 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-11-hiking-mount-monadnock/</guid>
+      <guid>https://yentran.org/post/2011-09-11-hiking-mount-monadnock/</guid>
       <description>As far as big mountain goes,[ Mount Monadnock](http://en.wikipedia.org/wiki/Mount_Monadnock&amp;quot; targtet=&amp;quot;_blank) in the southwestern corner of New Hampshire is relatively close to Boston. Despite its proximity, we&amp;rsquo;ve never set foot on it. So we set out on a beautiful Saturday morning to redress this omission.
 Monadnock&amp;rsquo;s claim to fame is its status as most hiked mountain in the US. Not so surprisingly, as soon as we arrived, the park ranger informed us that the parking lot was filled so that we&amp;rsquo;d have to park in the camping area.</description>
     </item>
     
     <item>
       <title>A Game of Thrones (A Song of Ice and Fire, Book 1) by George R.R. Martin</title>
-      <link>http://yentran.org/post/source/2011-09-07-a-game-of-thrones-a-song-of-ice-and-fire-book-1-by-george-r-r-martin/</link>
+      <link>https://yentran.org/post/2011-09-07-a-game-of-thrones-a-song-of-ice-and-fire-book-1-by-george-r-r-martin/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-a-game-of-thrones-a-song-of-ice-and-fire-book-1-by-george-r-r-martin/</guid>
+      <guid>https://yentran.org/post/2011-09-07-a-game-of-thrones-a-song-of-ice-and-fire-book-1-by-george-r-r-martin/</guid>
       <description>George RR Martin&amp;rsquo;s Song of Ice and Fire series receives almost universal acclaim from reviewers. I picked up A Game of Thrones after seeing it recommended by several reviewers. Since it is billed as the entry into an epic fantasy series, I half-expected to see a fantastic world populated by magic wielders and magical creations. Instead, I found that magic is virtually non-existent. Gritty, harsh realism is the predominant theme in Martin&amp;rsquo;s medieval universe.</description>
     </item>
     
     <item>
       <title>A Storm of Swords (A Song of Ice and Fire, Book 3) by George R.R. Martin</title>
-      <link>http://yentran.org/post/source/2011-09-07-a-storm-of-swords-a-song-of-ice-and-fire-book-3-by-george-r-r-martin/</link>
+      <link>https://yentran.org/post/2011-09-07-a-storm-of-swords-a-song-of-ice-and-fire-book-3-by-george-r-r-martin/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-a-storm-of-swords-a-song-of-ice-and-fire-book-3-by-george-r-r-martin/</guid>
+      <guid>https://yentran.org/post/2011-09-07-a-storm-of-swords-a-song-of-ice-and-fire-book-3-by-george-r-r-martin/</guid>
       <description>With this third hit in a row, I think it&amp;rsquo;s appropriate to call the Song of Fire and Ice series a phenomenon. Just when you think things can&amp;rsquo;t get any better, Martin turns out another gem. Judging from the previews for the next book, A Feast for Crows, things are bound to get even more exciting. I can only hope that this series doesn&amp;rsquo;t turn into a certain other series that started out promising then bogged down completely so that by the time the tenth book rolls around, readers are forced to stomp their feet in angry frustration.</description>
     </item>
     
     <item>
       <title>Baldur&#39;s Gate 2: Shadows of Amn</title>
-      <link>http://yentran.org/post/source/2011-09-07-baldurs-gate-2-shadows-of-amn/</link>
+      <link>https://yentran.org/post/2011-09-07-baldurs-gate-2-shadows-of-amn/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-baldurs-gate-2-shadows-of-amn/</guid>
+      <guid>https://yentran.org/post/2011-09-07-baldurs-gate-2-shadows-of-amn/</guid>
       <description>The Baldur&amp;rsquo;s Gate franchise is the most popular single-player RPG series out there for good reasons, even though it&amp;rsquo;s been a few years since its release. While more recent Black Isle games, notably Icewind Dale II, have vastly improved graphics and interface and others like Neverwinter Nights have changed the playing field entirely, BGII stands out for its tremendous scope and exceptional depth. BGII&amp;rsquo;s complexity, intertwining subplots and host of myriad characters are enough to constitute a novel, one which you get to shape and play out instead of merely reading.</description>
     </item>
     
     <item>
       <title>Canon PowerShot S30 3MP Digital Camera with 3x Optical Zoom</title>
-      <link>http://yentran.org/post/source/2011-09-07-canon-powershot-s30-3mp-digital-camera-with-3x-optical-zoom/</link>
+      <link>https://yentran.org/post/2011-09-07-canon-powershot-s30-3mp-digital-camera-with-3x-optical-zoom/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-canon-powershot-s30-3mp-digital-camera-with-3x-optical-zoom/</guid>
+      <guid>https://yentran.org/post/2011-09-07-canon-powershot-s30-3mp-digital-camera-with-3x-optical-zoom/</guid>
       <description>Canon&amp;rsquo;s S30 fills a nice niche between expensive, feature-laden cameras and point-and-shoots. Its compact size, snug enough to fit in the palm of your hand and perfect for slipping into a pocket, makes it an ideal companion for those excursions when a larger camera would be too bulky or conspicuous. The silver all-metal body is sleek and stylish, so much that it&amp;rsquo;s almost a fashion accessory. It&amp;rsquo;s loaded with features, an amazing feat for such a small package, while at the same time offers unparalleled ease of use.</description>
     </item>
     
     <item>
       <title>Crossroads of Twilight (The Wheel of Time series, Book 10) by Robert Jordan</title>
-      <link>http://yentran.org/post/source/2011-09-07-crossroads-of-twilight-the-wheel-of-time-series-book-10-by-robert-jordan/</link>
+      <link>https://yentran.org/post/2011-09-07-crossroads-of-twilight-the-wheel-of-time-series-book-10-by-robert-jordan/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-crossroads-of-twilight-the-wheel-of-time-series-book-10-by-robert-jordan/</guid>
+      <guid>https://yentran.org/post/2011-09-07-crossroads-of-twilight-the-wheel-of-time-series-book-10-by-robert-jordan/</guid>
       <description>It&amp;rsquo;s tempting to compare the latest installment of the Wheel of Time series to Seinfeld, the show that professes to be about &amp;ldquo;nothing&amp;rdquo;. While doing so would be an exaggeration, it would be fair to say that COT could have done its job in many fewer pages and after much less wait. To be fair, RJ touched on virtually all major characters. To be honest, he didn&amp;rsquo;t give them anything interesting to do.</description>
     </item>
     
     <item>
       <title>Destiny: Child of the Sky by Elizabeth Haydon</title>
-      <link>http://yentran.org/post/source/2011-09-07-destiny-child-of-the-sky-by-elizabeth-haydon/</link>
+      <link>https://yentran.org/post/2011-09-07-destiny-child-of-the-sky-by-elizabeth-haydon/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-destiny-child-of-the-sky-by-elizabeth-haydon/</guid>
+      <guid>https://yentran.org/post/2011-09-07-destiny-child-of-the-sky-by-elizabeth-haydon/</guid>
       <description>2003 seems to be a good year for epic fantasy, with the impending release of Robert Jordan&amp;rsquo;s 10th Wheel of Time book in January, George R. R. Martin&amp;rsquo;s 4th Song of Fire and Ice book in April, and Terry Goodkind&amp;rsquo;s 8th Sword of Truth book in June. That afterwards fans of these series will be left to languish for a couple of years is not a savory thought. In light of this reality, that Elizabeth Haydon fulfills the promise of bringing the Rhapsody series to a satisfying conclusion (though not THE conclusion) in a reasonable amount of time seems very satisfying indeed.</description>
     </item>
     
     <item>
       <title>Doom 3</title>
-      <link>http://yentran.org/post/source/2011-09-07-doom-3/</link>
+      <link>https://yentran.org/post/2011-09-07-doom-3/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-doom-3/</guid>
+      <guid>https://yentran.org/post/2011-09-07-doom-3/</guid>
       <description>The original Doom introduced a whole new world to video games. It had a vast, immersive, incredibly realistic environment which gave the player an experience closer to reality than anything else had been able to achieve (having non-orthogonal walls helped). In retrospect, the drawbacks of two-dimensional graphics and comical looking monsters didn&amp;rsquo;t detract much from the overall experience. Doom might not have invented the first-person shooter, but it made it a bona fide genre.</description>
     </item>
     
     <item>
       <title>Dragons of Autumn Twilight (Dragonlance Chronicles, Volume I) by Margaret Weis &amp; Tracy Hickman</title>
-      <link>http://yentran.org/post/source/2011-09-07-dragons-of-autumn-twilight-dragonlance-chronicles-volume-i-by-margaret-weis-tracy-hickman/</link>
+      <link>https://yentran.org/post/2011-09-07-dragons-of-autumn-twilight-dragonlance-chronicles-volume-i-by-margaret-weis-tracy-hickman/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-dragons-of-autumn-twilight-dragonlance-chronicles-volume-i-by-margaret-weis-tracy-hickman/</guid>
+      <guid>https://yentran.org/post/2011-09-07-dragons-of-autumn-twilight-dragonlance-chronicles-volume-i-by-margaret-weis-tracy-hickman/</guid>
       <description>The DragonLance saga is one of the most prolific in fantasy, with scores of prequels and sequels and offshoots and imitators. The DragonLance Chronicles is the series that started it all. To call it anything less than a classic would be sacrilegious. Deeply rooted in the mythos of Tolkien and heavily influenced by the rules and mechanics of the RPG world, the DragonLance Chronicles manages to create a vast high-fantasy universe with few equals then or since.</description>
     </item>
     
     <item>
       <title>Dragons of Spring Dawning (Dragonlance Chronicles, Book 3) by Margaret Weis &amp; Tracy Hickman</title>
-      <link>http://yentran.org/post/source/2011-09-07-dragons-of-spring-dawning-dragonlance-chronicles-book-3-by-margaret-weis-tracy-hickman/</link>
+      <link>https://yentran.org/post/2011-09-07-dragons-of-spring-dawning-dragonlance-chronicles-book-3-by-margaret-weis-tracy-hickman/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-dragons-of-spring-dawning-dragonlance-chronicles-book-3-by-margaret-weis-tracy-hickman/</guid>
+      <guid>https://yentran.org/post/2011-09-07-dragons-of-spring-dawning-dragonlance-chronicles-book-3-by-margaret-weis-tracy-hickman/</guid>
       <description>After the setback at the end of book two, hope finally dawns on Krynn. For the rediscovered dragonlances and the return of the good metallic dragons are finally turning the tide of fortunes against the forces of darkness in the War of the Lance. In the north, under the leadership of a new general, none other than one of our familiar companions, victories follow victories, cities are retaken, enemy commanders are captured, and for a time, evil seems to be on the verge of defeat.</description>
     </item>
     
     <item>
       <title>Dragons of Winter Night (Dragonlance Chronicles, Volume II) by Margaret Weis &amp; Tracy Hickman</title>
-      <link>http://yentran.org/post/source/2011-09-07-dragons-of-winter-night-dragonlance-chronicles-volume-ii-by/</link>
+      <link>https://yentran.org/post/2011-09-07-dragons-of-winter-night-dragonlance-chronicles-volume-ii-by/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-dragons-of-winter-night-dragonlance-chronicles-volume-ii-by/</guid>
+      <guid>https://yentran.org/post/2011-09-07-dragons-of-winter-night-dragonlance-chronicles-volume-ii-by/</guid>
       <description>The middle child of a trilogy has the most tenuous position. After all, the novelty may have worn off after the first installment and the big ending doesn&amp;rsquo;t come until the next. Many are relegated to simply serve as a bridge between the first and third installment. Dragons of Winter Night defies stereotypes with its gripping storyline filled with many tense sequences and surprising revelations. True to the title, the mood is considerably darker than in the first book, ending with the heroic sacrifice of one of the main characters.</description>
     </item>
     
     <item>
       <title>Faith of the Fallen (Sword of Truth series, Book 6) by Terry Goodkind</title>
-      <link>http://yentran.org/post/source/2011-09-07-book-review-faith-of-the-fallen-sword-of-truth-series-book-6-by-terry-goodkind/</link>
+      <link>https://yentran.org/post/2011-09-07-book-review-faith-of-the-fallen-sword-of-truth-series-book-6-by-terry-goodkind/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-book-review-faith-of-the-fallen-sword-of-truth-series-book-6-by-terry-goodkind/</guid>
+      <guid>https://yentran.org/post/2011-09-07-book-review-faith-of-the-fallen-sword-of-truth-series-book-6-by-terry-goodkind/</guid>
       <description>Faith of the Fallen picks up where Soul of the Fire left off. It follows several characters while advancing the main storyline. The climax, which brings together major threads in the story, is done in the typical Goodkind fashion, action-filled and satisfying. On the flip side, with this and the previous installment, Goodkind seems to have departed from the usual sword- and sorcery-oriented storytelling. Sure, there are intense battles to whet our appetites, but the principal focus of the book was on the nature of human character and society.</description>
     </item>
     
     <item>
       <title>Icewind Dale 2</title>
-      <link>http://yentran.org/post/source/2011-09-07-icewind-dale-2/</link>
+      <link>https://yentran.org/post/2011-09-07-icewind-dale-2/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-icewind-dale-2/</guid>
+      <guid>https://yentran.org/post/2011-09-07-icewind-dale-2/</guid>
       <description>In a world populated with excellent RPG games, IWD2 stands out for its solid foundation of compelling story line, great game play, and high replayability. It&amp;rsquo;s hard to please all RPG fans who desire different mixes of action, quest, and character development. IWD2 strikes a nice balance between quest-laden Baldur&amp;rsquo;s Gate and Diablo&amp;rsquo;s mindless click-fest. There are plenty of hack and slash to be found here, including all-out melees with a multitude of foes and harrowing battles against powerful monsters.</description>
     </item>
     
     <item>
       <title>John Shaw&#39;s Nature Photography Field Guide by John Shaw</title>
-      <link>http://yentran.org/post/source/2011-09-07-john-shaws-nature-photography-field-guide-by-john-shaw/</link>
+      <link>https://yentran.org/post/2011-09-07-john-shaws-nature-photography-field-guide-by-john-shaw/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-john-shaws-nature-photography-field-guide-by-john-shaw/</guid>
+      <guid>https://yentran.org/post/2011-09-07-john-shaws-nature-photography-field-guide-by-john-shaw/</guid>
       <description>The burning question in my mind as I look at a stunning photo in a calendar, postcard, or coffee-table book is &amp;ldquo;How did they do it?&amp;rdquo; There are just certain details about a photo that stand out and scream &amp;ldquo;professional&amp;rdquo;. Many photography guidebooks tend to fall into two camps: those are little more than glorified list of equipment you likely wouldn&amp;rsquo;t ever buy or be able to afford, and those that are a showcase for the photographer to expound on his experience and philosophy.</description>
     </item>
     
     <item>
       <title>Rhapsody: Child of Blood by Elizabeth Haydon</title>
-      <link>http://yentran.org/post/source/2011-09-07-rhapsody-child-of-blood-by-elizabeth-haydon/</link>
+      <link>https://yentran.org/post/2011-09-07-rhapsody-child-of-blood-by-elizabeth-haydon/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-rhapsody-child-of-blood-by-elizabeth-haydon/</guid>
+      <guid>https://yentran.org/post/2011-09-07-rhapsody-child-of-blood-by-elizabeth-haydon/</guid>
       <description>I was attracted to Rhapsody, the first book of the Rhapsody trilogy, by way of its critical acclaim as one of the best fantasy debut in years. The book does not disappoint. It&amp;rsquo;s a marvellously executed masterpiece of high fantasy in the tradition of Tolkien that we all know and love. The characters are original and wonderfully appealing, the setting at once exotic and beautiful. Elizabeth Haydon brings to life a rarity in modern fantasy fiction: a female protagonist.</description>
     </item>
     
     <item>
       <title>Soul of the Fire (Sword of Truth series, Book 5) by Terry Goodkind</title>
-      <link>http://yentran.org/post/source/2011-09-07-book-review-soul-of-the-fire-sword-of-truth-series-book-5-by-terry-goodkind/</link>
+      <link>https://yentran.org/post/2011-09-07-book-review-soul-of-the-fire-sword-of-truth-series-book-5-by-terry-goodkind/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-book-review-soul-of-the-fire-sword-of-truth-series-book-5-by-terry-goodkind/</guid>
+      <guid>https://yentran.org/post/2011-09-07-book-review-soul-of-the-fire-sword-of-truth-series-book-5-by-terry-goodkind/</guid>
       <description>This book is perhaps a let-down from the enthralling Temple of the Winds. The surprising discoveries, the heart-pounding action of the previous volumes are missing here, even during the climax, and the main danger seems somehow diminished and unimportant. The storyline doesn&amp;rsquo;t concern much with magic; in fact the absence of it is the crux of the story. What we&amp;rsquo;ve got left has mostly to do with the world of ordinary, non-magic people (muggles?</description>
     </item>
     
     <item>
       <title>Streams of Silver (Forgotten Realms: The Icewind Dale Trilogy, Book 2) by R. A. Salvatore</title>
-      <link>http://yentran.org/post/source/2011-09-07-streams-of-silver-forgotten-realms-the-icewind-dale-trilogy-book-2-by-r-a-salvatore/</link>
+      <link>https://yentran.org/post/2011-09-07-streams-of-silver-forgotten-realms-the-icewind-dale-trilogy-book-2-by-r-a-salvatore/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-streams-of-silver-forgotten-realms-the-icewind-dale-trilogy-book-2-by-r-a-salvatore/</guid>
+      <guid>https://yentran.org/post/2011-09-07-streams-of-silver-forgotten-realms-the-icewind-dale-trilogy-book-2-by-r-a-salvatore/</guid>
       <description>Good things come in trilogies and, in most cases, the second of the series is the best&amp;hellip;Streams of Silver is perhaps the zenith of the Icewind Dale trilogy. There are plenty of exciting adventures, desperate battles, horrifying monsters, devious sorcerers, dark dungeons, but most importantly, there is an element of the unknown. In the first novel, we all know the identity of the villain and what his nefarious plans are. Here, the companions, and the readers, have no idea what to expect, what horrible discovery they will make once they reach their destination.</description>
     </item>
     
     <item>
       <title>Temple of the Winds (Sword of Truth series, Book 4) by Terry Goodkind</title>
-      <link>http://yentran.org/post/source/2011-09-07-book-review-temple-of-the-winds-sword-of-truth-series-book-4-by-terry-goodkind/</link>
+      <link>https://yentran.org/post/2011-09-07-book-review-temple-of-the-winds-sword-of-truth-series-book-4-by-terry-goodkind/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-book-review-temple-of-the-winds-sword-of-truth-series-book-4-by-terry-goodkind/</guid>
+      <guid>https://yentran.org/post/2011-09-07-book-review-temple-of-the-winds-sword-of-truth-series-book-4-by-terry-goodkind/</guid>
       <description>I must admit I wasn&amp;rsquo;t very impressed when I started reading the 1st book of the series. In Wizard&amp;rsquo;s First Rule, Goodkind&amp;rsquo;s writing just didn&amp;rsquo;t seem to possess a certain sophistication and polish, and at times it had such a wooden quality that I found myself squirming. Now after having read through the 5th book of the series, I&amp;rsquo;m glad I&amp;rsquo;ve stuck around! As the tale progresses, so does the author&amp;rsquo;s mastery of his craft.</description>
     </item>
     
     <item>
       <title>The Art of The Fellowship of the Ring (The Lord of the Rings) by Gary Russell</title>
-      <link>http://yentran.org/post/source/2011-09-07-the-art-of-the-fellowship-of-the-ring-the-lord-of-the-rings-by-gary-russell/</link>
+      <link>https://yentran.org/post/2011-09-07-the-art-of-the-fellowship-of-the-ring-the-lord-of-the-rings-by-gary-russell/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-the-art-of-the-fellowship-of-the-ring-the-lord-of-the-rings-by-gary-russell/</guid>
+      <guid>https://yentran.org/post/2011-09-07-the-art-of-the-fellowship-of-the-ring-the-lord-of-the-rings-by-gary-russell/</guid>
       <description>Bringing Tolkien&amp;rsquo;s Middle Earth to life is a monumental task. The locations, creatures and monsters have to be conceptualized, designed and created from the ground up. Capturing the spirit of Tolkien&amp;rsquo;s work is an even more daunting challenge because of its tremendous scope, complexity and beauty. Furthermore, its legions of fans are staunch in their visions of Tolkien&amp;rsquo;s universe, and satisfying all of them is impossible.
 That the movie has been a phenomenal success and, more importantly, an incredible realization of Tolkien&amp;rsquo;s visions is a testament to the skills and dedication of Peter Jackson and his team.</description>
     </item>
     
     <item>
       <title>The Crystal Shard (Forgotten Realms: The Icewind Dale Trilogy, Book 1) by R. A. Salvatore</title>
-      <link>http://yentran.org/post/source/2011-09-07-the-crystal-shard-forgotten-realms-the-icewind-dale-trilogy-book-1-by-r-a-salvatore/</link>
+      <link>https://yentran.org/post/2011-09-07-the-crystal-shard-forgotten-realms-the-icewind-dale-trilogy-book-1-by-r-a-salvatore/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-the-crystal-shard-forgotten-realms-the-icewind-dale-trilogy-book-1-by-r-a-salvatore/</guid>
+      <guid>https://yentran.org/post/2011-09-07-the-crystal-shard-forgotten-realms-the-icewind-dale-trilogy-book-1-by-r-a-salvatore/</guid>
       <description>The main problem with works that are inspired by or that borrow from RPG is predictability. After all, what adventure would be complete without a warrior, a rogue, and a sorcerer. Not to mention the party must include a gruff dwarf and a light-hearted, pleasure-loving halfling. The Crystal Shard has got all that and more, but it also brings to life an original in the form of Drizzt Do&amp;rsquo;Urden, who&amp;rsquo;s undoubtedly one of the most well-known and beloved characters in fantasy.</description>
     </item>
     
     <item>
       <title>The Halfling&#39;s Gem (Forgotten Realms: The Icewind Dale Trilogy, Book 3) by R. A. Salvatore</title>
-      <link>http://yentran.org/post/source/2011-09-07-the-halflings-gem-forgotten-realms-the-icewind-dale-trilogy-book-3-by-r-a-salvatore/</link>
+      <link>https://yentran.org/post/2011-09-07-the-halflings-gem-forgotten-realms-the-icewind-dale-trilogy-book-3-by-r-a-salvatore/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-the-halflings-gem-forgotten-realms-the-icewind-dale-trilogy-book-3-by-r-a-salvatore/</guid>
+      <guid>https://yentran.org/post/2011-09-07-the-halflings-gem-forgotten-realms-the-icewind-dale-trilogy-book-3-by-r-a-salvatore/</guid>
       <description>The end of the second volume leads right into the third. As the companions escaped from Mithral Hall, Regis fell into the clutches of Artemis Entreri, the deadly assassin hired by the leader of the thieves&#39; guild in Calimport of whom Regis had run afoul. Furthermore, Entreri gained possession of the statuette that conjures the black panther Guenhwyvar, Drizzt&amp;rsquo;s faithful extra-planar companion. Saddened by the loss of Bruenor and now Regis, Drizzt and Wulfgar resolve to track down the assassin to his lair and rescue their friend, while Catti-Brie is grimly determined to finish Bruenor&amp;rsquo;s quest and retake Mithral Hall from the duergars.</description>
     </item>
     
     <item>
       <title>The Pillars of Creation (Sword of Truth series, Book 7) by Terry Goodkind</title>
-      <link>http://yentran.org/post/source/2011-09-07-book-review-the-pillars-of-creation-sword-of-truth-series-book-7-by-terry-goodkind/</link>
+      <link>https://yentran.org/post/2011-09-07-book-review-the-pillars-of-creation-sword-of-truth-series-book-7-by-terry-goodkind/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-book-review-the-pillars-of-creation-sword-of-truth-series-book-7-by-terry-goodkind/</guid>
+      <guid>https://yentran.org/post/2011-09-07-book-review-the-pillars-of-creation-sword-of-truth-series-book-7-by-terry-goodkind/</guid>
       <description>Pillars of Creation follows the adventures of a young woman, Jennsen, illegitimate daughter of Darken Rahl, as she travels the world in search of escape and vengeance. She is aided by a spy of the Imperial Order who may be more than he appears to be. At the same time, Jennsen&amp;rsquo;s unique ability may mean the end of all life, if she and Richard don&amp;rsquo;t discover the truth in time.</description>
     </item>
     
     <item>
       <title>The Redemption of Althalus by David &amp; Leigh Eddings</title>
-      <link>http://yentran.org/post/source/2011-09-07-the-redemption-of-althalus-by-david-leigh-eddings/</link>
+      <link>https://yentran.org/post/2011-09-07-the-redemption-of-althalus-by-david-leigh-eddings/</link>
       <pubDate>Wed, 07 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-07-the-redemption-of-althalus-by-david-leigh-eddings/</guid>
+      <guid>https://yentran.org/post/2011-09-07-the-redemption-of-althalus-by-david-leigh-eddings/</guid>
       <description>Having plowed through three multi-volume fantasy series in a row, I thought this single-volume tome, the first standalone fantasy adventure by the husband-and-wife team, might be a welcome respite. I haven&amp;rsquo;t read any book by the Eddingses, but their reputation as prolific and popular authors is well-known. I was further intrigued by the &amp;ldquo;#1 international bestseller&amp;rdquo; plug emblazoned on the hardcover.
 The title character is a thief and occasional highwayman and murderer whose skills are legendary.</description>
     </item>
     
     <item>
       <title>Hiking Mount Misery</title>
-      <link>http://yentran.org/post/source/2011-09-06-hiking-mount-misery/</link>
+      <link>https://yentran.org/post/2011-09-06-hiking-mount-misery/</link>
       <pubDate>Tue, 06 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-06-hiking-mount-misery/</guid>
+      <guid>https://yentran.org/post/2011-09-06-hiking-mount-misery/</guid>
       <description>We went for a short hike over the long Labor Day weekend. To get there we drove through very picturesque Lincoln Center. Note to self: come back here for a bike ride in the fall. The trail head is located at the back of the very unremarkable parking lot for the local commuter train station.
 Despite its formidable and romantic name, Mount Misery is anything but. It&amp;rsquo;s a relatively small hill which barely rises above the tree line.</description>
     </item>
     
     <item>
       <title>How to grant permissions to the Application Pool Identity for IIS 7.5</title>
-      <link>http://yentran.org/post/source/2011-09-06-granting-permissions-to-the-application-pool-identity-in-iis-7-5/</link>
+      <link>https://yentran.org/post/2011-09-06-granting-permissions-to-the-application-pool-identity-in-iis-7-5/</link>
       <pubDate>Tue, 06 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-06-granting-permissions-to-the-application-pool-identity-in-iis-7-5/</guid>
+      <guid>https://yentran.org/post/2011-09-06-granting-permissions-to-the-application-pool-identity-in-iis-7-5/</guid>
       <description>Up to IIS 7 (Windows Vista and Windows Server 2008), the default app pool identity is NetworkService 7. In IIS 7.5 (Windows 7 and Windows Server 2008 R2) the app pool identity is changed to something called ApplicationPoolIdentity.
 Let&amp;rsquo;s say you set up a virtual directory or application that uses this app pool. You&amp;rsquo;ll need to grant access permission on the physical path to ApplicationPoolIdentity. However, you&amp;rsquo;d find that there is no such user account.</description>
     </item>
     
     <item>
       <title>Wizard&#39;s First Rule (Sword of Truth series, Book 1) by Terry Goodkind</title>
-      <link>http://yentran.org/post/source/2011-09-06-book-review-wizards-first-rule-sword-of-truth-series-book-1-by-terry-goodkind/</link>
+      <link>https://yentran.org/post/2011-09-06-book-review-wizards-first-rule-sword-of-truth-series-book-1-by-terry-goodkind/</link>
       <pubDate>Tue, 06 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-06-book-review-wizards-first-rule-sword-of-truth-series-book-1-by-terry-goodkind/</guid>
+      <guid>https://yentran.org/post/2011-09-06-book-review-wizards-first-rule-sword-of-truth-series-book-1-by-terry-goodkind/</guid>
       <description>If you&amp;rsquo;re looking for an enthralling fantasy epic, look no further than the Sword of Truth series. Though Wizard&amp;rsquo;s First Rule isn&amp;rsquo;t the best of the series, it&amp;rsquo;s a must-read because it sets the background for the rest of the series.
 Richard Cypher, a simple woods guide from the land of Hartland, has a chance encounter with a mysterious woman and soon finds himself at the center of quest to prevent a magic box of vast power from falling into the hands of Darken Rahl, a &amp;ldquo;dark&amp;rdquo; wizard of with unimaginable power and unsurpassed cruelty.</description>
     </item>
     
     <item>
       <title>Removing malware</title>
-      <link>http://yentran.org/post/source/2011-08-23-removing-malware/</link>
+      <link>https://yentran.org/post/2011-08-23-removing-malware/</link>
       <pubDate>Tue, 23 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-08-23-removing-malware/</guid>
+      <guid>https://yentran.org/post/2011-08-23-removing-malware/</guid>
       <description>My computer got a dose of malware today. The trojan got a hold of my USB drive. It made all of my files and folders hidden, then injected executables with the same names. It also hid the .exe extension so that the executables appeared in place of the legitimate objects they were masquerading. It gave the fake folders the right icon so that they looked just like folders. The objective is to fool the user into double-clicking the folders to open them but instead executing the trojan.</description>
     </item>
     
     <item>
       <title>Installing Windows 7 for the ASRock 939Dual-SATA2 motherboard</title>
-      <link>http://yentran.org/post/source/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</link>
+      <link>https://yentran.org/post/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</link>
       <pubDate>Sun, 14 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</guid>
+      <guid>https://yentran.org/post/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</guid>
       <description>The ASRock 939Dual-SATA2 motherboard is a little long in the tooth but still quite capable. Mine has been running Windows XP Media Center Edition for some time and I decided to upgrade it to Windows 7. The challenge is that the motherboard&amp;rsquo;s JMicron SATA2 chipset isn&amp;rsquo;t detected automatically at installation. If you want to install Windows on a SATA hard drive, you will have to load the driver first. The other problem is that, as of the time of writing, there is no Windows 7 driver for the ULi integrated Ethernet controller due to the age of the hardware.</description>
     </item>
     
     <item>
       <title>Drawing hair with pencil</title>
-      <link>http://yentran.org/post/source/2011-07-19-drawing-hair/</link>
+      <link>https://yentran.org/post/2011-07-19-drawing-hair/</link>
       <pubDate>Tue, 19 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-07-19-drawing-hair/</guid>
+      <guid>https://yentran.org/post/2011-07-19-drawing-hair/</guid>
       <description>When drawing portrait with a pencil, I find it challenging to get realistic-looking hair. You may not want to draw individual strands of hair. If you&amp;rsquo;re not careful, the person may end up looking like Gollum. I follow an approach of first putting down a base layer by using a soft pencil to fill out the shape of the hair and blending stumps to create a uniform appearance. The blending stumps are used to effect a smooth, gradual transition between light and dark which is more realistic.</description>
     </item>
     
     <item>
       <title>The doors of Boston</title>
-      <link>http://yentran.org/post/source/2011-07-14-the-doors-of-boston/</link>
+      <link>https://yentran.org/post/2011-07-14-the-doors-of-boston/</link>
       <pubDate>Thu, 14 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-07-14-the-doors-of-boston/</guid>
+      <guid>https://yentran.org/post/2011-07-14-the-doors-of-boston/</guid>
       <description>Some time ago I saw a poster of doors. No, not these doors. I decided that I wanted one for myself. I picked Beacon Hill, a historic neighborhood known for its elegant houses and stately mansions. I biked around at dusk purposely so that the lights would be on, stopped frequently and snapped away. Some people, predictably, were wary of a stranger taking pictures of their homes. However, once I explained what I was doing, they were quite understanding.</description>
     </item>
     
     <item>
       <title>Hub on Wheels 2010</title>
-      <link>http://yentran.org/post/source/2011-07-10-hub-on-wheels-2010/</link>
+      <link>https://yentran.org/post/2011-07-10-hub-on-wheels-2010/</link>
       <pubDate>Sun, 10 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-07-10-hub-on-wheels-2010/</guid>
+      <guid>https://yentran.org/post/2011-07-10-hub-on-wheels-2010/</guid>
       <description>Every September since 2005, the city of Boston has held a charity bike ride to benefit of one of its educational programs. The event is called Hub on Wheels, a clever pun based on Boston&amp;rsquo;s modest nickname for itself, the Hub of the Universe. For the majority of riders, it would be the only time of the year that they get an intimate view of some of Boston&amp;rsquo;s lesser-known neighborhoods. There are 3 available courses, 10-, 30- and 50-mile.</description>
     </item>
     
     <item>
       <title>Québec, 4-July</title>
-      <link>http://yentran.org/post/source/2011-07-06-quebec-4-july/</link>
+      <link>https://yentran.org/post/2011-07-06-quebec-4-july/</link>
       <pubDate>Wed, 06 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-07-06-quebec-4-july/</guid>
+      <guid>https://yentran.org/post/2011-07-06-quebec-4-july/</guid>
       <description>Last morning in Québec. We took a 5-minute walk to check out the cool murals we saw earlier. These are quite amazing. A Gothic church exterior. An ornate stained-glass interior with a mysterious figure hooded in black. A ancient Aztec-meet-Egyptian structure surrounded by jungle. The best one yet was a castle with a red dragon, unfortunately obscured by the scaffolding for the Cirque de Soleil. I think you&amp;rsquo;d agree that these undoubtedly are the coolest highway underpasses anywhere.</description>
     </item>
     
     <item>
       <title>Québec, 1-July</title>
-      <link>http://yentran.org/post/source/2011-07-05-quebec-1-july/</link>
+      <link>https://yentran.org/post/2011-07-05-quebec-1-july/</link>
       <pubDate>Tue, 05 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-07-05-quebec-1-july/</guid>
+      <guid>https://yentran.org/post/2011-07-05-quebec-1-july/</guid>
       <description>We decided to take off around 16:00 on Friday. In addition to the rush hour, we anticipated no fewer than 100000 Bostonians to be on the move for the long weekend. So we avoided the main highways altogether. Our plans worked, and when we re-connected with Interstate-93 North it was in Manchester, NH, some 60 miles away. The drive through the magnificent White Mountains was quite pleasant, as usual. Nevertheless, it was to be a very long drive.</description>
     </item>
     
     <item>
       <title>Québec, 2-July</title>
-      <link>http://yentran.org/post/source/2011-07-05-quebec-2-july/</link>
+      <link>https://yentran.org/post/2011-07-05-quebec-2-july/</link>
       <pubDate>Tue, 05 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-07-05-quebec-2-july/</guid>
+      <guid>https://yentran.org/post/2011-07-05-quebec-2-july/</guid>
       <description>At breakfast we ran into another Belgian couple, this time from Antwerp. They were on a tour of Ontario and Québec. They were quite excited about a free outdoor performance of the Cirque de Soleil. Sophie, who made us breakfast, also told us about the Moulin de l&amp;rsquo;Images, which was some sort of projection. We&amp;rsquo;d have to check both of them out.
 We escaped from warm and muggy Boston to somewhat warm and muggy Québec.</description>
     </item>
     
     <item>
       <title>Québec, 3-July</title>
-      <link>http://yentran.org/post/source/2011-07-05-quebec-3-july/</link>
+      <link>https://yentran.org/post/2011-07-05-quebec-3-july/</link>
       <pubDate>Tue, 05 Jul 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-07-05-quebec-3-july/</guid>
+      <guid>https://yentran.org/post/2011-07-05-quebec-3-july/</guid>
       <description>We had our fill of the city yesterday, so it seemed like time to head out to the country. We also learned that William and Kate would be in town as part of their Canada tour, an event undoubtedly to be attended by legions of their admirers and non-admirers alike. That cemented the decision for us. First stop is the Montmorency Falls. At 84 meters, it&amp;rsquo;s higher than Niagara Falls.</description>
     </item>
     
     <item>
       <title>Autumn foliage 2010</title>
-      <link>http://yentran.org/post/source/2011-06-23-foliage-2010/</link>
+      <link>https://yentran.org/post/2011-06-23-foliage-2010/</link>
       <pubDate>Thu, 23 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-06-23-foliage-2010/</guid>
+      <guid>https://yentran.org/post/2011-06-23-foliage-2010/</guid>
       <description>In the autumn of 2010, a few friends and I spent a weekend in the White Mountains, New Hampshire and another in the Berkshires, Western Massachusetts. The former was a bit more adventurous. We went on a hike on North Moat Mountain and underestimated the terrain (or overestimated our ability). Even though we&amp;rsquo;re decent hikers and were appropriately equipped, 8-9 miles of strenuous hike coupled with a late start were our undoing.</description>
     </item>
     
     <item>
       <title>Who are the 2011 Bruins?</title>
-      <link>http://yentran.org/post/source/2011-06-23-who-are-the-bruins/</link>
+      <link>https://yentran.org/post/2011-06-23-who-are-the-bruins/</link>
       <pubDate>Thu, 23 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-06-23-who-are-the-bruins/</guid>
+      <guid>https://yentran.org/post/2011-06-23-who-are-the-bruins/</guid>
       <description>Defensemen #33 Zdeno Chara - Tallest man in hockey history and probably using the longest stick and wearing the largest skates as well. With his monstrous wingspan he can easily cover his half of the ice. Very nice guy off the ice, but a big (and tall) bogeyman on it.
 #44 Dennis Seidenberg - Rugged German-born defenseman. Blocks a ton of shot. Possesses outstanding balance and is very strong on his skates.</description>
     </item>
     
     <item>
       <title>Great Meadows National Wildlife Refuge</title>
-      <link>http://yentran.org/post/source/2011-06-22-great-meadows-national-wildlife-refuge/</link>
+      <link>https://yentran.org/post/2011-06-22-great-meadows-national-wildlife-refuge/</link>
       <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-06-22-great-meadows-national-wildlife-refuge/</guid>
+      <guid>https://yentran.org/post/2011-06-22-great-meadows-national-wildlife-refuge/</guid>
       <description>File this as another in the category of &amp;ldquo;places I&amp;rsquo;ve gone by hundreds of times while being clueless that it exists&amp;rdquo;. This is just steps away from historic Concord Center, which is popular with tourists and cyclists alike. The Old North Bridge, site of the confrontation that led to &amp;ldquo;the shot heard around the world&amp;rdquo;, is about 5 minutes away, while Thoreau&amp;rsquo;s Walden Pond is just down the road. On a nice day, you&amp;rsquo;d see a constant train of cyclists going around the rotary on their way to the north and west suburbs.</description>
     </item>
     
     <item>
       <title>Head of the Charles 2010</title>
-      <link>http://yentran.org/post/source/2011-06-22-head-of-the-charles-2010/</link>
+      <link>https://yentran.org/post/2011-06-22-head-of-the-charles-2010/</link>
       <pubDate>Wed, 22 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-06-22-head-of-the-charles-2010/</guid>
+      <guid>https://yentran.org/post/2011-06-22-head-of-the-charles-2010/</guid>
       <description>Every season in Boston has its own riveting appeal. The fall is not only the most beautiful of seasons, but it also marks the start of the hockey season and, for non-hockey fans, the annual Head of the Charles Regatta. In 2010, the Regatta took place on a chilly weekend in late October (this was Boston, after all). For me, there was nothing better than to put on a warm jacket, hop on the bike for the half-hour ride to Harvard University, then snap away.</description>
     </item>
     
     <item>
       <title>Don&#39;t trip and fall: The Chihuly exhibit</title>
-      <link>http://yentran.org/post/source/2011-06-21-dont-trip-and-fall-the-chihuly-exhibit/</link>
+      <link>https://yentran.org/post/2011-06-21-dont-trip-and-fall-the-chihuly-exhibit/</link>
       <pubDate>Tue, 21 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-06-21-dont-trip-and-fall-the-chihuly-exhibit/</guid>
+      <guid>https://yentran.org/post/2011-06-21-dont-trip-and-fall-the-chihuly-exhibit/</guid>
       <description>Last Friday, we visited the Chihuly exhibit at the MFA. Like most people, I strained to find familiar words to describe something unfamiliar (during those moments when my mind wasn&amp;rsquo;t occupied with playing over and over the disastrous scenario of inadvertently knocking something down). Here are some of the ones I came up with. But sometimes, you just have to admit that there isn&amp;rsquo;t a word.
 wavy pearlescent translucent veiny swirling fantastic alien bulbous metallic coppery rainbow writhing ghostly shimmering glowing sheet-like variegated striped spotted medusa crystalline fortress-of-solitude brilliant kaleidoscopic vivid silkworms frog-toes tentacled calamari tubular spiky light-saber agave</description>
     </item>
     
     <item>
       <title>Top 10 reasons why hockey is the best</title>
-      <link>http://yentran.org/post/source/2011-06-21-why-hockey-is-the-best/</link>
+      <link>https://yentran.org/post/2011-06-21-why-hockey-is-the-best/</link>
       <pubDate>Tue, 21 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-06-21-why-hockey-is-the-best/</guid>
+      <guid>https://yentran.org/post/2011-06-21-why-hockey-is-the-best/</guid>
       <description>Would you expect any less from a die-hard hockey fan? So with a warning that this is going to be shamelessly biased, here goes.
  At the 2011 NHL All-Stars game, NY Islanders forward Michael Grabner won the Fastest Skater competition with a time of 14.238 seconds. The track length is about 550 ft. This translates to 38.6 ft or 12.9 yards/second. For comparison, let&amp;rsquo;s look at the fastest 40-yard dash for football players, who are speedsters in their own right.</description>
     </item>
     
     <item>
       <title>The Audubon Habitat sanctuary</title>
-      <link>http://yentran.org/post/source/2011-06-20-the-habitat-sanctuary/</link>
+      <link>https://yentran.org/post/2011-06-20-the-habitat-sanctuary/</link>
       <pubDate>Mon, 20 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-06-20-the-habitat-sanctuary/</guid>
+      <guid>https://yentran.org/post/2011-06-20-the-habitat-sanctuary/</guid>
       <description>I&amp;rsquo;ve been discovering more and more of the amazing gems that are the Audubon sanctuaries. Recently I visited the Ipswich River sanctuary and the Broadmoor sanctuary, both of which are amazing for the scenery and wildlife they contain. Yet I&amp;rsquo;m surprised to learn that there are sanctuaries much closer to home, some right around the corner. The Habitat sanctuary is no more than 10 minutes from my place. I had biked or driven past this area before without knowing that it existed.</description>
     </item>
     
     <item>
       <title>Boston Bruins Stanley Cup Parade</title>
-      <link>http://yentran.org/post/source/2011-06-18-stanley-cup-parade/</link>
+      <link>https://yentran.org/post/2011-06-18-stanley-cup-parade/</link>
       <pubDate>Sat, 18 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-06-18-stanley-cup-parade/</guid>
+      <guid>https://yentran.org/post/2011-06-18-stanley-cup-parade/</guid>
       <description>Boston&amp;rsquo;s first Stanley Cup parade in 39 years was going to take place on Saturday, June 18, three days after the team celebrated on the ice in Vancouver. It was as definitive a &amp;ldquo;clear your calendar&amp;rdquo;-type event as it will ever be. On the morning of C-day, we got up early, loaded up with a hearty breakfast, filled the caffeine meter, and made sure we went to the bathroom before heading down to the T.</description>
     </item>
     
     <item>
       <title>We won the Cup!</title>
-      <link>http://yentran.org/post/source/2011-06-15-we-won-the-cup/</link>
+      <link>https://yentran.org/post/2011-06-15-we-won-the-cup/</link>
       <pubDate>Wed, 15 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-06-15-we-won-the-cup/</guid>
+      <guid>https://yentran.org/post/2011-06-15-we-won-the-cup/</guid>
       <description>Zdeno Chara grabbed hold of the Cup, reverently brought it to his lips, then raised it above his head, repeating a ritual performed by all previous Cup-winning captains. The only difference was that it had not been done by someone wearing the spoked-B since Nixon was President. The events of this night surely sent Bruins fans everywhere into a delirium. For the entire time that the Bruins celebrated on the ice, I had a stupidly wide grin on my face.</description>
     </item>
     
     <item>
       <title>We want the Cup!</title>
-      <link>http://yentran.org/post/source/2011-06-14-we-want-the-cup/</link>
+      <link>https://yentran.org/post/2011-06-14-we-want-the-cup/</link>
       <pubDate>Tue, 14 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-06-14-we-want-the-cup/</guid>
+      <guid>https://yentran.org/post/2011-06-14-we-want-the-cup/</guid>
       <description>It&amp;rsquo;s the eve before the biggest game in my history as a Bruins fan. I&amp;rsquo;m so nervous I&amp;rsquo;m going to have problem going to sleep. I had known about hockey quite early on since Las Vegas had a minor-league team, the now-defunct Las Vegas Thunder, and a friend was a big fan. Despite knowing so little about the game, I was hooked immediately when I came to Boston in the mid-90s.</description>
     </item>
     
     <item>
       <title>The man they call Bobby</title>
-      <link>http://yentran.org/post/source/2011-06-09-the-man-they-call-bobby/</link>
+      <link>https://yentran.org/post/2011-06-09-the-man-they-call-bobby/</link>
       <pubDate>Thu, 09 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-06-09-the-man-they-call-bobby/</guid>
+      <guid>https://yentran.org/post/2011-06-09-the-man-they-call-bobby/</guid>
       <description>TD Bank Garden, Boston on June 8, around 19:00. It was moments before Game 4 of the Stanley Cup finals between the Boston Bruins and the Vancouver Canucks. In the darkened arena, packed to the rafters with almost 18000 screaming fans, the lone spotlight descended on an area in the stands. Momentarily, a middle-aged man clad in a vintage Bruins jersey stepped into the light. The crowd erupted. It was none other than the legendary Bobby Orr, the man universally regarded as the finest defenseman in the history of hockey.</description>
     </item>
     
     <item>
       <title>Costa Rica Day 3 (Thursday) - Arenal</title>
-      <link>http://yentran.org/post/source/2011-05-30-costa-rica-day-3-thursday-arenal/</link>
+      <link>https://yentran.org/post/2011-05-30-costa-rica-day-3-thursday-arenal/</link>
       <pubDate>Mon, 30 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-05-30-costa-rica-day-3-thursday-arenal/</guid>
+      <guid>https://yentran.org/post/2011-05-30-costa-rica-day-3-thursday-arenal/</guid>
       <description>I lay awake at night pondering how we were going to see more critters. As it turned out, we didn&amp;rsquo;t even have to leave the hotel.
 Tilajari Resort sits right on the bank of the San Carlos River. We woke up to the chattering sounds of birds. As we ambled to breakfast we could see the brown river glimmering just beyond a gently sloping lawn. The fruit section at breakfast was par excellence.</description>
     </item>
     
     <item>
       <title>Costa Rica Day 4 (Friday) - Arenal to Monteverde</title>
-      <link>http://yentran.org/post/source/2011-05-30-costa-rica-day-4-friday-arenal-to-monteverde/</link>
+      <link>https://yentran.org/post/2011-05-30-costa-rica-day-4-friday-arenal-to-monteverde/</link>
       <pubDate>Mon, 30 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-05-30-costa-rica-day-4-friday-arenal-to-monteverde/</guid>
+      <guid>https://yentran.org/post/2011-05-30-costa-rica-day-4-friday-arenal-to-monteverde/</guid>
       <description>Breakfast included blackberry and papaya juice. I love this place! We bid farewell to our avian and reptilian friends. There was some commotion on the other side of the dining hall. Our waiter, like other Ticos always eager to point out cool things to us gringos, motioned us to come over. There was a caiman sunning himself just on the other side of the river. He also gave thumbs up to Monteverde&amp;rsquo;s ranarium and butterfly garden; even though he had never been to Monteverde, he learned about them from the hotel&amp;rsquo;s tour leader.</description>
     </item>
     
     <item>
       <title>Costa Rica Day 5 (Saturday) - Monteverde</title>
-      <link>http://yentran.org/post/source/2011-05-30-costa-rica-day-5-saturday-monteverde/</link>
+      <link>https://yentran.org/post/2011-05-30-costa-rica-day-5-saturday-monteverde/</link>
       <pubDate>Mon, 30 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-05-30-costa-rica-day-5-saturday-monteverde/</guid>
+      <guid>https://yentran.org/post/2011-05-30-costa-rica-day-5-saturday-monteverde/</guid>
       <description>Monteverde and the adjoining town of Santa Elena are, surprisingly, well-paved. This may come as a surprise to those who trudged up the bone-rattling gravel road to get here. Despite the lack of easy access, it&amp;rsquo;s quite popular with tourists, 200000 of whom make it here each year according to the guidebook. As a consequence, quite a few locals speak excellent English. The climate is also very pleasant compared to the lowlands.</description>
     </item>
     
     <item>
       <title>Costa Rica Day 6 (Sunday) - Monteverde to San Jose</title>
-      <link>http://yentran.org/post/source/2011-05-30-costa-rica-day-6-sunday-monteverde-to-san-jose/</link>
+      <link>https://yentran.org/post/2011-05-30-costa-rica-day-6-sunday-monteverde-to-san-jose/</link>
       <pubDate>Mon, 30 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-05-30-costa-rica-day-6-sunday-monteverde-to-san-jose/</guid>
+      <guid>https://yentran.org/post/2011-05-30-costa-rica-day-6-sunday-monteverde-to-san-jose/</guid>
       <description>We went down to breakfast and ran into the Coopers. They had survived the trip from Arenal after all. However, this would be the last time that we saw them.
 First stop was the butterfly garden, also infamous as the residence of the tarantulas. Our guide, Alan, must have come straight out of Walter&amp;rsquo;s &amp;ldquo;crazy biologist guy&amp;rdquo; mold. Again extremely knowledgeable about his charges, he was full of information on the insects and arachnids that resided in the terrariums.</description>
     </item>
     
     <item>
       <title>Costa Rica Day 7 (Monday) - San Jose</title>
-      <link>http://yentran.org/post/source/2011-05-30-costa-rica-day-7-monday-san-jose/</link>
+      <link>https://yentran.org/post/2011-05-30-costa-rica-day-7-monday-san-jose/</link>
       <pubDate>Mon, 30 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-05-30-costa-rica-day-7-monday-san-jose/</guid>
+      <guid>https://yentran.org/post/2011-05-30-costa-rica-day-7-monday-san-jose/</guid>
       <description>The flight was to be at 13:00 so we planned on departing no later than 10:30. That left us about 1h after breakfast to explore downtown San Jose. We were 4 blocks away from the Jade Museum, which owns the largest collection of Pre-Columbian jade artifacts anywhere. Unfortunately a museum was out of the question given the time constraint.
 There are quite a few pleasant green spaces which serve to provide respite in the brick and concrete jungle.</description>
     </item>
     
     <item>
       <title>Costa Rica Day 1 (Tuesday) - San Jose</title>
-      <link>http://yentran.org/post/source/2011-05-29-costa-rica-day-1-san-jose/</link>
+      <link>https://yentran.org/post/2011-05-29-costa-rica-day-1-san-jose/</link>
       <pubDate>Sun, 29 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-05-29-costa-rica-day-1-san-jose/</guid>
+      <guid>https://yentran.org/post/2011-05-29-costa-rica-day-1-san-jose/</guid>
       <description>I just came back from a second visit to Costa Rica, the first being 2 years ago. This trip was quite spontaneous, after plans to catch a friend during her last semester in Venice fell through.
 After not being quite prepared for the torrential tropical downpours or having a decent camera last time, I resolved that things would be different this time. Checklist:
  guide book (2008 edition), Spanish phrasebook (unfortunately meant for Spain/Portugal as I lent someone the Costa Rica edition), camera + telephoto lens + tripod for waterfalls shots, Bose noise-canceling headphone, book club read (Blue Highway by William Least Heat-Moon), pair of binoculars, bug repellent, waterproof jacket, hiking boots, quick-drying pants and shirts, and ATM card (I had already called ahead to notify the bank that I would be using my credit and debit card abroad).</description>
@@ -1205,48 +1216,48 @@ After not being quite prepared for the torrential tropical downpours or having a
     
     <item>
       <title>Costa Rica Day 2 (Wednesday) - San Jose to Arenal</title>
-      <link>http://yentran.org/post/source/2011-05-29-costa-rica-day-2-wednesday-san-jose-to-arenal/</link>
+      <link>https://yentran.org/post/2011-05-29-costa-rica-day-2-wednesday-san-jose-to-arenal/</link>
       <pubDate>Sun, 29 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-05-29-costa-rica-day-2-wednesday-san-jose-to-arenal/</guid>
+      <guid>https://yentran.org/post/2011-05-29-costa-rica-day-2-wednesday-san-jose-to-arenal/</guid>
       <description>Breakfast brought us on another trip to Denny&amp;rsquo;s. You must think we love it. In reality, the hotel was right next to the very busy Highway 1, the Pan-American Highway. The only other place within reasonable walking distance would have been Subway&amp;rsquo;s. We had a free breakfast voucher, so Denny&amp;rsquo;s it was.
 We managed to get some local currency from the ATM. Strangely, it also dispensed USD. We had thought that it allowed you to specify the amount in USD, not actually giving you USD.</description>
     </item>
     
     <item>
       <title>Marblehead meander</title>
-      <link>http://yentran.org/post/source/2011-05-29-marblehead-meander/</link>
+      <link>https://yentran.org/post/2011-05-29-marblehead-meander/</link>
       <pubDate>Sun, 29 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-05-29-marblehead-meander/</guid>
+      <guid>https://yentran.org/post/2011-05-29-marblehead-meander/</guid>
       <description>We discovered Marblehead sort of by accident. Maybe you&amp;rsquo;ve heard of it from an obscure television series in the late-80s called Marblehead Manor, which happened to star the then-equally obscure Michael Richards. One weekend we decided that it was too early to call it a night, so we took off on a drive out of Boston in a general northeasterly direction. We found ourselves at Revere Beach, which was deserted, and continued on Route 1A north to Lynn.</description>
     </item>
     
     <item>
       <title>Spring forward</title>
-      <link>http://yentran.org/post/source/2011-05-29-spring-forward/</link>
+      <link>https://yentran.org/post/2011-05-29-spring-forward/</link>
       <pubDate>Sun, 29 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-05-29-spring-forward/</guid>
+      <guid>https://yentran.org/post/2011-05-29-spring-forward/</guid>
       <description>Winter dragged its feel longer than usual this year. The first day of spring came and went, yet the dreariness continued well into April. There was even a minor snow storm on April Fool&amp;rsquo;s Day, bringing to mind the epic blizzard of 1997. I remember that one well, having worked through the night to finish a problem set, only to find that class had been canceled and normally busy Memorial Drive had turned into a white graveyard.</description>
     </item>
     
     <item>
       <title>Ooh shiny</title>
-      <link>http://yentran.org/post/source/2011-04-28-ooh-shiny/</link>
+      <link>https://yentran.org/post/2011-04-28-ooh-shiny/</link>
       <pubDate>Thu, 28 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-04-28-ooh-shiny/</guid>
+      <guid>https://yentran.org/post/2011-04-28-ooh-shiny/</guid>
       <description>Some time ago I took a software engineering class. For the term project we divided up into teams and worked on a project of our own choosing from beginning to end. Ours was an e-commerce application, the source code for which still resides on Google Code.
 We were the Fantastic Five because, you&amp;rsquo;d never guess it, there were 5 of us. I created the logo for the project. For the &amp;ldquo;super-hero&amp;rdquo; effect, it has 2 stylized F&amp;rsquo;s, made to look like wings flanking a shield.</description>
     </item>
     
     <item>
       <title>It&#39;s alive!</title>
-      <link>http://yentran.org/post/source/2011-04-26-its-alive/</link>
+      <link>https://yentran.org/post/2011-04-26-its-alive/</link>
       <pubDate>Tue, 26 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-04-26-its-alive/</guid>
+      <guid>https://yentran.org/post/2011-04-26-its-alive/</guid>
       <description>The task of selecting a name for this blog site was reduced to finding a number, since all the sensible permutations involving my first and last name have already been claimed. The number 73 comes to mind. As Sheldon pontificated in Big Bang Theory (season 4, episode 10), 73 is the &amp;ldquo;best number&amp;rdquo; because it&amp;rsquo;s the 21st prime number, whose mirror is 37, which is the 12th prime number, whose mirror is 21, which is the product of 7 and 3.</description>
     </item>
     

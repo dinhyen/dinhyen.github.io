@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>firefox on Yen&#39;s blog</title>
-    <link>http://yentran.org/tags/firefox/</link>
+    <link>https://yentran.org/tags/firefox/</link>
     <description>Recent content in firefox on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Jan 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/firefox/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jan 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/firefox/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Installing antivirus program changes FireFox keyword URL</title>
-      <link>http://yentran.org/post/source/2012-01-03-installing-antivirus-changes-firefox-keyword-url/</link>
+      <link>https://yentran.org/post/2012-01-03-installing-antivirus-changes-firefox-keyword-url/</link>
       <pubDate>Tue, 03 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-01-03-installing-antivirus-changes-firefox-keyword-url/</guid>
+      <guid>https://yentran.org/post/2012-01-03-installing-antivirus-changes-firefox-keyword-url/</guid>
       <description>I tried out a well-known cloud-based antivirus solution. It worked well enough, but after I installed it, I noticed that my FireFox searches were now redirected from Google to Yahoo!. In the FF config screen (which can be opened by typing &amp;ldquo;about:config&amp;rdquo; in the location bar), I noticed that the keyword.URL setting had been changed to Yahoo!:
 This setting dictates which search service is used when the user enters a keyword (i.</description>
     </item>

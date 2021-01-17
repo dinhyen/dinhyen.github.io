@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Upgrading the HTC Aria with Android Gingerbread and CyanogenMod | Yen&#39;s blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="I have an HTC Aria which runs now-ancient Android 2.1. This phone is far from being the latest and greatest, to put it mildly, but I like its small form factor. After putting up with it for a year, I have had enough and decided to upgrade it to Gingerbread. This is how I did it. As this is my first attempt, no doubt there are different and better ways to do things.">
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Upgrading the HTC Aria with Android Gingerbread and CyanogenMod" />
+<meta property="og:description" content="I have an HTC Aria which runs now-ancient Android 2.1. This phone is far from being the latest and greatest, to put it mildly, but I like its small form factor. After putting up with it for a year, I have had enough and decided to upgrade it to Gingerbread. This is how I did it. As this is my first attempt, no doubt there are different and better ways to do things." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yentran.org/post/2011-12-31-installing-cyanogenmod-on-the-htc-aria/" />
+<meta property="article:published_time" content="2011-12-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2011-12-31T00:00:00+00:00" />
+<meta itemprop="name" content="Upgrading the HTC Aria with Android Gingerbread and CyanogenMod">
+<meta itemprop="description" content="I have an HTC Aria which runs now-ancient Android 2.1. This phone is far from being the latest and greatest, to put it mildly, but I like its small form factor. After putting up with it for a year, I have had enough and decided to upgrade it to Gingerbread. This is how I did it. As this is my first attempt, no doubt there are different and better ways to do things.">
+<meta itemprop="datePublished" content="2011-12-31T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2011-12-31T00:00:00+00:00" />
+<meta itemprop="wordCount" content="747">
+
+
+
+<meta itemprop="keywords" content="android,cyanogenmod,gingerbread,mod,upgrade," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Upgrading the HTC Aria with Android Gingerbread and CyanogenMod"/>
+<meta name="twitter:description" content="I have an HTC Aria which runs now-ancient Android 2.1. This phone is far from being the latest and greatest, to put it mildly, but I like its small form factor. After putting up with it for a year, I have had enough and decided to upgrade it to Gingerbread. This is how I did it. As this is my first attempt, no doubt there are different and better ways to do things."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Yen&#39;s blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=https://yentran.org/post/2011-12-31-installing-cyanogenmod-on-the-htc-aria/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=https://yentran.org/post/2011-12-31-installing-cyanogenmod-on-the-htc-aria/&amp;text=Upgrading%20the%20HTC%20Aria%20with%20Android%20Gingerbread%20and%20CyanogenMod" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://yentran.org/post/2011-12-31-installing-cyanogenmod-on-the-htc-aria/&amp;title=Upgrading%20the%20HTC%20Aria%20with%20Android%20Gingerbread%20and%20CyanogenMod" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Upgrading the HTC Aria with Android Gingerbread and CyanogenMod</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2011-12-31T00:00:00Z">December 31, 2011</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>I have an HTC Aria which runs now-ancient Android 2.1. This phone is far from being the latest and greatest, to put it mildly, but I like its small form factor. After putting up with it for a year, I have had enough and decided to upgrade it to Gingerbread.  This is how I did it. As this is my first attempt, no doubt there are different and better ways to do things. Kudos should go to the developer and enthusiast community for making all of this possible.</p>
+<h3 id="root-the-phone">Root the phone</h3>
+<p>Avoid the hassle of dealing with Windows USB drivers. Download and run the custom Linux image with pre-configured utilities as described in <a href="http://forum.xda-developers.com/showpost.php?p=7449486&amp;postcount=1">this post</a>.  Follow the instructions in the post to root the phone and install the ClockworkMod recovery image.</p>
+<h3 id="backup-application-data">Backup application data</h3>
+<p>Backup is always a good idea, especially before making such a radical change to the phone.  Now that I have root access, there are a few options. The Mybackup Root app from the Android Market lets you backup data including contacts, SMS, call log, calendar, dictionary, music playlists, etc.  You can also use it to backup applications (APKs) and application data. The backups are saved to the phone&rsquo;s SD card.  In my case, I mount the phone as USB storage and copy the backup to a computer just to be on the safe side. The backups are found on the SD card under /rerware.</p>
+<h3 id="download-cyanogenmod">Download CyanogenMod</h3>
+<p>I decide to go with CyanogenMod, a very popular mod with support for a wide range of Android devices, including the Aria.  The current version of CyanogenMod as of this writing, version 7, is based on Android Gingerbread.</p>
+<p><a href="http://download.CyanogenMod.com">Download</a> CyanogenMod. Select the latest stable build or, if you&rsquo;re feeling adventurous, a nightly build. For the Aria, select the Liberty on the device list. Copy the CyanogenMod zip file to the phone&rsquo;s root directory.</p>
+<h3 id="reboot-into-recovery-mode">Reboot into recovery mode</h3>
+<p>First turn off phone (taking out the battery is the quickest way). Boot into recovery mode by holding down Volume Down and Power buttons.  Once phone boots, the screen should show HBOOT. Use the Volume buttons to scroll and the Power button to select &ldquo;recovery&rdquo; to put the phone in recovery mode.</p>
+<h3 id="backup-again">Backup (again)</h3>
+<p>In case some thing goes wrong, I&rsquo;d like to be able to go back to the way things were.  ClockworkMod recovery provides a powerful backup utility called nandroid, which lets you backup the entire content of the phone&rsquo;s SD card (NAND flash &ndash; NANDroid, get it? :-))  To use nandroid, select &ldquo;nandroid&rdquo; in recovery mode and follow the on-screen instructions. I also copy the backups from the SD card to a computer for good measure (after rebooting and mounting the phone as USB mass storage).</p>
+<h3 id="install-cyanogenmod">Install CyanogenMod</h3>
+<p>This step is based on instructions provided in <a href="http://forum.xda-developers.com/showthread.php?t=956223">this post</a>.  In recovery mode, wipe the phone in preparation for the new OS by selecting the following:</p>
+<ul>
+<li>Wipe cache partition</li>
+<li>Wipe data/factory reset</li>
+<li>Clear Dalvik cache (under Advanced)</li>
+</ul>
+<p>To install the mod, again in recovery mode:</p>
+<ul>
+<li>Select &ldquo;install zip from SD card&rdquo;</li>
+<li>Select &ldquo;choose zip from SD card&rdquo; and locate the zip file you copied earlier on the SD card</li>
+<li>Wait for the install to complete</li>
+<li>Go back a couple of levels and select &ldquo;reboot system now&rdquo;</li>
+</ul>
+<p>You should see the CyanogenMod skateboarding Android logo while the phone reboots. Once your phone comes up, it will be sporting the sleek interface of Android Gingerbread! Here&rsquo;s a screenshot as proof:</p>
+<p><!-- raw HTML omitted --></p>
+<h3 id="install-the-google-apps-package">Install the Google Apps package</h3>
+<p>It&rsquo;s highly recommended that you also install the <a href="http://goo-inside.me/gapps">Google Apps package</a> . This package contains useful apps which for certain reasons the CyanogenMod team is not able to bundle with the mod. These include the Android Market, Gmail, Facebook, Google Maps, YouTube, etc.</p>
+<p>There are a few ways to install the package, the simplest of which is to follow the same steps to install CyanogenMod using ClockworkMod recovery. In my case, I was only able to successfully install the latest app package; the older packages just did not work.</p>
+<p>The installation actually takes place once the phone is rebooted. Android Market is automatically installed first, then it&rsquo;s used to install the other apps. <a href="http://www.youtube.com/watch?v=DHgZNnHdrSA">This video</a> shows the process step by step. In my case, I have to install just the Android Market, then install other apps from there; otherwise the apps would crash when launched.</p>
+<h3 id="restore-backups">Restore backups</h3>
+<p>If you&rsquo;ve made backups using Mybackup Root, you can reinstall the app then use it to restore your data.</p>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/android" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">android</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/cyanogenmod" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">cyanogenmod</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/gingerbread" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">gingerbread</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/mod" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">mod</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/upgrade" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">upgrade</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://yentran.org" >
+    &copy;  Yen's blog 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

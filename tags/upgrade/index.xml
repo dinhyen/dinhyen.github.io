@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>upgrade on Yen&#39;s blog</title>
-    <link>http://yentran.org/tags/upgrade/</link>
+    <link>https://yentran.org/tags/upgrade/</link>
     <description>Recent content in upgrade on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Feb 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/upgrade/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Feb 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/upgrade/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mini project: Adding a second hard drive to the Mac Mini</title>
-      <link>http://yentran.org/post/source/2013-02-01-mini-project-adding-a-second-hard-drive-to-the-mac-mini/</link>
+      <link>https://yentran.org/post/2013-02-01-mini-project-adding-a-second-hard-drive-to-the-mac-mini/</link>
       <pubDate>Fri, 01 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-02-01-mini-project-adding-a-second-hard-drive-to-the-mac-mini/</guid>
+      <guid>https://yentran.org/post/2013-02-01-mini-project-adding-a-second-hard-drive-to-the-mac-mini/</guid>
       <description>I want to replace the DVR that I get from Verizon Fios. Besides the monthly cost, it&amp;rsquo;s an older unit that&amp;rsquo;s slow and has the capacity for no more than a handful 3-hour hockey games recorded in HD. That is plainly unacceptable, especially during the Stanley Cup Playoffs. For the HD tuner, I decided to go with the SiliconDust HD Homerun Prime. For the DVR, I&amp;rsquo;m going with a Mac Mini.</description>
     </item>
     
     <item>
       <title>Upgrading the HTC Aria with Android Gingerbread and CyanogenMod</title>
-      <link>http://yentran.org/post/source/2011-12-31-installing-cyanogenmod-on-the-htc-aria/</link>
+      <link>https://yentran.org/post/2011-12-31-installing-cyanogenmod-on-the-htc-aria/</link>
       <pubDate>Sat, 31 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-12-31-installing-cyanogenmod-on-the-htc-aria/</guid>
+      <guid>https://yentran.org/post/2011-12-31-installing-cyanogenmod-on-the-htc-aria/</guid>
       <description>I have an HTC Aria which runs now-ancient Android 2.1. This phone is far from being the latest and greatest, to put it mildly, but I like its small form factor. After putting up with it for a year, I have had enough and decided to upgrade it to Gingerbread. This is how I did it. As this is my first attempt, no doubt there are different and better ways to do things.</description>
     </item>
     

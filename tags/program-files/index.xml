@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>program files on Yen&#39;s blog</title>
-    <link>http://yentran.org/tags/program-files/</link>
+    <link>https://yentran.org/tags/program-files/</link>
     <description>Recent content in program files on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Apr 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/program-files/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Apr 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/program-files/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Locating Program Files folder in Visual Studio on 32-bit and x64 environments</title>
-      <link>http://yentran.org/post/source/2012-04-03-locating-program-files-folder-in-visual-studio/</link>
+      <link>https://yentran.org/post/2012-04-03-locating-program-files-folder-in-visual-studio/</link>
       <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-04-03-locating-program-files-folder-in-visual-studio/</guid>
+      <guid>https://yentran.org/post/2012-04-03-locating-program-files-folder-in-visual-studio/</guid>
       <description>In my Visual Studio project, I want to run an external executable, SQLMetal, in a build event. The only problem is that the location of the executable depends on whether the machine runs x64 or 32-bit Windows. It is found in the Program Files (x86) folder on x64 Windows and Program Files on 32-bit Windows. I want to be able to build the project without modification in either environment.
 The solution is to specify the location of the Program Files dynamically by inserting the following lines in the .</description>
     </item>

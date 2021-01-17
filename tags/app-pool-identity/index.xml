@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>app pool identity on Yen&#39;s blog</title>
-    <link>http://yentran.org/tags/app-pool-identity/</link>
+    <link>https://yentran.org/tags/app-pool-identity/</link>
     <description>Recent content in app pool identity on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Sep 2011 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/app-pool-identity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Sep 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/app-pool-identity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to grant permissions to the Application Pool Identity for IIS 7.5</title>
-      <link>http://yentran.org/post/source/2011-09-06-granting-permissions-to-the-application-pool-identity-in-iis-7-5/</link>
+      <link>https://yentran.org/post/2011-09-06-granting-permissions-to-the-application-pool-identity-in-iis-7-5/</link>
       <pubDate>Tue, 06 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-09-06-granting-permissions-to-the-application-pool-identity-in-iis-7-5/</guid>
+      <guid>https://yentran.org/post/2011-09-06-granting-permissions-to-the-application-pool-identity-in-iis-7-5/</guid>
       <description>Up to IIS 7 (Windows Vista and Windows Server 2008), the default app pool identity is NetworkService 7. In IIS 7.5 (Windows 7 and Windows Server 2008 R2) the app pool identity is changed to something called ApplicationPoolIdentity.
 Let&amp;rsquo;s say you set up a virtual directory or application that uses this app pool. You&amp;rsquo;ll need to grant access permission on the physical path to ApplicationPoolIdentity. However, you&amp;rsquo;d find that there is no such user account.</description>
     </item>

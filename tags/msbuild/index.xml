@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>msbuild on Yen&#39;s blog</title>
-    <link>http://yentran.org/tags/msbuild/</link>
+    <link>https://yentran.org/tags/msbuild/</link>
     <description>Recent content in msbuild on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Nov 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/msbuild/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Nov 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/msbuild/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Hudson with Git and MSBuild on Windows</title>
-      <link>http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</link>
+      <link>https://yentran.org/post/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</link>
       <pubDate>Thu, 15 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</guid>
+      <guid>https://yentran.org/post/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</guid>
       <description>We use Hudson as our continuous integration server (although we&amp;rsquo;re thinking about moving to Jenkins, but that&amp;rsquo;s a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.
 Pre-requisites We use the following software. The listed versions are the latest as of the time of writing, but other combinations should work.
  Java Runtime Environment (JRE) 7 Apache Tomcat 7.0 Hudson 2.</description>
@@ -20,20 +20,20 @@ Pre-requisites We use the following software. The listed versions are the latest
     
     <item>
       <title>Modifying .config file in an MSBuild project</title>
-      <link>http://yentran.org/post/source/2012-05-11-modifying-config-file-in-an-msbuild-project/</link>
+      <link>https://yentran.org/post/2012-05-11-modifying-config-file-in-an-msbuild-project/</link>
       <pubDate>Fri, 11 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-05-11-modifying-config-file-in-an-msbuild-project/</guid>
+      <guid>https://yentran.org/post/2012-05-11-modifying-config-file-in-an-msbuild-project/</guid>
       <description>We use Hudson to deploy our web application to different environments such as QA, demo and production. We need to customize the web.config, primarily the database connection string, for each environment . Previously we had to maintain multiple copies of the web.config and copy the appropriate one for each deployment destination. Obviously keeping around different versions of the same file is far from ideal.
 As an improvement, we decide to keep a single web.</description>
     </item>
     
     <item>
       <title>MSBuild Project Directory</title>
-      <link>http://yentran.org/post/source/2011-12-13-msbuild-project-directory/</link>
+      <link>https://yentran.org/post/2011-12-13-msbuild-project-directory/</link>
       <pubDate>Tue, 13 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-12-13-msbuild-project-directory/</guid>
+      <guid>https://yentran.org/post/2011-12-13-msbuild-project-directory/</guid>
       <description>We&amp;rsquo;re using MSBuild in Hudson as part of our continuous integration process. We put the MSBuild scripts in the same directory as the Visual Studio solution file. Everything has been working well until until we decided, as an experiment, to put the MSBuild scripts in a separate directory from the solution. Then the build process started to fail with error MSB3202, &amp;ldquo;the project file was not found&amp;rdquo;.
 By using MSBuild&amp;rsquo;s &amp;ldquo;/verbosity:diagnostic&amp;rdquo; flag, we were able to look at the list of properties that MSBuild was using.</description>
     </item>

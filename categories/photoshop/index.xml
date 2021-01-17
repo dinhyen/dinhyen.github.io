@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Photoshop on Yen&#39;s blog</title>
-    <link>http://yentran.org/categories/photoshop/</link>
+    <link>https://yentran.org/categories/photoshop/</link>
     <description>Recent content in Photoshop on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Apr 2011 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/categories/photoshop/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Apr 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/categories/photoshop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ooh shiny</title>
-      <link>http://yentran.org/post/source/2011-04-28-ooh-shiny/</link>
+      <link>https://yentran.org/post/2011-04-28-ooh-shiny/</link>
       <pubDate>Thu, 28 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-04-28-ooh-shiny/</guid>
+      <guid>https://yentran.org/post/2011-04-28-ooh-shiny/</guid>
       <description>Some time ago I took a software engineering class. For the term project we divided up into teams and worked on a project of our own choosing from beginning to end. Ours was an e-commerce application, the source code for which still resides on Google Code.
 We were the Fantastic Five because, you&amp;rsquo;d never guess it, there were 5 of us. I created the logo for the project. For the &amp;ldquo;super-hero&amp;rdquo; effect, it has 2 stylized F&amp;rsquo;s, made to look like wings flanking a shield.</description>
     </item>
     
     <item>
       <title>It&#39;s alive!</title>
-      <link>http://yentran.org/post/source/2011-04-26-its-alive/</link>
+      <link>https://yentran.org/post/2011-04-26-its-alive/</link>
       <pubDate>Tue, 26 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-04-26-its-alive/</guid>
+      <guid>https://yentran.org/post/2011-04-26-its-alive/</guid>
       <description>The task of selecting a name for this blog site was reduced to finding a number, since all the sensible permutations involving my first and last name have already been claimed. The number 73 comes to mind. As Sheldon pontificated in Big Bang Theory (season 4, episode 10), 73 is the &amp;ldquo;best number&amp;rdquo; because it&amp;rsquo;s the 21st prime number, whose mirror is 37, which is the 12th prime number, whose mirror is 21, which is the product of 7 and 3.</description>
     </item>
     

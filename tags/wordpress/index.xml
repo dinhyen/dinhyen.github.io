@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>wordpress on Yen&#39;s blog</title>
-    <link>http://yentran.org/tags/wordpress/</link>
+    <link>https://yentran.org/tags/wordpress/</link>
     <description>Recent content in wordpress on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 May 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 May 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Backing up your site with VDeck</title>
-      <link>http://yentran.org/post/source/2012-05-10-backing-up-your-site-with-vdeck/</link>
+      <link>https://yentran.org/post/2012-05-10-backing-up-your-site-with-vdeck/</link>
       <pubDate>Thu, 10 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-05-10-backing-up-your-site-with-vdeck/</guid>
+      <guid>https://yentran.org/post/2012-05-10-backing-up-your-site-with-vdeck/</guid>
       <description>I don&amp;rsquo;t think anyone would argue that regularly backing up data is a good idea. At the same time, most people including myself don&amp;rsquo;t do so nearly often enough. Fortunately, the VDeck control panel provided by my web host helps make backing up and restoring data a cinch.
 To back up my Wordpress blog, I need to back up both the files and the MySQL database. To back up files, use the Archive Gateway.</description>
     </item>
     
     <item>
       <title>Loading jQuery from Google CDN and dependent scripts in WordPress</title>
-      <link>http://yentran.org/post/source/2012-04-03-loading-jquery-from-google-cdn-and-dependent-scripts-in-wordpress-2/</link>
+      <link>https://yentran.org/post/2012-04-03-loading-jquery-from-google-cdn-and-dependent-scripts-in-wordpress-2/</link>
       <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-04-03-loading-jquery-from-google-cdn-and-dependent-scripts-in-wordpress-2/</guid>
+      <guid>https://yentran.org/post/2012-04-03-loading-jquery-from-google-cdn-and-dependent-scripts-in-wordpress-2/</guid>
       <description>I&amp;rsquo;m using a WordPress theme that loads jQuery and other JavaScripts in the header.php script:
 &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;&amp;lt;?php bloginfo(&amp;#39;template_directory&amp;#39;); ?&amp;gt;/js/jquery-1.4.2.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;&amp;lt;?php bloginfo(&amp;#39;template_directory&amp;#39;); ?&amp;gt;/js/jquery.prettyPhoto.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;&amp;lt;?php bloginfo(&amp;#39;template_directory&amp;#39;); ?&amp;gt;/js/custom.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; Using Chrome&amp;rsquo;s Developer console (i.e., hit F12) to view the Resources for the page, I could see that jQuery is being loaded. I wanted to load jQuery from Google&amp;rsquo;s Content Delivery Network (why?). My initial attempt was to simply change the jQuery reference to the CDN location (I also upgraded to version 1.</description>
     </item>
     
     <item>
       <title>Using Lightbox with NextGen gallery</title>
-      <link>http://yentran.org/post/source/2012-03-31-using-lightbox-with-nextgen-gallery/</link>
+      <link>https://yentran.org/post/2012-03-31-using-lightbox-with-nextgen-gallery/</link>
       <pubDate>Sat, 31 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2012-03-31-using-lightbox-with-nextgen-gallery/</guid>
+      <guid>https://yentran.org/post/2012-03-31-using-lightbox-with-nextgen-gallery/</guid>
       <description>In my former Wordpress blog, I used the excellent NextGen plugin to manage images in galleries. When embedded in a post, the gallery is rendered as thumbnails, whose full-size version is shown as an overlay when clicked. I also like to embed inline images so that I can include a caption. Inline images, however, are still directly linked and not shown as an overlay. When viewed, it requires an additional click or two to go back to the post.</description>
     </item>
     

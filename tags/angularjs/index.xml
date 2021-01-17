@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>angularjs on Yen&#39;s blog</title>
-    <link>http://yentran.org/tags/angularjs/</link>
+    <link>https://yentran.org/tags/angularjs/</link>
     <description>Recent content in angularjs on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Sep 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Sep 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simple table sorting with Angular</title>
-      <link>http://yentran.org/post/source/2013-09-28-simple-table-sorting-with-angular/</link>
+      <link>https://yentran.org/post/2013-09-28-simple-table-sorting-with-angular/</link>
       <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-09-28-simple-table-sorting-with-angular/</guid>
+      <guid>https://yentran.org/post/2013-09-28-simple-table-sorting-with-angular/</guid>
       <description>View in Plunkr
 I have a page with tabular data which I want to be able to sort without having to go back to the server. Also a nice-to-have would be the ability to filter the displayed items. Since I&amp;rsquo;m trying to learn Angular, this seems like an excellent opportunity to try it out.
 In the controller, the variable items holds the data to be sorted/filtered, while filteredItems is initialized to an empty array.</description>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blog on Yen&#39;s blog</title>
-    <link>http://yentran.org/tags/blog/</link>
+    <link>https://yentran.org/tags/blog/</link>
     <description>Recent content in blog on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Apr 2011 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Apr 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>It&#39;s alive!</title>
-      <link>http://yentran.org/post/source/2011-04-26-its-alive/</link>
+      <link>https://yentran.org/post/2011-04-26-its-alive/</link>
       <pubDate>Tue, 26 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-04-26-its-alive/</guid>
+      <guid>https://yentran.org/post/2011-04-26-its-alive/</guid>
       <description>The task of selecting a name for this blog site was reduced to finding a number, since all the sensible permutations involving my first and last name have already been claimed. The number 73 comes to mind. As Sheldon pontificated in Big Bang Theory (season 4, episode 10), 73 is the &amp;ldquo;best number&amp;rdquo; because it&amp;rsquo;s the 21st prime number, whose mirror is 37, which is the 12th prime number, whose mirror is 21, which is the product of 7 and 3.</description>
     </item>
     

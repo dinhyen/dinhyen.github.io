@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Simple tasks with Grunt | Yen&#39;s blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&rsquo;re working with conventional server-side platforms. Unfortunately, when it comes to JavaScripts and CSS, automation tools are harder to find. That is, until Grunt comes along (following Node, which turned upside down the whole idea of server vs client side in the first place).
+As a self-described &ldquo;task runner&rdquo;, Grunt is powerful and pleasantly approachable.">
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Simple tasks with Grunt" />
+<meta property="og:description" content="Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&rsquo;re working with conventional server-side platforms. Unfortunately, when it comes to JavaScripts and CSS, automation tools are harder to find. That is, until Grunt comes along (following Node, which turned upside down the whole idea of server vs client side in the first place).
+As a self-described &ldquo;task runner&rdquo;, Grunt is powerful and pleasantly approachable." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yentran.org/post/2014-03-03-simple-tasks-with-grunt/" />
+<meta property="article:published_time" content="2014-03-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2014-03-03T00:00:00+00:00" />
+<meta itemprop="name" content="Simple tasks with Grunt">
+<meta itemprop="description" content="Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&rsquo;re working with conventional server-side platforms. Unfortunately, when it comes to JavaScripts and CSS, automation tools are harder to find. That is, until Grunt comes along (following Node, which turned upside down the whole idea of server vs client side in the first place).
+As a self-described &ldquo;task runner&rdquo;, Grunt is powerful and pleasantly approachable.">
+<meta itemprop="datePublished" content="2014-03-03T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2014-03-03T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1209">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Simple tasks with Grunt"/>
+<meta name="twitter:description" content="Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&rsquo;re working with conventional server-side platforms. Unfortunately, when it comes to JavaScripts and CSS, automation tools are harder to find. That is, until Grunt comes along (following Node, which turned upside down the whole idea of server vs client side in the first place).
+As a self-described &ldquo;task runner&rdquo;, Grunt is powerful and pleasantly approachable."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Yen&#39;s blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=https://yentran.org/post/2014-03-03-simple-tasks-with-grunt/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=https://yentran.org/post/2014-03-03-simple-tasks-with-grunt/&amp;text=Simple%20tasks%20with%20Grunt" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://yentran.org/post/2014-03-03-simple-tasks-with-grunt/&amp;title=Simple%20tasks%20with%20Grunt" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Simple tasks with Grunt</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2014-03-03T00:00:00Z">March 3, 2014</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&rsquo;re working with conventional server-side platforms.  Unfortunately, when it comes to JavaScripts and CSS, automation tools are harder to find. That is, until Grunt comes along (following Node, which turned upside down the whole idea of server vs client side in the first place).</p>
+<p>As a self-described &ldquo;task runner&rdquo;, Grunt is powerful and pleasantly approachable.  Its succinctness makes it a joy to use.  This carries over into the Grunt documentation, which is really excellent.  Inspired by the <a href="http://gruntjs.com/sample-gruntfile">Sample Gruntfile tutorial</a>, I&rsquo;d like to walk through my own <code>Gruntfile</code> created for a <a href="https://github.com/dinhyen/darkbox">small JavaScript library</a>.  The goal is to automate a typical process of building the app, from generating CSS from Sass, aggregating various source files into a single file, and minifying the result.</p>
+<p>Once you <a href="http://gruntjs.com/installing-grunt">have Grunt installed</a> using the Node Package Manager, you will need a <code>package.json</code> file, just as for other Node utilities.  The quickest way to create a <code>package.json</code> file is to simply run <code>npm init</code> which generates the file after a series of questions.</p>
+<p>The following libraries will be used:</p>
+<ul>
+<li><a href="https://github.com/gruntjs/grunt-contrib-compass">grunt-contrib-compass</a>: generates CSS from Sass</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat</a>: combines various files into a single file</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-cssmin">grunt-contrib-cssmin</a>: minifies CSS</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-jshint">grunt-contrib-jshint</a>: combs through JavaScript and flags errors or usage issues</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify</a>: mangles and minifies JavaScript</li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch</a>: performs tasks whenever a file changes</li>
+</ul>
+<p>The recommended approach, as stated at the beginning of the documentation for each plugin, is to run <code>npm install grunt-contrib-xxx --save-dev</code>, which has the dual benefit of installing the plugin and also adding a reference to it in <code>package.json</code>.</p>
+<p>Besides <code>package.json</code>, the only other file you need is <code>Gruntfile</code>, in which you define and configure the tasks to run. Configuration options are specified as the argument to <code>grunt.initConfig</code>.</p>
+<p>The first line reads in <code>package.json</code> and turns it into an object.  In this case, I&rsquo;m interested in product name, but it can provide <a href="http://package.json.nodejitsu.com">many other useful properties</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">pkg</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">readJSON</span>(<span style="color:#e6db74">&#39;package.json&#39;</span>),
+</code></pre></div><p>All <code>Gruntfile</code> tasks share the <a href="http://gruntjs.com/configuring-tasks">same basic syntax</a> for specifying options, input and output.  Each task&rsquo;s configuration block is named after the plugin; for example, the configuration block for the <code>grunt-contrib-uglify</code> is simply <code>uglify</code>.  Each task can have arbitrary targets.  You&rsquo;ll probably see a &ldquo;test&rdquo; target for testing or a &ldquo;dist&rdquo; target for building a distribution.  Since I want to build CSS and JavaScript, here I have 2 targets, &ldquo;scripts&rdquo; and &ldquo;stylesheets&rdquo;.  When there are multiple targets in a task, each target can be executed directly.  For example, <code>grunt concat:scripts</code> runs just the &ldquo;scripts&rdquo; target.  If you don&rsquo;t provide a target, then all targets would be run in order.</p>
+<p>The Compass task generates CSS from Sass source.  Of course, Compass <a href="http://compass-style.org/install">must be installed</a> first.  The following options simply instruct Compass to process Sass files in the directory &ldquo;sass&rdquo; and generate the corresponding CSS files in the directory &ldquo;css&rdquo;.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">compass</span><span style="color:#f92672">:</span> {
+  <span style="color:#a6e22e">stylesheets</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">sassDir</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;sass&#39;</span>,
+      <span style="color:#a6e22e">cssDir</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;css&#39;</span>
+    }
+  }
+}
+</code></pre></div><p>When developing, it would be nice to be able to preview changes made to the Sass source.  This is where the watch plugin comes in.  In the simplest use case it simply detects that one or more files have been changed and then runs certain tasks.  The following options allow me to re-generate CSS each time a Sass file is modified.  Start watching by typing <code>grunt watch</code> at the command prompt.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">watch</span><span style="color:#f92672">:</span> {
+  <span style="color:#a6e22e">stylesheets</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">files</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;**/*.scss&#39;</span>,
+    <span style="color:#a6e22e">tasks</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;compass&#39;</span>]
+  }
+}
+</code></pre></div><p>Typically JavaScript and CSS source is distributed over multiple files.  In production you&rsquo;d want to combine the various source files into a single file for performance reason.  This can be done with the concat plugin.  For the source, I&rsquo;m using a globbing pattern for simplicity; <code>src/**/*.js</code> means all <code>.js</code> files in the <code>src</code> directory and any of its sub-directories.  The files would be combined in alphabetical order. An alternative would be to specify an array of individual files.  While this lets you control the ordering of files, it becomes unwieldy for a large number of files. Of course, there are <a href="http://gruntjs.com/configuring-tasks#globbing-patterns">many ways</a> to skin the cat.  For the output, I&rsquo;m using the project&rsquo;s name which comes from <code>package.json</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">concat</span><span style="color:#f92672">:</span> {
+  <span style="color:#a6e22e">scripts</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">separator</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;;&#39;</span>
+    },
+    <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;src/**/*.js&#39;</span>,
+    <span style="color:#a6e22e">dest</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dist/&lt;%= pkg.name %&gt;.js&#39;</span>
+  },
+  <span style="color:#a6e22e">stylesheets</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;css/**/*.css&#39;</span>,
+    <span style="color:#a6e22e">dest</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dist/&lt;%= pkg.name %&gt;.css&#39;</span>
+  }
+}
+</code></pre></div><p>The cssmin plugin provides CSS minification.  The source should be the output of the concat stage.  Note the variable substitution syntax.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">cssmin</span><span style="color:#f92672">:</span> {
+  <span style="color:#a6e22e">stylesheets</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&lt;%= concat.stylesheets.dest %&gt;&#39;</span>,
+    <span style="color:#a6e22e">dest</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dist/&lt;%= pkg.name %&gt;.min.css&#39;</span>
+  }
+}
+</code></pre></div><p>The uglify plugin is the JavaScript equivalent of cssmin.  It also mangles variable names which reduces file size further at the expense of readability.  Since mangling pretty much makes your JavaScript indecipherable and impossible to debug, you can also provide a <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source map</a> which lets you view the original, non-uglified source when debugging.  The uglify plugin have all these and sundry options.  Here it also inserts a comment with some basic information at the top of the file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">uglify</span><span style="color:#f92672">:</span> {
+  <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">banner</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today(&#34;yyyy-mm-dd&#34;) %&gt; */\n&#39;</span>,
+    <span style="color:#a6e22e">sourceMap</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+  },
+  <span style="color:#a6e22e">scripts</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&lt;%= concat.scripts.dest %&gt;&#39;</span>,
+    <span style="color:#a6e22e">dest</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dist/&lt;%= pkg.name %&gt;.min.js&#39;</span>
+  }
+}
+</code></pre></div><p>The jshint configuration block just sets some <a href="http://www.jshint.com/docs/options">options for jshint</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">jshint</span><span style="color:#f92672">:</span> {
+  <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">curly</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">eqeqeq</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">immed</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">latedef</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">newcap</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">noarg</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">sub</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">undef</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">unused</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">boss</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">eqnull</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">node</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+  }
+</code></pre></div><p>Finally register a default task and a useful task.  Tasks would be executed in the order specified.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">registerTask</span>(<span style="color:#e6db74">&#39;default&#39;</span>, [<span style="color:#e6db74">&#39;jshint&#39;</span>, <span style="color:#e6db74">&#39;compass&#39;</span>, <span style="color:#e6db74">&#39;concat&#39;</span>, <span style="color:#e6db74">&#39;cssmin&#39;</span>, <span style="color:#e6db74">&#39;uglify&#39;</span>]);
+<span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">registerTask</span>(<span style="color:#e6db74">&#39;sassify&#39;</span>, [<span style="color:#e6db74">&#39;compass&#39;</span>]);
+</code></pre></div><p>To run a task, simply specify the task&rsquo;s name as a argument to <code>grunt</code> on the command line; e.g., <code>grunt jshint</code>.  Simply typing <code>grunt</code> runs the default task.  Below is the output for running the default task; even for this small set of tasks, running them manually or maintaining a script without Grunt would have been a tedious chore.</p>
+<pre><code>Running &quot;jshint:scripts&quot; (jshint) task
+&gt;&gt; 2 files lint free.
+
+Running &quot;compass:stylesheets&quot; (compass) task
+unchanged sass/darkbox.scss
+unchanged sass/mixins.scss
+unchanged sass/screen.scss
+Compilation took 0.012s
+
+Running &quot;concat:scripts&quot; (concat) task
+File dist/darkbox.js created.
+
+Running &quot;concat:stylesheets&quot; (concat) task
+File dist/darkbox.css created.
+
+Running &quot;cssmin:stylesheets&quot; (cssmin) task
+File dist/darkbox.min.css created: 3.9 kB → 2.78 kB
+
+Running &quot;uglify:scripts&quot; (uglify) task
+File dist/darkbox.min.map created (source map).
+File dist/darkbox.min.js created: 5.45 kB → 2.51 kB
+
+Done, without errors.
+</code></pre><p>Below is the entire <code>Gruntfile</code>.  Happy grunting.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">grunt</span>) {
+
+  <span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">initConfig</span>({
+    <span style="color:#a6e22e">pkg</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">readJSON</span>(<span style="color:#e6db74">&#39;package.json&#39;</span>),
+    <span style="color:#a6e22e">compass</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">stylesheets</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
+          <span style="color:#a6e22e">sassDir</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;sass&#39;</span>,
+          <span style="color:#a6e22e">cssDir</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;css&#39;</span>
+        }
+      }
+    },
+    <span style="color:#a6e22e">concat</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">scripts</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
+          <span style="color:#a6e22e">separator</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;;&#39;</span>
+        },
+        <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;src/**/*.js&#39;</span>,
+        <span style="color:#a6e22e">dest</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dist/&lt;%= pkg.name %&gt;.js&#39;</span>
+      },
+      <span style="color:#a6e22e">stylesheets</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;css/**/*.css&#39;</span>,
+        <span style="color:#a6e22e">dest</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dist/&lt;%= pkg.name %&gt;.css&#39;</span>
+      }
+    },
+    <span style="color:#a6e22e">cssmin</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">stylesheets</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&lt;%= concat.stylesheets.dest %&gt;&#39;</span>,
+        <span style="color:#a6e22e">dest</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dist/&lt;%= pkg.name %&gt;.min.css&#39;</span>
+      }
+    },
+    <span style="color:#a6e22e">jshint</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">curly</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+        <span style="color:#a6e22e">eqeqeq</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+        <span style="color:#a6e22e">immed</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+        <span style="color:#a6e22e">latedef</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+        <span style="color:#a6e22e">newcap</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+        <span style="color:#a6e22e">noarg</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+        <span style="color:#a6e22e">sub</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+        <span style="color:#a6e22e">undef</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+        <span style="color:#a6e22e">unused</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+        <span style="color:#a6e22e">boss</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+        <span style="color:#a6e22e">eqnull</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+        <span style="color:#a6e22e">node</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+      },
+      <span style="color:#a6e22e">scripts</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;Gruntfile.js&#39;</span>, <span style="color:#e6db74">&#39;src/*.js&#39;</span>]
+      }
+    },
+    <span style="color:#a6e22e">uglify</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">banner</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today(&#34;yyyy-mm-dd&#34;) %&gt; */\n&#39;</span>,
+        <span style="color:#a6e22e">sourceMap</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+      },
+      <span style="color:#a6e22e">scripts</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&lt;%= concat.scripts.dest %&gt;&#39;</span>,
+        <span style="color:#a6e22e">dest</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dist/&lt;%= pkg.name %&gt;.min.js&#39;</span>
+      }
+    },
+    <span style="color:#a6e22e">watch</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">stylesheets</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">files</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;**/*.scss&#39;</span>,
+        <span style="color:#a6e22e">tasks</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;compass&#39;</span>]
+      }
+    }
+  });
+
+  <span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">loadNpmTasks</span>(<span style="color:#e6db74">&#39;grunt-contrib-compass&#39;</span>);
+  <span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">loadNpmTasks</span>(<span style="color:#e6db74">&#39;grunt-contrib-concat&#39;</span>);
+  <span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">loadNpmTasks</span>(<span style="color:#e6db74">&#39;grunt-contrib-cssmin&#39;</span>);
+  <span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">loadNpmTasks</span>(<span style="color:#e6db74">&#39;grunt-contrib-jshint&#39;</span>);
+  <span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">loadNpmTasks</span>(<span style="color:#e6db74">&#39;grunt-contrib-uglify&#39;</span>);
+  <span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">loadNpmTasks</span>(<span style="color:#e6db74">&#39;grunt-contrib-watch&#39;</span>);
+
+  <span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">registerTask</span>(<span style="color:#e6db74">&#39;default&#39;</span>, [<span style="color:#e6db74">&#39;jshint&#39;</span>, <span style="color:#e6db74">&#39;compass&#39;</span>, <span style="color:#e6db74">&#39;concat&#39;</span>, <span style="color:#e6db74">&#39;cssmin&#39;</span>, <span style="color:#e6db74">&#39;uglify&#39;</span>]);
+  <span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">registerTask</span>(<span style="color:#e6db74">&#39;sassify&#39;</span>, [<span style="color:#e6db74">&#39;compass&#39;</span>]);
+};
+</code></pre></div><ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://yentran.org" >
+    &copy;  Yen's blog 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

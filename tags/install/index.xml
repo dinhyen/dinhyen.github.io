@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>install on Yen&#39;s blog</title>
-    <link>http://yentran.org/tags/install/</link>
+    <link>https://yentran.org/tags/install/</link>
     <description>Recent content in install on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Aug 2011 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/install/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Aug 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/install/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Installing Windows 7 for the ASRock 939Dual-SATA2 motherboard</title>
-      <link>http://yentran.org/post/source/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</link>
+      <link>https://yentran.org/post/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</link>
       <pubDate>Sun, 14 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</guid>
+      <guid>https://yentran.org/post/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</guid>
       <description>The ASRock 939Dual-SATA2 motherboard is a little long in the tooth but still quite capable. Mine has been running Windows XP Media Center Edition for some time and I decided to upgrade it to Windows 7. The challenge is that the motherboard&amp;rsquo;s JMicron SATA2 chipset isn&amp;rsquo;t detected automatically at installation. If you want to install Windows on a SATA hard drive, you will have to load the driver first. The other problem is that, as of the time of writing, there is no Windows 7 driver for the ULi integrated Ethernet controller due to the age of the hardware.</description>
     </item>
     

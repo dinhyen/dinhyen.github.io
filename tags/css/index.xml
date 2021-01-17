@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>css on Yen&#39;s blog</title>
-    <link>http://yentran.org/tags/css/</link>
+    <link>https://yentran.org/tags/css/</link>
     <description>Recent content in css on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Aug 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Aug 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fun with CSS sibling selectors</title>
-      <link>http://yentran.org/post/source/2013-08-09-fun-with-css-sibling-selectors/</link>
+      <link>https://yentran.org/post/2013-08-09-fun-with-css-sibling-selectors/</link>
       <pubDate>Fri, 09 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-08-09-fun-with-css-sibling-selectors/</guid>
+      <guid>https://yentran.org/post/2013-08-09-fun-with-css-sibling-selectors/</guid>
       <description>View the live example
 It seems like I&amp;rsquo;m always working on search boxes, but here goes another. My goal here is to display an icon inside the search box. Initially, the search box has a dark background. When clicked, the background changes to white. The icon should changes its color based on whether or not the search box has focus. If we were using a font-based icon such as Fontawesome, which is awesome by the way, styling the icon would be a simple exercise.</description>
     </item>

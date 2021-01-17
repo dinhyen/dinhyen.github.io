@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>javascript on Yen&#39;s blog</title>
-    <link>http://yentran.org/tags/javascript/</link>
+    <link>https://yentran.org/tags/javascript/</link>
     <description>Recent content in javascript on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jul 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://yentran.org/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jul 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Search box using KnockoutJS</title>
-      <link>http://yentran.org/post/source/2013-07-02-search-box-using-knockoutjs/</link>
+      <link>https://yentran.org/post/2013-07-02-search-box-using-knockoutjs/</link>
       <pubDate>Tue, 02 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://yentran.org/post/source/2013-07-02-search-box-using-knockoutjs/</guid>
+      <guid>https://yentran.org/post/2013-07-02-search-box-using-knockoutjs/</guid>
       <description>View the live example
 We&amp;rsquo;re gradually gravitating toward AngularJS because it&amp;rsquo;s more powerful and flexible. However with AngularJS we have some issues with IE7, which unfortunately we&amp;rsquo;re stuck supporting. So when I want to add some simple enhancements to the search box, I went back to KnockoutJS. For a simple scenario such as this, KnockoutJS works great. If we had to do this using plain jQuery, we&amp;rsquo;d have to juggle keypress, focus and blur events which is just unnecessary drudgery!</description>
     </item>

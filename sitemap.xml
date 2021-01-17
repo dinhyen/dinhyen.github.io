@@ -3,1863 +3,1876 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://yentran.org/categories/</loc>
+    <loc>https://yentran.org/post/</loc>
+    <lastmod>2020-11-20T22:18:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yentran.org/post/2020-11-20-the-chargepoint-home-flex-ev-charger-review/</loc>
+    <lastmod>2020-11-20T22:18:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yentran.org/</loc>
+    <lastmod>2020-11-20T22:18:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yentran.org/categories/</loc>
     <lastmod>2017-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2017-08-09-deploying-site-after-cloning-octopress-repo/</loc>
+    <loc>https://yentran.org/post/2017-08-09-deploying-site-after-cloning-octopress-repo/</loc>
     <lastmod>2017-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/</loc>
+    <loc>https://yentran.org/categories/technology/</loc>
     <lastmod>2017-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/categories/technology/</loc>
-    <lastmod>2017-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yentran.org/</loc>
-    <lastmod>2017-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yentran.org/post/source/2015-04-08-installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/</loc>
+    <loc>https://yentran.org/post/2015-04-08-installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/</loc>
     <lastmod>2015-04-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2015-02-16-how-to-not-upgrade-the-nexus-7-to-lollipop/</loc>
+    <loc>https://yentran.org/post/2015-02-16-how-to-not-upgrade-the-nexus-7-to-lollipop/</loc>
     <lastmod>2015-02-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2014-07-09-validating-multiple-fields-with-angular/</loc>
+    <loc>https://yentran.org/post/2014-07-09-validating-multiple-fields-with-angular/</loc>
     <lastmod>2014-07-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2014-04-24-validating-required-form-fields-with-angular/</loc>
+    <loc>https://yentran.org/post/2014-04-24-validating-required-form-fields-with-angular/</loc>
     <lastmod>2014-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2014-04-18-angular-in-jekyll-or-octopress/</loc>
+    <loc>https://yentran.org/post/2014-04-18-angular-in-jekyll-or-octopress/</loc>
     <lastmod>2014-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2014-04-15-copying-files-in-hudson/</loc>
+    <loc>https://yentran.org/post/2014-04-15-copying-files-in-hudson/</loc>
     <lastmod>2014-04-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2014-04-09-moca-home-network/</loc>
+    <loc>https://yentran.org/post/2014-04-09-moca-home-network/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2014-03-03-simple-tasks-with-grunt/</loc>
+    <loc>https://yentran.org/post/2014-03-03-simple-tasks-with-grunt/</loc>
     <lastmod>2014-03-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/categories/other/</loc>
+    <loc>https://yentran.org/categories/other/</loc>
     <lastmod>2014-02-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2014-02-09-quelques-impressions-sur-la-culture-francaise/</loc>
+    <loc>https://yentran.org/post/2014-02-09-quelques-impressions-sur-la-culture-francaise/</loc>
     <lastmod>2014-02-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/categories/hockey/</loc>
+    <loc>https://yentran.org/categories/hockey/</loc>
     <lastmod>2014-02-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2014-02-07-my-git-cheat-sheet/</loc>
+    <loc>https://yentran.org/post/2014-02-07-my-git-cheat-sheet/</loc>
     <lastmod>2014-02-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2014-02-07-sports-i-would-watch/</loc>
+    <loc>https://yentran.org/post/2014-02-07-sports-i-would-watch/</loc>
     <lastmod>2014-02-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-12-07-using-angular-root-scope-for-communication-between-controllers/</loc>
+    <loc>https://yentran.org/post/2013-12-07-using-angular-root-scope-for-communication-between-controllers/</loc>
     <lastmod>2013-12-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-11-23-updating-sql-server-primary-key/</loc>
+    <loc>https://yentran.org/post/2013-11-23-updating-sql-server-primary-key/</loc>
     <lastmod>2013-11-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-11-19-top-10-archive/</loc>
+    <loc>https://yentran.org/post/2013-11-19-top-10-archive/</loc>
     <lastmod>2013-11-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-11-18-so-long-wordpress-hello-octopress/</loc>
+    <loc>https://yentran.org/post/2013-11-18-so-long-wordpress-hello-octopress/</loc>
     <lastmod>2013-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/categories/review/</loc>
+    <loc>https://yentran.org/categories/review/</loc>
     <lastmod>2013-11-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-11-13-sigma-50mm-lens/</loc>
+    <loc>https://yentran.org/post/2013-11-13-sigma-50mm-lens/</loc>
     <lastmod>2013-11-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-11-02-fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/</loc>
+    <loc>https://yentran.org/post/2013-11-02-fixing-windows-media-center-no-tuner-available-error-with-hdhomerun-prime/</loc>
     <lastmod>2013-11-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-10-31-helper-method-generate-nested-tags-from-block/</loc>
+    <loc>https://yentran.org/post/2013-10-31-helper-method-generate-nested-tags-from-block/</loc>
     <lastmod>2013-10-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-10-23-bruins-took-down-sabres-in-costly-victory/</loc>
+    <loc>https://yentran.org/post/2013-10-23-bruins-took-down-sabres-in-costly-victory/</loc>
     <lastmod>2013-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/angularjs/</loc>
+    <loc>https://yentran.org/tags/angularjs/</loc>
     <lastmod>2013-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-09-28-simple-table-sorting-with-angular/</loc>
+    <loc>https://yentran.org/post/2013-09-28-simple-table-sorting-with-angular/</loc>
     <lastmod>2013-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/</loc>
+    <loc>https://yentran.org/tags/</loc>
     <lastmod>2013-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/wix/</loc>
+    <loc>https://yentran.org/tags/wix/</loc>
     <lastmod>2013-09-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-09-27-wix-executing-custom-action-before-starting-windows-service/</loc>
+    <loc>https://yentran.org/post/2013-09-27-wix-executing-custom-action-before-starting-windows-service/</loc>
     <lastmod>2013-09-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-09-26-wix-batch-file/</loc>
+    <loc>https://yentran.org/post/2013-09-26-wix-batch-file/</loc>
     <lastmod>2013-09-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-09-17-bruins-training-camp-2013/</loc>
+    <loc>https://yentran.org/post/2013-09-17-bruins-training-camp-2013/</loc>
     <lastmod>2013-09-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/css/</loc>
+    <loc>https://yentran.org/tags/css/</loc>
     <lastmod>2013-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-08-09-fun-with-css-sibling-selectors/</loc>
+    <loc>https://yentran.org/post/2013-08-09-fun-with-css-sibling-selectors/</loc>
     <lastmod>2013-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/javascript/</loc>
+    <loc>https://yentran.org/tags/javascript/</loc>
     <lastmod>2013-07-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/knockoutjs/</loc>
+    <loc>https://yentran.org/tags/knockoutjs/</loc>
     <lastmod>2013-07-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-07-02-search-box-using-knockoutjs/</loc>
+    <loc>https://yentran.org/post/2013-07-02-search-box-using-knockoutjs/</loc>
     <lastmod>2013-07-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-04-24-animate-textbox-using-knockoutjs/</loc>
+    <loc>https://yentran.org/post/2013-04-24-animate-textbox-using-knockoutjs/</loc>
     <lastmod>2013-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-03-19-intermittent-temporary-freezing-on-macbook-with-ocz-vertex-3/</loc>
+    <loc>https://yentran.org/post/2013-03-19-intermittent-temporary-freezing-on-macbook-with-ocz-vertex-3/</loc>
     <lastmod>2013-03-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/name-dropping/</loc>
+    <loc>https://yentran.org/tags/name-dropping/</loc>
     <lastmod>2013-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-03-08-you-played-with-who/</loc>
+    <loc>https://yentran.org/post/2013-03-08-you-played-with-who/</loc>
     <lastmod>2013-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/diy/</loc>
+    <loc>https://yentran.org/tags/diy/</loc>
     <lastmod>2013-02-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-02-13-fix-external-lockout-for-american-standard-freedom-90-furnace/</loc>
+    <loc>https://yentran.org/post/2013-02-13-fix-external-lockout-for-american-standard-freedom-90-furnace/</loc>
     <lastmod>2013-02-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/tip/</loc>
+    <loc>https://yentran.org/tags/tip/</loc>
     <lastmod>2013-02-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/mac/</loc>
+    <loc>https://yentran.org/tags/mac/</loc>
     <lastmod>2013-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/mini/</loc>
+    <loc>https://yentran.org/tags/mini/</loc>
     <lastmod>2013-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2013-02-01-mini-project-adding-a-second-hard-drive-to-the-mac-mini/</loc>
+    <loc>https://yentran.org/post/2013-02-01-mini-project-adding-a-second-hard-drive-to-the-mac-mini/</loc>
     <lastmod>2013-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/ssd/</loc>
+    <loc>https://yentran.org/tags/ssd/</loc>
     <lastmod>2013-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/upgrade/</loc>
+    <loc>https://yentran.org/tags/upgrade/</loc>
     <lastmod>2013-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/favorites/</loc>
+    <loc>https://yentran.org/tags/favorites/</loc>
     <lastmod>2012-12-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/garmin/</loc>
+    <loc>https://yentran.org/tags/garmin/</loc>
     <lastmod>2012-12-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/gps/</loc>
+    <loc>https://yentran.org/tags/gps/</loc>
     <lastmod>2012-12-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-12-18-quickly-editing-waypoints-on-a-garmin-gps-device/</loc>
+    <loc>https://yentran.org/post/2012-12-18-quickly-editing-waypoints-on-a-garmin-gps-device/</loc>
     <lastmod>2012-12-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/git/</loc>
+    <loc>https://yentran.org/tags/git/</loc>
     <lastmod>2012-12-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-12-15-setting-up-git-to-work-remotely/</loc>
+    <loc>https://yentran.org/post/2012-12-15-setting-up-git-to-work-remotely/</loc>
     <lastmod>2012-12-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/ci/</loc>
+    <loc>https://yentran.org/tags/ci/</loc>
     <lastmod>2012-11-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/hudson/</loc>
+    <loc>https://yentran.org/tags/hudson/</loc>
     <lastmod>2012-11-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/msbuild/</loc>
+    <loc>https://yentran.org/tags/msbuild/</loc>
     <lastmod>2012-11-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</loc>
+    <loc>https://yentran.org/post/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</loc>
     <lastmod>2012-11-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-11-04-looper/</loc>
+    <loc>https://yentran.org/post/2012-11-04-looper/</loc>
     <lastmod>2012-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/movie/</loc>
+    <loc>https://yentran.org/tags/movie/</loc>
     <lastmod>2012-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/spoilers/</loc>
+    <loc>https://yentran.org/tags/spoilers/</loc>
     <lastmod>2012-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/installation/</loc>
+    <loc>https://yentran.org/tags/installation/</loc>
     <lastmod>2012-09-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-09-16-replacing-motherboard-without-reinstalling-windows/</loc>
+    <loc>https://yentran.org/post/2012-09-16-replacing-motherboard-without-reinstalling-windows/</loc>
     <lastmod>2012-09-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/windows-7/</loc>
+    <loc>https://yentran.org/tags/windows-7/</loc>
     <lastmod>2012-09-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/categories/city/</loc>
+    <loc>https://yentran.org/categories/city/</loc>
     <lastmod>2012-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-08-09-paris-flashback/</loc>
+    <loc>https://yentran.org/post/2012-08-09-paris-flashback/</loc>
     <lastmod>2012-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/categories/photography/</loc>
+    <loc>https://yentran.org/categories/photography/</loc>
     <lastmod>2012-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/categories/travel/</loc>
+    <loc>https://yentran.org/categories/travel/</loc>
     <lastmod>2012-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/inca/</loc>
+    <loc>https://yentran.org/tags/inca/</loc>
     <lastmod>2012-08-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-08-07-ollantaytambo/</loc>
+    <loc>https://yentran.org/post/2012-08-07-ollantaytambo/</loc>
     <lastmod>2012-08-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/peru/</loc>
+    <loc>https://yentran.org/tags/peru/</loc>
     <lastmod>2012-08-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/ruins/</loc>
+    <loc>https://yentran.org/tags/ruins/</loc>
     <lastmod>2012-08-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/architecture/</loc>
+    <loc>https://yentran.org/tags/architecture/</loc>
     <lastmod>2012-07-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/categories/hiking/</loc>
+    <loc>https://yentran.org/categories/hiking/</loc>
     <lastmod>2012-07-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-07-31-machu-picchu/</loc>
+    <loc>https://yentran.org/post/2012-07-31-machu-picchu/</loc>
     <lastmod>2012-07-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/categories/outdoors/</loc>
+    <loc>https://yentran.org/categories/outdoors/</loc>
     <lastmod>2012-07-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-07-24-sacsayhuaman/</loc>
+    <loc>https://yentran.org/post/2012-07-24-sacsayhuaman/</loc>
     <lastmod>2012-07-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-07-19-pisac/</loc>
+    <loc>https://yentran.org/post/2012-07-19-pisac/</loc>
     <lastmod>2012-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/terraces/</loc>
+    <loc>https://yentran.org/tags/terraces/</loc>
     <lastmod>2012-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-07-17-cusco/</loc>
+    <loc>https://yentran.org/post/2012-07-17-cusco/</loc>
     <lastmod>2012-07-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/qoricancha/</loc>
+    <loc>https://yentran.org/tags/qoricancha/</loc>
     <lastmod>2012-07-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/cathedral/</loc>
+    <loc>https://yentran.org/tags/cathedral/</loc>
     <lastmod>2012-07-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/church/</loc>
+    <loc>https://yentran.org/tags/church/</loc>
     <lastmod>2012-07-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/colonial/</loc>
+    <loc>https://yentran.org/tags/colonial/</loc>
     <lastmod>2012-07-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-07-16-lima/</loc>
+    <loc>https://yentran.org/post/2012-07-16-lima/</loc>
     <lastmod>2012-07-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/art/</loc>
+    <loc>https://yentran.org/tags/art/</loc>
     <lastmod>2012-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-07-15-revere-beach-sand-sculptures/</loc>
+    <loc>https://yentran.org/post/2012-07-15-revere-beach-sand-sculptures/</loc>
     <lastmod>2012-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/sculpture/</loc>
+    <loc>https://yentran.org/tags/sculpture/</loc>
     <lastmod>2012-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/acadia-national-park/</loc>
+    <loc>https://yentran.org/tags/acadia-national-park/</loc>
     <lastmod>2012-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-07-10-acadia-national-park-dorr-mountain/</loc>
+    <loc>https://yentran.org/post/2012-07-10-acadia-national-park-dorr-mountain/</loc>
     <lastmod>2012-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-07-10-acadia-national-park-great-head-trail/</loc>
+    <loc>https://yentran.org/post/2012-07-10-acadia-national-park-great-head-trail/</loc>
     <lastmod>2012-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-07-10-acadia-national-park-jesup-path/</loc>
+    <loc>https://yentran.org/post/2012-07-10-acadia-national-park-jesup-path/</loc>
     <lastmod>2012-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-07-10-auto-property-with-private-setter/</loc>
+    <loc>https://yentran.org/post/2012-07-10-auto-property-with-private-setter/</loc>
     <lastmod>2012-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/c#/</loc>
+    <loc>https://yentran.org/tags/c#/</loc>
     <lastmod>2012-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/dorr-mountain/</loc>
+    <loc>https://yentran.org/tags/dorr-mountain/</loc>
     <lastmod>2012-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/trail/</loc>
+    <loc>https://yentran.org/tags/trail/</loc>
     <lastmod>2012-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-07-08-acadia-national-park-cadillac-mountain/</loc>
+    <loc>https://yentran.org/post/2012-07-08-acadia-national-park-cadillac-mountain/</loc>
     <lastmod>2012-07-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-07-08-acadia-national-park-the-bubbles/</loc>
+    <loc>https://yentran.org/post/2012-07-08-acadia-national-park-the-bubbles/</loc>
     <lastmod>2012-07-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/bubbles/</loc>
+    <loc>https://yentran.org/tags/bubbles/</loc>
     <lastmod>2012-07-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/cadillac-mountain/</loc>
+    <loc>https://yentran.org/tags/cadillac-mountain/</loc>
     <lastmod>2012-07-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/sunset/</loc>
+    <loc>https://yentran.org/tags/sunset/</loc>
     <lastmod>2012-07-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-07-05-acadia-national-park-biking-the-carriage-roads/</loc>
+    <loc>https://yentran.org/post/2012-07-05-acadia-national-park-biking-the-carriage-roads/</loc>
     <lastmod>2012-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-07-05-acadia-national-park-gorham-mountain/</loc>
+    <loc>https://yentran.org/post/2012-07-05-acadia-national-park-gorham-mountain/</loc>
     <lastmod>2012-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/carriage-roads/</loc>
+    <loc>https://yentran.org/tags/carriage-roads/</loc>
     <lastmod>2012-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/cycling/</loc>
+    <loc>https://yentran.org/tags/cycling/</loc>
     <lastmod>2012-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/hiking/</loc>
+    <loc>https://yentran.org/tags/hiking/</loc>
     <lastmod>2012-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-06-29-editing-collection-with-linq-to-sql/</loc>
+    <loc>https://yentran.org/post/2012-06-29-editing-collection-with-linq-to-sql/</loc>
     <lastmod>2012-06-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/linq-to-sql/</loc>
+    <loc>https://yentran.org/tags/linq-to-sql/</loc>
     <lastmod>2012-06-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-05-20-the-reformatory-branch-trail/</loc>
+    <loc>https://yentran.org/post/2012-05-20-the-reformatory-branch-trail/</loc>
     <lastmod>2012-05-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/csharp/</loc>
+    <loc>https://yentran.org/tags/csharp/</loc>
     <lastmod>2012-05-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-05-18-deleting-from-collection-with-linq-to-sql/</loc>
+    <loc>https://yentran.org/post/2012-05-18-deleting-from-collection-with-linq-to-sql/</loc>
     <lastmod>2012-05-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-05-11-modifying-config-file-in-an-msbuild-project/</loc>
+    <loc>https://yentran.org/post/2012-05-11-modifying-config-file-in-an-msbuild-project/</loc>
     <lastmod>2012-05-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/xmlpeek/</loc>
+    <loc>https://yentran.org/tags/xmlpeek/</loc>
     <lastmod>2012-05-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/xmlpoke/</loc>
+    <loc>https://yentran.org/tags/xmlpoke/</loc>
     <lastmod>2012-05-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-05-10-backing-up-your-site-with-vdeck/</loc>
+    <loc>https://yentran.org/post/2012-05-10-backing-up-your-site-with-vdeck/</loc>
     <lastmod>2012-05-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/backup/</loc>
+    <loc>https://yentran.org/tags/backup/</loc>
     <lastmod>2012-05-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/vdeck/</loc>
+    <loc>https://yentran.org/tags/vdeck/</loc>
     <lastmod>2012-05-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/wordpress/</loc>
+    <loc>https://yentran.org/tags/wordpress/</loc>
     <lastmod>2012-05-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/berkshires/</loc>
+    <loc>https://yentran.org/tags/berkshires/</loc>
     <lastmod>2012-04-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-04-04-berkshires-2010/</loc>
+    <loc>https://yentran.org/post/2012-04-04-berkshires-2010/</loc>
     <lastmod>2012-04-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/foliage/</loc>
+    <loc>https://yentran.org/tags/foliage/</loc>
     <lastmod>2012-04-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/asp.net-mvc/</loc>
+    <loc>https://yentran.org/tags/asp.net-mvc/</loc>
     <lastmod>2012-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/automapper/</loc>
+    <loc>https://yentran.org/tags/automapper/</loc>
     <lastmod>2012-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/javascripts/</loc>
+    <loc>https://yentran.org/tags/javascripts/</loc>
     <lastmod>2012-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/jquery/</loc>
+    <loc>https://yentran.org/tags/jquery/</loc>
     <lastmod>2012-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-04-03-loading-jquery-from-google-cdn-and-dependent-scripts-in-wordpress-2/</loc>
+    <loc>https://yentran.org/post/2012-04-03-loading-jquery-from-google-cdn-and-dependent-scripts-in-wordpress-2/</loc>
     <lastmod>2012-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-04-03-locating-program-files-folder-in-visual-studio/</loc>
+    <loc>https://yentran.org/post/2012-04-03-locating-program-files-folder-in-visual-studio/</loc>
     <lastmod>2012-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-04-03-mapping-pagedlist-with-automapper/</loc>
+    <loc>https://yentran.org/post/2012-04-03-mapping-pagedlist-with-automapper/</loc>
     <lastmod>2012-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/pagedlist/</loc>
+    <loc>https://yentran.org/tags/pagedlist/</loc>
     <lastmod>2012-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/program-files/</loc>
+    <loc>https://yentran.org/tags/program-files/</loc>
     <lastmod>2012-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-04-03-stack-overflow-exception-when-mvc-view-and-partial-view-have-the-same-name/</loc>
+    <loc>https://yentran.org/post/2012-04-03-stack-overflow-exception-when-mvc-view-and-partial-view-have-the-same-name/</loc>
     <lastmod>2012-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/visual-studio/</loc>
+    <loc>https://yentran.org/tags/visual-studio/</loc>
     <lastmod>2012-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/windows-x64/</loc>
+    <loc>https://yentran.org/tags/windows-x64/</loc>
     <lastmod>2012-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/plugin/</loc>
+    <loc>https://yentran.org/tags/plugin/</loc>
     <lastmod>2012-03-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-03-31-using-lightbox-with-nextgen-gallery/</loc>
+    <loc>https://yentran.org/post/2012-03-31-using-lightbox-with-nextgen-gallery/</loc>
     <lastmod>2012-03-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/brother/</loc>
+    <loc>https://yentran.org/tags/brother/</loc>
     <lastmod>2012-02-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-02-09-configuring-wifi-for-the-brother-hl-2280dw-laser-printer-on-windows/</loc>
+    <loc>https://yentran.org/post/2012-02-09-configuring-wifi-for-the-brother-hl-2280dw-laser-printer-on-windows/</loc>
     <lastmod>2012-02-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/printer/</loc>
+    <loc>https://yentran.org/tags/printer/</loc>
     <lastmod>2012-02-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/software/</loc>
+    <loc>https://yentran.org/tags/software/</loc>
     <lastmod>2012-02-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/commentary/</loc>
+    <loc>https://yentran.org/tags/commentary/</loc>
     <lastmod>2012-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/hockey/</loc>
+    <loc>https://yentran.org/tags/hockey/</loc>
     <lastmod>2012-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-01-23-on-the-bruins-2011-white-house-appearance/</loc>
+    <loc>https://yentran.org/post/2012-01-23-on-the-bruins-2011-white-house-appearance/</loc>
     <lastmod>2012-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-01-11-modifying-sql-server-table-without-dropping-and-recreating-it/</loc>
+    <loc>https://yentran.org/post/2012-01-11-modifying-sql-server-table-without-dropping-and-recreating-it/</loc>
     <lastmod>2012-01-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/sql-server/</loc>
+    <loc>https://yentran.org/tags/sql-server/</loc>
     <lastmod>2012-01-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/firefox/</loc>
+    <loc>https://yentran.org/tags/firefox/</loc>
     <lastmod>2012-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2012-01-03-installing-antivirus-changes-firefox-keyword-url/</loc>
+    <loc>https://yentran.org/post/2012-01-03-installing-antivirus-changes-firefox-keyword-url/</loc>
     <lastmod>2012-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/keyword/</loc>
+    <loc>https://yentran.org/tags/keyword/</loc>
     <lastmod>2012-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/url/</loc>
+    <loc>https://yentran.org/tags/url/</loc>
     <lastmod>2012-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/yahoo/</loc>
+    <loc>https://yentran.org/tags/yahoo/</loc>
     <lastmod>2012-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/android/</loc>
+    <loc>https://yentran.org/tags/android/</loc>
     <lastmod>2011-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/cyanogenmod/</loc>
+    <loc>https://yentran.org/tags/cyanogenmod/</loc>
     <lastmod>2011-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/gingerbread/</loc>
+    <loc>https://yentran.org/tags/gingerbread/</loc>
     <lastmod>2011-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/mod/</loc>
+    <loc>https://yentran.org/tags/mod/</loc>
     <lastmod>2011-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-12-31-installing-cyanogenmod-on-the-htc-aria/</loc>
+    <loc>https://yentran.org/post/2011-12-31-installing-cyanogenmod-on-the-htc-aria/</loc>
     <lastmod>2011-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/editor/</loc>
+    <loc>https://yentran.org/tags/editor/</loc>
     <lastmod>2011-12-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/line-number/</loc>
+    <loc>https://yentran.org/tags/line-number/</loc>
     <lastmod>2011-12-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/macro/</loc>
+    <loc>https://yentran.org/tags/macro/</loc>
     <lastmod>2011-12-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-12-21-visual-studio-line-number-macros/</loc>
+    <loc>https://yentran.org/post/2011-12-21-visual-studio-line-number-macros/</loc>
     <lastmod>2011-12-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-12-13-msbuild-project-directory/</loc>
+    <loc>https://yentran.org/post/2011-12-13-msbuild-project-directory/</loc>
     <lastmod>2011-12-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-12-08-automapper-mismatched-types/</loc>
+    <loc>https://yentran.org/post/2011-12-08-automapper-mismatched-types/</loc>
     <lastmod>2011-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/autumn/</loc>
+    <loc>https://yentran.org/tags/autumn/</loc>
     <lastmod>2011-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-12-08-autumn-2009/</loc>
+    <loc>https://yentran.org/post/2011-12-08-autumn-2009/</loc>
     <lastmod>2011-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/mount-auburn-cemetery/</loc>
+    <loc>https://yentran.org/tags/mount-auburn-cemetery/</loc>
     <lastmod>2011-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/audubon/</loc>
+    <loc>https://yentran.org/tags/audubon/</loc>
     <lastmod>2011-09-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/broadmoor/</loc>
+    <loc>https://yentran.org/tags/broadmoor/</loc>
     <lastmod>2011-09-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-11-broadmoor-wildlife-sanctuary/</loc>
+    <loc>https://yentran.org/post/2011-09-11-broadmoor-wildlife-sanctuary/</loc>
     <lastmod>2011-09-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/hike/</loc>
+    <loc>https://yentran.org/tags/hike/</loc>
     <lastmod>2011-09-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-11-hiking-mount-monadnock/</loc>
+    <loc>https://yentran.org/post/2011-09-11-hiking-mount-monadnock/</loc>
     <lastmod>2011-09-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/monadnock/</loc>
+    <loc>https://yentran.org/tags/monadnock/</loc>
     <lastmod>2011-09-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/nature/</loc>
+    <loc>https://yentran.org/tags/nature/</loc>
     <lastmod>2011-09-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/wildlife/</loc>
+    <loc>https://yentran.org/tags/wildlife/</loc>
     <lastmod>2011-09-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-a-game-of-thrones-a-song-of-ice-and-fire-book-1-by-george-r-r-martin/</loc>
+    <loc>https://yentran.org/post/2011-09-07-a-game-of-thrones-a-song-of-ice-and-fire-book-1-by-george-r-r-martin/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-a-storm-of-swords-a-song-of-ice-and-fire-book-3-by-george-r-r-martin/</loc>
+    <loc>https://yentran.org/post/2011-09-07-a-storm-of-swords-a-song-of-ice-and-fire-book-3-by-george-r-r-martin/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/baldurs-gate/</loc>
+    <loc>https://yentran.org/tags/baldurs-gate/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-baldurs-gate-2-shadows-of-amn/</loc>
+    <loc>https://yentran.org/post/2011-09-07-baldurs-gate-2-shadows-of-amn/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/book-review/</loc>
+    <loc>https://yentran.org/tags/book-review/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/camera/</loc>
+    <loc>https://yentran.org/tags/camera/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/canon-powershot-s30/</loc>
+    <loc>https://yentran.org/tags/canon-powershot-s30/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-canon-powershot-s30-3mp-digital-camera-with-3x-optical-zoom/</loc>
+    <loc>https://yentran.org/post/2011-09-07-canon-powershot-s30-3mp-digital-camera-with-3x-optical-zoom/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/child-of-blood/</loc>
+    <loc>https://yentran.org/tags/child-of-blood/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/crossroads-of-twilight/</loc>
+    <loc>https://yentran.org/tags/crossroads-of-twilight/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-crossroads-of-twilight-the-wheel-of-time-series-book-10-by-robert-jordan/</loc>
+    <loc>https://yentran.org/post/2011-09-07-crossroads-of-twilight-the-wheel-of-time-series-book-10-by-robert-jordan/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/destiny-child-of-the-sky/</loc>
+    <loc>https://yentran.org/tags/destiny-child-of-the-sky/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-destiny-child-of-the-sky-by-elizabeth-haydon/</loc>
+    <loc>https://yentran.org/post/2011-09-07-destiny-child-of-the-sky-by-elizabeth-haydon/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/digital/</loc>
+    <loc>https://yentran.org/tags/digital/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-doom-3/</loc>
+    <loc>https://yentran.org/post/2011-09-07-doom-3/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/doom-3/</loc>
+    <loc>https://yentran.org/tags/doom-3/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-dragons-of-autumn-twilight-dragonlance-chronicles-volume-i-by-margaret-weis-tracy-hickman/</loc>
+    <loc>https://yentran.org/post/2011-09-07-dragons-of-autumn-twilight-dragonlance-chronicles-volume-i-by-margaret-weis-tracy-hickman/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-dragons-of-spring-dawning-dragonlance-chronicles-book-3-by-margaret-weis-tracy-hickman/</loc>
+    <loc>https://yentran.org/post/2011-09-07-dragons-of-spring-dawning-dragonlance-chronicles-book-3-by-margaret-weis-tracy-hickman/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-dragons-of-winter-night-dragonlance-chronicles-volume-ii-by/</loc>
+    <loc>https://yentran.org/post/2011-09-07-dragons-of-winter-night-dragonlance-chronicles-volume-ii-by/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/eddings/</loc>
+    <loc>https://yentran.org/tags/eddings/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/elizabeth-haydon/</loc>
+    <loc>https://yentran.org/tags/elizabeth-haydon/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/faith-of-the-fallen/</loc>
+    <loc>https://yentran.org/tags/faith-of-the-fallen/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-book-review-faith-of-the-fallen-sword-of-truth-series-book-6-by-terry-goodkind/</loc>
+    <loc>https://yentran.org/post/2011-09-07-book-review-faith-of-the-fallen-sword-of-truth-series-book-6-by-terry-goodkind/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/fantasy/</loc>
+    <loc>https://yentran.org/tags/fantasy/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/fps/</loc>
+    <loc>https://yentran.org/tags/fps/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/game-of-thrones/</loc>
+    <loc>https://yentran.org/tags/game-of-thrones/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/game-review/</loc>
+    <loc>https://yentran.org/tags/game-review/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/george-rr-martin/</loc>
+    <loc>https://yentran.org/tags/george-rr-martin/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/guide/</loc>
+    <loc>https://yentran.org/tags/guide/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-icewind-dale-2/</loc>
+    <loc>https://yentran.org/post/2011-09-07-icewind-dale-2/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/john-shaw/</loc>
+    <loc>https://yentran.org/tags/john-shaw/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-john-shaws-nature-photography-field-guide-by-john-shaw/</loc>
+    <loc>https://yentran.org/post/2011-09-07-john-shaws-nature-photography-field-guide-by-john-shaw/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/lord-of-the-rings/</loc>
+    <loc>https://yentran.org/tags/lord-of-the-rings/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/margaret-weis/</loc>
+    <loc>https://yentran.org/tags/margaret-weis/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/novel/</loc>
+    <loc>https://yentran.org/tags/novel/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/photography/</loc>
+    <loc>https://yentran.org/tags/photography/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/pillars-of-creation/</loc>
+    <loc>https://yentran.org/tags/pillars-of-creation/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/product-review/</loc>
+    <loc>https://yentran.org/tags/product-review/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/ra-salvatore/</loc>
+    <loc>https://yentran.org/tags/ra-salvatore/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/redemption-of-althalus/</loc>
+    <loc>https://yentran.org/tags/redemption-of-althalus/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-rhapsody-child-of-blood-by-elizabeth-haydon/</loc>
+    <loc>https://yentran.org/post/2011-09-07-rhapsody-child-of-blood-by-elizabeth-haydon/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/robert-jordan/</loc>
+    <loc>https://yentran.org/tags/robert-jordan/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/role-playing/</loc>
+    <loc>https://yentran.org/tags/role-playing/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/rpg/</loc>
+    <loc>https://yentran.org/tags/rpg/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/sci-fi/</loc>
+    <loc>https://yentran.org/tags/sci-fi/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/soul-of-the-fire/</loc>
+    <loc>https://yentran.org/tags/soul-of-the-fire/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-book-review-soul-of-the-fire-sword-of-truth-series-book-5-by-terry-goodkind/</loc>
+    <loc>https://yentran.org/post/2011-09-07-book-review-soul-of-the-fire-sword-of-truth-series-book-5-by-terry-goodkind/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/storm-of-swords/</loc>
+    <loc>https://yentran.org/tags/storm-of-swords/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-streams-of-silver-forgotten-realms-the-icewind-dale-trilogy-book-2-by-r-a-salvatore/</loc>
+    <loc>https://yentran.org/post/2011-09-07-streams-of-silver-forgotten-realms-the-icewind-dale-trilogy-book-2-by-r-a-salvatore/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/temple-of-the-winds/</loc>
+    <loc>https://yentran.org/tags/temple-of-the-winds/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-book-review-temple-of-the-winds-sword-of-truth-series-book-4-by-terry-goodkind/</loc>
+    <loc>https://yentran.org/post/2011-09-07-book-review-temple-of-the-winds-sword-of-truth-series-book-4-by-terry-goodkind/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/terry-goodkind/</loc>
+    <loc>https://yentran.org/tags/terry-goodkind/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-the-art-of-the-fellowship-of-the-ring-the-lord-of-the-rings-by-gary-russell/</loc>
+    <loc>https://yentran.org/post/2011-09-07-the-art-of-the-fellowship-of-the-ring-the-lord-of-the-rings-by-gary-russell/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-the-crystal-shard-forgotten-realms-the-icewind-dale-trilogy-book-1-by-r-a-salvatore/</loc>
+    <loc>https://yentran.org/post/2011-09-07-the-crystal-shard-forgotten-realms-the-icewind-dale-trilogy-book-1-by-r-a-salvatore/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-the-halflings-gem-forgotten-realms-the-icewind-dale-trilogy-book-3-by-r-a-salvatore/</loc>
+    <loc>https://yentran.org/post/2011-09-07-the-halflings-gem-forgotten-realms-the-icewind-dale-trilogy-book-3-by-r-a-salvatore/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-book-review-the-pillars-of-creation-sword-of-truth-series-book-7-by-terry-goodkind/</loc>
+    <loc>https://yentran.org/post/2011-09-07-book-review-the-pillars-of-creation-sword-of-truth-series-book-7-by-terry-goodkind/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-07-the-redemption-of-althalus-by-david-leigh-eddings/</loc>
+    <loc>https://yentran.org/post/2011-09-07-the-redemption-of-althalus-by-david-leigh-eddings/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/tracy-hickman/</loc>
+    <loc>https://yentran.org/tags/tracy-hickman/</loc>
     <lastmod>2011-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/app-pool-identity/</loc>
+    <loc>https://yentran.org/tags/app-pool-identity/</loc>
     <lastmod>2011-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-06-hiking-mount-misery/</loc>
+    <loc>https://yentran.org/post/2011-09-06-hiking-mount-misery/</loc>
     <lastmod>2011-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-06-granting-permissions-to-the-application-pool-identity-in-iis-7-5/</loc>
+    <loc>https://yentran.org/post/2011-09-06-granting-permissions-to-the-application-pool-identity-in-iis-7-5/</loc>
     <lastmod>2011-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/iis-7.5/</loc>
+    <loc>https://yentran.org/tags/iis-7.5/</loc>
     <lastmod>2011-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/lincoln/</loc>
+    <loc>https://yentran.org/tags/lincoln/</loc>
     <lastmod>2011-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/permission/</loc>
+    <loc>https://yentran.org/tags/permission/</loc>
     <lastmod>2011-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/sword-of-truth/</loc>
+    <loc>https://yentran.org/tags/sword-of-truth/</loc>
     <lastmod>2011-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-09-06-book-review-wizards-first-rule-sword-of-truth-series-book-1-by-terry-goodkind/</loc>
+    <loc>https://yentran.org/post/2011-09-06-book-review-wizards-first-rule-sword-of-truth-series-book-1-by-terry-goodkind/</loc>
     <lastmod>2011-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/hijack/</loc>
+    <loc>https://yentran.org/tags/hijack/</loc>
     <lastmod>2011-08-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/malware/</loc>
+    <loc>https://yentran.org/tags/malware/</loc>
     <lastmod>2011-08-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-08-23-removing-malware/</loc>
+    <loc>https://yentran.org/post/2011-08-23-removing-malware/</loc>
     <lastmod>2011-08-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/trojan/</loc>
+    <loc>https://yentran.org/tags/trojan/</loc>
     <lastmod>2011-08-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/driver/</loc>
+    <loc>https://yentran.org/tags/driver/</loc>
     <lastmod>2011-08-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/install/</loc>
+    <loc>https://yentran.org/tags/install/</loc>
     <lastmod>2011-08-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</loc>
+    <loc>https://yentran.org/post/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</loc>
     <lastmod>2011-08-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/drawing/</loc>
+    <loc>https://yentran.org/tags/drawing/</loc>
     <lastmod>2011-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/categories/drawing/</loc>
+    <loc>https://yentran.org/categories/drawing/</loc>
     <lastmod>2011-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-07-19-drawing-hair/</loc>
+    <loc>https://yentran.org/post/2011-07-19-drawing-hair/</loc>
     <lastmod>2011-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/julianne-moore/</loc>
+    <loc>https://yentran.org/tags/julianne-moore/</loc>
     <lastmod>2011-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/pencil/</loc>
+    <loc>https://yentran.org/tags/pencil/</loc>
     <lastmod>2011-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/portrait/</loc>
+    <loc>https://yentran.org/tags/portrait/</loc>
     <lastmod>2011-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/beacon-hill/</loc>
+    <loc>https://yentran.org/tags/beacon-hill/</loc>
     <lastmod>2011-07-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/doors/</loc>
+    <loc>https://yentran.org/tags/doors/</loc>
     <lastmod>2011-07-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/montage/</loc>
+    <loc>https://yentran.org/tags/montage/</loc>
     <lastmod>2011-07-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-07-14-the-doors-of-boston/</loc>
+    <loc>https://yentran.org/post/2011-07-14-the-doors-of-boston/</loc>
     <lastmod>2011-07-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/boston/</loc>
+    <loc>https://yentran.org/tags/boston/</loc>
     <lastmod>2011-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/hub-on-wheels/</loc>
+    <loc>https://yentran.org/tags/hub-on-wheels/</loc>
     <lastmod>2011-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-07-10-hub-on-wheels-2010/</loc>
+    <loc>https://yentran.org/post/2011-07-10-hub-on-wheels-2010/</loc>
     <lastmod>2011-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/mayors-cup-race/</loc>
+    <loc>https://yentran.org/tags/mayors-cup-race/</loc>
     <lastmod>2011-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/race/</loc>
+    <loc>https://yentran.org/tags/race/</loc>
     <lastmod>2011-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/boulevard-charest-est/</loc>
+    <loc>https://yentran.org/tags/boulevard-charest-est/</loc>
     <lastmod>2011-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/highway-underpass/</loc>
+    <loc>https://yentran.org/tags/highway-underpass/</loc>
     <lastmod>2011-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/qu%C3%A9bec/</loc>
+    <loc>https://yentran.org/tags/qu%C3%A9bec/</loc>
     <lastmod>2011-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-07-06-quebec-4-july/</loc>
+    <loc>https://yentran.org/post/2011-07-06-quebec-4-july/</loc>
     <lastmod>2011-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/basilica-ste-anne-de-beaupr%C3%A9/</loc>
+    <loc>https://yentran.org/tags/basilica-ste-anne-de-beaupr%C3%A9/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/battle-of-qu%C3%A9bec/</loc>
+    <loc>https://yentran.org/tags/battle-of-qu%C3%A9bec/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/caf%C3%A9-resto/</loc>
+    <loc>https://yentran.org/tags/caf%C3%A9-resto/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/chateau-frontenac/</loc>
+    <loc>https://yentran.org/tags/chateau-frontenac/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/driving/</loc>
+    <loc>https://yentran.org/tags/driving/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/food/</loc>
+    <loc>https://yentran.org/tags/food/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/ile-dorl%C3%A9ans/</loc>
+    <loc>https://yentran.org/tags/ile-dorl%C3%A9ans/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/marquis-de-montcalm/</loc>
+    <loc>https://yentran.org/tags/marquis-de-montcalm/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/martello-tower/</loc>
+    <loc>https://yentran.org/tags/martello-tower/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/montmorency-falls/</loc>
+    <loc>https://yentran.org/tags/montmorency-falls/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/new-hampshire/</loc>
+    <loc>https://yentran.org/tags/new-hampshire/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/notre-dame-de-qu%C3%A9bec-cathedral/</loc>
+    <loc>https://yentran.org/tags/notre-dame-de-qu%C3%A9bec-cathedral/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-07-05-quebec-1-july/</loc>
+    <loc>https://yentran.org/post/2011-07-05-quebec-1-july/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-07-05-quebec-2-july/</loc>
+    <loc>https://yentran.org/post/2011-07-05-quebec-2-july/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-07-05-quebec-3-july/</loc>
+    <loc>https://yentran.org/post/2011-07-05-quebec-3-july/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/restaurant-thang-long/</loc>
+    <loc>https://yentran.org/tags/restaurant-thang-long/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/st.-roch/</loc>
+    <loc>https://yentran.org/tags/st.-roch/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/vieux-qu%C3%A9bec/</loc>
+    <loc>https://yentran.org/tags/vieux-qu%C3%A9bec/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/vineyard/</loc>
+    <loc>https://yentran.org/tags/vineyard/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/white-mountains/</loc>
+    <loc>https://yentran.org/tags/white-mountains/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-06-23-foliage-2010/</loc>
+    <loc>https://yentran.org/post/2011-06-23-foliage-2010/</loc>
     <lastmod>2011-06-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/boston-bruins/</loc>
+    <loc>https://yentran.org/tags/boston-bruins/</loc>
     <lastmod>2011-06-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/fall/</loc>
+    <loc>https://yentran.org/tags/fall/</loc>
     <lastmod>2011-06-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/leaf-peeping/</loc>
+    <loc>https://yentran.org/tags/leaf-peeping/</loc>
     <lastmod>2011-06-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/north-moat-mountain/</loc>
+    <loc>https://yentran.org/tags/north-moat-mountain/</loc>
     <lastmod>2011-06-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/stanley-cup/</loc>
+    <loc>https://yentran.org/tags/stanley-cup/</loc>
     <lastmod>2011-06-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-06-23-who-are-the-bruins/</loc>
+    <loc>https://yentran.org/post/2011-06-23-who-are-the-bruins/</loc>
     <lastmod>2011-06-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/birds/</loc>
+    <loc>https://yentran.org/tags/birds/</loc>
     <lastmod>2011-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/concord/</loc>
+    <loc>https://yentran.org/tags/concord/</loc>
     <lastmod>2011-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-06-22-great-meadows-national-wildlife-refuge/</loc>
+    <loc>https://yentran.org/post/2011-06-22-great-meadows-national-wildlife-refuge/</loc>
     <lastmod>2011-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-06-22-head-of-the-charles-2010/</loc>
+    <loc>https://yentran.org/post/2011-06-22-head-of-the-charles-2010/</loc>
     <lastmod>2011-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/head-of-the-charles-regatta/</loc>
+    <loc>https://yentran.org/tags/head-of-the-charles-regatta/</loc>
     <lastmod>2011-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/herons/</loc>
+    <loc>https://yentran.org/tags/herons/</loc>
     <lastmod>2011-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/chihuly/</loc>
+    <loc>https://yentran.org/tags/chihuly/</loc>
     <lastmod>2011-06-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-06-21-dont-trip-and-fall-the-chihuly-exhibit/</loc>
+    <loc>https://yentran.org/post/2011-06-21-dont-trip-and-fall-the-chihuly-exhibit/</loc>
     <lastmod>2011-06-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/museum-of-fine-arts/</loc>
+    <loc>https://yentran.org/tags/museum-of-fine-arts/</loc>
     <lastmod>2011-06-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-06-21-why-hockey-is-the-best/</loc>
+    <loc>https://yentran.org/post/2011-06-21-why-hockey-is-the-best/</loc>
     <lastmod>2011-06-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/broadmoor-sanctuary/</loc>
+    <loc>https://yentran.org/tags/broadmoor-sanctuary/</loc>
     <lastmod>2011-06-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/habitat-sanctuary/</loc>
+    <loc>https://yentran.org/tags/habitat-sanctuary/</loc>
     <lastmod>2011-06-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/ipswich-river/</loc>
+    <loc>https://yentran.org/tags/ipswich-river/</loc>
     <lastmod>2011-06-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/ipswich-river-sanctuary/</loc>
+    <loc>https://yentran.org/tags/ipswich-river-sanctuary/</loc>
     <lastmod>2011-06-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-06-20-the-habitat-sanctuary/</loc>
+    <loc>https://yentran.org/post/2011-06-20-the-habitat-sanctuary/</loc>
     <lastmod>2011-06-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-06-18-stanley-cup-parade/</loc>
+    <loc>https://yentran.org/post/2011-06-18-stanley-cup-parade/</loc>
     <lastmod>2011-06-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/parade/</loc>
+    <loc>https://yentran.org/tags/parade/</loc>
     <lastmod>2011-06-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-06-15-we-won-the-cup/</loc>
+    <loc>https://yentran.org/post/2011-06-15-we-won-the-cup/</loc>
     <lastmod>2011-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/favorite-player/</loc>
+    <loc>https://yentran.org/tags/favorite-player/</loc>
     <lastmod>2011-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/joe-thornton/</loc>
+    <loc>https://yentran.org/tags/joe-thornton/</loc>
     <lastmod>2011-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/ray-bourque/</loc>
+    <loc>https://yentran.org/tags/ray-bourque/</loc>
     <lastmod>2011-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/sergei-samsonov/</loc>
+    <loc>https://yentran.org/tags/sergei-samsonov/</loc>
     <lastmod>2011-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-06-14-we-want-the-cup/</loc>
+    <loc>https://yentran.org/post/2011-06-14-we-want-the-cup/</loc>
     <lastmod>2011-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/nathan-horton/</loc>
+    <loc>https://yentran.org/tags/nathan-horton/</loc>
     <lastmod>2011-06-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/stanley-cup-finals/</loc>
+    <loc>https://yentran.org/tags/stanley-cup-finals/</loc>
     <lastmod>2011-06-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/stanley-cup-playoffs/</loc>
+    <loc>https://yentran.org/tags/stanley-cup-playoffs/</loc>
     <lastmod>2011-06-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/td-bank-garden/</loc>
+    <loc>https://yentran.org/tags/td-bank-garden/</loc>
     <lastmod>2011-06-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-06-09-the-man-they-call-bobby/</loc>
+    <loc>https://yentran.org/post/2011-06-09-the-man-they-call-bobby/</loc>
     <lastmod>2011-06-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/butterflies/</loc>
+    <loc>https://yentran.org/tags/butterflies/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/cafe-amigos/</loc>
+    <loc>https://yentran.org/tags/cafe-amigos/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/caiman/</loc>
+    <loc>https://yentran.org/tags/caiman/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/ca%C3%B1o-negro-national-wildlife-refuge/</loc>
+    <loc>https://yentran.org/tags/ca%C3%B1o-negro-national-wildlife-refuge/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/cloud-forest/</loc>
+    <loc>https://yentran.org/tags/cloud-forest/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/costa-rica/</loc>
+    <loc>https://yentran.org/tags/costa-rica/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-05-30-costa-rica-day-3-thursday-arenal/</loc>
+    <loc>https://yentran.org/post/2011-05-30-costa-rica-day-3-thursday-arenal/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-05-30-costa-rica-day-4-friday-arenal-to-monteverde/</loc>
+    <loc>https://yentran.org/post/2011-05-30-costa-rica-day-4-friday-arenal-to-monteverde/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-05-30-costa-rica-day-5-saturday-monteverde/</loc>
+    <loc>https://yentran.org/post/2011-05-30-costa-rica-day-5-saturday-monteverde/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-05-30-costa-rica-day-6-sunday-monteverde-to-san-jose/</loc>
+    <loc>https://yentran.org/post/2011-05-30-costa-rica-day-6-sunday-monteverde-to-san-jose/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-05-30-costa-rica-day-7-monday-san-jose/</loc>
+    <loc>https://yentran.org/post/2011-05-30-costa-rica-day-7-monday-san-jose/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/german-bakery/</loc>
+    <loc>https://yentran.org/tags/german-bakery/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/hummingbird-gallery/</loc>
+    <loc>https://yentran.org/tags/hummingbird-gallery/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/hummingbirds/</loc>
+    <loc>https://yentran.org/tags/hummingbirds/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/insects/</loc>
+    <loc>https://yentran.org/tags/insects/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/lake-arenal/</loc>
+    <loc>https://yentran.org/tags/lake-arenal/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/los-chiles/</loc>
+    <loc>https://yentran.org/tags/los-chiles/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/monteverde/</loc>
+    <loc>https://yentran.org/tags/monteverde/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/morphos-cafe/</loc>
+    <loc>https://yentran.org/tags/morphos-cafe/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/ross-ballard/</loc>
+    <loc>https://yentran.org/tags/ross-ballard/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/san-carlos-river/</loc>
+    <loc>https://yentran.org/tags/san-carlos-river/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/san-jose/</loc>
+    <loc>https://yentran.org/tags/san-jose/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/santa-elena/</loc>
+    <loc>https://yentran.org/tags/santa-elena/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/suzuki/</loc>
+    <loc>https://yentran.org/tags/suzuki/</loc>
     <lastmod>2011-05-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/abbot-hall/</loc>
+    <loc>https://yentran.org/tags/abbot-hall/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/american-navy/</loc>
+    <loc>https://yentran.org/tags/american-navy/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/arenal/</loc>
+    <loc>https://yentran.org/tags/arenal/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-05-29-costa-rica-day-1-san-jose/</loc>
+    <loc>https://yentran.org/post/2011-05-29-costa-rica-day-1-san-jose/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-05-29-costa-rica-day-2-wednesday-san-jose-to-arenal/</loc>
+    <loc>https://yentran.org/post/2011-05-29-costa-rica-day-2-wednesday-san-jose-to-arenal/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/dennys/</loc>
+    <loc>https://yentran.org/tags/dennys/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/flowers/</loc>
+    <loc>https://yentran.org/tags/flowers/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/fort-sewall/</loc>
+    <loc>https://yentran.org/tags/fort-sewall/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/jaguars/</loc>
+    <loc>https://yentran.org/tags/jaguars/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/la-paz-waterfalls-garden/</loc>
+    <loc>https://yentran.org/tags/la-paz-waterfalls-garden/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/lynn-woods/</loc>
+    <loc>https://yentran.org/tags/lynn-woods/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-05-29-marblehead-meander/</loc>
+    <loc>https://yentran.org/post/2011-05-29-marblehead-meander/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/marblehead-neck-audubon-sanctuary/</loc>
+    <loc>https://yentran.org/tags/marblehead-neck-audubon-sanctuary/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/michael-richards/</loc>
+    <loc>https://yentran.org/tags/michael-richards/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/new-england/</loc>
+    <loc>https://yentran.org/tags/new-england/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/poas-volcano/</loc>
+    <loc>https://yentran.org/tags/poas-volcano/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-05-29-spring-forward/</loc>
+    <loc>https://yentran.org/post/2011-05-29-spring-forward/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/toucans/</loc>
+    <loc>https://yentran.org/tags/toucans/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/waterfalls/</loc>
+    <loc>https://yentran.org/tags/waterfalls/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/william-least-heat-moon/</loc>
+    <loc>https://yentran.org/tags/william-least-heat-moon/</loc>
     <lastmod>2011-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/illustrator/</loc>
+    <loc>https://yentran.org/tags/illustrator/</loc>
     <lastmod>2011-04-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/logo/</loc>
+    <loc>https://yentran.org/tags/logo/</loc>
     <lastmod>2011-04-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-04-28-ooh-shiny/</loc>
+    <loc>https://yentran.org/post/2011-04-28-ooh-shiny/</loc>
     <lastmod>2011-04-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/photoshop/</loc>
+    <loc>https://yentran.org/tags/photoshop/</loc>
     <lastmod>2011-04-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/categories/photoshop/</loc>
+    <loc>https://yentran.org/categories/photoshop/</loc>
     <lastmod>2011-04-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/tags/blog/</loc>
+    <loc>https://yentran.org/tags/blog/</loc>
     <lastmod>2011-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yentran.org/post/source/2011-04-26-its-alive/</loc>
+    <loc>https://yentran.org/post/2011-04-26-its-alive/</loc>
     <lastmod>2011-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yentran.org/page/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yentran.org/page/</loc>
   </url>
   
 </urlset>
