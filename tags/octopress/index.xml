@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>octopress on Yen&#39;s blog</title>
+    <link>https://yentran.org/tags/octopress/</link>
+    <description>Recent content in octopress on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Aug 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/octopress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploying site after cloning Octopress repo</title>
+      <link>https://yentran.org/post/2017-08-09-deploying-site-after-cloning-octopress-repo/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yentran.org/post/2017-08-09-deploying-site-after-cloning-octopress-repo/</guid>
+      <description>Octopress instructions are for setting up a new repo; i.e. by running rake setup_github_pages. It doesn’t work if you’ve cloned an existing repo.
+You have to manually set up a git repository in the _deploy directory which should track the master branch of the repo on GitHub.
+# create new deploy dir rm -rf _deploy mkdir _deploy cd _deploy # initialize empty git repo git init git remote add origin git@github.</description>
+    </item>
+    
+    <item>
+      <title>Angular in Jekyll/Octopress</title>
+      <link>https://yentran.org/post/2014-04-18-angular-in-jekyll-or-octopress/</link>
+      <pubDate>Fri, 18 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yentran.org/post/2014-04-18-angular-in-jekyll-or-octopress/</guid>
+      <description>Have a problem with Angular scope variable binding not working on a Jekyll or Octopress (which uses Jekyll) page? It so happens that Jekyll&amp;rsquo;s Liquid Template uses the same {{ foo }} syntax as Angular and would attempt to process the markup before Angular can get to it. To get around the problem, you can surround Angular markup with {% raw %} and {% endraw %} tags. Alternatively, you can also forgo from using this syntax altogether and use Angular&amp;rsquo;s ng-bind directive to bind a variable to a DOM element.</description>
+    </item>
+    
+    <item>
+      <title>So long WordPress, hello Octopress</title>
+      <link>https://yentran.org/post/2013-11-18-so-long-wordpress-hello-octopress/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://yentran.org/post/2013-11-18-so-long-wordpress-hello-octopress/</guid>
+      <description>I&amp;rsquo;ve been using WordPress since 2011. It works well enough, but for me there are a few drawbacks.
+  It&amp;rsquo;s slow. It takes time to do anything from creating a post to previewing to deploying it. I prefer to edit text in a proper text editor, with the full array of keyboard shortcuts, so I usually end up copying and pasting anyways. But using the UI to do everything is cumbersome.</description>
+    </item>
+    
+  </channel>
+</rss>

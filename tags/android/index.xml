@@ -6,7 +6,16 @@
     <description>Recent content in android on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Dec 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Feb 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to not upgrade the Nexus 7 to Lollipop</title>
+      <link>https://yentran.org/post/2015-02-16-how-to-not-upgrade-the-nexus-7-to-lollipop/</link>
+      <pubDate>Mon, 16 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://yentran.org/post/2015-02-16-how-to-not-upgrade-the-nexus-7-to-lollipop/</guid>
+      <description>I have a first-generation Nexus 7 tablet made by Asus which ran KitKat 4.4. When the OTA Lollipop update became available, I couldn&amp;rsquo;t wait to install it. The latest and greatest Android running on Google hardware seemed to be a match made in heaven; it would be better, prettier and faster, right? As you can probably guess from the title of this post, the answer was a resounding no. Everything became sluggish, swipes would only registered after a couple of seconds, random things popped open and close.</description>
+    </item>
+    
     <item>
       <title>Upgrading the HTC Aria with Android Gingerbread and CyanogenMod</title>
       <link>https://yentran.org/post/2011-12-31-installing-cyanogenmod-on-the-htc-aria/</link>

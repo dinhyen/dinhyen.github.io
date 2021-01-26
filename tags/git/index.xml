@@ -6,7 +6,17 @@
     <description>Recent content in git on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Dec 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Feb 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Git cheat sheet</title>
+      <link>https://yentran.org/post/2014-02-07-my-git-cheat-sheet/</link>
+      <pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yentran.org/post/2014-02-07-my-git-cheat-sheet/</guid>
+      <description>There are lots of great Git guides out there. This is intended simply to be a reference for me during those dark times when I can&amp;rsquo;t remember the syntax for creating a tracking branch.
+Config # These will show up in git log git config --global user.name &amp;quot;Yen Tran&amp;quot; git config --global user.email yen@yentran.org git config --list Info gitk git status git log git log origin/master # Show endpoints such as origin git remote show # Show origin params git remote show origin Branch (Local) git branch &amp;lt;branch&amp;gt; &amp;lt;sha1_of_commit&amp;gt; # Ex: git branch foo 7e2785d # Delete branch git branch -d &amp;lt;branch&amp;gt; # Create branch: git branch &amp;lt;branch&amp;gt; git checkout &amp;lt;branch&amp;gt; # Check out and automatically creates branch git checkout -b &amp;lt;branch&amp;gt; # List local branches git br # List remote branches git branch -r # List all branches git branch -a # Verbose list of local branches and HEAD commit git branch -v Check out a previous check-in git log # Locate desired checkin and copy SHA; e.</description>
+    </item>
+    
     <item>
       <title>Setting up Git to work remotely</title>
       <link>https://yentran.org/post/2012-12-15-setting-up-git-to-work-remotely/</link>
@@ -15,17 +25,6 @@
       <guid>https://yentran.org/post/2012-12-15-setting-up-git-to-work-remotely/</guid>
       <description>At home I use a MacBook to connect via VPN to the office. I&amp;rsquo;d have access to the intranet but not shell access to my workstation. Since I usually work on the same project at home and at the office, I need to keep my work synchronized. One way to do that is with a Git remote branch.
 At the office, I&amp;rsquo;d create a local branch for the story I&amp;rsquo;d like to work on:</description>
-    </item>
-    
-    <item>
-      <title>Using Hudson with Git and MSBuild on Windows</title>
-      <link>https://yentran.org/post/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</link>
-      <pubDate>Thu, 15 Nov 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://yentran.org/post/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</guid>
-      <description>We use Hudson as our continuous integration server (although we&amp;rsquo;re thinking about moving to Jenkins, but that&amp;rsquo;s a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.
-Pre-requisites We use the following software. The listed versions are the latest as of the time of writing, but other combinations should work.
- Java Runtime Environment (JRE) 7 Apache Tomcat 7.0 Hudson 2.</description>
     </item>
     
   </channel>

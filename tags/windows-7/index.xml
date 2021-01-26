@@ -17,14 +17,5 @@
 In my prior experience, Windows would automatically detect the new motherboard and reconfigure itself accordingly.</description>
     </item>
     
-    <item>
-      <title>Installing Windows 7 for the ASRock 939Dual-SATA2 motherboard</title>
-      <link>https://yentran.org/post/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</link>
-      <pubDate>Sun, 14 Aug 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://yentran.org/post/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</guid>
-      <description>The ASRock 939Dual-SATA2 motherboard is a little long in the tooth but still quite capable. Mine has been running Windows XP Media Center Edition for some time and I decided to upgrade it to Windows 7. The challenge is that the motherboard&amp;rsquo;s JMicron SATA2 chipset isn&amp;rsquo;t detected automatically at installation. If you want to install Windows on a SATA hard drive, you will have to load the driver first. The other problem is that, as of the time of writing, there is no Windows 7 driver for the ULi integrated Ethernet controller due to the age of the hardware.</description>
-    </item>
-    
   </channel>
 </rss>

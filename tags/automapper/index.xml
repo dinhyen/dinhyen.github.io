@@ -18,15 +18,5 @@ I want to convert a paged list of business objects to a paged list of view model
 public class PagedListConverter : ITypeConverter&amp;lt;PagedList&amp;lt;Person&amp;gt;, PagedList&amp;lt;PersonViewModel&amp;gt;&amp;gt; { public PagedList&amp;lt;PersonViewModel&amp;gt; Convert(ResolutionContext context) { var models = (PagedList&amp;lt;Person&amp;gt;)context.</description>
     </item>
     
-    <item>
-      <title>AutoMapper doesn&#39;t work for mismatched types</title>
-      <link>https://yentran.org/post/2011-12-08-automapper-mismatched-types/</link>
-      <pubDate>Thu, 08 Dec 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://yentran.org/post/2011-12-08-automapper-mismatched-types/</guid>
-      <description>We&amp;rsquo;re using AutoMapper in ASP.NET MVC automate the mapping of properties between entity and view model objects. This is a highly useful tool which helps us avoid the tedium of having to assigning properties manually. Here&amp;rsquo;s a good introduction to using AutoMapper.
-In one case, I find that the AutoMapper doesn&amp;rsquo;t work for all properties. One property in particular doesn&amp;rsquo;t get mapped. If I manually assign a value to it as a test, I would get a ForeignKeyReferenceAlreadyHasValueException.</description>
-    </item>
-    
   </channel>
 </rss>

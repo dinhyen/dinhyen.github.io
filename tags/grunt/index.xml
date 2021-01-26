@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>grunt on Yen&#39;s blog</title>
+    <link>https://yentran.org/tags/grunt/</link>
+    <description>Recent content in grunt on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Mar 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/grunt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple tasks with Grunt</title>
+      <link>https://yentran.org/post/2014-03-03-simple-tasks-with-grunt/</link>
+      <pubDate>Mon, 03 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yentran.org/post/2014-03-03-simple-tasks-with-grunt/</guid>
+      <description>Developers are lazy by nature and always look for ways to avoid having to perform repetitive tasks. There are plenty of options when you&amp;rsquo;re working with conventional server-side platforms. Unfortunately, when it comes to JavaScripts and CSS, automation tools are harder to find. That is, until Grunt comes along (following Node, which turned upside down the whole idea of server vs client side in the first place).
+As a self-described &amp;ldquo;task runner&amp;rdquo;, Grunt is powerful and pleasantly approachable.</description>
+    </item>
+    
+  </channel>
+</rss>

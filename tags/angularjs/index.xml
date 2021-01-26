@@ -6,7 +6,36 @@
     <description>Recent content in angularjs on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Sep 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Jul 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Validating multiple fields with Angular</title>
+      <link>https://yentran.org/post/2014-07-09-validating-multiple-fields-with-angular/</link>
+      <pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yentran.org/post/2014-07-09-validating-multiple-fields-with-angular/</guid>
+      <description>Angular makes it simple to validate a single form field. Validating multiple fields requires a bit more work. The approach that works for me is use a directive to lay out the framework, but to perform the actual validation in the parent scope. Since the user defines the specifics of the validation, any arbitrary validation can be performed and the directive can be kept simple.
+In this example, I&amp;rsquo;d like to validate that the sum of 2 text inputs equals 10.</description>
+    </item>
+    
+    <item>
+      <title>Validating required form fields with Angular</title>
+      <link>https://yentran.org/post/2014-04-24-validating-required-form-fields-with-angular/</link>
+      <pubDate>Thu, 24 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yentran.org/post/2014-04-24-validating-required-form-fields-with-angular/</guid>
+      <description>Two things can happen when the user fills out a form field: the entered value is incorrect or the value is missing. With Angular validating either case is consistent and simple. The issue is when to show the error message: as the value is being entered, after the field loses focus or after the user submits the form. I think that for a better usability, the user should be informed that the value is incorrect while entering the value.</description>
+    </item>
+    
+    <item>
+      <title>Using Angular root scope for communication between controllers</title>
+      <link>https://yentran.org/post/2013-12-07-using-angular-root-scope-for-communication-between-controllers/</link>
+      <pubDate>Sat, 07 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://yentran.org/post/2013-12-07-using-angular-root-scope-for-communication-between-controllers/</guid>
+      <description>Angular makes it simple to create standard index and details views. Using the ubiquitous task list as an example, I can set up routes using the $route service as follows:
+$routeProvider .when(&amp;#39;/tasks&amp;#39;, { templateUrl: &amp;#39;_tasks.html&amp;#39;, controller: &amp;#39;TasksIndexCtrl&amp;#39; }) .when(&amp;#39;/task/:id&amp;#39;, { templateUrl: &amp;#39;_task.html&amp;#39;, controller: &amp;#39;TaskDetailsCtrl&amp;#39; }) .otherwise({ redirectTo: &amp;#39;/tasks&amp;#39; }); } The routes definitions specify the Angular controller and HTML template to use when the user navigates to a particular path. Here we have 2 controllers, one for the index page and one for the details page.</description>
+    </item>
+    
     <item>
       <title>Simple table sorting with Angular</title>
       <link>https://yentran.org/post/2013-09-28-simple-table-sorting-with-angular/</link>

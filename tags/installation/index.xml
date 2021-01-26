@@ -17,14 +17,5 @@
 In my prior experience, Windows would automatically detect the new motherboard and reconfigure itself accordingly.</description>
     </item>
     
-    <item>
-      <title>Configuring Wifi for the Brother HL-2280DW Laser Printer on Windows</title>
-      <link>https://yentran.org/post/2012-02-09-configuring-wifi-for-the-brother-hl-2280dw-laser-printer-on-windows/</link>
-      <pubDate>Thu, 09 Feb 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://yentran.org/post/2012-02-09-configuring-wifi-for-the-brother-hl-2280dw-laser-printer-on-windows/</guid>
-      <description>With laser printer, scanner, Ethernet and Wifi interface rolled into one, the Brother HL-2280DW is quite a little champ. However, for me, getting the Wifi to work was a bit of a challenge. The installer would die silently after configuring Wifi but without having installed the software. After some trial and error, I was able to successfully install for Ethernet . With the software installed, I was able to configure Wifi afterward.</description>
-    </item>
-    
   </channel>
 </rss>

@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Aug 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Nov 2020 22:18:32 -0500</lastBuildDate><atom:link href="https://yentran.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>review</title>
+      <link>https://yentran.org/categories/review/</link>
+      <pubDate>Fri, 20 Nov 2020 22:18:32 -0500</pubDate>
+      
+      <guid>https://yentran.org/categories/review/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>technology</title>
       <link>https://yentran.org/categories/technology/</link>
@@ -17,11 +26,11 @@
     </item>
     
     <item>
-      <title>other</title>
-      <link>https://yentran.org/categories/other/</link>
-      <pubDate>Sun, 09 Feb 2014 00:00:00 +0000</pubDate>
+      <title>diy</title>
+      <link>https://yentran.org/categories/diy/</link>
+      <pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://yentran.org/categories/other/</guid>
+      <guid>https://yentran.org/categories/diy/</guid>
       <description></description>
     </item>
     
@@ -35,29 +44,11 @@
     </item>
     
     <item>
-      <title>review</title>
-      <link>https://yentran.org/categories/review/</link>
-      <pubDate>Wed, 13 Nov 2013 00:00:00 +0000</pubDate>
+      <title>other</title>
+      <link>https://yentran.org/categories/other/</link>
+      <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://yentran.org/categories/review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>city</title>
-      <link>https://yentran.org/categories/city/</link>
-      <pubDate>Thu, 09 Aug 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://yentran.org/categories/city/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>photography</title>
-      <link>https://yentran.org/categories/photography/</link>
-      <pubDate>Thu, 09 Aug 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://yentran.org/categories/photography/</guid>
+      <guid>https://yentran.org/categories/other/</guid>
       <description></description>
     </item>
     
@@ -71,20 +62,20 @@
     </item>
     
     <item>
-      <title>hiking</title>
-      <link>https://yentran.org/categories/hiking/</link>
-      <pubDate>Tue, 31 Jul 2012 00:00:00 +0000</pubDate>
+      <title>outdoors</title>
+      <link>https://yentran.org/categories/outdoors/</link>
+      <pubDate>Sun, 15 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://yentran.org/categories/hiking/</guid>
+      <guid>https://yentran.org/categories/outdoors/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>outdoors</title>
-      <link>https://yentran.org/categories/outdoors/</link>
-      <pubDate>Tue, 24 Jul 2012 00:00:00 +0000</pubDate>
+      <title>hiking</title>
+      <link>https://yentran.org/categories/hiking/</link>
+      <pubDate>Tue, 10 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://yentran.org/categories/outdoors/</guid>
+      <guid>https://yentran.org/categories/hiking/</guid>
       <description></description>
     </item>
     
@@ -98,11 +89,20 @@
     </item>
     
     <item>
-      <title>Photoshop</title>
-      <link>https://yentran.org/categories/photoshop/</link>
-      <pubDate>Thu, 28 Apr 2011 00:00:00 +0000</pubDate>
+      <title>outdoor</title>
+      <link>https://yentran.org/categories/outdoor/</link>
+      <pubDate>Thu, 23 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://yentran.org/categories/photoshop/</guid>
+      <guid>https://yentran.org/categories/outdoor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>art</title>
+      <link>https://yentran.org/categories/art/</link>
+      <pubDate>Tue, 21 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://yentran.org/categories/art/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>home network on Yen&#39;s blog</title>
+    <link>https://yentran.org/tags/home-network/</link>
+    <description>Recent content in home network on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Apr 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/home-network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A MoCA home network</title>
+      <link>https://yentran.org/post/2014-04-09-moca-home-network/</link>
+      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yentran.org/post/2014-04-09-moca-home-network/</guid>
+      <description>The benefits of a wired home network are many. I use the SiliconDust HDHomerun Prime network TV tuners to watch cable TV on any computer in the house without the need for a set-top box. However, it is quite bandwidth-intensive and even a wireless-N connection just doesn&amp;rsquo;t cut it. The picture would be plagued with stutters, pause and artifacts and pretty much unwatchable, especially for hockey with its lightning-fast actions.</description>
+    </item>
+    
+  </channel>
+</rss>

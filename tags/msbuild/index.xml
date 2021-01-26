@@ -6,18 +6,7 @@
     <description>Recent content in msbuild on Yen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Nov 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/msbuild/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Using Hudson with Git and MSBuild on Windows</title>
-      <link>https://yentran.org/post/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</link>
-      <pubDate>Thu, 15 Nov 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://yentran.org/post/2012-11-15-using-hudson-with-git-and-msbuild-on-windows/</guid>
-      <description>We use Hudson as our continuous integration server (although we&amp;rsquo;re thinking about moving to Jenkins, but that&amp;rsquo;s a different story). This post describes how we set up Hudson to work with Git and MSBuild on a Windows server.
-Pre-requisites We use the following software. The listed versions are the latest as of the time of writing, but other combinations should work.
- Java Runtime Environment (JRE) 7 Apache Tomcat 7.0 Hudson 2.</description>
-    </item>
-    
+    <lastBuildDate>Fri, 11 May 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/msbuild/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Modifying .config file in an MSBuild project</title>
       <link>https://yentran.org/post/2012-05-11-modifying-config-file-in-an-msbuild-project/</link>

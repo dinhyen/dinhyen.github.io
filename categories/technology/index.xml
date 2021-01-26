@@ -19,15 +19,6 @@ You have to manually set up a git repository in the _deploy directory which shou
     </item>
     
     <item>
-      <title>Installing the Curt 11064 trailer hitch on a 2009 Honda Fit Sport</title>
-      <link>https://yentran.org/post/2015-04-08-installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/</link>
-      <pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://yentran.org/post/2015-04-08-installing-curt-11064-trailer-hitch-on-a-2009-honda-fit-sport/</guid>
-      <description>As if that&amp;rsquo;s not specific enough, I could also add On a Cold Sleety Night, After the Family Had Gone to Bed, While Feeling Renewed Pangs of Hunger. I feel compelled to write this post so that Kate wouldn&amp;rsquo;t think I spent all that time in the garage playing video games (I wish I could). I was deciding between the Curt and a DrawTite trailer hitch. The Curt seemed more substantial, is made in Wisconsin (the DrawTite is made in Mexico) and as it turned out is surprisingly lighter (lighter being relative, more on that later).</description>
-    </item>
-    
-    <item>
       <title>How to not upgrade the Nexus 7 to Lollipop</title>
       <link>https://yentran.org/post/2015-02-16-how-to-not-upgrade-the-nexus-7-to-lollipop/</link>
       <pubDate>Mon, 16 Feb 2015 00:00:00 +0000</pubDate>
@@ -61,7 +52,7 @@ In this example, I&amp;rsquo;d like to validate that the sum of 2 text inputs eq
       <pubDate>Fri, 18 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yentran.org/post/2014-04-18-angular-in-jekyll-or-octopress/</guid>
-      <description>Have a problem with Angular scope variable binding not working on a Jekyll or Octopress (which uses Jekyll) page? It so happens that Jekyll&amp;rsquo;s Liquid Template uses the same {{ foo }} syntax as Angular and would attempt to process the markup before Angular can get to it. To get around the problem, you can surround Angular markup with {% raw %}and {% endraw %}tags. Alternatively, you can also forgo from using this syntax altogether and use Angular&amp;rsquo;s ng-bind directive to bind a variable to a DOM element.</description>
+      <description>Have a problem with Angular scope variable binding not working on a Jekyll or Octopress (which uses Jekyll) page? It so happens that Jekyll&amp;rsquo;s Liquid Template uses the same {{ foo }} syntax as Angular and would attempt to process the markup before Angular can get to it. To get around the problem, you can surround Angular markup with {% raw %} and {% endraw %} tags. Alternatively, you can also forgo from using this syntax altogether and use Angular&amp;rsquo;s ng-bind directive to bind a variable to a DOM element.</description>
     </item>
     
     <item>
@@ -148,7 +139,7 @@ $routeProvider .when(&amp;#39;/tasks&amp;#39;, { templateUrl: &amp;#39;_tasks.ht
       <pubDate>Thu, 31 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://yentran.org/post/2013-10-31-helper-method-generate-nested-tags-from-block/</guid>
-      <description>I&amp;rsquo;m still pretty new to Ruby. Hopefully one day I&amp;rsquo;ll know enough to be able to look back and slap myself on the forehead for struggling with these issues.
+      <description>I&amp;rsquo;m still pretty new to Ruby on Rails. Hopefully one day I&amp;rsquo;ll know enough to be able to look back and slap myself on the forehead for struggling with these issues.
 Right now our views generate a menu from a simple set of links:
 &amp;lt;%= link_to &amp;quot;foo&amp;quot;, &amp;quot;#&amp;quot; %&amp;gt; &amp;lt;%= link_to &amp;quot;bar&amp;quot;, &amp;quot;#&amp;quot; %&amp;gt; I&amp;rsquo;d like to convert them to a drop-down menu that looks like this:
 &amp;lt;div class=&amp;quot;dropdown&amp;quot;&amp;gt; &amp;lt;a class=&amp;quot;dropdown-toggle&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;caret&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;ul class=&amp;quot;dropdown-menu&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;%= link_to &amp;quot;foo&amp;quot;, &amp;quot;#&amp;quot; %&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;%= link_to &amp;quot;bar&amp;quot;, &amp;quot;#&amp;quot; %&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; I&amp;rsquo;d like to minimize the changes to the markup as much as possible.</description>
@@ -222,16 +213,6 @@ The UI is quite simple. The textbox should display a &amp;ldquo;placeholder&amp;
       
       <guid>https://yentran.org/post/2013-03-19-intermittent-temporary-freezing-on-macbook-with-ocz-vertex-3/</guid>
       <description>I recently upgraded the hard drive on my MacBook Pro running Snow Leopard to a 120GB OCZ Vertex 3 SSD. As advertised, the boot up and application start times are dramatically reduced. The SSD is everything I had hoped for. Well, almost. There has been a persistent and quite annoying issue. At random intervals, the computer would be come unresponsive. I could move the mouse or type on the keyboard, but nothing woud happen.</description>
-    </item>
-    
-    <item>
-      <title>Fix External Lockout for American Standard Freedom 90 furnace</title>
-      <link>https://yentran.org/post/2013-02-13-fix-external-lockout-for-american-standard-freedom-90-furnace/</link>
-      <pubDate>Wed, 13 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://yentran.org/post/2013-02-13-fix-external-lockout-for-american-standard-freedom-90-furnace/</guid>
-      <description>Some of my blogs are of the &amp;ldquo;I&amp;rsquo;d better write this down so I don&amp;rsquo;t forget it&amp;rdquo; variety. This is one of them. This is intended primarily for future me, but it would be cool if anyone else finds it useful.
-The equipment in question is an American Standard (Trane) Freedom 90 gas furnace that&amp;rsquo;s about 7 years old. Recently, in fact right in the middle of a record-setting snowstorm, it started blowing only cold air.</description>
     </item>
     
     <item>
@@ -477,6 +458,25 @@ Let&amp;rsquo;s say you set up a virtual directory or application that uses this
       
       <guid>https://yentran.org/post/2011-08-14-installing-windows-7-x86-for-the-asrock-939dual-sata2-motherboard/</guid>
       <description>The ASRock 939Dual-SATA2 motherboard is a little long in the tooth but still quite capable. Mine has been running Windows XP Media Center Edition for some time and I decided to upgrade it to Windows 7. The challenge is that the motherboard&amp;rsquo;s JMicron SATA2 chipset isn&amp;rsquo;t detected automatically at installation. If you want to install Windows on a SATA hard drive, you will have to load the driver first. The other problem is that, as of the time of writing, there is no Windows 7 driver for the ULi integrated Ethernet controller due to the age of the hardware.</description>
+    </item>
+    
+    <item>
+      <title>Ooh shiny</title>
+      <link>https://yentran.org/post/2011-04-28-ooh-shiny/</link>
+      <pubDate>Thu, 28 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://yentran.org/post/2011-04-28-ooh-shiny/</guid>
+      <description>Some time ago I took a software engineering class. For the term project we divided up into teams and worked on a project of our own choosing from beginning to end. Ours was an e-commerce application, the source code for which still resides on Google Code.
+We were the Fantastic Five because, you&amp;rsquo;d never guess it, there were 5 of us. I created the logo for the project. For the &amp;ldquo;super-hero&amp;rdquo; effect, it has 2 stylized F&amp;rsquo;s, made to look like wings flanking a shield.</description>
+    </item>
+    
+    <item>
+      <title>It&#39;s alive!</title>
+      <link>https://yentran.org/post/2011-04-26-its-alive/</link>
+      <pubDate>Tue, 26 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://yentran.org/post/2011-04-26-its-alive/</guid>
+      <description>The task of selecting a name for this blog site was reduced to finding a number, since all the sensible permutations involving my first and last name have already been claimed. The number 73 comes to mind. As Sheldon pontificated in Big Bang Theory (season 4, episode 10), 73 is the &amp;ldquo;best number&amp;rdquo; because it&amp;rsquo;s the 21st prime number, whose mirror is 37, which is the 12th prime number, whose mirror is 21, which is the product of 7 and 3.</description>
     </item>
     
   </channel>

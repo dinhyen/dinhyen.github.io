@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>macbook on Yen&#39;s blog</title>
+    <link>https://yentran.org/tags/macbook/</link>
+    <description>Recent content in macbook on Yen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 19 Mar 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://yentran.org/tags/macbook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intermittent, temporary freezing on MacBook with OCZ Vertex 3</title>
+      <link>https://yentran.org/post/2013-03-19-intermittent-temporary-freezing-on-macbook-with-ocz-vertex-3/</link>
+      <pubDate>Tue, 19 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://yentran.org/post/2013-03-19-intermittent-temporary-freezing-on-macbook-with-ocz-vertex-3/</guid>
+      <description>I recently upgraded the hard drive on my MacBook Pro running Snow Leopard to a 120GB OCZ Vertex 3 SSD. As advertised, the boot up and application start times are dramatically reduced. The SSD is everything I had hoped for. Well, almost. There has been a persistent and quite annoying issue. At random intervals, the computer would be come unresponsive. I could move the mouse or type on the keyboard, but nothing woud happen.</description>
+    </item>
+    
+  </channel>
+</rss>
